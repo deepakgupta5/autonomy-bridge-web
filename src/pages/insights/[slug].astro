@@ -47,21 +47,24 @@ const articleSchema = {
 
   <Header />
 
-  <main class="container">
+  <main class="container site-main">
     <p class="insight-label">Insight</p>
     <h1>{insight.title}</h1>
-    <p class="subhead">{insight.description}</p>
+    <p class="subhead reading-column">{insight.description}</p>
 
-    <section class="section">
+    <section class="section reading-column">
       <h2>Key Takeaways</h2>
       <ul>
         {insight.keyPoints.map((point) => <li>{point}</li>)}
       </ul>
     </section>
 
-    <section class="section">
+    <section class="section reading-column section-alt">
       <h2>Decision Boundary</h2>
-      <p>{insight.decisionBoundary}</p>
+      <div class="decision-block">
+        <p class="decision-label">Output Signal</p>
+        <p class="decision-value">{insight.decisionBoundary}</p>
+      </div>
       <p class="insight-related">
         Related:
         <a href="/insights">All Insights</a> ·
