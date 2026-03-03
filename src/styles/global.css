@@ -111,7 +111,7 @@ li {
   text-decoration: none;
   font-family: "IBM Plex Serif", serif;
   font-weight: 600;
-  font-size: 0.85rem;
+  font-size: 1.1rem;
   letter-spacing: 0.06em;
   line-height: 1;
 }
@@ -123,13 +123,14 @@ li {
 /* Hairline rule — matches text color, never accent */
 .logo-rule {
   display: block;
-  width: 26px;          /* 22–28px per spec; responsive without exceeding 32px */
+  width: 28px;          /* structural link: long enough to read, short enough to feel intentional */
   height: 1px;
   background: currentColor;
+  opacity: 0.9;         /* subtle softening — structural not decorative */
   flex-shrink: 0;
-  margin: 0 12px;       /* 10–14px breathing room per spec */
+  margin: 0 11px;       /* 10–12px side spacing */
   position: relative;
-  top: -2px;            /* -2px vertical offset: sits at cap-height midline, not baseline centre */
+  top: -1.5px;          /* sits just above visual centre, below cap height */
 }
 
 nav {
