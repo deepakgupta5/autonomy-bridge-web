@@ -1,0 +1,395 @@
+---
+import Layout from "../components/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout
+  title="Case Studies — Autonomy Bridge"
+  description="Anonymized examples of high-stakes Go/No-Go commercialization decisions across AI, robotics, industrial automation, and enterprise B2B SaaS. Every case ends in a decision, not a report."
+>
+  <Header />
+
+  <main class="container">
+    <h1>Decision-Grade Commercialization Case Studies</h1>
+    <p class="subhead">
+      Anonymized examples of high-stakes Go / No-Go decisions across AI, robotics,
+      industrial automation, and enterprise SaaS. Every case ends in a decision. Not a report.
+    </p>
+
+    <section class="section">
+      <h2>How Commercialization Decisions Are Structured</h2>
+      <table class="decision-table">
+        <thead>
+          <tr>
+            <th>Uncertainty</th>
+            <th>Research Focus</th>
+            <th>Output Signal</th>
+            <th>Decision Outcome</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Market size realism</td>
+            <td>Bottom-up filtering</td>
+            <td>Deployable SOM</td>
+            <td>Enter / Exit</td>
+          </tr>
+          <tr>
+            <td>Buyer willingness to pay</td>
+            <td>ICP + budget owner mapping</td>
+            <td>Price corridor</td>
+            <td>Reprice / Proceed</td>
+          </tr>
+          <tr>
+            <td>Adoption friction</td>
+            <td>Integration + deployment mapping</td>
+            <td>Risk register</td>
+            <td>Gate / Redesign</td>
+          </tr>
+          <tr>
+            <td>Governance veto risk</td>
+            <td>Stakeholder mapping</td>
+            <td>Approval pathway</td>
+            <td>Scale / Pause</td>
+          </tr>
+          <tr>
+            <td>Unit economics durability</td>
+            <td>Utilization + cost sensitivity</td>
+            <td>Break-even thresholds</td>
+            <td>Fund / Halt</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="case-frame-note">
+        Core decision frame used repeatedly: Unit economics + adoption friction + governance veto mapping
+      </p>
+    </section>
+
+    <!-- ── AI, Robotics & Industrial Automation ── -->
+    <div class="case-category">
+      <h2>AI, Robotics &amp; Industrial Automation</h2>
+    </div>
+
+    <section class="case-study">
+      <h3>Robotics-as-a-Service Market Entry</h3>
+      <p class="case-summary">$110B warehouse TAM filtered to $22–38B deployable SOM. Conditional Go with vertical narrowing.</p>
+
+      <p class="case-label">Context</p>
+      <p>A robotics company validated autonomous warehouse performance across multiple pilots. Leadership considered committing to a RaaS model with recurring pricing and expanded service infrastructure.</p>
+
+      <p class="case-label">Decision</p>
+      <p>Fund full RaaS commercialization or halt expansion.</p>
+
+      <p class="case-label">Numeric Anchors</p>
+      <ul>
+        <li>$110B TAM → $22–38B realistic SOM after deployability filters</li>
+        <li>~2,400 reachable sites; top 180 represent ~35% of near-term spend</li>
+        <li>6–10 month sales cycle</li>
+        <li>55–65% modeled gross margin at steady-state utilization</li>
+        <li>15–25% pilot-to-production conversion without governance pre-work</li>
+      </ul>
+
+      <p class="case-label">Research</p>
+      <ul>
+        <li>Bottom-up market sizing with integration filters</li>
+        <li>ICP segmentation by workflow and labor volatility</li>
+        <li>Adoption friction mapping across WMS and safety systems</li>
+        <li>Pricing corridor tied to labor substitution economics</li>
+        <li>Utilization sensitivity modeling</li>
+      </ul>
+
+      <p class="case-label">Recommendation</p>
+      <p>Conditional Go. Focus on 3PL operators with centralized decision authority.</p>
+
+      <p class="case-label">Counterfactuals</p>
+      <ul>
+        <li>Pure usage-only billing rejected</li>
+        <li>Multi-vertical push rejected</li>
+      </ul>
+
+      <p class="case-label">Outcome</p>
+      <p>ICP narrowed by ~60%. Sales cycle variance reduced.</p>
+    </section>
+
+    <section class="case-study">
+      <h3>Converting Autonomous Pilots to Production</h3>
+      <p class="case-summary">Technical pilot success did not translate into production deployment. Governance misalignment identified as binding constraint.</p>
+
+      <p class="case-label">Context</p>
+      <p>An autonomous systems provider achieved repeatable pilot KPIs but faced stalled enterprise rollouts.</p>
+
+      <p class="case-label">Decision</p>
+      <p>Scale pilot volume or redesign enterprise conversion pathway.</p>
+
+      <p class="case-label">Numeric Anchors</p>
+      <ul>
+        <li>65–80% pilot technical success</li>
+        <li>18–30% pilot-to-production conversion</li>
+        <li>8–14 stakeholders per deal</li>
+        <li>2–3 veto roles</li>
+        <li>9–15 month approval path</li>
+      </ul>
+
+      <p class="case-label">Research</p>
+      <ul>
+        <li>Stakeholder and veto mapping</li>
+        <li>Stalled pilot analysis</li>
+        <li>Governance approval reconstruction</li>
+        <li>Enterprise risk register development</li>
+      </ul>
+
+      <p class="case-label">Recommendation</p>
+      <p>Go with pilot redesign. Require defined approval gates before pilot launch.</p>
+
+      <p class="case-label">Counterfactuals</p>
+      <ul>
+        <li>Increasing pilot count rejected</li>
+        <li>Horizontal use-case expansion rejected</li>
+      </ul>
+
+      <p class="case-label">Outcome</p>
+      <p>Conversion improved after governance alignment.</p>
+    </section>
+
+    <section class="case-study">
+      <h3>Industrial Automation in Regulated Environments</h3>
+      <p class="case-summary">Vertical prioritization reduced regulatory drag and sales cycle volatility.</p>
+
+      <p class="case-label">Context</p>
+      <p>An automation platform sought expansion across healthcare, airports, and manufacturing.</p>
+
+      <p class="case-label">Decision</p>
+      <p>Which regulated vertical to prioritize.</p>
+
+      <p class="case-label">Numeric Anchors</p>
+      <ul>
+        <li>9–18 month sales cycles</li>
+        <li>2–5 approval gates</li>
+        <li>4–12 week deployment windows</li>
+        <li>Fragmented budget ownership in healthcare</li>
+      </ul>
+
+      <p class="case-label">Research</p>
+      <ul>
+        <li>Vertical-level market sizing</li>
+        <li>Certification pathway mapping</li>
+        <li>Procurement and vendor onboarding analysis</li>
+        <li>Channel leverage assessment</li>
+      </ul>
+
+      <p class="case-label">Recommendation</p>
+      <p>Conditional Go on airport operations. Deprioritize healthcare.</p>
+
+      <p class="case-label">Counterfactuals</p>
+      <ul>
+        <li>Broad regulated positioning rejected</li>
+        <li>Channel-only expansion rejected</li>
+      </ul>
+
+      <p class="case-label">Outcome</p>
+      <p>Sales cycle variability narrowed through vertical focus.</p>
+    </section>
+
+    <section class="case-study">
+      <h3>AI Hardware + SaaS Pricing Transition</h3>
+      <p class="case-summary">Hybrid pricing structure adopted after subscription-only transition proved misaligned with buyer accounting.</p>
+
+      <p class="case-label">Context</p>
+      <p>An AI hardware company evaluated moving from capital sales to subscription.</p>
+
+      <p class="case-label">Decision</p>
+      <p>Transition fully to subscription or retain capex model.</p>
+
+      <p class="case-label">Numeric Anchors</p>
+      <ul>
+        <li>55–75% modeled gross margin under subscription</li>
+        <li>6–18 month buyer payback expectation</li>
+        <li>LTV highly sensitive to churn assumptions</li>
+        <li>Capex preference persisted in key segments</li>
+      </ul>
+
+      <p class="case-label">Research</p>
+      <ul>
+        <li>Budget ownership and accounting analysis</li>
+        <li>Value metric evaluation</li>
+        <li>LTV sensitivity modeling</li>
+        <li>Packaging and price fence design</li>
+      </ul>
+
+      <p class="case-label">Recommendation</p>
+      <p>Hybrid model. Maintain capex entry option; add enterprise subscription tier.</p>
+
+      <p class="case-label">Counterfactuals</p>
+      <ul>
+        <li>Forced subscription shift rejected</li>
+        <li>Pure outcome pricing rejected</li>
+      </ul>
+
+      <p class="case-label">Outcome</p>
+      <p>Revenue predictability improved without procurement friction increase.</p>
+    </section>
+
+    <section class="case-study">
+      <h3>Multi-Geography Robotics Expansion</h3>
+      <p class="case-summary">Sequential entry strategy adopted based on certification friction and partner control.</p>
+
+      <p class="case-label">Context</p>
+      <p>A robotics provider evaluated European and Asian expansion after North American traction.</p>
+
+      <p class="case-label">Decision</p>
+      <p>Select priority geographies and sequencing.</p>
+
+      <p class="case-label">Numeric Anchors</p>
+      <ul>
+        <li>Certification delays added 3–9 months</li>
+        <li>Service response expectations required local footprint</li>
+        <li>Integrator access concentrated in few partners</li>
+      </ul>
+
+      <p class="case-label">Research</p>
+      <ul>
+        <li>Country-level demand modeling</li>
+        <li>Regulatory pathway comparison</li>
+        <li>Channel ecosystem evaluation</li>
+        <li>Service economics modeling</li>
+      </ul>
+
+      <p class="case-label">Recommendation</p>
+      <p>Sequential expansion. Enter high-certainty markets first.</p>
+
+      <p class="case-label">Counterfactuals</p>
+      <ul>
+        <li>Multi-country simultaneous expansion rejected</li>
+        <li>Lightweight entry without service coverage rejected</li>
+      </ul>
+
+      <p class="case-label">Outcome</p>
+      <p>International roadmap aligned to regulatory clarity and partner leverage.</p>
+    </section>
+
+    <!-- ── Enterprise B2B SaaS ── -->
+    <div class="case-category">
+      <h2>Enterprise B2B SaaS Commercialization</h2>
+    </div>
+
+    <section class="case-study">
+      <h3>Enterprise SaaS Vertical Expansion Validation</h3>
+      <p class="case-summary">Adjacent vertical rejected after SOM compression and switching cost analysis.</p>
+
+      <p class="case-label">Context</p>
+      <p>An enterprise SaaS company evaluated expansion into a regulated adjacent vertical.</p>
+
+      <p class="case-label">Decision</p>
+      <p>Commit GTM investment or halt vertical expansion.</p>
+
+      <p class="case-label">Numeric Anchors</p>
+      <ul>
+        <li>Headline TAM materially reduced after deployability filters</li>
+        <li>3–6 month longer deal cycles</li>
+        <li>High incumbent switching costs</li>
+      </ul>
+
+      <p class="case-label">Research</p>
+      <ul>
+        <li>Bottom-up market sizing</li>
+        <li>Workflow and stakeholder mapping</li>
+        <li>Competitive substitution analysis</li>
+        <li>Deal cycle benchmarking</li>
+      </ul>
+
+      <p class="case-label">Recommendation</p>
+      <p>No-Go.</p>
+
+      <p class="case-label">Counterfactuals</p>
+      <ul>
+        <li>Pilot testing alone rejected as de-risking mechanism</li>
+        <li>Vertical feature build rejected</li>
+      </ul>
+
+      <p class="case-label">Outcome</p>
+      <p>Capital redirected to deeper penetration in core vertical.</p>
+    </section>
+
+    <section class="case-study">
+      <h3>Diagnosing Early Enterprise Revenue Constraints</h3>
+      <p class="case-summary">Pipeline volume masked late-stage governance friction.</p>
+
+      <p class="case-label">Context</p>
+      <p>An enterprise AI platform showed strong interest but inconsistent revenue conversion.</p>
+
+      <p class="case-label">Decision</p>
+      <p>Identify binding GTM constraint.</p>
+
+      <p class="case-label">Numeric Anchors</p>
+      <ul>
+        <li>6–12 month sales cycle</li>
+        <li>7–13 stakeholders per deal</li>
+        <li>Late-stage leakage concentrated at procurement</li>
+        <li>Discounting increased under misaligned pricing narrative</li>
+      </ul>
+
+      <p class="case-label">Research</p>
+      <ul>
+        <li>Pipeline leakage analysis</li>
+        <li>Veto mapping</li>
+        <li>Pricing alignment assessment</li>
+        <li>Objection taxonomy classification</li>
+      </ul>
+
+      <p class="case-label">Recommendation</p>
+      <p>Go with positioning and pricing correction.</p>
+
+      <p class="case-label">Counterfactuals</p>
+      <ul>
+        <li>Increasing lead volume rejected</li>
+        <li>Broad feature expansion rejected</li>
+      </ul>
+
+      <p class="case-label">Outcome</p>
+      <p>Late-stage conversion improved after budget alignment correction.</p>
+    </section>
+
+    <section class="case-study">
+      <h3>Commercialization Planning for a New AI Platform</h3>
+      <p class="case-summary">Signal-driven launch replaced date-driven rollout.</p>
+
+      <p class="case-label">Context</p>
+      <p>A new AI platform prepared for commercialization across enterprise verticals.</p>
+
+      <p class="case-label">Decision</p>
+      <p>Launch broadly or sequence rollout based on validated assumptions.</p>
+
+      <p class="case-label">Numeric Anchors</p>
+      <ul>
+        <li>6–12 month phased rollout</li>
+        <li>6–15 month enterprise buying cycle</li>
+        <li>Narrow ICP after integration filtering</li>
+        <li>3–5 leading indicators defined</li>
+      </ul>
+
+      <p class="case-label">Research</p>
+      <ul>
+        <li>ICP validation interviews</li>
+        <li>Competitive substitution mapping</li>
+        <li>Pricing hypothesis modeling</li>
+        <li>Governance prerequisite mapping</li>
+        <li>Leading indicator definition</li>
+      </ul>
+
+      <p class="case-label">Recommendation</p>
+      <p>Conditional Go with gated sequencing.</p>
+
+      <p class="case-label">Counterfactuals</p>
+      <ul>
+        <li>Broad multi-vertical launch rejected</li>
+        <li>Pilot count used as success metric rejected</li>
+      </ul>
+
+      <p class="case-label">Outcome</p>
+      <p>Commercialization paced by validated signals rather than calendar deadlines.</p>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
