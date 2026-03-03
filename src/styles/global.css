@@ -106,7 +106,7 @@ li {
 .logo {
   display: flex;
   align-items: center;
-  gap: 0.45em;
+  gap: 0;
   color: var(--text-primary);
   text-decoration: none;
   font-family: "IBM Plex Serif", serif;
@@ -123,11 +123,13 @@ li {
 /* Hairline rule — matches text color, never accent */
 .logo-rule {
   display: block;
-  width: 0.65em;
+  width: 26px;          /* 22–28px per spec; responsive without exceeding 32px */
   height: 1px;
   background: currentColor;
   flex-shrink: 0;
-  margin-bottom: 0.1em; /* optical lift to align with cap-height centre */
+  margin: 0 12px;       /* 10–14px breathing room per spec */
+  position: relative;
+  top: -2px;            /* -2px vertical offset: sits at cap-height midline, not baseline centre */
 }
 
 nav {
