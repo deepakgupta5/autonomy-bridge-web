@@ -6,19 +6,101 @@ import Footer from "../components/Footer.astro";
 
 <Layout
   title="Insights — Autonomy Bridge"
-  description="Structured analysis on commercialization risk in AI, robotics, industrial automation, and enterprise SaaS. Definitions, economic thresholds, governance constraints, and decision boundaries."
+  description="Structured analysis in AI and robotics market research, industrial automation GTM analysis, and enterprise AI commercialization research. Definitions, economic thresholds, governance constraints, and decision boundaries."
 >
+  <script type="application/ld+json" is:raw>
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Autonomy Bridge Insights",
+    "description": "Structured analysis on commercialization risk in AI, robotics, and industrial automation",
+    "url": "https://www.autonomybridge.com/insights",
+    "itemListElement": [
+      {"@type":"ListItem","position":1,"name":"The Robotics-as-a-Service Market: Size, Structure, and Adoption Barriers","url":"https://www.autonomybridge.com/insights#raas-market"},
+      {"@type":"ListItem","position":2,"name":"Why Most Enterprise Robotics Pilots Never Reach Production","url":"https://www.autonomybridge.com/insights#pilot-failure"},
+      {"@type":"ListItem","position":3,"name":"How Enterprises Actually Buy Industrial Automation","url":"https://www.autonomybridge.com/insights#enterprise-buying"},
+      {"@type":"ListItem","position":4,"name":"Pricing AI and Robotics Products: Why Hardware Logic Breaks Down","url":"https://www.autonomybridge.com/insights#pricing-ai"},
+      {"@type":"ListItem","position":5,"name":"Market Sizing AI and Automation Without Overstating Demand","url":"https://www.autonomybridge.com/insights#market-sizing"},
+      {"@type":"ListItem","position":6,"name":"When Market Research Should Kill a Product Idea","url":"https://www.autonomybridge.com/insights#kill-signals"},
+      {"@type":"ListItem","position":7,"name":"ICP Is Not a Persona: Enterprise SaaS Misclassification","url":"https://www.autonomybridge.com/insights#icp-definition"},
+      {"@type":"ListItem","position":8,"name":"Pilot-to-Production: The Missing Middle in Enterprise GTM","url":"https://www.autonomybridge.com/insights#pilot-production"}
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json" is:raw>
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is Robotics-as-a-Service (RaaS)?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "RaaS is a commercial model in which robotics hardware, software, maintenance, and analytics are bundled under recurring contractual pricing. Revenue recognition is service-based rather than asset-sale based. RaaS viability depends on deployable density and governance readiness more than TAM magnitude."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why do enterprise robotics pilots fail to reach production?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Technical pilot success and production readiness are separate thresholds. Typical enterprise deals involve 8–14 stakeholders, 2–3 veto authorities, and 2–5 approval gates. Increasing pilot volume does not increase production probability unless the governance pathway is embedded into pilot design."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How should AI and robotics products be priced?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pricing architecture must align to budget ownership and accounting treatment, not investor revenue optics. Budget classification often determines pricing viability more than buyer preference. Subscription fails structurally when churn exceeds tolerance, service costs escalate, or value metrics are misaligned."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you size an AI or automation market accurately?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Credible SOM requires site-level counts, workflow qualification, budget authority confirmation, and sales motion compatibility. Observed TAM to SOM compression commonly exceeds 70% in enterprise automation. Capital allocation should anchor to SOM realism, not TAM magnitude."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is an ICP in enterprise SaaS?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ICP (Ideal Customer Profile) defines organization-level deployment conditions — not individual personas. Valid ICP requires budget ownership clarity, manageable governance complexity, integration stack compatibility, and an operational trigger. ICP definition must filter for structural deployability, not engagement volume."
+        }
+      }
+    ]
+  }
+  </script>
+
   <Header />
 
   <main class="container">
     <h1>Insights</h1>
     <p class="subhead">
-      Structured analysis on commercialization risk in AI, robotics, industrial automation,
-      and enterprise SaaS. Focus: definitions, economic thresholds, governance constraints,
-      and decision boundaries.
+      Structured analysis in AI and robotics market research, industrial automation GTM analysis,
+      and enterprise AI commercialization research.
     </p>
 
-    <section class="insight">
+    <div class="insights-topics">
+      <p>Core Topics:</p>
+      <ul>
+        <li><a href="#raas-market">Robotics-as-a-Service Market Structure</a></li>
+        <li><a href="#pilot-failure">Pilot-to-Production Risk in Robotics</a></li>
+        <li><a href="#enterprise-buying">Industrial Automation Buying Committees</a></li>
+        <li><a href="#pricing-ai">Pricing AI Hardware and SaaS</a></li>
+        <li><a href="#market-sizing">Market Sizing AI Without Overstatement</a></li>
+        <li><a href="#kill-signals">When Research Should Kill a Product Idea</a></li>
+        <li><a href="#icp-definition">ICP vs Persona: Enterprise SaaS</a></li>
+        <li><a href="#pilot-production">The Missing Middle in Enterprise GTM</a></li>
+      </ul>
+    </div>
+
+    <section class="insight" id="raas-market">
       <h2>The Robotics-as-a-Service Market: Size, Structure, and Adoption Barriers</h2>
 
       <p class="insight-label">Definitions</p>
@@ -62,7 +144,7 @@ import Footer from "../components/Footer.astro";
       <p class="insight-boundary">Decision Boundary: RaaS viability depends on deployable density and governance readiness more than TAM magnitude.</p>
     </section>
 
-    <section class="insight">
+    <section class="insight" id="pilot-failure">
       <h2>Why Most Enterprise Robotics Pilots Never Reach Production</h2>
 
       <p class="insight-label">Definitions</p>
@@ -92,7 +174,7 @@ import Footer from "../components/Footer.astro";
       <p class="insight-boundary">Decision Boundary: Increasing pilot volume does not increase production probability unless governance pathway is embedded into pilot design.</p>
     </section>
 
-    <section class="insight">
+    <section class="insight" id="enterprise-buying">
       <h2>How Enterprises Actually Buy Industrial Automation</h2>
 
       <p class="insight-label">Definitions</p>
@@ -122,7 +204,7 @@ import Footer from "../components/Footer.astro";
       <p class="insight-boundary">Decision Boundary: GTM motion must align to approval sequence, not individual champion enthusiasm.</p>
     </section>
 
-    <section class="insight">
+    <section class="insight" id="pricing-ai">
       <h2>Pricing AI and Robotics Products: Why Hardware Logic Breaks Down</h2>
 
       <p class="insight-label">Definitions</p>
@@ -157,7 +239,7 @@ import Footer from "../components/Footer.astro";
       <p class="insight-boundary">Decision Boundary: Pricing architecture must align to budget ownership and accounting treatment, not investor revenue optics.</p>
     </section>
 
-    <section class="insight">
+    <section class="insight" id="market-sizing">
       <h2>Market Sizing AI and Automation Without Overstating Demand</h2>
 
       <p class="insight-label">Definitions</p>
@@ -194,7 +276,7 @@ import Footer from "../components/Footer.astro";
       <p class="insight-boundary">Decision Boundary: Capital allocation should anchor to SOM realism, not TAM magnitude.</p>
     </section>
 
-    <section class="insight">
+    <section class="insight" id="kill-signals">
       <h2>When Market Research Should Kill a Product Idea</h2>
 
       <p class="insight-label">Definitions</p>
@@ -213,7 +295,7 @@ import Footer from "../components/Footer.astro";
       <p class="insight-boundary">Decision Boundary: No-Go is justified when structural constraints persist after assumption stress testing.</p>
     </section>
 
-    <section class="insight">
+    <section class="insight" id="icp-definition">
       <h2>ICP Is Not a Persona: Enterprise SaaS Misclassification</h2>
 
       <p class="insight-label">Definitions</p>
@@ -233,7 +315,7 @@ import Footer from "../components/Footer.astro";
       <p class="insight-boundary">Decision Boundary: ICP definition must filter for structural deployability, not engagement volume.</p>
     </section>
 
-    <section class="insight">
+    <section class="insight" id="pilot-production">
       <h2>Pilot-to-Production: The Missing Middle in Enterprise GTM</h2>
 
       <p class="insight-label">Definitions</p>

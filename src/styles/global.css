@@ -260,6 +260,92 @@ nav a:hover { color: var(--text-primary); }
   margin: 0;
 }
 
+/* ── Home Page ───────────────────────────────────────────────────────────────── */
+.home-focus {
+  margin: 2.5rem 0 3rem;
+  max-width: 680px;
+}
+
+.home-focus p {
+  margin-bottom: 0.5rem;
+}
+
+.home-focus p:last-child {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+}
+
+.home-section {
+  padding-top: 3rem;
+  margin-bottom: 3.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.home-related {
+  margin-top: 1.5rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  max-width: none;
+}
+
+.home-related a {
+  color: var(--accent);
+  margin: 0 0.25rem;
+}
+
+.home-related a:hover {
+  color: var(--text-primary);
+}
+
+.home-framework-list {
+  padding-left: 1.5rem;
+  margin: 1rem 0 1.5rem;
+  color: var(--text-secondary);
+}
+
+.home-framework-list li {
+  margin-bottom: 0.5rem;
+}
+
+/* ── Research Products ───────────────────────────────────────────────────────── */
+.research-product {
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.research-product:last-of-type {
+  border-bottom: none;
+}
+
+.research-product h3 {
+  font-family: "IBM Plex Serif", serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.35rem;
+}
+
+.research-product p {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* ── Use Case Related Link ───────────────────────────────────────────────────── */
+.use-case-related {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  max-width: none;
+}
+
+.use-case-related a {
+  color: var(--accent);
+}
+
+.use-case-related a:hover {
+  color: var(--text-primary);
+}
+
 /* ── Home Hero ───────────────────────────────────────────────────────────────── */
 .home-decisions {
   margin: 4rem 0;
@@ -372,6 +458,45 @@ nav a:hover { color: var(--text-primary); }
 
 .decision-table tbody tr:nth-child(odd) td {
   background: var(--bg-secondary);
+}
+
+/* ── Insights TOC ────────────────────────────────────────────────────────────── */
+.insights-topics {
+  margin: 2rem 0 3rem;
+  padding: 1.5rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+}
+
+.insights-topics p {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+  max-width: none;
+}
+
+.insights-topics ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 2rem;
+}
+
+.insights-topics li {
+  margin: 0;
+  font-size: 0.875rem;
+}
+
+.insights-topics a {
+  color: var(--text-secondary);
+}
+
+.insights-topics a:hover {
+  color: var(--text-primary);
 }
 
 /* ── Insights ────────────────────────────────────────────────────────────────── */
