@@ -7,8 +7,9 @@ import Footer from "../components/Footer.astro";
 <Layout
   title="Insights — Autonomy Bridge"
   description="Structured analysis in AI and robotics market research, industrial automation GTM analysis, and enterprise AI commercialization research. Definitions, economic thresholds, governance constraints, and decision boundaries."
+  schemaType="CollectionPage"
 >
-  <script type="application/ld+json" is:raw>
+  <script slot="head" type="application/ld+json" is:raw>
   {
     "@context": "https://schema.org",
     "@type": "ItemList",
@@ -16,19 +17,19 @@ import Footer from "../components/Footer.astro";
     "description": "Structured analysis on commercialization risk in AI, robotics, and industrial automation",
     "url": "https://www.autonomybridge.com/insights",
     "itemListElement": [
-      {"@type":"ListItem","position":1,"name":"The Robotics-as-a-Service Market: Size, Structure, and Adoption Barriers","url":"https://www.autonomybridge.com/insights#raas-market"},
-      {"@type":"ListItem","position":2,"name":"Why Most Enterprise Robotics Pilots Never Reach Production","url":"https://www.autonomybridge.com/insights#pilot-failure"},
-      {"@type":"ListItem","position":3,"name":"How Enterprises Actually Buy Industrial Automation","url":"https://www.autonomybridge.com/insights#enterprise-buying"},
-      {"@type":"ListItem","position":4,"name":"Pricing AI and Robotics Products: Why Hardware Logic Breaks Down","url":"https://www.autonomybridge.com/insights#pricing-ai"},
-      {"@type":"ListItem","position":5,"name":"Market Sizing AI and Automation Without Overstating Demand","url":"https://www.autonomybridge.com/insights#market-sizing"},
-      {"@type":"ListItem","position":6,"name":"When Market Research Should Kill a Product Idea","url":"https://www.autonomybridge.com/insights#kill-signals"},
-      {"@type":"ListItem","position":7,"name":"ICP Is Not a Persona: Enterprise SaaS Misclassification","url":"https://www.autonomybridge.com/insights#icp-definition"},
-      {"@type":"ListItem","position":8,"name":"Pilot-to-Production: The Missing Middle in Enterprise GTM","url":"https://www.autonomybridge.com/insights#pilot-production"}
+      {"@type":"ListItem","position":1,"name":"The Robotics-as-a-Service Market: Size, Structure, and Adoption Barriers","url":"https://www.autonomybridge.com/insights/raas-market"},
+      {"@type":"ListItem","position":2,"name":"Why Most Enterprise Robotics Pilots Never Reach Production","url":"https://www.autonomybridge.com/insights/why-pilots-fail"},
+      {"@type":"ListItem","position":3,"name":"How Enterprises Actually Buy Industrial Automation","url":"https://www.autonomybridge.com/insights/industrial-automation-buying"},
+      {"@type":"ListItem","position":4,"name":"Pricing AI and Robotics Products: Why Hardware Logic Breaks Down","url":"https://www.autonomybridge.com/insights/pricing-ai-robotics"},
+      {"@type":"ListItem","position":5,"name":"Market Sizing AI and Automation Without Overstating Demand","url":"https://www.autonomybridge.com/insights/market-sizing-ai-automation"},
+      {"@type":"ListItem","position":6,"name":"When Market Research Should Kill a Product Idea","url":"https://www.autonomybridge.com/insights/kill-the-idea"},
+      {"@type":"ListItem","position":7,"name":"ICP Is Not a Persona: Enterprise SaaS Misclassification","url":"https://www.autonomybridge.com/insights/icp-not-a-persona"},
+      {"@type":"ListItem","position":8,"name":"Pilot-to-Production: The Missing Middle in Enterprise GTM","url":"https://www.autonomybridge.com/insights/missing-middle-gtm"}
     ]
   }
   </script>
 
-  <script type="application/ld+json" is:raw>
+  <script slot="head" type="application/ld+json" is:raw>
   {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -77,15 +78,15 @@ import Footer from "../components/Footer.astro";
   }
   </script>
 
-  <script type="application/ld+json" is:raw>
+  <script slot="head" type="application/ld+json" is:raw>
   {
     "@context": "https://schema.org",
     "@graph": [
       {
         "@type": "Article",
         "headline": "The Robotics-as-a-Service Market: Size, Structure, and Adoption Barriers",
-        "url": "https://www.autonomybridge.com/insights#raas-market",
-        "mainEntityOfPage": "https://www.autonomybridge.com/insights#raas-market",
+        "url": "https://www.autonomybridge.com/insights/raas-market",
+        "mainEntityOfPage": "https://www.autonomybridge.com/insights/raas-market",
         "author": {"@type": "Organization", "name": "Autonomy Bridge"},
         "publisher": {"@type": "Organization", "name": "Autonomy Bridge", "url": "https://www.autonomybridge.com"},
         "inLanguage": "en"
@@ -93,8 +94,8 @@ import Footer from "../components/Footer.astro";
       {
         "@type": "Article",
         "headline": "Why Most Enterprise Robotics Pilots Never Reach Production",
-        "url": "https://www.autonomybridge.com/insights#pilot-failure",
-        "mainEntityOfPage": "https://www.autonomybridge.com/insights#pilot-failure",
+        "url": "https://www.autonomybridge.com/insights/why-pilots-fail",
+        "mainEntityOfPage": "https://www.autonomybridge.com/insights/why-pilots-fail",
         "author": {"@type": "Organization", "name": "Autonomy Bridge"},
         "publisher": {"@type": "Organization", "name": "Autonomy Bridge", "url": "https://www.autonomybridge.com"},
         "inLanguage": "en"
@@ -102,8 +103,8 @@ import Footer from "../components/Footer.astro";
       {
         "@type": "Article",
         "headline": "How Enterprises Actually Buy Industrial Automation",
-        "url": "https://www.autonomybridge.com/insights#enterprise-buying",
-        "mainEntityOfPage": "https://www.autonomybridge.com/insights#enterprise-buying",
+        "url": "https://www.autonomybridge.com/insights/industrial-automation-buying",
+        "mainEntityOfPage": "https://www.autonomybridge.com/insights/industrial-automation-buying",
         "author": {"@type": "Organization", "name": "Autonomy Bridge"},
         "publisher": {"@type": "Organization", "name": "Autonomy Bridge", "url": "https://www.autonomybridge.com"},
         "inLanguage": "en"
@@ -111,8 +112,8 @@ import Footer from "../components/Footer.astro";
       {
         "@type": "Article",
         "headline": "Pricing AI and Robotics Products: Why Hardware Logic Breaks Down",
-        "url": "https://www.autonomybridge.com/insights#pricing-ai",
-        "mainEntityOfPage": "https://www.autonomybridge.com/insights#pricing-ai",
+        "url": "https://www.autonomybridge.com/insights/pricing-ai-robotics",
+        "mainEntityOfPage": "https://www.autonomybridge.com/insights/pricing-ai-robotics",
         "author": {"@type": "Organization", "name": "Autonomy Bridge"},
         "publisher": {"@type": "Organization", "name": "Autonomy Bridge", "url": "https://www.autonomybridge.com"},
         "inLanguage": "en"
@@ -120,8 +121,8 @@ import Footer from "../components/Footer.astro";
       {
         "@type": "Article",
         "headline": "Market Sizing AI and Automation Without Overstating Demand",
-        "url": "https://www.autonomybridge.com/insights#market-sizing",
-        "mainEntityOfPage": "https://www.autonomybridge.com/insights#market-sizing",
+        "url": "https://www.autonomybridge.com/insights/market-sizing-ai-automation",
+        "mainEntityOfPage": "https://www.autonomybridge.com/insights/market-sizing-ai-automation",
         "author": {"@type": "Organization", "name": "Autonomy Bridge"},
         "publisher": {"@type": "Organization", "name": "Autonomy Bridge", "url": "https://www.autonomybridge.com"},
         "inLanguage": "en"
@@ -129,8 +130,8 @@ import Footer from "../components/Footer.astro";
       {
         "@type": "Article",
         "headline": "When Market Research Should Kill a Product Idea",
-        "url": "https://www.autonomybridge.com/insights#kill-signals",
-        "mainEntityOfPage": "https://www.autonomybridge.com/insights#kill-signals",
+        "url": "https://www.autonomybridge.com/insights/kill-the-idea",
+        "mainEntityOfPage": "https://www.autonomybridge.com/insights/kill-the-idea",
         "author": {"@type": "Organization", "name": "Autonomy Bridge"},
         "publisher": {"@type": "Organization", "name": "Autonomy Bridge", "url": "https://www.autonomybridge.com"},
         "inLanguage": "en"
@@ -138,8 +139,8 @@ import Footer from "../components/Footer.astro";
       {
         "@type": "Article",
         "headline": "ICP Is Not a Persona: Enterprise SaaS Misclassification",
-        "url": "https://www.autonomybridge.com/insights#icp-definition",
-        "mainEntityOfPage": "https://www.autonomybridge.com/insights#icp-definition",
+        "url": "https://www.autonomybridge.com/insights/icp-not-a-persona",
+        "mainEntityOfPage": "https://www.autonomybridge.com/insights/icp-not-a-persona",
         "author": {"@type": "Organization", "name": "Autonomy Bridge"},
         "publisher": {"@type": "Organization", "name": "Autonomy Bridge", "url": "https://www.autonomybridge.com"},
         "inLanguage": "en"
@@ -147,8 +148,8 @@ import Footer from "../components/Footer.astro";
       {
         "@type": "Article",
         "headline": "Pilot-to-Production: The Missing Middle in Enterprise GTM",
-        "url": "https://www.autonomybridge.com/insights#pilot-production",
-        "mainEntityOfPage": "https://www.autonomybridge.com/insights#pilot-production",
+        "url": "https://www.autonomybridge.com/insights/missing-middle-gtm",
+        "mainEntityOfPage": "https://www.autonomybridge.com/insights/missing-middle-gtm",
         "author": {"@type": "Organization", "name": "Autonomy Bridge"},
         "publisher": {"@type": "Organization", "name": "Autonomy Bridge", "url": "https://www.autonomybridge.com"},
         "inLanguage": "en"
@@ -169,14 +170,14 @@ import Footer from "../components/Footer.astro";
     <div class="insights-topics">
       <p>Core Topics:</p>
       <ul>
-        <li><a href="#raas-market">Robotics-as-a-Service Market Structure</a></li>
-        <li><a href="#pilot-failure">Pilot-to-Production Risk in Robotics</a></li>
-        <li><a href="#enterprise-buying">Industrial Automation Buying Committees</a></li>
-        <li><a href="#pricing-ai">Pricing AI Hardware and SaaS</a></li>
-        <li><a href="#market-sizing">Market Sizing AI Without Overstatement</a></li>
-        <li><a href="#kill-signals">When Research Should Kill a Product Idea</a></li>
-        <li><a href="#icp-definition">ICP vs Persona: Enterprise SaaS</a></li>
-        <li><a href="#pilot-production">The Missing Middle in Enterprise GTM</a></li>
+        <li><a href="/insights/raas-market">Robotics-as-a-Service Market Structure</a></li>
+        <li><a href="/insights/why-pilots-fail">Pilot-to-Production Risk in Robotics</a></li>
+        <li><a href="/insights/industrial-automation-buying">Industrial Automation Buying Committees</a></li>
+        <li><a href="/insights/pricing-ai-robotics">Pricing AI Hardware and SaaS</a></li>
+        <li><a href="/insights/market-sizing-ai-automation">Market Sizing AI Without Overstatement</a></li>
+        <li><a href="/insights/kill-the-idea">When Research Should Kill a Product Idea</a></li>
+        <li><a href="/insights/icp-not-a-persona">ICP vs Persona: Enterprise SaaS</a></li>
+        <li><a href="/insights/missing-middle-gtm">The Missing Middle in Enterprise GTM</a></li>
       </ul>
     </div>
 
@@ -224,8 +225,8 @@ import Footer from "../components/Footer.astro";
       <p class="insight-boundary">Decision Boundary: RaaS viability depends on deployable density and governance readiness more than TAM magnitude.</p>
       <p class="insight-related">
         Related:
-        <a href="#pricing-ai">Pricing AI and Robotics Products</a> ·
-        <a href="#pilot-failure">Pilot-to-Production Risk in Robotics</a> ·
+        <a href="/insights/pricing-ai-robotics">Pricing AI and Robotics Products</a> ·
+        <a href="/insights/why-pilots-fail">Pilot-to-Production Risk in Robotics</a> ·
         <a href="/case-studies">Case Studies</a> ·
         <a href="/research">Research &amp; Advisory</a>
       </p>
@@ -261,8 +262,8 @@ import Footer from "../components/Footer.astro";
       <p class="insight-boundary">Decision Boundary: Increasing pilot volume does not increase production probability unless governance pathway is embedded into pilot design.</p>
       <p class="insight-related">
         Related:
-        <a href="#raas-market">RaaS Market Structure</a> ·
-        <a href="#pilot-production">The Missing Middle in Enterprise GTM</a> ·
+        <a href="/insights/raas-market">RaaS Market Structure</a> ·
+        <a href="/insights/missing-middle-gtm">The Missing Middle in Enterprise GTM</a> ·
         <a href="/case-studies">Case Studies</a> ·
         <a href="/research">Research &amp; Advisory</a>
       </p>
@@ -298,8 +299,8 @@ import Footer from "../components/Footer.astro";
       <p class="insight-boundary">Decision Boundary: GTM motion must align to approval sequence, not individual champion enthusiasm.</p>
       <p class="insight-related">
         Related:
-        <a href="#pricing-ai">Pricing AI and Robotics Products</a> ·
-        <a href="#pilot-failure">Why Pilots Stall Before Production</a> ·
+        <a href="/insights/pricing-ai-robotics">Pricing AI and Robotics Products</a> ·
+        <a href="/insights/why-pilots-fail">Why Pilots Stall Before Production</a> ·
         <a href="/case-studies">Case Studies</a> ·
         <a href="/research">Research &amp; Advisory</a>
       </p>
@@ -340,8 +341,8 @@ import Footer from "../components/Footer.astro";
       <p class="insight-boundary">Decision Boundary: Pricing architecture must align to budget ownership and accounting treatment, not investor revenue optics.</p>
       <p class="insight-related">
         Related:
-        <a href="#enterprise-buying">How Enterprises Buy Automation</a> ·
-        <a href="#market-sizing">Market Sizing AI Without Overstatement</a> ·
+        <a href="/insights/industrial-automation-buying">How Enterprises Buy Automation</a> ·
+        <a href="/insights/market-sizing-ai-automation">Market Sizing AI Without Overstatement</a> ·
         <a href="/case-studies">Case Studies</a> ·
         <a href="/research">Research &amp; Advisory</a>
       </p>
@@ -384,8 +385,8 @@ import Footer from "../components/Footer.astro";
       <p class="insight-boundary">Decision Boundary: Capital allocation should anchor to SOM realism, not TAM magnitude.</p>
       <p class="insight-related">
         Related:
-        <a href="#kill-signals">When Research Should Kill a Product Idea</a> ·
-        <a href="#icp-definition">ICP vs Persona in Enterprise SaaS</a> ·
+        <a href="/insights/kill-the-idea">When Research Should Kill a Product Idea</a> ·
+        <a href="/insights/icp-not-a-persona">ICP vs Persona in Enterprise SaaS</a> ·
         <a href="/case-studies">Case Studies</a> ·
         <a href="/research">Research &amp; Advisory</a>
       </p>
@@ -410,8 +411,8 @@ import Footer from "../components/Footer.astro";
       <p class="insight-boundary">Decision Boundary: No-Go is justified when structural constraints persist after assumption stress testing.</p>
       <p class="insight-related">
         Related:
-        <a href="#market-sizing">Market Sizing AI and Automation</a> ·
-        <a href="#pilot-production">Pilot-to-Production Conversion</a> ·
+        <a href="/insights/market-sizing-ai-automation">Market Sizing AI and Automation</a> ·
+        <a href="/insights/missing-middle-gtm">Pilot-to-Production Conversion</a> ·
         <a href="/case-studies">Case Studies</a> ·
         <a href="/research">Research &amp; Advisory</a>
       </p>
@@ -437,8 +438,8 @@ import Footer from "../components/Footer.astro";
       <p class="insight-boundary">Decision Boundary: ICP definition must filter for structural deployability, not engagement volume.</p>
       <p class="insight-related">
         Related:
-        <a href="#pilot-production">The Missing Middle in Enterprise GTM</a> ·
-        <a href="#market-sizing">Market Sizing AI and Automation</a> ·
+        <a href="/insights/missing-middle-gtm">The Missing Middle in Enterprise GTM</a> ·
+        <a href="/insights/market-sizing-ai-automation">Market Sizing AI and Automation</a> ·
         <a href="/case-studies">Case Studies</a> ·
         <a href="/research">Research &amp; Advisory</a>
       </p>
@@ -479,8 +480,8 @@ import Footer from "../components/Footer.astro";
       <p class="insight-boundary">Decision Boundary: Scale investment should follow conversion validation, not pilot volume.</p>
       <p class="insight-related">
         Related:
-        <a href="#pilot-failure">Why Pilots Never Reach Production</a> ·
-        <a href="#icp-definition">ICP Is Not a Persona</a> ·
+        <a href="/insights/why-pilots-fail">Why Pilots Never Reach Production</a> ·
+        <a href="/insights/icp-not-a-persona">ICP Is Not a Persona</a> ·
         <a href="/case-studies">Case Studies</a> ·
         <a href="/research">Research &amp; Advisory</a>
       </p>

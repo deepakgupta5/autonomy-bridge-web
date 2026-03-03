@@ -1,0 +1,6 @@
+# Force apex -> www
+https://autonomybridge.com/*  https://www.autonomybridge.com/:splat  301!
+
+# Optional http -> https canonicalization
+http://www.autonomybridge.com/*  https://www.autonomybridge.com/:splat  301!
+http://autonomybridge.com/*      https://www.autonomybridge.com/:splat  301!

@@ -1,6 +1,56 @@
 ---
 import "../styles/global.css";
-const { title, description } = Astro.props;
+
+const siteUrl = "https://www.autonomybridge.com";
+const {
+  title,
+  description,
+  schemaType = "WebPage",
+  schemaName,
+  canonicalPath = Astro.url.pathname,
+  includePageSchema = true,
+} = Astro.props;
+
+const normalizedPath = canonicalPath.startsWith("/") ? canonicalPath : `/${canonicalPath}`;
+const canonicalUrl = new URL(normalizedPath, `${siteUrl}/`).toString();
+const derivedSchemaName = schemaName ?? (title.includes(" — ") ? title.split(" — ")[0] : title);
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Autonomy Bridge",
+  url: `${siteUrl}/`,
+  description:
+    "AI and robotics market research, industrial automation GTM analysis, and enterprise AI commercialization research for high-stakes technology decisions.",
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Autonomy Bridge",
+  url: `${siteUrl}/`,
+};
+
+const pageSchema = {
+  "@context": "https://schema.org",
+  "@type": schemaType,
+  name: derivedSchemaName,
+  url: canonicalUrl,
+  description,
+};
+
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Deepak Gupta",
+  jobTitle: "Principal",
+  worksFor: {
+    "@type": "Organization",
+    name: "Autonomy Bridge",
+    url: siteUrl,
+  },
+  sameAs: ["https://www.linkedin.com/in/deepakgupta5"],
+};
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -9,6 +59,7 @@ const { title, description } = Astro.props;
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{title}</title>
   <meta name="description" content={description} />
+  <link rel="canonical" href={canonicalUrl} />
   <link rel="icon" href="/favicon.svg" />
 
   <!-- Google Fonts -->
@@ -21,41 +72,13 @@ const { title, description } = Astro.props;
   <meta property="og:description" content={description} />
   <meta property="og:image" content="https://www.autonomybridge.com/og-image.png" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.autonomybridge.com" />
+  <meta property="og:url" content={canonicalUrl} />
   <meta name="twitter:card" content="summary_large_image" />
-
-  <!-- Organization Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Autonomy Bridge",
-    "url": "https://www.autonomybridge.com",
-    "description": "Decision-grade research for AI, robotics, and industrial automation markets.",
-    "founder": {
-      "@type": "Person",
-      "name": "Deepak Gupta"
-    }
-  }
-  </script>
-
-  <!-- Person Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Deepak Gupta",
-    "jobTitle": "Principal",
-    "worksFor": {
-      "@type": "Organization",
-      "name": "Autonomy Bridge",
-      "url": "https://www.autonomybridge.com"
-    },
-    "sameAs": [
-      "https://www.linkedin.com/in/deepakgupta5"
-    ]
-  }
-  </script>
+  <script type="application/ld+json" set:html={JSON.stringify(organizationSchema)}></script>
+  <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)}></script>
+  {includePageSchema && <script type="application/ld+json" set:html={JSON.stringify(pageSchema)}></script>}
+  <script type="application/ld+json" set:html={JSON.stringify(personSchema)}></script>
+  <slot name="head" />
 </head>
 <body>
   <slot />
