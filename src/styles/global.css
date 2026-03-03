@@ -111,8 +111,8 @@ li {
   text-decoration: none;
   font-family: "IBM Plex Serif", serif;
   font-weight: 600;
-  font-size: 1.1rem;
-  letter-spacing: 0.06em;
+  font-size: 1.15rem;
+  letter-spacing: 0.045em;
   line-height: 1;
 }
 
@@ -120,17 +120,16 @@ li {
   color: inherit;
 }
 
-/* Hairline rule — matches text color, never accent */
+/* Hairline rule — structural bridge, matches text color, never accent */
 .logo-rule {
   display: block;
-  width: 28px;          /* structural link: long enough to read, short enough to feel intentional */
+  width: 32px;          /* intentional, not decorative — reads as structure */
   height: 1px;
   background: currentColor;
-  opacity: 0.9;         /* subtle softening — structural not decorative */
   flex-shrink: 0;
-  margin: 0 11px;       /* 10–12px side spacing */
+  margin: 0 14px;       /* breathing room scaled to 1.15rem type */
   position: relative;
-  top: -1.5px;          /* sits just above visual centre, below cap height */
+  top: -2px;            /* optical lift — sits at cap-height midline, not baseline centre */
 }
 
 nav {
