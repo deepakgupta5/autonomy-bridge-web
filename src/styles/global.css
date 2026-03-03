@@ -36,7 +36,7 @@ h1, h2, h3, h4 {
 h1 {
   font-size: clamp(2rem, 5vw, 3.25rem);
   line-height: 1.15;
-  max-width: 820px;
+  max-width: 960px;
   margin-bottom: 1.5rem;
 }
 
@@ -51,9 +51,9 @@ h3 {
 }
 
 p {
-  line-height: 1.75;
+  line-height: 1.68;
   color: var(--text-secondary);
-  max-width: 680px;
+  max-width: 900px;
   margin-bottom: 1rem;
 }
 
@@ -82,7 +82,7 @@ li {
 
 /* ── Layout ─────────────────────────────────────────────────────────────────── */
 .container {
-  max-width: 1100px;
+  max-width: 1240px;
   margin: 0 auto;
   padding: 4rem 1.5rem;
 }
@@ -207,7 +207,7 @@ nav a:hover { color: var(--text-primary); }
 .subhead {
   font-size: 1.15rem;
   color: var(--text-secondary);
-  max-width: 700px;
+  max-width: 940px;
   line-height: 1.65;
   margin-bottom: 3.5rem;
 }
@@ -263,7 +263,7 @@ nav a:hover { color: var(--text-primary); }
 /* ── Home Page ───────────────────────────────────────────────────────────────── */
 .home-focus {
   margin: 2.5rem 0 3rem;
-  max-width: 680px;
+  max-width: 900px;
 }
 
 .home-focus p {
@@ -368,7 +368,7 @@ nav a:hover { color: var(--text-primary); }
 .home-intro {
   border-top: 1px solid var(--border);
   padding-top: 3rem;
-  max-width: 680px;
+  max-width: 900px;
 }
 
 /* ── Case Studies ────────────────────────────────────────────────────────────── */
@@ -406,7 +406,7 @@ nav a:hover { color: var(--text-primary); }
   margin-bottom: 1.75rem;
   padding-left: 1rem;
   border-left: 2px solid var(--accent);
-  max-width: 640px;
+  max-width: 860px;
 }
 
 .case-label {
