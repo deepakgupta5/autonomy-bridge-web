@@ -374,6 +374,45 @@ nav a:hover { color: var(--text-primary); }
   background: var(--bg-secondary);
 }
 
+/* ── Insights ────────────────────────────────────────────────────────────────── */
+.insight {
+  border-top: 1px solid var(--border);
+  padding-top: 3rem;
+  margin-bottom: 3.5rem;
+}
+
+.insight:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+
+.insight h2 {
+  font-size: 1.3rem;
+  margin-bottom: 1.75rem;
+}
+
+.insight-label {
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-top: 1.75rem;
+  margin-bottom: 0.4rem;
+}
+
+.insight-boundary {
+  margin-top: 2rem;
+  padding: 1rem 1.25rem;
+  border-left: 2px solid var(--accent);
+  background: var(--bg-secondary);
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  line-height: 1.6;
+  max-width: none;
+  margin-bottom: 0;
+}
+
 /* ── Responsive ──────────────────────────────────────────────────────────────── */
 @media (max-width: 768px) {
   nav { display: none; }
