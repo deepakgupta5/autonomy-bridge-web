@@ -2,6 +2,6 @@ import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://www.autonomybridge.com',
+  site: 'https://autonomybridge.com',
   integrations: [sitemap()],
 });

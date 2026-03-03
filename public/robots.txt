@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.autonomybridge.com/sitemap.xml
+Sitemap: https://autonomybridge.com/sitemap.xml
