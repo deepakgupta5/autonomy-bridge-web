@@ -123,11 +123,11 @@ li {
 /* Hairline rule — structural bridge, matches text color, never accent */
 .logo-rule {
   display: block;
-  width: 32px;          /* intentional, not decorative — reads as structure */
+  width: 20px;          /* 0.5× font-size — matches PNG proportions at display scale */
   height: 1px;
   background: currentColor;
   flex-shrink: 0;
-  margin: 0 14px;       /* breathing room scaled to 1.15rem type */
+  margin: 0 8px;        /* tight — structural connector, not a separator */
   position: relative;
   top: -2px;            /* optical lift — sits at cap-height midline, not baseline centre */
 }
