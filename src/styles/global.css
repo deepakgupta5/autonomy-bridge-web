@@ -36,8 +36,9 @@ h1, h2, h3, h4 {
 h1 {
   font-size: clamp(2rem, 5vw, 3.25rem);
   line-height: 1.15;
-  max-width: 960px;
+  max-width: none;
   margin-bottom: 1.5rem;
+  text-wrap: balance;
 }
 
 h2 {
@@ -53,8 +54,9 @@ h3 {
 p {
   line-height: 1.68;
   color: var(--text-secondary);
-  max-width: 900px;
+  max-width: none;
   margin-bottom: 1rem;
+  text-wrap: pretty;
 }
 
 p strong {
@@ -82,7 +84,7 @@ li {
 
 /* ── Layout ─────────────────────────────────────────────────────────────────── */
 .container {
-  max-width: 1240px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 4rem 1.5rem;
 }
@@ -207,7 +209,7 @@ nav a:hover { color: var(--text-primary); }
 .subhead {
   font-size: 1.15rem;
   color: var(--text-secondary);
-  max-width: 940px;
+  max-width: none;
   line-height: 1.65;
   margin-bottom: 3.5rem;
 }
@@ -263,7 +265,7 @@ nav a:hover { color: var(--text-primary); }
 /* ── Home Page ───────────────────────────────────────────────────────────────── */
 .home-focus {
   margin: 2.5rem 0 3rem;
-  max-width: 900px;
+  max-width: none;
 }
 
 .home-focus p {
@@ -368,7 +370,7 @@ nav a:hover { color: var(--text-primary); }
 .home-intro {
   border-top: 1px solid var(--border);
   padding-top: 3rem;
-  max-width: 900px;
+  max-width: none;
 }
 
 /* ── Case Studies ────────────────────────────────────────────────────────────── */
@@ -406,7 +408,7 @@ nav a:hover { color: var(--text-primary); }
   margin-bottom: 1.75rem;
   padding-left: 1rem;
   border-left: 2px solid var(--accent);
-  max-width: 860px;
+  max-width: none;
 }
 
 .case-label {
@@ -536,6 +538,22 @@ nav a:hover { color: var(--text-primary); }
   line-height: 1.6;
   max-width: none;
   margin-bottom: 0;
+}
+
+.insight-related {
+  margin-top: 1.25rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  max-width: none;
+}
+
+.insight-related a {
+  color: var(--accent);
+  margin-right: 0.35rem;
+}
+
+.insight-related a:hover {
+  color: var(--text-primary);
 }
 
 /* ── Responsive ──────────────────────────────────────────────────────────────── */
