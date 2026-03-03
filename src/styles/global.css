@@ -104,6 +104,19 @@ li {
 }
 
 .logo {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.logo-mark {
+  display: block;
+  flex-shrink: 0;
+}
+
+.logo-text {
   font-size: 0.8rem;
   letter-spacing: 0.18em;
   font-weight: 500;
