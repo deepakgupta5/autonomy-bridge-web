@@ -1,4 +1,4 @@
-# Canonical host: apex over https
-https://www.autonomybridge.com/*  https://autonomybridge.com/:splat  301!
-http://www.autonomybridge.com/*   https://autonomybridge.com/:splat  301!
-http://autonomybridge.com/*       https://autonomybridge.com/:splat  301!
+# Canonical host: www over https
+https://autonomybridge.com/*      https://www.autonomybridge.com/:splat  301!
+http://www.autonomybridge.com/*   https://www.autonomybridge.com/:splat  301!
+http://autonomybridge.com/*       https://www.autonomybridge.com/:splat  301!
