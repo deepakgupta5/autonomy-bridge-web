@@ -248,8 +248,7 @@ section > * + .decision-block {
   top: 0;
   z-index: 100;
   border-bottom: 1px solid var(--border);
-  background: rgba(8, 17, 32, 0.92);
-  backdrop-filter: blur(8px);
+  background: var(--bg-primary);
 }
 
 .header-inner {
@@ -263,22 +262,13 @@ section > * + .decision-block {
 .logo {
   display: inline-flex;
   align-items: center;
-  color: var(--text-primary);
-  font-family: "IBM Plex Serif", serif;
-  font-size: 18px;
-  font-weight: 600;
-  letter-spacing: 0.05em;
   line-height: 1;
 }
 
-.logo-rule {
+.logo-image {
   display: block;
-  width: 20px;
-  height: 1px;
-  background: currentColor;
-  margin: 0 8px;
-  position: relative;
-  top: -2px;
+  height: 44px;
+  width: auto;
 }
 
 nav {
@@ -646,6 +636,10 @@ textarea {
   h1,
   h2 {
     font-size: 32px;
+  }
+
+  .logo-image {
+    height: 36px;
   }
 }
 
