@@ -1,9 +1,14 @@
 ---
 title: "Fleet Utilization"
-description: "Fleet utilization measures the share of robot capacity actively performing productive work — a key determinant of warehouse robotics ROI and capital recovery."
-definition: "Fleet utilization is the proportion of installed robot fleet capacity that is actively performing productive work during a given operating period. In warehouse robotics, fleet utilization determines whether capital-intensive systems generate sufficient economic return. Low utilization spreads fixed infrastructure cost across fewer processed orders, increasing effective cost per unit."
-relatedTerms: ["utilization-threshold", "robot-density", "throughput-density"]
-usedIn: ["how-warehouse-robotics-economics-works", "why-warehouse-automation-projects-fail"]
+description: "Measure of how actively a robotics fleet is used within a warehouse, representing the share of time robots perform productive tasks."
+definition: "Fleet utilization measures the proportion of time robots perform productive work compared with idle time."
+relatedTerms:
+  - utilization-threshold
+  - fleet-density
+  - robot-density
+usedIn:
+  - robotics-roi-model
+  - how-warehouse-robotics-economics-works
 ---
 
-*Definition content coming in Phase 2.*
+Fleet utilization is a critical variable in warehouse robotics economics. Robotic systems require sustained utilization to recover capital costs. When utilization drops due to low task demand, automation economics deteriorate quickly. Utilization stability is therefore central to evaluating robotics deployment viability.

@@ -1,9 +1,14 @@
 ---
-title: "Pick Rates"
-description: "Pick rates measure the number of individual items or order lines processed per worker or robot per hour, used as a productivity benchmark in warehouse picking operations."
-definition: "Pick rates measure the number of items, units, or order lines processed per operator or robot per hour in a warehouse picking operation. Pick rates are a common warehouse productivity metric but do not alone determine automation ROI. Facility throughput is determined by the slowest workflow node, not peak pick station performance."
-relatedTerms: ["throughput-density", "fleet-utilization", "goods-to-person"]
-usedIn: ["how-warehouse-robotics-economics-works", "how-warehouse-workflows-determine-automation-success"]
+title: "Pick Rate"
+description: "Warehouse productivity metric measuring how many items a worker or automation system picks per hour during fulfillment operations."
+definition: "Pick rate measures the number of items picked per worker or system during a defined time period."
+relatedTerms:
+  - throughput-density
+  - goods-to-person
+  - workflow-architecture-framework
+usedIn:
+  - workflow-architecture-framework
+  - how-warehouse-workflows-determine-automation-success
 ---
 
-*Definition content coming in Phase 2.*
+Pick rates are commonly used to evaluate warehouse productivity. Automation often improves pick rates by reducing travel time or increasing pick density. However, facility throughput still depends on the slowest workflow stage.

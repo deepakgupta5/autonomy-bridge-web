@@ -1,11 +1,47 @@
 ---
 title: "AMR Deployment Evaluation"
-description: "Decision research for operators evaluating AMR deployment: fleet sizing, utilization thresholds, vendor selection, and integration readiness conditions."
-audience: "VP Operations at 3PLs, robotics program leads, warehouse operators evaluating automation"
-decisionQuestion: "Should we deploy AMRs in this facility, and if so which vendor architecture fits the workflow and utilization requirements?"
-relatedArticles: ["why-robotics-pilots-fail-to-scale"]
-relatedFrameworks: ["vendor-evaluation-framework"]
-relatedCaseStudies: ["robotics-market-entry-decision-analysis"]
+description: "Use case evaluating whether autonomous mobile robots improve warehouse productivity by reducing travel labor and maintaining utilization."
+audience: "Warehouse operators evaluating autonomous mobile robot deployment"
+decisionQuestion: "Will autonomous mobile robots remove sufficient travel labor while maintaining stable task utilization?"
+relatedArticles:
+  - "why-robotics-pilots-fail-to-scale"
+relatedFrameworks:
+  - "vendor-evaluation-framework"
+  - "pilot-to-scale-failure-framework"
+relatedCaseStudies:
+  - "robotics-market-entry-decision-analysis"
 ---
 
-*Use case content coming in Phase 2.*
+## Decision question
+
+Should autonomous mobile robots be deployed to improve warehouse productivity? AMRs reduce travel labor by moving goods rather than workers.
+---
+
+## The Risk
+
+AMR systems rely on continuous task demand. If transport tasks are intermittent or workflows are poorly structured, robots remain idle and utilization collapses. Congestion and workflow interaction problems may also reduce system efficiency.
+---
+
+## What Is Unknown
+
+- How much labor is actually spent on transport tasks
+- Whether task demand remains consistent throughout the day
+- Whether warehouse layout supports efficient robot movement
+
+These factors determine whether AMRs produce measurable productivity gains.
+---
+
+## Output Signal
+
+The evaluation identifies whether transport labor removal exceeds the operating cost of the robot fleet. If utilization remains high and task density supports continuous operation, AMR deployment improves productivity.
+---
+
+## Typical Buyer
+
+- Fulfillment warehouse operators
+- Logistics automation program leaders
+- Operations executives evaluating robotics deployments
+
+---
+
+**Request a briefing call:** [/contact](/contact)

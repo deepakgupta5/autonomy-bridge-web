@@ -2,11 +2,15 @@
 import Layout from "../components/Layout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import { renderMarkdown } from "../utils/markdownToHtml";
+import methodologyMarkdown from "../content/page-copy/methodology.md?raw";
 
 const breadcrumbs = [
   { name: "Home", url: "https://www.autonomybridge.com/" },
   { name: "Methodology", url: "https://www.autonomybridge.com/methodology" },
 ];
+
+const methodologyHtml = await renderMarkdown(methodologyMarkdown);
 ---
 
 <Layout
@@ -23,167 +27,7 @@ const breadcrumbs = [
       <span class="breadcrumb__separator" aria-hidden="true">›</span>
       <span>Methodology</span>
     </nav>
-
-    <h1>How We Analyse Automation Decisions</h1>
-    <p class="subhead reading-column">
-      Every Autonomy Bridge engagement applies the same structured analytical sequence —
-      from utilization validation through to a documented go / pause / kill recommendation.
-    </p>
-
-    <!-- Stage 1 -->
-    <section class="section reading-column">
-      <h2>Stage 1 — Utilization Validation</h2>
-      <p>
-        The first question is not whether automation works. It is whether the specific
-        facility can maintain utilization above the minimum threshold required for capital
-        recovery across the asset life.
-      </p>
-      <p>
-        This stage models the facility's demand profile against the installed capacity of
-        the proposed automation system — under realistic variability, not vendor-assumed
-        peak throughput.
-      </p>
-      <ul>
-        <li>Historical order volume distribution and seasonal range</li>
-        <li>Client contract duration and renewal risk</li>
-        <li>Peak-to-trough demand ratio</li>
-        <li>Break-even utilization threshold calculation</li>
-      </ul>
-      <p>
-        If the facility cannot sustain required utilization under conservative demand
-        assumptions, the analysis terminates here with a structured no-go recommendation.
-      </p>
-    </section>
-
-    <!-- Stage 2 -->
-    <section class="section reading-column">
-      <h2>Stage 2 — Workflow Constraint Mapping</h2>
-      <p>
-        Automation only increases shipped volume if it addresses the actual throughput
-        constraint. This stage maps the full fulfillment workflow to identify where the
-        bottleneck sits — and whether the proposed system addresses it.
-      </p>
-      <p>
-        Workflow nodes analysed:
-      </p>
-      <ul>
-        <li>Receiving and putaway</li>
-        <li>Storage and replenishment</li>
-        <li>Pick (travel, locate, retrieve)</li>
-        <li>Transport and sortation</li>
-        <li>Pack and outbound staging</li>
-      </ul>
-      <p>
-        The constraint node determines the maximum realised throughput of the facility.
-        Automation that improves a non-constraint node shifts congestion rather than
-        removing it.
-      </p>
-    </section>
-
-    <!-- Stage 3 -->
-    <section class="section reading-column">
-      <h2>Stage 3 — Labor and Capital Economics</h2>
-      <p>
-        This stage models the net economic impact of automation under the specific
-        facility's operating conditions — not vendor benchmark assumptions.
-      </p>
-      <div class="advisory-two-col">
-        <div>
-          <h3>Labor Analysis</h3>
-          <ul>
-            <li>Removable labor share (travel, repetitive handling)</li>
-            <li>Labor added by automation (supervision, replenishment, exceptions)</li>
-            <li>Net removable labor at modelled utilization</li>
-            <li>Wage trajectory over contract life</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Capital Analysis</h3>
-          <ul>
-            <li>Capex and integration cost</li>
-            <li>Annual support and maintenance</li>
-            <li>Payback period at conservative utilization</li>
-            <li>Sensitivity to demand trough scenarios</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- Stage 4 -->
-    <section class="section reading-column">
-      <h2>Stage 4 — Vendor and Architecture Evaluation</h2>
-      <p>
-        Once economic viability is confirmed, the analysis evaluates which vendor
-        architecture best fits the facility's workflow structure, SKU profile, and
-        integration constraints.
-      </p>
-      <ul>
-        <li>AMR vs goods-to-person vs hybrid architecture fit</li>
-        <li>Fleet density requirements at required utilization</li>
-        <li>WMS integration complexity and risk</li>
-        <li>Vendor pricing structure and contract terms</li>
-        <li>Reference site comparability</li>
-      </ul>
-    </section>
-
-    <!-- Stage 5 -->
-    <section class="section reading-column">
-      <h2>Stage 5 — Risk Assessment</h2>
-      <p>
-        Deployment risk is evaluated across four categories before a recommendation
-        is issued.
-      </p>
-      <ul>
-        <li><strong>Utilization risk</strong> — demand falls below break-even threshold</li>
-        <li><strong>Integration risk</strong> — WMS or ERP compatibility failures during ramp</li>
-        <li><strong>Layout risk</strong> — facility constraints limit robot density or workflow</li>
-        <li><strong>Commercial risk</strong> — client contract loss before capital recovery</li>
-      </ul>
-      <p>
-        Each risk is rated by probability and impact. Risks above tolerance threshold
-        are flagged as conditions that must be resolved before deployment proceeds.
-      </p>
-    </section>
-
-    <!-- Stage 6 -->
-    <section class="section reading-column">
-      <h2>Stage 6 — Decision Brief Output</h2>
-      <p>
-        Every engagement concludes with a structured decision brief containing:
-      </p>
-      <ol>
-        <li>Decision question and scope</li>
-        <li>Utilization model with variable inputs</li>
-        <li>Workflow constraint map</li>
-        <li>Net labor and capital economics</li>
-        <li>Vendor / architecture evaluation</li>
-        <li>Risk register with rated items</li>
-        <li>Go / Pause / Kill recommendation with stated conditions</li>
-      </ol>
-      <p>
-        The recommendation is explicit. If data is insufficient to support a recommendation,
-        that gap is documented — not papered over.
-      </p>
-    </section>
-
-    <!-- What We Do Not Do -->
-    <section class="section reading-column">
-      <h2>What We Do Not Do</h2>
-      <ul>
-        <li>Implementation or integration work</li>
-        <li>Vendor selection without economic validation first</li>
-        <li>Commercial arrangements with automation vendors being evaluated</li>
-        <li>Market research that does not conclude in a decision recommendation</li>
-      </ul>
-    </section>
-
-    <!-- CTA -->
-    <section class="section reading-column">
-      <p>
-        <a href="/advisory" class="btn-primary" style="margin-right: 12px;">See Advisory Services</a>
-        <a href="/contact">Start a Conversation →</a>
-      </p>
-    </section>
+    <article class="reading-column prose" set:html={methodologyHtml} />
   </main>
 
   <Footer />

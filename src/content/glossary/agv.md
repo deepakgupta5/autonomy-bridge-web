@@ -1,10 +1,15 @@
 ---
-title: "Automated Guided Vehicle (AGV)"
+title: "Automated Guided Vehicle"
 abbreviation: "AGV"
-description: "An AGV follows fixed infrastructure paths — magnetic tape or optical guides — for high-volume repetitive transport in structured warehouse environments."
-definition: "An Automated Guided Vehicle (AGV) is a materials handling robot that navigates along predefined infrastructure paths including magnetic strips, optical guides, or laser reflectors. AGVs are used for repetitive pallet movement and transport in structured warehouse environments with predictable flow."
-relatedTerms: ["amr", "fleet-utilization", "robot-density"]
-usedIn: ["how-warehouse-robotics-economics-works"]
+description: "Automated guided vehicles used in warehouses for material transport along fixed paths such as magnetic tape, wires, or visual guidance."
+definition: "Automated guided vehicles are warehouse transport robots that follow predefined guidance paths within facilities."
+relatedTerms:
+  - amr
+  - goods-to-person
+  - fleet-density
+usedIn:
+  - warehouse-automation-decision-framework
+  - vendor-evaluation-framework
 ---
 
-*Definition content coming in Phase 2.*
+Automated guided vehicles operate using fixed navigation systems such as magnetic tape, wires embedded in floors, or visual markers. Because their movement paths are predefined, AGVs typically require facility modifications during installation. AGVs are often used in structured warehouse environments where predictable routing is required.

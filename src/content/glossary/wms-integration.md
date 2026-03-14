@@ -1,9 +1,15 @@
 ---
-title: "WMS Integration"
-description: "WMS integration connects warehouse management software to robotics fleet control, enabling task dispatch, inventory synchronization, and coordination."
-definition: "WMS integration is the technical interface between a Warehouse Management System (WMS) and robotic fleet control software, enabling task dispatch, inventory state updates, and workflow coordination. WMS integration quality determines robot utilization efficiency and system reliability. Integration failures are a leading cause of warehouse automation deployment underperformance."
-relatedTerms: ["fleet-utilization", "throughput-density", "amr"]
-usedIn: ["why-warehouse-automation-projects-fail", "why-robotics-pilots-fail-to-scale"]
+title: "Warehouse Management System Integration"
+abbreviation: "WMS"
+description: "Technical integration connecting robotics systems with warehouse management software to coordinate inventory, tasks, and workflows."
+definition: "WMS integration links warehouse automation systems with inventory management and task orchestration software."
+relatedTerms:
+  - amr
+  - goods-to-person
+  - fleet-utilization
+usedIn:
+  - vendor-evaluation-framework
+  - why-robotics-pilots-fail-to-scale
 ---
 
-*Definition content coming in Phase 2.*
+Robotics systems must integrate with warehouse management systems to coordinate tasks. Poor integration can create synchronization errors, task delays, and operational disruptions. Reliable integration is essential for stable robotics deployments.

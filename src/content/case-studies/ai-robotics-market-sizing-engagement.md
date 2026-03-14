@@ -1,11 +1,46 @@
 ---
-title: "AI / Robotics Market Sizing Engagement"
-description: "Decision research producing a credible serviceable market estimate for an AI-enabled warehouse robotics platform targeting mid-size 3PL fulfillment operators."
-engagementType: "Market Sizing Engagement"
-decisionQuestion: "What is the realistic serviceable obtainable market for this platform, and what deployment conditions determine buyer conversion?"
-relatedArticles: ["how-warehouse-robotics-economics-works"]
-relatedFrameworks: ["robotics-roi-model"]
-relatedUseCases: ["evaluating-warehouse-automation-roi"]
+title: "AI Robotics Market Sizing Engagement"
+description: "Case study estimating the addressable market for warehouse robotics solutions by analyzing automation economics and operator demand."
+engagementType: "Market Sizing Analysis"
+decisionQuestion: "What is the realistic addressable market for robotics deployment in warehouse fulfillment operations?"
+relatedArticles:
+  - "how-warehouse-robotics-economics-works"
+relatedFrameworks:
+  - "robotics-roi-model"
+  - "warehouse-automation-decision-framework"
+relatedUseCases:
+  - "evaluating-warehouse-automation-roi"
 ---
 
-*Case study content coming in Phase 2.*
+## Engagement type
+
+Market sizing analysis evaluating adoption potential for robotics solutions in warehouse operations.
+---
+
+## Decision question answered
+
+What share of warehouse operations can economically adopt robotics automation?
+---
+
+## Research approach
+
+The research evaluated warehouse types, operational workflows, and automation economics across fulfillment facilities. Demand variability, labor structure, and utilization thresholds were modeled to estimate where automation deployments remain economically viable.
+---
+
+## Output delivered
+
+- Segmentation of warehouse automation adoption potential
+- Demand modeling across warehouse types
+- Utilization thresholds for robotics deployment
+- Market size estimation under realistic economic assumptions
+
+---
+
+## Key findings
+
+- Automation adoption is concentrated in facilities with stable demand and high throughput.
+- Ecommerce fulfillment centers represent the largest near-term robotics opportunity.
+- Multi-client 3PL warehouses face significant utilization risk.
+- Market sizing must account for economic viability rather than theoretical automation potential.
+
+---

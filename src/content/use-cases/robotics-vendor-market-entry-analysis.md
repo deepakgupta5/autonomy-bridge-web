@@ -1,11 +1,47 @@
 ---
 title: "Robotics Vendor Market Entry Analysis"
-description: "Decision research for robotics vendors on 3PL warehouse market entry: segment sizing, buyer readiness, and competitive positioning requirements for AMRs."
-audience: "Robotics vendors, automation technology companies, investors in warehouse robotics"
-decisionQuestion: "Which 3PL market segments offer viable entry conditions for a robotics deployment, and what commercial model fits buyer readiness?"
-relatedArticles: ["how-warehouse-robotics-economics-works"]
-relatedFrameworks: ["vendor-economics-framework"]
-relatedCaseStudies: ["robotics-pricing-strategy-research"]
+description: "Use case evaluating robotics vendor market entry strategy by assessing customer demand, deployment economics, and competitive positioning."
+audience: "Robotics vendors and investors evaluating warehouse automation markets"
+decisionQuestion: "Can this robotics vendor achieve sustainable adoption in warehouse automation markets?"
+relatedArticles:
+  - "how-warehouse-robotics-economics-works"
+relatedFrameworks:
+  - "vendor-economics-framework"
+  - "vendor-evaluation-framework"
+relatedCaseStudies:
+  - "robotics-pricing-strategy-research"
 ---
 
-*Use case content coming in Phase 2.*
+## Decision question
+
+Should a robotics vendor enter a specific warehouse automation segment? Successful market entry depends on alignment between product architecture and real warehouse operational constraints.
+---
+
+## The Risk
+
+Many robotics vendors target warehouse automation markets without validating economic viability for operators. Systems may perform well technically but fail to achieve adoption if operators cannot sustain utilization. Misaligned pricing models also reduce adoption.
+---
+
+## What Is Unknown
+
+- Whether the target warehouse segment supports automation economics
+- How vendor pricing affects adoption
+- Whether product architecture fits operational workflows
+
+These factors determine whether a robotics solution achieves market traction.
+---
+
+## Output Signal
+
+The analysis determines whether the product architecture and pricing model align with operator demand. If automation economics are viable and the product addresses real workflow constraints, market entry may succeed.
+---
+
+## Typical Buyer
+
+- Robotics vendors evaluating warehouse automation opportunities
+- Venture investors assessing robotics startups
+- Automation companies evaluating new logistics markets
+
+---
+
+**Request a briefing call:** [/contact](/contact)

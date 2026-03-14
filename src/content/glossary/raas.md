@@ -1,10 +1,15 @@
 ---
-title: "Robotics-as-a-Service (RaaS)"
+title: "Robotics-as-a-Service"
 abbreviation: "RaaS"
-description: "RaaS bundles warehouse robotics hardware, software, and maintenance under subscription pricing, shifting cost from capital purchase to operational expenditure."
-definition: "Robotics-as-a-Service (RaaS) is a commercial model in which warehouse robotics vendors bundle hardware, software, maintenance, and support under a recurring subscription or usage-based contract. RaaS shifts automation cost from capital expenditure to operating expenditure, affecting budget approval pathways, accounting treatment, and capital recovery dynamics."
-relatedTerms: ["capex", "fleet-utilization", "utilization-threshold"]
-usedIn: ["how-warehouse-robotics-economics-works"]
+description: "Robotics pricing model where operators pay subscription or usage fees for automation systems instead of purchasing hardware outright."
+definition: "Robotics-as-a-Service is a pricing model where robotics systems are provided through subscription or usage-based agreements."
+relatedTerms:
+  - capex
+  - amr
+  - vendor-economics-framework
+usedIn:
+  - vendor-economics-framework
+  - robotics-pricing-strategy-research
 ---
 
-*Definition content coming in Phase 2.*
+Under Robotics-as-a-Service models, operators avoid large upfront capital investments. Instead, robotics vendors provide systems through subscription or usage-based agreements that convert automation costs into operating expenses. This pricing model reduces capital exposure but may increase long-term cost depending on utilization.

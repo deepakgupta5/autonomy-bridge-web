@@ -1,11 +1,47 @@
 ---
 title: "Robotics Market Entry Decision Analysis"
-description: "A decision research engagement evaluating market entry conditions for an autonomous mobile robotics vendor targeting 3PL warehouse operators in North America."
+description: "Case study analyzing whether a robotics vendor should enter ecommerce warehouse automation markets based on deployment economics and operator demand."
 engagementType: "Market Entry Analysis"
-decisionQuestion: "Which 3PL warehouse segments offer viable entry conditions, and what deployment model fits buyer procurement behavior?"
-relatedArticles: ["how-warehouse-workflows-determine-automation-success"]
-relatedFrameworks: ["vendor-evaluation-framework"]
-relatedUseCases: ["amr-deployment-evaluation"]
+decisionQuestion: "Should a robotics vendor enter ecommerce warehouse automation markets based on demand stability and operator economics?"
+relatedArticles:
+  - "how-warehouse-workflows-determine-automation-success"
+relatedFrameworks:
+  - "vendor-evaluation-framework"
+  - "workflow-architecture-framework"
+relatedUseCases:
+  - "robotics-vendor-market-entry-analysis"
+  - "goods-to-person-system-evaluation"
 ---
 
-*Case study content coming in Phase 2.*
+## Engagement type
+
+Market entry strategy research evaluating robotics vendor expansion into warehouse automation markets.
+---
+
+## Decision question answered
+
+Can this robotics vendor achieve sustainable adoption in ecommerce fulfillment warehouses given operator economics and demand stability?
+---
+
+## Research approach
+
+The analysis examined warehouse automation demand across ecommerce fulfillment operators and third-party logistics providers. Operational constraints, warehouse workflows, and automation economics were evaluated to determine whether vendor architecture aligned with real facility conditions. Vendor pricing structures and deployment models were compared against operator adoption incentives.
+---
+
+## Output delivered
+
+- Warehouse automation demand analysis
+- Operational constraint assessment across fulfillment facilities
+- Vendor architecture fit analysis
+- Pricing structure evaluation and adoption risk
+
+---
+
+## Key findings
+
+- Automation adoption depends primarily on utilization stability rather than technology capability.
+- Ecommerce fulfillment warehouses offer stronger demand conditions for robotics adoption than multi-client 3PL facilities.
+- Vendor pricing structures significantly influence operator adoption decisions.
+- Product architectures aligned with workflow constraints achieve faster deployment adoption.
+
+---
