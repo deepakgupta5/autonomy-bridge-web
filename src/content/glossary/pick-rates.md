@@ -11,4 +11,8 @@ usedIn:
   - how-warehouse-workflows-determine-automation-success
 ---
 
-Pick rates are commonly used to evaluate warehouse productivity. Automation often improves pick rates by reducing travel time or increasing pick density. However, facility throughput still depends on the slowest workflow stage.
+Pick rates are commonly used to evaluate warehouse productivity.
+
+Automation often improves pick rates by reducing travel time or increasing pick density.
+
+However, facility throughput still depends on the slowest workflow stage.

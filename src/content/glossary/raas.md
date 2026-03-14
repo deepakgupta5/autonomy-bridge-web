@@ -12,4 +12,8 @@ usedIn:
   - robotics-pricing-strategy-research
 ---
 
-Under Robotics-as-a-Service models, operators avoid large upfront capital investments. Instead, robotics vendors provide systems through subscription or usage-based agreements that convert automation costs into operating expenses. This pricing model reduces capital exposure but may increase long-term cost depending on utilization.
+Under Robotics-as-a-Service models, operators avoid large upfront capital investments.
+
+Instead, robotics vendors provide systems through subscription or usage-based agreements that convert automation costs into operating expenses.
+
+This pricing model reduces capital exposure but may increase long-term cost depending on utilization.

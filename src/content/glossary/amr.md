@@ -13,4 +13,8 @@ usedIn:
   - vendor-evaluation-framework
 ---
 
-Autonomous mobile robots navigate warehouse environments using onboard sensors and facility maps. Unlike guided automation systems, AMRs can dynamically route around obstacles and adapt to changing workflows. They are commonly deployed to move totes, carts, or pallets between storage, picking, and packing areas. AMRs primarily reduce **worker travel time**, which often represents a large share of manual warehouse labor.
+Autonomous mobile robots navigate warehouse environments using onboard sensors and facility maps.
+
+Unlike guided automation systems, AMRs can dynamically route around obstacles and adapt to changing workflows. They are commonly deployed to move totes, carts, or pallets between storage, picking, and packing areas.
+
+AMRs primarily reduce **worker travel time**, which often represents a large share of manual warehouse labor.

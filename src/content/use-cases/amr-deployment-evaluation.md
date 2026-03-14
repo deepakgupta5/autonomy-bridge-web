@@ -14,13 +14,21 @@ relatedCaseStudies:
 
 ## Decision question
 
-Should autonomous mobile robots be deployed to improve warehouse productivity? AMRs reduce travel labor by moving goods rather than workers.
-***
+Should autonomous mobile robots be deployed to improve warehouse productivity?
+
+AMRs reduce travel labor by moving goods rather than workers.
+
+---
 
 ## The Risk
 
-AMR systems rely on continuous task demand. If transport tasks are intermittent or workflows are poorly structured, robots remain idle and utilization collapses. Congestion and workflow interaction problems may also reduce system efficiency.
-***
+AMR systems rely on continuous task demand.
+
+If transport tasks are intermittent or workflows are poorly structured, robots remain idle and utilization collapses.
+
+Congestion and workflow interaction problems may also reduce system efficiency.
+
+---
 
 ## What Is Unknown
 
@@ -29,12 +37,16 @@ AMR systems rely on continuous task demand. If transport tasks are intermittent 
 - Whether warehouse layout supports efficient robot movement
 
 These factors determine whether AMRs produce measurable productivity gains.
-***
+
+---
 
 ## Output Signal
 
-The evaluation identifies whether transport labor removal exceeds the operating cost of the robot fleet. If utilization remains high and task density supports continuous operation, AMR deployment improves productivity.
-***
+The evaluation identifies whether transport labor removal exceeds the operating cost of the robot fleet.
+
+If utilization remains high and task density supports continuous operation, AMR deployment improves productivity.
+
+---
 
 ## Typical Buyer
 
@@ -42,6 +54,12 @@ The evaluation identifies whether transport labor removal exceeds the operating 
 - Logistics automation program leaders
 - Operations executives evaluating robotics deployments
 
-***
+---
+
+<InternalLinks
+  relatedArticles={[{ title: "Why Robotics Pilots Fail to Scale", slug: "why-robotics-pilots-fail-to-scale" }]}
+  relatedFrameworks={[{ title: "Vendor Evaluation Framework", slug: "vendor-evaluation-framework" }]}
+  relatedCaseStudies={[{ title: "Robotics Market Entry Decision Analysis", slug: "robotics-market-entry-decision-analysis" }]}
+/>
 
 **Request a briefing call:** [/contact](/contact)

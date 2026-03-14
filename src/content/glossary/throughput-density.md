@@ -11,4 +11,8 @@ usedIn:
   - warehouse-automation-decision-framework
 ---
 
-Throughput density determines whether automation systems remain productive. Higher throughput density improves robotic efficiency because systems remain continuously active. Low throughput density often results in idle automation capacity.
+Throughput density determines whether automation systems remain productive.
+
+Higher throughput density improves robotic efficiency because systems remain continuously active.
+
+Low throughput density often results in idle automation capacity.

@@ -17,17 +17,24 @@ relatedUseCases:
 ## Engagement type
 
 Deployment risk analysis evaluating warehouse automation investment viability.
-***
+
+---
 
 ## Decision question answered
 
 Will this warehouse automation deployment generate sustainable productivity improvements or expose the operator to utilization risk?
-***
+
+---
 
 ## Research approach
 
-The research analyzed warehouse workflows, demand variability, and automation system capacity. Labor substitution assumptions were tested against actual operational tasks to determine how many hours automation would realistically remove. Demand variability scenarios were modeled to evaluate utilization sensitivity.
-***
+The research analyzed warehouse workflows, demand variability, and automation system capacity.
+
+Labor substitution assumptions were tested against actual operational tasks to determine how many hours automation would realistically remove.
+
+Demand variability scenarios were modeled to evaluate utilization sensitivity.
+
+---
 
 ## Output delivered
 
@@ -36,7 +43,7 @@ The research analyzed warehouse workflows, demand variability, and automation sy
 - Automation economic viability assessment
 - Deployment risk screening framework
 
-***
+---
 
 ## Key findings
 
@@ -45,4 +52,10 @@ The research analyzed warehouse workflows, demand variability, and automation sy
 - Workflow bottlenecks commonly shift after automation deployment.
 - Utilization collapse is the primary cause of automation economic failure.
 
-***
+---
+
+<InternalLinks
+  relatedArticles={[{ title: "Why Warehouse Automation Projects Fail", slug: "why-warehouse-automation-projects-fail" }]}
+  relatedFrameworks={[{ title: "Automation Failure Framework", slug: "automation-failure-framework" }]}
+  relatedUseCases={[{ title: "Robotics Deployment in 3PL Warehouses", slug: "robotics-deployment-3pl-warehouses" }]}
+/>

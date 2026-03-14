@@ -11,4 +11,8 @@ usedIn:
   - why-robotics-pilots-fail-to-scale
 ---
 
-Robot density influences how efficiently robotic fleets operate within a warehouse. High robot density can increase throughput but may also create congestion if warehouse layouts are not designed for robotic traffic. Fleet coordination systems must balance robot density with operational efficiency.
+Robot density influences how efficiently robotic fleets operate within a warehouse.
+
+High robot density can increase throughput but may also create congestion if warehouse layouts are not designed for robotic traffic.
+
+Fleet coordination systems must balance robot density with operational efficiency.

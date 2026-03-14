@@ -11,4 +11,6 @@ usedIn:
   - pilot-to-scale-failure-framework
 ---
 
-Fleet density affects traffic coordination, congestion risk, and throughput efficiency. Optimal fleet density depends on warehouse layout, task distribution, and system coordination software.
+Fleet density affects traffic coordination, congestion risk, and throughput efficiency.
+
+Optimal fleet density depends on warehouse layout, task distribution, and system coordination software.

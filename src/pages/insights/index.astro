@@ -4,11 +4,18 @@ import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
 import ArticleCard from "../../components/ArticleCard.astro";
 import { getCollection } from "astro:content";
+import { readFile } from "node:fs/promises";
+import { renderMarkdown } from "../../utils/markdownToHtml";
 
 const articles = await getCollection("articles");
 const sorted = articles.sort(
   (a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime()
 );
+const marketOverviewSource = await readFile(
+  "src/content/page-copy/market-overview.md",
+  "utf-8"
+);
+const marketOverviewHtml = await renderMarkdown(marketOverviewSource);
 ---
 
 <Layout
@@ -26,53 +33,27 @@ const sorted = articles.sort(
     </p>
 
     <section class="section reading-column">
-      <h2>Warehouse Robotics Market Structure</h2>
-      <p>
-        Warehouse automation is a capital-intensive market driven by utilization
-        economics, not robot specifications. Understanding how deployments are
-        structured, priced, and evaluated is a prerequisite for any high-stakes
-        automation decision.
-      </p>
-      <h3>Deployment Economics</h3>
-      <p>
-        AMR and goods-to-person systems convert variable labour into fixed
-        infrastructure cost. Payback depends on whether real order volume
-        sustains the utilization required to recover capital across the system
-        life — not on robot speed or throughput capability.
-      </p>
-      <h3>Vendor Architecture Landscape</h3>
-      <p>
-        The AMR vendor market is fragmented across autonomous mobile robots,
-        goods-to-person systems, and hybrid architectures. Vendor economics,
-        pricing models, and deployment conditions vary significantly and are
-        rarely comparable using vendor-supplied ROI tools.
-      </p>
-      <h3>Failure Modes</h3>
-      <p>
-        Most warehouse automation failures are economic rather than technical:
-        utilization collapse, bottleneck migration, integration instability, and
-        retrofit layout constraints. Understanding these failure modes is
-        essential before committing capital.
-      </p>
-      <h3>Decision-Grade Analysis</h3>
-      <p>
-        Operator decisions require facility-specific economic modelling, not
-        market benchmarks. The articles below provide the analytical foundations
-        for evaluating automation investments on their own terms.
-      </p>
+      <h2>Market Overview</h2>
+      <article class="prose insights-market-overview" set:html={marketOverviewHtml}></article>
     </section>
 
-    <div class="content-grid">
-      {sorted.map((article) => (
-        <ArticleCard
-          title={article.data.title}
-          description={article.data.description}
-          slug={article.slug}
-          cluster={article.data.cluster}
-          pubDate={article.data.pubDate}
-        />
-      ))}
-    </div>
+    <section class="section">
+      <h2>Authority Articles</h2>
+      <p class="reading-column">
+        Core analysis articles that define the economics and decision logic for warehouse automation.
+      </p>
+      <div class="content-grid">
+        {sorted.map((article) => (
+          <ArticleCard
+            title={article.data.title}
+            description={article.data.description}
+            slug={article.slug}
+            cluster={article.data.cluster}
+            pubDate={article.data.pubDate}
+          />
+        ))}
+      </div>
+    </section>
 
     <section class="section reading-column">
       <h2>Decision Frameworks</h2>

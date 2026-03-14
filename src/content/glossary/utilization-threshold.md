@@ -11,4 +11,16 @@ usedIn:
   - automation-failure-framework
 ---
 
-Automation systems must maintain utilization above the capital recovery threshold. When utilization falls below this level, fixed infrastructure costs spread across fewer orders. This condition often leads to automation deployment failure.
+Automation systems must maintain utilization above the capital recovery threshold.
+
+When utilization falls below this level, fixed infrastructure costs spread across fewer orders.
+
+This condition often leads to automation deployment failure.
+
+
+---
+
+
+---
+
+## Pages

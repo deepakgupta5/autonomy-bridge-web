@@ -355,6 +355,10 @@ section p + p {
   line-height: var(--leading-body);
 }
 
+.prose hr {
+  margin: 32px 0;
+}
+
 .prose h2 {
   font-size: var(--text-2xl);
 }
@@ -517,6 +521,18 @@ nav a:hover {
 .frameworks-cluster {
   padding-top: 72px;
   padding-bottom: 72px;
+}
+
+.insights-market-overview hr {
+  margin: 40px 0;
+}
+
+.insights-market-overview h2 {
+  font-size: var(--text-2xl);
+}
+
+.insights-market-overview > h2:first-child {
+  margin-top: 0;
 }
 
 .footer {

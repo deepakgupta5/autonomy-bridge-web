@@ -14,29 +14,44 @@ relatedCaseStudies:
 
 ## Decision question
 
-Should this warehouse deploy automation based on expected labor savings and order throughput? Automation investments convert variable labor capacity into fixed infrastructure. The central decision is whether real demand can sustain utilization levels required for capital recovery.
-***
+Should this warehouse deploy automation based on expected labor savings and order throughput?
+
+Automation investments convert variable labor capacity into fixed infrastructure. The central decision is whether real demand can sustain utilization levels required for capital recovery.
+
+---
 
 ## The Risk
 
-Operators often approve automation based on projected productivity gains without validating demand stability. When order volume fluctuates, robotic systems may operate far below capacity, spreading capital cost across fewer processed orders. Low utilization erodes the economic case for automation even when robots perform as expected.
-***
+Operators often approve automation based on projected productivity gains without validating demand stability.
+
+When order volume fluctuates, robotic systems may operate far below capacity, spreading capital cost across fewer processed orders.
+
+Low utilization erodes the economic case for automation even when robots perform as expected.
+
+---
 
 ## What Is Unknown
 
 Several uncertainties must be resolved before approving automation:
+
 - demand stability across clients and seasons
 - share of labor that automation can actually remove
 - whether downstream workflows absorb increased throughput
 - facility layout compatibility with robotic architecture
 
 Without addressing these factors, ROI projections become unreliable.
-***
+
+---
 
 ## Output Signal
 
-The analysis produces a clear economic threshold. If modeled utilization remains above the minimum capital recovery threshold under realistic demand scenarios, automation is viable. If utilization falls below that threshold in plausible downside scenarios, the investment should be delayed or redesigned.
-***
+The analysis produces a clear economic threshold.
+
+If modeled utilization remains above the minimum capital recovery threshold under realistic demand scenarios, automation is viable.
+
+If utilization falls below that threshold in plausible downside scenarios, the investment should be delayed or redesigned.
+
+---
 
 ## Typical Buyer
 
@@ -44,6 +59,12 @@ The analysis produces a clear economic threshold. If modeled utilization remains
 - Warehouse operators evaluating automation upgrades
 - Logistics investors assessing facility productivity improvements
 
-***
+---
+
+<InternalLinks
+  relatedArticles={[{ title: "How Warehouse Robotics Economics Actually Works", slug: "how-warehouse-robotics-economics-works" }]}
+  relatedFrameworks={[{ title: "Robotics ROI Model", slug: "robotics-roi-model" }]}
+  relatedCaseStudies={[{ title: "AI / Robotics Market Sizing Engagement", slug: "ai-robotics-market-sizing-engagement" }]}
+/>
 
 **Request a briefing call:** [/contact](/contact)

@@ -14,13 +14,21 @@ relatedCaseStudies:
 
 ## Decision question
 
-Should a robotics vendor enter a specific warehouse automation segment? Successful market entry depends on alignment between product architecture and real warehouse operational constraints.
-***
+Should a robotics vendor enter a specific warehouse automation segment?
+
+Successful market entry depends on alignment between product architecture and real warehouse operational constraints.
+
+---
 
 ## The Risk
 
-Many robotics vendors target warehouse automation markets without validating economic viability for operators. Systems may perform well technically but fail to achieve adoption if operators cannot sustain utilization. Misaligned pricing models also reduce adoption.
-***
+Many robotics vendors target warehouse automation markets without validating economic viability for operators.
+
+Systems may perform well technically but fail to achieve adoption if operators cannot sustain utilization.
+
+Misaligned pricing models also reduce adoption.
+
+---
 
 ## What Is Unknown
 
@@ -29,12 +37,16 @@ Many robotics vendors target warehouse automation markets without validating eco
 - Whether product architecture fits operational workflows
 
 These factors determine whether a robotics solution achieves market traction.
-***
+
+---
 
 ## Output Signal
 
-The analysis determines whether the product architecture and pricing model align with operator demand. If automation economics are viable and the product addresses real workflow constraints, market entry may succeed.
-***
+The analysis determines whether the product architecture and pricing model align with operator demand.
+
+If automation economics are viable and the product addresses real workflow constraints, market entry may succeed.
+
+---
 
 ## Typical Buyer
 
@@ -42,6 +54,20 @@ The analysis determines whether the product architecture and pricing model align
 - Venture investors assessing robotics startups
 - Automation companies evaluating new logistics markets
 
-***
+---
+
+<InternalLinks
+  relatedArticles={[{ title: "How Warehouse Robotics Economics Actually Works", slug: "how-warehouse-robotics-economics-works" }]}
+  relatedFrameworks={[{ title: "Robotics Vendor Economics Framework", slug: "vendor-economics-framework" }]}
+  relatedCaseStudies={[{ title: "Robotics Pricing Strategy Research", slug: "robotics-pricing-strategy-research" }]}
+/>
 
 **Request a briefing call:** [/contact](/contact)
+
+
+---
+
+
+---
+
+## Case Studies

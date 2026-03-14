@@ -5,19 +5,25 @@
 
 # Advisory
 
-Decision briefs for robotics, AI, and industrial automation deployment. This work evaluates whether a technology should be deployed, delayed, or stopped. Related pages: [About](/about) · [Frameworks](/frameworks) · [Case Studies](/case-studies)
+Decision briefs for robotics, AI, and industrial automation deployment. This work evaluates whether a technology should be deployed, delayed, or stopped.
+
+Related pages: [About](/about) · [Frameworks](/frameworks) · [Case Studies](/case-studies)
+
 ---
 
 ## What Decision This Solves
 
 ### AMR Deployment Decision Brief
 
-**Decision question:** Does AMR deployment produce reliable ROI in this warehouse? Typical questions:
+**Decision question:** Does AMR deployment produce reliable ROI in this warehouse?
+
+Typical questions:
 - Should we deploy AMRs in this facility?
 - Which vendor architecture fits the workflow?
 - What utilization level is required for payback?
 
 **Output: Go / Pause / Kill recommendation**
+
 ---
 
 ## Decision Brief Structure
@@ -30,6 +36,7 @@ Decision briefs for robotics, AI, and industrial automation deployment. This wor
 6. Go / Pause / Kill recommendation
 
 **Deliverable: Executive decision brief**
+
 ---
 
 ## Who This Is For
@@ -46,7 +53,9 @@ Decision briefs for robotics, AI, and industrial automation deployment. This wor
 
 ## Delivery Timeline
 
-**10–14 days** Phases:
+**10–14 days**
+
+Phases:
 - Facility data review
 - Operational modeling
 - Vendor evaluation
@@ -56,5 +65,27 @@ Decision briefs for robotics, AI, and industrial automation deployment. This wor
 
 ## Request a Briefing Call
 
-**Deliverable:** Decision brief **Timeline:** 10–14 days **Pricing:** Fixed fee after scoping [Request a briefing call](/contact)
+**Deliverable:** Decision brief
+**Timeline:** 10–14 days
+**Pricing:** Fixed fee after scoping
+
+[Request a briefing call](/contact)
+
 ---
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "AMR Deployment Decision Brief",
+  "serviceType": "Advisory",
+  "provider": {
+    "@type": "Organization",
+    "name": "Autonomy Bridge",
+    "url": "https://www.autonomybridge.com"
+  },
+  "url": "https://www.autonomybridge.com/advisory",
+  "description": "Research advisory evaluating the ROI and deployment viability of autonomous mobile robots in warehouse environments.",
+  "areaServed": "Global"
+}
+</script>

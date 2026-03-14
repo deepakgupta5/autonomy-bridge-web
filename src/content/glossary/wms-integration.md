@@ -12,4 +12,8 @@ usedIn:
   - why-robotics-pilots-fail-to-scale
 ---
 
-Robotics systems must integrate with warehouse management systems to coordinate tasks. Poor integration can create synchronization errors, task delays, and operational disruptions. Reliable integration is essential for stable robotics deployments.
+Robotics systems must integrate with warehouse management systems to coordinate tasks.
+
+Poor integration can create synchronization errors, task delays, and operational disruptions.
+
+Reliable integration is essential for stable robotics deployments.

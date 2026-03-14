@@ -12,4 +12,8 @@ usedIn:
   - vendor-evaluation-framework
 ---
 
-Automated guided vehicles operate using fixed navigation systems such as magnetic tape, wires embedded in floors, or visual markers. Because their movement paths are predefined, AGVs typically require facility modifications during installation. AGVs are often used in structured warehouse environments where predictable routing is required.
+Automated guided vehicles operate using fixed navigation systems such as magnetic tape, wires embedded in floors, or visual markers.
+
+Because their movement paths are predefined, AGVs typically require facility modifications during installation.
+
+AGVs are often used in structured warehouse environments where predictable routing is required.

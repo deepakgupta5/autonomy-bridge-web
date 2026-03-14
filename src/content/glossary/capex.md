@@ -12,4 +12,8 @@ usedIn:
   - why-warehouse-automation-projects-fail
 ---
 
-Automation investments require significant capital expenditure. This includes hardware, software integration, installation, facility modifications, and engineering support. CapEx decisions must be evaluated against expected labor savings and demand stability.
+Automation investments require significant capital expenditure.
+
+This includes hardware, software integration, installation, facility modifications, and engineering support.
+
+CapEx decisions must be evaluated against expected labor savings and demand stability.

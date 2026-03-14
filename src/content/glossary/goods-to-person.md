@@ -11,4 +11,8 @@ usedIn:
   - how-warehouse-workflows-determine-automation-success
 ---
 
-Goods-to-person systems eliminate worker travel by delivering inventory directly to pick stations. These systems increase pick productivity but require sustained order volume to remain economically viable. Station capacity often becomes the limiting throughput factor.
+Goods-to-person systems eliminate worker travel by delivering inventory directly to pick stations.
+
+These systems increase pick productivity but require sustained order volume to remain economically viable.
+
+Station capacity often becomes the limiting throughput factor.

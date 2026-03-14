@@ -11,4 +11,8 @@ usedIn:
   - how-warehouse-robotics-economics-works
 ---
 
-Fleet utilization is a critical variable in warehouse robotics economics. Robotic systems require sustained utilization to recover capital costs. When utilization drops due to low task demand, automation economics deteriorate quickly. Utilization stability is therefore central to evaluating robotics deployment viability.
+Fleet utilization is a critical variable in warehouse robotics economics.
+
+Robotic systems require sustained utilization to recover capital costs. When utilization drops due to low task demand, automation economics deteriorate quickly.
+
+Utilization stability is therefore central to evaluating robotics deployment viability.
