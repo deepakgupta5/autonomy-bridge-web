@@ -2,7 +2,6 @@
 import Layout from "../../components/Layout.astro";
 import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
-import ContentClusterBadge from "../../components/ContentClusterBadge.astro";
 import InternalLinks from "../../components/InternalLinks.astro";
 import { getCollection, getEntry } from "astro:content";
 
@@ -20,7 +19,6 @@ const { Content } = await fw.render();
 const {
   title,
   description,
-  cluster,
   diagramFile,
   diagramFiles,
   relatedArticles,
@@ -93,9 +91,7 @@ const breadcrumbs = [
       <span>{title}</span>
     </nav>
 
-    <ContentClusterBadge cluster={cluster} />
     <h1 class="reading-column">{title}</h1>
-    <p class="subhead reading-column">{description}</p>
 
     {allDiagrams.map((src: string, i: number) => (
       <figure class="framework-diagram reading-column">

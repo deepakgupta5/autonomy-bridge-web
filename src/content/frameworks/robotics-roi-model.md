@@ -15,7 +15,7 @@ diagramFile: "/diagrams/1-robotics-payback-economics-framework.png"
 ## Purpose
 
 The Robotics ROI Model evaluates whether warehouse automation generates sustainable economic returns. The framework tests whether facility demand can keep installed robotic capacity economically utilized over its full capital life. Automation replaces variable labor capacity with fixed infrastructure. The model determines whether that infrastructure can remain sufficiently active to recover capital costs.
----
+***
 
 ## Variables
 
@@ -40,7 +40,7 @@ U ≥ U_min
 ```
 
 Where **U_min** is the minimum utilization required for capital recovery.
----
+***
 
 ## Decision Logic
 
@@ -50,7 +50,7 @@ Automation becomes economically viable only when three conditions are satisfied 
 3. **Workflow architecture supports consistent robotic activity**
 
 If utilization falls below the recovery threshold, capital costs spread across fewer processed orders, collapsing ROI.
----
+***
 
 ## Application
 
@@ -61,4 +61,4 @@ Operators use this model during automation evaluation to:
 - estimate capital recovery timeline
 
 The model is most relevant for fulfillment warehouses where order volumes fluctuate across client accounts or seasonal demand cycles.
----
+***

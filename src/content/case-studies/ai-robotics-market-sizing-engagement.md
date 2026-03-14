@@ -15,17 +15,17 @@ relatedUseCases:
 ## Engagement type
 
 Market sizing analysis evaluating adoption potential for robotics solutions in warehouse operations.
----
+***
 
 ## Decision question answered
 
 What share of warehouse operations can economically adopt robotics automation?
----
+***
 
 ## Research approach
 
 The research evaluated warehouse types, operational workflows, and automation economics across fulfillment facilities. Demand variability, labor structure, and utilization thresholds were modeled to estimate where automation deployments remain economically viable.
----
+***
 
 ## Output delivered
 
@@ -34,7 +34,7 @@ The research evaluated warehouse types, operational workflows, and automation ec
 - Utilization thresholds for robotics deployment
 - Market size estimation under realistic economic assumptions
 
----
+***
 
 ## Key findings
 
@@ -43,4 +43,4 @@ The research evaluated warehouse types, operational workflows, and automation ec
 - Multi-client 3PL warehouses face significant utilization risk.
 - Market sizing must account for economic viability rather than theoretical automation potential.
 
----
+***

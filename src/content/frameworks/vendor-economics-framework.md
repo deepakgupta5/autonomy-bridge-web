@@ -15,7 +15,7 @@ diagramFile: "/diagrams/5-1-pricing-structure-comparison.png"
 ## Purpose
 
 The Robotics Vendor Economics Framework evaluates how vendor pricing models influence the economic viability of warehouse automation. Vendor pricing structures determine how automation costs scale with demand, utilization, and deployment scope. Understanding pricing structure is essential because different pricing models shift financial risk between operator and vendor.
----
+***
 
 ## Variables
 
@@ -27,12 +27,12 @@ Three pricing structures dominate robotics deployments:
 | Usage-based pricing | Variable cost linked to system activity | Cost scales with utilization |
 
 Key economic variables include capital cost and financing, maintenance and service contracts, fleet scaling costs, and utilization sensitivity.
----
+***
 
 ## Decision Logic
 
 Vendor pricing models change how automation economics respond to demand variability. Capital purchases create fixed infrastructure costs that require high utilization. Usage-based models reduce capital exposure but can increase operating cost over time. Operators must evaluate whether pricing structure aligns with demand stability and deployment risk.
----
+***
 
 ## Application
 
@@ -42,4 +42,4 @@ Operators use this framework to compare vendor proposals during automation evalu
 - identifying break-even conditions between capital and service pricing
 
 The framework helps determine whether vendor pricing structure supports sustainable automation economics.
----
+***

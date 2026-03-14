@@ -15,7 +15,7 @@ diagramFile: "/diagrams/2-1-automation-failure-mechanism-model.png"
 ## Purpose
 
 The Automation Failure Framework explains why warehouse automation projects frequently fail to deliver expected economic outcomes. Most failures originate during the **capital approval stage**, when optimistic utilization assumptions mask structural operational constraints.
----
+***
 
 ## Variables
 
@@ -28,7 +28,7 @@ Failure typically emerges from the interaction of four factors:
 | Integration complexity | WMS synchronization failures reduce system reliability |
 
 Automation performance depends on system-wide flow, not individual machine productivity.
----
+***
 
 ## Decision Logic
 
@@ -38,7 +38,7 @@ Automation failures occur when three modeled assumptions break simultaneously:
 3. Workflow bottlenecks cap facility throughput
 
 These conditions transform automation from a productivity investment into a fixed-cost burden.
----
+***
 
 ## Application
 
@@ -48,4 +48,4 @@ Operators use the framework to screen automation projects during evaluation and 
 - demand volatility modeling
 - facility throughput bottleneck analysis
 
----
+***

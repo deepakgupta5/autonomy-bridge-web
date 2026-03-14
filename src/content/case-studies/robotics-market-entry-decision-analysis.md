@@ -16,17 +16,17 @@ relatedUseCases:
 ## Engagement type
 
 Market entry strategy research evaluating robotics vendor expansion into warehouse automation markets.
----
+***
 
 ## Decision question answered
 
 Can this robotics vendor achieve sustainable adoption in ecommerce fulfillment warehouses given operator economics and demand stability?
----
+***
 
 ## Research approach
 
 The analysis examined warehouse automation demand across ecommerce fulfillment operators and third-party logistics providers. Operational constraints, warehouse workflows, and automation economics were evaluated to determine whether vendor architecture aligned with real facility conditions. Vendor pricing structures and deployment models were compared against operator adoption incentives.
----
+***
 
 ## Output delivered
 
@@ -35,7 +35,7 @@ The analysis examined warehouse automation demand across ecommerce fulfillment o
 - Vendor architecture fit analysis
 - Pricing structure evaluation and adoption risk
 
----
+***
 
 ## Key findings
 
@@ -44,4 +44,4 @@ The analysis examined warehouse automation demand across ecommerce fulfillment o
 - Vendor pricing structures significantly influence operator adoption decisions.
 - Product architectures aligned with workflow constraints achieve faster deployment adoption.
 
----
+***

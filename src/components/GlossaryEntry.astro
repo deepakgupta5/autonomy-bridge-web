@@ -27,26 +27,3 @@ const { title, abbreviation, definition, relatedTerms, usedIn } = Astro.props;
     </p>
   )}
 </div>
-
-<style>
-.glossary-entry__definition {
-  font-size: 17px;
-  line-height: 1.65;
-  max-width: 75ch;
-  margin-bottom: 16px;
-}
-.glossary-entry__used-in,
-.glossary-entry__related {
-  max-width: none;
-  margin-bottom: 8px;
-}
-.glossary-entry__used-in a,
-.glossary-entry__related a {
-  color: var(--accent);
-  text-decoration: none;
-}
-.glossary-entry__used-in a:hover,
-.glossary-entry__related a:hover {
-  text-decoration: underline;
-}
-</style>

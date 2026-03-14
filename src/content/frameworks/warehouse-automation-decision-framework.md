@@ -16,7 +16,7 @@ diagramFile: "/diagrams/3-1-warehouse-automation-decision-framework.png"
 ## Purpose
 
 This framework structures automation decisions in ecommerce fulfillment warehouses. The decision is not a technology comparison. It is a **capital allocation decision under uncertain demand conditions**.
----
+***
 
 ## Variables
 
@@ -30,7 +30,7 @@ Five operational variables determine automation viability:
 | Demand variability | Utilization stability across seasons and client mix |
 
 These variables determine utilization and workflow compatibility.
----
+***
 
 ## Decision Logic
 
@@ -40,7 +40,7 @@ Automation investment should proceed only when:
 3. Demand stability supports utilization above U_min
 
 Incorrect constraint identification leads to automation applied to non-binding bottlenecks.
----
+***
 
 ## Application
 
@@ -49,4 +49,4 @@ Operators apply the framework during early automation exploration to determine:
 - which architecture best fits the workflow
 - whether deployment risk exceeds acceptable capital exposure
 
----
+***

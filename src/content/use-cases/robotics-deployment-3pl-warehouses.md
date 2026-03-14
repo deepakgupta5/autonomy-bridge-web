@@ -15,12 +15,12 @@ relatedCaseStudies:
 ## Decision question
 
 Should robotics automation be deployed in a multi-client 3PL facility? Unlike single-client warehouses, 3PL operators face continuous demand volatility from changing customer accounts and seasonal fluctuations.
----
+***
 
 ## The Risk
 
 Automation installed for one large client account can become underutilized if that client reduces volume or exits the facility. Multi-client warehouses rely on flexible labor pools that shift between workflows. Automation can reduce this flexibility. Fixed infrastructure may therefore introduce new operational risk.
----
+***
 
 ## What Is Unknown
 
@@ -29,12 +29,12 @@ Automation installed for one large client account can become underutilized if th
 - How client churn could affect robotic capacity usage
 
 These factors determine whether robotics remains economically viable in a shared warehouse environment.
----
+***
 
 ## Output Signal
 
 The analysis determines whether automation capacity remains economically utilized across realistic demand scenarios. If utilization remains stable across the client portfolio, deployment may proceed. If utilization depends heavily on a single client or seasonal peak, automation introduces unacceptable capital exposure.
----
+***
 
 ## Typical Buyer
 
@@ -42,6 +42,6 @@ The analysis determines whether automation capacity remains economically utilize
 - Automation program managers evaluating robotics investments
 - Logistics investors assessing facility modernization strategies
 
----
+***
 
 **Request a briefing call:** [/contact](/contact)

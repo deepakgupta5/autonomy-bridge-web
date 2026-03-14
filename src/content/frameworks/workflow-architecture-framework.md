@@ -16,7 +16,7 @@ diagramFile: "/diagrams/7-1-warehouse-order-fulfillment-process.png"
 ## Purpose
 
 The Workflow Architecture Framework evaluates how warehouse workflows influence automation outcomes. Warehouse operations function as linked process chains. Throughput depends on the slowest operational node. Automation applied to a non-binding constraint will not increase facility throughput.
----
+***
 
 ## Variables
 
@@ -30,7 +30,7 @@ Workflow performance depends on:
 | Inventory flow through storage | Affects pick density and robot task demand |
 
 These variables determine where operational bottlenecks occur.
----
+***
 
 ## Decision Logic
 
@@ -40,7 +40,7 @@ T_facility = min(T_pick, T_transport, T_pack, T_sort, T_ship)
 ```
 
 Automation should target the stage that limits system throughput.
----
+***
 
 ## Application
 
@@ -51,4 +51,4 @@ Operators apply this framework when evaluating automation proposals to determine
 - testing automation scenarios against workflow constraints
 
 The framework ensures automation targets the correct operational constraint.
----
+***

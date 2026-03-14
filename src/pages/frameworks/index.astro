@@ -45,16 +45,20 @@ const clusters = [...new Set(sorted.map((f) => f.data.cluster))];
 
     {clusters.map((cluster) => {
       const clusterFrameworks = sorted.filter((f) => f.data.cluster === cluster);
+      const clusterLabel = clusterLabels[cluster] ?? cluster;
+      const firstTitle = clusterFrameworks[0]?.data.title?.toLowerCase() ?? "";
+      const shouldHideClusterHeading =
+        clusterFrameworks.length === 1 &&
+        firstTitle.includes(clusterLabel.toLowerCase());
       return (
-        <section class="section">
-          <h2>{clusterLabels[cluster] ?? cluster}</h2>
+        <section class="section frameworks-cluster">
+          {!shouldHideClusterHeading && <h2>{clusterLabel}</h2>}
           <div class="content-grid">
             {clusterFrameworks.map((fw) => (
               <FrameworkCard
                 title={fw.data.title}
                 description={fw.data.description}
                 slug={fw.slug}
-                cluster={fw.data.cluster}
                 diagramFile={fw.data.diagramFile ?? (fw.data.diagramFiles?.[0])}
               />
             ))}

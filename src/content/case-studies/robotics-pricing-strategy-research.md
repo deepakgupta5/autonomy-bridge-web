@@ -15,17 +15,17 @@ relatedUseCases:
 ## Engagement type
 
 Pricing strategy research evaluating robotics vendor pricing structures.
----
+***
 
 ## Decision question answered
 
 Which robotics pricing model supports sustainable adoption across warehouse operators?
----
+***
 
 ## Research approach
 
 The study analyzed vendor pricing models including capital purchase, subscription-based robotics-as-a-service, and usage-based pricing structures. Operator financial models were evaluated to determine how pricing affected automation adoption and capital recovery.
----
+***
 
 ## Output delivered
 
@@ -34,7 +34,7 @@ The study analyzed vendor pricing models including capital purchase, subscriptio
 - Pricing structure impact on deployment decisions
 - Vendor strategy recommendations
 
----
+***
 
 ## Key findings
 
@@ -43,4 +43,4 @@ The study analyzed vendor pricing models including capital purchase, subscriptio
 - Subscription pricing reduces capital exposure but may increase long-term cost.
 - Usage-based pricing aligns vendor revenue with operator activity levels.
 
----
+***

@@ -31,7 +31,7 @@ const letters = Object.keys(grouped).sort();
       and operational economics.
     </p>
 
-    <nav class="breadcrumb" aria-label="Alphabetical navigation" style="margin-bottom: 32px;">
+    <nav class="breadcrumb glossary-alpha-nav" aria-label="Alphabetical navigation">
       {letters.map((letter, i) => (
         <>
           <a href={`#${letter}`}>{letter}</a>
@@ -41,17 +41,17 @@ const letters = Object.keys(grouped).sort();
     </nav>
 
     {letters.map((letter) => (
-      <section class="section" id={letter}>
+      <section class="glossary-section reading-column" id={letter}>
         <h2>{letter}</h2>
-        <dl>
+        <dl class="glossary-list">
           {grouped[letter].map((term) => (
             <>
-              <dt>
+              <dt class="glossary-list__term">
                 <a href={`/glossary/${term.slug}`}>
                   {term.data.title}{term.data.abbreviation ? ` (${term.data.abbreviation})` : ''}
                 </a>
               </dt>
-              <dd>{term.data.definition}</dd>
+              <dd class="glossary-list__definition">{term.data.definition}</dd>
             </>
           ))}
         </dl>
@@ -61,26 +61,3 @@ const letters = Object.keys(grouped).sort();
 
   <Footer />
 </Layout>
-
-<style>
-dl {
-  max-width: 75ch;
-}
-dt {
-  font-weight: 600;
-  margin-top: 16px;
-}
-dt a {
-  color: var(--text-primary);
-  text-decoration: none;
-}
-dt a:hover {
-  color: var(--accent);
-}
-dd {
-  margin: 4px 0 0 0;
-  color: var(--text-body);
-  font-size: 15px;
-  line-height: 1.6;
-}
-</style>

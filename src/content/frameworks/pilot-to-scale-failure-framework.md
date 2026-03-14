@@ -16,7 +16,7 @@ diagramFile: "/diagrams/4-1-pilot-to-scale-performance-breakdown.png"
 ## Purpose
 
 The Pilot to Scale Failure Framework explains why robotics pilots that succeed in controlled environments often fail when deployed across full warehouse operations. Pilot environments intentionally simplify operating conditions. Scaling introduces variability in demand, workflow coordination, and fleet interaction that changes system economics. The framework identifies the operational and economic breakpoints between pilot success and production deployment.
----
+***
 
 ## Variables
 
@@ -29,7 +29,7 @@ Four factors determine whether a pilot can scale successfully:
 | Demand variability | Fluctuations across clients, seasons, promotional cycles |
 
 Pilot environments typically remove or suppress these variables.
----
+***
 
 ## Decision Logic
 
@@ -38,7 +38,7 @@ A pilot answers a narrow question: can the robot perform the task under controll
 2. Robot fleets interact unpredictably with existing workflows
 3. Labor removal assumptions prove overstated
 
----
+***
 
 ## Application
 
@@ -49,4 +49,4 @@ Operators use this framework during pilot evaluation to determine whether pilot 
 - system performance under fluctuating demand conditions
 
 Pilot results should update the financial model before capital approval.
----
+***
