@@ -6,7 +6,7 @@ import Footer from "../../components/Footer.astro";
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Automation Decision Advisory",
+  name: "AMR Deployment Decision Brief",
   provider: {
     "@type": "Organization",
     name: "Autonomy Bridge",
@@ -14,9 +14,24 @@ const serviceSchema = {
   },
   serviceType: "Advisory",
   description:
-    "Structured decision analysis for warehouse automation investments. Covers deployment economics, vendor evaluation, utilization modelling, and risk assessment.",
+    "Decision-grade research for warehouse operators evaluating autonomous mobile robots. Covers deployment economics, vendor evaluation, utilization modelling, and risk assessment.",
   url: "https://www.autonomybridge.com/advisory",
   areaServed: "Worldwide",
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Advisory Engagements",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "AMR Deployment Decision Brief",
+          description:
+            "A structured decision document covering deployment economics, vendor evaluation, utilization break-even, and a Go/Pause/Kill recommendation for warehouse AMR investments.",
+        },
+      },
+    ],
+  },
 };
 
 const breadcrumbs = [
@@ -26,8 +41,8 @@ const breadcrumbs = [
 ---
 
 <Layout
-  title="Advisory — Autonomy Bridge"
-  description="Structured decision analysis for warehouse automation investments. Deployment economics, vendor evaluation, utilization modelling, and risk assessment for operators and investors."
+  title="AMR Deployment Decision Brief — Autonomy Bridge"
+  description="Decision-grade research for warehouse operators evaluating autonomous mobile robots. Deployment economics, vendor evaluation, and utilization modelling for AMR investment decisions."
   canonicalPath="/advisory"
   serviceSchema={serviceSchema}
   breadcrumbs={breadcrumbs}
@@ -41,116 +56,100 @@ const breadcrumbs = [
       <span>Advisory</span>
     </nav>
 
-    <h1>Advisory</h1>
+    <h1 class="reading-column">AMR Deployment Decision Brief</h1>
     <p class="subhead reading-column">
-      Structured economic analysis for warehouse automation decisions — built
-      for operators evaluating deployments and investors assessing market entry.
+      Decision-grade research for warehouse operators evaluating autonomous mobile robots.
     </p>
 
-    <!-- Section 1: What We Do -->
+    <!-- Section 1: What Decision This Solves -->
     <section class="section reading-column">
-      <h2>What We Do</h2>
+      <h2>What Decision This Solves</h2>
       <p>
-        Autonomy Bridge provides decision-grade analysis for warehouse automation
-        investments. Our work translates operational complexity into structured
-        economic models that support capital allocation, vendor selection, and
-        deployment sequencing decisions.
+        Most AMR evaluations stall because operators lack the economic model to
+        assess whether their specific facility — with its order profile, workflow
+        constraints, and commercial structure — can sustain the utilization
+        required to recover automation capital.
       </p>
-      <p>
-        We work with warehouse operators, logistics investors, and robotics vendors
-        who need rigorous analysis — not vendor brochures — before committing capital
-        or changing operational architecture.
-      </p>
-    </section>
-
-    <!-- Section 2: Decision Questions We Resolve -->
-    <section class="section reading-column">
-      <h2>Decision Questions We Resolve</h2>
       <div class="decision-questions">
         <ul>
-          <li>Can this warehouse sustain the utilization required to recover automation capital?</li>
-          <li>Which workflow node is the true operational constraint — and does the proposed system address it?</li>
-          <li>What is the removable labor share, after accounting for roles added by automation?</li>
-          <li>How does demand variability affect the payback timeline under realistic scenarios?</li>
-          <li>Which vendor economics are viable at this deployment scale and contract structure?</li>
-          <li>What are the integration and ramp risks, and how should they be priced into the investment?</li>
+          <li>Should we deploy AMRs at this facility, and under what conditions?</li>
+          <li>Which vendor architecture fits our workflow — and what are the economics at our scale?</li>
+          <li>What utilization rate is required for payback, and is our order volume sufficient?</li>
         </ul>
       </div>
     </section>
 
-    <!-- Section 3: How We Work -->
+    <!-- Section 2: Decision Brief Structure -->
     <section class="section reading-column">
-      <h2>How We Work</h2>
-      <div class="advisory-two-col">
-        <div>
-          <h3>Decision Brief</h3>
-          <p>
-            A structured analysis document that frames the decision, models the
-            economics, stress-tests assumptions, and produces a clear recommendation
-            with defined conditions.
-          </p>
-          <ol class="brief-structure">
-            <li>Decision question and scope</li>
-            <li>Operational constraint mapping</li>
-            <li>Economic model with variable inputs</li>
-            <li>Utilization scenario analysis</li>
-            <li>Risk identification and pricing</li>
-            <li>Recommendation with confidence bounds</li>
-          </ol>
-        </div>
-        <div>
-          <h3>Market Entry Analysis</h3>
-          <p>
-            A vendor-facing analysis that assesses market deployability, competitive
-            economics, pricing structure, and go-to-market viability for robotics
-            and automation products.
-          </p>
-          <ol class="brief-structure">
-            <li>Addressable market qualification</li>
-            <li>Deployment condition filtering</li>
-            <li>Competitive unit economics comparison</li>
-            <li>Pricing architecture assessment</li>
-            <li>GTM motion alignment</li>
-            <li>Market entry conditions and risk</li>
-          </ol>
-        </div>
-      </div>
+      <h2>Decision Brief Structure</h2>
+      <p>
+        Each brief is a structured analysis document that frames the decision,
+        models the economics, stress-tests assumptions, and produces a clear
+        recommendation with defined conditions.
+      </p>
+      <ol class="brief-structure">
+        <li>Decision framing — defining the decision scope and success criteria</li>
+        <li>Operational model — workflow mapping and constraint identification</li>
+        <li>Vendor capability comparison — architecture, economics, and contract terms</li>
+        <li>Utilization break-even analysis — payback threshold under realistic demand scenarios</li>
+        <li>Deployment risk assessment — integration, ramp, and operational risk pricing</li>
+        <li>Go / Pause / Kill recommendation — with stated conditions and confidence bounds</li>
+      </ol>
     </section>
 
-    <!-- Section 4: Who This Is For -->
+    <!-- Section 3: Who This Is For -->
     <section class="section reading-column">
       <h2>Who This Is For</h2>
       <div class="advisory-two-col">
         <div>
-          <h3>Warehouse Operators</h3>
+          <h3>Buyers</h3>
           <ul>
-            <li>Mid-size 3PL and dedicated fulfillment operators</li>
-            <li>Operations leads evaluating automation for the first time</li>
-            <li>CFOs and finance teams stress-testing automation ROI proposals</li>
-            <li>Operators who have received a vendor proposal and need independent analysis</li>
+            <li>VP of Operations at 3PLs evaluating AMR deployment</li>
+            <li>Robotics programme leads preparing a vendor shortlist</li>
+            <li>Logistics investors assessing automation assets</li>
+            <li>Warehouse operators who have received a vendor proposal</li>
           </ul>
         </div>
         <div>
-          <h3>Investors and Vendors</h3>
+          <h3>Situations</h3>
           <ul>
-            <li>Private equity and growth investors evaluating automation assets</li>
-            <li>Robotics vendors assessing market entry in new verticals or geographies</li>
-            <li>Strategy teams benchmarking competitive positioning</li>
-            <li>Founders validating deployment economics before scaling</li>
+            <li>Vendor shortlist: deciding which AMR system to trial</li>
+            <li>Facility planning: evaluating AMRs as part of a new facility design</li>
+            <li>Investment diligence: assessing a portfolio company's automation economics</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- Section 5: Contact -->
+    <!-- Section 4: Delivery Timeline -->
     <section class="section reading-column">
-      <h2>Start a Conversation</h2>
+      <h2>Delivery Timeline</h2>
       <p>
-        Every engagement starts with a brief conversation about the decision you
-        are facing and whether structured analysis would change the outcome.
+        A standard AMR Deployment Decision Brief is completed in <strong>10–14 days</strong>
+        from initial briefing call, in four phases:
+      </p>
+      <ol class="brief-structure">
+        <li>Facility data review — order profile, workflow layout, labour cost inputs</li>
+        <li>Operational modelling — utilization thresholds and break-even scenarios</li>
+        <li>Vendor evaluation — capability comparison against your deployment conditions</li>
+        <li>Decision brief delivery — written report with recommendation and conditions</li>
+      </ol>
+    </section>
+
+    <!-- Section 5: Request a Briefing Call -->
+    <section class="section reading-column">
+      <h2>Request a Briefing Call</h2>
+      <p>
+        Every engagement starts with a 30-minute call to confirm the decision
+        scope and whether structured analysis would change the outcome.
       </p>
       <p>
-        <a href="/contact" class="btn-primary">Discuss a Decision</a>
+        <a href="/contact" class="btn-primary">Request a Briefing Call</a>
+      </p>
+      <p class="advisory-support-links">
+        <a href="/about">About Autonomy Bridge</a> ·
+        <a href="/frameworks">Decision Frameworks</a> ·
+        <a href="/case-studies">Case Studies</a>
       </p>
     </section>
   </main>

@@ -897,3 +897,28 @@ textarea {
     grid-template-columns: 1fr;
   }
 }
+
+/* Advisory support links */
+.advisory-support-links {
+  margin-top: 16px;
+  font-size: 14px;
+  color: var(--text-meta);
+}
+.advisory-support-links a {
+  color: var(--text-meta);
+  text-decoration: underline;
+}
+.advisory-support-links a:hover {
+  color: var(--accent);
+}
+
+/* Decision boundaries block on article pages */
+.decision-boundaries-block {
+  margin-top: 40px;
+  padding-top: 32px;
+  border-top: 1px solid var(--border);
+}
+.decision-boundaries-block h2 {
+  font-size: 20px;
+  margin-bottom: 16px;
+}

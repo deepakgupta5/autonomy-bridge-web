@@ -3,6 +3,7 @@ import Layout from "../../components/Layout.astro";
 import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
 import AnswerNugget from "../../components/AnswerNugget.astro";
+import DecisionBoundary from "../../components/DecisionBoundary.astro";
 import InternalLinks from "../../components/InternalLinks.astro";
 import ContentClusterBadge from "../../components/ContentClusterBadge.astro";
 import { getCollection, getEntry } from "astro:content";
@@ -135,6 +136,15 @@ const breadcrumbs = [
     <article class="reading-column prose">
       <Content />
     </article>
+
+    {decisionBoundaries && decisionBoundaries.length > 0 && (
+      <div class="reading-column decision-boundaries-block">
+        <h2>Key Decision Rules</h2>
+        {decisionBoundaries.map((db: { question: string; answer: string }) => (
+          <DecisionBoundary text={`${db.question} ${db.answer}`} />
+        ))}
+      </div>
+    )}
 
     <div class="reading-column">
       <InternalLinks
