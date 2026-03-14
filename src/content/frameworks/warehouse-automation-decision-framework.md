@@ -1,6 +1,6 @@
 ---
 title: "Warehouse Automation Decision Framework"
-description: "A multi-variable decision framework for evaluating warehouse automation investments, covering operational constraints, utilization modeling, and workflow compatibility across 3PL facilities."
+description: "A multi-variable framework for evaluating warehouse automation investments covering operational constraints, utilization modelling, and workflow compatibility."
 pubDate: 2026-01-29
 cluster: "robotics-deployment-economics"
 relatedArticles: ["how-warehouse-robotics-economics-works", "how-warehouse-workflows-determine-automation-success"]

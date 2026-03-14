@@ -1,6 +1,6 @@
 ---
 title: "Robotics Vendor Pricing Framework"
-description: "A comparative framework for evaluating warehouse robotics vendor pricing structures, including capex, RaaS, and hybrid models, and their impact on automation economics and capital recovery."
+description: "A framework for evaluating warehouse robotics vendor pricing — capex, RaaS, and hybrid models — and their impact on automation economics and capital recovery."
 pubDate: 2026-02-01
 cluster: "vendor-economics"
 relatedArticles: ["how-warehouse-robotics-economics-works"]

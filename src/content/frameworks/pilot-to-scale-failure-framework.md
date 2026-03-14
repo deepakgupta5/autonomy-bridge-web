@@ -1,6 +1,6 @@
 ---
 title: "Pilot-to-Scale Failure Framework"
-description: "A diagnostic framework for evaluating why warehouse robotics pilots succeed technically but fail to scale economically, covering utilization mismatch, replication friction, and capital recovery conditions."
+description: "A diagnostic framework for why robotics pilots fail to scale economically, covering utilization mismatch, replication friction, and capital recovery conditions."
 pubDate: 2026-01-29
 cluster: "deployment-risk"
 relatedArticles: ["why-robotics-pilots-fail-to-scale", "why-warehouse-automation-projects-fail"]

@@ -1,6 +1,6 @@
 ---
 title: "How Warehouse Workflows Determine Automation Success"
-description: "Warehouse automation projects fail when technology selection precedes workflow analysis. This analysis explains how linked constraint systems determine whether automation generates margin or relocates bottlenecks."
+description: "Automation fails when technology precedes workflow analysis. This shows how constraint systems determine whether automation creates margin or moves bottlenecks."
 author: "Deepak Gupta"
 pubDate: 2026-02-05
 cluster: "robotics-deployment-economics"

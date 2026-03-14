@@ -1,6 +1,6 @@
 ---
 title: "Robotics Pricing Strategy Research"
-description: "A decision research engagement evaluating pricing model options for a warehouse robotics vendor, including capex, RaaS, and hybrid structures across different buyer segments and utilization profiles."
+description: "Decision research on pricing models for a warehouse robotics vendor — capex, RaaS, and hybrid structures — across buyer segments and utilization profiles."
 engagementType: "Pricing Strategy Research"
 decisionQuestion: "Which pricing model structure best aligns with buyer budget ownership, procurement behavior, and utilization economics in the 3PL warehouse market?"
 relatedArticles: ["how-warehouse-robotics-economics-works"]

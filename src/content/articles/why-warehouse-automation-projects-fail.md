@@ -1,6 +1,6 @@
 ---
 title: "Why Warehouse Automation Projects Fail"
-description: "Most warehouse automation failures originate during project underwriting, not deployment. This analysis examines the structural economic causes and a framework to avoid them."
+description: "Most warehouse automation failures originate during project underwriting. This examines structural economic causes and a framework to identify and avoid them."
 author: "Deepak Gupta"
 pubDate: 2026-01-22
 cluster: "automation-failure"

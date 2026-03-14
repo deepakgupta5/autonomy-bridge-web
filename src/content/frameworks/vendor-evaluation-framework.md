@@ -1,6 +1,6 @@
 ---
 title: "Vendor Deployment Viability Framework"
-description: "A structured evaluation framework for assessing warehouse robotics vendor deployment viability, covering capability fit, operational compatibility, integration readiness, and deployment risk across 3PL facilities."
+description: "A framework for assessing robotics vendor viability — capability fit, operational compatibility, integration readiness, and deployment risk across 3PLs."
 pubDate: 2026-02-01
 cluster: "vendor-economics"
 relatedArticles: ["why-robotics-pilots-fail-to-scale"]

@@ -1,6 +1,6 @@
 ---
 title: "Why Robotics Pilots Fail to Scale"
-description: "Robotics pilots prove technical feasibility but not economic scalability. This analysis examines the operational and economic breakpoints between warehouse demo success and network deployment."
+description: "Robotics pilots prove technical feasibility but not economic scalability. This examines breakpoints between warehouse demo success and network deployment."
 author: "Deepak Gupta"
 pubDate: 2026-01-29
 cluster: "deployment-risk"
