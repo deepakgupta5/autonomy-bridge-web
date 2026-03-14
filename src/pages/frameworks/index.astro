@@ -33,6 +33,14 @@ const clusters = [...new Set(sorted.map((f) => f.data.cluster))];
       vendor economics, deployment risk, and operational viability.
     </p>
 
+    <div class="reading-column frameworks-nav-links">
+      <p>
+        <a href="/insights">See related articles →</a>
+        &nbsp;&nbsp;
+        <a href="/case-studies">See how frameworks are applied →</a>
+      </p>
+    </div>
+
     {clusters.map((cluster) => {
       const clusterFrameworks = sorted.filter((f) => f.data.cluster === cluster);
       return (
