@@ -324,6 +324,40 @@ nav a:hover {
   margin-top: 40px;
 }
 
+.article-cta {
+  margin-top: 40px;
+  padding: 32px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg-secondary);
+}
+
+.article-cta h2 {
+  font-size: 24px;
+  line-height: 1.25;
+  margin-bottom: 12px;
+}
+
+.article-cta p + .btn-primary {
+  margin-top: 24px;
+}
+
+.frameworks-nav-links {
+  margin-top: 24px;
+}
+
+.frameworks-nav-links p {
+  max-width: none;
+}
+
+.frameworks-nav-links a {
+  color: var(--accent);
+}
+
+.frameworks-nav-links a:hover {
+  color: var(--text-primary);
+}
+
 .footer {
   border-top: 1px solid var(--border);
 }

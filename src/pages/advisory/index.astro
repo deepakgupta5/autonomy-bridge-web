@@ -2,8 +2,6 @@
 import Layout from "../../components/Layout.astro";
 import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
-import { renderMarkdown } from "../../utils/markdownToHtml";
-import advisoryMarkdown from "../../content/page-copy/advisory.md?raw";
 
 const serviceSchema = {
   "@context": "https://schema.org",
@@ -40,8 +38,6 @@ const breadcrumbs = [
   { name: "Home", url: "https://www.autonomybridge.com/" },
   { name: "Advisory", url: "https://www.autonomybridge.com/advisory" },
 ];
-
-const advisoryHtml = await renderMarkdown(advisoryMarkdown);
 ---
 
 <Layout
@@ -59,7 +55,104 @@ const advisoryHtml = await renderMarkdown(advisoryMarkdown);
       <span class="breadcrumb__separator" aria-hidden="true">›</span>
       <span>Advisory</span>
     </nav>
-    <article class="reading-column prose" set:html={advisoryHtml} />
+
+    <h1 class="reading-column">AMR Deployment Decision Brief</h1>
+    <p class="subhead reading-column">
+      Decision-grade research for warehouse operators evaluating autonomous mobile robots.
+    </p>
+
+    <!-- Section 1: What Decision This Solves -->
+    <section class="section reading-column">
+      <h2>What Decision This Solves</h2>
+      <p>
+        Most AMR evaluations stall because operators lack the economic model to
+        assess whether their specific facility — with its order profile, workflow
+        constraints, and commercial structure — can sustain the utilization
+        required to recover automation capital.
+      </p>
+      <div class="decision-questions">
+        <ul>
+          <li>Should we deploy AMRs at this facility, and under what conditions?</li>
+          <li>Which vendor architecture fits our workflow — and what are the economics at our scale?</li>
+          <li>What utilization rate is required for payback, and is our order volume sufficient?</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Section 2: Decision Brief Structure -->
+    <section class="section reading-column">
+      <h2>Decision Brief Structure</h2>
+      <p>
+        Each brief is a structured analysis document that frames the decision,
+        models the economics, stress-tests assumptions, and produces a clear
+        recommendation with defined conditions.
+      </p>
+      <ol class="brief-structure">
+        <li>Decision framing — defining the decision scope and success criteria</li>
+        <li>Operational model — workflow mapping and constraint identification</li>
+        <li>Vendor capability comparison — architecture, economics, and contract terms</li>
+        <li>Utilization break-even analysis — payback threshold under realistic demand scenarios</li>
+        <li>Deployment risk assessment — integration, ramp, and operational risk pricing</li>
+        <li>Go / Pause / Kill recommendation — with stated conditions and confidence bounds</li>
+      </ol>
+    </section>
+
+    <!-- Section 3: Who This Is For -->
+    <section class="section reading-column">
+      <h2>Who This Is For</h2>
+      <div class="advisory-two-col">
+        <div>
+          <h3>Buyers</h3>
+          <ul>
+            <li>VP of Operations at 3PLs evaluating AMR deployment</li>
+            <li>Robotics programme leads preparing a vendor shortlist</li>
+            <li>Logistics investors assessing automation assets</li>
+            <li>Warehouse operators who have received a vendor proposal</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Situations</h3>
+          <ul>
+            <li>Vendor shortlist: deciding which AMR system to trial</li>
+            <li>Facility planning: evaluating AMRs as part of a new facility design</li>
+            <li>Investment diligence: assessing a portfolio company's automation economics</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Delivery Timeline -->
+    <section class="section reading-column">
+      <h2>Delivery Timeline</h2>
+      <p>
+        A standard AMR Deployment Decision Brief is completed in <strong>10–14 days</strong>
+        from initial briefing call, in four phases:
+      </p>
+      <ol class="brief-structure">
+        <li>Facility data review — order profile, workflow layout, labour cost inputs</li>
+        <li>Operational modelling — utilization thresholds and break-even scenarios</li>
+        <li>Vendor evaluation — capability comparison against your deployment conditions</li>
+        <li>Decision brief delivery — written report with recommendation and conditions</li>
+      </ol>
+    </section>
+
+    <!-- Section 5: Request a Briefing Call -->
+    <section class="section reading-column">
+      <h2>Request a Briefing Call</h2>
+      <p>
+        Every engagement starts with a 30-minute call to confirm the decision
+        scope and whether structured analysis would change the outcome.
+      </p>
+      <p>
+        <a href="/contact" class="btn-primary">Request a Briefing Call</a>
+      </p>
+      <p class="advisory-support-links">
+        <a href="/about">About Autonomy Bridge</a> ·
+        <a href="/methodology">How We Work</a> ·
+        <a href="/frameworks">Decision Frameworks</a> ·
+        <a href="/case-studies">Case Studies</a>
+      </p>
+    </section>
   </main>
 
   <Footer />
