@@ -16,7 +16,7 @@ export async function getStaticPaths() {
 const { cs } = Astro.props;
 const { Content } = await cs.render();
 
-const { title, description, relatedArticles, relatedFrameworks } = cs.data;
+const { title, description, relatedArticles, relatedFrameworks, relatedUseCases } = cs.data;
 
 const allArticles = relatedArticles
   ? await Promise.all(
@@ -34,6 +34,17 @@ const allFrameworks = relatedFrameworks
       relatedFrameworks.map(async (slug: string) => {
         try {
           const entry = await getEntry("frameworks", slug);
+          return entry ? { title: entry.data.title, slug } : null;
+        } catch { return null; }
+      })
+    ).then((r) => r.filter(Boolean))
+  : [];
+
+const allUseCases = relatedUseCases
+  ? await Promise.all(
+      relatedUseCases.map(async (slug: string) => {
+        try {
+          const entry = await getEntry("use-cases", slug);
           return entry ? { title: entry.data.title, slug } : null;
         } catch { return null; }
       })
@@ -75,6 +86,7 @@ const breadcrumbs = [
       <InternalLinks
         relatedArticles={allArticles as any}
         relatedFrameworks={allFrameworks as any}
+        relatedUseCases={allUseCases as any}
       />
     </div>
   </main>
