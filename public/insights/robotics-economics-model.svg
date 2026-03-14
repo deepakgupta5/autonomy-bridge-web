@@ -1,0 +1,194 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1250" viewBox="0 0 1800 1250" role="img" aria-labelledby="title desc">
+  <title id="title">Autonomy Bridge Robotics Economics Model</title>
+  <desc id="desc">Flow diagram showing labor baseline, robot productivity, fleet sizing, utilization threshold, dead zone and congestion risk, and capital payback implications.</desc>
+
+  <defs>
+    <style>
+      .bg { fill: #081120; }
+      .card { fill: #0e1624; stroke: #7c90b1; stroke-width: 2; }
+      .inner { fill: #111d31; stroke: #7c90b1; stroke-width: 2; }
+      .tag { fill: #13243f; stroke: #7c90b1; stroke-width: 1.4; }
+      .risk { fill: #8f4b52; stroke: #edb8bd; stroke-width: 2; }
+      .source { fill: #1f4868; stroke: #66b7f0; stroke-width: 2; }
+      .label {
+        fill: #e8eef9;
+        font-family: "IBM Plex Mono", "Menlo", "Consolas", monospace;
+        font-size: 31px;
+        letter-spacing: 1px;
+      }
+      .tagtext {
+        fill: #d6e0f4;
+        font-family: "IBM Plex Mono", "Menlo", "Consolas", monospace;
+        font-size: 29px;
+        letter-spacing: 1.2px;
+      }
+      .small {
+        fill: #d7e0f1;
+        font-family: "IBM Plex Mono", "Menlo", "Consolas", monospace;
+        font-size: 33px;
+      }
+      .line {
+        fill: none;
+        stroke: #dce7fb;
+        stroke-width: 3;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+    </style>
+    <marker id="arrow" viewBox="0 0 12 12" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 12 6 L 0 12 z" fill="#dce7fb" />
+    </marker>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1800" height="1250" />
+
+  <!-- Top flow -->
+  <rect class="card" x="70" y="36" rx="18" ry="18" width="440" height="350" />
+  <rect class="tag" x="84" y="52" rx="6" ry="6" width="238" height="42" />
+  <text class="tagtext" x="98" y="82">LABOR BASELINE (L)</text>
+  <rect class="inner" x="115" y="109" rx="10" ry="10" width="350" height="110" />
+  <rect class="inner" x="115" y="258" rx="10" ry="10" width="350" height="110" />
+  <text class="label" x="290" y="152" text-anchor="middle">
+    <tspan x="290" dy="0">Human picks</tspan>
+    <tspan x="290" dy="38">per hour</tspan>
+  </text>
+  <text class="label" x="290" y="300" text-anchor="middle">
+    <tspan x="290" dy="0">Labor cost</tspan>
+    <tspan x="290" dy="38">per hour</tspan>
+  </text>
+
+  <rect class="card" x="610" y="95" rx="18" ry="18" width="300" height="240" />
+  <rect class="tag" x="624" y="109" rx="6" ry="6" width="205" height="42" />
+  <text class="tagtext" x="637" y="140">ROBOT PRODUCTIVITY</text>
+  <text class="tagtext" x="637" y="172">(P)</text>
+  <rect class="inner" x="656" y="190" rx="10" ry="10" width="208" height="104" />
+  <text class="label" x="760" y="236" text-anchor="middle">
+    <tspan x="760" dy="0">Robot picks</tspan>
+    <tspan x="760" dy="38">per hour</tspan>
+  </text>
+
+  <rect class="card" x="960" y="95" rx="18" ry="18" width="300" height="240" />
+  <rect class="tag" x="974" y="109" rx="6" ry="6" width="178" height="42" />
+  <text class="tagtext" x="987" y="140">FLEET SIZE (F)</text>
+  <rect class="inner" x="1006" y="160" rx="10" ry="10" width="208" height="106" />
+  <text class="label" x="1110" y="206" text-anchor="middle">
+    <tspan x="1110" dy="0">Robots</tspan>
+    <tspan x="1110" dy="38">required to</tspan>
+    <tspan x="1110" dy="38">meet demand</tspan>
+  </text>
+
+  <!-- Main frame -->
+  <rect class="card" x="35" y="430" rx="18" ry="18" width="1730" height="338" />
+
+  <!-- Top arrows and return loop -->
+  <path class="line" marker-end="url(#arrow)" d="M510 212 H610" />
+  <path class="line" marker-end="url(#arrow)" d="M910 212 H960" />
+  <path class="line" d="M1260 212 H1535 Q1565 212 1565 242 V392 Q1565 430 1527 430 H35" />
+  <path class="line" d="M35 430 V780" />
+
+  <!-- Utilization block -->
+  <rect class="card" x="80" y="625" rx="16" ry="16" width="300" height="285" />
+  <rect class="tag" x="94" y="640" rx="6" ry="6" width="172" height="42" />
+  <text class="tagtext" x="106" y="671">UTILIZATION (U)</text>
+  <rect class="inner" x="125" y="696" rx="10" ry="10" width="210" height="140" />
+  <text class="label" x="230" y="735" text-anchor="middle">
+    <tspan x="230" dy="0">Active robot</tspan>
+    <tspan x="230" dy="38">hours divided</tspan>
+    <tspan x="230" dy="38">by total</tspan>
+    <tspan x="230" dy="38">capacity</tspan>
+  </text>
+
+  <!-- Loop return into utilization -->
+  <path class="line" marker-end="url(#arrow)" d="M35 770 Q55 772 67 778" />
+
+  <!-- Threshold diamond -->
+  <path class="card" d="M510 688 L680 768 L510 848 L340 768 Z" />
+  <text class="label" x="510" y="760" text-anchor="middle">
+    <tspan x="510" dy="0">Utilization</tspan>
+    <tspan x="510" dy="38">Threshold</tspan>
+  </text>
+  <path class="line" marker-end="url(#arrow)" d="M335 768 H340" />
+
+  <!-- Dead zone branch -->
+  <path class="line" marker-end="url(#arrow)" d="M680 741 H790 Q820 741 820 711 V607 H925" />
+  <text class="small" x="828" y="600">
+    <tspan x="828" dy="0">U &lt; required</tspan>
+    <tspan x="828" dy="32">utilization</tspan>
+  </text>
+
+  <rect class="risk" x="925" y="555" rx="10" ry="10" width="210" height="104" />
+  <text class="label" x="1030" y="603" text-anchor="middle">
+    <tspan x="1030" dy="0">Economic Dead</tspan>
+    <tspan x="1030" dy="38">Zone</tspan>
+  </text>
+
+  <path class="line" marker-end="url(#arrow)" d="M1135 607 H1280 V505 H1565" />
+  <text class="small" x="1292" y="488">
+    <tspan x="1292" dy="0">Robot cost</tspan>
+    <tspan x="1292" dy="32">exceeds labor</tspan>
+    <tspan x="1292" dy="32">savings</tspan>
+  </text>
+
+  <rect class="inner" x="1565" y="455" rx="10" ry="10" width="215" height="108" />
+  <text class="label" x="1672" y="492" text-anchor="middle">
+    <tspan x="1672" dy="0">Economic Dead</tspan>
+    <tspan x="1672" dy="38">Zone</tspan>
+    <tspan x="1672" dy="38">Explanation</tspan>
+  </text>
+
+  <!-- Capital payback block -->
+  <rect class="card" x="1210" y="612" rx="16" ry="16" width="300" height="278" />
+  <rect class="tag" x="1224" y="626" rx="6" ry="6" width="210" height="42" />
+  <text class="tagtext" x="1237" y="658">CAPITAL PAYBACK (C)</text>
+  <rect class="inner" x="1255" y="690" rx="10" ry="10" width="210" height="142" />
+  <text class="label" x="1360" y="730" text-anchor="middle">
+    <tspan x="1360" dy="0">Capital cost</tspan>
+    <tspan x="1360" dy="38">divided by</tspan>
+    <tspan x="1360" dy="38">annual labor</tspan>
+    <tspan x="1360" dy="38">savings</tspan>
+  </text>
+
+  <!-- Connectors into capital payback -->
+  <path class="line" marker-end="url(#arrow)" d="M1135 637 C1180 637 1175 700 1210 700" />
+
+  <!-- Congestion branch -->
+  <path class="line" marker-end="url(#arrow)" d="M680 795 H790 Q820 795 820 825 V890 H925" />
+  <text class="small" x="825" y="915">U &gt; 85%</text>
+
+  <rect class="risk" x="925" y="862" rx="10" ry="10" width="210" height="104" />
+  <text class="label" x="1030" y="909" text-anchor="middle">
+    <tspan x="1030" dy="0">Fleet</tspan>
+    <tspan x="1030" dy="38">Congestion</tspan>
+    <tspan x="1030" dy="38">Risk</tspan>
+  </text>
+
+  <path class="line" marker-end="url(#arrow)" d="M1135 915 C1185 915 1172 806 1210 806" />
+
+  <path class="line" marker-end="url(#arrow)" d="M1135 915 H1280 V1020 H1565" />
+  <text class="small" x="1300" y="980" text-anchor="middle">
+    <tspan x="1365" dy="0">Robot traffic</tspan>
+    <tspan x="1365" dy="32">and</tspan>
+    <tspan x="1365" dy="32">coordination</tspan>
+    <tspan x="1365" dy="32">overhead</tspan>
+    <tspan x="1365" dy="32">increase</tspan>
+  </text>
+
+  <rect class="inner" x="1565" y="966" rx="10" ry="10" width="215" height="108" />
+  <text class="label" x="1672" y="1004" text-anchor="middle">
+    <tspan x="1672" dy="0">Fleet</tspan>
+    <tspan x="1672" dy="38">Congestion</tspan>
+    <tspan x="1672" dy="38">Explanation</tspan>
+  </text>
+
+  <!-- Source -->
+  <rect class="source" x="750" y="1084" rx="8" ry="8" width="300" height="154" />
+  <rect class="inner" x="757" y="1090" rx="6" ry="6" width="286" height="142" opacity="0.45" />
+  <text class="label" x="900" y="1137" text-anchor="middle" fill="#d9f0ff">
+    <tspan x="900" dy="0">Source</tspan>
+    <tspan x="900" dy="38">Autonomy</tspan>
+    <tspan x="900" dy="38">Bridge</tspan>
+    <tspan x="900" dy="38">Robotics</tspan>
+    <tspan x="900" dy="38">Economics</tspan>
+    <tspan x="900" dy="38">Model</tspan>
+  </text>
+</svg>
