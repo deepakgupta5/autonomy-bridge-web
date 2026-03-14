@@ -1,0 +1,62 @@
+---
+import ContentClusterBadge from './ContentClusterBadge.astro';
+
+const { title, description, slug, cluster, diagramFile } = Astro.props;
+---
+<article class="framework-card">
+  <ContentClusterBadge cluster={cluster} />
+  <h3 class="framework-card__title">
+    <a href={`/frameworks/${slug}`}>{title}</a>
+  </h3>
+  {diagramFile && (
+    <img
+      src={diagramFile}
+      alt={`${title} diagram`}
+      class="framework-card__diagram"
+      loading="lazy"
+    />
+  )}
+  <p class="framework-card__description">{description}</p>
+  <a href={`/frameworks/${slug}`} class="framework-card__link">View framework →</a>
+</article>
+
+<style>
+.framework-card {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.framework-card__title {
+  font-size: 20px;
+  margin-bottom: 0;
+}
+.framework-card__title a {
+  color: var(--text-primary);
+  text-decoration: none;
+}
+.framework-card__title a:hover {
+  color: var(--accent);
+}
+.framework-card__diagram {
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+.framework-card__description {
+  font-size: 15px;
+  color: var(--text-body);
+  max-width: none;
+}
+.framework-card__link {
+  font-size: 14px;
+  color: var(--accent);
+  text-decoration: none;
+  margin-top: auto;
+}
+.framework-card__link:hover {
+  text-decoration: underline;
+}
+</style>

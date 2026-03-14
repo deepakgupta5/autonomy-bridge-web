@@ -1,0 +1,159 @@
+---
+import Layout from "../../components/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Automation Decision Advisory",
+  provider: {
+    "@type": "Organization",
+    name: "Autonomy Bridge",
+    url: "https://www.autonomybridge.com/",
+  },
+  serviceType: "Advisory",
+  description:
+    "Structured decision analysis for warehouse automation investments. Covers deployment economics, vendor evaluation, utilization modelling, and risk assessment.",
+  url: "https://www.autonomybridge.com/advisory",
+  areaServed: "Worldwide",
+};
+
+const breadcrumbs = [
+  { name: "Home", url: "https://www.autonomybridge.com/" },
+  { name: "Advisory", url: "https://www.autonomybridge.com/advisory" },
+];
+---
+
+<Layout
+  title="Advisory — Autonomy Bridge"
+  description="Structured decision analysis for warehouse automation investments. Deployment economics, vendor evaluation, utilization modelling, and risk assessment for operators and investors."
+  canonicalPath="/advisory"
+  serviceSchema={serviceSchema}
+  breadcrumbs={breadcrumbs}
+>
+  <Header />
+
+  <main class="container site-main advisory-page">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span class="breadcrumb__separator" aria-hidden="true">›</span>
+      <span>Advisory</span>
+    </nav>
+
+    <h1>Advisory</h1>
+    <p class="subhead reading-column">
+      Structured economic analysis for warehouse automation decisions — built
+      for operators evaluating deployments and investors assessing market entry.
+    </p>
+
+    <!-- Section 1: What We Do -->
+    <section class="section reading-column">
+      <h2>What We Do</h2>
+      <p>
+        Autonomy Bridge provides decision-grade analysis for warehouse automation
+        investments. Our work translates operational complexity into structured
+        economic models that support capital allocation, vendor selection, and
+        deployment sequencing decisions.
+      </p>
+      <p>
+        We work with warehouse operators, logistics investors, and robotics vendors
+        who need rigorous analysis — not vendor brochures — before committing capital
+        or changing operational architecture.
+      </p>
+    </section>
+
+    <!-- Section 2: Decision Questions We Resolve -->
+    <section class="section reading-column">
+      <h2>Decision Questions We Resolve</h2>
+      <div class="decision-questions">
+        <ul>
+          <li>Can this warehouse sustain the utilization required to recover automation capital?</li>
+          <li>Which workflow node is the true operational constraint — and does the proposed system address it?</li>
+          <li>What is the removable labor share, after accounting for roles added by automation?</li>
+          <li>How does demand variability affect the payback timeline under realistic scenarios?</li>
+          <li>Which vendor economics are viable at this deployment scale and contract structure?</li>
+          <li>What are the integration and ramp risks, and how should they be priced into the investment?</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Section 3: How We Work -->
+    <section class="section reading-column">
+      <h2>How We Work</h2>
+      <div class="advisory-two-col">
+        <div>
+          <h3>Decision Brief</h3>
+          <p>
+            A structured analysis document that frames the decision, models the
+            economics, stress-tests assumptions, and produces a clear recommendation
+            with defined conditions.
+          </p>
+          <ol class="brief-structure">
+            <li>Decision question and scope</li>
+            <li>Operational constraint mapping</li>
+            <li>Economic model with variable inputs</li>
+            <li>Utilization scenario analysis</li>
+            <li>Risk identification and pricing</li>
+            <li>Recommendation with confidence bounds</li>
+          </ol>
+        </div>
+        <div>
+          <h3>Market Entry Analysis</h3>
+          <p>
+            A vendor-facing analysis that assesses market deployability, competitive
+            economics, pricing structure, and go-to-market viability for robotics
+            and automation products.
+          </p>
+          <ol class="brief-structure">
+            <li>Addressable market qualification</li>
+            <li>Deployment condition filtering</li>
+            <li>Competitive unit economics comparison</li>
+            <li>Pricing architecture assessment</li>
+            <li>GTM motion alignment</li>
+            <li>Market entry conditions and risk</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Who This Is For -->
+    <section class="section reading-column">
+      <h2>Who This Is For</h2>
+      <div class="advisory-two-col">
+        <div>
+          <h3>Warehouse Operators</h3>
+          <ul>
+            <li>Mid-size 3PL and dedicated fulfillment operators</li>
+            <li>Operations leads evaluating automation for the first time</li>
+            <li>CFOs and finance teams stress-testing automation ROI proposals</li>
+            <li>Operators who have received a vendor proposal and need independent analysis</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Investors and Vendors</h3>
+          <ul>
+            <li>Private equity and growth investors evaluating automation assets</li>
+            <li>Robotics vendors assessing market entry in new verticals or geographies</li>
+            <li>Strategy teams benchmarking competitive positioning</li>
+            <li>Founders validating deployment economics before scaling</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Contact -->
+    <section class="section reading-column">
+      <h2>Start a Conversation</h2>
+      <p>
+        Every engagement starts with a brief conversation about the decision you
+        are facing and whether structured analysis would change the outcome.
+      </p>
+      <p>
+        <a href="/contact" class="btn-primary">Discuss a Decision</a>
+      </p>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>

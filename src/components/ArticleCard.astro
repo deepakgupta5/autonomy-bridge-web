@@ -1,0 +1,47 @@
+---
+import ContentClusterBadge from './ContentClusterBadge.astro';
+
+const { title, description, slug, cluster, pubDate } = Astro.props;
+const formattedDate = new Date(pubDate).toLocaleDateString('en-US', {
+  year: 'numeric', month: 'long', day: 'numeric'
+});
+---
+<article class="article-card">
+  <ContentClusterBadge cluster={cluster} />
+  <h3 class="article-card__title">
+    <a href={`/insights/${slug}`}>{title}</a>
+  </h3>
+  <p class="article-card__description">{description}</p>
+  <p class="article-card__meta meta-text">{formattedDate}</p>
+</article>
+
+<style>
+.article-card {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.article-card__title {
+  font-size: 20px;
+  margin-bottom: 0;
+}
+.article-card__title a {
+  color: var(--text-primary);
+  text-decoration: none;
+}
+.article-card__title a:hover {
+  color: var(--accent);
+}
+.article-card__description {
+  font-size: 15px;
+  color: var(--text-body);
+  max-width: none;
+}
+.article-card__meta {
+  margin-top: auto;
+  max-width: none;
+}
+</style>

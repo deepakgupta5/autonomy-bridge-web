@@ -1,0 +1,38 @@
+---
+import Layout from "../../components/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import { getCollection } from "astro:content";
+
+const caseStudies = await getCollection("case-studies");
+const sorted = caseStudies.sort((a, b) => a.data.title.localeCompare(b.data.title));
+---
+
+<Layout
+  title="Case Studies — Autonomy Bridge"
+  description="Anonymised case studies in warehouse automation deployment decisions, robotics market entry analysis, and vendor pricing strategy research."
+  canonicalPath="/case-studies"
+>
+  <Header />
+
+  <main class="container site-main">
+    <h1>Case Studies</h1>
+    <p class="subhead reading-column">
+      Anonymised engagement analyses documenting how automation investment decisions
+      were structured, stress-tested, and resolved.
+    </p>
+
+    <div class="content-grid">
+      {sorted.map((cs) => (
+        <div class="article-card">
+          <p class="article-card__title">
+            <a href={`/case-studies/${cs.slug}`}>{cs.data.title}</a>
+          </p>
+          <p class="article-card__description">{cs.data.description}</p>
+        </div>
+      ))}
+    </div>
+  </main>
+
+  <Footer />
+</Layout>

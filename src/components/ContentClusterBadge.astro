@@ -1,0 +1,14 @@
+---
+const { cluster } = Astro.props;
+
+const clusterLabels: Record<string, string> = {
+  'automation-roi': 'Automation ROI',
+  'robotics-deployment-economics': 'Deployment Economics',
+  'automation-failure': 'Automation Failure',
+  'vendor-economics': 'Vendor Economics',
+  'deployment-risk': 'Deployment Risk',
+};
+
+const label = clusterLabels[cluster] ?? cluster;
+---
+<span class="cluster-badge">{label}</span>

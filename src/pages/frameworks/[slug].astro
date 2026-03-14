@@ -2,38 +2,34 @@
 import Layout from "../../components/Layout.astro";
 import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
-import AnswerNugget from "../../components/AnswerNugget.astro";
-import InternalLinks from "../../components/InternalLinks.astro";
 import ContentClusterBadge from "../../components/ContentClusterBadge.astro";
+import InternalLinks from "../../components/InternalLinks.astro";
 import { getCollection, getEntry } from "astro:content";
-import { buildFaqData } from "../../utils/faqData";
 
 export async function getStaticPaths() {
-  const articles = await getCollection("articles");
-  return articles.map((article) => ({
-    params: { slug: article.slug },
-    props: { article },
+  const frameworks = await getCollection("frameworks");
+  return frameworks.map((fw) => ({
+    params: { slug: fw.slug },
+    props: { fw },
   }));
 }
 
-const { article } = Astro.props;
-const { Content } = await article.render();
+const { fw } = Astro.props;
+const { Content } = await fw.render();
 
 const {
   title,
   description,
-  author,
-  pubDate,
   cluster,
-  answerNugget,
-  decisionBoundaries,
+  diagramFile,
+  diagramFiles,
   relatedArticles,
-  relatedFrameworks,
   relatedUseCases,
   relatedCaseStudies,
-} = article.data;
+} = fw.data;
 
-// Build related link objects for InternalLinks component
+const allDiagrams = diagramFiles ?? (diagramFile ? [diagramFile] : []);
+
 const allArticles = relatedArticles
   ? await Promise.all(
       relatedArticles.map(async (slug: string) => {
@@ -44,20 +40,7 @@ const allArticles = relatedArticles
           return null;
         }
       })
-    ).then((results) => results.filter(Boolean))
-  : [];
-
-const allFrameworks = relatedFrameworks
-  ? await Promise.all(
-      relatedFrameworks.map(async (slug: string) => {
-        try {
-          const entry = await getEntry("frameworks", slug);
-          return entry ? { title: entry.data.title, slug } : null;
-        } catch {
-          return null;
-        }
-      })
-    ).then((results) => results.filter(Boolean))
+    ).then((r) => r.filter(Boolean))
   : [];
 
 const allUseCases = relatedUseCases
@@ -70,7 +53,7 @@ const allUseCases = relatedUseCases
           return null;
         }
       })
-    ).then((results) => results.filter(Boolean))
+    ).then((r) => r.filter(Boolean))
   : [];
 
 const allCaseStudies = relatedCaseStudies
@@ -83,33 +66,20 @@ const allCaseStudies = relatedCaseStudies
           return null;
         }
       })
-    ).then((results) => results.filter(Boolean))
+    ).then((r) => r.filter(Boolean))
   : [];
-
-const faqData = decisionBoundaries ? buildFaqData(decisionBoundaries) : [];
-
-const articleSchemaData = {
-  title,
-  description,
-  author,
-  pubDate: pubDate.toISOString(),
-  url: `https://www.autonomybridge.com/insights/${article.slug}`,
-};
 
 const breadcrumbs = [
   { name: "Home", url: "https://www.autonomybridge.com/" },
-  { name: "Insights", url: "https://www.autonomybridge.com/insights" },
-  { name: title, url: `https://www.autonomybridge.com/insights/${article.slug}` },
+  { name: "Frameworks", url: "https://www.autonomybridge.com/frameworks" },
+  { name: title, url: `https://www.autonomybridge.com/frameworks/${fw.slug}` },
 ];
 ---
 
 <Layout
-  title={`${title} — Insights — Autonomy Bridge`}
+  title={`${title} — Frameworks — Autonomy Bridge`}
   description={description}
-  canonicalPath={`/insights/${article.slug}`}
-  includePageSchema={false}
-  articleData={articleSchemaData}
-  faqData={faqData}
+  canonicalPath={`/frameworks/${fw.slug}`}
   breadcrumbs={breadcrumbs}
 >
   <Header />
@@ -118,19 +88,23 @@ const breadcrumbs = [
     <nav class="breadcrumb" aria-label="Breadcrumb">
       <a href="/">Home</a>
       <span class="breadcrumb__separator" aria-hidden="true">›</span>
-      <a href="/insights">Insights</a>
+      <a href="/frameworks">Frameworks</a>
       <span class="breadcrumb__separator" aria-hidden="true">›</span>
       <span>{title}</span>
     </nav>
 
     <ContentClusterBadge cluster={cluster} />
     <h1 class="reading-column">{title}</h1>
+    <p class="subhead reading-column">{description}</p>
 
-    {answerNugget && (
-      <div class="reading-column">
-        <AnswerNugget text={answerNugget} author={author} pubDate={pubDate} />
-      </div>
-    )}
+    {allDiagrams.map((src: string, i: number) => (
+      <figure class="framework-diagram reading-column">
+        <img src={src} alt={`${title} diagram ${allDiagrams.length > 1 ? i + 1 : ''}`} loading={i === 0 ? "eager" : "lazy"} />
+        {allDiagrams.length > 1 && (
+          <figcaption>Figure {i + 1} of {allDiagrams.length}</figcaption>
+        )}
+      </figure>
+    ))}
 
     <article class="reading-column prose">
       <Content />
@@ -139,7 +113,6 @@ const breadcrumbs = [
     <div class="reading-column">
       <InternalLinks
         relatedArticles={allArticles as any}
-        relatedFrameworks={allFrameworks as any}
         relatedUseCases={allUseCases as any}
         relatedCaseStudies={allCaseStudies as any}
       />

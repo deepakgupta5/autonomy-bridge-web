@@ -1,0 +1,62 @@
+---
+import Layout from "../../components/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import GlossaryEntry from "../../components/GlossaryEntry.astro";
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+  const terms = await getCollection("glossary");
+  return terms.map((term) => ({
+    params: { slug: term.slug },
+    props: { term },
+  }));
+}
+
+const { term } = Astro.props;
+
+const { title, abbreviation, definition, relatedTerms, usedIn } = term.data;
+
+const definedTermData = {
+  name: title,
+  description: definition,
+  url: `https://www.autonomybridge.com/glossary/${term.slug}`,
+};
+
+const breadcrumbs = [
+  { name: "Home", url: "https://www.autonomybridge.com/" },
+  { name: "Glossary", url: "https://www.autonomybridge.com/glossary" },
+  { name: title, url: `https://www.autonomybridge.com/glossary/${term.slug}` },
+];
+---
+
+<Layout
+  title={`${title}${abbreviation ? ` (${abbreviation})` : ''} — Glossary — Autonomy Bridge`}
+  description={`Definition of ${title}${abbreviation ? ` (${abbreviation})` : ''}: ${definition}`}
+  canonicalPath={`/glossary/${term.slug}`}
+  includePageSchema={false}
+  definedTermData={definedTermData}
+  breadcrumbs={breadcrumbs}
+>
+  <Header />
+
+  <main class="container site-main">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span class="breadcrumb__separator" aria-hidden="true">›</span>
+      <a href="/glossary">Glossary</a>
+      <span class="breadcrumb__separator" aria-hidden="true">›</span>
+      <span>{title}</span>
+    </nav>
+
+    <GlossaryEntry
+      title={title}
+      abbreviation={abbreviation}
+      definition={definition}
+      relatedTerms={relatedTerms}
+      usedIn={usedIn}
+    />
+  </main>
+
+  <Footer />
+</Layout>

@@ -1,0 +1,58 @@
+---
+import Layout from "../../components/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import FrameworkCard from "../../components/FrameworkCard.astro";
+import { getCollection } from "astro:content";
+
+const frameworks = await getCollection("frameworks");
+const sorted = frameworks.sort((a, b) => a.data.title.localeCompare(b.data.title));
+
+const clusterLabels: Record<string, string> = {
+  "automation-roi": "Automation ROI",
+  "robotics-deployment-economics": "Robotics Deployment Economics",
+  "automation-failure": "Automation Failure",
+  "vendor-economics": "Vendor Economics",
+  "deployment-risk": "Deployment Risk",
+};
+
+const clusters = [...new Set(sorted.map((f) => f.data.cluster))];
+---
+
+<Layout
+  title="Frameworks — Autonomy Bridge"
+  description="Decision frameworks for warehouse automation ROI, robotics deployment economics, vendor evaluation, and automation failure analysis."
+  canonicalPath="/frameworks"
+>
+  <Header />
+
+  <main class="container site-main">
+    <h1>Frameworks</h1>
+    <p class="subhead reading-column">
+      Structured decision frameworks for evaluating warehouse automation investments,
+      vendor economics, deployment risk, and operational viability.
+    </p>
+
+    {clusters.map((cluster) => {
+      const clusterFrameworks = sorted.filter((f) => f.data.cluster === cluster);
+      return (
+        <section class="section">
+          <h2>{clusterLabels[cluster] ?? cluster}</h2>
+          <div class="content-grid">
+            {clusterFrameworks.map((fw) => (
+              <FrameworkCard
+                title={fw.data.title}
+                description={fw.data.description}
+                slug={fw.slug}
+                cluster={fw.data.cluster}
+                diagramFile={fw.data.diagramFile ?? (fw.data.diagramFiles?.[0])}
+              />
+            ))}
+          </div>
+        </section>
+      );
+    })}
+  </main>
+
+  <Footer />
+</Layout>

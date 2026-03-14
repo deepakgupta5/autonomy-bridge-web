@@ -1,0 +1,86 @@
+---
+import Layout from "../../components/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import { getCollection } from "astro:content";
+
+const terms = await getCollection("glossary");
+const sorted = terms.sort((a, b) => a.data.title.localeCompare(b.data.title));
+
+// Group alphabetically
+const grouped: Record<string, typeof sorted> = {};
+for (const term of sorted) {
+  const letter = term.data.title[0].toUpperCase();
+  if (!grouped[letter]) grouped[letter] = [];
+  grouped[letter].push(term);
+}
+const letters = Object.keys(grouped).sort();
+---
+
+<Layout
+  title="Glossary — Autonomy Bridge"
+  description="Definitions of key terms in warehouse robotics, automation economics, and deployment analysis — AMR, RaaS, fleet utilization, WMS integration, and more."
+  canonicalPath="/glossary"
+>
+  <Header />
+
+  <main class="container site-main">
+    <h1>Glossary</h1>
+    <p class="subhead reading-column">
+      Definitions for key terms in warehouse automation, robotics deployment,
+      and operational economics.
+    </p>
+
+    <nav class="breadcrumb" aria-label="Alphabetical navigation" style="margin-bottom: 32px;">
+      {letters.map((letter, i) => (
+        <>
+          <a href={`#${letter}`}>{letter}</a>
+          {i < letters.length - 1 && <span class="breadcrumb__separator" aria-hidden="true">·</span>}
+        </>
+      ))}
+    </nav>
+
+    {letters.map((letter) => (
+      <section class="section" id={letter}>
+        <h2>{letter}</h2>
+        <dl>
+          {grouped[letter].map((term) => (
+            <>
+              <dt>
+                <a href={`/glossary/${term.slug}`}>
+                  {term.data.title}{term.data.abbreviation ? ` (${term.data.abbreviation})` : ''}
+                </a>
+              </dt>
+              <dd>{term.data.definition}</dd>
+            </>
+          ))}
+        </dl>
+      </section>
+    ))}
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+dl {
+  max-width: 75ch;
+}
+dt {
+  font-weight: 600;
+  margin-top: 16px;
+}
+dt a {
+  color: var(--text-primary);
+  text-decoration: none;
+}
+dt a:hover {
+  color: var(--accent);
+}
+dd {
+  margin: 4px 0 0 0;
+  color: var(--text-body);
+  font-size: 15px;
+  line-height: 1.6;
+}
+</style>

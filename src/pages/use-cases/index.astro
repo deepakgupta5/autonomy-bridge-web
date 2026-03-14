@@ -1,0 +1,38 @@
+---
+import Layout from "../../components/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import { getCollection } from "astro:content";
+
+const useCases = await getCollection("use-cases");
+const sorted = useCases.sort((a, b) => a.data.title.localeCompare(b.data.title));
+---
+
+<Layout
+  title="Use Cases — Autonomy Bridge"
+  description="Practical use cases for evaluating warehouse automation ROI, AMR deployments, goods-to-person systems, and robotics vendor selection."
+  canonicalPath="/use-cases"
+>
+  <Header />
+
+  <main class="container site-main">
+    <h1>Use Cases</h1>
+    <p class="subhead reading-column">
+      Applied analysis for specific warehouse automation decisions — from AMR deployment
+      evaluation to vendor market entry and goods-to-person system selection.
+    </p>
+
+    <div class="content-grid">
+      {sorted.map((uc) => (
+        <div class="article-card">
+          <p class="article-card__title">
+            <a href={`/use-cases/${uc.slug}`}>{uc.data.title}</a>
+          </p>
+          <p class="article-card__description">{uc.data.description}</p>
+        </div>
+      ))}
+    </div>
+  </main>
+
+  <Footer />
+</Layout>

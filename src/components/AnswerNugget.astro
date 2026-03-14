@@ -1,0 +1,15 @@
+---
+const { text, author, pubDate } = Astro.props;
+const formattedDate = new Date(pubDate).toLocaleDateString('en-US', {
+  year: 'numeric', month: 'long', day: 'numeric'
+});
+---
+<div class="article-byline">
+  <span class="article-byline__author">By {author}</span>
+  <span class="article-byline__separator"> · </span>
+  <time class="article-byline__date" datetime={pubDate.toISOString()}>{formattedDate}</time>
+</div>
+<div class="answer-nugget" aria-label="Direct answer">
+  <p class="answer-nugget__label">Answer</p>
+  <p class="answer-nugget__text">{text}</p>
+</div>

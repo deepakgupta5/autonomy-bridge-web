@@ -9,6 +9,11 @@ const {
   schemaName,
   canonicalPath = Astro.url.pathname,
   includePageSchema = true,
+  articleData,
+  faqData,
+  breadcrumbs,
+  serviceSchema,
+  definedTermData,
 } = Astro.props;
 
 const normalizedPath = canonicalPath.startsWith("/") ? canonicalPath : `/${canonicalPath}`;
@@ -22,6 +27,11 @@ const organizationSchema = {
   url: `${siteUrl}/`,
   description:
     "AI and robotics market research, industrial automation GTM analysis, and enterprise AI commercialization research for high-stakes technology decisions.",
+  founder: {
+    "@type": "Person",
+    name: "Deepak Gupta",
+    sameAs: "https://www.linkedin.com/in/deepakgupta5",
+  },
 };
 
 const websiteSchema = {
@@ -50,7 +60,69 @@ const personSchema = {
     url: siteUrl,
   },
   sameAs: ["https://www.linkedin.com/in/deepakgupta5"],
+  knowsAbout: [
+    "warehouse robotics",
+    "AMR deployment",
+    "automation ROI",
+    "robotics deployment economics",
+    "warehouse automation failure analysis",
+    "vendor economics",
+    "deployment risk assessment",
+    "3PL warehouse automation",
+    "goods-to-person systems",
+    "robotics-as-a-service",
+  ],
 };
+
+const articleSchema = articleData ? {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: articleData.title,
+  description: articleData.description,
+  datePublished: articleData.pubDate instanceof Date
+    ? articleData.pubDate.toISOString()
+    : articleData.pubDate,
+  author: { "@type": "Person", name: "Deepak Gupta" },
+  publisher: {
+    "@type": "Organization",
+    name: "Autonomy Bridge",
+    url: siteUrl,
+  },
+  mainEntityOfPage: canonicalUrl,
+} : null;
+
+const faqSchema = faqData && faqData.length > 0 ? {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqData.map((item: { question: string; answer: string }) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+} : null;
+
+const breadcrumbSchema = breadcrumbs && breadcrumbs.length > 0 ? {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: breadcrumbs.map((crumb: { name: string; url: string }, i: number) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    name: crumb.name,
+    item: crumb.url,
+  })),
+} : null;
+
+const definedTermSchema = definedTermData ? {
+  "@context": "https://schema.org",
+  "@type": "DefinedTerm",
+  name: definedTermData.name,
+  description: definedTermData.description,
+  inDefinedTermSet: {
+    "@type": "DefinedTermSet",
+    name: "Warehouse Automation Glossary",
+    url: `${siteUrl}/glossary`,
+  },
+} : null;
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -71,13 +143,23 @@ const personSchema = {
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
   <meta property="og:image" content="https://www.autonomybridge.com/og-image.png" />
-  <meta property="og:type" content="website" />
+  <meta property="og:type" content={articleData ? "article" : "website"} />
   <meta property="og:url" content={canonicalUrl} />
   <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Schema: always present -->
   <script type="application/ld+json" set:html={JSON.stringify(organizationSchema)}></script>
   <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)}></script>
-  {includePageSchema && <script type="application/ld+json" set:html={JSON.stringify(pageSchema)}></script>}
   <script type="application/ld+json" set:html={JSON.stringify(personSchema)}></script>
+  {includePageSchema && !articleData && !serviceSchema && <script type="application/ld+json" set:html={JSON.stringify(pageSchema)}></script>}
+
+  <!-- Schema: conditional -->
+  {articleSchema && <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>}
+  {faqSchema && <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>}
+  {breadcrumbSchema && <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>}
+  {serviceSchema && <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)}></script>}
+  {definedTermSchema && <script type="application/ld+json" set:html={JSON.stringify(definedTermSchema)}></script>}
+
   <slot name="head" />
 </head>
 <body>
