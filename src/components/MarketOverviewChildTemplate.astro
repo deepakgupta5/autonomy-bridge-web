@@ -1,0 +1,55 @@
+---
+import MainLayout from "./MainLayout.astro";
+
+interface Props {
+  canonicalPath: string;
+  title: string;
+  summary?: string;
+}
+
+const { canonicalPath, title, summary = "Market overview analysis." } = Astro.props;
+---
+
+<MainLayout title={title} summary={summary} canonicalPath={canonicalPath}>
+  <article class="prose-surface market-child-template">
+    <header class="market-child-header">
+      <h1 class="type-h1">{title}</h1>
+      <p class="type-meta">Canonical: {canonicalPath}</p>
+    </header>
+
+    <section class="market-child-body prose-surface">
+      <slot />
+    </section>
+  </article>
+</MainLayout>
+
+<style>
+  .market-child-template {
+    max-width: 70ch;
+    margin-inline: auto;
+  }
+
+  .market-child-header {
+    border: 0.0625rem solid #d1d5db;
+    border-radius: 0.625rem;
+    background: #ffffff;
+    padding: 1rem;
+  }
+
+  .market-child-header h1,
+  .market-child-header p {
+    margin: 0;
+  }
+
+  .market-child-header p + p {
+    margin-top: 0.55rem;
+  }
+
+  .market-child-template section + section {
+    margin-top: 1.5rem;
+  }
+
+  .market-child-body {
+    margin-top: 1.5rem;
+  }
+</style>

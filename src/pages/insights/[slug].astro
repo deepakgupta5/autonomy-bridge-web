@@ -1,170 +1,33 @@
 ---
-import Layout from "../../components/Layout.astro";
-import Header from "../../components/Header.astro";
-import Footer from "../../components/Footer.astro";
-import AnswerNugget from "../../components/AnswerNugget.astro";
-import DecisionBoundary from "../../components/DecisionBoundary.astro";
-import InternalLinks from "../../components/InternalLinks.astro";
-import ContentClusterBadge from "../../components/ContentClusterBadge.astro";
-import { getCollection, getEntry } from "astro:content";
-import { buildFaqData } from "../../utils/faqData";
+import DetailPageTemplate from "../../components/DetailPageTemplate.astro";
+import { insightSlugs } from "../../data/ia";
+import { getEntryByCanonicalPath } from "../../utils/contentCollections";
+import { extractFaqItemsFromMarkdown } from "../../utils/faq";
 
-export async function getStaticPaths() {
-  const articles = await getCollection("articles");
-  return articles.map((article) => ({
-    params: { slug: article.slug },
-    props: { article },
-  }));
+export function getStaticPaths() {
+  return insightSlugs.map((slug) => ({ params: { slug } }));
 }
 
-const { article } = Astro.props;
-const { Content } = await article.render();
-
-const {
-  title,
-  description,
-  author,
-  pubDate,
-  cluster,
-  answerNugget,
-  decisionBoundaries,
-  relatedArticles,
-  relatedFrameworks,
-  relatedUseCases,
-  relatedCaseStudies,
-} = article.data;
-
-// Build related link objects for InternalLinks component
-const allArticles = relatedArticles
-  ? await Promise.all(
-      relatedArticles.map(async (slug: string) => {
-        try {
-          const entry = await getEntry("articles", slug);
-          return entry ? { title: entry.data.title, slug } : null;
-        } catch {
-          return null;
-        }
-      })
-    ).then((results) => results.filter(Boolean))
-  : [];
-
-const allFrameworks = relatedFrameworks
-  ? await Promise.all(
-      relatedFrameworks.map(async (slug: string) => {
-        try {
-          const entry = await getEntry("frameworks", slug);
-          return entry ? { title: entry.data.title, slug } : null;
-        } catch {
-          return null;
-        }
-      })
-    ).then((results) => results.filter(Boolean))
-  : [];
-
-const allUseCases = relatedUseCases
-  ? await Promise.all(
-      relatedUseCases.map(async (slug: string) => {
-        try {
-          const entry = await getEntry("use-cases", slug);
-          return entry ? { title: entry.data.title, slug } : null;
-        } catch {
-          return null;
-        }
-      })
-    ).then((results) => results.filter(Boolean))
-  : [];
-
-const allCaseStudies = relatedCaseStudies
-  ? await Promise.all(
-      relatedCaseStudies.map(async (slug: string) => {
-        try {
-          const entry = await getEntry("case-studies", slug);
-          return entry ? { title: entry.data.title, slug } : null;
-        } catch {
-          return null;
-        }
-      })
-    ).then((results) => results.filter(Boolean))
-  : [];
-
-const faqData = decisionBoundaries ? buildFaqData(decisionBoundaries) : [];
-
-const articleSchemaData = {
-  title,
-  description,
-  author,
-  pubDate: pubDate.toISOString(),
-  url: `https://www.autonomybridge.com/insights/${article.slug}`,
-};
-
-const breadcrumbs = [
-  { name: "Home", url: "https://www.autonomybridge.com/" },
-  { name: "Insights", url: "https://www.autonomybridge.com/insights" },
-  { name: title, url: `https://www.autonomybridge.com/insights/${article.slug}` },
-];
+const { slug } = Astro.params;
+const canonicalPath = `/insights/${slug}`;
+const entry = await getEntryByCanonicalPath("insights", canonicalPath);
+const { Content } = await entry.render();
+const faqItems = extractFaqItemsFromMarkdown(entry.body);
 ---
 
-<Layout
-  title={`${title} — Insights — Autonomy Bridge`}
-  description={description}
-  canonicalPath={`/insights/${article.slug}`}
-  includePageSchema={false}
-  articleData={articleSchemaData}
-  faqData={faqData}
-  breadcrumbs={breadcrumbs}
+<DetailPageTemplate
+  canonicalPath={canonicalPath}
+  title={entry.data.title}
+  summary={entry.data.summary}
+  contentTypeLabel="Insight"
+  schemaKind="insight"
+  slug={slug}
+  hubPath="/insights"
+  hubLabel="Insights"
+  datePublished={String(entry.data.datePublished)}
+  dateModified={String(entry.data.dateModified)}
+  authors={entry.data.authors}
+  faqItems={faqItems}
 >
-  <Header />
-
-  <main class="container site-main">
-    <nav class="breadcrumb" aria-label="Breadcrumb">
-      <a href="/">Home</a>
-      <span class="breadcrumb__separator" aria-hidden="true">›</span>
-      <a href="/insights">Insights</a>
-      <span class="breadcrumb__separator" aria-hidden="true">›</span>
-      <span>{title}</span>
-    </nav>
-
-    <ContentClusterBadge cluster={cluster} />
-    <h1 class="reading-column">{title}</h1>
-
-    {answerNugget && (
-      <div class="reading-column">
-        <AnswerNugget text={answerNugget} author={author} pubDate={pubDate} />
-      </div>
-    )}
-
-    <article class="reading-column prose">
-      <Content />
-    </article>
-
-    <div class="reading-column article-cta">
-      <h2>Need decision-grade analysis?</h2>
-      <p>
-        If this article raised questions about your specific facility, vendor
-        short-list, or investment, a structured Decision Brief can turn the
-        analysis into a clear recommendation.
-      </p>
-      <a href="/advisory" class="btn-primary">See how a Decision Brief works</a>
-    </div>
-
-    {decisionBoundaries && decisionBoundaries.length > 0 && (
-      <div class="reading-column decision-boundaries-block">
-        <h2>Key Decision Rules</h2>
-        {decisionBoundaries.map((db: { question: string; answer: string }) => (
-          <DecisionBoundary text={`${db.question} ${db.answer}`} />
-        ))}
-      </div>
-    )}
-
-    <div class="reading-column">
-      <InternalLinks
-        relatedArticles={allArticles as any}
-        relatedFrameworks={allFrameworks as any}
-        relatedUseCases={allUseCases as any}
-        relatedCaseStudies={allCaseStudies as any}
-      />
-    </div>
-  </main>
-
-  <Footer />
-</Layout>
+  <Content />
+</DetailPageTemplate>

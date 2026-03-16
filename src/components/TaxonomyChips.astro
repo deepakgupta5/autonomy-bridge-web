@@ -1,0 +1,35 @@
+---
+interface Props {
+  chips: string[];
+}
+
+const { chips } = Astro.props;
+const uniqueChips = Array.from(new Set(chips.map((chip) => chip.trim()).filter(Boolean)));
+---
+
+{
+  uniqueChips.length > 0 && (
+    <ul class="taxonomy-chips" aria-label="Taxonomy tags">
+      {uniqueChips.map((chip) => <li class="type-caption">{chip}</li>)}
+    </ul>
+  )
+}
+
+<style>
+  .taxonomy-chips {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+  }
+
+  .taxonomy-chips li {
+    border: 0.0625rem solid #d1d5db;
+    border-radius: 999rem;
+    padding: 0.18rem 0.55rem;
+    color: #334155;
+    background: #ffffff;
+  }
+</style>

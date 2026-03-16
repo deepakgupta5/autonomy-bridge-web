@@ -1,0 +1,123 @@
+---
+import type { HubPageContent } from "../data/hubContent";
+import MainLayout from "./MainLayout.astro";
+import ContentCard from "./ContentCard.astro";
+import { getHubAssetSurfacing } from "../utils/relatedContent";
+import {
+  buildCollectionPageSchema,
+  buildFaqPageSchema,
+  type FaqSchemaItem,
+} from "../utils/schema";
+
+interface Props {
+  canonicalPath: string;
+  content: HubPageContent;
+  faqItems?: FaqSchemaItem[];
+}
+
+const { canonicalPath, content, faqItems = [] } = Astro.props;
+const hasItems = content.items.length > 0;
+const surfacedAssets = getHubAssetSurfacing(canonicalPath, 12);
+const pageSchema = [
+  buildCollectionPageSchema({
+    name: content.title,
+    description: content.summary,
+    canonicalPath,
+  }),
+];
+const faqSchema = buildFaqPageSchema({
+  canonicalPath,
+  items: faqItems,
+});
+const schema = faqSchema ? [...pageSchema, faqSchema] : pageSchema;
+---
+
+<MainLayout
+  title={content.title}
+  summary={content.summary}
+  canonicalPath={canonicalPath}
+  schema={schema}
+>
+  <section class="hub-intro prose-surface">
+    <h1 class="type-h1">{content.title}</h1>
+    <p class="type-body prose-intro">{content.intro}</p>
+    <p class="type-meta">Total entries: {content.items.length}</p>
+  </section>
+
+  <section class="hub-body prose-surface">
+    <slot />
+  </section>
+
+  {
+    surfacedAssets.length > 0 && (
+      <section class="hub-surfacing prose-surface">
+        <h2 class="type-h3">Section Assets</h2>
+        <ul class="type-list">
+          {surfacedAssets.map((asset) => (
+            <li>
+              <a href={asset.canonicalPath}>{asset.title}</a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )
+  }
+
+  {
+    hasItems ? (
+      <section class="hub-grid" aria-label={`${content.title} entries`}>
+        {content.items.map((item) => <ContentCard item={item} />)}
+      </section>
+    ) : (
+      <section class="hub-empty">
+        <p class="type-body">{content.emptyState}</p>
+      </section>
+    )
+  }
+</MainLayout>
+
+<style>
+  .hub-intro {
+    margin-bottom: 1.25rem;
+  }
+
+  .hub-intro h1,
+  .hub-intro p {
+    margin: 0;
+  }
+
+  .hub-intro p + p {
+    margin-top: 0.7rem;
+  }
+
+  .hub-grid {
+    display: grid;
+    gap: 0.9rem;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  }
+
+  .hub-surfacing {
+    margin-bottom: 1.25rem;
+  }
+
+  .hub-body {
+    margin-bottom: 1.25rem;
+  }
+
+  .hub-surfacing h2,
+  .hub-surfacing ul {
+    margin: 0;
+  }
+
+  .hub-surfacing ul {
+    margin-top: 0.6rem;
+    padding-left: 1.25rem;
+  }
+
+  .hub-empty {
+    border: 0.0625rem dashed #d1d5db;
+    border-radius: 0.65rem;
+    background: #ffffff;
+    padding: 1rem;
+  }
+</style>

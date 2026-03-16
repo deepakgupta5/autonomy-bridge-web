@@ -1,0 +1,71 @@
+---
+import type { LocalSubnavLink } from "../utils/navigation";
+import { normalizePathname } from "../utils/navigation";
+
+interface Props {
+  heading: string;
+  links: LocalSubnavLink[];
+  currentPath: string;
+}
+
+const { heading, links, currentPath } = Astro.props;
+const normalizedCurrentPath = normalizePathname(currentPath);
+---
+
+<aside class="local-subnav" aria-label={heading}>
+  <p class="type-eyebrow">{heading}</p>
+  <nav aria-label={heading}>
+    <ul>
+      {
+        links.map((link) => (
+          <li>
+            <a
+              href={link.href}
+              class="type-body-sm"
+              aria-current={normalizedCurrentPath === link.href ? "page" : undefined}
+            >
+              {link.label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+</aside>
+
+<style>
+  .local-subnav {
+    border: 0.0625rem solid #d1d5db;
+    border-radius: 0.5rem;
+    background: #ffffff;
+    padding: 0.9rem 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .local-subnav p {
+    margin: 0 0 0.55rem;
+    color: #4b5563;
+  }
+
+  .local-subnav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 0.45rem;
+    flex-wrap: wrap;
+  }
+
+  .local-subnav a {
+    color: #1f2937;
+    text-decoration: none;
+    display: inline-block;
+    border: 0.0625rem solid #d1d5db;
+    border-radius: 999rem;
+    padding: 0.2rem 0.55rem;
+  }
+
+  .local-subnav a[aria-current="page"] {
+    border-color: #111827;
+  }
+</style>

@@ -1,0 +1,237 @@
+---
+import MainLayout from "./MainLayout.astro";
+import Figure from "./Figure.astro";
+import type { DiagramAsset } from "../data/diagramAssetMap";
+import { getRelatedContentContext } from "../utils/relatedContent";
+import {
+  buildArticleSchema,
+  buildCaseStudySchema,
+  buildFaqPageSchema,
+  buildUseCaseSchema,
+  type FaqSchemaItem,
+} from "../utils/schema";
+
+interface Props {
+  canonicalPath: string;
+  title: string;
+  summary: string;
+  contentTypeLabel: string;
+  slug: string;
+  hubPath: string;
+  hubLabel: string;
+  diagrams?: DiagramAsset[];
+  schemaKind: "framework" | "insight" | "useCase" | "caseStudy";
+  faqItems?: FaqSchemaItem[];
+  datePublished?: string;
+  dateModified?: string;
+  authors?: string[];
+}
+
+const {
+  canonicalPath,
+  title,
+  summary,
+  contentTypeLabel,
+  slug,
+  hubPath,
+  hubLabel,
+  diagrams = [],
+  schemaKind,
+  faqItems = [],
+  datePublished,
+  dateModified,
+  authors,
+} = Astro.props;
+
+const relatedContext = getRelatedContentContext(canonicalPath, {
+  lateralLimit: 12,
+  semanticLimit: 8,
+});
+const resolvedHubPath = relatedContext.upwardHub?.canonicalPath ?? hubPath;
+const resolvedHubLabel = relatedContext.upwardHub?.title ?? hubLabel;
+const schemaByKind = {
+  framework: buildArticleSchema({
+    title,
+    description: summary,
+    canonicalPath,
+    articleType: "Article",
+    datePublished,
+    dateModified,
+    authors,
+  }),
+  insight: buildArticleSchema({
+    title,
+    description: summary,
+    canonicalPath,
+    articleType: "Article",
+    datePublished,
+    dateModified,
+    authors,
+  }),
+  useCase: buildUseCaseSchema({
+    title,
+    description: summary,
+    canonicalPath,
+    schemaType: "TechArticle",
+    datePublished,
+    dateModified,
+    authors,
+  }),
+  caseStudy: buildCaseStudySchema({
+    title,
+    description: summary,
+    canonicalPath,
+    datePublished,
+    dateModified,
+    authors,
+  }),
+} as const;
+
+const detailSchema = schemaByKind[schemaKind];
+const faqSchema = buildFaqPageSchema({
+  canonicalPath,
+  items: faqItems,
+});
+const schema = faqSchema ? [detailSchema, faqSchema] : [detailSchema];
+---
+
+<MainLayout title={title} summary={summary} canonicalPath={canonicalPath} schema={schema}>
+  <article class="prose-surface detail-template">
+    <header class="detail-header">
+      <h1 class="type-h1">{title}</h1>
+      <p class="type-body prose-intro">{summary}</p>
+      <p class="type-meta">Canonical: {canonicalPath}</p>
+      <p class="type-meta">Content Type: {contentTypeLabel}</p>
+    </header>
+
+    <section class="detail-body prose-surface">
+      <slot />
+    </section>
+
+    <section>
+      <h2 class="type-h2">Route Context</h2>
+      <ul class="type-list">
+        <li>
+          Hub: <a href={resolvedHubPath}>{resolvedHubLabel}</a>
+        </li>
+        <li>Slug: <code>{slug}</code></li>
+      </ul>
+    </section>
+
+    {
+      relatedContext.lateralRelated.length > 0 && (
+        <section class="related-content">
+          <h2 class="type-h2">Related Content</h2>
+          <ul class="type-list related-links">
+            {relatedContext.lateralRelated.map((link) => (
+              <li>
+                <a href={link.canonicalPath}>{link.title}</a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )
+    }
+
+    {
+      (relatedContext.semanticFrameworkLinks.length > 0 ||
+        relatedContext.semanticGlossaryLinks.length > 0) && (
+        <section class="semantic-links">
+          <h2 class="type-h2">Semantic Links</h2>
+          {relatedContext.semanticFrameworkLinks.length > 0 && (
+            <>
+              <h3 class="type-h3">Related Frameworks</h3>
+              <ul class="type-list related-links">
+                {relatedContext.semanticFrameworkLinks.map((link) => (
+                  <li>
+                    <a href={link.canonicalPath}>{link.title}</a>
+                  </li>
+                ))}
+              </ul>
+            </>
+          )}
+          {relatedContext.semanticGlossaryLinks.length > 0 && (
+            <>
+              <h3 class="type-h3">Related Glossary Terms</h3>
+              <ul class="type-list related-links">
+                {relatedContext.semanticGlossaryLinks.map((link) => (
+                  <li>
+                    <a href={link.canonicalPath}>{link.title}</a>
+                  </li>
+                ))}
+              </ul>
+            </>
+          )}
+        </section>
+      )
+    }
+
+    {
+      diagrams.length > 0 && (
+        <section class="diagram-gallery">
+          <h2 class="type-h2">Framework Diagrams</h2>
+          <p class="type-body">
+            Diagrams are rendered as bounded previews. Select any diagram to view an expanded version.
+          </p>
+          <ol class="diagram-list">
+            {diagrams.map((diagram) => (
+              <li>
+                <Figure
+                  id={`${slug}-diagram-${diagram.diagramOrder}`}
+                  src={diagram.publicPath}
+                  alt={diagram.caption}
+                  caption={diagram.caption}
+                  width={diagram.width}
+                  height={diagram.height}
+                  loading="lazy"
+                />
+              </li>
+            ))}
+          </ol>
+        </section>
+      )
+    }
+  </article>
+</MainLayout>
+
+<style>
+  .detail-template {
+    max-width: 70ch;
+    margin-inline: auto;
+  }
+
+  .detail-header {
+    border: 0.0625rem solid #d1d5db;
+    border-radius: 0.625rem;
+    background: #ffffff;
+    padding: 1rem;
+  }
+
+  .detail-header h1,
+  .detail-header p {
+    margin: 0;
+  }
+
+  .detail-header p + p {
+    margin-top: 0.55rem;
+  }
+
+  .detail-template section + section {
+    margin-top: 1.5rem;
+  }
+
+  .related-links {
+    margin: 0.5rem 0 0;
+    padding-left: 1.25rem;
+  }
+
+  .related-links li + li {
+    margin-top: 0.4rem;
+  }
+
+  .diagram-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+</style>

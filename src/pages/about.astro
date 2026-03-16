@@ -1,123 +1,20 @@
 ---
-import Layout from "../components/Layout.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
+import StaticPageTemplate from "../components/StaticPageTemplate.astro";
+import { getEntryByCanonicalPath } from "../utils/contentCollections";
+import { extractFaqItemsFromMarkdown } from "../utils/faq";
+
+const canonicalPath = "/about";
+const entry = await getEntryByCanonicalPath("pages", canonicalPath);
+const { Content } = await entry.render();
+const faqItems = extractFaqItemsFromMarkdown(entry.body);
 ---
 
-<Layout
-  title="About — Autonomy Bridge"
-  description="Autonomy Bridge provides warehouse automation economic analysis for operators, investors, and vendors making high-stakes robotics and AMR deployment decisions."
+<StaticPageTemplate
+  canonicalPath={canonicalPath}
+  title={entry.data.title}
+  summary={entry.data.summary}
+  schemaKind="about"
+  faqItems={faqItems}
 >
-  <Header />
-
-  <main class="container site-main">
-    <h1>About Autonomy Bridge</h1>
-
-    <section class="section reading-column">
-      <p class="subhead">
-        Autonomy Bridge specializes in AI and robotics market research, industrial automation GTM
-        analysis, and enterprise AI commercialization research.
-      </p>
-      <p>
-        The firm focuses on the economic boundary between technical capability and market viability.
-      </p>
-      <p>
-        Autonomy Bridge operates independently and does not perform implementation or integration work.
-      </p>
-    </section>
-
-    <section class="section reading-column section-alt">
-      <h2>Primary Domain</h2>
-      <ul>
-        <li>AI</li>
-        <li>Robotics</li>
-        <li>Industrial automation</li>
-        <li>Physical AI systems</li>
-      </ul>
-    </section>
-
-    <section class="section reading-column">
-      <h2>Secondary Domain</h2>
-      <ul>
-        <li>Enterprise SaaS</li>
-        <li>Platform infrastructure</li>
-        <li>Regulated workflows</li>
-      </ul>
-    </section>
-
-    <section class="section reading-column section-alt">
-      <h2>The Autonomy Bridge Commercialization Framework</h2>
-      <p>Every engagement follows a four-stage logic to move from uncertainty to decision.</p>
-      <div class="framework">
-        <div class="stage">
-          <h3>Stage 1: Market Reality Check</h3>
-          <p>Is there a buyer with budget, urgency, and authority?</p>
-        </div>
-        <div class="stage">
-          <h3>Stage 2: Adoption Feasibility</h3>
-          <p>What blocks deployment, scale, or internal approval?</p>
-        </div>
-        <div class="stage">
-          <h3>Stage 3: Economic Viability</h3>
-          <p>Do pricing and unit economics work under real constraints?</p>
-        </div>
-        <div class="stage">
-          <h3>Stage 4: Go / No-Go Decision</h3>
-          <p>Proceed, pause, or stop — with explicit trade-offs stated.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section reading-column">
-      <h2>Methodology</h2>
-      <p>
-        Every engagement applies a utilization-first economic model that evaluates whether
-        a warehouse can sustain the utilization required to recover automation capital — before
-        assessing technology fit, vendor selection, or implementation scope.
-      </p>
-      <p>
-        Analysis covers the full workflow chain: receiving, storage, replenishment, picking,
-        transport, packing, sortation, and outbound staging. Recommendations are structured
-        as decision briefs with explicit conditions, risk factors, and confidence bounds.
-      </p>
-      <p>
-        Autonomy Bridge does not perform implementation or integration work, and does not
-        accept commercial arrangements with automation vendors being evaluated.
-      </p>
-      <p><a href="/methodology">Read the full methodology →</a></p>
-    </section>
-
-    <section class="section reading-column">
-      <h2>Principal</h2>
-      <p>
-        Autonomy Bridge is led by Deepak Gupta, who has supported commercialization, pricing,
-        and market-entry decisions across AI, robotics, industrial automation, and enterprise
-        B2B SaaS.
-      </p>
-      <p>
-        Work has included pricing and RaaS model decisions for autonomous systems, market entry
-        analysis across North America, Europe, and Asia, and commercialization planning for
-        enterprise AI and automation platforms.
-      </p>
-      <p>
-        <a href="https://www.linkedin.com/in/deepakgupta5" target="_blank" rel="noopener">
-          LinkedIn →
-        </a>
-      </p>
-    </section>
-
-    <section class="section reading-column">
-      <h2>Work With Us</h2>
-      <p>
-        Engagements begin with a structured conversation about the decision you are facing
-        and whether independent analysis would change the outcome.
-      </p>
-      <p class="inline-actions">
-        <a href="/advisory" class="btn-primary">Advisory Services</a>
-        <a href="/contact">Start a Conversation →</a>
-      </p>
-    </section>
-  </main>
-
-  <Footer />
-</Layout>
+  <Content />
+</StaticPageTemplate>

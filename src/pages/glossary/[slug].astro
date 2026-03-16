@@ -1,62 +1,24 @@
 ---
-import Layout from "../../components/Layout.astro";
-import Header from "../../components/Header.astro";
-import Footer from "../../components/Footer.astro";
-import GlossaryEntry from "../../components/GlossaryEntry.astro";
-import { getCollection } from "astro:content";
+import GlossaryTermTemplate from "../../components/GlossaryTermTemplate.astro";
+import { glossaryTermSlugs } from "../../data/ia";
+import { getEntryByCanonicalPath } from "../../utils/contentCollections";
 
-export async function getStaticPaths() {
-  const terms = await getCollection("glossary");
-  return terms.map((term) => ({
-    params: { slug: term.slug },
-    props: { term },
-  }));
+export function getStaticPaths() {
+  return glossaryTermSlugs.map((slug) => ({ params: { slug } }));
 }
 
-const { term } = Astro.props;
-
-const { title, abbreviation, definition, relatedTerms, usedIn } = term.data;
-
-const definedTermData = {
-  name: title,
-  description: definition,
-  url: `https://www.autonomybridge.com/glossary/${term.slug}`,
-};
-
-const breadcrumbs = [
-  { name: "Home", url: "https://www.autonomybridge.com/" },
-  { name: "Glossary", url: "https://www.autonomybridge.com/glossary" },
-  { name: title, url: `https://www.autonomybridge.com/glossary/${term.slug}` },
-];
+const { slug } = Astro.params;
+const canonicalPath = `/glossary/${slug}`;
+const entry = await getEntryByCanonicalPath("glossary", canonicalPath);
+const { Content } = await entry.render();
 ---
 
-<Layout
-  title={`${title}${abbreviation ? ` (${abbreviation})` : ''} — Glossary — Autonomy Bridge`}
-  description={`Definition of ${title}${abbreviation ? ` (${abbreviation})` : ''}: ${definition}`}
-  canonicalPath={`/glossary/${term.slug}`}
-  includePageSchema={false}
-  definedTermData={definedTermData}
-  breadcrumbs={breadcrumbs}
+<GlossaryTermTemplate
+  canonicalPath={canonicalPath}
+  term={entry.data.title}
+  slug={slug}
+  definition={entry.data.description}
+  summary={entry.data.summary}
 >
-  <Header />
-
-  <main class="container site-main">
-    <nav class="breadcrumb" aria-label="Breadcrumb">
-      <a href="/">Home</a>
-      <span class="breadcrumb__separator" aria-hidden="true">›</span>
-      <a href="/glossary">Glossary</a>
-      <span class="breadcrumb__separator" aria-hidden="true">›</span>
-      <span>{title}</span>
-    </nav>
-
-    <GlossaryEntry
-      title={title}
-      abbreviation={abbreviation}
-      definition={definition}
-      relatedTerms={relatedTerms}
-      usedIn={usedIn}
-    />
-  </main>
-
-  <Footer />
-</Layout>
+  <Content />
+</GlossaryTermTemplate>

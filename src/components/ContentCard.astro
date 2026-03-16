@@ -1,0 +1,53 @@
+---
+import TaxonomyChips from "./TaxonomyChips.astro";
+import type { HubCardItem } from "../data/hubContent";
+
+interface Props {
+  item: HubCardItem;
+}
+
+const { item } = Astro.props;
+---
+
+<article class="content-card">
+  <h2 class="type-h4">
+    <a href={item.href}>{item.title}</a>
+  </h2>
+  <p class="type-body">{item.description}</p>
+  <ul class="card-metadata">
+    {item.metadata.map((metaEntry) => <li class="type-meta">{metaEntry}</li>)}
+  </ul>
+  <TaxonomyChips chips={item.taxonomy} />
+</article>
+
+<style>
+  .content-card {
+    border: 0.0625rem solid #d1d5db;
+    border-radius: 0.65rem;
+    background: #ffffff;
+    padding: 1rem;
+    display: grid;
+    gap: 0.7rem;
+  }
+
+  .content-card h2 {
+    margin: 0;
+  }
+
+  .content-card a {
+    color: #0f172a;
+    text-decoration: none;
+  }
+
+  .content-card p {
+    margin: 0;
+  }
+
+  .card-metadata {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.3rem;
+  }
+</style>

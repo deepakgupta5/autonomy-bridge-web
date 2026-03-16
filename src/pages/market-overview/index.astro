@@ -1,0 +1,54 @@
+---
+import HubPageTemplate from "../../components/HubPageTemplate.astro";
+import type { HubPageContent } from "../../data/hubContent";
+import { marketOverviewChildSlugs } from "../../data/ia";
+import { extractFaqItemsFromMarkdown } from "../../utils/faq";
+import {
+  getEntriesByCanonicalPrefix,
+  getEntryByCanonicalPath,
+} from "../../utils/contentCollections";
+
+const hubCanonicalPath = "/market-overview";
+const hubEntry = await getEntryByCanonicalPath("marketOverview", hubCanonicalPath);
+const childEntries = await getEntriesByCanonicalPrefix(
+  "marketOverview",
+  `${hubCanonicalPath}/`,
+  { includeExact: false }
+);
+
+const childBySlug = new Map(childEntries.map((entry) => [entry.data.slug, entry]));
+const items: HubPageContent["items"] = marketOverviewChildSlugs.flatMap((slug) => {
+  const child = childBySlug.get(slug);
+  if (!child) {
+    return [];
+  }
+
+  return [
+    {
+      title: child.data.title,
+      href: child.data.canonicalPath,
+      description: child.data.description,
+      metadata: [
+        `Canonical: ${child.data.canonicalPath}`,
+        `Updated: ${String(child.data.dateModified)}`,
+      ],
+      taxonomy: child.data.topics.length > 0 ? child.data.topics : ["market-overview"],
+    },
+  ];
+});
+
+const content: HubPageContent = {
+  title: hubEntry.data.title,
+  summary: hubEntry.data.summary,
+  intro: hubEntry.data.description,
+  emptyState: "No market overview entries are available yet.",
+  items,
+};
+
+const { Content } = await hubEntry.render();
+const faqItems = extractFaqItemsFromMarkdown(hubEntry.body);
+---
+
+<HubPageTemplate canonicalPath={hubCanonicalPath} content={content} faqItems={faqItems}>
+  <Content />
+</HubPageTemplate>

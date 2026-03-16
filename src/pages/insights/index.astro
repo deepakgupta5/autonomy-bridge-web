@@ -1,73 +1,50 @@
 ---
-import Layout from "../../components/Layout.astro";
-import Header from "../../components/Header.astro";
-import Footer from "../../components/Footer.astro";
-import ArticleCard from "../../components/ArticleCard.astro";
-import { getCollection } from "astro:content";
-import { readFile } from "node:fs/promises";
-import { renderMarkdown } from "../../utils/markdownToHtml";
+import HubPageTemplate from "../../components/HubPageTemplate.astro";
+import type { HubPageContent } from "../../data/hubContent";
+import { insightSlugs } from "../../data/ia";
+import {
+  getEntriesByCanonicalPrefix,
+  getEntryByCanonicalPath,
+} from "../../utils/contentCollections";
 
-const articles = await getCollection("articles");
-const sorted = articles.sort(
-  (a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime()
-);
-const marketOverviewSource = await readFile(
-  "src/content/page-copy/market-overview.md",
-  "utf-8"
-);
-const marketOverviewHtml = await renderMarkdown(marketOverviewSource);
+const hubCanonicalPath = "/insights";
+const hubEntry = await getEntryByCanonicalPath("insights", hubCanonicalPath);
+const detailEntries = await getEntriesByCanonicalPrefix("insights", `${hubCanonicalPath}/`, {
+  includeExact: false,
+});
+
+const detailBySlug = new Map(detailEntries.map((entry) => [entry.data.slug, entry]));
+const items: HubPageContent["items"] = insightSlugs.flatMap((slug) => {
+  const entry = detailBySlug.get(slug);
+  if (!entry) {
+    return [];
+  }
+
+  return [
+    {
+      title: entry.data.title,
+      href: entry.data.canonicalPath,
+      description: entry.data.description,
+      metadata: [
+        `Canonical: ${entry.data.canonicalPath}`,
+        `Updated: ${String(entry.data.dateModified)}`,
+      ],
+      taxonomy: entry.data.topics.length > 0 ? entry.data.topics : ["insights"],
+    },
+  ];
+});
+
+const content: HubPageContent = {
+  title: hubEntry.data.title,
+  summary: hubEntry.data.summary,
+  intro: hubEntry.data.description,
+  emptyState: "No insights are available yet.",
+  items,
+};
+
+const { Content } = await hubEntry.render();
 ---
 
-<Layout
-  title="Insights — Autonomy Bridge"
-  description="Warehouse robotics economics, deployment analysis, and failure mode research — structured insights for operators, investors, and vendors evaluating automation."
-  canonicalPath="/insights"
->
-  <Header />
-
-  <main class="container site-main">
-    <h1>Insights</h1>
-    <p class="subhead reading-column">
-      Warehouse automation economics, deployment risk, and operational analysis
-      for operators, investors, and vendors making high-stakes robotics decisions.
-    </p>
-
-    <section class="section reading-column">
-      <h2>Market Overview</h2>
-      <article class="prose insights-market-overview" set:html={marketOverviewHtml}></article>
-    </section>
-
-    <section class="section">
-      <h2>Authority Articles</h2>
-      <p class="reading-column">
-        Core analysis articles that define the economics and decision logic for warehouse automation.
-      </p>
-      <div class="content-grid">
-        {sorted.map((article) => (
-          <ArticleCard
-            title={article.data.title}
-            description={article.data.description}
-            slug={article.slug}
-            cluster={article.data.cluster}
-            pubDate={article.data.pubDate}
-          />
-        ))}
-      </div>
-    </section>
-
-    <section class="section reading-column">
-      <h2>Decision Frameworks</h2>
-      <p>
-        The analysis in these articles is supported by structured decision frameworks
-        that translate economic logic into repeatable evaluation tools. Frameworks
-        cover robotics ROI modelling, automation failure diagnosis, vendor economics
-        comparison, and pilot-to-scale risk assessment.
-      </p>
-      <p>
-        <a href="/frameworks">Browse decision frameworks →</a>
-      </p>
-    </section>
-  </main>
-
-  <Footer />
-</Layout>
+<HubPageTemplate canonicalPath={hubCanonicalPath} content={content}>
+  <Content />
+</HubPageTemplate>

@@ -1,0 +1,75 @@
+---
+import MainLayout from "./MainLayout.astro";
+import {
+  buildAboutPageSchema,
+  buildContactPageSchema,
+  buildFaqPageSchema,
+  type FaqSchemaItem,
+} from "../utils/schema";
+
+interface Props {
+  canonicalPath: string;
+  title: string;
+  summary: string;
+  schemaKind?: "about" | "contact";
+  faqItems?: FaqSchemaItem[];
+}
+
+const { canonicalPath, title, summary, schemaKind, faqItems = [] } = Astro.props;
+const pageSchema =
+  schemaKind === "about"
+    ? [buildAboutPageSchema({ title, description: summary, canonicalPath })]
+    : schemaKind === "contact"
+      ? [buildContactPageSchema({ title, description: summary, canonicalPath })]
+      : [];
+const faqSchema = buildFaqPageSchema({
+  canonicalPath,
+  items: faqItems,
+});
+const schema = faqSchema ? [...pageSchema, faqSchema] : pageSchema;
+---
+
+<MainLayout title={title} summary={summary} canonicalPath={canonicalPath} schema={schema}>
+  <article class="prose-surface static-page-template">
+    <header class="static-page-header">
+      <h1 class="type-h1">{title}</h1>
+      <p class="type-body prose-intro">{summary}</p>
+      <p class="type-meta">Canonical: {canonicalPath}</p>
+    </header>
+
+    <section class="static-page-body prose-surface">
+      <slot />
+    </section>
+  </article>
+</MainLayout>
+
+<style>
+  .static-page-template {
+    max-width: 70ch;
+    margin-inline: auto;
+  }
+
+  .static-page-header {
+    border: 0.0625rem solid #d1d5db;
+    border-radius: 0.625rem;
+    background: #ffffff;
+    padding: 1rem;
+  }
+
+  .static-page-header h1,
+  .static-page-header p {
+    margin: 0;
+  }
+
+  .static-page-header p + p {
+    margin-top: 0.55rem;
+  }
+
+  .static-page-template section + section {
+    margin-top: 1.5rem;
+  }
+
+  .static-page-body {
+    margin-top: 1.5rem;
+  }
+</style>

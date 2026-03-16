@@ -1,0 +1,115 @@
+---
+import Breadcrumbs from "./Breadcrumbs.astro";
+import Footer from "./Footer.astro";
+import Header from "./Header.astro";
+import LocalSubnav from "./LocalSubnav.astro";
+import "../styles/global.css";
+import { buildBreadcrumbs, getLocalSubnav, normalizePathname } from "../utils/navigation";
+import { resolvePageMetadata } from "../utils/metadata";
+import { buildDefaultLayoutSchemas, type SchemaNode } from "../utils/schema";
+
+interface Props {
+  title: string;
+  summary?: string;
+  canonicalPath?: string;
+  seoTitle?: string;
+  seoDescription?: string;
+  keywords?: string[];
+  robots?: string;
+  ogType?: "website" | "article";
+  showBreadcrumbs?: boolean;
+  showLocalSubnav?: boolean;
+  schema?: SchemaNode[];
+}
+
+const {
+  title,
+  summary = "",
+  canonicalPath,
+  seoTitle,
+  seoDescription,
+  keywords,
+  robots,
+  ogType,
+  showBreadcrumbs = true,
+  showLocalSubnav = true,
+  schema = [],
+} = Astro.props;
+
+const currentPath = normalizePathname(canonicalPath ?? Astro.url.pathname);
+const metadata = resolvePageMetadata({
+  title,
+  summary,
+  canonicalPath: currentPath,
+  seoTitle,
+  seoDescription,
+  keywords,
+  robots,
+  ogType,
+});
+const breadcrumbs = showBreadcrumbs ? buildBreadcrumbs(currentPath) : [];
+const localSubnav = showLocalSubnav ? getLocalSubnav(currentPath) : null;
+const breadcrumbSchemaItems = breadcrumbs.map((item, index) => ({
+  label: item.label,
+  path: item.href ?? (index === breadcrumbs.length - 1 ? currentPath : "/"),
+}));
+const defaultSchemas = buildDefaultLayoutSchemas({
+  breadcrumbItems: breadcrumbSchemaItems,
+});
+const schemaEntries = [...defaultSchemas, ...schema];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{metadata.titleTag}</title>
+    {metadata.description && <meta name="description" content={metadata.description} />}
+    {metadata.keywordsContent && <meta name="keywords" content={metadata.keywordsContent} />}
+    <meta name="robots" content={metadata.robots} />
+    <link rel="canonical" href={metadata.canonicalPath} />
+    <meta property="og:site_name" content="Autonomy Bridge" />
+    <meta property="og:type" content={metadata.ogType} />
+    <meta property="og:title" content={metadata.ogTitle} />
+    {metadata.description && <meta property="og:description" content={metadata.description} />}
+    <meta property="og:url" content={metadata.absoluteCanonicalUrl} />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={metadata.ogTitle} />
+    {metadata.description && <meta name="twitter:description" content={metadata.description} />}
+    {
+      schemaEntries.map((entry) => (
+        <script type="application/ld+json" set:html={JSON.stringify(entry)} />
+      ))
+    }
+  </head>
+  <body>
+    <Header currentPath={currentPath} />
+    <main class="page-main">
+      <div class="page-content">
+        {breadcrumbs.length > 1 && <Breadcrumbs items={breadcrumbs} />}
+        {localSubnav && (
+          <LocalSubnav
+            heading={localSubnav.heading}
+            links={localSubnav.links}
+            currentPath={currentPath}
+          />
+        )}
+        <slot />
+      </div>
+    </main>
+    <Footer />
+  </body>
+</html>
+
+<style>
+  .page-main {
+    min-height: 60vh;
+  }
+
+  .page-content {
+    max-width: 72rem;
+    margin: 0 auto;
+    padding: 2.25rem 1rem 3rem;
+  }
+</style>

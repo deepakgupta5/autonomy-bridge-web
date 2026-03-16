@@ -1,68 +1,40 @@
 ---
-import Layout from "../../components/Layout.astro";
-import Header from "../../components/Header.astro";
-import Footer from "../../components/Footer.astro";
-import FrameworkCard from "../../components/FrameworkCard.astro";
-import { getCollection } from "astro:content";
+import HubPageTemplate from "../../components/HubPageTemplate.astro";
+import { getEntryByCanonicalPath, getEntriesByCanonicalPrefix } from "../../utils/contentCollections";
+import { extractFaqItemsFromMarkdown } from "../../utils/faq";
 
-const frameworks = await getCollection("frameworks");
-const sorted = frameworks.sort((a, b) => a.data.title.localeCompare(b.data.title));
+const hubEntry = await getEntryByCanonicalPath("frameworks", "/frameworks");
+const detailEntries = await getEntriesByCanonicalPrefix("frameworks", "/frameworks", {
+  excludeCanonicalPaths: ["/frameworks"],
+});
+const { Content } = await hubEntry.render();
+const faqItems = extractFaqItemsFromMarkdown(hubEntry.body);
 
-const clusterLabels: Record<string, string> = {
-  "automation-roi": "Automation ROI",
-  "robotics-deployment-economics": "Robotics Deployment Economics",
-  "automation-failure": "Automation Failure",
-  "vendor-economics": "Vendor Economics",
-  "deployment-risk": "Deployment Risk",
+const frameworksHubContent = {
+  title: hubEntry.data.title,
+  summary: hubEntry.data.summary,
+  intro: hubEntry.data.description,
+  emptyState: "No framework entries are available.",
+  items: detailEntries.map((entry) => ({
+    title: entry.data.title,
+    href: entry.data.canonicalPath,
+    description: entry.data.summary,
+    metadata: [
+      `Canonical: ${entry.data.canonicalPath}`,
+      `Published: ${String(entry.data.datePublished)}`,
+    ],
+    taxonomy: Array.from(
+      new Set([
+        ...entry.data.frameworks,
+        ...entry.data.topics,
+        ...entry.data.technologies,
+        ...entry.data.industries,
+      ])
+    ),
+  })),
 };
-
-const clusters = [...new Set(sorted.map((f) => f.data.cluster))];
 ---
 
-<Layout
-  title="Frameworks — Autonomy Bridge"
-  description="Decision frameworks for warehouse automation ROI, robotics deployment economics, vendor evaluation, and failure analysis — structured tools for operators."
-  canonicalPath="/frameworks"
->
-  <Header />
-
-  <main class="container site-main">
-    <h1>Frameworks</h1>
-    <p class="subhead reading-column">
-      Structured decision frameworks for evaluating warehouse automation investments,
-      vendor economics, deployment risk, and operational viability.
-    </p>
-
-    <div class="reading-column frameworks-nav-links">
-      <p>
-        <a href="/insights">See related articles →</a>
-        &nbsp;&nbsp;
-        <a href="/case-studies">See how frameworks are applied →</a>
-        &nbsp;&nbsp;
-        <a href="/methodology">How we apply these frameworks →</a>
-      </p>
-    </div>
-
-    {clusters.map((cluster) => {
-      const clusterFrameworks = sorted.filter((f) => f.data.cluster === cluster);
-      const clusterLabel = clusterLabels[cluster] ?? cluster;
-      return (
-        <section class="section frameworks-cluster">
-          <h2>{clusterLabel}</h2>
-          <div class="content-grid">
-            {clusterFrameworks.map((fw) => (
-              <FrameworkCard
-                title={fw.data.title}
-                description={fw.data.description}
-                slug={fw.slug}
-                diagramFile={fw.data.diagramFile ?? (fw.data.diagramFiles?.[0])}
-              />
-            ))}
-          </div>
-        </section>
-      );
-    })}
-  </main>
-
-  <Footer />
-</Layout>
+<HubPageTemplate canonicalPath="/frameworks" content={frameworksHubContent} faqItems={faqItems}>
+  <Content />
+</HubPageTemplate>

@@ -1,94 +1,66 @@
-import { z, defineCollection } from 'astro:content';
+import { defineCollection, z } from "astro:content";
+import {
+  type NormalizedContentType,
+  normalizeFrontmatter,
+} from "../utils/contentNormalize";
+import { normalizedFrontmatterSchema } from "./normalizedSchema";
 
-const sourceSchema = z.object({
-  name: z.string(),
-  url: z.string().optional(),
-  type: z.enum([
-    'industry-report',
-    'peer-reviewed',
-    'operator-interview',
-    'vendor-data',
-    'proprietary-analysis'
-  ]),
+function normalizedCollectionSchema(contentType: NormalizedContentType) {
+  return z
+    .record(z.any())
+    .transform((rawData) =>
+      normalizeFrontmatter(rawData, contentType, typeof rawData.sourceFilename === "string" ? rawData.sourceFilename : undefined)
+    )
+    .pipe(normalizedFrontmatterSchema);
+}
+
+const frameworks = defineCollection({
+  type: "content",
+  schema: normalizedCollectionSchema("frameworks"),
 });
 
-const decisionBoundarySchema = z.object({
-  question: z.string(),
-  answer: z.string(),
+const insights = defineCollection({
+  type: "content",
+  schema: normalizedCollectionSchema("insights"),
 });
 
-const articleSchema = z.object({
-  title: z.string(),
-  description: z.string(),
-  author: z.string().default("Deepak Gupta"),
-  pubDate: z.date(),
-  cluster: z.enum([
-    'automation-roi',
-    'robotics-deployment-economics',
-    'automation-failure',
-    'vendor-economics',
-    'deployment-risk'
-  ]),
-  relatedArticles: z.array(z.string()).optional(),
-  relatedFrameworks: z.array(z.string()).optional(),
-  relatedUseCases: z.array(z.string()).optional(),
-  relatedCaseStudies: z.array(z.string()).optional(),
-  answerNugget: z.string(),
-  decisionBoundaries: z.array(decisionBoundarySchema),
-  sources: z.array(sourceSchema).default([]),
+const useCases = defineCollection({
+  type: "content",
+  schema: normalizedCollectionSchema("useCases"),
 });
 
-const frameworkSchema = z.object({
-  title: z.string(),
-  description: z.string(),
-  pubDate: z.date(),
-  cluster: z.enum([
-    'automation-roi',
-    'robotics-deployment-economics',
-    'automation-failure',
-    'vendor-economics',
-    'deployment-risk'
-  ]),
-  relatedArticles: z.array(z.string()).optional(),
-  relatedUseCases: z.array(z.string()).optional(),
-  relatedCaseStudies: z.array(z.string()).optional(),
-  diagramFile: z.string().optional(),
-  diagramFiles: z.array(z.string()).optional(),
+const caseStudies = defineCollection({
+  type: "content",
+  schema: normalizedCollectionSchema("caseStudies"),
 });
 
-const useCaseSchema = z.object({
-  title: z.string(),
-  description: z.string(),
-  audience: z.string(),
-  decisionQuestion: z.string(),
-  relatedArticles: z.array(z.string()).optional(),
-  relatedFrameworks: z.array(z.string()).optional(),
-  relatedCaseStudies: z.array(z.string()).optional(),
+const marketOverview = defineCollection({
+  type: "content",
+  schema: normalizedCollectionSchema("marketOverview"),
 });
 
-const caseStudySchema = z.object({
-  title: z.string(),
-  description: z.string(),
-  engagementType: z.string(),
-  decisionQuestion: z.string(),
-  relatedArticles: z.array(z.string()).optional(),
-  relatedFrameworks: z.array(z.string()).optional(),
-  relatedUseCases: z.array(z.string()).optional(),
+const glossary = defineCollection({
+  type: "content",
+  schema: normalizedCollectionSchema("glossary"),
 });
 
-const glossarySchema = z.object({
-  title: z.string(),
-  abbreviation: z.string().optional(),
-  description: z.string(),
-  definition: z.string(),
-  relatedTerms: z.array(z.string()).optional(),
-  usedIn: z.array(z.string()).optional(),
+const pages = defineCollection({
+  type: "content",
+  schema: normalizedCollectionSchema("pages"),
+});
+
+const legal = defineCollection({
+  type: "content",
+  schema: normalizedCollectionSchema("legal"),
 });
 
 export const collections = {
-  articles: defineCollection({ type: 'content', schema: articleSchema }),
-  frameworks: defineCollection({ type: 'content', schema: frameworkSchema }),
-  'use-cases': defineCollection({ type: 'content', schema: useCaseSchema }),
-  'case-studies': defineCollection({ type: 'content', schema: caseStudySchema }),
-  glossary: defineCollection({ type: 'content', schema: glossarySchema }),
+  frameworks,
+  insights,
+  useCases,
+  caseStudies,
+  marketOverview,
+  glossary,
+  pages,
+  legal,
 };

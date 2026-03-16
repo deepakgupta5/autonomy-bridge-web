@@ -1,0 +1,16 @@
+---
+import LegalPageTemplate from "../components/LegalPageTemplate.astro";
+import { getEntryByCanonicalPath } from "../utils/contentCollections";
+
+const canonicalPath = "/privacy-policy";
+const entry = await getEntryByCanonicalPath("legal", canonicalPath);
+const { Content } = await entry.render();
+---
+
+<LegalPageTemplate
+  canonicalPath={canonicalPath}
+  title={entry.data.title}
+  summary={entry.data.summary}
+>
+  <Content />
+</LegalPageTemplate>

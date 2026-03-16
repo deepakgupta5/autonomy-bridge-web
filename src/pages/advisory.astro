@@ -1,0 +1,19 @@
+---
+import StaticPageTemplate from "../components/StaticPageTemplate.astro";
+import { getEntryByCanonicalPath } from "../utils/contentCollections";
+import { extractFaqItemsFromMarkdown } from "../utils/faq";
+
+const canonicalPath = "/advisory";
+const entry = await getEntryByCanonicalPath("pages", canonicalPath);
+const { Content } = await entry.render();
+const faqItems = extractFaqItemsFromMarkdown(entry.body);
+---
+
+<StaticPageTemplate
+  canonicalPath={canonicalPath}
+  title={entry.data.title}
+  summary={entry.data.summary}
+  faqItems={faqItems}
+>
+  <Content />
+</StaticPageTemplate>

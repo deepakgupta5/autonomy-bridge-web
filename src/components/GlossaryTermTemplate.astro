@@ -1,0 +1,77 @@
+---
+import MainLayout from "./MainLayout.astro";
+import { buildDefinedTermSchema } from "../utils/schema";
+
+interface Props {
+  canonicalPath: string;
+  term: string;
+  slug: string;
+  definition?: string;
+  summary?: string;
+}
+
+const {
+  canonicalPath,
+  term,
+  slug,
+  definition = "",
+  summary = "Glossary term definition.",
+} = Astro.props;
+const schema = [
+  buildDefinedTermSchema({
+    term,
+    definition,
+    canonicalPath,
+  }),
+];
+---
+
+<MainLayout
+  title={term}
+  summary={summary}
+  canonicalPath={canonicalPath}
+  schema={schema}
+>
+  <article class="prose-surface glossary-term-template">
+    <header class="term-header">
+      <h1 class="type-h1">{term}</h1>
+      <p class="type-meta">Term slug: {slug}</p>
+      <p class="type-meta">Canonical: {canonicalPath}</p>
+    </header>
+
+    <section class="glossary-term-body prose-surface">
+      <slot />
+    </section>
+  </article>
+</MainLayout>
+
+<style>
+  .glossary-term-template {
+    max-width: 70ch;
+    margin-inline: auto;
+  }
+
+  .term-header {
+    border: 0.0625rem solid #d1d5db;
+    border-radius: 0.625rem;
+    background: #ffffff;
+    padding: 1rem;
+  }
+
+  .term-header h1,
+  .term-header p {
+    margin: 0;
+  }
+
+  .term-header p + p {
+    margin-top: 0.55rem;
+  }
+
+  .glossary-term-template section + section {
+    margin-top: 1.5rem;
+  }
+
+  .glossary-term-body {
+    margin-top: 1.5rem;
+  }
+</style>

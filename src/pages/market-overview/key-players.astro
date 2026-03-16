@@ -1,0 +1,16 @@
+---
+import MarketOverviewChildTemplate from "../../components/MarketOverviewChildTemplate.astro";
+import { getEntryByCanonicalPath } from "../../utils/contentCollections";
+
+const canonicalPath = "/market-overview/key-players";
+const entry = await getEntryByCanonicalPath("marketOverview", canonicalPath);
+const { Content } = await entry.render();
+---
+
+<MarketOverviewChildTemplate
+  canonicalPath={canonicalPath}
+  title={entry.data.title}
+  summary={entry.data.summary}
+>
+  <Content />
+</MarketOverviewChildTemplate>

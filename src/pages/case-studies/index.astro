@@ -1,38 +1,50 @@
 ---
-import Layout from "../../components/Layout.astro";
-import Header from "../../components/Header.astro";
-import Footer from "../../components/Footer.astro";
-import { getCollection } from "astro:content";
+import HubPageTemplate from "../../components/HubPageTemplate.astro";
+import type { HubPageContent } from "../../data/hubContent";
+import { caseStudySlugs } from "../../data/ia";
+import {
+  getEntriesByCanonicalPrefix,
+  getEntryByCanonicalPath,
+} from "../../utils/contentCollections";
 
-const caseStudies = await getCollection("case-studies");
-const sorted = caseStudies.sort((a, b) => a.data.title.localeCompare(b.data.title));
+const hubCanonicalPath = "/case-studies";
+const hubEntry = await getEntryByCanonicalPath("caseStudies", hubCanonicalPath);
+const detailEntries = await getEntriesByCanonicalPrefix("caseStudies", `${hubCanonicalPath}/`, {
+  includeExact: false,
+});
+
+const detailBySlug = new Map(detailEntries.map((entry) => [entry.data.slug, entry]));
+const items: HubPageContent["items"] = caseStudySlugs.flatMap((slug) => {
+  const entry = detailBySlug.get(slug);
+  if (!entry) {
+    return [];
+  }
+
+  return [
+    {
+      title: entry.data.title,
+      href: entry.data.canonicalPath,
+      description: entry.data.description,
+      metadata: [
+        `Canonical: ${entry.data.canonicalPath}`,
+        `Updated: ${String(entry.data.dateModified)}`,
+      ],
+      taxonomy: entry.data.topics.length > 0 ? entry.data.topics : ["case-studies"],
+    },
+  ];
+});
+
+const content: HubPageContent = {
+  title: hubEntry.data.title,
+  summary: hubEntry.data.summary,
+  intro: hubEntry.data.description,
+  emptyState: "No case studies are available yet.",
+  items,
+};
+
+const { Content } = await hubEntry.render();
 ---
 
-<Layout
-  title="Case Studies — Autonomy Bridge"
-  description="Anonymised case studies in warehouse automation deployment decisions, robotics market entry, and vendor pricing strategy research for operators and investors."
-  canonicalPath="/case-studies"
->
-  <Header />
-
-  <main class="container site-main">
-    <h1>Case Studies</h1>
-    <p class="subhead reading-column">
-      Anonymised engagement analyses documenting how automation investment decisions
-      were structured, stress-tested, and resolved.
-    </p>
-
-    <div class="content-grid">
-      {sorted.map((cs) => (
-        <div class="article-card">
-          <p class="article-card__title">
-            <a href={`/case-studies/${cs.slug}`}>{cs.data.title}</a>
-          </p>
-          <p class="article-card__description">{cs.data.description}</p>
-        </div>
-      ))}
-    </div>
-  </main>
-
-  <Footer />
-</Layout>
+<HubPageTemplate canonicalPath={hubCanonicalPath} content={content}>
+  <Content />
+</HubPageTemplate>

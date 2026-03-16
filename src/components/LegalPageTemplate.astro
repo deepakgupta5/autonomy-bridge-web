@@ -1,0 +1,56 @@
+---
+import MainLayout from "./MainLayout.astro";
+
+interface Props {
+  canonicalPath: string;
+  title: string;
+  summary: string;
+}
+
+const { canonicalPath, title, summary } = Astro.props;
+---
+
+<MainLayout title={title} summary={summary} canonicalPath={canonicalPath}>
+  <article class="prose-surface legal-page-template">
+    <header class="legal-page-header">
+      <h1 class="type-h1">{title}</h1>
+      <p class="type-body prose-intro">{summary}</p>
+      <p class="type-meta">Canonical: {canonicalPath}</p>
+    </header>
+
+    <section class="legal-page-body prose-surface">
+      <slot />
+    </section>
+  </article>
+</MainLayout>
+
+<style>
+  .legal-page-template {
+    max-width: 70ch;
+    margin-inline: auto;
+  }
+
+  .legal-page-header {
+    border: 0.0625rem solid #d1d5db;
+    border-radius: 0.625rem;
+    background: #ffffff;
+    padding: 1rem;
+  }
+
+  .legal-page-header h1,
+  .legal-page-header p {
+    margin: 0;
+  }
+
+  .legal-page-header p + p {
+    margin-top: 0.55rem;
+  }
+
+  .legal-page-template section + section {
+    margin-top: 1.5rem;
+  }
+
+  .legal-page-body {
+    margin-top: 1.5rem;
+  }
+</style>

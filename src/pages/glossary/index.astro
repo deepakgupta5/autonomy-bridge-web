@@ -1,63 +1,50 @@
 ---
-import Layout from "../../components/Layout.astro";
-import Header from "../../components/Header.astro";
-import Footer from "../../components/Footer.astro";
-import { getCollection } from "astro:content";
+import HubPageTemplate from "../../components/HubPageTemplate.astro";
+import type { HubPageContent } from "../../data/hubContent";
+import { glossaryTermSlugs } from "../../data/ia";
+import {
+  getEntriesByCanonicalPrefix,
+  getEntryByCanonicalPath,
+} from "../../utils/contentCollections";
 
-const terms = await getCollection("glossary");
-const sorted = terms.sort((a, b) => a.data.title.localeCompare(b.data.title));
+const hubCanonicalPath = "/glossary";
+const hubEntry = await getEntryByCanonicalPath("glossary", hubCanonicalPath);
+const termEntries = await getEntriesByCanonicalPrefix("glossary", `${hubCanonicalPath}/`, {
+  includeExact: false,
+});
 
-// Group alphabetically
-const grouped: Record<string, typeof sorted> = {};
-for (const term of sorted) {
-  const letter = term.data.title[0].toUpperCase();
-  if (!grouped[letter]) grouped[letter] = [];
-  grouped[letter].push(term);
-}
-const letters = Object.keys(grouped).sort();
+const termBySlug = new Map(termEntries.map((entry) => [entry.data.slug, entry]));
+const items: HubPageContent["items"] = glossaryTermSlugs.flatMap((slug) => {
+  const entry = termBySlug.get(slug);
+  if (!entry) {
+    return [];
+  }
+
+  return [
+    {
+      title: entry.data.title,
+      href: entry.data.canonicalPath,
+      description: entry.data.description,
+      metadata: [
+        `Canonical: ${entry.data.canonicalPath}`,
+        `Updated: ${String(entry.data.dateModified)}`,
+      ],
+      taxonomy: entry.data.topics.length > 0 ? entry.data.topics : ["glossary"],
+    },
+  ];
+});
+
+const content: HubPageContent = {
+  title: hubEntry.data.title,
+  summary: hubEntry.data.summary,
+  intro: hubEntry.data.description,
+  emptyState: "No glossary terms are available yet.",
+  items,
+};
+
+const { Content } = await hubEntry.render();
 ---
 
-<Layout
-  title="Glossary — Autonomy Bridge"
-  description="Definitions of key terms in warehouse robotics and automation economics — AMR, RaaS, fleet utilization, utilization threshold, WMS integration, and more."
-  canonicalPath="/glossary"
->
-  <Header />
-
-  <main class="container site-main">
-    <h1>Glossary</h1>
-    <p class="subhead reading-column">
-      Definitions for key terms in warehouse automation, robotics deployment,
-      and operational economics.
-    </p>
-
-    <nav class="breadcrumb glossary-alpha-nav" aria-label="Alphabetical navigation">
-      {letters.map((letter, i) => (
-        <>
-          <a href={`#${letter}`}>{letter}</a>
-          {i < letters.length - 1 && <span class="breadcrumb__separator" aria-hidden="true">·</span>}
-        </>
-      ))}
-    </nav>
-
-    {letters.map((letter) => (
-      <section class="glossary-section reading-column" id={letter}>
-        <h2>{letter}</h2>
-        <dl class="glossary-list">
-          {grouped[letter].map((term) => (
-            <>
-              <dt class="glossary-list__term">
-                <a href={`/glossary/${term.slug}`}>
-                  {term.data.title}{term.data.abbreviation ? ` (${term.data.abbreviation})` : ''}
-                </a>
-              </dt>
-              <dd class="glossary-list__definition">{term.data.definition}</dd>
-            </>
-          ))}
-        </dl>
-      </section>
-    ))}
-  </main>
-
-  <Footer />
-</Layout>
+<HubPageTemplate canonicalPath={hubCanonicalPath} content={content}>
+  <Content />
+</HubPageTemplate>

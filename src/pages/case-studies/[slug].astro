@@ -1,95 +1,33 @@
 ---
-import Layout from "../../components/Layout.astro";
-import Header from "../../components/Header.astro";
-import Footer from "../../components/Footer.astro";
-import InternalLinks from "../../components/InternalLinks.astro";
-import { getCollection, getEntry } from "astro:content";
+import DetailPageTemplate from "../../components/DetailPageTemplate.astro";
+import { caseStudySlugs } from "../../data/ia";
+import { getEntryByCanonicalPath } from "../../utils/contentCollections";
+import { extractFaqItemsFromMarkdown } from "../../utils/faq";
 
-export async function getStaticPaths() {
-  const caseStudies = await getCollection("case-studies");
-  return caseStudies.map((cs) => ({
-    params: { slug: cs.slug },
-    props: { cs },
-  }));
+export function getStaticPaths() {
+  return caseStudySlugs.map((slug) => ({ params: { slug } }));
 }
 
-const { cs } = Astro.props;
-const { Content } = await cs.render();
-
-const { title, description, relatedArticles, relatedFrameworks, relatedUseCases } = cs.data;
-
-const allArticles = relatedArticles
-  ? await Promise.all(
-      relatedArticles.map(async (slug: string) => {
-        try {
-          const entry = await getEntry("articles", slug);
-          return entry ? { title: entry.data.title, slug } : null;
-        } catch { return null; }
-      })
-    ).then((r) => r.filter(Boolean))
-  : [];
-
-const allFrameworks = relatedFrameworks
-  ? await Promise.all(
-      relatedFrameworks.map(async (slug: string) => {
-        try {
-          const entry = await getEntry("frameworks", slug);
-          return entry ? { title: entry.data.title, slug } : null;
-        } catch { return null; }
-      })
-    ).then((r) => r.filter(Boolean))
-  : [];
-
-const allUseCases = relatedUseCases
-  ? await Promise.all(
-      relatedUseCases.map(async (slug: string) => {
-        try {
-          const entry = await getEntry("use-cases", slug);
-          return entry ? { title: entry.data.title, slug } : null;
-        } catch { return null; }
-      })
-    ).then((r) => r.filter(Boolean))
-  : [];
-
-const breadcrumbs = [
-  { name: "Home", url: "https://www.autonomybridge.com/" },
-  { name: "Case Studies", url: "https://www.autonomybridge.com/case-studies" },
-  { name: title, url: `https://www.autonomybridge.com/case-studies/${cs.slug}` },
-];
+const { slug } = Astro.params;
+const canonicalPath = `/case-studies/${slug}`;
+const entry = await getEntryByCanonicalPath("caseStudies", canonicalPath);
+const { Content } = await entry.render();
+const faqItems = extractFaqItemsFromMarkdown(entry.body);
 ---
 
-<Layout
-  title={`${title} — Case Studies — Autonomy Bridge`}
-  description={description}
-  canonicalPath={`/case-studies/${cs.slug}`}
-  breadcrumbs={breadcrumbs}
+<DetailPageTemplate
+  canonicalPath={canonicalPath}
+  title={entry.data.title}
+  summary={entry.data.summary}
+  contentTypeLabel="Case Study"
+  schemaKind="caseStudy"
+  slug={slug}
+  hubPath="/case-studies"
+  hubLabel="Case Studies"
+  datePublished={String(entry.data.datePublished)}
+  dateModified={String(entry.data.dateModified)}
+  authors={entry.data.authors}
+  faqItems={faqItems}
 >
-  <Header />
-
-  <main class="container site-main">
-    <nav class="breadcrumb" aria-label="Breadcrumb">
-      <a href="/">Home</a>
-      <span class="breadcrumb__separator" aria-hidden="true">›</span>
-      <a href="/case-studies">Case Studies</a>
-      <span class="breadcrumb__separator" aria-hidden="true">›</span>
-      <span>{title}</span>
-    </nav>
-
-    <h1 class="reading-column">{title}</h1>
-    <p class="subhead reading-column">{description}</p>
-
-    <article class="reading-column prose">
-      <Content />
-    </article>
-
-    <div class="reading-column">
-      <InternalLinks
-        relatedArticles={allArticles as any}
-        relatedFrameworks={allFrameworks as any}
-        relatedUseCases={allUseCases as any}
-      />
-    </div>
-  </main>
-
-  <Footer />
-</Layout>
+  <Content />
+</DetailPageTemplate>

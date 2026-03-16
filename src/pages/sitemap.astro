@@ -1,0 +1,18 @@
+---
+import RouteShell from "../components/RouteShell.astro";
+import { allLockedRoutes } from "../data/ia";
+
+const uniqueRoutes = Array.from(new Set(allLockedRoutes)).sort();
+---
+
+<RouteShell title="Sitemap" summary="Sitemap utility shell route.">
+  <ul>
+    {
+      uniqueRoutes.map((route) => (
+        <li>
+          <a href={route}>{route}</a>
+        </li>
+      ))
+    }
+  </ul>
+</RouteShell>

@@ -1,15 +1,119 @@
-<footer class="footer">
-  <div class="container footer-inner">
-    <div class="footer-links">
-      <p>Decision-grade warehouse automation research.</p>
-    </div>
-    <div class="footer-nav">
-      <a href="/frameworks">Frameworks</a>
-      <a href="/glossary">Glossary</a>
-    </div>
-    <div class="footer-meta">
-      <p class="footer-copyright">&copy; {new Date().getFullYear()} Autonomy Bridge</p>
-      <a href="https://www.linkedin.com/in/deepakgupta5" target="_blank" rel="noopener" class="footer-linkedin">LinkedIn</a>
-    </div>
+---
+interface FooterLink {
+  label: string;
+  href: string;
+}
+
+interface FooterGroup {
+  heading: string;
+  links: FooterLink[];
+}
+
+const footerGroups: FooterGroup[] = [
+  {
+    heading: "Follow Us",
+    links: [{ label: "LinkedIn", href: "https://www.linkedin.com/company/autonomy-bridge/" }],
+  },
+  {
+    heading: "Knowledge",
+    links: [
+      { label: "Insights", href: "/insights" },
+      { label: "Frameworks", href: "/frameworks" },
+      { label: "Use Cases", href: "/use-cases" },
+      { label: "Case Studies", href: "/case-studies" },
+      { label: "Glossary", href: "/glossary" },
+    ],
+  },
+  {
+    heading: "Services",
+    links: [
+      { label: "Advisory", href: "/advisory" },
+      { label: "Bespoke Research", href: "/bespoke-research" },
+    ],
+  },
+  {
+    heading: "Company",
+    links: [
+      { label: "About", href: "/about" },
+      { label: "Contact", href: "/contact" },
+    ],
+  },
+  {
+    heading: "Legal",
+    links: [
+      { label: "Privacy Policy", href: "/privacy-policy" },
+      { label: "Terms of Use", href: "/terms-of-use" },
+      { label: "Cookie Policy", href: "/cookie-policy" },
+    ],
+  },
+  {
+    heading: "Utility",
+    links: [{ label: "Sitemap", href: "/sitemap" }],
+  },
+];
+---
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    {
+      footerGroups.map((group) => (
+        <section class="footer-group">
+          <h2 class="type-eyebrow">{group.heading}</h2>
+          <ul class="footer-list">
+            {
+              group.links.map((link) => (
+                <li>
+                  <a
+                    href={link.href}
+                    class="type-body-sm"
+                    target={link.href.startsWith("http") ? "_blank" : undefined}
+                    rel={link.href.startsWith("http") ? "noreferrer" : undefined}
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+        </section>
+      ))
+    }
   </div>
 </footer>
+
+<style>
+  .site-footer {
+    border-top: 0.0625rem solid #d1d5db;
+    background: #ffffff;
+  }
+
+  .site-footer-inner {
+    max-width: 72rem;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  }
+
+  .footer-group {
+    min-width: 0;
+  }
+
+  .footer-group h2 {
+    margin: 0 0 0.5rem;
+  }
+
+  .footer-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 0.45rem;
+  }
+
+  .footer-list a {
+    color: #1f2937;
+    text-decoration: none;
+  }
+</style>

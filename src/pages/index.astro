@@ -1,96 +1,19 @@
 ---
-import Layout from "../components/Layout.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-import ArticleCard from "../components/ArticleCard.astro";
-import { getCollection } from "astro:content";
+import StaticPageTemplate from "../components/StaticPageTemplate.astro";
+import { getEntryByCanonicalPath } from "../utils/contentCollections";
+import { extractFaqItemsFromMarkdown } from "../utils/faq";
 
-const articles = await getCollection("articles");
-const latestArticles = articles
-  .sort((a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime())
-  .slice(0, 3);
+const canonicalPath = "/";
+const entry = await getEntryByCanonicalPath("pages", canonicalPath);
+const { Content } = await entry.render();
+const faqItems = extractFaqItemsFromMarkdown(entry.body);
 ---
 
-<Layout
-  title="Autonomy Bridge — Warehouse Automation Economics and Deployment Analysis"
-  description="Structured economic analysis for warehouse automation decisions. Deployment economics, utilization modelling, vendor evaluation, and failure mode research for operators, investors, and vendors."
+<StaticPageTemplate
+  canonicalPath={canonicalPath}
+  title={entry.data.title}
+  summary={entry.data.summary}
+  faqItems={faqItems}
 >
-  <Header />
-
-  <main class="container site-main">
-    <h1 class="hero-title">
-      Warehouse Automation Economics<br />
-      for High-Stakes Deployment Decisions
-    </h1>
-
-    <p class="subhead reading-column">
-      Autonomy Bridge produces decision-grade analysis for warehouse operators,
-      logistics investors, and robotics vendors evaluating automation capital,
-      vendor selection, and deployment risk.
-    </p>
-
-    <section class="home-focus reading-column">
-      <p>
-        The central question is not whether automation works. It is whether a specific
-        warehouse can sustain the utilization required to recover automation capital
-        across realistic demand variability.
-      </p>
-      <p>Not implementation. Not integration. Not vendor selection first.</p>
-    </section>
-
-    <section class="home-decisions reading-column">
-      <h2>What We Analyse</h2>
-      <ul>
-        <li>Utilization thresholds required for capital recovery</li>
-        <li>Removable labor share after accounting for roles added by automation</li>
-        <li>Workflow constraint mapping — which node limits facility throughput</li>
-        <li>Vendor economics and pricing structure at deployment scale</li>
-        <li>Demand variability stress-testing across contract scenarios</li>
-        <li>Integration and ramp risk pricing</li>
-      </ul>
-    </section>
-
-    <section class="home-section reading-column">
-      <h2>Latest Insights</h2>
-      <div class="content-grid">
-        {latestArticles.map((article) => (
-          <ArticleCard
-            title={article.data.title}
-            description={article.data.description}
-            slug={article.slug}
-            cluster={article.data.cluster}
-            pubDate={article.data.pubDate}
-          />
-        ))}
-      </div>
-      <p class="home-insights-link">
-        <a href="/insights">All Insights →</a>
-      </p>
-    </section>
-
-    <section class="home-section reading-column">
-      <h2>Typical Outcomes</h2>
-      <ul>
-        <li>Identified the true workflow bottleneck before $2M automation commitment</li>
-        <li>Modelled utilization scenarios that shifted go/no-go recommendation</li>
-        <li>Stress-tested vendor economics against client churn and demand trough scenarios</li>
-        <li>Quantified removable labor share at 31% — versus 55% assumed in vendor proposal</li>
-      </ul>
-      <div class="cta-block">
-        <a class="btn-primary" href="/case-studies">View Case Studies</a>
-      </div>
-    </section>
-
-    <section class="home-section reading-column">
-      <h2>Decision Resources</h2>
-      <ul>
-        <li><a href="/frameworks">Automation Decision Frameworks</a> — structured tools for evaluating deployment economics</li>
-        <li><a href="/use-cases">Use Cases</a> — applied analysis for specific automation decisions</li>
-        <li><a href="/glossary">Glossary</a> — definitions for warehouse automation and robotics terms</li>
-        <li><a href="/advisory">Advisory</a> — how we work with operators and investors</li>
-      </ul>
-    </section>
-  </main>
-
-  <Footer />
-</Layout>
+  <Content />
+</StaticPageTemplate>
