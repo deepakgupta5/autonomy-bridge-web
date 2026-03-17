@@ -76,6 +76,12 @@ const resolvedOgUrl = canonicalHref ?? metadata.absoluteCanonicalUrl;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@600;700&family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
     <title>{metadata.titleTag}</title>
     {metadata.description && <meta name="description" content={metadata.description} />}
     {metadata.keywordsContent && <meta name="keywords" content={metadata.keywordsContent} />}
@@ -122,6 +128,6 @@ const resolvedOgUrl = canonicalHref ?? metadata.absoluteCanonicalUrl;
   .page-content {
     max-width: 82rem;
     margin: 0 auto;
-    padding: 2.25rem 1rem 3rem;
+    padding: 3rem 2rem 5rem;
   }
 </style>
