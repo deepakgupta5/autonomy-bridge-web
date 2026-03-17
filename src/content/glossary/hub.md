@@ -311,7 +311,6 @@ Every term in this glossary is mapped to at least one of the seven Autonomy Brid
 
 ## Deployment Economics
 ### Removable Labor Share
-**Slug:** `removable-labor-share` | **ID:** T01 | **Frameworks:** F1, F2
 
 The proportion of total labor hours in a warehouse operation that can be displaced by a specific automation system, net of tasks the system cannot perform.
 
@@ -322,7 +321,6 @@ Removable labor share quantifies the realistic fraction of existing labor costs 
 ---
 
 ### Ramp Risk
-**Slug:** `ramp-risk` | **ID:** T02 | **Frameworks:** F4, F2
 
 The operational and financial exposure created during the period between automation deployment and reaching stable, full-utilization performance.
 
@@ -333,7 +331,6 @@ Ramp risk describes the gap between go-live and operational stability in an auto
 ---
 
 ### Capital Recovery Period
-**Slug:** `capital-recovery-period` | **ID:** T03 | **Frameworks:** F1, F5
 
 The time required for cumulative labor savings and throughput gains from an automation investment to equal the total deployed capital cost.
 
@@ -344,7 +341,6 @@ The capital recovery period is the payback timeline for an automation deployment
 ---
 
 ### Labor Displacement Rate
-**Slug:** `labor-displacement-rate` | **ID:** T04 | **Frameworks:** F1, F2
 
 The ratio of automation-eliminated labor hours to total pre-automation labor hours in the affected workflow stages.
 
@@ -355,7 +351,6 @@ Labor displacement rate measures how much of the existing labor requirement an a
 ---
 
 ### Automation Operating Cost
-**Slug:** `automation-operating-cost` | **ID:** T05 | **Frameworks:** F1, F5
 
 The ongoing annual cost of running an automation system, including maintenance, software licensing, consumables, and dedicated technical staff.
 
@@ -366,7 +361,6 @@ Automation operating cost covers all recurring expenditures required to keep a d
 ---
 
 ### Cost Per Unit Processed
-**Slug:** `cost-per-unit-processed` | **ID:** T06 | **Frameworks:** F1, F3
 
 The fully loaded cost of moving one order line or item through a warehouse operation, used to compare manual and automated workflows on a normalized basis.
 
@@ -377,7 +371,6 @@ Cost per unit processed is the standard normalization metric for comparing wareh
 ---
 
 ### Integration Cost
-**Slug:** `integration-cost` | **ID:** T07 | **Frameworks:** F6, F4
 
 The capital and labor expense of connecting a robotics or automation system to existing warehouse management, ERP, and operational technology infrastructure.
 
@@ -388,7 +381,6 @@ Integration cost covers the engineering, software development, testing, and proj
 ---
 
 ### Total Cost of Ownership
-**Slug:** `total-cost-of-ownership` | **ID:** T08 | **Frameworks:** F5, F1
 
 The complete lifetime cost of an automation investment, including capital deployment, integration, ramp, operations, maintenance, and eventual decommissioning.
 
@@ -399,7 +391,6 @@ Total cost of ownership (TCO) aggregates every cost associated with an automatio
 ---
 
 ### Peak-to-Average Ratio
-**Slug:** `peak-to-average-ratio` | **ID:** T09 | **Frameworks:** F3, F1
 
 The multiple between peak daily or weekly order volume and average baseline volume, used to size automation systems and assess demand variability risk.
 
@@ -410,7 +401,6 @@ The peak-to-average ratio expresses how much higher order volume climbs at peak 
 ---
 
 ### Contract Duration Risk
-**Slug:** `contract-duration-risk` | **ID:** T10 | **Frameworks:** F3, F5
 
 The financial exposure created when automation capital commitments extend beyond the remaining term of client contracts whose volume justifies the investment.
 
@@ -422,7 +412,6 @@ Contract duration risk is the mismatch between automation asset life and the len
 
 ## Robotics Systems
 ### Automated Guided Vehicle (AGV)
-**Slug:** `automated-guided-vehicle` | **ID:** T11 | **Frameworks:** F3, F7
 
 A material transport robot that follows fixed physical or magnetic guidance paths through a warehouse, distinguished from AMRs by reliance on pre-defined routes.
 
@@ -433,7 +422,6 @@ Automated Guided Vehicles navigate using embedded floor tracks, magnetic tape, o
 ---
 
 ### Pick Station Throughput
-**Slug:** `pick-station-throughput` | **ID:** T12 | **Frameworks:** F7, F1
 
 The maximum number of order lines a goods-to-person pick station can process per hour, which sets the ceiling for total system output in GTP architectures.
 
@@ -444,7 +432,6 @@ Pick station throughput is the rate-limiting variable in goods-to-person automat
 ---
 
 ### Autonomous Case Handling
-**Slug:** `autonomous-case-handling` | **ID:** T13 | **Frameworks:** F7, F1
 
 Robotic systems capable of identifying, grasping, and placing individual cartons or cases without human intervention, using computer vision and adaptive manipulation.
 
@@ -455,7 +442,6 @@ Autonomous case handling describes robotic systems that combine computer vision,
 ---
 
 ### Multi-Shuttle System
-**Slug:** `multi-shuttle-system` | **ID:** T14 | **Frameworks:** F3, F7
 
 A high-density automated storage and retrieval architecture using multiple independent shuttle carriers operating within a grid or rack structure to store and retrieve inventory containers at speed.
 
@@ -466,7 +452,6 @@ Multi-shuttle systems operate multiple independent carrier units simultaneously 
 ---
 
 ### Collaborative Robot (Cobot)
-**Slug:** `cobot` | **ID:** T15 | **Frameworks:** F7, F2
 
 A robot designed to operate alongside human workers in shared workspaces, with force-limiting, speed-limiting, or sensing capabilities that reduce the risk of contact injury.
 
@@ -477,7 +462,6 @@ Collaborative robots are designed with safety architectures that allow them to w
 ---
 
 ### Mobile Manipulation Robot
-**Slug:** `mobile-manipulation-robot` | **ID:** T16 | **Frameworks:** F3, F4
 
 A robotic system combining an autonomous mobile base with an articulated arm, capable of both navigating a facility and performing item-level manipulation tasks.
 
@@ -488,7 +472,6 @@ Mobile manipulation robots combine the navigation capability of an AMR with a mo
 ---
 
 ### System Uptime
-**Slug:** `system-uptime` | **ID:** T17 | **Frameworks:** F6, F2
 
 The proportion of scheduled operating hours during which an automation system is fully functional and available to process work, a primary reliability metric.
 
@@ -499,7 +482,6 @@ System uptime measures the percentage of planned operating time that an automati
 ---
 
 ### Autonomous Mobile Robot (AMR)
-**Slug:** `autonomous-mobile-robot` | **ID:** T51 | **Frameworks:** F3, F7
 
 A warehouse robot that navigates dynamically using onboard sensors and environment-mapping software, without requiring fixed guide paths or structural modification to the facility.
 
@@ -510,7 +492,6 @@ Autonomous mobile robots use LIDAR, cameras, and simultaneous localization and m
 ---
 
 ### Automated Storage and Retrieval System (ASRS)
-**Slug:** `automated-storage-retrieval-system` | **ID:** T52 | **Frameworks:** F3, F1
 
 A high-density automated system that stores and retrieves inventory containers, totes, or cases using mechanized equipment — including crane-based systems, shuttle systems, and cube storage grids — without direct human handling in the storage zone.
 
@@ -521,7 +502,6 @@ ASRS systems eliminate the travel time that makes manual picking labor-intensive
 ---
 
 ### Goods-to-Person System (GTP)
-**Slug:** `goods-to-person-system` | **ID:** T53 | **Frameworks:** F7, F1
 
 A warehouse fulfillment architecture in which automation brings inventory to stationary human pick stations, eliminating picker travel as the primary labor efficiency lever.
 
@@ -532,7 +512,6 @@ Goods-to-person systems invert the conventional warehouse picking model: instead
 ---
 
 ### Throughput Modeling
-**Slug:** `throughput-modeling` | **ID:** T18 | **Frameworks:** F7, F1
 
 The analytical process of projecting how many orders or units a warehouse can process per hour under defined staffing, automation, and layout conditions.
 
@@ -543,7 +522,6 @@ Throughput modeling builds a quantitative projection of warehouse processing cap
 ---
 
 ### SKU Velocity
-**Slug:** `sku-velocity` | **ID:** T19 | **Frameworks:** F7, F3
 
 The frequency with which a specific SKU is picked over a defined period, used to segment inventory for storage slotting and automation prioritization.
 
@@ -554,7 +532,6 @@ SKU velocity classifies inventory by how often individual items are picked relat
 ---
 
 ### Dwell Time
-**Slug:** `dwell-time` | **ID:** T20 | **Frameworks:** F7, F2
 
 The duration an inventory unit, order, or vehicle spends in a specific warehouse zone without value-adding processing activity.
 
@@ -565,7 +542,6 @@ Dwell time measures idle residence — inventory sitting in receiving before put
 ---
 
 ### Order Profile
-**Slug:** `order-profile` | **ID:** T21 | **Frameworks:** F3, F7
 
 The statistical distribution of order characteristics — lines per order, units per line, SKU mix, pack configuration — that defines the demand pattern an automation system must serve.
 
@@ -576,7 +552,6 @@ Order profile describes the shape of demand that a warehouse must process: how m
 ---
 
 ### Slotting
-**Slug:** `slotting` | **ID:** T22 | **Frameworks:** F7, F3
 
 The assignment of SKUs to specific storage locations within a warehouse based on velocity, weight, pick frequency, and operational compatibility.
 
@@ -587,7 +562,6 @@ Slotting is the process of assigning specific inventory items to specific storag
 ---
 
 ### Inbound Processing Rate
-**Slug:** `inbound-processing-rate` | **ID:** T23 | **Frameworks:** F7, F2
 
 The speed at which received inventory is verified, scanned, labeled, and made available for picking — a primary upstream constraint in fulfillment operations.
 
@@ -598,7 +572,6 @@ Inbound processing rate measures how quickly received inventory moves from dock 
 ---
 
 ### Pick Path Optimization
-**Slug:** `pick-path-optimization` | **ID:** T24 | **Frameworks:** F7, F1
 
 Algorithmic routing of warehouse pickers through storage aisles to minimize travel distance and time per order completion.
 
@@ -609,7 +582,6 @@ Pick path optimization uses routing algorithms — zone routing, S-curve routing
 ---
 
 ### Returns Processing Rate
-**Slug:** `returns-processing-rate` | **ID:** T25 | **Frameworks:** F7, F3
 
 The speed at which returned items are received, inspected, disposition-coded, and either returned to available inventory or routed to liquidation — a throughput variable often excluded from automation ROI models.
 
@@ -620,7 +592,6 @@ Returns processing rate measures the operational capacity to handle reverse logi
 ---
 
 ### Labor Absorption Capacity
-**Slug:** `labor-absorption-capacity` | **ID:** T26 | **Frameworks:** F3, F1
 
 The maximum number of productive workers a warehouse can deploy simultaneously before congestion, coordination overhead, or station constraints reduce individual and collective productivity.
 
@@ -631,7 +602,6 @@ Labor absorption capacity defines the practical ceiling for headcount in a wareh
 ---
 
 ### Warehouse Management System (WMS)
-**Slug:** `warehouse-management-system` | **ID:** T54 | **Frameworks:** F3, F7
 
 Software that manages inventory location, order flow, task direction, and labor orchestration within a warehouse facility — the primary integration anchor for all robotics and automation deployments.
 
@@ -642,7 +612,6 @@ A warehouse management system maintains real-time records of inventory position,
 ---
 
 ### Warehouse Execution System (WES)
-**Slug:** `warehouse-execution-system` | **ID:** T55 | **Frameworks:** F7, F3
 
 A software layer that manages real-time task orchestration across robot fleets, conveyor systems, and human workers within a warehouse, sitting between the WMS (strategic inventory logic) and physical automation hardware (execution).
 
@@ -653,7 +622,6 @@ A warehouse execution system translates WMS-level order and inventory directives
 ---
 
 ### Labor Turnover Rate
-**Slug:** `labor-turnover-rate` | **ID:** T56 | **Frameworks:** F1, F3
 
 The proportion of warehouse workforce positions that turn over within a defined period — typically measured annually — representing a direct operating cost and a primary economic driver of automation investment.
 
@@ -665,7 +633,6 @@ Labor turnover rate in warehouse operations measures how frequently the workforc
 
 ## Vendor and Market Terms
 ### Vendor Economics
-**Slug:** `vendor-economics` | **ID:** T27 | **Frameworks:** F5, F6
 
 The revenue model, cost structure, and margin dynamics that define how a robotics or automation vendor prices, delivers, and sustains its business — relevant to customer deployment risk and vendor stability.
 
@@ -676,7 +643,6 @@ Vendor economics describes the commercial logic underlying how an automation ven
 ---
 
 ### Vendor Lock-In
-**Slug:** `vendor-lock-in` | **ID:** T28 | **Frameworks:** F6, F5
 
 The technical, contractual, or operational dependencies that make switching from an incumbent automation vendor costly or operationally disruptive.
 
@@ -687,7 +653,6 @@ Vendor lock-in in automation deployments arises from proprietary hardware interf
 ---
 
 ### Pilot-to-Scale Failure
-**Slug:** `pilot-to-scale-failure` | **ID:** T29 | **Frameworks:** F4, F2
 
 The pattern in which an automation deployment performs successfully at pilot scale but fails to deliver equivalent results when expanded to full facility deployment.
 
@@ -698,7 +663,6 @@ Pilot-to-scale failure describes a systematic pattern in which automation system
 ---
 
 ### Integration Partner
-**Slug:** `integration-partner` | **ID:** T30 | **Frameworks:** F6, F4
 
 A systems integrator that bridges automation hardware vendors and customer operational environments, responsible for software integration, deployment execution, and ongoing system support.
 
@@ -709,7 +673,6 @@ Integration partners occupy a critical but often underweighted role in automatio
 ---
 
 ### Vendor Reference Site
-**Slug:** `vendor-reference-site` | **ID:** T31 | **Frameworks:** F6, F4
 
 An existing customer deployment that a vendor offers as evidence of system performance, used to validate vendor claims against real operating conditions.
 
@@ -720,7 +683,6 @@ A vendor reference site is a live customer deployment presented by a vendor duri
 ---
 
 ### Market Penetration Rate
-**Slug:** `market-penetration-rate` | **ID:** T32 | **Frameworks:** F5, F3
 
 The proportion of addressable warehouses or facilities within a defined market segment that have deployed a given automation technology.
 
@@ -731,7 +693,6 @@ Market penetration rate measures how broadly a technology has been adopted withi
 ---
 
 ### Competitive Displacement
-**Slug:** `competitive-displacement` | **ID:** T33 | **Frameworks:** F5, F6
 
 The process by which a vendor wins a customer account from an incumbent competitor, requiring the customer to absorb switching costs and operational transition risk.
 
@@ -742,7 +703,6 @@ Competitive displacement describes the sale in which a vendor replaces an alread
 ---
 
 ### Third-Party Logistics (3PL)
-**Slug:** `third-party-logistics` | **ID:** T57 | **Frameworks:** F3, F5
 
 An outsourced logistics model in which a provider manages warehousing, fulfillment, and distribution operations on behalf of multiple client companies under shared infrastructure.
 
@@ -753,7 +713,6 @@ A third-party logistics provider operates warehousing and distribution infrastru
 ---
 
 ### Robotics-as-a-Service (RaaS)
-**Slug:** `robotics-as-a-service` | **ID:** T58 | **Frameworks:** F5, F1
 
 A deployment and financing model in which warehouse operators pay subscription or usage-based fees for robotic systems rather than purchasing hardware outright, converting capital expenditure to operational expenditure.
 
@@ -764,7 +723,6 @@ Robotics-as-a-Service transfers hardware ownership and maintenance responsibilit
 ---
 
 ### Systems Integrator (Warehouse Automation)
-**Slug:** `systems-integrator` | **ID:** T59 | **Frameworks:** F6, F4
 
 A specialist firm that designs, configures, and implements multi-vendor warehouse automation stacks — combining hardware from multiple robotics OEMs with WMS, WES, and controls software — and manages the integration risk that operators cannot absorb in-house.
 
@@ -776,7 +734,6 @@ A warehouse automation systems integrator takes responsibility for assembling a 
 
 ## AI and Automation Concepts
 ### Workflow Constraint
-**Slug:** `workflow-constraint` | **ID:** T34 | **Frameworks:** F7, F2
 
 Any process, resource, or system limit that prevents a warehouse workflow from operating at a higher throughput, regardless of performance improvements at other stages.
 
@@ -787,7 +744,6 @@ A workflow constraint is the binding limitation on total system output — the s
 ---
 
 ### Human-Machine Coordination
-**Slug:** `human-machine-coordination` | **ID:** T35 | **Frameworks:** F7, F2
 
 The operational design of tasks, interfaces, and decision rules that govern how human workers and automated systems share work within a warehouse environment.
 
@@ -798,7 +754,6 @@ Human-machine coordination describes the designed interaction between human oper
 ---
 
 ### Exception Handling Rate
-**Slug:** `exception-handling-rate` | **ID:** T36 | **Frameworks:** F2, F4
 
 The proportion of automation system tasks that cannot be completed autonomously and require human intervention, a primary operational performance metric.
 
@@ -809,7 +764,6 @@ Exception handling rate measures the frequency with which an automated system en
 ---
 
 ### Task Orchestration
-**Slug:** `task-orchestration` | **ID:** T37 | **Frameworks:** F7, F4
 
 The software layer that assigns, sequences, and prioritizes work tasks across a mixed fleet of robots and human operators in real time.
 
@@ -820,7 +774,6 @@ Task orchestration is the real-time intelligence layer that allocates work acros
 ---
 
 ### Digital Twin
-**Slug:** `digital-twin` | **ID:** T38 | **Frameworks:** F4, F7
 
 A real-time virtual model of a physical warehouse or automation system, used for performance monitoring, scenario simulation, and deployment planning.
 
@@ -831,7 +784,6 @@ A digital twin is a continuously updated virtual representation of a physical op
 ---
 
 ### Edge Computing
-**Slug:** `edge-computing` | **ID:** T39 | **Frameworks:** F7, F6
 
 Processing of sensor and operational data at or near the physical devices and systems generating it, rather than transmitting to a centralized cloud for processing.
 
@@ -842,7 +794,6 @@ Edge computing moves data processing from centralized cloud infrastructure to co
 ---
 
 ### Computer Vision Reliability
-**Slug:** `computer-vision-reliability` | **ID:** T40 | **Frameworks:** F6, F2
 
 The consistency with which a vision system correctly identifies items, positions, or conditions across the range of lighting, orientation, and presentation variability encountered in real operations.
 
@@ -853,7 +804,6 @@ Computer vision reliability measures how consistently a vision system performs i
 ---
 
 ### Automation Readiness
-**Slug:** `automation-readiness` | **ID:** T41 | **Frameworks:** F2, F3
 
 An operational facility's state of preparedness to successfully deploy and sustain automation, assessed across technology infrastructure, data quality, process standardization, and organizational capability.
 
@@ -864,7 +814,6 @@ Automation readiness evaluates whether a facility has the operational foundation
 ---
 
 ### Sensor Fusion
-**Slug:** `sensor-fusion` | **ID:** T42 | **Frameworks:** F6, F7
 
 The integration of data from multiple sensor types — LIDAR, cameras, ultrasonic, IMU — to produce a more accurate and robust environmental model than any single sensor can generate.
 
@@ -875,7 +824,6 @@ Sensor fusion combines inputs from different sensing modalities to generate a mo
 ---
 
 ### Autonomous Decision Threshold
-**Slug:** `autonomous-decision-threshold` | **ID:** T43 | **Frameworks:** F2, F7
 
 The confidence level or operational condition above which an automation system takes independent action and below which it escalates to human judgment.
 
@@ -886,7 +834,6 @@ The autonomous decision threshold defines the boundary between automated action 
 ---
 
 ### Reinforcement Learning in Robotics
-**Slug:** `reinforcement-learning-in-robotics` | **ID:** T44 | **Frameworks:** F6, F2
 
 A machine learning approach in which robotic systems improve task performance through iterative trial-and-error feedback rather than explicit programming of every task condition.
 
@@ -897,7 +844,6 @@ Reinforcement learning trains robotic systems by rewarding actions that achieve 
 ---
 
 ### Fleet Management Software
-**Slug:** `fleet-management-software` | **ID:** T45 | **Frameworks:** F7, F4
 
 The software platform that monitors, coordinates, and optimizes the operation of a multi-robot fleet within a warehouse, including traffic management, task dispatch, and performance reporting.
 
@@ -908,7 +854,6 @@ Fleet management software provides the operational control layer for multi-robot
 ---
 
 ### AI Inference Latency
-**Slug:** `ai-inference-latency` | **ID:** T46 | **Frameworks:** F6, F7
 
 The time elapsed between a robotic system receiving sensor data and completing the AI-based computation needed to generate an action decision.
 
@@ -919,7 +864,6 @@ AI inference latency is the computational delay between when a sensor captures d
 ---
 
 ### Autonomous Systems Maturity
-**Slug:** `autonomous-systems-maturity` | **ID:** T47 | **Frameworks:** F2, F6
 
 A staged framework for assessing the capability level of autonomous systems — from remotely operated to fully autonomous — across navigation, decision-making, and exception-handling dimensions.
 
@@ -930,7 +874,6 @@ Autonomous systems maturity describes how independently a system can perform its
 ---
 
 ### Process Standardization
-**Slug:** `process-standardization` | **ID:** T48 | **Frameworks:** F2, F4
 
 The degree to which operational workflows are defined, documented, and executed consistently — a prerequisite for reliable automation performance.
 
@@ -941,7 +884,6 @@ Process standardization measures how consistently the steps, sequences, and deci
 ---
 
 ### Autonomous Inventory Management
-**Slug:** `autonomous-inventory-management` | **ID:** T49 | **Frameworks:** F7, F2
 
 The use of robotics and AI systems to perform inventory cycle counting, location verification, and discrepancy detection without dedicated human labor.
 
@@ -952,7 +894,6 @@ Autonomous inventory management deploys robotic platforms — drone-based aerial
 ---
 
 ### Predictive Maintenance
-**Slug:** `predictive-maintenance` | **ID:** T50 | **Frameworks:** F5, F2
 
 The use of sensor data and machine learning models to forecast component failure before it occurs, scheduling maintenance proactively rather than responding to breakdowns.
 
