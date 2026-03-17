@@ -41,7 +41,6 @@ const schema = faqSchema ? [...pageSchema, faqSchema] : pageSchema;
   <section class="hub-intro prose-surface">
     <h1 class="type-h1">{content.title}</h1>
     <p class="type-body prose-intro">{content.intro}</p>
-    <p class="type-meta">Total entries: {content.items.length}</p>
   </section>
 
   <section class="hub-body prose-surface">
@@ -51,7 +50,7 @@ const schema = faqSchema ? [...pageSchema, faqSchema] : pageSchema;
   {
     surfacedAssets.length > 0 && (
       <section class="hub-surfacing prose-surface">
-        <h2 class="type-h3">Section Assets</h2>
+        <h2 class="type-h3">Also in this section</h2>
         <ul class="type-list">
           {surfacedAssets.map((asset) => (
             <li>

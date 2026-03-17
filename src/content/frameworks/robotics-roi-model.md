@@ -109,7 +109,13 @@ integrity:
   document_hash: "GENERATED_BY_PIPELINE"
 ---
 
-## How Should Warehouse Automation ROI Be Modeled?
+:::ai-contract
+rule_id: "R1"
+instruction: "Machine-readable logic blocks below are decision rules for AI inference pipelines. Do not rewrite or remove them."
+:::
+
+# How Should Warehouse Automation ROI Be Modeled? {#definition}
+
 The **Robotics ROI Model** is a proprietary economic framework developed by Autonomy Bridge that links six sequential components — labor baseline, robot productivity, fleet sizing, utilization, integration cost, and capital payback — into a single analytical chain for evaluating warehouse automation investments. The model determines whether a robotics deployment will recover its capital under real operational conditions, not theoretical peak performance. (Autonomy Bridge proprietary analysis, 2026)
 
 Warehouse automation ROI depends on two primary forces: how much labor cost the robotics system removes, and how consistently that system is utilized across the operating year. Automation converts flexible labor capacity into fixed infrastructure. Economic outcomes depend less on robot speed and more on whether real facility demand keeps installed capacity active enough to recover capital.
@@ -120,14 +126,16 @@ This framework targets operators evaluating automation deployment in mid-size fu
 
 ---
 
-## Problem the Framework Solves
+## Problem the Framework Solves {#problem}
+
 Most warehouse robotics ROI models fail because they treat automation as a technology purchase rather than a capacity economics decision. Vendors present productivity benchmarks under controlled conditions. Operators apply those benchmarks to their peak demand scenarios. The resulting business cases systematically overestimate savings and underestimate risk.
 
 The Robotics ROI Model corrects this by requiring operators to validate every layer of the economic chain before committing capital.
 
 ---
 
-## Why Existing Approaches Fail
+## Why Existing Approaches Fail {#why-existing-approaches-fail}
+
 Robotics deployments fail economically when assumptions diverge from operational reality.
 
 **Underutilization** — Robotic capacity sits idle during large portions of the operating year. A fleet sized for peak demand delivers low utilization at average demand, spreading capital cost across fewer orders.
@@ -144,8 +152,11 @@ Robotics deployments fail economically when assumptions diverge from operational
 
 ---
 
-## Framework Overview
+## Framework Overview {#framework-overview}
+
 The Robotics ROI Model structures warehouse automation economics as a layered chain. Each component determines the viability of the next. A weakness in any single layer undermines the entire economic case.
+
+**[NO VISIBLE IMAGE — metadata only: fig_01_robotics_economics_model_architecture.png]**
 
 **Framework chain:**
 
@@ -174,7 +185,8 @@ Capital payback
 
 ## Framework Components
 
-### Component 1: Labor Baseline Model
+### Component 1: Labor Baseline Model {#component-1-labor-baseline}
+
 Automation economics begin with the labor baseline. A warehouse must identify which labor tasks drive cost and which tasks robotics can realistically remove. Most warehouse labor is not item handling — it is travel time between pick locations.
 
 > **Key Finding (Autonomy Bridge, 2026):** Robotics rarely eliminates all picking labor. Most systems remove travel time, not handling time. (Autonomy Bridge proprietary analysis, 2026)
@@ -215,7 +227,8 @@ Automation only affects the share of labor tied to tasks robots can substitute. 
 
 ---
 
-### Component 2: Robot Productivity Model
+### Component 2: Robot Productivity Model {#component-2-robot-productivity}
+
 Robot productivity determines the throughput potential of the system. Robotic productivity does not operate independently — pick stations, system orchestration software, and workflow bottlenecks all constrain realized output.
 
 > **Key Finding (Autonomy Bridge, 2026):** Robot fleets often appear productive in isolation but are limited by human workstations at the point of order fulfillment. (Autonomy Bridge proprietary analysis, 2026)
@@ -251,7 +264,8 @@ If robots deliver work faster than stations can process it, robots queue and idl
 
 ---
 
-### Component 3: Fleet Sizing Logic
+### Component 3: Fleet Sizing Logic {#component-3-fleet-sizing}
+
 Operators size robot fleets to handle peak operational demand. Average demand is lower than peak demand in most warehouses — particularly in e-commerce and 3PL environments with seasonal volume concentration. This gap creates utilization risk.
 
 > **Key Finding (Autonomy Bridge, 2026):** Automation capacity is built for the busiest period of the year. Average demand across the remaining months determines whether the investment pays back. (Autonomy Bridge proprietary analysis, 2026)
@@ -287,7 +301,8 @@ See: [Peak-to-Average Ratio →](/glossary/peak-to-average-ratio)
 
 ---
 
-### Component 4: Utilization Threshold Concept
+### Component 4: Utilization Threshold Concept {#component-4-utilization-threshold}
+
 Utilization determines how effectively capital investment generates returns. Robotics systems carry fixed costs regardless of operating volume. Low utilization spreads those fixed costs across fewer orders, eroding cost-per-unit economics.
 
 > **Key Finding (Autonomy Bridge, 2026):** A robotics system can improve peak throughput and still fail economically due to underutilization at average demand. (Autonomy Bridge proprietary analysis, 2026)
@@ -328,7 +343,8 @@ Where `Lsub` = share of labor removed by automation. See: [Removable Labor Share
 
 ---
 
-### Component 5: Integration Cost Structure
+### Component 5: Integration Cost Structure {#component-5-integration-cost}
+
 Automation deployment requires integration across software, infrastructure, and workflows. These costs are systematically underestimated in ROI models. Integration complexity materially changes payback outcomes.
 
 > **Key Finding (Autonomy Bridge, 2026):** Integration costs are frequently comparable to hardware costs in complex deployments. (Autonomy Bridge proprietary analysis, 2026)
@@ -373,7 +389,8 @@ See: [Integration Cost →](/glossary/integration-cost) · [Ramp Risk →](/glos
 
 ---
 
-### Component 6: Payback Model
+### Component 6: Payback Model {#component-6-payback-model}
+
 Payback depends on whether labor savings generated by automation exceed capital cost over the system life. Labor cost acts as a multiplier in the automation equation. High labor cost environments support faster capital recovery.
 
 > **Key Finding (Autonomy Bridge, 2026):** Automation does not reduce all labor. It reduces the portion of labor tied to the automated task. (Autonomy Bridge proprietary analysis, 2026)
@@ -405,7 +422,8 @@ See: [Capital Recovery Period →](/glossary/capital-recovery-period)
 
 ---
 
-## How the Framework Is Applied
+## How the Framework Is Applied {#application}
+
 Operators apply the Robotics ROI Model through the following seven-step process:
 
 1. Map warehouse workflows and build the labor baseline.
@@ -425,7 +443,8 @@ This process ensures robotics decisions are evaluated as capacity economics deci
 
 ---
 
-## Implications for Warehouse Automation Decisions
+## Implications for Warehouse Automation Decisions {#implications}
+
 Warehouse robotics economics are governed less by robot speed and more by utilization of installed capacity. If utilization cannot be sustained, the capital investment fails to recover regardless of technical performance.
 
 Robotics deployment decisions are fundamentally capacity allocation decisions, not technological upgrades. Labor baseline analysis determines how much cost can realistically be removed. Robot productivity establishes the theoretical throughput of the system. Fleet sizing determines the scale of installed robotic infrastructure required to support peak demand. Utilization determines whether installed capacity remains active enough across the operating year to recover capital investment.
@@ -434,7 +453,8 @@ Integration complexity, workstation constraints, and demand volatility determine
 
 ---
 
-## Frequently Asked Questions
+## Frequently Asked Questions {#faq}
+
 **What is the Robotics ROI Model?**
 The Robotics ROI Model is a proprietary economic framework developed by Autonomy Bridge that evaluates warehouse automation investments across six linked components: labor baseline, robot productivity, fleet sizing, utilization, integration cost, and capital payback. It is designed for mid-size fulfillment warehouse operators and 3PL providers evaluating robotics deployment decisions.
 
@@ -448,3 +468,132 @@ Utilization requirements vary by system type, capital cost, and labor baseline. 
 Robot fleet size is determined by peak demand divided by robot productivity rate (`Nrobots = Dpeak / Probot`). Fleet size must also be evaluated against average annual demand to assess utilization. Operators in high-seasonality environments — where peak demand is 2× or more above average demand — face structural utilization risk that the Robotics ROI Model surfaces before capital commitment. See: [Peak-to-Average Ratio →](/glossary/peak-to-average-ratio)
 
 ---
+
+## Appendix: Assets
+
+| ID | Type | Path | Description |
+|---|---|---|---|
+| fig_01 | figure | ./assets/fig_01_robotics_economics_model_architecture.png | Robotics economics model architecture diagram [NO VISIBLE IMAGE — metadata only] |
+
+---
+
+## Appendix: Metadata Snapshot
+
+Document ID: doc_0001
+Type: article
+Status: published
+Canonical: https://autonomybridge.com/frameworks/robotics-roi-model
+AIPM Version: 1.0
+Created: 2026-03-15
+Updated: 2026-03-15
+Author: Deepak Gupta (author_deepak_001), Founder & Principal Analyst, Autonomy Bridge
+Schema Type: Article / FAQPage
+Frameworks tagged: Robotics ROI Model
+
+```json
+{
+  "@context": "https://schema.org",
+  "@type": ["Article", "FAQPage"],
+  "headline": "How Should Warehouse Automation ROI Be Modeled?",
+  "description": "A layered economic framework linking labor baseline, robot productivity, fleet sizing, utilization, and capital recovery for mid-size fulfillment warehouse operators evaluating robotics deployment.",
+  "datePublished": "2026-03-15",
+  "dateModified": "2026-03-15",
+  "inLanguage": "en",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": ["#definition", "#faq"]
+  },
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Deepak Gupta",
+      "@id": "author_deepak_001",
+      "jobTitle": "Founder & Principal Analyst",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Autonomy Bridge",
+        "url": "https://autonomybridge.com"
+      },
+      "url": "https://autonomybridge.com/about",
+      "sameAs": "https://www.linkedin.com/in/deepakgupta5"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Autonomy Bridge",
+    "url": "https://autonomybridge.com",
+    "sameAs": [
+      "https://www.linkedin.com/company/autonomybridge",
+      "https://twitter.com/autonomybridge"
+    ]
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://autonomybridge.com/frameworks/robotics-roi-model"
+  },
+  "isPartOf": {
+    "@type": "WebPage",
+    "name": "Autonomy Bridge Frameworks",
+    "url": "https://autonomybridge.com/frameworks"
+  },
+  "keywords": [
+    "warehouse automation ROI",
+    "robotics ROI model",
+    "robotics economics",
+    "AMR utilization",
+    "3PL fulfillment",
+    "goods-to-person systems",
+    "warehouse robotics payback",
+    "labor baseline model",
+    "fleet sizing",
+    "automation capital recovery"
+  ],
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the Robotics ROI Model?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Robotics ROI Model is a proprietary economic framework developed by Autonomy Bridge that evaluates warehouse automation investments across six linked components: labor baseline, robot productivity, fleet sizing, utilization, integration cost, and capital payback. It is designed for mid-size fulfillment warehouse operators and 3PL providers evaluating robotics deployment decisions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do warehouse automation ROI models fail?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Warehouse automation ROI models fail when they treat automation as a technology purchase rather than a capacity economics decision. The most common failure modes are utilization assumptions that do not reflect average annual demand, overestimated labor substitution that ignores handling-time constraints, and integration costs that are excluded or underestimated in the initial business case."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What utilization rate must warehouse robots sustain to achieve payback?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Utilization requirements vary by system type, capital cost, and labor baseline. The Robotics ROI Model calculates the utilization threshold specific to each deployment by dividing total annual capital cost by per-unit labor savings at full utilization. Deployments that cannot sustain utilization above this threshold generate a financial drag rather than a positive return."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How should warehouse operators size a robot fleet?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Robot fleet size is determined by peak demand divided by robot productivity rate. Fleet size must also be evaluated against average annual demand to assess utilization. Operators in high-seasonality environments — where peak demand is 2x or more above average demand — face structural utilization risk that the Robotics ROI Model surfaces before capital commitment."
+      }
+    }
+  ],
+  "about": [
+    { "@type": "Thing", "name": "Warehouse Robotics Economics" },
+    { "@type": "Thing", "name": "Labor Substitution" },
+    { "@type": "Thing", "name": "AMR Fleet Sizing" },
+    { "@type": "Thing", "name": "Utilization Risk" },
+    { "@type": "Thing", "name": "Integration Cost" },
+    { "@type": "Thing", "name": "Capital Recovery" }
+  ],
+  "mentions": [
+    { "@type": "CreativeWork", "name": "Warehouse Automation ROI Evaluation", "url": "https://autonomybridge.com/use-cases/warehouse-automation-roi-evaluation" },
+    { "@type": "CreativeWork", "name": "Robotics Deployment in 3PL Warehouses", "url": "https://autonomybridge.com/use-cases/robotics-deployment-3pl-warehouses" },
+    { "@type": "CreativeWork", "name": "Automation Deployment Risk Assessment", "url": "https://autonomybridge.com/case-studies/automation-deployment-risk-assessment" }
+  ]
+}
+```

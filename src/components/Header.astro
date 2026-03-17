@@ -33,6 +33,7 @@ function isActive(href: string): boolean {
         ))
       }
     </nav>
+    <a href="/contact" class="header-cta">Book 15-min call</a>
   </div>
 </header>
 
@@ -76,6 +77,24 @@ function isActive(href: string): boolean {
 
   .site-nav a[aria-current="page"] {
     font-weight: 700;
+  }
+
+  .header-cta {
+    display: inline-block;
+    white-space: nowrap;
+    background: #111827;
+    color: #ffffff;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    line-height: 1;
+    padding: 0.5rem 0.9rem;
+    border-radius: 0.375rem;
+    text-decoration: none;
+    transition: background 0.15s;
+  }
+
+  .header-cta:hover {
+    background: #374151;
   }
 
   @media (max-width: 60rem) {

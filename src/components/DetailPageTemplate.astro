@@ -172,16 +172,6 @@ const [topDiagramCluster, middleDiagramCluster, lowerDiagramCluster] = splitDiag
       )
     }
 
-    <section>
-      <h2 class="type-h2">Route Context</h2>
-      <ul class="type-list">
-        <li>
-          Hub: <a href={resolvedHubPath}>{resolvedHubLabel}</a>
-        </li>
-        <li>Slug: <code>{slug}</code></li>
-      </ul>
-    </section>
-
     {
       relatedContext.lateralRelated.length > 0 && (
         <section class="related-content">
@@ -262,19 +252,21 @@ const [topDiagramCluster, middleDiagramCluster, lowerDiagramCluster] = splitDiag
   }
 
   .detail-header {
-    border: 0.0625rem solid #d1d5db;
-    border-radius: 0.625rem;
-    background: #ffffff;
-    padding: 1rem;
+    padding: 0 0 1.5rem;
+    border-bottom: 0.0625rem solid #e5e7eb;
+    margin-bottom: 0.5rem;
   }
 
-  .detail-header h1,
+  .detail-header h1 {
+    margin: 0 0 0.5rem;
+  }
+
   .detail-header p {
     margin: 0;
   }
 
   .detail-header p + p {
-    margin-top: 0.55rem;
+    margin-top: 0.4rem;
   }
 
   .detail-template section + section {

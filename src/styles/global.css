@@ -3,7 +3,7 @@
 
 :root {
   color: #111827;
-  background: #f8fafc;
+  background: #ffffff;
 }
 
 body {
@@ -122,7 +122,7 @@ body {
 }
 
 .type-h1 {
-  font-family: "IBM Plex Serif", serif;
+  font-family: "Inter", sans-serif;
   font-size: clamp(1.75rem, 1.4rem + 1.6vw, 2.5rem);
   font-weight: 600;
   line-height: 1.2;
@@ -132,7 +132,7 @@ body {
 }
 
 .type-h2 {
-  font-family: "IBM Plex Serif", serif;
+  font-family: "Inter", sans-serif;
   font-size: clamp(1.35rem, 1.1rem + 1vw, 1.875rem);
   font-weight: 600;
   line-height: 1.25;
@@ -141,7 +141,7 @@ body {
 }
 
 .type-h3 {
-  font-family: "IBM Plex Serif", serif;
+  font-family: "Inter", sans-serif;
   font-size: 1.25rem;
   font-weight: 600;
   line-height: 1.3;

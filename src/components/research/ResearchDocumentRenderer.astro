@@ -453,7 +453,7 @@ function splitPatternBlocks<T>(
           <h2 id={section.heading.id} class="text-2xl md:text-3xl font-semibold tracking-tight leading-tight mb-5">
             {section.heading.text}
           </h2>
-          <div class="space-y-6">
+          <div class="space-y-8">
             {sectionBlocks.map((block) => <ResearchParagraph block={block} />)}
           </div>
         </section>
@@ -484,6 +484,10 @@ function splitPatternBlocks<T>(
   }
 
   article p {
-    margin: 0;
+    margin: 0 0 0.85rem;
+  }
+
+  article p:last-child {
+    margin-bottom: 0;
   }
 </style>

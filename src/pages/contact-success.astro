@@ -1,0 +1,46 @@
+---
+import MainLayout from "../components/MainLayout.astro";
+
+const canonicalPath = "/contact-success";
+const title = "Enquiry Received";
+const summary = "Your enquiry has been submitted.";
+---
+
+<MainLayout
+  canonicalPath={canonicalPath}
+  title={title}
+  summary={summary}
+  seoTitle="Enquiry Received | Autonomy Bridge"
+  robots="noindex,nofollow"
+>
+  <article class="max-w-[640px] mx-auto px-6 py-16 md:py-24">
+    <h1 class="text-4xl md:text-5xl font-semibold tracking-tight mb-4">Enquiry received.</h1>
+    <p class="text-base md:text-[17px] leading-8 text-neutral-800 mt-4">
+      All enquiries are reviewed within two business days. If the work is a fit, you will hear back
+      with a short scoping call request.
+    </p>
+    <p class="text-base md:text-[17px] leading-8 text-neutral-800 mt-4">
+      If the question falls outside current scope or capacity, you will be told directly.
+    </p>
+    <div class="mt-10 flex flex-wrap gap-4">
+      <a
+        href="/advisory"
+        class="inline-flex items-center rounded-md border border-neutral-300 bg-white px-4 py-2 text-sm font-semibold text-neutral-900 hover:bg-neutral-50"
+      >
+        Advisory &rarr;
+      </a>
+      <a
+        href="/frameworks"
+        class="inline-flex items-center rounded-md border border-neutral-300 bg-white px-4 py-2 text-sm font-semibold text-neutral-900 hover:bg-neutral-50"
+      >
+        Browse Frameworks &rarr;
+      </a>
+      <a
+        href="/"
+        class="inline-flex items-center rounded-md border border-neutral-300 bg-white px-4 py-2 text-sm font-semibold text-neutral-900 hover:bg-neutral-50"
+      >
+        Home
+      </a>
+    </div>
+  </article>
+</MainLayout>

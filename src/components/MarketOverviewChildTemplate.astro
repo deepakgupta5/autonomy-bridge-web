@@ -14,6 +14,7 @@ const { canonicalPath, title, summary = "Market overview analysis." } = Astro.pr
   <article class="prose-surface market-child-template">
     <header class="market-child-header">
       <h1 class="type-h1">{title}</h1>
+      {summary && <p class="type-body prose-intro">{summary}</p>}
     </header>
 
     <section class="market-child-body prose-surface">
@@ -29,19 +30,17 @@ const { canonicalPath, title, summary = "Market overview analysis." } = Astro.pr
   }
 
   .market-child-header {
-    border: 0.0625rem solid #d1d5db;
-    border-radius: 0.625rem;
-    background: #ffffff;
-    padding: 1rem;
+    padding: 0 0 1.5rem;
+    border-bottom: 0.0625rem solid #e5e7eb;
+    margin-bottom: 0.5rem;
   }
 
-  .market-child-header h1,
+  .market-child-header h1 {
+    margin: 0 0 0.5rem;
+  }
+
   .market-child-header p {
     margin: 0;
-  }
-
-  .market-child-header p + p {
-    margin-top: 0.55rem;
   }
 
   .market-child-template section + section {

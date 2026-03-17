@@ -62,8 +62,7 @@
 .prose-surface blockquote,
 .prose-surface th,
 .prose-surface td {
-  text-align: justify;
-  text-justify: inter-word;
+  text-align: left;
 }
 
 .prose-surface ul,
