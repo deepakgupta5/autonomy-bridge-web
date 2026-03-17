@@ -1,0 +1,29 @@
+---
+import { renderInlineMarkdown } from "../../utils/inlineMarkdown";
+import type { IntegrationSequence } from "../../utils/researchDocument";
+
+interface Props {
+  sequence: IntegrationSequence;
+}
+
+const { sequence } = Astro.props;
+---
+
+<div class="mt-6">
+  <p class="text-base md:text-[17px] leading-8 text-neutral-800" set:html={renderInlineMarkdown(sequence.lead)} />
+  <ol class="method-sequence mt-6 space-y-3">
+    {
+      sequence.steps.map((step) => (
+        <li class="border border-neutral-200 px-4 py-3 text-base md:text-[17px] leading-8 text-neutral-800">
+          <p set:html={renderInlineMarkdown(step)} />
+        </li>
+      ))
+    }
+  </ol>
+</div>
+
+<style>
+  p {
+    margin: 0;
+  }
+</style>

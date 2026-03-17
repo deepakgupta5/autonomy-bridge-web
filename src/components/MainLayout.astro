@@ -12,11 +12,15 @@ interface Props {
   title: string;
   summary?: string;
   canonicalPath?: string;
+  canonicalHref?: string;
   seoTitle?: string;
   seoDescription?: string;
   keywords?: string[];
   robots?: string;
-  ogType?: "website" | "article";
+  ogType?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  twitterCard?: string;
   showBreadcrumbs?: boolean;
   showLocalSubnav?: boolean;
   schema?: SchemaNode[];
@@ -26,11 +30,15 @@ const {
   title,
   summary = "",
   canonicalPath,
+  canonicalHref,
   seoTitle,
   seoDescription,
   keywords,
   robots,
   ogType,
+  ogTitle,
+  ogDescription,
+  twitterCard,
   showBreadcrumbs = true,
   showLocalSubnav = true,
   schema = [],
@@ -57,6 +65,10 @@ const defaultSchemas = buildDefaultLayoutSchemas({
   breadcrumbItems: breadcrumbSchemaItems,
 });
 const schemaEntries = [...defaultSchemas, ...schema];
+const resolvedOgTitle = ogTitle ?? metadata.ogTitle;
+const resolvedOgDescription = ogDescription ?? metadata.description;
+const resolvedTwitterCard = twitterCard ?? "summary";
+const resolvedOgUrl = canonicalHref ?? metadata.absoluteCanonicalUrl;
 ---
 
 <!doctype html>
@@ -68,15 +80,15 @@ const schemaEntries = [...defaultSchemas, ...schema];
     {metadata.description && <meta name="description" content={metadata.description} />}
     {metadata.keywordsContent && <meta name="keywords" content={metadata.keywordsContent} />}
     <meta name="robots" content={metadata.robots} />
-    <link rel="canonical" href={metadata.canonicalPath} />
+    <link rel="canonical" href={canonicalHref ?? metadata.canonicalPath} />
     <meta property="og:site_name" content="Autonomy Bridge" />
-    <meta property="og:type" content={metadata.ogType} />
-    <meta property="og:title" content={metadata.ogTitle} />
-    {metadata.description && <meta property="og:description" content={metadata.description} />}
-    <meta property="og:url" content={metadata.absoluteCanonicalUrl} />
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content={metadata.ogTitle} />
-    {metadata.description && <meta name="twitter:description" content={metadata.description} />}
+    <meta property="og:type" content={ogType ?? metadata.ogType} />
+    <meta property="og:title" content={resolvedOgTitle} />
+    {resolvedOgDescription && <meta property="og:description" content={resolvedOgDescription} />}
+    <meta property="og:url" content={resolvedOgUrl} />
+    <meta name="twitter:card" content={resolvedTwitterCard} />
+    <meta name="twitter:title" content={resolvedOgTitle} />
+    {resolvedOgDescription && <meta name="twitter:description" content={resolvedOgDescription} />}
     {
       schemaEntries.map((entry) => (
         <script type="application/ld+json" set:html={JSON.stringify(entry)} />

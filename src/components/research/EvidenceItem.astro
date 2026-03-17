@@ -1,0 +1,26 @@
+---
+import { renderInlineMarkdown } from "../../utils/inlineMarkdown";
+import type { TierLine } from "../../utils/researchDocument";
+
+interface Props {
+  item: TierLine;
+}
+
+const { item } = Astro.props;
+---
+
+<li class="evidence-item border border-neutral-200 px-5 py-4">
+  <div class="evidence-tier text-sm font-semibold tracking-wide text-neutral-500 uppercase">
+    Tier {item.tierNumber}
+  </div>
+  <h3 class="evidence-title text-lg md:text-xl font-semibold leading-snug mt-2 mb-2">{item.heading}</h3>
+  <div class="evidence-body text-base md:text-[17px] leading-8 text-neutral-800">
+    <p set:html={renderInlineMarkdown(item.body)} />
+  </div>
+</li>
+
+<style>
+  p {
+    margin: 0;
+  }
+</style>

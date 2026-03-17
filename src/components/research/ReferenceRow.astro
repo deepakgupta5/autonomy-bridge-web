@@ -1,0 +1,20 @@
+---
+import type { CitationRow } from "../../utils/researchDocument";
+
+interface Props {
+  row: CitationRow;
+}
+
+const { row } = Astro.props;
+---
+
+<li class="reference-row text-base md:text-[17px] leading-8 text-neutral-800">
+  <span>{row.leadingText}{row.url ? " " : ""}</span>
+  {
+    row.url && (
+      <a href={row.url} class="text-neutral-700 hover:text-neutral-900 hover:underline underline-offset-4">
+        {row.url}
+      </a>
+    )
+  }
+</li>

@@ -1,17 +1,232 @@
 ---
-import StaticPageTemplate from "../components/StaticPageTemplate.astro";
-import { getEntryByCanonicalPath } from "../utils/contentCollections";
+import MainLayout from "../components/MainLayout.astro";
+import { buildContactPageSchema } from "../utils/schema";
 
 const canonicalPath = "/contact";
-const entry = await getEntryByCanonicalPath("pages", canonicalPath);
-const { Content } = await entry.render();
+const title = "Contact";
+const summary =
+  "Structured enquiries for advisory, bespoke research, and operator-level automation decisions.";
+const schema = [
+  buildContactPageSchema({
+    title,
+    description:
+      "Structured enquiries for advisory, bespoke research, and warehouse automation decisions.",
+    canonicalPath,
+  }),
+];
 ---
 
-<StaticPageTemplate
+<MainLayout
   canonicalPath={canonicalPath}
-  title={entry.data.title}
-  summary={entry.data.summary}
-  schemaKind="contact"
+  title={title}
+  summary={summary}
+  seoTitle="Contact | Autonomy Bridge"
+  seoDescription="Structured enquiries for advisory, bespoke research, and warehouse automation decisions."
+  schema={schema}
 >
-  <Content />
-</StaticPageTemplate>
+  <article class="max-w-[1100px] mx-auto px-6 py-12 md:py-16">
+    <header>
+      <div class="max-w-[760px]">
+        <h1 class="text-4xl md:text-5xl font-semibold tracking-tight mb-4">Contact</h1>
+        <p class="text-sm text-neutral-500 mb-8">
+          Structured enquiries for advisory, bespoke research, and operator-level automation
+          decisions.
+        </p>
+        <p class="text-base md:text-[17px] leading-8 text-neutral-800">
+          Autonomy Bridge works with a focused set of clients and questions. Use this form if you
+          are evaluating a warehouse automation or AI infrastructure decision, conducting investment
+          or market diligence, or seeking independent research support.
+        </p>
+        <p class="text-base md:text-[17px] leading-8 text-neutral-800 mt-4">
+          The form is designed to make scoping faster. Clear inputs lead to a faster yes, no, or
+          next-step decision.
+        </p>
+        <div class="flex flex-wrap gap-x-4 gap-y-2 mt-6 text-sm">
+          <a href="/advisory" class="underline underline-offset-4">Advisory &rarr;</a>
+          <a href="/bespoke-research" class="underline underline-offset-4">Bespoke Research &rarr;</a>
+          <a href="/frameworks" class="underline underline-offset-4">Frameworks &rarr;</a>
+          <a href="/use-cases" class="underline underline-offset-4">Use Cases &rarr;</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="mt-12 pt-8 border-t border-neutral-200 md:grid md:grid-cols-12 gap-10 md:gap-12">
+      <div class="md:col-span-5">
+        <section>
+          <h2 class="text-2xl md:text-3xl font-semibold tracking-tight mb-4">What this form is for</h2>
+          <p class="text-base md:text-[17px] leading-8 text-neutral-800">
+            Use this form if you need support with:
+          </p>
+          <ul class="list-disc pl-5 space-y-2 mt-4 text-base md:text-[17px] leading-8 text-neutral-800">
+            <li>warehouse automation evaluation</li>
+            <li>robotics deployment or vendor assessment</li>
+            <li>bespoke market or buyer research</li>
+            <li>investment diligence on operators, vendors, or market segments</li>
+            <li>media or publisher enquiries related to industrial automation</li>
+          </ul>
+        </section>
+
+        <section class="mt-12 pt-8 border-t border-neutral-200">
+          <h2 class="text-2xl md:text-3xl font-semibold tracking-tight mb-4">What to include</h2>
+          <p class="text-base md:text-[17px] leading-8 text-neutral-800">
+            A useful enquiry usually includes:
+          </p>
+          <ul class="list-disc pl-5 space-y-2 mt-4 text-base md:text-[17px] leading-8 text-neutral-800">
+            <li>company or organization</li>
+            <li>your role</li>
+            <li>the decision being made</li>
+            <li>the technology, market, or deployment context</li>
+            <li>any timing constraint</li>
+          </ul>
+          <p class="text-base md:text-[17px] leading-8 text-neutral-800 mt-4">
+            The clearer the question, the faster the scoping decision.
+          </p>
+        </section>
+
+        <section class="mt-12 pt-8 border-t border-neutral-200">
+          <h2 class="text-2xl md:text-3xl font-semibold tracking-tight mb-4">Response Time</h2>
+          <p class="text-base md:text-[17px] leading-8 text-neutral-800">
+            All enquiries are reviewed within two business days.
+          </p>
+        </section>
+
+        <section class="mt-12 pt-8 border-t border-neutral-200">
+          <h2 class="text-2xl md:text-3xl font-semibold tracking-tight mb-4">Alternative Contact</h2>
+          <p class="text-base md:text-[17px] leading-8 text-neutral-800">
+            <a
+              href="https://www.linkedin.com/in/deepakgupta5"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="underline underline-offset-4"
+            >
+              LinkedIn
+            </a>
+          </p>
+        </section>
+      </div>
+
+      <div class="md:col-span-7">
+        <section>
+          <h2 class="text-2xl md:text-3xl font-semibold tracking-tight mb-4">Enquiry Form</h2>
+          <form
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+            class="rounded-lg border border-neutral-200 bg-white p-6 md:p-8 space-y-5"
+          >
+            <input type="hidden" name="form-name" value="contact" />
+            <div aria-hidden="true" class="hidden">
+              <input type="text" name="bot-field" tabindex="-1" autocomplete="off" />
+            </div>
+
+            <div class="space-y-2">
+              <label for="name" class="text-sm font-medium text-neutral-900">Name</label>
+              <p class="text-sm text-neutral-500">Your full name</p>
+              <input
+                id="name"
+                name="name"
+                type="text"
+                required
+                class="w-full rounded-md border border-neutral-300 bg-white px-4 py-3 text-base text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:ring-2 focus:ring-neutral-900/10 focus:border-neutral-900"
+              />
+            </div>
+
+            <div class="space-y-2">
+              <label for="company" class="text-sm font-medium text-neutral-900">Company</label>
+              <p class="text-sm text-neutral-500">Organization name</p>
+              <input
+                id="company"
+                name="company"
+                type="text"
+                class="w-full rounded-md border border-neutral-300 bg-white px-4 py-3 text-base text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:ring-2 focus:ring-neutral-900/10 focus:border-neutral-900"
+              />
+            </div>
+
+            <div class="space-y-2">
+              <label for="role" class="text-sm font-medium text-neutral-900">Role</label>
+              <p class="text-sm text-neutral-500">Your title or function</p>
+              <input
+                id="role"
+                name="role"
+                type="text"
+                class="w-full rounded-md border border-neutral-300 bg-white px-4 py-3 text-base text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:ring-2 focus:ring-neutral-900/10 focus:border-neutral-900"
+              />
+            </div>
+
+            <div class="space-y-2">
+              <label for="enquiryType" class="text-sm font-medium text-neutral-900">Enquiry Type</label>
+              <p class="text-sm text-neutral-500">Select the type of enquiry</p>
+              <select
+                id="enquiryType"
+                name="enquiryType"
+                required
+                class="w-full rounded-md border border-neutral-300 bg-white px-4 py-3 text-base text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:ring-2 focus:ring-neutral-900/10 focus:border-neutral-900"
+              >
+                <option value="">Select one</option>
+                <option>Advisory</option>
+                <option>Bespoke Research</option>
+                <option>Investment / Diligence</option>
+                <option>Media / Press</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div class="space-y-2">
+              <label for="message" class="text-sm font-medium text-neutral-900">Message</label>
+              <p class="text-sm text-neutral-500">
+                Describe the decision, context, and what you need.
+              </p>
+              <textarea
+                id="message"
+                name="message"
+                required
+                class="w-full rounded-md border border-neutral-300 bg-white px-4 py-3 text-base text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:ring-2 focus:ring-neutral-900/10 focus:border-neutral-900 min-h-[180px] resize-y"
+              ></textarea>
+              <p class="text-sm text-neutral-500">
+                Useful inputs include company context, your role, the decision being made, relevant
+                technology or market details, and any timing constraint.
+              </p>
+            </div>
+
+            <div>
+              <button
+                type="submit"
+                class="inline-flex items-center rounded-md bg-neutral-900 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-neutral-700"
+              >
+                Submit enquiry
+              </button>
+            </div>
+          </form>
+        </section>
+      </div>
+    </section>
+
+    <section class="mt-12 pt-8 border-t border-neutral-200">
+      <h2 class="text-2xl md:text-3xl font-semibold tracking-tight mb-4">What Happens Next</h2>
+      <section>
+        <h3 class="text-lg md:text-xl font-semibold mb-2">1. Review</h3>
+        <p class="text-base md:text-[17px] leading-8 text-neutral-800">
+          Every enquiry is read in full before any response is sent. If the work falls outside
+          current scope or capacity, the reply should say so directly.
+        </p>
+      </section>
+
+      <section class="mt-8">
+        <h3 class="text-lg md:text-xl font-semibold mb-2">2. Scoping Conversation</h3>
+        <p class="text-base md:text-[17px] leading-8 text-neutral-800">
+          If there is a fit, a short working call is scheduled. The purpose is to define the
+          problem, not run a sales process.
+        </p>
+      </section>
+
+      <section class="mt-8">
+        <h3 class="text-lg md:text-xl font-semibold mb-2">3. Proposal or Research Brief</h3>
+        <p class="text-base md:text-[17px] leading-8 text-neutral-800">
+          If the engagement moves forward, the next step is a scoped proposal or a structured
+          research brief covering methodology, deliverables, and timeline.
+        </p>
+      </section>
+    </section>
+  </article>
+</MainLayout>

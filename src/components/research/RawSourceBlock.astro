@@ -1,0 +1,9 @@
+---
+interface Props {
+  block: string;
+}
+
+const { block } = Astro.props;
+---
+
+<pre class="mt-4 border border-neutral-200 bg-neutral-50 p-4 text-[13px] leading-6 font-mono overflow-x-auto whitespace-pre-wrap"><code>{block}</code></pre>

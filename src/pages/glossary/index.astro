@@ -1,47 +1,179 @@
 ---
-import HubPageTemplate from "../../components/HubPageTemplate.astro";
-import type { HubPageContent } from "../../data/hubContent";
-import { glossaryTermSlugs } from "../../data/ia";
-import {
-  getEntriesByCanonicalPrefix,
-  getEntryByCanonicalPath,
-} from "../../utils/contentCollections";
+import MainLayout from "../../components/MainLayout.astro";
+import { getEntriesByCanonicalPrefix, getEntryByCanonicalPath } from "../../utils/contentCollections";
+import { formatSlugLabel } from "../../utils/slugLabel";
+import { buildCollectionPageSchema } from "../../utils/schema";
 
-const hubCanonicalPath = "/glossary";
-const hubEntry = await getEntryByCanonicalPath("glossary", hubCanonicalPath);
-const termEntries = await getEntriesByCanonicalPrefix("glossary", `${hubCanonicalPath}/`, {
-  includeExact: false,
+interface GlossaryTermView {
+  slug: string;
+  title: string;
+  href: string;
+  definition: string;
+  relatedLinks: Array<{ href: string; label: string }>;
+}
+
+const canonicalPath = "/glossary";
+const hubEntry = await getEntryByCanonicalPath("glossary", canonicalPath);
+const termEntries = await getEntriesByCanonicalPrefix("glossary", `${canonicalPath}/`, {
+  excludeCanonicalPaths: [canonicalPath],
 });
 
-const termBySlug = new Map(termEntries.map((entry) => [entry.data.slug, entry]));
-const items: HubPageContent["items"] = glossaryTermSlugs.flatMap((slug) => {
-  const entry = termBySlug.get(slug);
-  if (!entry) {
-    return [];
+const sortedTerms = [...termEntries].sort((left, right) =>
+  String(left.data.title).localeCompare(String(right.data.title))
+);
+
+const termPathBySlug = new Map(
+  sortedTerms.map((entry) => [String(entry.data.slug), String(entry.data.canonicalPath)])
+);
+
+function collectRelatedLinks(entry: (typeof sortedTerms)[number]): Array<{ href: string; label: string }> {
+  const links: Array<{ href: string; label: string }> = [];
+  const seen = new Set<string>();
+
+  const pushLink = (href: string, label: string) => {
+    if (!href || seen.has(href)) {
+      return;
+    }
+    links.push({ href, label });
+    seen.add(href);
+  };
+
+  for (const frameworkSlug of entry.data.frameworks) {
+    pushLink(`/frameworks/${frameworkSlug}`, formatSlugLabel(frameworkSlug));
   }
 
-  return [
-    {
-      title: entry.data.title,
-      href: entry.data.canonicalPath,
-      description: entry.data.description,
-      metadata: [`Updated: ${String(entry.data.dateModified)}`],
-      taxonomy: entry.data.topics.length > 0 ? entry.data.topics : ["glossary"],
-    },
-  ];
-});
+  for (const glossarySlug of entry.data.relatedGlossary) {
+    const href = termPathBySlug.get(glossarySlug) ?? `/glossary/${glossarySlug}`;
+    pushLink(href, formatSlugLabel(glossarySlug));
+  }
 
-const content: HubPageContent = {
-  title: hubEntry.data.title,
-  summary: hubEntry.data.summary,
-  intro: hubEntry.data.description,
-  emptyState: "No glossary terms are available yet.",
-  items,
-};
+  for (const insightSlug of entry.data.relatedInsights) {
+    pushLink(`/insights/${insightSlug}`, formatSlugLabel(insightSlug));
+  }
 
-const { Content } = await hubEntry.render();
+  for (const useCaseSlug of entry.data.relatedUseCases) {
+    pushLink(`/use-cases/${useCaseSlug}`, formatSlugLabel(useCaseSlug));
+  }
+
+  for (const caseStudySlug of entry.data.relatedCaseStudies) {
+    pushLink(`/case-studies/${caseStudySlug}`, formatSlugLabel(caseStudySlug));
+  }
+
+  return links.slice(0, 8);
+}
+
+const terms: GlossaryTermView[] = sortedTerms.map((entry) => ({
+  slug: String(entry.data.slug),
+  title: String(entry.data.title),
+  href: String(entry.data.canonicalPath),
+  definition: String(entry.data.definition || entry.data.description),
+  relatedLinks: collectRelatedLinks(entry),
+}));
+
+const groups = new Map<string, GlossaryTermView[]>();
+for (const term of terms) {
+  const firstChar = term.title.trim().charAt(0).toUpperCase();
+  const groupKey = /[A-Z]/.test(firstChar) ? firstChar : "#";
+  const existing = groups.get(groupKey) ?? [];
+  existing.push(term);
+  groups.set(groupKey, existing);
+}
+
+const letters = [...groups.keys()].sort();
+const metaLine = "Precise analytical definitions for warehouse automation, robotics deployment, and operating economics.";
+const intro = String(hubEntry.data.description);
+const summary = String(hubEntry.data.summary);
+const schema = [
+  buildCollectionPageSchema({
+    name: "Glossary",
+    description: summary,
+    canonicalPath,
+  }),
+];
 ---
 
-<HubPageTemplate canonicalPath={hubCanonicalPath} content={content}>
-  <Content />
-</HubPageTemplate>
+<MainLayout
+  canonicalPath={canonicalPath}
+  title="Glossary"
+  summary={summary}
+  seoTitle={String(hubEntry.data.seoTitle)}
+  seoDescription={String(hubEntry.data.seoDescription)}
+  schema={schema}
+>
+  <article class="max-w-[1120px] mx-auto px-6 py-12 md:py-16">
+    <header>
+      <div class="max-w-[760px]">
+        <h1 class="text-4xl md:text-5xl font-semibold tracking-tight mb-4">Glossary</h1>
+        <p class="text-sm text-neutral-500 mb-8">{metaLine}</p>
+        <p class="text-base md:text-[17px] leading-8 text-neutral-800">{intro}</p>
+        <div class="flex flex-wrap gap-x-4 gap-y-2 mt-4 text-sm text-neutral-600">
+          <a href="/frameworks" class="underline underline-offset-4">Frameworks</a>
+          <a href="/insights" class="underline underline-offset-4">Insights</a>
+          <a href="/use-cases" class="underline underline-offset-4">Use Cases</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="mt-12 pt-8 border-t border-neutral-200">
+      <h2 class="text-2xl md:text-3xl font-semibold tracking-tight mb-4">Glossary index</h2>
+
+      {
+        letters.length > 1 && (
+          <nav aria-label="Glossary index navigation" class="flex flex-wrap gap-2 mb-8 text-sm text-neutral-600">
+            {letters.map((letter) => (
+              <a href={`#glossary-letter-${letter}`} class="underline underline-offset-4">{letter}</a>
+            ))}
+          </nav>
+        )
+      }
+
+      <div class="max-w-[860px] space-y-10">
+        {
+          letters.map((letter) => {
+            const groupTerms = groups.get(letter) ?? [];
+            return (
+              <section id={`glossary-letter-${letter}`} aria-label={`Terms beginning with ${letter}`}>
+                <h3 class="text-lg md:text-xl font-semibold tracking-tight text-neutral-900 mb-4">{letter}</h3>
+                <div class="space-y-6 max-w-[860px]">
+                  {groupTerms.map((term) => (
+                    <article class="rounded-lg border border-neutral-200 p-5 md:p-6 bg-white">
+                      <h4 class="text-lg md:text-xl font-semibold tracking-tight text-neutral-900">
+                        <a href={term.href} class="hover:underline">{term.title}</a>
+                      </h4>
+                      <p class="mt-2 text-sm md:text-base leading-7 text-neutral-700">{term.definition}</p>
+                      {
+                        term.relatedLinks.length > 0 && (
+                          <p class="mt-3 text-sm text-neutral-500">
+                            Related: {term.relatedLinks.map((link, index) => (
+                              <>
+                                {index > 0 && <span> · </span>}
+                                <a href={link.href} class="underline underline-offset-4">
+                                  {link.label}
+                                </a>
+                              </>
+                            ))}
+                          </p>
+                        )
+                      }
+                    </article>
+                  ))}
+                </div>
+              </section>
+            );
+          })
+        }
+      </div>
+    </section>
+
+    <section class="mt-12 pt-8 border-t border-neutral-200">
+      <h2 class="text-2xl md:text-3xl font-semibold tracking-tight mb-4">Related research infrastructure</h2>
+      <div class="flex flex-wrap gap-x-4 gap-y-2 mt-4 text-sm text-neutral-600">
+        <a href="/frameworks" class="underline underline-offset-4">/frameworks</a>
+        <a href="/use-cases" class="underline underline-offset-4">/use-cases</a>
+        <a href="/insights" class="underline underline-offset-4">/insights</a>
+        <a href="/advisory" class="underline underline-offset-4">/advisory</a>
+        <a href="/contact" class="underline underline-offset-4">/contact</a>
+      </div>
+    </section>
+  </article>
+</MainLayout>

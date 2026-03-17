@@ -1,19 +1,79 @@
 ---
-import StaticPageTemplate from "../components/StaticPageTemplate.astro";
-import { getEntryByCanonicalPath } from "../utils/contentCollections";
+import MainLayout from "../components/MainLayout.astro";
+import ResearchDocumentRenderer from "../components/research/ResearchDocumentRenderer.astro";
+import { getEntry } from "astro:content";
+import { buildFaqPageSchema, type SchemaNode } from "../utils/schema";
 import { extractFaqItemsFromMarkdown } from "../utils/faq";
 
 const canonicalPath = "/methodology";
-const entry = await getEntryByCanonicalPath("pages", canonicalPath);
-const { Content } = await entry.render();
+const entry = await getEntry("pages", "methodology");
+if (!entry || entry.data.canonicalPath !== canonicalPath) {
+  throw new Error(
+    `Methodology page must be sourced from pages/methodology with canonicalPath '${canonicalPath}'.`
+  );
+}
 const faqItems = extractFaqItemsFromMarkdown(entry.body);
+const canonicalHref = entry.data.canonicalUrl ?? "https://autonomybridge.com/methodology";
+
+function formatDate(input: string | Date): string {
+  const date = input instanceof Date ? input : new Date(`${input}T00:00:00Z`);
+  return date.toLocaleDateString("en-US", {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+    timeZone: "UTC",
+  });
+}
+
+const publishedLabel = formatDate(entry.data.datePublished);
+const updatedLabel = formatDate(entry.data.dateModified);
+const metaLine = `Published: ${publishedLabel} · Last updated: ${updatedLabel}`;
+const schemaType = entry.data.schemaType ?? "ScholarlyArticle";
+const schemaAdditionalType = entry.data.schemaAdditionalType;
+
+const scholarlySchema: SchemaNode = {
+  "@context": "https://schema.org",
+  "@type": schemaAdditionalType ? [schemaType, schemaAdditionalType] : schemaType,
+  headline: entry.data.title,
+  description: entry.data.description,
+  url: canonicalHref,
+  datePublished:
+    typeof entry.data.datePublished === "string"
+      ? entry.data.datePublished
+      : entry.data.datePublished.toISOString().slice(0, 10),
+  dateModified:
+    typeof entry.data.dateModified === "string"
+      ? entry.data.dateModified
+      : entry.data.dateModified.toISOString().slice(0, 10),
+  inLanguage: "en",
+  author: entry.data.authors.map((authorName) => ({
+    "@type": "Person",
+    name: authorName,
+  })),
+};
+
+const faqSchema = buildFaqPageSchema({
+  canonicalPath,
+  items: faqItems,
+});
+
+const schema: SchemaNode[] = faqSchema ? [scholarlySchema, faqSchema] : [scholarlySchema];
 ---
 
-<StaticPageTemplate
+<MainLayout
   canonicalPath={canonicalPath}
+  canonicalHref={canonicalHref}
   title={entry.data.title}
   summary={entry.data.summary}
-  faqItems={faqItems}
+  seoTitle={entry.data.seoTitle}
+  seoDescription={entry.data.seoDescription}
+  keywords={entry.data.keywords}
+  robots={entry.data.robots ?? "index,follow"}
+  ogType={entry.data.ogType ?? "article"}
+  ogTitle={entry.data.ogTitle}
+  ogDescription={entry.data.ogDescription}
+  twitterCard={entry.data.twitterCard}
+  schema={schema}
 >
-  <Content />
-</StaticPageTemplate>
+  <ResearchDocumentRenderer markdown={entry.body} metaLine={metaLine} />
+</MainLayout>

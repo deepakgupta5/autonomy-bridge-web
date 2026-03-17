@@ -247,7 +247,13 @@ export function normalizeFrontmatter(
   const slug = slugCandidate ?? (canonicalPath ? deriveSlugFromCanonicalPath(canonicalPath) : undefined);
   const description = firstString(rawData, ["description", "meta.description", "excerpt"]);
   const summary = firstString(rawData, ["summary", "meta.summary", "excerpt", "description"]);
-  const seoTitle = firstString(rawData, ["seoTitle", "seo.title", "meta.seoTitle", "title"]);
+  const seoTitle = firstString(rawData, [
+    "seoTitle",
+    "seo.meta_title",
+    "seo.title",
+    "meta.seoTitle",
+    "title",
+  ]);
   const seoDescription = firstString(rawData, [
     "seoDescription",
     "seo.meta_description",
@@ -258,6 +264,31 @@ export function normalizeFrontmatter(
     "excerpt",
   ]);
   const authors = firstAuthorArray(rawData, ["authors", "author", "meta.authors"]);
+  const ogTitle = firstString(rawData, [
+    "ogTitle",
+    "seo.og_title",
+    "seo.ogTitle",
+    "seo.meta_title",
+    "title",
+  ]);
+  const ogDescription = firstString(rawData, [
+    "ogDescription",
+    "seo.og_description",
+    "seo.ogDescription",
+    "seo.meta_description",
+    "description",
+    "summary",
+  ]);
+  const ogType = firstString(rawData, ["ogType", "seo.og_type", "seo.ogType"]);
+  const twitterCard = firstString(rawData, [
+    "twitterCard",
+    "seo.twitter_card",
+    "seo.twitterCard",
+  ]);
+  const canonicalUrl = firstString(rawData, ["canonical.url", "canonicalUrl", "url"]);
+  const robotsDirective = firstString(rawData, ["robots"]);
+  const schemaType = firstString(rawData, ["schema.type"]);
+  const schemaAdditionalType = firstString(rawData, ["schema.additionalType"]);
 
   const statusCandidate = firstString(rawData, [
     "status",
@@ -293,6 +324,14 @@ export function normalizeFrontmatter(
     canonicalPath,
     seoTitle: seoTitle ?? firstString(rawData, ["seo.meta_title"]),
     seoDescription,
+    ogTitle,
+    ogDescription,
+    ogType,
+    twitterCard,
+    canonicalUrl,
+    robots: robotsDirective,
+    schemaType,
+    schemaAdditionalType,
     keywords: firstStringArray(rawData, ["keywords", "seo.keywords", "tags", "meta.keywords"]),
     frameworks: firstStringArray(rawData, ["frameworks", "related.frameworks"]),
     topics: firstStringArray(rawData, ["topics", "taxonomy.topics", "related.topics"]),

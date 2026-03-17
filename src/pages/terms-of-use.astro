@@ -1,19 +1,114 @@
 ---
-import LegalPageTemplate from "../components/LegalPageTemplate.astro";
-import { getEntryByCanonicalPath } from "../utils/contentCollections";
+import MainLayout from "../components/MainLayout.astro";
 
 const canonicalPath = "/terms-of-use";
-const entry = await getEntryByCanonicalPath("legal", canonicalPath);
-const { Content } = await entry.render();
+const title = "Terms of Use";
+const summary = "Terms governing use of the Autonomy Bridge website and published content.";
 ---
 
-<LegalPageTemplate
-  canonicalPath={canonicalPath}
-  title={entry.data.title}
-  summary={entry.data.summary}
-  seoDescription={entry.data.seoDescription}
-  keywords={entry.data.keywords}
-  showHeader={false}
->
-  <Content />
-</LegalPageTemplate>
+<MainLayout canonicalPath={canonicalPath} title={title} summary={summary} seoTitle="Terms of Use | Autonomy Bridge">
+  <article class="max-w-[720px] mx-auto px-6 py-12 md:py-16">
+    <h1 class="text-4xl md:text-5xl font-semibold tracking-tight mb-4">Terms of Use</h1>
+    <p class="text-sm text-neutral-500 mb-8">
+      Last updated: March 15, 2026<br />
+      Applies to users in Canada and the United States
+    </p>
+
+    <section>
+      <h2 class="text-2xl md:text-3xl font-semibold tracking-tight mb-4">Overview</h2>
+      <p class="text-base md:text-[17px] leading-8 text-neutral-800">
+        By accessing this site, you agree to these terms.
+      </p>
+      <p class="text-base md:text-[17px] leading-8 text-neutral-800 mt-4">
+        These terms apply to your use of the website and its content. They do not govern client
+        engagements, which are covered by separate signed agreements where applicable.
+      </p>
+    </section>
+
+    <section class="mt-12 pt-8 border-t border-neutral-200">
+      <h2 class="text-2xl md:text-3xl font-semibold tracking-tight mb-4">Intellectual Property</h2>
+      <p class="text-base md:text-[17px] leading-8 text-neutral-800">
+        All content on this site, including frameworks, research methodologies, written analyses,
+        market maps, and strategic models, is the proprietary work of Autonomy Bridge.
+      </p>
+      <p class="text-base md:text-[17px] leading-8 text-neutral-800 mt-4">
+        The Autonomy Bridge name, logo, and associated marks may not be used without prior written
+        permission.
+      </p>
+    </section>
+
+    <section class="mt-12 pt-8 border-t border-neutral-200">
+      <h2 class="text-2xl md:text-3xl font-semibold tracking-tight mb-4">Permitted Use</h2>
+      <p class="text-base md:text-[17px] leading-8 text-neutral-800">You may:</p>
+      <ul class="list-disc pl-5 space-y-2 mt-4 text-base md:text-[17px] leading-8 text-neutral-800">
+        <li>view content on this site</li>
+        <li>reference content for personal or professional research</li>
+        <li>share links to site pages</li>
+      </ul>
+      <p class="text-base md:text-[17px] leading-8 text-neutral-800 mt-4">
+        No other use is permitted without written approval.
+      </p>
+    </section>
+
+    <section class="mt-12 pt-8 border-t border-neutral-200">
+      <h2 class="text-2xl md:text-3xl font-semibold tracking-tight mb-4">Prohibited Use</h2>
+      <p class="text-base md:text-[17px] leading-8 text-neutral-800">
+        The following are prohibited:
+      </p>
+      <ul class="list-disc pl-5 space-y-2 mt-4 text-base md:text-[17px] leading-8 text-neutral-800">
+        <li>copying, reproducing, or republishing site content without written permission</li>
+        <li>reselling, sublicensing, or commercially exploiting site content</li>
+        <li>scraping or systematically extracting content or data</li>
+        <li>using site content to train AI or machine learning models</li>
+        <li>misrepresenting Autonomy Bridge or attributing false statements to the firm</li>
+      </ul>
+    </section>
+
+    <section class="mt-12 pt-8 border-t border-neutral-200">
+      <h2 class="text-2xl md:text-3xl font-semibold tracking-tight mb-4">No Warranties</h2>
+      <p class="text-base md:text-[17px] leading-8 text-neutral-800">
+        This site and its content are provided as is.
+      </p>
+      <p class="text-base md:text-[17px] leading-8 text-neutral-800 mt-4">
+        Autonomy Bridge makes no warranty, express or implied, regarding accuracy, completeness,
+        availability, or fitness for a particular purpose. Analysis may become outdated as market
+        conditions change.
+      </p>
+    </section>
+
+    <section class="mt-12 pt-8 border-t border-neutral-200">
+      <h2 class="text-2xl md:text-3xl font-semibold tracking-tight mb-4">Limitation of Liability</h2>
+      <p class="text-base md:text-[17px] leading-8 text-neutral-800">
+        To the maximum extent permitted by law, Autonomy Bridge is not liable for direct, indirect,
+        incidental, or consequential damages arising from use of the site or reliance on its
+        content.
+      </p>
+      <p class="text-base md:text-[17px] leading-8 text-neutral-800 mt-4">
+        This includes business, investment, procurement, and deployment decisions made using
+        information published here.
+      </p>
+    </section>
+
+    <section class="mt-12 pt-8 border-t border-neutral-200">
+      <h2 class="text-2xl md:text-3xl font-semibold tracking-tight mb-4">Governing Law</h2>
+      <p class="text-base md:text-[17px] leading-8 text-neutral-800">
+        These terms are governed by the laws of British Columbia, Canada, without regard to
+        conflict of law principles.
+      </p>
+      <p class="text-base md:text-[17px] leading-8 text-neutral-800 mt-4">
+        For users in the United States, applicable federal law may also apply.
+      </p>
+    </section>
+
+    <section class="mt-12 pt-8 border-t border-neutral-200">
+      <h2 class="text-2xl md:text-3xl font-semibold tracking-tight mb-4">Changes to These Terms</h2>
+      <p class="text-base md:text-[17px] leading-8 text-neutral-800">
+        These terms may be updated from time to time.
+      </p>
+      <p class="text-base md:text-[17px] leading-8 text-neutral-800 mt-4">
+        Continued use of the site after changes are posted constitutes acceptance of the updated
+        version.
+      </p>
+    </section>
+  </article>
+</MainLayout>

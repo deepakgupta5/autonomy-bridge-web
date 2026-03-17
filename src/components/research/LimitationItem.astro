@@ -1,0 +1,23 @@
+---
+import { renderInlineMarkdown } from "../../utils/inlineMarkdown";
+import type { NamedAnalyticalItem } from "../../utils/researchDocument";
+
+interface Props {
+  item: NamedAnalyticalItem;
+}
+
+const { item } = Astro.props;
+---
+
+<li class="limitation-item border border-neutral-200 px-5 py-4">
+  <h3 class="limitation-title text-lg md:text-xl font-semibold leading-snug mb-2">{item.label}.</h3>
+  <div class="limitation-body text-base md:text-[17px] leading-8 text-neutral-800">
+    <p set:html={renderInlineMarkdown(item.body)} />
+  </div>
+</li>
+
+<style>
+  p {
+    margin: 0;
+  }
+</style>

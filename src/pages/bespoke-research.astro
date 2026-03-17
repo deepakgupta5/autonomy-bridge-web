@@ -1,19 +1,135 @@
 ---
-import StaticPageTemplate from "../components/StaticPageTemplate.astro";
-import { getEntryByCanonicalPath } from "../utils/contentCollections";
-import { extractFaqItemsFromMarkdown } from "../utils/faq";
+import MainLayout from "../components/MainLayout.astro";
 
 const canonicalPath = "/bespoke-research";
-const entry = await getEntryByCanonicalPath("pages", canonicalPath);
-const { Content } = await entry.render();
-const faqItems = extractFaqItemsFromMarkdown(entry.body);
+const title = "Bespoke Research";
+const summary =
+  "Custom research built for a defined decision problem in automation, robotics, and industrial AI.";
 ---
 
-<StaticPageTemplate
+<MainLayout
   canonicalPath={canonicalPath}
-  title={entry.data.title}
-  summary={entry.data.summary}
-  faqItems={faqItems}
+  title={title}
+  summary={summary}
+  seoTitle="Bespoke Research | Autonomy Bridge"
 >
-  <Content />
-</StaticPageTemplate>
+  <article class="max-w-[780px] mx-auto px-6 py-12 md:py-16">
+    <header>
+      <h1 class="text-4xl md:text-5xl font-semibold tracking-tight mb-4">Bespoke Research</h1>
+      <p class="text-sm text-neutral-500 mb-8">
+        Custom research built for a defined decision problem in automation, robotics, and
+        industrial AI.
+      </p>
+      <p class="text-base md:text-[17px] leading-8 text-neutral-800">
+        A bespoke research engagement produces one decision-grade output for one defined problem.
+      </p>
+      <p class="text-base md:text-[17px] leading-8 text-neutral-800 mt-4">
+        This is not a literature review, generic market report, or recycled category summary. It
+        is structured research built for a specific deployment question, investment thesis,
+        market-entry decision, or vendor evaluation problem.
+      </p>
+    </header>
+
+    <section class="mt-12 pt-8 border-t border-neutral-200">
+      <h2 class="text-2xl md:text-3xl font-semibold tracking-tight mb-4">Research types</h2>
+
+      <h3 class="text-lg md:text-xl font-semibold mb-2">Market Entry Analysis</h3>
+      <p class="text-base md:text-[17px] leading-8 text-neutral-800">
+        Assessment of addressable opportunity, competitive density, entry constraint, and segment
+        sequencing for a defined market.
+      </p>
+
+      <h3 class="text-lg md:text-xl font-semibold mb-2 mt-8">Vendor Economics Assessment</h3>
+      <p class="text-base md:text-[17px] leading-8 text-neutral-800">
+        Bottom-up analysis of pricing architecture, unit economics, and margin sustainability across
+        a competitive set.
+      </p>
+
+      <h3 class="text-lg md:text-xl font-semibold mb-2 mt-8">Deployment Risk Report</h3>
+      <p class="text-base md:text-[17px] leading-8 text-neutral-800">
+        Diagnostic of operational, integration, and financial failure modes in a specific
+        automation scenario.
+      </p>
+
+      <h3 class="text-lg md:text-xl font-semibold mb-2 mt-8">Automation ROI Model</h3>
+      <p class="text-base md:text-[17px] leading-8 text-neutral-800">
+        Structured financial model mapping labor displacement, throughput change, integration cost,
+        and payback under operator-specific assumptions.
+      </p>
+    </section>
+
+    <section class="mt-12 pt-8 border-t border-neutral-200">
+      <h2 class="text-2xl md:text-3xl font-semibold tracking-tight mb-4">Who commissions this</h2>
+      <ul class="list-disc pl-5 space-y-2 mt-4 text-base md:text-[17px] leading-8 text-neutral-800">
+        <li>warehouse and 3PL operators</li>
+        <li>private equity and infrastructure investors</li>
+        <li>robotics and automation vendors</li>
+      </ul>
+      <p class="text-base md:text-[17px] leading-8 text-neutral-800 mt-4">
+        Each uses the work differently. The common requirement is the same: a decision needs a
+        tighter analytical basis than vendor material or surface-level market content can provide.
+      </p>
+    </section>
+
+    <section class="mt-12 pt-8 border-t border-neutral-200">
+      <h2 class="text-2xl md:text-3xl font-semibold tracking-tight mb-4">What you get</h2>
+      <p class="text-base md:text-[17px] leading-8 text-neutral-800">
+        Each engagement includes:
+      </p>
+      <ul class="list-disc pl-5 space-y-2 mt-4 text-base md:text-[17px] leading-8 text-neutral-800">
+        <li>a formal structured research document</li>
+        <li>a financial or quantitative model where required</li>
+        <li>sourced claims and documented assumptions</li>
+        <li>a defined scope before work begins</li>
+        <li>a delivery date confirmed in writing</li>
+      </ul>
+    </section>
+
+    <section class="mt-12 pt-8 border-t border-neutral-200">
+      <h2 class="text-2xl md:text-3xl font-semibold tracking-tight mb-4">Process</h2>
+      <ol class="list-decimal pl-5 space-y-6 mt-4 text-base md:text-[17px] leading-8 text-neutral-800">
+        <li>
+          <h3 class="text-lg md:text-xl font-semibold mb-2">Brief</h3>
+          <p class="text-base md:text-[17px] leading-8 text-neutral-800">
+            Submit the question, context, and timeline.
+          </p>
+        </li>
+        <li>
+          <h3 class="text-lg md:text-xl font-semibold mb-2">Scoping</h3>
+          <p class="text-base md:text-[17px] leading-8 text-neutral-800">
+            Autonomy Bridge returns a written scope covering output type, methodology, fee basis,
+            and delivery timing.
+          </p>
+        </li>
+        <li>
+          <h3 class="text-lg md:text-xl font-semibold mb-2">Research</h3>
+          <p class="text-base md:text-[17px] leading-8 text-neutral-800">
+            Primary and secondary source work, framework-driven analysis, and documented
+            assumptions.
+          </p>
+        </li>
+        <li>
+          <h3 class="text-lg md:text-xl font-semibold mb-2">Delivery</h3>
+          <p class="text-base md:text-[17px] leading-8 text-neutral-800">
+            The completed output is delivered in document form, with a working review call if
+            included in scope.
+          </p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="mt-12 pt-8 border-t border-neutral-200">
+      <h2 class="text-2xl md:text-3xl font-semibold tracking-tight mb-4">
+        Start a research brief
+      </h2>
+      <ul class="list-disc pl-5 space-y-2 mt-4 text-base md:text-[17px] leading-8 text-neutral-800">
+        <li>
+          <a href="/contact" class="underline underline-offset-4">Contact</a>
+        </li>
+        <li>
+          <a href="/advisory" class="underline underline-offset-4">Advisory</a>
+        </li>
+      </ul>
+    </section>
+  </article>
+</MainLayout>

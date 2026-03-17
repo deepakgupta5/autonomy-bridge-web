@@ -1,0 +1,17 @@
+---
+interface Props {
+  text: string;
+}
+
+const { text } = Astro.props;
+---
+
+<section class="provenance-note text-sm italic text-neutral-500 mt-4">
+  {text}
+</section>
+
+<style>
+  .provenance-note::before {
+    content: "© ";
+  }
+</style>

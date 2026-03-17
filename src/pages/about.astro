@@ -1,20 +1,154 @@
 ---
-import StaticPageTemplate from "../components/StaticPageTemplate.astro";
-import { getEntryByCanonicalPath } from "../utils/contentCollections";
-import { extractFaqItemsFromMarkdown } from "../utils/faq";
+import MainLayout from "../components/MainLayout.astro";
 
 const canonicalPath = "/about";
-const entry = await getEntryByCanonicalPath("pages", canonicalPath);
-const { Content } = await entry.render();
-const faqItems = extractFaqItemsFromMarkdown(entry.body);
+const title = "About Autonomy Bridge";
+const summary =
+  "Independent research and advisory on warehouse automation, robotics deployment, and industrial AI.";
 ---
 
-<StaticPageTemplate
+<MainLayout
   canonicalPath={canonicalPath}
-  title={entry.data.title}
-  summary={entry.data.summary}
-  schemaKind="about"
-  faqItems={faqItems}
+  title={title}
+  summary={summary}
+  seoTitle="About Autonomy Bridge | Autonomy Bridge"
 >
-  <Content />
-</StaticPageTemplate>
+  <article class="max-w-[760px] mx-auto px-6 py-12 md:py-16">
+    <header>
+      <h1 class="text-4xl md:text-5xl font-semibold tracking-tight mb-4">About Autonomy Bridge</h1>
+      <p class="text-sm text-neutral-500 mb-8">
+        Independent research and advisory on warehouse automation, robotics deployment, and
+        industrial AI.
+      </p>
+      <p class="text-base md:text-[17px] leading-8 text-neutral-800">
+        Autonomy Bridge is an independent research and advisory firm focused on warehouse
+        automation economics, robotics deployment, and industrial AI adoption.
+      </p>
+      <p class="text-base md:text-[17px] leading-8 text-neutral-800 mt-4">
+        The work is built for operators, investors, and technology teams making decisions under
+        real cost, throughput, and deployment constraints. The objective is not to promote
+        automation. It is to evaluate where automation holds up, where it fails, and what the
+        decision actually requires.
+      </p>
+    </header>
+
+    <section class="mt-12 pt-8 border-t border-neutral-200">
+      <h2 class="text-2xl md:text-3xl font-semibold tracking-tight mb-4">What the firm does</h2>
+      <p class="text-base md:text-[17px] leading-8 text-neutral-800">
+        Autonomy Bridge produces structured research, decision frameworks, applied use cases, and
+        bespoke analysis for automation and AI infrastructure decisions.
+      </p>
+      <p class="text-base md:text-[17px] leading-8 text-neutral-800 mt-4">
+        The work is designed for questions such as:
+      </p>
+      <ul class="list-disc pl-5 space-y-2 mt-4 text-base md:text-[17px] leading-8 text-neutral-800">
+        <li>whether a deployment can recover capital under actual utilization conditions</li>
+        <li>whether a vendor model survives beyond pilot stage</li>
+        <li>whether workflow constraints will limit realized ROI</li>
+        <li>whether a market entry thesis is credible at the buyer level</li>
+      </ul>
+    </section>
+
+    <section class="mt-12 pt-8 border-t border-neutral-200">
+      <h2 class="text-2xl md:text-3xl font-semibold tracking-tight mb-4">What the firm is not</h2>
+      <p class="text-base md:text-[17px] leading-8 text-neutral-800">
+        Autonomy Bridge is not a systems integrator, implementation consultant, staffing firm,
+        software reseller, or sponsored research publisher.
+      </p>
+      <p class="text-base md:text-[17px] leading-8 text-neutral-800 mt-4">
+        The firm does not take vendor referral fees, sponsored placements, or paid influence
+        arrangements. That boundary exists to preserve analytical independence.
+      </p>
+    </section>
+
+    <section class="mt-12 pt-8 border-t border-neutral-200">
+      <h2 class="text-2xl md:text-3xl font-semibold tracking-tight mb-4">Founder</h2>
+      <div class="grid grid-cols-1 md:grid-cols-[auto,1fr] gap-6 md:gap-8 items-start">
+        <div class="w-28 h-28 md:w-36 md:h-36 rounded-md overflow-hidden border border-neutral-200">
+          <img
+            src="/images/founder/deepak-gupta.jpg?v=20260316b"
+            alt="Deepak Gupta"
+            class="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </div>
+        <div>
+          <h3 class="text-xl md:text-2xl font-semibold mb-1">Deepak Gupta</h3>
+          <p class="text-sm uppercase tracking-[0.08em] text-neutral-500 mb-4">
+            Founder and Principal Analyst
+          </p>
+          <p class="text-base md:text-[17px] leading-8 text-neutral-800">
+            Deepak Gupta leads Autonomy Bridge. His background spans robotics go-to-market,
+            industrial procurement, and commercial development across North America, Europe, and
+            Asia-Pacific.
+          </p>
+          <p class="text-base md:text-[17px] leading-8 text-neutral-800 mt-4">
+            He has deep expertise across robotics, SaaS, industrial AI/automation, B2B platforms
+            and fintech. That operating exposure informs the firm&rsquo;s research model: decisions
+            should be tested against buyer constraints, deployment economics, and execution risk,
+            not category narratives.
+          </p>
+          <div class="flex flex-wrap gap-x-4 gap-y-2 mt-4 text-sm">
+            <a
+              href="https://www.linkedin.com/in/deepakgupta5"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="underline underline-offset-4"
+            >
+              LinkedIn
+            </a>
+            <a href="/contact" class="underline underline-offset-4">Contact</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-12 pt-8 border-t border-neutral-200">
+      <h2 class="text-2xl md:text-3xl font-semibold tracking-tight mb-4">Why this exists</h2>
+      <p class="text-base md:text-[17px] leading-8 text-neutral-800">
+        Automation decisions are often made with incomplete economic modeling, optimistic vendor
+        assumptions, and weak visibility into failure patterns.
+      </p>
+      <p class="text-base md:text-[17px] leading-8 text-neutral-800 mt-4">
+        Autonomy Bridge exists to close that gap with operator-level analysis. The unit of analysis
+        is the actual decision being made: a warehouse investment, a vendor shortlist, a
+        pilot-to-scale question, a pricing model, or a market-entry bet.
+      </p>
+    </section>
+
+    <section class="mt-12 pt-8 border-t border-neutral-200">
+      <h2 class="text-2xl md:text-3xl font-semibold tracking-tight mb-4">
+        How the platform is built
+      </h2>
+      <p class="text-base md:text-[17px] leading-8 text-neutral-800">
+        The platform is structured around permanent analytical assets:
+      </p>
+      <ul class="list-disc pl-5 space-y-2 mt-4 text-base md:text-[17px] leading-8 text-neutral-800">
+        <li><a href="/frameworks" class="underline underline-offset-4">frameworks</a></li>
+        <li><a href="/glossary" class="underline underline-offset-4">glossary terms</a></li>
+        <li><a href="/use-cases" class="underline underline-offset-4">use cases</a></li>
+        <li><a href="/case-studies" class="underline underline-offset-4">case studies</a></li>
+        <li>
+          <a href="/bespoke-research" class="underline underline-offset-4">bespoke research</a>
+        </li>
+        <li><a href="/advisory" class="underline underline-offset-4">advisory support</a></li>
+      </ul>
+      <p class="text-base md:text-[17px] leading-8 text-neutral-800 mt-4">
+        This architecture is designed to make concepts reusable, assumptions explicit, and
+        decisions easier to stress-test.
+      </p>
+    </section>
+
+    <section class="mt-12 pt-8 border-t border-neutral-200">
+      <h2 class="text-2xl md:text-3xl font-semibold tracking-tight mb-4">
+        Work with Autonomy Bridge
+      </h2>
+      <p class="text-base md:text-[17px] leading-8 text-neutral-800">
+        For retained support, see <a href="/advisory" class="underline underline-offset-4">Advisory</a>.
+      </p>
+      <p class="text-base md:text-[17px] leading-8 text-neutral-800 mt-4">
+        For custom scoped work, see <a href="/bespoke-research" class="underline underline-offset-4">Bespoke Research</a>.
+      </p>
+    </section>
+  </article>
+</MainLayout>

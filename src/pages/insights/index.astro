@@ -1,47 +1,255 @@
 ---
-import HubPageTemplate from "../../components/HubPageTemplate.astro";
-import type { HubPageContent } from "../../data/hubContent";
-import { insightSlugs } from "../../data/ia";
-import {
-  getEntriesByCanonicalPrefix,
-  getEntryByCanonicalPath,
-} from "../../utils/contentCollections";
+import MainLayout from "../../components/MainLayout.astro";
+import { buildCollectionPageSchema } from "../../utils/schema";
 
-const hubCanonicalPath = "/insights";
-const hubEntry = await getEntryByCanonicalPath("insights", hubCanonicalPath);
-const detailEntries = await getEntriesByCanonicalPrefix("insights", `${hubCanonicalPath}/`, {
-  includeExact: false,
-});
-
-const detailBySlug = new Map(detailEntries.map((entry) => [entry.data.slug, entry]));
-const items: HubPageContent["items"] = insightSlugs.flatMap((slug) => {
-  const entry = detailBySlug.get(slug);
-  if (!entry) {
-    return [];
-  }
-
-  return [
-    {
-      title: entry.data.title,
-      href: entry.data.canonicalPath,
-      description: entry.data.description,
-      metadata: [`Updated: ${String(entry.data.dateModified)}`],
-      taxonomy: entry.data.topics.length > 0 ? entry.data.topics : ["insights"],
-    },
-  ];
-});
-
-const content: HubPageContent = {
-  title: hubEntry.data.title,
-  summary: hubEntry.data.summary,
-  intro: hubEntry.data.description,
-  emptyState: "No insights are available yet.",
-  items,
-};
-
-const { Content } = await hubEntry.render();
+const canonicalPath = "/insights";
+const title = "Insights";
+const summary =
+  "Structured research on warehouse automation, robotics deployment, industrial AI, and 3PL markets.";
+const schema = [
+  buildCollectionPageSchema({
+    name: title,
+    description: summary,
+    canonicalPath,
+  }),
+];
 ---
 
-<HubPageTemplate canonicalPath={hubCanonicalPath} content={content}>
-  <Content />
-</HubPageTemplate>
+<MainLayout
+  canonicalPath={canonicalPath}
+  title={title}
+  summary={summary}
+  seoTitle="Insights | Autonomy Bridge"
+  seoDescription={summary}
+  schema={schema}
+>
+  <article class="max-w-[1120px] mx-auto px-6 py-12 md:py-16">
+    <header>
+      <div class="max-w-[760px]">
+        <h1 class="text-4xl md:text-5xl font-semibold tracking-tight mb-4">Insights</h1>
+        <p class="text-sm text-neutral-500 mb-8">
+          Structured research on warehouse automation, robotics deployment, industrial AI, and 3PL
+          markets.
+        </p>
+        <p class="text-base md:text-[17px] leading-8 text-neutral-800">
+          Autonomy Bridge publishes analytical research for operators, investors, and vendors making
+          high-stakes automation decisions. The Insights hub should read as a decision-grade research
+          index, not a blog archive. It should surface the six active articles first, then clarify
+          how the research connects to frameworks and applied use cases.
+        </p>
+      </div>
+    </header>
+
+    <section class="mt-12 pt-8 border-t border-neutral-200">
+      <h2 class="text-2xl md:text-3xl font-semibold tracking-tight mb-4">What this hub covers</h2>
+      <ul class="list-disc pl-5 space-y-2 mt-4 text-base md:text-[17px] leading-8 text-neutral-800">
+        <li>warehouse automation economics</li>
+        <li>deployment failure patterns</li>
+        <li>workflow architecture and bottlenecks</li>
+        <li>vendor evaluation and scale risk</li>
+      </ul>
+    </section>
+
+    <section class="mt-12 pt-8 border-t border-neutral-200">
+      <h2 class="text-2xl md:text-3xl font-semibold tracking-tight mb-4">Featured analysis</h2>
+      <ul class="space-y-6">
+        <li class="pb-6 border-b border-neutral-200 last:border-b-0">
+          <h3 class="text-xl font-semibold tracking-tight">
+            <a href="/insights/why-warehouse-automation-projects-fail" class="hover:underline">
+              Why Warehouse Automation Projects Fail
+            </a>
+          </h3>
+          <p class="text-base md:text-[17px] leading-8 text-neutral-800 mt-2">
+            Most warehouse automation failures originate during project underwriting, not deployment.
+          </p>
+          <p class="text-sm text-neutral-500 mt-2">
+            Related framework:
+            <a href="/frameworks/automation-failure-framework" class="underline underline-offset-4 ml-1">
+              Automation Failure Framework
+            </a>
+          </p>
+        </li>
+        <li class="pb-6 border-b border-neutral-200 last:border-b-0">
+          <h3 class="text-xl font-semibold tracking-tight">
+            <a href="/insights/why-robotics-pilots-fail-to-scale" class="hover:underline">
+              Why Robotics Pilots Fail to Scale
+            </a>
+          </h3>
+          <p class="text-base md:text-[17px] leading-8 text-neutral-800 mt-2">
+            Robotics pilots often prove technical feasibility without proving scale viability.
+          </p>
+          <p class="text-sm text-neutral-500 mt-2">
+            Related framework:
+            <a
+              href="/frameworks/pilot-to-scale-failure-framework"
+              class="underline underline-offset-4 ml-1"
+            >
+              Pilot-to-Scale Failure Framework
+            </a>
+          </p>
+        </li>
+        <li class="pb-6 border-b border-neutral-200 last:border-b-0">
+          <h3 class="text-xl font-semibold tracking-tight">
+            <a
+              href="/insights/why-mid-market-operators-struggle-to-evaluate-warehouse-robotics"
+              class="hover:underline"
+            >
+              Why Mid-Market Operators Struggle to Evaluate Warehouse Robotics
+            </a>
+          </h3>
+          <p class="text-base md:text-[17px] leading-8 text-neutral-800 mt-2">
+            Mid-market 3PL operators face structural evaluation barriers driven by variable demand
+            and weak ROI assumptions.
+          </p>
+          <p class="text-sm text-neutral-500 mt-2">
+            Related framework:
+            <a
+              href="/frameworks/warehouse-automation-decision-framework"
+              class="underline underline-offset-4 ml-1"
+            >
+              Warehouse Automation Decision Framework
+            </a>
+          </p>
+        </li>
+        <li class="pb-6 border-b border-neutral-200 last:border-b-0">
+          <h3 class="text-xl font-semibold tracking-tight">
+            <a href="/insights/how-warehouse-robotics-economics-actually-works" class="hover:underline">
+              How Warehouse Robotics Economics Actually Works
+            </a>
+          </h3>
+          <p class="text-base md:text-[17px] leading-8 text-neutral-800 mt-2">
+            Warehouse automation ROI is governed by utilization and demand stability, not robot
+            speed.
+          </p>
+          <p class="text-sm text-neutral-500 mt-2">
+            Related framework:
+            <a href="/frameworks/robotics-roi-model" class="underline underline-offset-4 ml-1">
+              Robotics ROI Model
+            </a>
+          </p>
+        </li>
+        <li class="pb-6 border-b border-neutral-200 last:border-b-0">
+          <h3 class="text-xl font-semibold tracking-tight">
+            <a href="/insights/how-warehouse-workflows-determine-automation-success" class="hover:underline">
+              How Warehouse Workflows Determine Automation Success
+            </a>
+          </h3>
+          <p class="text-base md:text-[17px] leading-8 text-neutral-800 mt-2">
+            Workflow bottlenecks determine whether automation increases shipped volume or just
+            relocates congestion.
+          </p>
+          <p class="text-sm text-neutral-500 mt-2">
+            Related framework:
+            <a
+              href="/frameworks/workflow-architecture-framework"
+              class="underline underline-offset-4 ml-1"
+            >
+              Workflow Architecture Framework
+            </a>
+          </p>
+        </li>
+        <li class="pb-6 border-b border-neutral-200 last:border-b-0">
+          <h3 class="text-xl font-semibold tracking-tight">
+            <a href="/insights/how-warehouse-operators-evaluate-robotics-vendors" class="hover:underline">
+              How Warehouse Operators Evaluate Robotics Vendors
+            </a>
+          </h3>
+          <p class="text-base md:text-[17px] leading-8 text-neutral-800 mt-2">
+            Vendor evaluation is a cross-functional process centered on utilization, integration, and
+            economic fit.
+          </p>
+          <p class="text-sm text-neutral-500 mt-2">
+            Related framework:
+            <a href="/frameworks/vendor-evaluation-framework" class="underline underline-offset-4 ml-1">
+              Vendor Evaluation Framework
+            </a>
+          </p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="mt-12 pt-8 border-t border-neutral-200">
+      <h2 class="text-2xl md:text-3xl font-semibold tracking-tight mb-4">Read by decision context</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <section class="rounded-lg border border-neutral-200 p-5 bg-white">
+          <h3 class="text-xl font-semibold tracking-tight mb-3">Economics and ROI</h3>
+          <ul class="space-y-2 text-base md:text-[17px] leading-8 text-neutral-800">
+            <li>
+              <a href="/insights/how-warehouse-robotics-economics-actually-works" class="underline underline-offset-4">
+                How Warehouse Robotics Economics Actually Works
+              </a>
+            </li>
+            <li>
+              <a href="/insights/why-warehouse-automation-projects-fail" class="underline underline-offset-4">
+                Why Warehouse Automation Projects Fail
+              </a>
+            </li>
+            <li>
+              <a href="/frameworks/robotics-roi-model" class="underline underline-offset-4">
+                Robotics ROI Model
+              </a>
+            </li>
+          </ul>
+        </section>
+        <section class="rounded-lg border border-neutral-200 p-5 bg-white">
+          <h3 class="text-xl font-semibold tracking-tight mb-3">Workflow and operations</h3>
+          <ul class="space-y-2 text-base md:text-[17px] leading-8 text-neutral-800">
+            <li>
+              <a href="/insights/how-warehouse-workflows-determine-automation-success" class="underline underline-offset-4">
+                How Warehouse Workflows Determine Automation Success
+              </a>
+            </li>
+            <li>
+              <a href="/frameworks/workflow-architecture-framework" class="underline underline-offset-4">
+                Workflow Architecture Framework
+              </a>
+            </li>
+            <li>
+              <a href="/use-cases/warehouse-automation-roi-evaluation" class="underline underline-offset-4">
+                Warehouse Automation ROI Evaluation
+              </a>
+            </li>
+          </ul>
+        </section>
+        <section class="rounded-lg border border-neutral-200 p-5 bg-white">
+          <h3 class="text-xl font-semibold tracking-tight mb-3">Vendor and deployment decisions</h3>
+          <ul class="space-y-2 text-base md:text-[17px] leading-8 text-neutral-800">
+            <li>
+              <a href="/insights/how-warehouse-operators-evaluate-robotics-vendors" class="underline underline-offset-4">
+                How Warehouse Operators Evaluate Robotics Vendors
+              </a>
+            </li>
+            <li>
+              <a href="/insights/why-robotics-pilots-fail-to-scale" class="underline underline-offset-4">
+                Why Robotics Pilots Fail to Scale
+              </a>
+            </li>
+            <li>
+              <a href="/frameworks/vendor-evaluation-framework" class="underline underline-offset-4">
+                Vendor Evaluation Framework
+              </a>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </section>
+
+    <section class="mt-12 pt-8 border-t border-neutral-200">
+      <h2 class="text-2xl md:text-3xl font-semibold tracking-tight mb-4">
+        Related research infrastructure
+      </h2>
+      <p class="text-base md:text-[17px] leading-8 text-neutral-800 max-w-[760px]">
+        Insights are linked to structured frameworks, applied use cases, case studies, and glossary
+        terms so each article can be traced back to decision logic and implementation context.
+      </p>
+      <div class="flex flex-wrap gap-x-4 gap-y-2 mt-6 text-sm">
+        <a href="/frameworks" class="underline underline-offset-4">Frameworks</a>
+        <a href="/use-cases" class="underline underline-offset-4">Use Cases</a>
+        <a href="/case-studies" class="underline underline-offset-4">Case Studies</a>
+        <a href="/methodology" class="underline underline-offset-4">Methodology</a>
+        <a href="/glossary" class="underline underline-offset-4">Glossary</a>
+      </div>
+    </section>
+
+  </article>
+</MainLayout>

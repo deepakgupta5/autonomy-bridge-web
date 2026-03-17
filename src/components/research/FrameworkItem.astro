@@ -1,0 +1,26 @@
+---
+import { renderInlineMarkdown } from "../../utils/inlineMarkdown";
+import type { FrameworkLine } from "../../utils/researchDocument";
+
+interface Props {
+  item: FrameworkLine;
+}
+
+const { item } = Astro.props;
+---
+
+<li class="framework-item border-l-2 border-neutral-300 pl-4">
+  <h3 class="framework-name text-lg md:text-xl font-semibold leading-snug mb-1">
+    <a href={item.href} class="text-neutral-900 hover:underline underline-offset-4">{item.title}</a>
+  </h3>
+  <div class="framework-meta text-[13px] leading-6 text-neutral-600 mb-2">[{item.citation}]</div>
+  <div class="framework-description text-base md:text-[17px] leading-8 text-neutral-800">
+    <p set:html={renderInlineMarkdown(item.body)} />
+  </div>
+</li>
+
+<style>
+  p {
+    margin: 0;
+  }
+</style>

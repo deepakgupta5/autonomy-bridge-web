@@ -1,0 +1,18 @@
+---
+import ResearchParagraph from "./ResearchParagraph.astro";
+
+interface Props {
+  question: string;
+  answers: string[];
+  first?: boolean;
+}
+
+const { question, answers, first = false } = Astro.props;
+---
+
+<article class={`faq-item py-6 border-neutral-200 ${first ? "first:border-t-0" : "border-t"}`}>
+  <h3 class="text-lg md:text-xl font-semibold leading-snug mb-2">{question}</h3>
+  <div class="space-y-3">
+    {answers.map((answer) => <ResearchParagraph block={answer} />)}
+  </div>
+</article>

@@ -1,0 +1,489 @@
+---
+import ResearchParagraph from "./ResearchParagraph.astro";
+import EvidenceItem from "./EvidenceItem.astro";
+import FrameworkItem from "./FrameworkItem.astro";
+import MethodSequence from "./MethodSequence.astro";
+import ValidationStageItem from "./ValidationStageItem.astro";
+import LimitationItem from "./LimitationItem.astro";
+import FaqItem from "./FaqItem.astro";
+import ReferenceRow from "./ReferenceRow.astro";
+import MetadataCodeBlock from "./MetadataCodeBlock.astro";
+import RawSourceBlock from "./RawSourceBlock.astro";
+import {
+  isHorizontalRuleBlock,
+  isPotentialCitationRow,
+  isPotentialFaqQuestion,
+  isPotentialFrameworkLine,
+  isPotentialIntegrationSequence,
+  isPotentialNamedAnalyticalItem,
+  isPotentialStageLine,
+  isPotentialTierLine,
+  isUtilityLinkRow,
+  parseCitationRow,
+  parseCodeFenceBlock,
+  parseFaqInlineBlock,
+  parseFaqQuestion,
+  parseFrameworkLine,
+  parseIntegrationSequence,
+  parseNamedAnalyticalItem,
+  parseResearchDocument,
+  parseStageLine,
+  parseTierLine,
+} from "../../utils/researchDocument";
+import { renderInlineMarkdown } from "../../utils/inlineMarkdown";
+
+interface Props {
+  markdown: string;
+  metaLine?: string;
+}
+
+interface FaqRenderItem {
+  question: string;
+  rawQuestion: string;
+  answers: string[];
+}
+
+const { markdown, metaLine } = Astro.props;
+const doc = parseResearchDocument(markdown);
+
+const firstHeaderProseIndex = doc.headerBlocks.findIndex(
+  (block) => !isHorizontalRuleBlock(block) && !isUtilityLinkRow(block)
+);
+
+function getSectionId(rawId: string | undefined, fallbackText: string): string {
+  if (rawId) {
+    return rawId;
+  }
+  return fallbackText.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+}
+
+function buildFaqRenderItems(blocks: string[]): {
+  items: FaqRenderItem[];
+  unmatched: string[];
+  hadPotentialPattern: boolean;
+} {
+  const items: FaqRenderItem[] = [];
+  const unmatched: string[] = [];
+  const hadPotentialPattern = blocks.some((block) => isPotentialFaqQuestion(block));
+
+  let pointer = 0;
+  while (pointer < blocks.length) {
+    const current = blocks[pointer] ?? "";
+    const inlineFaq = parseFaqInlineBlock(current);
+    if (inlineFaq) {
+      items.push({
+        question: inlineFaq.question,
+        rawQuestion: current,
+        answers: [inlineFaq.answer],
+      });
+      pointer += 1;
+      continue;
+    }
+
+    const question = parseFaqQuestion(current);
+
+    if (!question) {
+      if (!isHorizontalRuleBlock(current)) {
+        unmatched.push(current);
+      }
+      pointer += 1;
+      continue;
+    }
+
+    const answers: string[] = [];
+    pointer += 1;
+
+    while (pointer < blocks.length && !parseFaqQuestion(blocks[pointer] ?? "")) {
+      const block = blocks[pointer] ?? "";
+      if (!isHorizontalRuleBlock(block)) {
+        answers.push(block);
+      }
+      pointer += 1;
+    }
+
+    items.push({
+      question,
+      rawQuestion: current,
+      answers,
+    });
+  }
+
+  return {
+    items,
+    unmatched,
+    hadPotentialPattern,
+  };
+}
+
+function splitPatternBlocks<T>(
+  blocks: string[],
+  parser: (block: string) => T | null
+): {
+  before: string[];
+  items: T[];
+  after: string[];
+} {
+  const before: string[] = [];
+  const items: T[] = [];
+  const after: string[] = [];
+  let encounteredPattern = false;
+
+  for (const block of blocks) {
+    const parsed = parser(block);
+    if (parsed) {
+      items.push(parsed);
+      encounteredPattern = true;
+      continue;
+    }
+
+    if (encounteredPattern) {
+      after.push(block);
+    } else {
+      before.push(block);
+    }
+  }
+
+  return { before, items, after };
+}
+---
+
+<article class="max-w-[760px] mx-auto px-6 py-12 md:py-16 bg-white text-neutral-900">
+  <header>
+    <h1 id={doc.title.id} class="text-4xl md:text-5xl font-semibold tracking-tight leading-tight mb-4">
+      {doc.title.text}
+    </h1>
+    {metaLine && <p class="text-sm text-neutral-500 mb-8">{metaLine}</p>}
+
+    <div class="space-y-6">
+      {
+        doc.headerBlocks.map((block, index) => {
+          if (isHorizontalRuleBlock(block)) {
+            return <hr class="border-0 border-t border-neutral-200 my-8" />;
+          }
+
+          if (isUtilityLinkRow(block)) {
+            return (
+              <div class="research-utility-links flex flex-wrap gap-x-4 gap-y-2 text-sm text-neutral-600">
+                <p set:html={renderInlineMarkdown(block)} />
+              </div>
+            );
+          }
+
+          return <ResearchParagraph block={block} intro={index === firstHeaderProseIndex} />;
+        })
+      }
+    </div>
+  </header>
+
+  {
+    doc.sections.map((section, sectionIndex) => {
+      const sectionId = getSectionId(section.heading.id, section.heading.text);
+      const sectionBlocks = section.blocks.filter((block) => !isHorizontalRuleBlock(block));
+
+      if (sectionId === "data-sources") {
+        const tiers = splitPatternBlocks(sectionBlocks, parseTierLine);
+
+        return (
+          <section class={sectionIndex === 0 ? undefined : "mt-12 pt-8 border-t border-neutral-200"}>
+            <h2 id={section.heading.id} class="text-2xl md:text-3xl font-semibold tracking-tight leading-tight mb-5">
+              {section.heading.text}
+            </h2>
+
+            <div class="space-y-6">
+              {tiers.before.map((block) =>
+                isPotentialTierLine(block) ? (
+                  <RawSourceBlock block={block} />
+                ) : (
+                  <ResearchParagraph block={block} />
+                )
+              )}
+
+              {tiers.items.length > 0 && (
+                <ul class="evidence-stack mt-6 space-y-5 list-none pl-0">
+                  {tiers.items.map((item) => <EvidenceItem item={item} />)}
+                </ul>
+              )}
+
+              {tiers.after.map((block) =>
+                isPotentialTierLine(block) ? (
+                  <RawSourceBlock block={block} />
+                ) : (
+                  <ResearchParagraph block={block} />
+                )
+              )}
+            </div>
+          </section>
+        );
+      }
+
+      if (sectionId === "analytical-models") {
+        const frameworks = splitPatternBlocks(sectionBlocks, parseFrameworkLine);
+
+        return (
+          <section class={sectionIndex === 0 ? undefined : "mt-12 pt-8 border-t border-neutral-200"}>
+            <h2 id={section.heading.id} class="text-2xl md:text-3xl font-semibold tracking-tight leading-tight mb-5">
+              {section.heading.text}
+            </h2>
+
+            <div class="space-y-6">
+              {frameworks.before.map((block) =>
+                isPotentialFrameworkLine(block) ? (
+                  <RawSourceBlock block={block} />
+                ) : (
+                  <ResearchParagraph block={block} />
+                )
+              )}
+
+              {frameworks.items.length > 0 && (
+                <ul class="framework-stack mt-6 space-y-4 list-none pl-0">
+                  {frameworks.items.map((item) => <FrameworkItem item={item} />)}
+                </ul>
+              )}
+
+              {frameworks.after.map((block) =>
+                isPotentialFrameworkLine(block) ? (
+                  <RawSourceBlock block={block} />
+                ) : (
+                  <ResearchParagraph block={block} />
+                )
+              )}
+            </div>
+          </section>
+        );
+      }
+
+      if (sectionId === "framework-integration") {
+        return (
+          <section class={sectionIndex === 0 ? undefined : "mt-12 pt-8 border-t border-neutral-200"}>
+            <h2 id={section.heading.id} class="text-2xl md:text-3xl font-semibold tracking-tight leading-tight mb-5">
+              {section.heading.text}
+            </h2>
+
+            <div class="space-y-6">
+              {sectionBlocks.map((block) => {
+                const parsed = parseIntegrationSequence(block);
+                if (parsed) {
+                  return <MethodSequence sequence={parsed} />;
+                }
+
+                if (isPotentialIntegrationSequence(block)) {
+                  return <RawSourceBlock block={block} />;
+                }
+
+                return <ResearchParagraph block={block} />;
+              })}
+            </div>
+          </section>
+        );
+      }
+
+      if (sectionId === "validation-process") {
+        const stages = splitPatternBlocks(sectionBlocks, parseStageLine);
+
+        return (
+          <section class={sectionIndex === 0 ? undefined : "mt-12 pt-8 border-t border-neutral-200"}>
+            <h2 id={section.heading.id} class="text-2xl md:text-3xl font-semibold tracking-tight leading-tight mb-5">
+              {section.heading.text}
+            </h2>
+
+            <div class="space-y-6">
+              {stages.before.map((block) =>
+                isPotentialStageLine(block) ? (
+                  <RawSourceBlock block={block} />
+                ) : (
+                  <ResearchParagraph block={block} />
+                )
+              )}
+
+              {stages.items.length > 0 && (
+                <ul class="validation-stack mt-6 space-y-5 list-none pl-0">
+                  {stages.items.map((item) => <ValidationStageItem item={item} />)}
+                </ul>
+              )}
+
+              {stages.after.map((block) =>
+                isPotentialStageLine(block) ? (
+                  <RawSourceBlock block={block} />
+                ) : (
+                  <ResearchParagraph block={block} />
+                )
+              )}
+            </div>
+          </section>
+        );
+      }
+
+      if (sectionId === "limitations") {
+        const limitations = splitPatternBlocks(sectionBlocks, parseNamedAnalyticalItem);
+
+        return (
+          <section class={sectionIndex === 0 ? undefined : "mt-12 pt-8 border-t border-neutral-200"}>
+            <h2 id={section.heading.id} class="text-2xl md:text-3xl font-semibold tracking-tight leading-tight mb-5">
+              {section.heading.text}
+            </h2>
+
+            <div class="space-y-6">
+              {limitations.before.map((block) =>
+                isPotentialNamedAnalyticalItem(block) ? (
+                  <RawSourceBlock block={block} />
+                ) : (
+                  <ResearchParagraph block={block} />
+                )
+              )}
+
+              {limitations.items.length > 0 && (
+                <ul class="limitation-stack mt-6 space-y-5 list-none pl-0">
+                  {limitations.items.map((item) => <LimitationItem item={item} />)}
+                </ul>
+              )}
+
+              {limitations.after.map((block) =>
+                isPotentialNamedAnalyticalItem(block) ? (
+                  <RawSourceBlock block={block} />
+                ) : (
+                  <ResearchParagraph block={block} />
+                )
+              )}
+            </div>
+          </section>
+        );
+      }
+
+      if (sectionId === "faq") {
+        const faq = buildFaqRenderItems(sectionBlocks);
+
+        return (
+          <section class={sectionIndex === 0 ? undefined : "mt-12 pt-8 border-t border-neutral-200"}>
+            <h2 id={section.heading.id} class="text-2xl md:text-3xl font-semibold tracking-tight leading-tight mb-5">
+              {section.heading.text}
+            </h2>
+
+            <section class="faq-list">
+              {
+                faq.items.length > 0
+                  ? faq.items.map((item, index) =>
+                      item.answers.length > 0 ? (
+                        <FaqItem question={item.question} answers={item.answers} first={index === 0} />
+                      ) : (
+                        <RawSourceBlock block={item.rawQuestion} />
+                      )
+                    )
+                    : faq.hadPotentialPattern
+                      ? sectionBlocks.map((block) => <RawSourceBlock block={block} />)
+                      : sectionBlocks.map((block) => <ResearchParagraph block={block} />)
+              }
+              {faq.items.length > 0 && faq.unmatched.map((block) => <RawSourceBlock block={block} />)}
+            </section>
+          </section>
+        );
+      }
+
+      if (sectionId === "appendix-citations") {
+        const parsedRows = sectionBlocks.map((block) => ({
+          block,
+          row: parseCitationRow(block),
+        }));
+
+        return (
+          <section class={sectionIndex === 0 ? undefined : "mt-12 pt-8 border-t border-neutral-200"}>
+            <h2 id={section.heading.id} class="text-2xl md:text-3xl font-semibold tracking-tight leading-tight mb-5">
+              {section.heading.text}
+            </h2>
+
+            <ul class="reference-list mt-6 space-y-3 list-none pl-0">
+              {
+                parsedRows
+                  .filter((entry) => entry.row)
+                  .map((entry) => <ReferenceRow row={entry.row!} />)
+              }
+            </ul>
+
+            <div class="space-y-3 mt-4">
+              {
+                parsedRows
+                  .filter((entry) => !entry.row)
+                  .map((entry) =>
+                    isPotentialCitationRow(entry.block) ? (
+                      <RawSourceBlock block={entry.block} />
+                    ) : (
+                      <ResearchParagraph block={entry.block} />
+                    )
+                  )
+              }
+            </div>
+          </section>
+        );
+      }
+
+      if (sectionId === "appendix-metadata") {
+        const parsedBlocks = sectionBlocks.map((block) => ({
+          block,
+          code: parseCodeFenceBlock(block),
+        }));
+
+        const codeBlock = parsedBlocks.find((entry) => entry.code)?.code;
+
+        return (
+          <section class={sectionIndex === 0 ? undefined : "mt-12 pt-8 border-t border-neutral-200"}>
+            <h2 id={section.heading.id} class="text-2xl md:text-3xl font-semibold tracking-tight leading-tight mb-5">
+              {section.heading.text}
+            </h2>
+
+            <div class="space-y-6">
+              {
+                parsedBlocks
+                  .filter((entry) => !entry.code)
+                  .map((entry) =>
+                    entry.block.trim().startsWith("```") ? (
+                      <RawSourceBlock block={entry.block} />
+                    ) : (
+                      <ResearchParagraph block={entry.block} />
+                    )
+                  )
+              }
+            </div>
+
+            {codeBlock ? <MetadataCodeBlock content={codeBlock.content} /> : null}
+          </section>
+        );
+      }
+
+      return (
+        <section class={sectionIndex === 0 ? undefined : "mt-12 pt-8 border-t border-neutral-200"}>
+          <h2 id={section.heading.id} class="text-2xl md:text-3xl font-semibold tracking-tight leading-tight mb-5">
+            {section.heading.text}
+          </h2>
+          <div class="space-y-6">
+            {sectionBlocks.map((block) => <ResearchParagraph block={block} />)}
+          </div>
+        </section>
+      );
+    })
+  }
+</article>
+
+<style>
+  .research-utility-links p {
+    margin: 0;
+  }
+
+  .research-utility-links :global(strong) {
+    font-weight: 500;
+  }
+
+  .research-utility-links :global(a) {
+    color: rgb(64 64 64);
+    text-decoration-thickness: 0.0625rem;
+    text-underline-offset: 0.12rem;
+  }
+
+  article :global(a) {
+    color: rgb(38 38 38);
+    text-decoration-thickness: 0.0625rem;
+    text-underline-offset: 0.12rem;
+  }
+
+  article p {
+    margin: 0;
+  }
+</style>

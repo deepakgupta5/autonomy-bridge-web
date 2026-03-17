@@ -1,0 +1,48 @@
+---
+import { renderInlineMarkdown } from "../../utils/inlineMarkdown";
+import { isAnalyticalQuestionChain, splitTrailingProvenance } from "../../utils/researchDocument";
+import AnalyticalNote from "./AnalyticalNote.astro";
+import ProvenanceNote from "./ProvenanceNote.astro";
+
+interface Props {
+  block: string;
+  intro?: boolean;
+  forceAnalytical?: boolean;
+}
+
+const { block, intro = false, forceAnalytical } = Astro.props;
+const { content, provenance } = splitTrailingProvenance(block);
+const analytical =
+  forceAnalytical !== undefined ? forceAnalytical : isAnalyticalQuestionChain(content || block);
+---
+
+<div>
+  {
+    content &&
+      (analytical ? (
+        <AnalyticalNote text={content} />
+      ) : (
+        <p
+          class={
+            intro
+              ? "text-lg md:text-xl leading-8 text-neutral-700"
+              : "text-base md:text-[17px] leading-8 text-neutral-800"
+          }
+          set:html={renderInlineMarkdown(content)}
+        />
+      ))
+  }
+  {provenance && <ProvenanceNote text={provenance} />}
+</div>
+
+<style>
+  p {
+    margin: 0;
+  }
+
+  p :global(a) {
+    color: rgb(38 38 38);
+    text-decoration-thickness: 0.0625rem;
+    text-underline-offset: 0.12rem;
+  }
+</style>
