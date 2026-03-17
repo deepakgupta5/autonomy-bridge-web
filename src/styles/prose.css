@@ -1,5 +1,5 @@
 .prose-surface {
-  max-width: 70ch;
+  max-width: 78ch;
   margin-inline: auto;
   font-family: var(--font-sans);
   font-size: var(--role-body-size);
@@ -100,8 +100,13 @@
 
 .prose-surface th,
 .prose-surface td {
+  font-family: var(--font-sans);
   border: 0.0625rem solid #d1d5db;
   padding: 0.5rem;
+}
+
+.prose-surface table a {
+  font-family: var(--font-sans);
 }
 
 .prose-surface figure {
