@@ -93,6 +93,25 @@ const faqSchema = buildFaqPageSchema({
   items: faqItems,
 });
 const schema = faqSchema ? [detailSchema, faqSchema] : [detailSchema];
+
+function splitDiagramClusters(allDiagrams: DiagramAsset[]): [DiagramAsset[], DiagramAsset[], DiagramAsset[]] {
+  if (allDiagrams.length === 0) {
+    return [[], [], []];
+  }
+
+  const firstCut = Math.ceil(allDiagrams.length / 3);
+  const remainingAfterFirst = allDiagrams.length - firstCut;
+  const secondCut = firstCut + Math.ceil(remainingAfterFirst / 2);
+
+  return [
+    allDiagrams.slice(0, firstCut),
+    allDiagrams.slice(firstCut, secondCut),
+    allDiagrams.slice(secondCut),
+  ];
+}
+
+const isFrameworkDetail = schemaKind === "framework";
+const [topDiagramCluster, middleDiagramCluster, lowerDiagramCluster] = splitDiagramClusters(diagrams);
 ---
 
 <MainLayout title={title} summary={summary} canonicalPath={canonicalPath} schema={schema}>
@@ -103,9 +122,55 @@ const schema = faqSchema ? [detailSchema, faqSchema] : [detailSchema];
       <p class="type-meta">Content Type: {contentTypeLabel}</p>
     </header>
 
+    {
+      isFrameworkDetail && topDiagramCluster.length > 0 && (
+        <section class="diagram-cluster">
+          <h2 class="type-h2">Framework Diagrams</h2>
+          <ol class="diagram-list">
+            {topDiagramCluster.map((diagram) => (
+              <li>
+                <Figure
+                  id={`${slug}-diagram-${diagram.diagramOrder}`}
+                  src={diagram.publicPath}
+                  alt={diagram.caption}
+                  caption={diagram.caption}
+                  width={diagram.width}
+                  height={diagram.height}
+                  loading="lazy"
+                />
+              </li>
+            ))}
+          </ol>
+        </section>
+      )
+    }
+
     <section class="detail-body prose-surface">
       <slot />
     </section>
+
+    {
+      isFrameworkDetail && middleDiagramCluster.length > 0 && (
+        <section class="diagram-cluster">
+          <h2 class="type-h2">More Framework Diagrams</h2>
+          <ol class="diagram-list">
+            {middleDiagramCluster.map((diagram) => (
+              <li>
+                <Figure
+                  id={`${slug}-diagram-${diagram.diagramOrder}`}
+                  src={diagram.publicPath}
+                  alt={diagram.caption}
+                  caption={diagram.caption}
+                  width={diagram.width}
+                  height={diagram.height}
+                  loading="lazy"
+                />
+              </li>
+            ))}
+          </ol>
+        </section>
+      )
+    }
 
     <section>
       <h2 class="type-h2">Route Context</h2>
@@ -166,14 +231,11 @@ const schema = faqSchema ? [detailSchema, faqSchema] : [detailSchema];
     }
 
     {
-      diagrams.length > 0 && (
-        <section class="diagram-gallery">
-          <h2 class="type-h2">Framework Diagrams</h2>
-          <p class="type-body">
-            Diagrams are rendered as bounded previews. Select any diagram to view an expanded version.
-          </p>
+      isFrameworkDetail && lowerDiagramCluster.length > 0 && (
+        <section class="diagram-cluster">
+          <h2 class="type-h2">Additional Framework Diagrams</h2>
           <ol class="diagram-list">
-            {diagrams.map((diagram) => (
+            {lowerDiagramCluster.map((diagram) => (
               <li>
                 <Figure
                   id={`${slug}-diagram-${diagram.diagramOrder}`}
