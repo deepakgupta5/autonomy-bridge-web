@@ -19,10 +19,7 @@ const frameworksHubContent = {
     title: entry.data.title,
     href: entry.data.canonicalPath,
     description: entry.data.summary,
-    metadata: [
-      `Canonical: ${entry.data.canonicalPath}`,
-      `Published: ${String(entry.data.datePublished)}`,
-    ],
+    metadata: [`Published: ${String(entry.data.datePublished)}`],
     taxonomy: Array.from(
       new Set([
         ...entry.data.frameworks,

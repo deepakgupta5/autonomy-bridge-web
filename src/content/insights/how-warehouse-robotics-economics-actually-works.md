@@ -116,7 +116,7 @@ Warehouse robotics economics are determined primarily by utilization and demand 
 ---
 
 ## Introduction
-Many warehouse robotics discussions start with robot specifications. Vendors and technology narratives emphasize pick speed, navigation capability, AI optimization, or fleet size. Those metrics describe technical capability, but they do not determine financial viability. [C1]
+Many warehouse robotics discussions start with robot specifications. Vendors and technology narratives emphasize pick speed, navigation capability, AI optimization, or fleet size. Those metrics describe technical capability, but they do not determine financial viability.
 
 Automation is not primarily a technology decision. It is a capital allocation decision under uncertain demand.
 
@@ -131,7 +131,7 @@ Mid-size third-party logistics fulfillment warehouses (3PLs) typically serve sev
 
 A single facility might support multiple ecommerce accounts, retail replenishment programs, returns processing workflows, and promotional volume spikes. This variability affects three critical operating variables: daily order lines, peak-to-average demand ratio, and SKU velocity distribution.
 
-Automation economics depend heavily on how stable those variables remain over time. [C1]
+Automation economics depend heavily on how stable those variables remain over time.
 
 The decision logic for robotics deployment is simple in structure:
 
@@ -178,7 +178,7 @@ Higher labor costs increase the potential value of automation, but wage rates al
 
 ### ROI Model
 
-Warehouse robotics economics are dominated by utilization. Capital-intensive systems only generate financial returns when order volume keeps installed capacity sufficiently active to recover capital cost over the system life. [C1]
+Warehouse robotics economics are dominated by utilization. Capital-intensive systems only generate financial returns when order volume keeps installed capacity sufficiently active to recover capital cost over the system life.
 
 Automation economics can be represented as a function of several operational variables:
 
@@ -235,7 +235,7 @@ Fulfillment warehouses experience demand variability from promotional events, se
 
 Manual picking productivity is heavily influenced by worker movement. In large SKU environments, pickers may walk significant distances between item locations. When SKU density increases, walking time often grows as pick paths lengthen.
 
-Operational experience shows a structural relationship: a 15 percent increase in SKU density typically produces roughly a 10 percent decrease in manual pick productivity due to longer travel paths. [C1]
+Operational experience shows a structural relationship: a 15 percent increase in SKU density typically produces roughly a 10 percent decrease in manual pick productivity due to longer travel paths.
 
 Goods-to-person systems improve performance by removing this travel component. However, the benefit depends on how much travel labor exists in the current process. See: [Goods-to-Person System →](/glossary/goods-to-person-system)
 
@@ -249,7 +249,7 @@ Example dynamic: if picking throughput doubles but packing remains unchanged, th
 
 Manual operations provide a form of capacity elasticity. Workers can be reassigned between picking zones, packing stations, receiving operations, and different client accounts. This flexibility allows facilities to maintain high utilization of labor even when demand fluctuates. Robotics does not replicate this flexibility easily — robots are typically optimized for a specific workflow.
 
-Warehouse automation performance is constrained by workflow bottlenecks, demand volatility, and task density. Robotics improves one operational node, but the facility-level outcome depends on whether the entire workflow chain can absorb the increased throughput. [C1]
+Warehouse automation performance is constrained by workflow bottlenecks, demand volatility, and task density. Robotics improves one operational node, but the facility-level outcome depends on whether the entire workflow chain can absorb the increased throughput.
 
 ---
 
@@ -313,7 +313,7 @@ Warehouse automation architecture should match the operator's commercial model. 
 ---
 
 ## Conclusion
-Warehouse robotics economics are governed primarily by capacity utilization under demand volatility, not by improvements in robot productivity. [C1]
+Warehouse robotics economics are governed primarily by capacity utilization under demand volatility, not by improvements in robot productivity.
 
 Four structural conclusions follow from this analysis:
 
@@ -328,7 +328,7 @@ Four structural conclusions follow from this analysis:
 
 ## Frequently Asked Questions
 **How does warehouse robotics ROI actually work?**
-Warehouse robotics ROI is governed by utilization, not robot speed. The economic model is: `ROI = f(C_capex, C_labor, U, V, T, D)`. Automation becomes economically viable only when utilization exceeds the minimum threshold required for capital recovery (`U ≥ U_min`). When utilization falls below this threshold — due to demand variability, client churn, or seasonal gaps — capital cost spreads across fewer processed orders, increasing effective operating cost regardless of technical performance. [C1]
+Warehouse robotics ROI is governed by utilization, not robot speed. The economic model is: `ROI = f(C_capex, C_labor, U, V, T, D)`. Automation becomes economically viable only when utilization exceeds the minimum threshold required for capital recovery (`U ≥ U_min`). When utilization falls below this threshold — due to demand variability, client churn, or seasonal gaps — capital cost spreads across fewer processed orders, increasing effective operating cost regardless of technical performance.
 
 **What is utilization collapse in warehouse automation?**
 Utilization collapse occurs when automation systems sized for peak demand operate at significantly lower utilization during average demand periods. If peak daily orders are three times average daily orders, capacity installed for peak will be idle for much of the year. Fixed capital costs continue during idle periods, spreading the same capital expense across fewer processed orders and degrading ROI. Utilization collapse is the most common warehouse robotics failure mode — more common than integration failures or technology underperformance. (Autonomy Bridge proprietary analysis, 2026)

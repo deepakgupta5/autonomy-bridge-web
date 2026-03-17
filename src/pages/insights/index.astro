@@ -25,10 +25,7 @@ const items: HubPageContent["items"] = insightSlugs.flatMap((slug) => {
       title: entry.data.title,
       href: entry.data.canonicalPath,
       description: entry.data.description,
-      metadata: [
-        `Canonical: ${entry.data.canonicalPath}`,
-        `Updated: ${String(entry.data.dateModified)}`,
-      ],
+      metadata: [`Updated: ${String(entry.data.dateModified)}`],
       taxonomy: entry.data.topics.length > 0 ? entry.data.topics : ["insights"],
     },
   ];

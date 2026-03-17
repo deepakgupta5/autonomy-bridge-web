@@ -106,7 +106,7 @@ By accessing autonomybridge.com, you agree to these Terms of Use. If you don't a
 ---
 
 ## Intellectual Property
-All content on this site — including frameworks, research methodologies, written analyses, market maps, and strategic models — is the proprietary work of Autonomy Bridge. It is protected under applicable Canadian and US copyright law. [C1]
+All content on this site — including frameworks, research methodologies, written analyses, market maps, and strategic models — is the proprietary work of Autonomy Bridge. It is protected under applicable Canadian and US copyright law.
 
 The Autonomy Bridge name, logo, and associated marks are the property of Autonomy Bridge. You may not use them without prior written permission.
 
@@ -145,7 +145,7 @@ To the maximum extent permitted by law, Autonomy Bridge is not liable for any di
 ---
 
 ## Governing Law
-These terms are governed by the laws of Ontario, Canada, without regard to conflict of law principles. [C2] For US-based users, certain federal laws may also apply.
+These terms are governed by the laws of Ontario, Canada, without regard to conflict of law principles. For US-based users, certain federal laws may also apply.
 
 > **[LEGAL REVIEW REQUIRED]** Governing law and dispute resolution clauses have enforceability implications for US users. A qualified lawyer familiar with cross-border Canada/US agreements should review this section.
 

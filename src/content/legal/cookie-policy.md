@@ -124,14 +124,14 @@ Cookies are small text files stored in your browser when you visit a website. Th
 
 ## Cookies We Use
 ### Analytics Cookies (if applicable)
-We may use Plausible Analytics or a similar privacy-first tool to understand aggregate traffic patterns — for example, which pages are viewed most and where visitors come from. [C1]
+We may use Plausible Analytics or a similar privacy-first tool to understand aggregate traffic patterns — for example, which pages are viewed most and where visitors come from.
 
 If Plausible is in use:
 
-- No personally identifiable information is collected [C1]
-- No persistent cookie is set on your device [C1]
-- No cross-site tracking occurs [C1]
-- Data is not shared with advertisers or data brokers [C1]
+- No personally identifiable information is collected
+- No persistent cookie is set on your device
+- No cross-site tracking occurs
+- Data is not shared with advertisers or data brokers
 
 Plausible in particular operates without cookies by default. If we switch to a different analytics tool, this policy will be updated before deployment.
 
@@ -150,9 +150,9 @@ We do not use:
 ---
 
 ## Netlify and Functional Behavior
-Netlify, our hosting provider, may set a short-lived session token when you submit the contact form. [C2] This is a technical cookie used only to process your form submission. It is not used for tracking and expires when your session ends.
+Netlify, our hosting provider, may set a short-lived session token when you submit the contact form. This is a technical cookie used only to process your form submission. It is not used for tracking and expires when your session ends.
 
-> **[LEGAL REVIEW REQUIRED]** Netlify's data processing role and any cookies it sets should be confirmed directly with Netlify's current documentation before publishing. Their terms may change. [C2]
+> **[LEGAL REVIEW REQUIRED]** Netlify's data processing role and any cookies it sets should be confirmed directly with Netlify's current documentation before publishing. Their terms may change.
 
 ---
 
@@ -163,7 +163,7 @@ Because we do not use advertising cookies or persistent tracking, there is nothi
 - Use a browser extension such as uBlock Origin to block any third-party scripts
 - Use a privacy-focused browser (Firefox, Brave) which blocks many trackers by default
 
-If you are a Canadian resident, you have rights regarding tracking technologies under PIPEDA. [C3] If you are a California resident, CCPA rights may apply. [C4]
+If you are a Canadian resident, you have rights regarding tracking technologies under PIPEDA. If you are a California resident, CCPA rights may apply.
 
 Email privacy@autonomybridge.com to exercise any rights.
 

@@ -129,7 +129,7 @@ Warehouse automation projects fail when technology selection precedes workflow a
 ## Introduction
 Most warehouse automation evaluations begin with equipment categories. Operators compare Autonomous Mobile Robots (AMRs), Goods-to-Person (GTP) systems, Automated Storage and Retrieval Systems (AS/RS), or automated sortation. The implicit assumption is that higher local productivity produces higher facility throughput.
 
-In practice, fulfillment warehouses behave as linked constraint systems. [C1] Each stage of the workflow depends on the clearing rate of the next stage. A faster picking process cannot increase shipments if packing capacity remains fixed. Similarly, higher transport speed produces no gain if pick stations cannot process the inventory flow.
+In practice, fulfillment warehouses behave as linked constraint systems. Each stage of the workflow depends on the clearing rate of the next stage. A faster picking process cannot increase shipments if packing capacity remains fixed. Similarly, higher transport speed produces no gain if pick stations cannot process the inventory flow.
 
 This structural deficit arises because robotics is evaluated at the equipment layer while warehouse performance emerges at the workflow layer.
 
@@ -179,7 +179,7 @@ If automation removes ten pickers but requires four additional support roles, th
 
 Warehouse retrofits rarely provide neutral environments for automation. Existing facilities contain structural characteristics that shape workflow: aisle geometry, slotting logic, dock layout, packing configuration, and inventory replenishment paths.
 
-A goods-to-person system may operate efficiently in one building but struggle in another because replenishment flow cannot keep pace with picking demand. [C2] Automation performance therefore depends on how well the technology aligns with the facility's operational architecture.
+A goods-to-person system may operate efficiently in one building but struggle in another because replenishment flow cannot keep pace with picking demand. Automation performance therefore depends on how well the technology aligns with the facility's operational architecture.
 
 ### Misconception 4: Peak Season Demand Justifies Automation
 
@@ -193,7 +193,7 @@ Where `U` represents utilization and `U_min` represents the minimum utilization 
 
 ### Misconception 5: Mobile Robots Automatically Preserve Flexibility
 
-Mobile automation is often described as flexible because robots can be added or removed from the fleet. Hardware mobility does not guarantee operational flexibility. [C3]
+Mobile automation is often described as flexible because robots can be added or removed from the fleet. Hardware mobility does not guarantee operational flexibility.
 
 Robots still depend on consistent task density, stable traffic flows, reliable task orchestration, and compatible inventory processes. If workflow variation disrupts these conditions, robot productivity falls even though the hardware remains capable. Flexibility depends on workflow structure rather than robot mobility.
 
@@ -260,7 +260,7 @@ Fulfillment operations consist of interconnected workflow stages: receiving, put
 
 In manual fulfillment environments, worker productivity is constrained primarily by movement rather than item handling. Pickers spend time walking between storage locations. The physical act of picking usually requires only seconds.
 
-Goods-to-Person architectures reduce travel by delivering inventory to stationary pick stations. [C2] The productivity improvement arises from removing movement rather than replacing the picking action itself. However, travel elimination only improves facility throughput if the rest of the workflow can process the increased item flow. See: [Goods-to-Person System →](/glossary/goods-to-person-system)
+Goods-to-Person architectures reduce travel by delivering inventory to stationary pick stations. The productivity improvement arises from removing movement rather than replacing the picking action itself. However, travel elimination only improves facility throughput if the rest of the workflow can process the increased item flow. See: [Goods-to-Person System →](/glossary/goods-to-person-system)
 
 ### Downstream Nodes Often Limit Throughput
 
@@ -299,7 +299,7 @@ Automation is often deployed in the most visible process rather than the most co
 
 ### Workflow Mismatch
 
-Automation architectures perform best under specific operational conditions. Goods-to-person systems require high order density and consistent SKU demand. [C2] Mobile robots require sufficient task density to justify fleet operation. [C3] Facilities with long-tail SKU catalogs or irregular order patterns may struggle to keep these systems productive.
+Automation architectures perform best under specific operational conditions. Goods-to-person systems require high order density and consistent SKU demand. Mobile robots require sufficient task density to justify fleet operation. Facilities with long-tail SKU catalogs or irregular order patterns may struggle to keep these systems productive.
 
 ### Integration Failure
 
@@ -336,7 +336,7 @@ The central decision question remains operational rather than technological:
 
 ## Frequently Asked Questions
 **How do warehouse workflows determine automation success?**
-Warehouse workflows determine automation success because fulfillment throughput equals the capacity of the slowest node in the operational chain: `T_facility = min(T_pick, T_transport, T_pack, T_sort, T_ship)`. Automation that improves one node without addressing downstream constraints creates work-in-process accumulation rather than increased shipments. The workflow structure — not the robot's technical capability — determines whether productivity gains translate into economic return. [C1]
+Warehouse workflows determine automation success because fulfillment throughput equals the capacity of the slowest node in the operational chain: `T_facility = min(T_pick, T_transport, T_pack, T_sort, T_ship)`. Automation that improves one node without addressing downstream constraints creates work-in-process accumulation rather than increased shipments. The workflow structure — not the robot's technical capability — determines whether productivity gains translate into economic return.
 
 **Why does picking automation not automatically increase warehouse throughput?**
 Picking automation does not automatically increase warehouse throughput because throughput is constrained by the slowest linked process. If picking capacity increases to 300 orders per hour but packing capacity remains at 200, 100 orders accumulate in queue every hour. The warehouse has improved local productivity without improving facility output. Downstream capacity in packing, sortation, and outbound staging must scale alongside picking automation or the investment produces congestion rather than throughput.

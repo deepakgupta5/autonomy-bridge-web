@@ -109,9 +109,9 @@ We keep this straightforward. Autonomy Bridge is a B2B research consultancy. We 
 ---
 
 ## What We Collect
-**Contact form submissions** — When you fill out our contact form, we receive your name, email address, and message content. This goes directly to us via Netlify Forms [C1]. We use this only to respond to your inquiry.
+**Contact form submissions** — When you fill out our contact form, we receive your name, email address, and message content. This goes directly to us via Netlify Forms. We use this only to respond to your inquiry.
 
-**Analytics data** — We may use a privacy-first analytics tool such as Plausible Analytics that collects aggregate, anonymized traffic data: page views, referral sources, and approximate geographic region [C2]. No personal identifiers are linked to this data. No cookies are set by this analytics tool.
+**Analytics data** — We may use a privacy-first analytics tool such as Plausible Analytics that collects aggregate, anonymized traffic data: page views, referral sources, and approximate geographic region. No personal identifiers are linked to this data. No cookies are set by this analytics tool.
 
 ---
 
@@ -137,16 +137,16 @@ Contact form submissions are retained for up to 12 months, after which they are 
 ---
 
 ## Third-Party Services
-**Netlify** — This site is hosted on Netlify, which processes form submissions and serves site files. Netlify's own privacy policy applies to data it processes. [C1]
+**Netlify** — This site is hosted on Netlify, which processes form submissions and serves site files. Netlify's own privacy policy applies to data it processes.
 
-**Analytics** — If Plausible or a similar tool is in use, it does not share data with advertisers or third parties. [C2] Verify the specific tool's policy at the time of deployment.
+**Analytics** — If Plausible or a similar tool is in use, it does not share data with advertisers or third parties. Verify the specific tool's policy at the time of deployment.
 
 > **[LEGAL REVIEW REQUIRED]** Depending on your use of third-party services, you may be required under PIPEDA to enter into data processing agreements with sub-processors. Confirm this with a qualified lawyer before publishing.
 
 ---
 
 ## Your Rights (Canada & US)
-Canadian residents may have rights under PIPEDA (federal) or applicable provincial privacy legislation. [C3] US residents may have rights under applicable state laws. You can request access to, correction of, or deletion of any personal data we hold about you.
+Canadian residents may have rights under PIPEDA (federal) or applicable provincial privacy legislation. US residents may have rights under applicable state laws. You can request access to, correction of, or deletion of any personal data we hold about you.
 
 > **[LEGAL REVIEW REQUIRED]** Rights language should be reviewed by a qualified lawyer. Provincial legislation in Quebec (Law 25) imposes additional obligations that may apply. US state laws (CCPA, etc.) vary and may require specific disclosures.
 

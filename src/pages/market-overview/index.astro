@@ -28,10 +28,7 @@ const items: HubPageContent["items"] = marketOverviewChildSlugs.flatMap((slug) =
       title: child.data.title,
       href: child.data.canonicalPath,
       description: child.data.description,
-      metadata: [
-        `Canonical: ${child.data.canonicalPath}`,
-        `Updated: ${String(child.data.dateModified)}`,
-      ],
+      metadata: [`Updated: ${String(child.data.dateModified)}`],
       taxonomy: child.data.topics.length > 0 ? child.data.topics : ["market-overview"],
     },
   ];

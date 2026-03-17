@@ -48,7 +48,7 @@ function mapSlugsToHubItems(
       title: formatSlugLabel(slug),
       href,
       description: `${contentTypeLabel} entry from the locked canonical route set.`,
-      metadata: [`Canonical: ${href}`, `Type: ${contentTypeLabel}`],
+      metadata: [`Type: ${contentTypeLabel}`],
       taxonomy,
     };
   });
