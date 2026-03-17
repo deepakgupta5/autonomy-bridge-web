@@ -109,8 +109,6 @@ integrity:
   document_hash: "GENERATED_BY_PIPELINE"
 ---
 
-## Cookie Policy
-
 *Last updated: March 15, 2026 · Applies to users in Canada and the United States*
 
 We've designed this site to be as low-footprint as possible. This policy explains exactly what cookies and similar tracking technologies are — or are not — used on autonomybridge.com.
@@ -135,8 +133,6 @@ If Plausible is in use:
 
 Plausible in particular operates without cookies by default. If we switch to a different analytics tool, this policy will be updated before deployment.
 
-> **[LEGAL REVIEW REQUIRED]** If an analytics tool other than Plausible is deployed (e.g., Google Analytics), cookie consent requirements under Canadian and US law may be triggered. Confirm compliance obligations with a qualified lawyer before switching tools.
-
 ---
 
 ## Cookies We Do Not Use
@@ -152,8 +148,6 @@ We do not use:
 ## Netlify and Functional Behavior
 Netlify, our hosting provider, may set a short-lived session token when you submit the contact form. This is a technical cookie used only to process your form submission. It is not used for tracking and expires when your session ends.
 
-> **[LEGAL REVIEW REQUIRED]** Netlify's data processing role and any cookies it sets should be confirmed directly with Netlify's current documentation before publishing. Their terms may change.
-
 ---
 
 ## How to Opt Out
@@ -165,18 +159,11 @@ Because we do not use advertising cookies or persistent tracking, there is nothi
 
 If you are a Canadian resident, you have rights regarding tracking technologies under PIPEDA. If you are a California resident, CCPA rights may apply.
 
-Email privacy@autonomybridge.com to exercise any rights.
-
-> **[LEGAL REVIEW REQUIRED]** Opt-out and rights language under PIPEDA and CCPA should be reviewed by a qualified lawyer. Quebec's Law 25 imposes additional obligations around consent for cookies that may apply.
-
 ---
 
 ## Updates to This Policy
 If we add any new tracking tools or cookies, this policy will be updated before they go live. Check the "Last updated" date at the top of this page.
 
 ---
-
-## Questions?
-**Email:** privacy@autonomybridge.com
 
 ---

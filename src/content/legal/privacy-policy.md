@@ -100,8 +100,6 @@ integrity:
   document_hash: "GENERATED_BY_PIPELINE"
 ---
 
-## Privacy Policy
-
 *Last updated: March 15, 2026 · Applies to users in Canada and the United States*
 
 We keep this straightforward. Autonomy Bridge is a B2B research consultancy. We do not run an e-commerce store, manage user accounts, or store payment data. Here is exactly what we do and don't collect.
@@ -132,8 +130,6 @@ Contact form data is used solely to respond to your message. We do not add you t
 ## Data Retention
 Contact form submissions are retained for up to 12 months, after which they are deleted. Analytics data is aggregate and non-personal; it is retained indefinitely in aggregated form only.
 
-> **[LEGAL REVIEW REQUIRED]** Retention periods should be confirmed with a qualified lawyer based on applicable PIPEDA obligations and any provincial privacy legislation in your operating jurisdiction before publishing.
-
 ---
 
 ## Third-Party Services
@@ -141,20 +137,10 @@ Contact form submissions are retained for up to 12 months, after which they are 
 
 **Analytics** — If Plausible or a similar tool is in use, it does not share data with advertisers or third parties. Verify the specific tool's policy at the time of deployment.
 
-> **[LEGAL REVIEW REQUIRED]** Depending on your use of third-party services, you may be required under PIPEDA to enter into data processing agreements with sub-processors. Confirm this with a qualified lawyer before publishing.
-
 ---
 
 ## Your Rights (Canada & US)
 Canadian residents may have rights under PIPEDA (federal) or applicable provincial privacy legislation. US residents may have rights under applicable state laws. You can request access to, correction of, or deletion of any personal data we hold about you.
 
-> **[LEGAL REVIEW REQUIRED]** Rights language should be reviewed by a qualified lawyer. Provincial legislation in Quebec (Law 25) imposes additional obligations that may apply. US state laws (CCPA, etc.) vary and may require specific disclosures.
-
 ---
-
-## Contact for Data Requests
-**Email:** privacy@autonomybridge.com
-
-We will respond to data requests within 30 days.
-
 ---

@@ -5,17 +5,22 @@ interface Props {
   canonicalPath: string;
   title: string;
   summary: string;
+  showHeader?: boolean;
 }
 
-const { canonicalPath, title, summary } = Astro.props;
+const { canonicalPath, title, summary, showHeader = true } = Astro.props;
 ---
 
 <MainLayout title={title} summary={summary} canonicalPath={canonicalPath}>
   <article class="prose-surface legal-page-template">
-    <header class="legal-page-header">
-      <h1 class="type-h1">{title}</h1>
-      <p class="type-body prose-intro">{summary}</p>
-    </header>
+    {
+      showHeader && (
+        <header class="legal-page-header">
+          <h1 class="type-h1">{title}</h1>
+          <p class="type-body prose-intro">{summary}</p>
+        </header>
+      )
+    }
 
     <section class="legal-page-body prose-surface">
       <slot />

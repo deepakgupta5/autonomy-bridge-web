@@ -10,7 +10,7 @@ document:
 
 title: "About Autonomy Bridge"
 description: "Autonomy Bridge is an independent research consultancy focused on the economics of warehouse automation, robotics deployment, and industrial AI adoption in North America."
-summary: "Firm positioning, research mandate, founder biography, and market gap rationale for Autonomy Bridge — a boutique analyst platform for industrial automation economics."
+summary: "Autonomy Bridge is an independent research consultancy focused on the economics of warehouse automation, robotics deployment, and industrial AI adoption."
 
 authors:
   - id: "author_deepak_001"
@@ -34,7 +34,6 @@ keywords:
   - "warehouse automation economics"
   - "robotics deployment analysis"
   - "industrial AI research"
-  - "fractional CRO"
   - "3PL automation"
   - "autonomous systems research"
   - "independent analyst firm"
@@ -95,7 +94,6 @@ entities:
     - "Warehouse Automation"
     - "Robotics Deployment"
     - "Industrial AI"
-    - "Fractional CRO"
     - "3PL Markets"
 
 ai_rules:
@@ -136,9 +134,6 @@ integrity:
   document_hash: "GENERATED_BY_PIPELINE"
 ---
 
-## About Autonomy Bridge
-**[Frameworks →](/frameworks) · [Case Studies →](/case-studies) · [Methodology →](/methodology)**
-
 ## What Autonomy Bridge Is
 Autonomy Bridge is an independent B2B research consultancy focused on the economics of warehouse automation, robotics deployment, and industrial AI adoption. It produces decision-grade analysis — frameworks, market intelligence, and structured research — for operators, capital allocators, and technology buyers who need to evaluate complex systems under real budget and operational constraints.
 
@@ -155,11 +150,11 @@ The firm's analytical mission is to produce structured, evidence-based research 
 ## Founder
 ### Deepak Gupta
 
-**Founder · Principal Analyst · Fractional CRO**
+**Founder · Principal Analyst**
 
 [LinkedIn →](https://www.linkedin.com/in/deepakgupta5)
 
-Deepak Gupta is the founder of Autonomy Bridge and serves as its principal analyst. He has held commercial and market development roles at eBay/Baazee, Ottonomy Robotics, and Industrybuying.com, with operating experience across North America, Europe, and Asia-Pacific spanning robotics go-to-market, B2B industrial procurement, and AI market entry. He operates a fractional CRO practice focused on early-stage and growth-stage companies in automation and AI markets, where the distance between vendor claims and deployment economics is widest.
+Deepak Gupta is the founder of Autonomy Bridge and serves as its principal analyst. He has held commercial and market development roles at eBay/Baazee, Ottonomy Robotics, and Industrybuying.com, with operating experience across North America, Europe, and Asia-Pacific spanning robotics go-to-market, B2B industrial procurement, and AI market entry.
 
 ---
 
@@ -185,7 +180,7 @@ Autonomy Bridge is built as an analyst platform — not a consulting brochure �
 Autonomy Bridge is an independent B2B research consultancy producing decision-grade analysis on warehouse automation economics, robotics deployment, and industrial AI adoption. It operates as a structured knowledge platform — producing frameworks, use cases, market intelligence, and structured research — for operators, capital allocators, and technology buyers who need to evaluate complex automation systems under real budget and operational constraints. Every analysis is independent of any vendor, integrator, or implementation partner. (Autonomy Bridge proprietary analysis, 2026)
 
 **Who is Deepak Gupta?**
-Deepak Gupta is the founder and principal analyst of Autonomy Bridge. He has held commercial and market development roles at eBay/Baazee, Ottonomy Robotics, and Industrybuying.com, with operating experience across North America, Europe, and Asia-Pacific spanning robotics go-to-market, B2B industrial procurement, and AI market entry. He operates a fractional CRO practice focused on early-stage and growth-stage automation and AI companies where the gap between vendor claims and deployment economics is largest.
+Deepak Gupta is the founder and principal analyst of Autonomy Bridge. He has held commercial and market development roles at eBay/Baazee, Ottonomy Robotics, and Industrybuying.com, with operating experience across North America, Europe, and Asia-Pacific spanning robotics go-to-market, B2B industrial procurement, and AI market entry.
 
 **What is the gap Autonomy Bridge exists to fill?**
 Mid-market 3PL operators and industrial buyers commit $2M or more to automation systems without access to the independent economic modeling those decisions require. Vendor ROI calculators are not neutral. Integration cost estimates are systematically understated. Failure mode data is not publicly disclosed. Macro analyst coverage from firms like Gartner, IDC, and McKinsey is built for enterprise strategy teams, not for the operator making a capital decision at a single facility. Autonomy Bridge produces structured, independent analysis at the decision unit — the operator, investor, or vendor — that actually bears the financial risk of the commitment.
