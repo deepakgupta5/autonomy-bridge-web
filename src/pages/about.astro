@@ -3,158 +3,378 @@ import MainLayout from "../components/MainLayout.astro";
 
 const canonicalPath = "/about";
 const title = "About Autonomy Bridge";
-const summary =
-  "Independent research and advisory on warehouse automation, robotics deployment, and industrial AI.";
+const summary = "Independent research and advisory on warehouse automation, robotics deployment, and industrial AI.";
 ---
 
-<MainLayout
-  canonicalPath={canonicalPath}
-  title={title}
-  summary={summary}
-  seoTitle="About Autonomy Bridge | Autonomy Bridge"
->
-  <article class="max-w-[760px] mx-auto px-6 py-12 md:py-16">
-    <header>
-      <h1 class="text-4xl md:text-5xl font-semibold tracking-tight mb-4">About Autonomy Bridge</h1>
-      <p class="text-sm text-neutral-500 mb-8">
-        Independent research and advisory on warehouse automation, robotics deployment, and
-        industrial AI.
-      </p>
-      <p class="text-base md:text-[17px] leading-8 text-neutral-800">
-        Autonomy Bridge is an independent research and advisory firm focused on warehouse
-        automation economics, robotics deployment, and industrial AI adoption.
-      </p>
-      <p class="text-base md:text-[17px] leading-8 text-neutral-800 mt-4">
-        The work is built for operators, investors, and technology teams making decisions under
-        real cost, throughput, and deployment constraints. The objective is not to promote
-        automation. It is to evaluate where automation holds up, where it fails, and what the
-        decision actually requires.
-      </p>
+<MainLayout canonicalPath={canonicalPath} title={title} summary={summary} seoTitle="About Autonomy Bridge | Autonomy Bridge">
+  <article class="ab-page">
+
+    <!-- HEADER -->
+    <header class="ab-header">
+      <div class="ab-container">
+        <h1 class="ab-h1">About Autonomy Bridge</h1>
+        <p class="ab-tagline">Independent research and advisory on warehouse automation, robotics deployment, and industrial AI</p>
+        <p class="ab-intro">Autonomy Bridge is an independent research and advisory firm focused on warehouse automation economics, robotics deployment, and industrial AI adoption. The work is built for operators, investors, and technology teams making decisions under real cost, throughput, and deployment constraints. The objective is not to promote automation — it is to evaluate where automation holds up, where it fails, and what the decision actually requires.</p>
+      </div>
     </header>
 
-    <section class="mt-12 pt-8 border-t border-neutral-200">
-      <h2 class="text-2xl md:text-3xl font-semibold tracking-tight mb-4">What the firm does</h2>
-      <p class="text-base md:text-[17px] leading-8 text-neutral-800">
-        Autonomy Bridge produces structured research, decision frameworks, applied use cases, and
-        bespoke analysis for automation and AI infrastructure decisions.
-      </p>
-      <p class="text-base md:text-[17px] leading-8 text-neutral-800 mt-4">
-        The work is designed for questions such as:
-      </p>
-      <ul class="list-disc pl-5 space-y-2 mt-4 text-base md:text-[17px] leading-8 text-neutral-800">
-        <li>whether a deployment can recover capital under actual utilization conditions</li>
-        <li>whether a vendor model survives beyond pilot stage</li>
-        <li>whether workflow constraints will limit realized ROI</li>
-        <li>whether a market entry thesis is credible at the buyer level</li>
-      </ul>
-    </section>
-
-    <section class="mt-12 pt-8 border-t border-neutral-200">
-      <h2 class="text-2xl md:text-3xl font-semibold tracking-tight mb-4">What the firm is not</h2>
-      <p class="text-base md:text-[17px] leading-8 text-neutral-800">
-        Autonomy Bridge is not a systems integrator, implementation consultant, staffing firm,
-        software reseller, or sponsored research publisher.
-      </p>
-      <p class="text-base md:text-[17px] leading-8 text-neutral-800 mt-4">
-        The firm does not take vendor referral fees, sponsored placements, or paid influence
-        arrangements. That boundary exists to preserve analytical independence.
-      </p>
-    </section>
-
-    <section class="mt-12 pt-8 border-t border-neutral-200">
-      <h2 class="text-2xl md:text-3xl font-semibold tracking-tight mb-4">Founder</h2>
-      <div class="grid grid-cols-1 md:grid-cols-[auto,1fr] gap-6 md:gap-8 items-start">
-        <div class="w-16 h-16 rounded-md overflow-hidden border border-neutral-200 flex-shrink-0">
-          <img
-            src="/images/founder/deepak-gupta.jpg?v=20260316b"
-            alt="Deepak Gupta"
-            class="w-full h-full object-cover"
-            loading="lazy"
-          />
-        </div>
-        <div>
-          <h3 class="text-xl md:text-2xl font-semibold mb-1">Deepak Gupta</h3>
-          <p class="text-sm uppercase tracking-[0.08em] text-neutral-500 mb-4">
-            Founder and Principal Analyst
-          </p>
-          <p class="text-base md:text-[17px] leading-8 text-neutral-800">
-            Deepak Gupta leads Autonomy Bridge. His background spans robotics go-to-market,
-            industrial procurement, and commercial development across North America, Europe, and
-            Asia-Pacific.
-          </p>
-          <p class="text-base md:text-[17px] leading-8 text-neutral-800 mt-4">
-            He has deep expertise across robotics, SaaS, industrial AI/automation, B2B platforms
-            and fintech. That operating exposure informs the firm&rsquo;s research model: decisions
-            should be tested against buyer constraints, deployment economics, and execution risk,
-            not category narratives.
-          </p>
-          <div class="flex flex-wrap gap-x-4 gap-y-2 mt-4 text-sm">
-            <a
-              href="https://www.linkedin.com/in/deepakgupta5"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="underline underline-offset-4"
-            >
-              LinkedIn
-            </a>
-            <a href="/contact" class="underline underline-offset-4">Contact</a>
+    <!-- FOUNDER -->
+    <section class="ab-section">
+      <div class="ab-container">
+        <h2 class="ab-h2">Founder</h2>
+        <div class="ab-founder">
+          <div class="ab-founder-photo">
+            <img
+              src="/images/founder/deepak-gupta.jpg?v=20260316b"
+              alt="Deepak Gupta"
+              loading="lazy"
+            />
+          </div>
+          <div class="ab-founder-bio">
+            <h3 class="ab-founder-name">Deepak Gupta</h3>
+            <p class="ab-founder-role">Founder &amp; Principal Analyst</p>
+            <p class="ab-founder-text">Deepak Gupta leads Autonomy Bridge. His background spans robotics go-to-market, industrial procurement, and commercial development across North America, Europe, and Asia-Pacific.</p>
+            <p class="ab-founder-text">He has deep expertise across robotics, SaaS, industrial AI/automation, B2B platforms, and fintech. That operating exposure informs the firm's research model: decisions should be tested against buyer constraints, deployment economics, and execution risk — not category narratives.</p>
+            <div class="ab-founder-links">
+              <a href="https://www.linkedin.com/in/deepakgupta5" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              <a href="/contact">Contact</a>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="mt-12 pt-8 border-t border-neutral-200">
-      <h2 class="text-2xl md:text-3xl font-semibold tracking-tight mb-4">Why this exists</h2>
-      <p class="text-base md:text-[17px] leading-8 text-neutral-800">
-        Automation decisions are often made with incomplete economic modeling, optimistic vendor
-        assumptions, and weak visibility into failure patterns.
-      </p>
-      <p class="text-base md:text-[17px] leading-8 text-neutral-800 mt-4">
-        Autonomy Bridge exists to close that gap with operator-level analysis. The unit of analysis
-        is the actual decision being made: a warehouse investment, a vendor shortlist, a
-        pilot-to-scale question, a pricing model, or a market-entry bet.
-      </p>
-    </section>
-
-    <section class="mt-12 pt-8 border-t border-neutral-200">
-      <h2 class="text-2xl md:text-3xl font-semibold tracking-tight mb-4">
-        How the platform is built
-      </h2>
-      <p class="text-base md:text-[17px] leading-8 text-neutral-800">
-        The platform is structured around permanent analytical assets:
-      </p>
-      <ul class="list-disc pl-5 space-y-2 mt-4 text-base md:text-[17px] leading-8 text-neutral-800">
-        <li><a href="/frameworks" class="underline underline-offset-4">Frameworks</a></li>
-        <li><a href="/glossary" class="underline underline-offset-4">Glossary</a></li>
-        <li><a href="/use-cases" class="underline underline-offset-4">Use Cases</a></li>
-        <li><a href="/case-studies" class="underline underline-offset-4">Case Studies</a></li>
-        <li>
-          <a href="/bespoke-research" class="underline underline-offset-4">Bespoke Research</a>
-        </li>
-        <li><a href="/advisory" class="underline underline-offset-4">Advisory</a></li>
-      </ul>
-      <p class="text-base md:text-[17px] leading-8 text-neutral-800 mt-4">
-        This architecture is designed to make concepts reusable, assumptions explicit, and
-        decisions easier to stress-test.
-      </p>
-    </section>
-
-    <section class="mt-12 pt-8 border-t border-neutral-200">
-      <h2 class="text-2xl md:text-3xl font-semibold tracking-tight mb-4">
-        Work with Autonomy Bridge
-      </h2>
-      <p class="text-base md:text-[17px] leading-8 text-neutral-800">
-        For retained support, see <a href="/advisory" class="underline underline-offset-4">Advisory</a>.
-        For custom scoped work, see <a href="/bespoke-research" class="underline underline-offset-4">Bespoke Research</a>.
-      </p>
-      <div class="flex flex-wrap gap-3 mt-6">
-        <a
-          href="/contact"
-          class="inline-flex items-center rounded-md bg-neutral-900 px-5 py-2.5 text-sm font-semibold text-white hover:bg-neutral-700 transition-colors"
-        >
-          Book 15-min scoping call &rarr;
-        </a>
+    <!-- WHAT THE FIRM DOES -->
+    <section class="ab-section ab-section--surface">
+      <div class="ab-container">
+        <h2 class="ab-h2">What the Firm Does</h2>
+        <p class="ab-body">Autonomy Bridge produces structured research, decision frameworks, applied use cases, and bespoke analysis for automation and AI infrastructure decisions. The work is designed for questions such as:</p>
+        <ul class="ab-questions">
+          <li>Whether a deployment can recover capital under actual utilization conditions</li>
+          <li>Whether a vendor model survives beyond pilot stage</li>
+          <li>Whether workflow constraints will limit realized ROI</li>
+          <li>Whether a market entry thesis is credible at the buyer level</li>
+        </ul>
       </div>
     </section>
+
+    <!-- WHY THIS EXISTS -->
+    <section class="ab-section">
+      <div class="ab-container">
+        <h2 class="ab-h2">Why This Exists</h2>
+        <p class="ab-body">Automation decisions are often made with incomplete economic modeling, optimistic vendor assumptions, and weak visibility into failure patterns.</p>
+        <p class="ab-body" style="margin-top: 1rem;">Autonomy Bridge exists to close that gap with operator-level analysis. The unit of analysis is the actual decision being made: a warehouse investment, a vendor shortlist, a pilot-to-scale question, a pricing model, or a market-entry bet.</p>
+      </div>
+    </section>
+
+    <!-- WHAT THE FIRM IS NOT -->
+    <section class="ab-section ab-section--surface">
+      <div class="ab-container">
+        <h2 class="ab-h2">What the Firm Is Not</h2>
+        <ul class="ab-not-list">
+          <li>Not a systems integrator, implementation consultant, or staffing firm</li>
+          <li>Not a software reseller or sponsored research publisher</li>
+          <li>Does not take vendor referral fees, sponsored placements, or paid influence arrangements — that boundary exists to preserve analytical independence</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PLATFORM STRUCTURE -->
+    <section class="ab-section">
+      <div class="ab-container">
+        <h2 class="ab-h2">How the Platform Is Built</h2>
+        <p class="ab-body">The platform is structured around permanent analytical assets — designed to make concepts reusable, assumptions explicit, and decisions easier to stress-test.</p>
+        <div class="ab-platform-grid">
+          <a href="/frameworks" class="ab-platform-link">Frameworks</a>
+          <a href="/glossary" class="ab-platform-link">Glossary</a>
+          <a href="/use-cases" class="ab-platform-link">Use Cases</a>
+          <a href="/case-studies" class="ab-platform-link">Case Studies</a>
+          <a href="/bespoke-research" class="ab-platform-link">Bespoke Research</a>
+          <a href="/advisory" class="ab-platform-link">Advisory</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="ab-cta-section">
+      <div class="ab-container ab-cta-inner">
+        <div>
+          <h2 class="ab-cta-heading">Work with Autonomy Bridge</h2>
+          <p class="ab-cta-sub">For retained support, see Advisory. For custom scoped work, see Bespoke Research.</p>
+        </div>
+        <div class="ab-cta-actions">
+          <a href="/contact" class="ab-btn-primary">Book 15-min scoping call</a>
+          <a href="/advisory" class="ab-btn-outline">See Advisory</a>
+        </div>
+      </div>
+    </section>
+
   </article>
 </MainLayout>
+
+<style>
+  .ab-page { font-family: var(--font-sans); }
+
+  .ab-container {
+    max-width: 56rem;
+    margin-inline: auto;
+    padding-inline: 1.5rem;
+  }
+
+  /* ── HEADER ── */
+  .ab-header {
+    padding: 3.5rem 0 3rem;
+    border-bottom: 1px solid var(--color-border-light);
+  }
+
+  .ab-h1 {
+    font-size: clamp(2rem, 1.6rem + 1.5vw, 2.75rem);
+    font-weight: 700;
+    color: var(--color-text-primary);
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+    margin: 0 0 0.5rem;
+  }
+
+  .ab-tagline {
+    font-size: 1rem;
+    color: var(--color-text-muted);
+    font-family: var(--font-mono);
+    letter-spacing: 0.02em;
+    margin: 0 0 1.5rem;
+  }
+
+  .ab-intro {
+    font-size: 1.0625rem;
+    line-height: 1.75;
+    color: var(--color-text-secondary);
+    margin: 0;
+    text-align: justify;
+  }
+
+  /* ── SECTIONS ── */
+  .ab-section {
+    padding: 3.5rem 0;
+    border-bottom: 1px solid var(--color-border-light);
+  }
+
+  .ab-section--surface { background: var(--color-bg-surface); }
+
+  .ab-h2 {
+    font-size: 1.375rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    letter-spacing: -0.01em;
+    margin: 0 0 1.25rem;
+  }
+
+  .ab-body {
+    font-size: 0.9375rem;
+    line-height: 1.75;
+    color: var(--color-text-secondary);
+    margin: 0;
+    text-align: justify;
+  }
+
+  /* ── FOUNDER ── */
+  .ab-founder {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1.75rem;
+    align-items: start;
+  }
+
+  .ab-founder-photo {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 0.375rem;
+    overflow: hidden;
+    border: 1px solid var(--color-border-default);
+    flex-shrink: 0;
+  }
+
+  .ab-founder-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .ab-founder-name {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    margin: 0 0 0.2rem;
+  }
+
+  .ab-founder-role {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    font-family: var(--font-mono);
+    margin: 0 0 1rem;
+  }
+
+  .ab-founder-text {
+    font-size: 0.9375rem;
+    line-height: 1.75;
+    color: var(--color-text-secondary);
+    margin: 0 0 0.75rem;
+    text-align: justify;
+  }
+
+  .ab-founder-links {
+    display: flex;
+    gap: 1.25rem;
+    margin-top: 0.5rem;
+  }
+
+  .ab-founder-links a {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    text-decoration: none;
+    border-bottom: 1px solid var(--color-border-accent);
+    padding-bottom: 0.1rem;
+  }
+
+  /* ── QUESTIONS LIST ── */
+  .ab-questions {
+    list-style: none;
+    padding: 0;
+    margin: 1.25rem 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+  }
+
+  .ab-questions li {
+    font-size: 0.9375rem;
+    line-height: 1.65;
+    color: var(--color-text-secondary);
+    padding: 0.75rem 1rem;
+    background: #ffffff;
+    border-left: 2px solid var(--color-border-default);
+    border-radius: 0 0.25rem 0.25rem 0;
+  }
+
+  /* ── NOT LIST ── */
+  .ab-not-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .ab-not-list li {
+    font-size: 0.9375rem;
+    line-height: 1.7;
+    color: var(--color-text-secondary);
+    padding: 1rem 1.125rem;
+    background: #ffffff;
+    border: 1px solid var(--color-border-default);
+    border-radius: 0.375rem;
+    text-align: justify;
+  }
+
+  /* ── PLATFORM GRID ── */
+  .ab-platform-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+    margin-top: 1.25rem;
+  }
+
+  .ab-platform-link {
+    display: block;
+    padding: 0.875rem 1rem;
+    background: var(--color-bg-surface);
+    border: 1px solid var(--color-border-default);
+    border-radius: 0.375rem;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    text-decoration: none;
+    text-align: center;
+    transition: border-color 0.15s, background 0.15s;
+  }
+
+  .ab-platform-link:hover {
+    border-color: var(--color-border-accent);
+    background: #ffffff;
+  }
+
+  /* ── CTA ── */
+  .ab-cta-section {
+    background: var(--color-text-primary);
+    padding: 3rem 0;
+  }
+
+  .ab-cta-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .ab-cta-heading {
+    font-size: 1.375rem;
+    font-weight: 700;
+    color: var(--color-cta-text);
+    margin: 0 0 0.4rem;
+  }
+
+  .ab-cta-sub {
+    font-size: 0.9375rem;
+    color: #94a3b8;
+    margin: 0;
+    max-width: 40ch;
+    line-height: 1.6;
+  }
+
+  .ab-cta-actions {
+    display: flex;
+    gap: 0.75rem;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+  }
+
+  .ab-btn-primary {
+    display: inline-block;
+    padding: 0.625rem 1.25rem;
+    background: var(--color-cta-bg);
+    border: 1.5px solid var(--color-cta-border);
+    border-radius: 0.375rem;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: var(--color-cta-text);
+    text-decoration: none;
+    transition: background 0.15s, border-color 0.15s;
+  }
+
+  .ab-btn-primary:hover { background: #1e293b; border-color: #f59e0b; }
+
+  .ab-btn-outline {
+    display: inline-block;
+    padding: 0.625rem 1.25rem;
+    border: 1.5px solid #475569;
+    border-radius: 0.375rem;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: var(--color-cta-text);
+    text-decoration: none;
+    transition: border-color 0.15s;
+  }
+
+  .ab-btn-outline:hover { border-color: var(--color-cta-border); }
+
+  @media (max-width: 48rem) {
+    .ab-founder { grid-template-columns: 1fr; }
+    .ab-platform-grid { grid-template-columns: 1fr 1fr; }
+    .ab-cta-inner { flex-direction: column; align-items: flex-start; }
+  }
+</style>
