@@ -2,8 +2,8 @@
 @import "./prose.css";
 
 :root {
-  color: #111827;
-  background: #ffffff;
+  color: var(--color-text-primary);
+  background: var(--color-bg-page);
 }
 
 body {

@@ -4,14 +4,10 @@ export interface NavItem {
 }
 
 export const primaryNavItems: NavItem[] = [
-  { label: 'Home', href: '/' },
   { label: 'Insights', href: '/insights' },
   { label: 'Market Overview', href: '/market-overview' },
   { label: 'Frameworks', href: '/frameworks' },
-  { label: 'Use Cases', href: '/use-cases' },
-  { label: 'Case Studies', href: '/case-studies' },
   { label: 'Methodology', href: '/methodology' },
-  { label: 'Glossary', href: '/glossary' },
   { label: 'Advisory', href: '/advisory' },
   { label: 'Bespoke Research', href: '/bespoke-research' },
   { label: 'About', href: '/about' },

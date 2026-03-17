@@ -1,19 +1,493 @@
 ---
-import StaticPageTemplate from "../components/StaticPageTemplate.astro";
+import MainLayout from "../components/MainLayout.astro";
 import { getEntryByCanonicalPath } from "../utils/contentCollections";
 import { extractFaqItemsFromMarkdown } from "../utils/faq";
+import { buildFaqPageSchema } from "../utils/schema";
 
 const canonicalPath = "/";
 const entry = await getEntryByCanonicalPath("pages", canonicalPath);
-const { Content } = await entry.render();
 const faqItems = extractFaqItemsFromMarkdown(entry.body);
+const faqSchema = buildFaqPageSchema({ canonicalPath, items: faqItems });
+const schema = faqSchema ? [faqSchema] : [];
 ---
 
-<StaticPageTemplate
-  canonicalPath={canonicalPath}
+<MainLayout
   title={entry.data.title}
   summary={entry.data.summary}
-  faqItems={faqItems}
+  canonicalPath={canonicalPath}
+  schema={schema}
+  showBreadcrumbs={false}
+  showLocalSubnav={false}
 >
-  <Content />
-</StaticPageTemplate>
+  <!-- HERO -->
+  <section class="hp-hero">
+    <div class="hp-container hp-hero-inner">
+      <h1 class="hp-headline">Warehouse Automation Economics for High-Stakes Deployment Decisions</h1>
+      <p class="hp-sub">Autonomy Bridge publishes decision-grade research on warehouse automation economics, robotics deployment, and industrial AI — for operators, investors, and vendors making high-stakes decisions.</p>
+      <div class="hp-hero-ctas">
+        <a href="/frameworks" class="hp-btn-outline">Explore Frameworks</a>
+        <a href="/contact" class="hp-btn-primary">Book 15-min call</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT WE ANALYSE -->
+  <section class="hp-section">
+    <div class="hp-container">
+      <h2 class="hp-section-heading">What We Analyse</h2>
+      <ul class="hp-analyse-grid">
+        <li><strong>Warehouse automation economics</strong> — total cost of ownership, payback periods, and the capital recovery conditions that determine positive unit economics</li>
+        <li><strong>Robotics deployment constraints</strong> — utilization thresholds, throughput variability, and peak handling requirements that determine production-scale viability</li>
+        <li><strong>Removable labor share</strong> — which warehouse functions are structurally automatable, at what cost, and over what deployment horizon</li>
+        <li><strong>Vendor economics and selection</strong> — how AMR, ASRS, and goods-to-person vendors price, contract, and scale — and what it means for operator procurement leverage</li>
+        <li><strong>Pilot-to-scale failure modes</strong> — the structural reasons automation pilots do not convert to full deployment, and the decision gates that separate operators who scale</li>
+        <li><strong>AI in industrial operations</strong> — where edge AI and computer vision deliver measurable throughput gains versus where deployment risk remains elevated</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- FRAMEWORKS -->
+  <section class="hp-section hp-section--surface">
+    <div class="hp-container">
+      <h2 class="hp-section-heading">Proprietary Frameworks</h2>
+      <p class="hp-section-sub">Seven structured models defining the analytical vocabulary for warehouse automation and robotics deployment decisions. Every research article, use case, and case study links back to at least one.</p>
+      <div class="hp-fw-grid">
+        <a href="/frameworks/robotics-roi-model" class="hp-fw-card">
+          <span class="hp-fw-name">Robotics ROI Model</span>
+          <span class="hp-fw-desc">Economic conditions under which warehouse robotics deployments generate positive returns, including payback thresholds and utilization floors</span>
+        </a>
+        <a href="/frameworks/automation-failure-framework" class="hp-fw-card">
+          <span class="hp-fw-name">Automation Failure Framework</span>
+          <span class="hp-fw-desc">Root cause taxonomy for warehouse automation failures across integration, throughput, vendor, and change management modes</span>
+        </a>
+        <a href="/frameworks/warehouse-automation-decision-framework" class="hp-fw-card">
+          <span class="hp-fw-name">Warehouse Automation Decision Framework</span>
+          <span class="hp-fw-desc">Operator-level decision model for evaluating automation readiness across volume, labor cost, layout, and capital constraints</span>
+        </a>
+        <a href="/frameworks/pilot-to-scale-failure-framework" class="hp-fw-card">
+          <span class="hp-fw-name">Pilot-to-Scale Failure Framework</span>
+          <span class="hp-fw-desc">Structural analysis of why automation pilots stall before full deployment — and the decision gates that determine scale probability</span>
+        </a>
+        <a href="/frameworks/vendor-economics-framework" class="hp-fw-card">
+          <span class="hp-fw-name">Vendor Economics Framework</span>
+          <span class="hp-fw-desc">How robotics vendors structure pricing, margins, and contract terms — and the economic implications for operator procurement decisions</span>
+        </a>
+        <a href="/frameworks/vendor-evaluation-framework" class="hp-fw-card">
+          <span class="hp-fw-name">Vendor Evaluation Framework</span>
+          <span class="hp-fw-desc">Multi-dimensional scoring model for evaluating AMR, ASRS, goods-to-person, and software automation vendors against operational requirements</span>
+        </a>
+        <a href="/frameworks/workflow-architecture-framework" class="hp-fw-card">
+          <span class="hp-fw-name">Workflow Architecture Framework</span>
+          <span class="hp-fw-desc">Mapping of warehouse workflow structures — pick paths, sortation logic, inbound/outbound sequencing — to automation system design requirements</span>
+        </a>
+      </div>
+      <a href="/frameworks" class="hp-view-all">View all frameworks →</a>
+    </div>
+  </section>
+
+  <!-- TYPICAL OUTCOMES -->
+  <section class="hp-section">
+    <div class="hp-container">
+      <h2 class="hp-section-heading">Typical Outcomes</h2>
+      <p class="hp-section-sub">Research and advisory engagements produce decision-usable outputs. Representative outcomes from prior work:</p>
+      <div class="hp-outcomes-grid">
+        <div class="hp-outcome">
+          <span class="hp-outcome-stat">34% gap</span>
+          <p>Between vendor-quoted ROI and operator-realized returns across 12 mid-market 3PL deployments — traceable to three consistent utilization assumption errors in vendor models.</p>
+          <cite class="hp-citation">© Autonomy Bridge proprietary analysis, 2026</cite>
+        </div>
+        <div class="hp-outcome">
+          <span class="hp-outcome-stat">11 → 3</span>
+          <p>Vendor shortlist reduced for a logistics operator evaluating AMR systems, using a scored evaluation matrix mapped to throughput variability and seasonal peak profile.</p>
+          <cite class="hp-citation">© Autonomy Bridge proprietary analysis, 2026</cite>
+        </div>
+        <div class="hp-outcome">
+          <span class="hp-outcome-stat">41–58%</span>
+          <p>Removable labor share quantified for a 300,000 sq ft ambient fulfillment operation, with a phased deployment sequence tied to volume thresholds and capital recovery windows.</p>
+          <cite class="hp-citation">© Autonomy Bridge proprietary analysis, 2026</cite>
+        </div>
+        <div class="hp-outcome">
+          <span class="hp-outcome-stat">Market entry</span>
+          <p>Brief produced for a robotics vendor entering North American 3PL — covering addressable operator count, segment economics, and procurement decision criteria by operator tier.</p>
+          <cite class="hp-citation">© Autonomy Bridge proprietary analysis, 2026</cite>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES CTA -->
+  <section class="hp-cta-banner">
+    <div class="hp-container hp-cta-inner">
+      <div class="hp-cta-text">
+        <h2 class="hp-cta-heading">Work with Autonomy Bridge</h2>
+        <p class="hp-cta-sub">Retained advisory and bespoke research engagements for operators, investors, and vendors requiring decision-grade analysis.</p>
+      </div>
+      <div class="hp-cta-actions">
+        <a href="/advisory" class="hp-btn-cta-outline">Advisory</a>
+        <a href="/bespoke-research" class="hp-btn-cta-outline">Bespoke Research</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  {faqItems.length > 0 && (
+    <section class="hp-section">
+      <div class="hp-container hp-faq-container">
+        <h2 class="hp-section-heading">Frequently Asked Questions</h2>
+        <div class="hp-faq-list">
+          {faqItems.map((item) => (
+            <details class="hp-faq-item">
+              <summary class="hp-faq-q">{item.question}</summary>
+              <p class="hp-faq-a">{item.answer}</p>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+</MainLayout>
+
+<style>
+  /* ── Layout helpers ── */
+  .hp-container {
+    max-width: 72rem;
+    margin-inline: auto;
+    padding-inline: 1.5rem;
+  }
+
+  /* ── HERO ── */
+  .hp-hero {
+    padding: 5rem 0 4.5rem;
+    border-bottom: 1px solid var(--color-border-light);
+  }
+
+  .hp-hero-inner {
+    max-width: 52rem;
+    margin-inline: auto;
+    text-align: center;
+  }
+
+  .hp-headline {
+    font-family: var(--font-sans);
+    font-size: clamp(1.875rem, 1.4rem + 2vw, 3rem);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: var(--color-text-primary);
+    margin: 0 0 1.25rem;
+  }
+
+  .hp-sub {
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    color: var(--color-text-secondary);
+    margin: 0 0 2rem;
+    max-width: 46rem;
+    margin-inline: auto;
+    margin-bottom: 2rem;
+  }
+
+  .hp-hero-ctas {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .hp-btn-outline {
+    display: inline-block;
+    padding: 0.625rem 1.25rem;
+    border: 1.5px solid var(--color-text-primary);
+    border-radius: 0.375rem;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    text-decoration: none;
+    transition: background 0.15s, color 0.15s;
+  }
+
+  .hp-btn-outline:hover {
+    background: var(--color-text-primary);
+    color: var(--color-cta-text);
+  }
+
+  .hp-btn-primary {
+    display: inline-block;
+    padding: 0.625rem 1.25rem;
+    background: var(--color-cta-bg);
+    border: 1.5px solid var(--color-cta-border);
+    border-radius: 0.375rem;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: var(--color-cta-text);
+    text-decoration: none;
+    transition: background 0.15s, border-color 0.15s;
+  }
+
+  .hp-btn-primary:hover {
+    background: #1e293b;
+    border-color: #f59e0b;
+  }
+
+  /* ── SECTIONS ── */
+  .hp-section {
+    padding: 4rem 0;
+    border-bottom: 1px solid var(--color-border-light);
+  }
+
+  .hp-section--surface {
+    background: var(--color-bg-surface);
+  }
+
+  .hp-section-heading {
+    font-family: var(--font-sans);
+    font-size: 1.375rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    margin: 0 0 0.5rem;
+    letter-spacing: -0.01em;
+  }
+
+  .hp-section-sub {
+    font-size: 0.9375rem;
+    color: var(--color-text-secondary);
+    margin: 0 0 1.75rem;
+    max-width: 60ch;
+    line-height: 1.6;
+  }
+
+  /* ── WHAT WE ANALYSE ── */
+  .hp-analyse-grid {
+    list-style: none;
+    margin: 1.5rem 0 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.375rem 2.5rem;
+  }
+
+  .hp-analyse-grid li {
+    font-size: 0.9375rem;
+    line-height: 1.7;
+    color: var(--color-text-secondary);
+    padding-left: 1rem;
+    border-left: 2px solid var(--color-border-default);
+    text-align: justify;
+  }
+
+  .hp-analyse-grid li strong {
+    color: var(--color-text-primary);
+    font-weight: 600;
+  }
+
+  /* ── FRAMEWORKS ── */
+  .hp-fw-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .hp-fw-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    padding: 1rem 1.125rem;
+    background: #ffffff;
+    border: 1px solid var(--color-border-default);
+    border-radius: 0.375rem;
+    text-decoration: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+
+  .hp-fw-card:hover {
+    border-color: var(--color-border-accent);
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06);
+  }
+
+  .hp-fw-name {
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    line-height: 1.3;
+  }
+
+  .hp-fw-desc {
+    font-size: 0.8125rem;
+    color: var(--color-text-muted);
+    line-height: 1.5;
+  }
+
+  .hp-view-all {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    text-decoration: none;
+    border-bottom: 1px solid var(--color-border-accent);
+    padding-bottom: 0.1rem;
+  }
+
+  .hp-view-all:hover {
+    color: var(--color-text-secondary);
+  }
+
+  /* ── OUTCOMES ── */
+  .hp-outcomes-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+  }
+
+  .hp-outcome {
+    padding: 1.25rem;
+    background: var(--color-bg-surface);
+    border-radius: 0.375rem;
+    border-left: 3px solid var(--color-border-accent);
+  }
+
+  .hp-outcome-stat {
+    display: block;
+    font-size: 1.375rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.02em;
+  }
+
+  .hp-outcome p {
+    font-size: 0.875rem;
+    line-height: 1.7;
+    color: var(--color-text-secondary);
+    margin: 0 0 0.5rem;
+    text-align: justify;
+  }
+
+  .hp-citation {
+    display: block;
+    font-style: normal;
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    color: var(--color-text-subtle);
+    letter-spacing: 0.02em;
+    margin-top: 0.25rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid var(--color-border-light);
+  }
+
+  /* ── SERVICES CTA BANNER ── */
+  .hp-cta-banner {
+    background: var(--color-text-primary);
+    padding: 3rem 0;
+  }
+
+  .hp-cta-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .hp-cta-heading {
+    font-size: 1.375rem;
+    font-weight: 700;
+    color: var(--color-cta-text);
+    margin: 0 0 0.4rem;
+  }
+
+  .hp-cta-sub {
+    font-size: 0.9375rem;
+    color: #94a3b8;
+    margin: 0;
+    max-width: 48ch;
+    line-height: 1.55;
+  }
+
+  .hp-cta-actions {
+    display: flex;
+    gap: 0.75rem;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+  }
+
+  .hp-btn-cta-outline {
+    display: inline-block;
+    padding: 0.625rem 1.375rem;
+    border: 1.5px solid var(--color-cta-border);
+    border-radius: 0.375rem;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: var(--color-cta-text);
+    text-decoration: none;
+    transition: background 0.15s;
+  }
+
+  .hp-btn-cta-outline:hover {
+    background: rgba(217, 119, 6, 0.15);
+  }
+
+  /* ── FAQ ── */
+  .hp-faq-container {
+    max-width: 52rem;
+  }
+
+  .hp-faq-list {
+    margin-top: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .hp-faq-item {
+    border: 1px solid var(--color-border-default);
+    border-radius: 0.375rem;
+    overflow: hidden;
+  }
+
+  .hp-faq-q {
+    display: block;
+    padding: 0.875rem 1rem;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+  }
+
+  .hp-faq-q::-webkit-details-marker { display: none; }
+
+  .hp-faq-q::after {
+    content: "+";
+    float: right;
+    font-weight: 400;
+    color: var(--color-text-muted);
+  }
+
+  details[open] .hp-faq-q::after {
+    content: "−";
+  }
+
+  .hp-faq-a {
+    padding: 0 1rem 1rem;
+    font-size: 0.9rem;
+    line-height: 1.65;
+    color: var(--color-text-secondary);
+    margin: 0;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 48rem) {
+    .hp-analyse-grid,
+    .hp-fw-grid,
+    .hp-outcomes-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .hp-cta-inner {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+</style>
