@@ -192,31 +192,20 @@ Autonomy Bridge publishes seven proprietary frameworks that define the analytica
 
 ## Frequently Asked Questions
 **What is warehouse automation economics?**
+
 Warehouse automation economics quantifies the total cost of ownership, payback period, utilization floor, and labor displacement value of deploying robotics or automated systems in a warehouse. Positive unit economics require sustained utilization above a system-specific threshold — typically 70–85% for AMR fleets — and sufficient removable labor share to justify capital outlay. (Autonomy Bridge proprietary analysis, 2026)
 
 **Why do warehouse automation pilots fail to scale?**
+
 Warehouse automation pilots fail to scale when pilot environments do not replicate full-deployment conditions. Common failure modes include insufficient order volume to sustain AMR utilization targets, integration gaps between warehouse management systems (WMS) and robot fleet managers, and vendor contracts that do not align economic incentives with operator throughput outcomes. The Pilot-to-Scale Failure Framework identifies the specific decision gates that separate pilots that scale from those that stall. (Autonomy Bridge proprietary analysis, 2026)
 
 **What is removable labor share in warehouse automation?**
+
 Removable labor share is the proportion of warehouse labor hours that automation systems can structurally displace at a defined cost and within a defined deployment horizon. It varies by operation type, SKU profile, and workflow architecture. Removable labor share analysis is a prerequisite for any credible automation ROI model. (Autonomy Bridge proprietary analysis, 2026)
 
 **How do AMR and ASRS vendors structure their pricing?**
+
 AMR and ASRS vendors use three primary pricing structures: capital purchase, robotics-as-a-service (RaaS) subscription, and hybrid models combining upfront hardware costs with per-pick or per-unit fees. Each structure carries different utilization risk profiles for operators. The Vendor Economics Framework models the economic implications of each pricing structure across operator scale tiers. (Autonomy Bridge proprietary analysis, 2026)
-
----
-
-## Latest Insights
-**[Market Signal]**
-### [AMR Utilization Rates in Mid-Market 3PL: What the Numbers Actually Show](/insights/how-warehouse-robotics-economics-actually-works)
-*March 2025*
-
-**[Industry Commentary]**
-### [Why Warehouse Automation Pilots Stall: The Decision Variables Operators Aren't Tracking](/insights/why-robotics-pilots-fail-to-scale)
-*January 2025*
-
-[All insights →](/insights)
-
----
 
 ## Typical Outcomes
 Research and advisory engagements at Autonomy Bridge produce decision-usable outputs. Representative outcomes from prior work:
@@ -236,10 +225,3 @@ Research and advisory engagements at Autonomy Bridge produce decision-usable out
 | [Glossary](/glossary) | Precise definitions for 60+ terms across warehouse automation, autonomous systems, and industrial AI — each linked to source frameworks |
 | [Market Overview](/market-overview) | Quantitative context on warehouse robotics market scale, operator segments, and deployment economics |
 | [Advisory](/advisory) | Retained advisory and bespoke research engagements for operators, investors, and vendors requiring decision-grade analysis |
-
----
-
-## Footer Tagline
-**Autonomy Bridge** — Structured research on the economics of warehouse automation, robotics deployment, and industrial AI. Built for decisions, not discovery.
-
----
