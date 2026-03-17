@@ -24,15 +24,6 @@ const topLevelLabelByPath = new Map<string, string>([
   ["/sitemap", "Sitemap"],
 ]);
 
-const knowledgeHubLinks: LocalSubnavLink[] = [
-  { label: "Insights", href: "/insights" },
-  { label: "Market Overview", href: "/market-overview" },
-  { label: "Frameworks", href: "/frameworks" },
-  { label: "Use Cases", href: "/use-cases" },
-  { label: "Case Studies", href: "/case-studies" },
-  { label: "Glossary", href: "/glossary" },
-];
-
 const marketOverviewLinks: LocalSubnavLink[] = [
   { label: "Industry Landscape", href: "/market-overview/industry-landscape" },
   { label: "Technology Stack", href: "/market-overview/technology-stack" },
@@ -40,15 +31,6 @@ const marketOverviewLinks: LocalSubnavLink[] = [
   { label: "Market Segments", href: "/market-overview/market-segments" },
   { label: "Key Players", href: "/market-overview/key-players" },
 ];
-
-const knowledgeHubPaths = new Set<string>([
-  "/insights",
-  "/market-overview",
-  "/frameworks",
-  "/use-cases",
-  "/case-studies",
-  "/glossary",
-]);
 
 export function normalizePathname(pathname: string): string {
   if (!pathname || pathname === "/") {
@@ -129,13 +111,6 @@ export function getLocalSubnav(pathname: string): LocalSubnavConfig | null {
     return {
       heading: "Market Overview Sections",
       links: marketOverviewLinks,
-    };
-  }
-
-  if (knowledgeHubPaths.has(current)) {
-    return {
-      heading: "Knowledge Sections",
-      links: knowledgeHubLinks,
     };
   }
 
