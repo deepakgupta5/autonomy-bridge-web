@@ -57,6 +57,15 @@
   margin: 0;
 }
 
+.prose-surface p,
+.prose-surface li,
+.prose-surface blockquote,
+.prose-surface th,
+.prose-surface td {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
 .prose-surface ul,
 .prose-surface ol {
   font-size: var(--role-list-size);
