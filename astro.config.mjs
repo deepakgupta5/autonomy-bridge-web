@@ -67,6 +67,9 @@ function isAllowedSitemapPath(pathname) {
 export default defineConfig({
   site: 'https://www.autonomybridge.com',
   trailingSlash: 'never',
+  build: {
+    format: 'file',
+  },
   integrations: [
     sitemap({
       filter: (entry) => isAllowedSitemapPath(toPathname(entry)),

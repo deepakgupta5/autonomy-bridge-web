@@ -5,6 +5,9 @@
 [build.environment]
   NODE_VERSION = "20"
 
+[build.processing]
+  skip_processing = true
+
 [[edge_functions]]
-  function = "strip-trailing-slash"
   path = "/*"
+  function = "strip-trailing-slash"

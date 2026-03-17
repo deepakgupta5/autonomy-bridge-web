@@ -7,9 +7,35 @@ interface Props {
 }
 
 const { title, summary = "" } = Astro.props;
+
+function toCanonicalShellPath(pathname: string): string {
+  if (!pathname || pathname === "/") {
+    return "/";
+  }
+
+  const normalizedPath = pathname.endsWith("/") ? pathname.slice(0, -1) : pathname;
+
+  if (normalizedPath === "/index.html") {
+    return "/";
+  }
+
+  if (normalizedPath.endsWith("/index.html")) {
+    const trimmed = normalizedPath.slice(0, -"/index.html".length);
+    return trimmed || "/";
+  }
+
+  if (normalizedPath.endsWith(".html")) {
+    const trimmed = normalizedPath.slice(0, -".html".length);
+    return trimmed || "/";
+  }
+
+  return normalizedPath || "/";
+}
+
+const canonicalPath = toCanonicalShellPath(Astro.url.pathname);
 ---
 
-<MainLayout title={title} summary={summary} canonicalPath={Astro.url.pathname}>
+<MainLayout title={title} summary={summary} canonicalPath={canonicalPath}>
   <section class="prose-surface shell-content">
     <h1 class="type-h1">{title}</h1>
     {summary && <p class="type-body prose-intro">{summary}</p>}
