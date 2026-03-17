@@ -10,7 +10,7 @@ document:
 
 title: "Terms of Use"
 description: "Terms governing use of autonomybridge.com, including intellectual property, permitted use, prohibited use, and liability disclaimers."
-summary: "Plain-English terms of use for a B2B research consultancy website. Covers proprietary frameworks and research, prohibited scraping and resale, warranty disclaimers, and limitation of liability under Ontario law."
+summary: "Plain-English terms of use for a B2B research consultancy website. Covers proprietary frameworks and research, prohibited scraping and resale, warranty disclaimers, and limitation of liability under British Columbia law."
 
 authors:
   - id: "author_1"
@@ -34,7 +34,7 @@ keywords:
   - "prohibited use"
   - "disclaimer"
   - "limitation of liability"
-  - "Ontario law"
+  - "British Columbia law"
 
 taxonomy:
   category:
@@ -58,8 +58,8 @@ schema:
 
 entities:
   primary_topic: "Terms of Use"
-  jurisdiction: "Ontario, Canada; United States (federal)"
-  governing_law: "Laws of Ontario, Canada"
+  jurisdiction: "British Columbia, Canada; United States (federal)"
+  governing_law: "Laws of British Columbia, Canada"
 
 ai_rules:
   preserve_frontmatter: true
@@ -90,60 +90,43 @@ sections:
   - id: "limitation-of-liability"
   - id: "governing-law"
   - id: "changes"
-  - id: "contact"
 
 integrity:
   checksum_algorithm: "sha256"
   document_hash: "GENERATED_BY_PIPELINE"
 ---
 
-*Last updated: March 15, 2026 · Applies to users in Canada and the United States*
+# Terms of Use
 
-By accessing autonomybridge.com, you agree to these Terms of Use. If you don't agree, please leave the site. These terms govern your use of the website and any content on it — they do not cover client-specific engagements, which are governed by separate signed agreements.
+Last updated: March 15, 2026 · Applies to users in Canada and the United States
 
----
+By using autonomybridge.com, you agree to these Terms of Use. If you do not agree, do not use the site. These terms govern website use only. Client-specific work is governed by separate signed agreements.
 
 ## Intellectual Property
-All content on this site — including frameworks, research methodologies, written analyses, market maps, and strategic models — is the proprietary work of Autonomy Bridge. It is protected under applicable Canadian and US copyright law.
+All content on this site, including frameworks, research methodologies, written analyses, market maps, and strategic models, is proprietary to Autonomy Bridge and protected under applicable Canadian and US copyright law.
 
-The Autonomy Bridge name, logo, and associated marks are the property of Autonomy Bridge. You may not use them without prior written permission.
-
----
+The Autonomy Bridge name, logo, and related marks are owned by Autonomy Bridge. You may not use them without prior written permission.
 
 ## Permitted Use
-You may view and reference content on this site for personal or professional research purposes. You may share a link to any page. That's it.
-
----
+You may view and reference site content for personal or professional research. You may share links to pages on this site.
 
 ## Prohibited Use
-The following are expressly prohibited:
+The following are prohibited:
 
 - Copying, reproducing, or republishing site content in any format without written permission
 - Reselling, sublicensing, or commercially exploiting any content from this site
-- Scraping the site — automated or systematic extraction of content or data
+- Scraping the site, including automated or systematic extraction of content or data
 - Using site content to train AI or machine learning models
 - Misrepresenting Autonomy Bridge or attributing false statements to us
 
----
-
 ## No Warranties
-This site and its content are provided "as is." We make no warranties — express or implied — about accuracy, completeness, or fitness for any particular purpose. Market data and analysis reflect conditions at the time of writing and may become outdated.
-
----
+This site and its content are provided "as is." We make no express or implied warranties about accuracy, completeness, or fitness for a particular purpose. Market data and analysis may become outdated.
 
 ## Limitation of Liability
-To the maximum extent permitted by law, Autonomy Bridge is not liable for any direct, indirect, incidental, or consequential damages arising from your use of this site or reliance on its content. This includes, without limitation, business decisions made based on information found here.
-
----
+To the fullest extent permitted by law, Autonomy Bridge is not liable for direct, indirect, incidental, or consequential damages arising from use of this site or reliance on its content.
 
 ## Governing Law
-These terms are governed by the laws of Ontario, Canada, without regard to conflict of law principles. For US-based users, certain federal laws may also apply.
-
----
+These terms are governed by the laws of British Columbia, Canada, without regard to conflict-of-law principles. For US-based users, certain US federal laws may also apply.
 
 ## Changes to These Terms
-We may update these terms at any time. Continued use of the site after changes are posted constitutes acceptance of the updated terms. Check the "Last updated" date at the top of this page.
-
----
-
----
+We may update these terms at any time. Continued use of the site after changes are posted means you accept the updated terms.

@@ -102,68 +102,53 @@ sections:
   - id: "netlify-functional"
   - id: "opt-out"
   - id: "updates"
-  - id: "contact"
 
 integrity:
   checksum_algorithm: "sha256"
   document_hash: "GENERATED_BY_PIPELINE"
 ---
 
-*Last updated: March 15, 2026 · Applies to users in Canada and the United States*
+# Cookie Policy
 
-We've designed this site to be as low-footprint as possible. This policy explains exactly what cookies and similar tracking technologies are — or are not — used on autonomybridge.com.
+Last updated: March 15, 2026 · Applies to users in Canada and the United States
 
----
+We keep this site low-footprint. This policy explains what cookies and similar tracking technologies are used, and what is not used, on autonomybridge.com.
 
 ## What Are Cookies?
-Cookies are small text files stored in your browser when you visit a website. They can remember preferences, track behavior, or identify you across sites. We use very few of them.
-
----
+Cookies are small text files stored in your browser when you visit a site. They can remember preferences, support basic functionality, or track behavior across sites.
 
 ## Cookies We Use
 ### Analytics Cookies (if applicable)
-We may use Plausible Analytics or a similar privacy-first tool to understand aggregate traffic patterns — for example, which pages are viewed most and where visitors come from.
+We may use Plausible or a similar privacy-first analytics tool to understand aggregate traffic patterns, such as page views and referral sources.
 
 If Plausible is in use:
 
 - No personally identifiable information is collected
-- No persistent cookie is set on your device
+- No persistent cookie is set
 - No cross-site tracking occurs
 - Data is not shared with advertisers or data brokers
 
-Plausible in particular operates without cookies by default. If we switch to a different analytics tool, this policy will be updated before deployment.
-
----
+If we change analytics tooling, this policy will be updated before deployment.
 
 ## Cookies We Do Not Use
 We do not use:
 
-- Advertising or retargeting cookies (Google Ads, Meta Pixel, LinkedIn Insight Tag, or similar)
+- Advertising or retargeting cookies (for example Google Ads, Meta Pixel, LinkedIn Insight Tag, or similar)
 - Social media tracking pixels
 - Third-party behavioral profiling cookies
 - Session recording or heatmap tools that capture personal data
 
----
-
 ## Netlify and Functional Behavior
-Netlify, our hosting provider, may set a short-lived session token when you submit the contact form. This is a technical cookie used only to process your form submission. It is not used for tracking and expires when your session ends.
-
----
+Netlify, our hosting provider, may set a short-lived session token when you submit the contact form. This is for technical processing only, not tracking, and it expires when the session ends.
 
 ## How to Opt Out
-Because we do not use advertising cookies or persistent tracking, there is nothing to opt out of beyond standard browser controls. You can:
+You can manage cookies and scripts through browser-level controls:
 
-- Block all cookies in your browser settings (this will not break any site functionality)
-- Use a browser extension such as uBlock Origin to block any third-party scripts
-- Use a privacy-focused browser (Firefox, Brave) which blocks many trackers by default
+- Block all cookies in your browser settings
+- Use script-blocking extensions such as uBlock Origin
+- Use privacy-focused browsers such as Firefox or Brave
 
-If you are a Canadian resident, you have rights regarding tracking technologies under PIPEDA. If you are a California resident, CCPA rights may apply.
-
----
+Canadian residents may have rights under PIPEDA. California residents may have rights under CCPA.
 
 ## Updates to This Policy
-If we add any new tracking tools or cookies, this policy will be updated before they go live. Check the "Last updated" date at the top of this page.
-
----
-
----
+If we add any new tracking tools or cookies, this policy will be updated before those changes go live.

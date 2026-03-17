@@ -5,13 +5,34 @@ interface Props {
   canonicalPath: string;
   title: string;
   summary: string;
+  seoTitle?: string;
+  seoDescription?: string;
+  keywords?: string[];
+  robots?: string;
   showHeader?: boolean;
 }
 
-const { canonicalPath, title, summary, showHeader = true } = Astro.props;
+const {
+  canonicalPath,
+  title,
+  summary,
+  seoTitle,
+  seoDescription,
+  keywords,
+  robots,
+  showHeader = true,
+} = Astro.props;
 ---
 
-<MainLayout title={title} summary={summary} canonicalPath={canonicalPath}>
+<MainLayout
+  title={title}
+  summary={summary}
+  canonicalPath={canonicalPath}
+  seoTitle={seoTitle}
+  seoDescription={seoDescription}
+  keywords={keywords}
+  robots={robots}
+>
   <article class="prose-surface legal-page-template">
     {
       showHeader && (
@@ -22,7 +43,7 @@ const { canonicalPath, title, summary, showHeader = true } = Astro.props;
       )
     }
 
-    <section class="legal-page-body prose-surface">
+    <section class:list={["legal-page-body prose-surface", showHeader ? "with-header" : "without-header"]}>
       <slot />
     </section>
   </article>
@@ -56,5 +77,21 @@ const { canonicalPath, title, summary, showHeader = true } = Astro.props;
 
   .legal-page-body {
     margin-top: 1.5rem;
+  }
+
+  .legal-page-body.without-header {
+    margin-top: 0;
+  }
+
+  .legal-page-body h1 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .legal-page-body > p:first-of-type {
+    margin-top: 0;
+    font-size: var(--role-meta-size);
+    line-height: var(--role-tight-line);
+    color: #4b5563;
   }
 </style>
