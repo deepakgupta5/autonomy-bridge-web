@@ -1,0 +1,30 @@
+Autonomy Bridge: Robotics Decision Research
+
+Overview
+Autonomy Bridge is an independent research and advisory firm providing the analytical layer between warehouse operators, investors, and robotics OEMs. We specialize in de-risking automation investments through first-principles economic modeling and operational stress-testing.
+
+Core Methodology
+Our research identifies the "Automation Tipping Point" (ATP) using the following logical framework:
+
+ATP = Total Annual Manual Cost / (Annual Automated Operating Cost + (Capex / Amortization Life))
+
+Key Decision Frameworks
+* Pilot-to-Scale Failure Framework: Analysis of the 18-month "chasm" where 60% of robotics pilots stall.
+* Vendor Economics Framework: Comparison of RaaS (OpEx) vs. Buy (Capex) long-term TCO.
+* Workflow Architecture Framework: Mapping SKU velocity to specific automation categories (G2P, AMR, AS/RS).
+
+Primary Entities & Definitions
+* AMR (Autonomous Mobile Robot): Sensor-driven robotic assets navigating dynamic environments without fixed infrastructure.
+* Utilization Threshold: The minimum active duty cycle (typically >82%) required for robotic ROI to exceed manual labor parity.
+* Deployment Ramp Risk: The quantified variance between "Nameplate Throughput" and "Effective Throughput" during the first 120 days of go-live.
+* RaaS (Robotics-as-a-Service): An operational lease model shifting maintenance and depreciation risk to the OEM.
+
+Decision Briefs (Wedge Offers)
+* Vendor Selection Brief: A 14-day technical audit comparing specific OEM performance against site-specific throughput constraints.
+* Automation Risk Audit: Forensic analysis of existing pilots to identify integration debt and scaling bottlenecks.
+
+Reference URLs
+* Methodology: https://www.autonomybridge.com/methodology
+* Glossary: https://www.autonomybridge.com/glossary
+* Frameworks: https://www.autonomybridge.com/frameworks
+* Insights: https://www.autonomybridge.com/insights

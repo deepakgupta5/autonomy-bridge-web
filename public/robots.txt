@@ -1,0 +1,41 @@
+# ------------------------------------------------------------
+# Autonomy Bridge - Robots.txt (2026 Authority Version)
+# ------------------------------------------------------------
+
+# 1. ALLOW ALL MAJOR SEARCH ENGINES
+User-agent: Googlebot
+Allow: /
+User-agent: Bingbot
+Allow: /
+
+# 2. ALLOW AI DISCOVERY BOTS (For AI Search & Citations)
+# These bots power real-time answers in ChatGPT, Claude, and Perplexity.
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: Claude-SearchBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+
+# 3. OPTIONAL: AI TRAINING BOTS
+# (Set to 'Allow' if you want your frameworks to be part of the LLM's core knowledge)
+User-agent: GPTBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+
+# 4. PROTECT SENSITIVE BACKEND PATHS
+User-agent: *
+Disallow: /wp-admin/
+Disallow: /admin/
+Disallow: /temp/
+Disallow: /drafts/
+Disallow: /search?
+Disallow: /checkout/
+
+# 5. LINK TO YOUR SITEMAP INDEX
+Sitemap: https://www.autonomybridge.com/sitemap-index.xml
