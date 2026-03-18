@@ -43,6 +43,23 @@ const schema = faqSchema ? [...pageSchema, faqSchema] : pageSchema;
     <p class="hub-tagline">{content.intro}</p>
   </section>
 
+  {
+    hasItems ? (
+      <section class="hub-grid" aria-label={`${content.title} entries`}>
+        {content.items.map((item) => <ContentCard item={item} />)}
+      </section>
+    ) : (
+      <section class="hub-empty">
+        <p class="type-body">{content.emptyState}</p>
+      </section>
+    )
+  }
+
+  <section class="hub-cta">
+    <p class="hub-cta-text">Apply these frameworks to your deployment decision.</p>
+    <a href="/contact" class="hub-cta-link">Book 15-min scoping call</a>
+  </section>
+
   <section class="hub-body prose-surface">
     <slot />
   </section>
@@ -61,24 +78,91 @@ const schema = faqSchema ? [...pageSchema, faqSchema] : pageSchema;
       </nav>
     )
   }
-
-  <section class="hub-cta">
-    <p class="hub-cta-text">Apply these frameworks to your deployment decision.</p>
-    <a href="/contact" class="hub-cta-link">Book 15-min scoping call</a>
-  </section>
-
-  {
-    hasItems ? (
-      <section class="hub-grid" aria-label={`${content.title} entries`}>
-        {content.items.map((item) => <ContentCard item={item} />)}
-      </section>
-    ) : (
-      <section class="hub-empty">
-        <p class="type-body">{content.emptyState}</p>
-      </section>
-    )
-  }
 </MainLayout>
+
+<script>
+  // ── Hub body cleanup ─────────────────────────────────────────────────────
+  // Hub markdown bodies often open with an H2 that repeats the page H1 title,
+  // and contain an "X Index" H2 section that duplicates the card grid below.
+  // Both are redundant with the server-rendered hero + hub-grid — hide them.
+  const hubBody = document.querySelector(".hub-body");
+  if (hubBody) {
+    // 1. Hide first H2 if its text matches or is a prefix of the page H1
+    //    (e.g. H1 "X — Autonomy Bridge" vs H2 "X")
+    const pageH1Text = document.querySelector(".hub-intro h1")?.textContent?.trim() ?? "";
+    const firstH2 = hubBody.querySelector("h2");
+    const firstH2Text = firstH2?.textContent?.trim() ?? "";
+    if (firstH2 && pageH1Text && (firstH2Text === pageH1Text || pageH1Text.startsWith(firstH2Text))) {
+      firstH2.style.display = "none";
+    }
+
+    // 2. Hide H2s whose text ends with "Index" and all their following siblings
+    //    until the next H2 (which starts the next real section).
+    let inIndex = false;
+    Array.from(hubBody.children).forEach((child) => {
+      const tag = child.tagName ?? "";
+      const text = (child.textContent ?? "").trim();
+      if (tag === "H2") {
+        if (text.endsWith("Index")) {
+          inIndex = true;
+          child.style.display = "none";
+          return;
+        }
+        // A new H2 that is NOT an index header closes the suppression window
+        if (inIndex) { inIndex = false; return; }
+      }
+      if (inIndex) { child.style.display = "none"; }
+    });
+
+    // 3. Hide cross-hub nav paragraphs (e.g. "Home · Market Overview · Glossary")
+    hubBody.querySelectorAll("p").forEach((p) => {
+      const txt = (p.textContent ?? "").trim();
+      if (/^Home\s*·/.test(txt)) { p.style.display = "none"; }
+    });
+
+    // 4. Structure FAQ Q&A pairs (same pattern as detail page Transform 7)
+    let inFaq = false;
+    Array.from(hubBody.children).forEach((child) => {
+      const tag = child.tagName ?? "";
+      const text = (child.textContent ?? "").trim();
+      if (tag === "H2" && text.toLowerCase().startsWith("frequently asked")) {
+        inFaq = true;
+        return;
+      }
+      if (tag === "H2" && inFaq) { inFaq = false; return; }
+      if (!inFaq || tag !== "P") return;
+
+      const firstEl = child.firstElementChild;
+      if (!firstEl || firstEl.tagName !== "STRONG") return;
+
+      const wrapper = document.createElement("div");
+      wrapper.className = "faq-qa-pair";
+
+      const qEl = document.createElement("div");
+      qEl.className = "faq-q";
+      qEl.textContent = firstEl.textContent ?? "";
+
+      const aEl = document.createElement("div");
+      aEl.className = "faq-a";
+
+      let afterStrong = false;
+      child.childNodes.forEach((node) => {
+        if (afterStrong) {
+          if (node.nodeType === Node.TEXT_NODE) {
+            aEl.appendChild(document.createTextNode(node.textContent ?? ""));
+          } else if (node.nodeType === Node.ELEMENT_NODE) {
+            aEl.appendChild(node.cloneNode(true));
+          }
+        }
+        if (node === firstEl) afterStrong = true;
+      });
+
+      wrapper.appendChild(qEl);
+      if (aEl.textContent?.trim()) wrapper.appendChild(aEl);
+      child.replaceWith(wrapper);
+    });
+  }
+</script>
 
 <style>
   /* ── Hero ──────────────────────────────────── */
@@ -92,9 +176,9 @@ const schema = faqSchema ? [...pageSchema, faqSchema] : pageSchema;
   }
 
   .hub-tagline {
-    font-family: var(--font-mono);
-    font-size: var(--text-sm);
-    line-height: 1.8;
+    font-family: var(--font-sans);
+    font-size: var(--text-base);
+    line-height: 1.7;
     color: var(--color-text-secondary);
     margin: 0;
     max-width: 58ch;
@@ -103,6 +187,7 @@ const schema = faqSchema ? [...pageSchema, faqSchema] : pageSchema;
   /* ── Prose body ─────────────────────────────── */
   .hub-body {
     margin-bottom: 2.5rem;
+    background: transparent;
   }
 
   /* Visual separator between major H2 blocks inside hub-body prose */
@@ -118,13 +203,29 @@ const schema = faqSchema ? [...pageSchema, faqSchema] : pageSchema;
     margin-top: 1rem;
   }
 
-  /* FAQ items: more breathing room */
-  .hub-body :global(.faq-item + .faq-item) {
-    margin-top: 1.75rem;
+  /* FAQ Q&A pairs */
+  .hub-body :global(.faq-qa-pair) {
+    padding: 1.25rem 0;
+    border-top: 1px solid var(--color-border-light);
   }
 
-  .hub-body :global(.faq-block) {
-    margin-top: 2.5rem;
+  .hub-body :global(.faq-qa-pair:first-of-type) {
+    border-top: none;
+    padding-top: 0;
+  }
+
+  .hub-body :global(.faq-q) {
+    font-weight: var(--weight-semibold);
+    font-size: var(--text-base);
+    color: var(--color-text-primary);
+    margin-bottom: 0.5rem;
+    line-height: 1.45;
+  }
+
+  .hub-body :global(.faq-a) {
+    font-size: var(--text-sm);
+    line-height: 1.8;
+    color: var(--color-text-secondary);
   }
 
   /* ── Quick-jump pills ───────────────────────── */

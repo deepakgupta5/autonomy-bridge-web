@@ -120,12 +120,12 @@ const frameworkRelationshipSeed: Record<FrameworkSlug, RelationshipSeed> = {
   },
   "pilot-to-scale-failure-framework": {
     relatedInsights: ["why-robotics-pilots-fail-to-scale"],
-    relatedUseCases: [],
+    relatedUseCases: ["warehouse-automation-roi-evaluation"],
     relatedCaseStudies: ["vendor-deployment-viability-assessment"],
   },
   "vendor-economics-framework": {
     relatedInsights: ["how-warehouse-operators-evaluate-robotics-vendors"],
-    relatedUseCases: [],
+    relatedUseCases: ["goods-to-person-system-evaluation"],
     relatedCaseStudies: [
       "robotics-pricing-strategy-research",
       "robotics-market-entry-decision-analysis",
@@ -136,7 +136,7 @@ const frameworkRelationshipSeed: Record<FrameworkSlug, RelationshipSeed> = {
       "how-warehouse-operators-evaluate-robotics-vendors",
       "why-mid-market-operators-struggle-to-evaluate-warehouse-robotics",
     ],
-    relatedUseCases: [],
+    relatedUseCases: ["amr-deployment-evaluation"],
     relatedCaseStudies: [
       "vendor-deployment-viability-assessment",
       "robotics-market-entry-decision-analysis",

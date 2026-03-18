@@ -112,8 +112,19 @@ const schema = faqSchema ? [detailSchema, faqSchema] : [detailSchema];
 
     <!-- ── Dark CTA banner ───────────────────────── -->
     <section class="detail-cta">
-      <p class="detail-cta-text">Apply this framework to your deployment decision.</p>
-      <a href="/contact" class="detail-cta-link">Book 15-min scoping call</a>
+      <p class="detail-cta-text">
+        {schemaKind === "framework"
+          ? "Apply this framework to your deployment decision."
+          : schemaKind === "caseStudy"
+          ? "Apply these findings to your deployment decision."
+          : "Apply this research to your deployment decision."}
+      </p>
+      <div class="detail-cta-actions">
+        {schemaKind === "caseStudy" && (
+          <a href="/advisory" class="detail-cta-secondary">See advisory scope →</a>
+        )}
+        <a href="/contact" class="detail-cta-link">Book 15-min scoping call</a>
+      </div>
     </section>
 
     <!-- ── Related content ──────────────────────── -->
@@ -247,6 +258,111 @@ const schema = faqSchema ? [detailSchema, faqSchema] : [detailSchema];
     }
   });
 
+  // ── 5. Hide duplicate H1 (markdown title duplicates hero) ─────────────────
+  // The markdown body often starts with # Title {#anchor}. After transform 1
+  // strips the anchor text, the H1 still duplicates the hero heading.
+  const firstBodyH1 = body.querySelector("h1");
+  if (firstBodyH1) {
+    firstBodyH1.style.display = "none";
+  }
+
+  // ── 6. Hide :::directive::: blocks ─────────────────────────────────────
+  // Handles :::ai-contract, :::hard-truth, :::logic-block etc.
+  // Some blocks are self-contained (one paragraph). Others have list items
+  // that the markdown parser breaks into a <ul>, so we track open/close.
+  let inDirective = false;
+  Array.from(body.children).forEach((child) => {
+    const txt = (child.textContent ?? "").trim();
+    const isOpeningDirective = child.tagName === "P" && /^:::[a-z]/.test(txt);
+    const isClosingDirective = child.tagName === "P" && txt === ":::";
+
+    if (inDirective) {
+      child.style.display = "none";
+      if (isClosingDirective) inDirective = false;
+      return;
+    }
+
+    if (isOpeningDirective) {
+      child.style.display = "none";
+      // Self-contained if the paragraph already ends with ::: (no breakout children).
+      // Otherwise track until we hit the standalone ::: closing paragraph.
+      if (!txt.endsWith(":::")) inDirective = true;
+      return;
+    }
+  });
+
+  // ── 7. Structure FAQ Q&A pairs ──────────────────────────────────────────
+  // Markdown FAQ format: **Question?** followed by answer text in the same <p>.
+  // Find the FAQ H2, then wrap each bold-question paragraph as a styled pair.
+  let inFaq = false;
+  Array.from(body.children).forEach((child) => {
+    const tag = child.tagName;
+    const text = child.textContent?.trim() ?? "";
+
+    if (tag === "H2" && text.toLowerCase().startsWith("frequently asked")) {
+      inFaq = true;
+      return;
+    }
+    if (tag === "H2" && inFaq) {
+      inFaq = false;
+      return;
+    }
+    if (!inFaq || tag !== "P") return;
+
+    // Check if first child is <strong> (the question)
+    const firstEl = child.firstElementChild;
+    if (!firstEl || firstEl.tagName !== "STRONG") return;
+
+    const wrapper = document.createElement("div");
+    wrapper.className = "faq-qa-pair";
+
+    const qEl = document.createElement("div");
+    qEl.className = "faq-q";
+    qEl.textContent = firstEl.textContent ?? "";
+
+    const aEl = document.createElement("div");
+    aEl.className = "faq-a";
+
+    // Collect everything after the <strong> in this paragraph
+    let afterStrong = false;
+    child.childNodes.forEach((node) => {
+      if (afterStrong) {
+        if (node.nodeType === Node.TEXT_NODE) {
+          aEl.appendChild(document.createTextNode(node.textContent ?? ""));
+        } else if (node.nodeType === Node.ELEMENT_NODE) {
+          aEl.appendChild(node.cloneNode(true));
+        }
+      }
+      if (node === firstEl) afterStrong = true;
+    });
+
+    wrapper.appendChild(qEl);
+    if (aEl.textContent?.trim()) wrapper.appendChild(aEl);
+    child.replaceWith(wrapper);
+  });
+
+  // ── 8. Hide hub back-link and related-list paragraphs ───────────────────
+  // Hides: "[All Insights →]", "**Framework hub:** ...", and inline "Related
+  // case studies:", "Related frameworks:", "Glossary terms:" link paragraphs
+  // that are redundant with the structured Related Content / pill nav.
+  body.querySelectorAll("p").forEach((p) => {
+    const txt = (p.textContent ?? "").trim();
+    if (/^All .+ →$/.test(txt)) { p.style.display = "none"; return; }
+    if (/^(Framework|Insights|Use Cases|Case Studies) hub:/.test(txt)) { p.style.display = "none"; return; }
+    if (/^(Related case studies|Related frameworks|Related insights|Related use cases?|Glossary terms?):/.test(txt)) { p.style.display = "none"; }
+  });
+
+  // ── 9. Hide JSON-LD code blocks (schema.org data embedded in markdown) ───
+  // Case study (and some other) markdown files embed a ```json schema block
+  // at the bottom. The server already builds structured data in <head>;
+  // the markdown version renders as a visible <pre> — hide it.
+  body.querySelectorAll("pre").forEach((pre) => {
+    const text = (pre.textContent ?? "").trim();
+    if (text.startsWith("{") && text.includes('"@context"')) {
+      pre.style.display = "none";
+    }
+  });
+
   // ── 4. Style "(Autonomy Bridge proprietary analysis, ...)" citations ─────
   const CITATION_RE = /(\(Autonomy Bridge proprietary analysis[^)]*\))/g;
 
@@ -312,9 +428,9 @@ const schema = faqSchema ? [detailSchema, faqSchema] : [detailSchema];
   }
 
   .detail-tagline {
-    font-family: var(--font-mono);
-    font-size: var(--text-sm);
-    line-height: 1.8;
+    font-family: var(--font-sans);
+    font-size: var(--text-base);
+    line-height: 1.7;
     color: var(--color-text-secondary);
     margin: 0;
     max-width: 62ch;
@@ -379,6 +495,26 @@ const schema = faqSchema ? [detailSchema, faqSchema] : [detailSchema];
 
   .detail-cta-link:hover {
     background: rgba(217, 119, 6, 0.15);
+  }
+
+  .detail-cta-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .detail-cta-secondary {
+    font-size: var(--text-sm);
+    color: var(--color-cta-text);
+    opacity: 0.7;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: opacity 0.15s;
+  }
+
+  .detail-cta-secondary:hover {
+    opacity: 1;
   }
 
   /* ── Related / semantic pills ────────────────── */
@@ -475,6 +611,30 @@ const schema = faqSchema ? [detailSchema, faqSchema] : [detailSchema];
   /* List item spacing */
   .detail-body :global(li + li) {
     margin-top: 0.5rem;
+  }
+
+  /* FAQ Q&A pairs */
+  .detail-body :global(.faq-qa-pair) {
+    padding: 1.25rem 0;
+    border-top: 1px solid var(--color-border-light);
+  }
+
+  .detail-body :global(.faq-qa-pair:last-of-type) {
+    padding-bottom: 0;
+  }
+
+  .detail-body :global(.faq-q) {
+    font-weight: var(--weight-semibold);
+    font-size: var(--text-base);
+    color: var(--color-text-primary);
+    margin-bottom: 0.5rem;
+    line-height: 1.45;
+  }
+
+  .detail-body :global(.faq-a) {
+    font-size: var(--text-sm);
+    line-height: 1.8;
+    color: var(--color-text-secondary);
   }
 
   /* Proprietary analysis citations */

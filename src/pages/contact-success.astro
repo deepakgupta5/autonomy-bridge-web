@@ -13,34 +13,62 @@ const summary = "Your enquiry has been submitted.";
   seoTitle="Enquiry Received | Autonomy Bridge"
   robots="noindex,nofollow"
 >
-  <article class="max-w-[640px] mx-auto px-6 py-16 md:py-24">
-    <h1 class="text-4xl md:text-5xl font-semibold tracking-tight mb-4">Enquiry received.</h1>
-    <p class="text-base md:text-[17px] leading-8 text-neutral-800 mt-4">
+  <article class="success-page">
+    <h1 class="type-h1">Enquiry received.</h1>
+    <p>
       All enquiries are reviewed within two business days. If the work is a fit, you will hear back
       with a short scoping call request.
     </p>
-    <p class="text-base md:text-[17px] leading-8 text-neutral-800 mt-4">
-      If the question falls outside current scope or capacity, you will be told directly.
-    </p>
-    <div class="mt-10 flex flex-wrap gap-4">
-      <a
-        href="/advisory"
-        class="inline-flex items-center rounded-md border border-neutral-300 bg-white px-4 py-2 text-sm font-semibold text-neutral-900 hover:bg-neutral-50"
-      >
-        Advisory &rarr;
-      </a>
-      <a
-        href="/frameworks"
-        class="inline-flex items-center rounded-md border border-neutral-300 bg-white px-4 py-2 text-sm font-semibold text-neutral-900 hover:bg-neutral-50"
-      >
-        Browse Frameworks &rarr;
-      </a>
-      <a
-        href="/"
-        class="inline-flex items-center rounded-md border border-neutral-300 bg-white px-4 py-2 text-sm font-semibold text-neutral-900 hover:bg-neutral-50"
-      >
-        Home
-      </a>
+    <p>If the question falls outside current scope or capacity, you will be told directly.</p>
+    <div class="success-actions">
+      <a href="/advisory" class="success-link">Advisory &rarr;</a>
+      <a href="/frameworks" class="success-link">Browse Frameworks &rarr;</a>
+      <a href="/" class="success-link">Home</a>
     </div>
   </article>
 </MainLayout>
+
+<style>
+  .success-page {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem 5rem;
+    font-family: var(--font-sans);
+    font-size: var(--text-base);
+    line-height: 1.7;
+    color: var(--color-text-secondary);
+  }
+
+  .success-page :global(h1) {
+    margin-bottom: 1.25rem;
+  }
+
+  .success-page p + p {
+    margin-top: 1rem;
+  }
+
+  .success-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 2.5rem;
+  }
+
+  .success-link {
+    display: inline-block;
+    padding: 0.5rem 1.1rem;
+    border: 1px solid var(--color-border-default);
+    border-radius: 4px;
+    font-size: var(--text-sm);
+    font-weight: var(--weight-semibold);
+    color: var(--color-text-primary);
+    text-decoration: none;
+    background: var(--color-bg-page);
+    transition: border-color 0.15s, background 0.15s;
+  }
+
+  .success-link:hover {
+    border-color: var(--color-border-strong);
+    background: var(--color-bg-surface);
+  }
+</style>
