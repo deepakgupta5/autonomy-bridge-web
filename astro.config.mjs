@@ -70,6 +70,9 @@ export default defineConfig({
   build: {
     format: 'file',
   },
+  markdown: {
+    syntaxHighlight: false,
+  },
   integrations: [
     sitemap({
       filter: (entry) => isAllowedSitemapPath(toPathname(entry)),

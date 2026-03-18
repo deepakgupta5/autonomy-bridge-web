@@ -1,6 +1,5 @@
 ---
 import MainLayout from "./MainLayout.astro";
-import Figure from "./Figure.astro";
 import type { DiagramAsset } from "../data/diagramAssetMap";
 import { getRelatedContentContext } from "../utils/relatedContent";
 import {
@@ -93,90 +92,36 @@ const faqSchema = buildFaqPageSchema({
   items: faqItems,
 });
 const schema = faqSchema ? [detailSchema, faqSchema] : [detailSchema];
-
-function splitDiagramClusters(allDiagrams: DiagramAsset[]): [DiagramAsset[], DiagramAsset[], DiagramAsset[]] {
-  if (allDiagrams.length === 0) {
-    return [[], [], []];
-  }
-
-  const firstCut = Math.ceil(allDiagrams.length / 3);
-  const remainingAfterFirst = allDiagrams.length - firstCut;
-  const secondCut = firstCut + Math.ceil(remainingAfterFirst / 2);
-
-  return [
-    allDiagrams.slice(0, firstCut),
-    allDiagrams.slice(firstCut, secondCut),
-    allDiagrams.slice(secondCut),
-  ];
-}
-
-const isFrameworkDetail = schemaKind === "framework";
-const [topDiagramCluster, middleDiagramCluster, lowerDiagramCluster] = splitDiagramClusters(diagrams);
 ---
 
 <MainLayout title={title} summary={summary} canonicalPath={canonicalPath} schema={schema}>
   <article class="prose-surface detail-template">
+
+    <!-- ── Hero header ─────────────────────────── -->
     <header class="detail-header">
+      <p class="detail-eyebrow type-eyebrow">{contentTypeLabel}</p>
       <h1 class="type-h1">{title}</h1>
-      <p class="type-body prose-intro">{summary}</p>
-      <p class="type-meta">Content Type: {contentTypeLabel}</p>
+      <p class="detail-tagline">{summary}</p>
     </header>
 
-    {
-      isFrameworkDetail && topDiagramCluster.length > 0 && (
-        <section class="diagram-cluster">
-          <h2 class="type-h2">Framework Diagrams</h2>
-          <ol class="diagram-list">
-            {topDiagramCluster.map((diagram) => (
-              <li>
-                <Figure
-                  id={`${slug}-diagram-${diagram.diagramOrder}`}
-                  src={diagram.publicPath}
-                  alt={diagram.caption}
-                  caption={diagram.caption}
-                  width={diagram.width}
-                  height={diagram.height}
-                  loading="lazy"
-                />
-              </li>
-            ))}
-          </ol>
-        </section>
-      )
-    }
-
+    <!-- ── Body prose ────────────────────────────── -->
+    <!-- Diagrams are injected inline by the client script below -->
     <section class="detail-body prose-surface">
       <slot />
     </section>
 
-    {
-      isFrameworkDetail && middleDiagramCluster.length > 0 && (
-        <section class="diagram-cluster">
-          <h2 class="type-h2">More Framework Diagrams</h2>
-          <ol class="diagram-list">
-            {middleDiagramCluster.map((diagram) => (
-              <li>
-                <Figure
-                  id={`${slug}-diagram-${diagram.diagramOrder}`}
-                  src={diagram.publicPath}
-                  alt={diagram.caption}
-                  caption={diagram.caption}
-                  width={diagram.width}
-                  height={diagram.height}
-                  loading="lazy"
-                />
-              </li>
-            ))}
-          </ol>
-        </section>
-      )
-    }
+    <!-- ── Dark CTA banner ───────────────────────── -->
+    <section class="detail-cta">
+      <p class="detail-cta-text">Apply this framework to your deployment decision.</p>
+      <a href="/contact" class="detail-cta-link">Book 15-min scoping call</a>
+    </section>
 
+    <!-- ── Related content ──────────────────────── -->
     {
       relatedContext.lateralRelated.length > 0 && (
         <section class="related-content">
           <h2 class="type-h2">Related Content</h2>
-          <ul class="type-list related-links">
+          <ul class="related-pills">
             {relatedContext.lateralRelated.map((link) => (
               <li>
                 <a href={link.canonicalPath}>{link.title}</a>
@@ -187,15 +132,15 @@ const [topDiagramCluster, middleDiagramCluster, lowerDiagramCluster] = splitDiag
       )
     }
 
+    <!-- ── Semantic links ────────────────────────── -->
     {
       (relatedContext.semanticFrameworkLinks.length > 0 ||
         relatedContext.semanticGlossaryLinks.length > 0) && (
         <section class="semantic-links">
-          <h2 class="type-h2">Semantic Links</h2>
           {relatedContext.semanticFrameworkLinks.length > 0 && (
             <>
-              <h3 class="type-h3">Related Frameworks</h3>
-              <ul class="type-list related-links">
+              <h2 class="type-h2">Related Frameworks</h2>
+              <ul class="related-pills">
                 {relatedContext.semanticFrameworkLinks.map((link) => (
                   <li>
                     <a href={link.canonicalPath}>{link.title}</a>
@@ -206,8 +151,8 @@ const [topDiagramCluster, middleDiagramCluster, lowerDiagramCluster] = splitDiag
           )}
           {relatedContext.semanticGlossaryLinks.length > 0 && (
             <>
-              <h3 class="type-h3">Related Glossary Terms</h3>
-              <ul class="type-list related-links">
+              <h2 class="type-h2">Related Glossary Terms</h2>
+              <ul class="related-pills">
                 {relatedContext.semanticGlossaryLinks.map((link) => (
                   <li>
                     <a href={link.canonicalPath}>{link.title}</a>
@@ -219,72 +164,325 @@ const [topDiagramCluster, middleDiagramCluster, lowerDiagramCluster] = splitDiag
         </section>
       )
     }
-
-    {
-      isFrameworkDetail && lowerDiagramCluster.length > 0 && (
-        <section class="diagram-cluster">
-          <h2 class="type-h2">Additional Framework Diagrams</h2>
-          <ol class="diagram-list">
-            {lowerDiagramCluster.map((diagram) => (
-              <li>
-                <Figure
-                  id={`${slug}-diagram-${diagram.diagramOrder}`}
-                  src={diagram.publicPath}
-                  alt={diagram.caption}
-                  caption={diagram.caption}
-                  width={diagram.width}
-                  height={diagram.height}
-                  loading="lazy"
-                />
-              </li>
-            ))}
-          </ol>
-        </section>
-      )
-    }
   </article>
 </MainLayout>
 
+<!--
+  Client-side content transforms:
+  1. Strip {#anchor-id} text rendered literally by markdown parser
+  2. Replace [NO VISIBLE IMAGE] placeholders with actual inline figures
+  3. Hide Appendix sections (build-time metadata not intended for display)
+-->
+<script define:vars={{ diagrams }}>
+  const body = document.querySelector(".detail-body");
+  if (!body) return;
+
+  // ── 1. Strip {#anchor} text from all headings ──────────────────────────
+  body.querySelectorAll("h1, h2, h3, h4, h5").forEach((heading) => {
+    heading.childNodes.forEach((node) => {
+      if (node.nodeType === Node.TEXT_NODE) {
+        node.textContent = node.textContent?.replace(/\s*\{#[^}]+\}$/, "") ?? "";
+      }
+    });
+  });
+
+  // ── 2. Inline diagrams at [NO VISIBLE IMAGE] positions ─────────────────
+  // Build a map: fig_1 → diagram, fig_2 → diagram, ...
+  const figMap = new Map(
+    diagrams.map((d) => [`fig_${d.diagramOrder}`, d])
+  );
+
+  body.querySelectorAll("p").forEach((p) => {
+    const text = p.textContent?.trim() ?? "";
+    if (!text.startsWith("[NO VISIBLE IMAGE")) return;
+
+    const match = text.match(/\bfig_(\d+)\b/i);
+    if (match) {
+      const figKey = `fig_${match[1]}`;
+      const diagram = figMap.get(figKey);
+      if (diagram) {
+        const figure = document.createElement("figure");
+        figure.className = "inline-diagram";
+
+        const img = document.createElement("img");
+        img.src = diagram.publicPath;
+        img.alt = diagram.caption;
+        img.width = diagram.width;
+        img.height = diagram.height;
+        img.loading = "lazy";
+        img.decoding = "async";
+
+        const caption = document.createElement("figcaption");
+        caption.className = "type-caption";
+        caption.textContent = diagram.caption;
+
+        figure.appendChild(img);
+        figure.appendChild(caption);
+        p.replaceWith(figure);
+      } else {
+        // Diagram data not found — hide the placeholder
+        p.style.display = "none";
+      }
+    } else {
+      // No fig_N match — hide the placeholder
+      p.style.display = "none";
+    }
+  });
+
+  // ── 3. Hide Appendix sections (build-time metadata) ────────────────────
+  // Walk children: once we hit an H2 whose text starts with "Appendix", hide
+  // it and all following siblings to the end of the body.
+  let appendixFound = false;
+  Array.from(body.children).forEach((child) => {
+    if (appendixFound) {
+      child.style.display = "none";
+      return;
+    }
+    if (
+      child.tagName === "H2" &&
+      child.textContent?.trim().startsWith("Appendix")
+    ) {
+      appendixFound = true;
+      child.style.display = "none";
+    }
+  });
+
+  // ── 4. Style "(Autonomy Bridge proprietary analysis, ...)" citations ─────
+  const CITATION_RE = /(\(Autonomy Bridge proprietary analysis[^)]*\))/g;
+
+  function wrapCitationsInNode(node) {
+    if (node.nodeType === Node.TEXT_NODE) {
+      const text = node.textContent ?? "";
+      if (!CITATION_RE.test(text)) return;
+      CITATION_RE.lastIndex = 0;
+      const parts = [];
+      let lastIndex = 0;
+      let match;
+      while ((match = CITATION_RE.exec(text)) !== null) {
+        if (match.index > lastIndex) {
+          parts.push(document.createTextNode(text.slice(lastIndex, match.index)));
+        }
+        const cite = document.createElement("cite");
+        cite.className = "ab-citation";
+        cite.textContent = match[1];
+        parts.push(cite);
+        lastIndex = match.index + match[0].length;
+      }
+      if (lastIndex < text.length) {
+        parts.push(document.createTextNode(text.slice(lastIndex)));
+      }
+      const frag = document.createDocumentFragment();
+      parts.forEach((p) => frag.appendChild(p));
+      node.replaceWith(frag);
+    } else if (node.nodeType === Node.ELEMENT_NODE && node.nodeName !== "SCRIPT" && node.nodeName !== "STYLE") {
+      Array.from(node.childNodes).forEach(wrapCitationsInNode);
+    }
+  }
+
+  wrapCitationsInNode(body);
+</script>
+
 <style>
+  /* ── Layout ──────────────────────────────────── */
   .detail-template {
     max-width: 78ch;
     margin-inline: auto;
   }
 
+  .detail-template section + section {
+    margin-top: 2.5rem;
+  }
+
+  /* ── Hero header ─────────────────────────────── */
   .detail-header {
-    padding: 0 0 1.5rem;
-    border-bottom: 0.0625rem solid #e5e7eb;
+    padding: 0.5rem 0 2rem;
+    border-bottom: 0.0625rem solid var(--color-border-light);
     margin-bottom: 0.5rem;
   }
 
-  .detail-header h1 {
-    margin: 0 0 0.5rem;
+  .detail-eyebrow {
+    color: var(--color-text-accent);
+    margin: 0 0 0.6rem;
+    letter-spacing: 0.08em;
   }
 
-  .detail-header p {
+  .detail-header :global(h1) {
+    margin: 0 0 0.85rem;
+    line-height: 1.25;
+  }
+
+  .detail-tagline {
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+    line-height: 1.8;
+    color: var(--color-text-secondary);
+    margin: 0;
+    max-width: 62ch;
+  }
+
+  /* ── Inline diagrams (injected by script) ────── */
+  .detail-body :global(.inline-diagram) {
+    margin: 2rem 0;
+    border: 1px solid var(--color-border-light);
+    border-radius: 6px;
+    overflow: hidden;
+    background: var(--color-bg-page);
+  }
+
+  .detail-body :global(.inline-diagram img) {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .detail-body :global(.inline-diagram figcaption) {
+    padding: 0.5rem 0.75rem;
+    background: var(--color-bg-surface);
+    color: var(--color-text-muted);
+    border-top: 1px solid var(--color-border-light);
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+  }
+
+  /* ── Dark CTA banner ─────────────────────────── */
+  .detail-cta {
+    background: var(--color-cta-bg);
+    border-top: 3px solid var(--color-cta-border);
+    border-radius: 6px;
+    padding: 1.75rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .detail-cta-text {
+    color: var(--color-cta-text);
+    font-size: var(--text-base);
+    opacity: 0.85;
     margin: 0;
   }
 
-  .detail-header p + p {
-    margin-top: 0.4rem;
+  .detail-cta-link {
+    display: inline-block;
+    border: 1px solid var(--color-cta-border);
+    color: var(--color-cta-text);
+    padding: 0.55rem 1.25rem;
+    border-radius: 4px;
+    font-size: var(--text-sm);
+    font-weight: var(--weight-semibold);
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.15s;
   }
 
-  .detail-template section + section {
-    margin-top: 1.5rem;
+  .detail-cta-link:hover {
+    background: rgba(217, 119, 6, 0.15);
   }
 
-  .related-links {
-    margin: 0.5rem 0 0;
-    padding-left: 1.25rem;
-  }
-
-  .related-links li + li {
-    margin-top: 0.4rem;
-  }
-
-  .diagram-list {
+  /* ── Related / semantic pills ────────────────── */
+  .related-pills {
     list-style: none;
-    margin: 0;
+    margin: 0.75rem 0 0;
     padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .related-pills a {
+    display: inline-block;
+    padding: 0.3rem 0.85rem;
+    border: 1px solid var(--color-border-default);
+    border-radius: 999px;
+    font-size: var(--text-sm);
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    background: var(--color-bg-page);
+    transition: border-color 0.15s, color 0.15s;
+  }
+
+  .related-pills a:hover {
+    border-color: var(--color-border-accent);
+    color: var(--color-text-accent);
+  }
+
+  /* ── Detail body prose overrides ─────────────── */
+
+  /* Blockquotes → amber callout (Key Finding) */
+  .detail-body :global(blockquote) {
+    border-left: 0.25rem solid var(--color-border-accent);
+    background: var(--color-bg-accent);
+    padding: 1rem 1.25rem;
+    border-radius: 0 4px 4px 0;
+    margin: 1.5rem 0;
+  }
+
+  /* Code blocks → formula / machine-logic display */
+  .detail-body :global(pre) {
+    background: var(--color-bg-surface);
+    border: 1px solid var(--color-border-light);
+    border-left: 3px solid var(--color-border-default);
+    border-radius: 4px;
+    padding: 1rem 1.25rem;
+    overflow-x: auto;
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+    line-height: 1.65;
+    margin: 1.25rem 0;
+  }
+
+  .detail-body :global(pre code) {
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: inherit;
+  }
+
+  /* Tables → readable padding + monospace headers */
+  .detail-body :global(th) {
+    background: var(--color-bg-surface);
+    font-weight: var(--weight-semibold);
+    padding: 0.65rem 0.85rem;
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .detail-body :global(td) {
+    padding: 0.6rem 0.85rem;
+    vertical-align: top;
+  }
+
+  /* HR separators */
+  .detail-body :global(hr) {
+    border: none;
+    border-top: 1px solid var(--color-border-light);
+    margin: 2.5rem 0;
+  }
+
+  /* Heading spacing inside body */
+  .detail-body :global(h2) {
+    margin-top: 2.5rem;
+  }
+
+  .detail-body :global(h3) {
+    margin-top: 1.75rem;
+  }
+
+  /* List item spacing */
+  .detail-body :global(li + li) {
+    margin-top: 0.5rem;
+  }
+
+  /* Proprietary analysis citations */
+  .detail-body :global(.ab-citation) {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    color: var(--color-text-subtle);
+    font-style: normal;
+    letter-spacing: 0.01em;
   }
 </style>

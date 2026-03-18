@@ -38,9 +38,9 @@ const schema = faqSchema ? [...pageSchema, faqSchema] : pageSchema;
   canonicalPath={canonicalPath}
   schema={schema}
 >
-  <section class="hub-intro prose-surface">
+  <section class="hub-intro">
     <h1 class="type-h1">{content.title}</h1>
-    <p class="type-body prose-intro">{content.intro}</p>
+    <p class="hub-tagline">{content.intro}</p>
   </section>
 
   <section class="hub-body prose-surface">
@@ -49,18 +49,23 @@ const schema = faqSchema ? [...pageSchema, faqSchema] : pageSchema;
 
   {
     surfacedAssets.length > 0 && (
-      <section class="hub-surfacing prose-surface">
-        <h2 class="type-h3">Also in this section</h2>
-        <ul class="type-list">
+      <nav class="hub-surfacing" aria-label="Jump to section">
+        <p class="hub-surfacing-label">Jump to framework</p>
+        <ul class="hub-surfacing-pills">
           {surfacedAssets.map((asset) => (
             <li>
               <a href={asset.canonicalPath}>{asset.title}</a>
             </li>
           ))}
         </ul>
-      </section>
+      </nav>
     )
   }
+
+  <section class="hub-cta">
+    <p class="hub-cta-text">Apply these frameworks to your deployment decision.</p>
+    <a href="/contact" class="hub-cta-link">Book 15-min scoping call</a>
+  </section>
 
   {
     hasItems ? (
@@ -76,47 +81,142 @@ const schema = faqSchema ? [...pageSchema, faqSchema] : pageSchema;
 </MainLayout>
 
 <style>
+  /* ── Hero ──────────────────────────────────── */
   .hub-intro {
-    margin-bottom: 1.25rem;
+    padding-top: 0.5rem;
+    margin-bottom: 2rem;
   }
 
-  .hub-intro h1,
-  .hub-intro p {
+  .hub-intro :global(h1) {
+    margin: 0 0 0.85rem;
+  }
+
+  .hub-tagline {
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+    line-height: 1.8;
+    color: var(--color-text-secondary);
+    margin: 0;
+    max-width: 58ch;
+  }
+
+  /* ── Prose body ─────────────────────────────── */
+  .hub-body {
+    margin-bottom: 2.5rem;
+  }
+
+  /* Visual separator between major H2 blocks inside hub-body prose */
+  .hub-body :global(h2) {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--color-border-light);
+  }
+
+  .hub-body :global(h2:first-child) {
+    border-top: none;
+    padding-top: 0;
+    margin-top: 1rem;
+  }
+
+  /* FAQ items: more breathing room */
+  .hub-body :global(.faq-item + .faq-item) {
+    margin-top: 1.75rem;
+  }
+
+  .hub-body :global(.faq-block) {
+    margin-top: 2.5rem;
+  }
+
+  /* ── Quick-jump pills ───────────────────────── */
+  .hub-surfacing {
+    margin-bottom: 2rem;
+  }
+
+  .hub-surfacing-label {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-text-muted);
+    margin: 0 0 0.65rem;
+  }
+
+  .hub-surfacing-pills {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .hub-surfacing-pills a {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    border: 1px solid var(--color-border-default);
+    border-radius: 999px;
+    font-size: var(--text-sm);
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    background: var(--color-bg-page);
+    transition: border-color 0.15s, color 0.15s;
+  }
+
+  .hub-surfacing-pills a:hover {
+    border-color: var(--color-border-accent);
+    color: var(--color-text-accent);
+  }
+
+  /* ── Dark CTA banner ────────────────────────── */
+  .hub-cta {
+    background: var(--color-cta-bg);
+    border-top: 3px solid var(--color-cta-border);
+    border-radius: 6px;
+    padding: 1.75rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+  }
+
+  .hub-cta-text {
+    color: var(--color-cta-text);
+    font-size: var(--text-base);
+    opacity: 0.85;
     margin: 0;
   }
 
-  .hub-intro p + p {
-    margin-top: 0.7rem;
+  .hub-cta-link {
+    display: inline-block;
+    border: 1px solid var(--color-cta-border);
+    color: var(--color-cta-text);
+    padding: 0.55rem 1.25rem;
+    border-radius: 4px;
+    font-size: var(--text-sm);
+    font-weight: var(--weight-semibold);
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.15s;
   }
 
+  .hub-cta-link:hover {
+    background: rgba(217, 119, 6, 0.15);
+  }
+
+  /* ── Card grid ──────────────────────────────── */
   .hub-grid {
     display: grid;
-    gap: 0.9rem;
+    gap: 1.25rem;
     grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
   }
 
-  .hub-surfacing {
-    margin-bottom: 1.25rem;
-  }
-
-  .hub-body {
-    margin-bottom: 1.25rem;
-  }
-
-  .hub-surfacing h2,
-  .hub-surfacing ul {
-    margin: 0;
-  }
-
-  .hub-surfacing ul {
-    margin-top: 0.6rem;
-    padding-left: 1.25rem;
-  }
-
+  /* ── Empty state ────────────────────────────── */
   .hub-empty {
-    border: 0.0625rem dashed #d1d5db;
+    border: 0.0625rem dashed var(--color-border-default);
     border-radius: 0.65rem;
-    background: #ffffff;
+    background: var(--color-bg-page);
     padding: 1rem;
   }
 </style>

@@ -82,12 +82,33 @@
 }
 
 .prose-surface blockquote {
-  margin: 1.25rem 0;
-  padding: 0.75rem 1rem;
-  border-left: 0.1875rem solid #1f2937;
-  background: #f8fafc;
+  margin: 1.5rem 0;
+  padding: 1rem 1.25rem;
+  border-left: 0.25rem solid var(--color-border-accent);
+  background: var(--color-bg-accent);
+  border-radius: 0 4px 4px 0;
   font-size: var(--role-quote-size);
   line-height: var(--role-body-line);
+}
+
+.prose-surface pre {
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-border-light);
+  border-left: 3px solid var(--color-border-default);
+  border-radius: 4px;
+  padding: 1rem 1.25rem;
+  overflow-x: auto;
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  line-height: 1.65;
+  margin: 1.25rem 0;
+}
+
+.prose-surface pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: inherit;
 }
 
 .prose-surface code,
@@ -109,7 +130,7 @@
 .prose-surface th,
 .prose-surface td {
   font-family: var(--font-sans);
-  border: 0.0625rem solid #d1d5db;
+  border: 0.0625rem solid var(--color-border-default);
   padding: 0.5rem;
 }
 
@@ -128,11 +149,13 @@
 }
 
 .prose-surface .faq-block {
-  margin-top: 2rem;
+  margin-top: 2.5rem;
 }
 
 .prose-surface .faq-item + .faq-item {
-  margin-top: 0.75rem;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-border-light);
 }
 
 .prose-surface .citation,
@@ -141,8 +164,15 @@
   line-height: var(--role-tight-line);
 }
 
+.prose-surface .ab-citation {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-text-subtle);
+  letter-spacing: 0.01em;
+}
+
 .prose-surface a {
-  color: #0f172a;
+  color: var(--color-link);
   text-decoration-thickness: 0.0625rem;
   text-underline-offset: 0.14rem;
 }
@@ -151,7 +181,7 @@
 .prose-surface .tag-chip {
   display: inline-block;
   padding: 0.2rem 0.5rem;
-  border: 0.0625rem solid #d1d5db;
+  border: 0.0625rem solid var(--color-border-default);
   border-radius: 999rem;
   font-size: var(--role-caption-size);
   line-height: var(--role-tight-line);
