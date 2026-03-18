@@ -1,6 +1,5 @@
 ---
 import MainLayout from "../components/MainLayout.astro";
-import ResearchDocumentRenderer from "../components/research/ResearchDocumentRenderer.astro";
 import { getEntry } from "astro:content";
 import { buildFaqPageSchema, type SchemaNode } from "../utils/schema";
 import { extractFaqItemsFromMarkdown } from "../utils/faq";
@@ -27,7 +26,6 @@ function formatDate(input: string | Date): string {
 
 const publishedLabel = formatDate(entry.data.datePublished);
 const updatedLabel = formatDate(entry.data.dateModified);
-const metaLine = `Published: ${publishedLabel} · Last updated: ${updatedLabel}`;
 const schemaType = entry.data.schemaType ?? "ScholarlyArticle";
 const schemaAdditionalType = entry.data.schemaAdditionalType;
 
@@ -52,12 +50,125 @@ const scholarlySchema: SchemaNode = {
   })),
 };
 
-const faqSchema = buildFaqPageSchema({
-  canonicalPath,
-  items: faqItems,
-});
-
+const faqSchema = buildFaqPageSchema({ canonicalPath, items: faqItems });
 const schema: SchemaNode[] = faqSchema ? [scholarlySchema, faqSchema] : [scholarlySchema];
+
+const frameworks = [
+  {
+    code: "C1",
+    href: "/frameworks/robotics-roi-model",
+    name: "Robotics ROI Model",
+    desc: "Structures total cost of ownership across capital, maintenance, energy, software, and residual labor. Produces multi-scenario IRR and payback calculations with utilization threshold testing.",
+    group: "Economics",
+  },
+  {
+    code: "C2",
+    href: "/frameworks/automation-failure-framework",
+    name: "Automation Failure Framework",
+    desc: "Classifies failure modes across three dimensions: technical (uptime, integration, sensor fidelity), operational (downstream bottlenecks, exception handling, ramp losses), and financial (underutilization, contract loss, maintenance overrun).",
+    group: "Risk",
+  },
+  {
+    code: "C3",
+    href: "/frameworks/warehouse-automation-decision-framework",
+    name: "Warehouse Automation Decision Framework",
+    desc: "Defines the decision logic for automation deployment sequencing: which workflow to automate first, whether to retrofit or greenfield, and how to evaluate architecture options given facility constraints.",
+    group: "Decision",
+  },
+  {
+    code: "C4",
+    href: "/frameworks/pilot-to-scale-failure-framework",
+    name: "Pilot-to-Scale Failure Framework",
+    desc: "Identifies the conditions under which a successful pilot fails to scale to full deployment. Maps the gap between controlled pilot performance and operational performance under production variability.",
+    group: "Risk",
+  },
+  {
+    code: "C5",
+    href: "/frameworks/vendor-economics-framework",
+    name: "Vendor Economics Framework",
+    desc: "Structures vendor business model analysis to assess pricing sustainability, service dependency, contract leverage, and long-term cost trajectory.",
+    group: "Vendor",
+  },
+  {
+    code: "C6",
+    href: "/frameworks/vendor-evaluation-framework",
+    name: "Vendor Evaluation Framework",
+    desc: "Provides a neutral, architecture-first comparison methodology. Maps competing systems by the operational logic they apply — what motion they eliminate, where fixed capacity is introduced, what labor remains.",
+    group: "Vendor",
+  },
+  {
+    code: "C7",
+    href: "/frameworks/workflow-architecture-framework",
+    name: "Workflow Architecture Framework",
+    desc: "Analyzes how automation system design interacts with upstream and downstream workflow constraints. Identifies where capacity additions in one subsystem create new bottlenecks elsewhere.",
+    group: "Decision",
+  },
+];
+
+const integrationSteps = [
+  { num: "01", name: "Warehouse Automation Decision Framework", code: "C3", role: "Decision framing and architecture selection", href: "/frameworks/warehouse-automation-decision-framework" },
+  { num: "02", name: "Robotics ROI Model", code: "C1", role: "Economic viability testing", href: "/frameworks/robotics-roi-model" },
+  { num: "03", name: "Automation Failure Framework", code: "C2", role: "Risk case construction", href: "/frameworks/automation-failure-framework" },
+  { num: "04", name: "Pilot-to-Scale Failure Framework", code: "C4", role: "Scale condition validation", href: "/frameworks/pilot-to-scale-failure-framework" },
+  { num: "05", name: "Vendor Evaluation Framework", code: "C6", role: "Architecture-neutral vendor comparison", href: "/frameworks/vendor-evaluation-framework" },
+];
+
+const validationStages = [
+  {
+    num: "01",
+    label: "Assumption audit",
+    desc: "All assumptions are classified by source tier: observed (documented facility or market evidence), modeled (required to complete the decision model), or stress (used in downside cases). No assumption remains implicit. This stage identifies where the analysis would break if a modeled assumption is wrong.",
+  },
+  {
+    num: "02",
+    label: "Utilization stress test",
+    desc: "The economic model is tested at 60%, 80%, and full utilization to identify the minimum throughput threshold required for capital recovery within the contract period. If the model does not hold under any realistic demand scenario, the recommendation is adjusted to reflect that constraint.",
+  },
+  {
+    num: "03",
+    label: "Failure mode cross-check",
+    desc: "The Automation Failure Framework is applied systematically to the proposed architecture. Each failure mode category — technical, operational, financial — is evaluated against the specific deployment context. Failure modes that can erase the economic case under plausible conditions are documented as no-go triggers, not buried in caveats.",
+  },
+  {
+    num: "04",
+    label: "Decision criteria screening",
+    desc: "Recommendations are evaluated against a fixed set of criteria regardless of how favorably the economic model performs: labor removed versus labor relocated; throughput gain at facility level versus subsystem level; capital recovery under realistic contract duration; integration burden and ramp risk; flexibility loss after installation.",
+  },
+];
+
+const limitations = [
+  {
+    label: "Data availability",
+    desc: "Analysis quality is proportional to input quality. Where Tier 1 operational data is unavailable, findings are bounded by the quality of modeled and secondary inputs. Bounded conclusions are disclosed as such. Analysis does not convert weak source data into false precision — the recommendation is narrowed and the unresolved inputs are stated explicitly.",
+  },
+  {
+    label: "Deployment domain",
+    desc: "The methodology is calibrated for warehouse automation economics in mid-size fulfillment and 3PL environments in the United States and Canada. Application to greenfield large-scale distribution centers, manufacturing automation, or non-logistics environments requires framework recalibration for the operating context.",
+  },
+  {
+    label: "Forward-looking assumptions",
+    desc: "Demand forecasts, labor cost projections, and technology cost trajectories are modeled assumptions, not empirical facts. Economic conclusions dependent on multi-year demand stability carry higher uncertainty than conclusions based on current operating conditions. Sensitivity ranges are disclosed where forward-looking assumptions materially affect the recommendation.",
+  },
+  {
+    label: "Scope exclusions",
+    desc: "Autonomy Bridge research constitutes decision support analysis. It does not certify vendor equipment, validate regulatory or safety compliance, replace site engineering assessment, or guarantee post-deployment performance. Where a deployment decision requires legal, safety, or engineering validation, those functions are outside the scope of this methodology.",
+  },
+];
+
+const internalCitations = [
+  { code: "C1", title: "Robotics ROI Model", href: "/frameworks/robotics-roi-model" },
+  { code: "C2", title: "Automation Failure Framework", href: "/frameworks/automation-failure-framework" },
+  { code: "C3", title: "Warehouse Automation Decision Framework", href: "/frameworks/warehouse-automation-decision-framework" },
+  { code: "C4", title: "Pilot-to-Scale Failure Framework", href: "/frameworks/pilot-to-scale-failure-framework" },
+  { code: "C5", title: "Vendor Economics Framework", href: "/frameworks/vendor-economics-framework" },
+  { code: "C6", title: "Vendor Evaluation Framework", href: "/frameworks/vendor-evaluation-framework" },
+  { code: "C7", title: "Workflow Architecture Framework", href: "/frameworks/workflow-architecture-framework" },
+];
+
+const externalCitations = [
+  { code: "C8", title: "Bureau of Labor Statistics — Occupational Employment and Wage Statistics", href: "https://www.bls.gov/oes/" },
+  { code: "C9", title: "Statistics Canada — Labour Force Survey", href: "https://www.statcan.gc.ca/en/subjects-start/labour_labour_force_survey" },
+];
 ---
 
 <MainLayout
@@ -74,6 +185,766 @@ const schema: SchemaNode[] = faqSchema ? [scholarlySchema, faqSchema] : [scholar
   ogDescription={entry.data.ogDescription}
   twitterCard={entry.data.twitterCard}
   schema={schema}
+  showBreadcrumbs={false}
+  showLocalSubnav={false}
 >
-  <ResearchDocumentRenderer markdown={entry.body} metaLine={metaLine} />
+
+  <!-- ── Hero ── -->
+  <section class="meth-hero">
+    <div class="meth-container">
+      <p class="meth-breadcrumb">Home / Methodology</p>
+      <h1 class="meth-h1">Research Methodology</h1>
+      <p class="meth-meta">Published: {publishedLabel} · Last updated: {updatedLabel}</p>
+      <p class="meth-intro">
+        Autonomy Bridge publishes research designed to support capital allocation decisions in warehouse automation, robotics, and AI infrastructure markets. This page documents the analytical method, data inputs, seven proprietary frameworks, and limitations governing all published research and advisory outputs.
+      </p>
+      <cite class="meth-cite">© Autonomy Bridge proprietary analysis, 2026</cite>
+      <div class="meth-pills">
+        <a href="/frameworks" class="meth-pill">Frameworks &rarr;</a>
+        <a href="/advisory" class="meth-pill">Advisory &rarr;</a>
+        <a href="/bespoke-research" class="meth-pill">Bespoke Research &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 1. Research Philosophy ── -->
+  <section class="meth-section" id="research-philosophy">
+    <div class="meth-container">
+      <div class="meth-section-label">
+        <span class="meth-num">01</span>
+        <h2 class="meth-h2">Research Philosophy</h2>
+      </div>
+      <div class="meth-prose">
+        <p>Autonomy Bridge treats automation deployment as an economics problem nested inside a physical operation. The primary research object is not the technology. It is the operating system that forms when equipment, software, labor, layout, order flow, and maintenance interact under real demand conditions.</p>
+        <p>This framing determines which questions are asked at the start of every study: What operational bottleneck is being addressed? Which cost categories are structurally removable versus simply relocated? What utilization threshold is required for economic viability? Which failure modes can erase the projected return before capital is recovered? Under what demand or operational conditions does the recommendation stop holding?</p>
+        <p>Analysis begins with decision framing, not technology evaluation. A deployment decision is not well-framed until the baseline operating model is defined explicitly — including labor structure, demand variability, layout constraints, and contract duration. Vendor comparison begins only after the operational baseline is established. This sequencing prevents a common failure in automation analysis: technology capability evaluated against an unspecified or optimistic baseline.</p>
+        <p>The method applies equally to retrofit and greenfield environments, though it is strongest in retrofit settings where utilization economics, labor substitutability, and operational variance are the primary determinants of outcome.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 2. Data Sources ── -->
+  <section class="meth-section meth-section--surface" id="data-sources">
+    <div class="meth-container">
+      <div class="meth-section-label">
+        <span class="meth-num">02</span>
+        <h2 class="meth-h2">Data Sources</h2>
+      </div>
+      <p class="meth-section-lead">Autonomy Bridge applies a four-tier evidence hierarchy that governs how data inputs are weighted in analysis.</p>
+      <div class="meth-tiers">
+        <div class="meth-tier meth-tier--primary">
+          <div class="meth-tier-header">
+            <span class="meth-tier-badge">Tier 1</span>
+            <span class="meth-tier-name">Primary operational data</span>
+          </div>
+          <p>Audited throughput records, historical labor cost data, maintenance logs, contract structures, and demand histories sourced directly from operators or disclosed in regulatory filings.</p>
+          <p>This tier carries the highest analytical weight. Where available, it anchors baseline assumptions before secondary inputs are introduced.</p>
+        </div>
+        <div class="meth-tier">
+          <div class="meth-tier-header">
+            <span class="meth-tier-badge">Tier 2</span>
+            <span class="meth-tier-name">Direct deployment evidence</span>
+          </div>
+          <p>Engineering specifications from documented deployments, implementation timelines, customer case studies with sufficient operational detail, and facility audit observations.</p>
+          <p>Data at this tier is used to calibrate performance assumptions but is normalized against variability in reporting standards across vendors and operators.</p>
+        </div>
+        <div class="meth-tier">
+          <div class="meth-tier-header">
+            <span class="meth-tier-badge">Tier 3</span>
+            <span class="meth-tier-name">Structured market data</span>
+          </div>
+          <p>Public market filings, industry association benchmarks, logistics cost indices, and labor market data from government statistical agencies.</p>
+          <p>Used for macro-level triangulation of cost and demand assumptions.</p>
+        </div>
+        <div class="meth-tier meth-tier--muted">
+          <div class="meth-tier-header">
+            <span class="meth-tier-badge">Tier 4</span>
+            <span class="meth-tier-name">Vendor and secondary sources</span>
+          </div>
+          <p>Marketing claims, trade press, conference presentations, and analyst summaries. Inputs at this tier are not discarded. They are bounded, stress-tested against Tier 1 and 2 evidence, and flagged when a finding depends on vendor-supplied data without independent corroboration.</p>
+          <p class="meth-tier-rule">Treatment rule: no performance claim receives analytical credit outside the operating conditions under which it was documented.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 3. Analytical Models ── -->
+  <section class="meth-section" id="analytical-models">
+    <div class="meth-container">
+      <div class="meth-section-label">
+        <span class="meth-num">03</span>
+        <h2 class="meth-h2">Analytical Models</h2>
+      </div>
+      <p class="meth-section-lead">Seven proprietary frameworks — each addressing a distinct decision problem. Together they form an integrated analytical system applicable across warehouse automation, 3PL operations, and AI infrastructure evaluation.</p>
+      <cite class="meth-cite meth-cite--sm">© Autonomy Bridge proprietary analysis, 2026</cite>
+      <div class="meth-fw-grid">
+        {frameworks.map((fw) => (
+          <a href={fw.href} class="meth-fw-card">
+            <div class="meth-fw-top">
+              <span class="meth-fw-code">{fw.code}</span>
+              <span class="meth-fw-group">{fw.group}</span>
+            </div>
+            <h3 class="meth-fw-name">{fw.name}</h3>
+            <p class="meth-fw-desc">{fw.desc}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 4. Framework Integration ── -->
+  <section class="meth-section meth-section--surface" id="framework-integration">
+    <div class="meth-container">
+      <div class="meth-section-label">
+        <span class="meth-num">04</span>
+        <h2 class="meth-h2">Framework Integration</h2>
+      </div>
+      <p class="meth-section-lead">Individual frameworks address isolated decision questions. The full analytical method integrates multiple frameworks in sequence to produce recommendations that hold across economic, operational, and risk dimensions.</p>
+      <p class="meth-subsection-label">Standard integration sequence</p>
+      <div class="meth-sequence">
+        {integrationSteps.map((step, i) => (
+          <div class="meth-step">
+            <span class="meth-step-num">{step.num}</span>
+            <div class="meth-step-body">
+              <a href={step.href} class="meth-step-name">{step.name}</a>
+              <span class="meth-step-role">{step.role}</span>
+            </div>
+            {i < integrationSteps.length - 1 && <span class="meth-step-arrow" aria-hidden="true">↓</span>}
+          </div>
+        ))}
+      </div>
+      <div class="meth-integration-note">
+        <p>The Vendor Economics Framework [C5] is applied when vendor financial durability is a material consideration — particularly in long-term contracts with high integration lock-in. The Workflow Architecture Framework [C7] is applied when the deployment boundary extends beyond a single subsystem and downstream impacts require explicit modeling.</p>
+        <p>Cross-framework integration is governed by a consistency rule: assumptions established in one framework carry forward to all subsequent frameworks in the analysis chain. Assumption drift across frameworks is eliminated by treating the decision model as a single connected system, not a collection of independent assessments.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 5. Validation Process ── -->
+  <section class="meth-section" id="validation-process">
+    <div class="meth-container">
+      <div class="meth-section-label">
+        <span class="meth-num">05</span>
+        <h2 class="meth-h2">Validation Process</h2>
+      </div>
+      <p class="meth-section-lead">All analytical outputs pass through a four-stage validation protocol before publication or client delivery.</p>
+      <cite class="meth-cite meth-cite--sm">© Autonomy Bridge proprietary analysis, 2026</cite>
+      <div class="meth-stages">
+        {validationStages.map((stage) => (
+          <div class="meth-stage">
+            <div class="meth-stage-header">
+              <span class="meth-stage-num">{stage.num}</span>
+              <span class="meth-stage-label">{stage.label}</span>
+            </div>
+            <p class="meth-stage-desc">{stage.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 6. Limitations ── -->
+  <section class="meth-section meth-section--surface" id="limitations">
+    <div class="meth-container">
+      <div class="meth-section-label">
+        <span class="meth-num">06</span>
+        <h2 class="meth-h2">Limitations</h2>
+      </div>
+      <p class="meth-section-lead">The scope and validity of Autonomy Bridge analysis is bounded by four structural constraints.</p>
+      <div class="meth-limits">
+        {limitations.map((lim) => (
+          <div class="meth-limit">
+            <h3 class="meth-limit-label">{lim.label}</h3>
+            <p class="meth-limit-desc">{lim.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FAQ ── -->
+  <section class="meth-section" id="faq">
+    <div class="meth-container">
+      <h2 class="meth-h2 meth-h2--standalone">Frequently Asked Questions</h2>
+      <div class="meth-faq">
+        <details class="meth-faq-item">
+          <summary class="meth-faq-q">What makes Autonomy Bridge research decision-grade rather than descriptive?</summary>
+          <p class="meth-faq-a">Decision-grade research is structured to support a specific capital allocation or operational choice — not to describe the market generally. Every Autonomy Bridge analysis begins with a defined decision problem, establishes an explicit operational baseline before evaluating technology, and tests recommendations against downside demand scenarios rather than base case or peak assumptions. The output is a recommendation that holds across a stated range of conditions, with disclosed failure modes and explicit assumption boundaries — not a technology assessment or market overview.</p>
+          <cite class="meth-cite meth-cite--sm">© Autonomy Bridge proprietary analysis, 2026</cite>
+        </details>
+        <details class="meth-faq-item">
+          <summary class="meth-faq-q">How does Autonomy Bridge treat vendor-supplied performance data?</summary>
+          <p class="meth-faq-a">Vendor data is assigned to Tier 4 in the evidence hierarchy — the lowest analytical weight tier. No vendor performance claim receives analytical credit outside the specific operating conditions under which it was documented. Claims conditional on perfect inventory quality, continuous uptime, curated SKU profiles, or atypical order structures are restated with those dependencies made explicit before being incorporated into any model. Where a finding depends materially on vendor-supplied data without independent corroboration, that dependency is flagged in the published output.</p>
+        </details>
+        <details class="meth-faq-item">
+          <summary class="meth-faq-q">What is the standard framework integration sequence for a warehouse automation study?</summary>
+          <p class="meth-faq-a">The standard sequence is: Warehouse Automation Decision Framework (decision framing and architecture selection) → Robotics ROI Model (economic viability testing) → Automation Failure Framework (risk case construction) → Pilot-to-Scale Failure Framework (scale condition validation) → Vendor Evaluation Framework (architecture-neutral vendor comparison). The Vendor Economics Framework is added when vendor financial durability is a material consideration. The Workflow Architecture Framework is added when downstream workflow impacts require explicit modeling. Assumptions set in any framework carry forward unchanged to all subsequent frameworks — assumption drift across the chain is not permitted.</p>
+        </details>
+        <details class="meth-faq-item">
+          <summary class="meth-faq-q">What are the primary limitations of Autonomy Bridge methodology?</summary>
+          <p class="meth-faq-a">Four structural constraints bound the methodology: data availability (analysis quality is proportional to input quality; findings dependent on modeled rather than observed inputs are disclosed as bounded); deployment domain (methodology is calibrated for mid-size US and Canadian fulfillment and 3PL environments — other contexts require recalibration); forward-looking assumptions (multi-year demand stability projections carry higher uncertainty than conclusions based on current conditions); and scope exclusions (research does not certify equipment, validate regulatory compliance, or replace site engineering assessment).</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Citations ── -->
+  <section class="meth-section meth-section--surface" id="appendix-citations">
+    <div class="meth-container">
+      <h2 class="meth-h2 meth-h2--standalone">Citations</h2>
+      <div class="meth-citations">
+        <p class="meth-citations-group-label">Autonomy Bridge Frameworks</p>
+        <ul class="meth-citations-list">
+          {internalCitations.map((c) => (
+            <li><span class="meth-cite-code">{c.code}</span> <a href={c.href} class="meth-cite-link">{c.title}</a></li>
+          ))}
+        </ul>
+        <p class="meth-citations-group-label">External Sources</p>
+        <ul class="meth-citations-list">
+          {externalCitations.map((c) => (
+            <li><span class="meth-cite-code">{c.code}</span> <a href={c.href} class="meth-cite-link" target="_blank" rel="noopener noreferrer">{c.title}</a></li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA ── -->
+  <section class="meth-cta">
+    <div class="meth-container">
+      <h2 class="meth-cta-h">Apply this methodology to your decision</h2>
+      <p class="meth-cta-sub">Advisory engagements and bespoke research are structured using the same frameworks and validation process documented here.</p>
+      <div class="meth-cta-btns">
+        <a href="/advisory" class="meth-cta-btn meth-cta-btn--primary">Advisory &rarr;</a>
+        <a href="/bespoke-research" class="meth-cta-btn meth-cta-btn--outline">Bespoke Research &rarr;</a>
+      </div>
+    </div>
+  </section>
+
 </MainLayout>
+
+<style>
+/* ── Layout ── */
+.meth-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ── Hero ── */
+.meth-hero {
+  padding: 3.5rem 0 3rem;
+  border-bottom: 1px solid var(--color-border-light);
+}
+.meth-breadcrumb {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--color-text-subtle);
+  letter-spacing: 0.05em;
+  margin-bottom: 1.25rem;
+}
+.meth-h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--color-text-primary);
+  line-height: 1.1;
+  margin-bottom: 0.75rem;
+}
+.meth-meta {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--color-text-subtle);
+  margin-bottom: 1.75rem;
+}
+.meth-intro {
+  max-width: 68ch;
+  font-size: 1.0625rem;
+  line-height: 1.9;
+  color: var(--color-text-secondary);
+  margin-bottom: 1.5rem;
+}
+.meth-cite {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--color-text-accent);
+  border-left: 2px solid var(--color-border-accent);
+  padding-left: 0.625rem;
+  margin-bottom: 1.5rem;
+  font-style: normal;
+}
+.meth-cite--sm {
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+.meth-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+}
+.meth-pill {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-border-default);
+  border-radius: 999px;
+  padding: 0.25rem 0.75rem;
+  text-decoration: none;
+  transition: border-color 0.15s, background 0.15s;
+}
+.meth-pill:hover {
+  border-color: var(--color-border-accent);
+  background: var(--color-bg-accent);
+}
+
+/* ── Sections ── */
+.meth-section {
+  padding: 4rem 0;
+  border-bottom: 1px solid var(--color-border-light);
+}
+.meth-section--surface {
+  background: var(--color-bg-surface);
+}
+.meth-section-label {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.meth-num {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--color-border-accent);
+  letter-spacing: 0.08em;
+  flex-shrink: 0;
+}
+.meth-h2 {
+  font-size: clamp(1.25rem, 3vw, 1.625rem);
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  color: var(--color-text-primary);
+  line-height: 1.2;
+}
+.meth-h2--standalone {
+  margin-bottom: 2rem;
+}
+.meth-section-lead {
+  max-width: 72ch;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--color-text-secondary);
+  margin-bottom: 2rem;
+}
+.meth-subsection-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: 1.25rem;
+}
+.meth-prose {
+  max-width: 72ch;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.meth-prose p {
+  font-size: 1rem;
+  line-height: 1.9;
+  color: var(--color-text-secondary);
+  text-align: justify;
+}
+
+/* ── Data Tiers ── */
+.meth-tiers {
+  display: grid;
+  gap: 1.25rem;
+}
+.meth-tier {
+  border: 1px solid var(--color-border-light);
+  border-radius: 6px;
+  padding: 1.25rem 1.5rem;
+  background: var(--color-bg-page);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.meth-tier--primary {
+  border-color: var(--color-border-accent);
+  border-top-width: 3px;
+}
+.meth-tier--muted {
+  background: var(--color-bg-subtle);
+}
+.meth-tier-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.meth-tier-badge {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--color-text-accent);
+  background: var(--color-bg-accent);
+  border-radius: 4px;
+  padding: 0.15rem 0.5rem;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.meth-tier-name {
+  font-weight: 600;
+  font-size: 0.9375rem;
+  color: var(--color-text-primary);
+}
+.meth-tier p {
+  font-size: 0.9rem;
+  line-height: 1.8;
+  color: var(--color-text-secondary);
+  text-align: justify;
+}
+.meth-tier-rule {
+  font-size: 0.8rem !important;
+  font-style: italic;
+  color: var(--color-text-muted) !important;
+  border-left: 2px solid var(--color-border-accent);
+  padding-left: 0.625rem;
+}
+
+/* ── Framework Cards ── */
+.meth-fw-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.meth-fw-card {
+  display: block;
+  border: 1px solid var(--color-border-light);
+  border-top: 3px solid var(--color-border-accent);
+  border-radius: 6px;
+  padding: 1.25rem;
+  background: var(--color-bg-page);
+  text-decoration: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.meth-fw-card:hover {
+  border-color: var(--color-border-accent);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.meth-fw-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.625rem;
+}
+.meth-fw-code {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--color-text-accent);
+}
+.meth-fw-group {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-subtle);
+  background: var(--color-bg-subtle);
+  padding: 0.1rem 0.4rem;
+  border-radius: 3px;
+}
+.meth-fw-name {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  line-height: 1.3;
+  margin-bottom: 0.5rem;
+}
+.meth-fw-desc {
+  font-size: 0.8125rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+}
+
+/* ── Integration Sequence ── */
+.meth-sequence {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  max-width: 640px;
+  margin-bottom: 2.5rem;
+}
+.meth-step {
+  display: grid;
+  grid-template-columns: 2rem 1fr auto;
+  align-items: start;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--color-border-light);
+}
+.meth-step:last-child {
+  border-bottom: none;
+}
+.meth-step-num {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--color-border-accent);
+  padding-top: 0.125rem;
+}
+.meth-step-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.meth-step-name {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  text-decoration: none;
+}
+.meth-step-name:hover {
+  color: var(--color-text-accent);
+}
+.meth-step-role {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+}
+.meth-step-arrow {
+  font-size: 0.875rem;
+  color: var(--color-text-subtle);
+  display: none;
+}
+.meth-integration-note {
+  max-width: 72ch;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--color-bg-page);
+  border-left: 3px solid var(--color-border-accent);
+  border-radius: 0 6px 6px 0;
+}
+.meth-integration-note p {
+  font-size: 0.9rem;
+  line-height: 1.8;
+  color: var(--color-text-secondary);
+  text-align: justify;
+}
+
+/* ── Validation Stages ── */
+.meth-stages {
+  display: grid;
+  gap: 1.25rem;
+}
+.meth-stage {
+  border: 1px solid var(--color-border-light);
+  border-radius: 6px;
+  padding: 1.25rem 1.5rem;
+  background: var(--color-bg-page);
+}
+.meth-stage-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+.meth-stage-num {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--color-border-accent);
+  background: var(--color-bg-accent);
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+.meth-stage-label {
+  font-weight: 600;
+  font-size: 0.9375rem;
+  color: var(--color-text-primary);
+}
+.meth-stage-desc {
+  font-size: 0.9rem;
+  line-height: 1.85;
+  color: var(--color-text-secondary);
+  text-align: justify;
+}
+
+/* ── Limitations ── */
+.meth-limits {
+  display: grid;
+  gap: 1rem;
+}
+.meth-limit {
+  border-left: 3px solid var(--color-border-accent);
+  padding: 1rem 1.25rem;
+  background: var(--color-bg-page);
+  border-radius: 0 6px 6px 0;
+}
+.meth-limit-label {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 0.5rem;
+}
+.meth-limit-desc {
+  font-size: 0.9rem;
+  line-height: 1.85;
+  color: var(--color-text-secondary);
+  text-align: justify;
+}
+
+/* ── FAQ ── */
+.meth-faq {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  max-width: 800px;
+}
+.meth-faq-item {
+  border-bottom: 1px solid var(--color-border-light);
+}
+.meth-faq-item:first-child {
+  border-top: 1px solid var(--color-border-light);
+}
+.meth-faq-q {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  padding: 1.25rem 0;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  line-height: 1.4;
+}
+.meth-faq-q::-webkit-details-marker { display: none; }
+.meth-faq-q::after {
+  content: "+";
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  flex-shrink: 0;
+  transition: transform 0.2s;
+}
+details[open] .meth-faq-q::after {
+  content: "−";
+}
+.meth-faq-a {
+  font-size: 0.9375rem;
+  line-height: 1.9;
+  color: var(--color-text-secondary);
+  padding-bottom: 1.25rem;
+  text-align: justify;
+}
+
+/* ── Citations ── */
+.meth-citations {
+  max-width: 720px;
+}
+.meth-citations-group-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: 0.75rem;
+  margin-top: 1.5rem;
+}
+.meth-citations-group-label:first-child {
+  margin-top: 0;
+}
+.meth-citations-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.meth-citations-list li {
+  display: flex;
+  align-items: baseline;
+  gap: 0.625rem;
+  font-size: 0.8125rem;
+  line-height: 1.6;
+}
+.meth-cite-code {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--color-text-accent);
+  background: var(--color-bg-accent);
+  padding: 0.1rem 0.35rem;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+.meth-cite-link {
+  color: var(--color-text-secondary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.meth-cite-link:hover {
+  color: var(--color-text-primary);
+}
+
+/* ── CTA ── */
+.meth-cta {
+  background: var(--color-cta-bg);
+  padding: 4rem 0;
+}
+.meth-cta-h {
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  font-weight: 700;
+  color: var(--color-cta-text);
+  letter-spacing: -0.015em;
+  margin-bottom: 0.75rem;
+}
+.meth-cta-sub {
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: #94a3b8;
+  max-width: 56ch;
+  margin-bottom: 2rem;
+}
+.meth-cta-btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+.meth-cta-btn {
+  display: inline-block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.625rem 1.25rem;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.15s, border-color 0.15s;
+}
+.meth-cta-btn--primary {
+  background: transparent;
+  color: var(--color-cta-text);
+  border: 1.5px solid var(--color-cta-border);
+}
+.meth-cta-btn--primary:hover {
+  background: var(--color-cta-border);
+  color: var(--color-cta-bg);
+}
+.meth-cta-btn--outline {
+  background: transparent;
+  color: #94a3b8;
+  border: 1.5px solid #334155;
+}
+.meth-cta-btn--outline:hover {
+  border-color: #94a3b8;
+  color: var(--color-cta-text);
+}
+</style>

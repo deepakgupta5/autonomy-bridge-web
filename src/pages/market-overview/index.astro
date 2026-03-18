@@ -1,51 +1,407 @@
 ---
-import HubPageTemplate from "../../components/HubPageTemplate.astro";
-import type { HubPageContent } from "../../data/hubContent";
+import MainLayout from "../../components/MainLayout.astro";
 import { marketOverviewChildSlugs } from "../../data/ia";
 import { extractFaqItemsFromMarkdown } from "../../utils/faq";
-import {
-  getEntriesByCanonicalPrefix,
-  getEntryByCanonicalPath,
-} from "../../utils/contentCollections";
+import { buildCollectionPageSchema, buildFaqPageSchema } from "../../utils/schema";
+import { getEntryByCanonicalPath } from "../../utils/contentCollections";
 
 const hubCanonicalPath = "/market-overview";
 const hubEntry = await getEntryByCanonicalPath("marketOverview", hubCanonicalPath);
-const childEntries = await getEntriesByCanonicalPrefix(
-  "marketOverview",
-  `${hubCanonicalPath}/`,
-  { includeExact: false }
-);
-
-const childBySlug = new Map(childEntries.map((entry) => [entry.data.slug, entry]));
-const items: HubPageContent["items"] = marketOverviewChildSlugs.flatMap((slug) => {
-  const child = childBySlug.get(slug);
-  if (!child) {
-    return [];
-  }
-
-  return [
-    {
-      title: child.data.title,
-      href: child.data.canonicalPath,
-      description: child.data.description,
-      metadata: [`Updated: ${String(child.data.dateModified)}`],
-      taxonomy: child.data.topics.length > 0 ? child.data.topics : ["market-overview"],
-    },
-  ];
-});
-
-const content: HubPageContent = {
-  title: hubEntry.data.title,
-  summary: hubEntry.data.summary,
-  intro: hubEntry.data.description,
-  emptyState: "No market overview entries are available yet.",
-  items,
-};
-
-const { Content } = await hubEntry.render();
 const faqItems = extractFaqItemsFromMarkdown(hubEntry.body);
+
+const pageSchema = [
+  buildCollectionPageSchema({
+    name: hubEntry.data.title,
+    description: hubEntry.data.summary,
+    canonicalPath: hubCanonicalPath,
+  }),
+];
+const faqSchema = buildFaqPageSchema({ canonicalPath: hubCanonicalPath, items: faqItems });
+const schema = faqSchema ? [...pageSchema, faqSchema] : pageSchema;
+
+// Real section descriptions from the hub content table
+const sections = [
+  {
+    slug: "industry-landscape",
+    href: "/market-overview/industry-landscape",
+    title: "Industry Landscape",
+    desc: "How the North American warehousing and 3PL sector is structured — ownership models, competitive tiers, and the role automation plays in operator differentiation.",
+    tag: "Structure",
+  },
+  {
+    slug: "technology-stack",
+    href: "/market-overview/technology-stack",
+    title: "Technology Stack",
+    desc: "The core robotics and automation systems in active deployment — AMRs, ASRS, robotic picking, WMS/WCS layers, and how they integrate at the facility level.",
+    tag: "Technology",
+  },
+  {
+    slug: "market-drivers",
+    href: "/market-overview/market-drivers",
+    title: "Market Drivers",
+    desc: "The demand-side, labor-side, and capital-side forces accelerating automation adoption across the mid-market operator tier.",
+    tag: "Economics",
+  },
+  {
+    slug: "market-segments",
+    href: "/market-overview/market-segments",
+    title: "Market Segments",
+    desc: "How automation economics and deployment patterns differ across facility types: e-commerce fulfillment, parcel sortation, cold storage, and general merchandise 3PL.",
+    tag: "Segments",
+  },
+  {
+    slug: "key-players",
+    href: "/market-overview/key-players",
+    title: "Key Players",
+    desc: "The robotics vendors, systems integrators, and technology platforms shaping competitive dynamics in the North American warehouse automation market.",
+    tag: "Vendors",
+  },
+];
+
+const faqs = [
+  {
+    q: "What is the current state of warehouse automation adoption in North America?",
+    a: "Warehouse automation adoption in North America has moved beyond pilot deployments. Mid-market 3PL operators — facilities running 50,000 to 500,000 sq ft — now face direct competitive pressure from automated competitors winning RFPs on SLA capability. The primary barrier to adoption at this tier is not technology availability but capital structure, WMS integration complexity, and contract-cycle economics.",
+  },
+  {
+    q: "What types of robots are used in warehouse automation?",
+    a: "North American warehouse operations deploy three primary robot categories: autonomous mobile robots (AMRs) for goods transport; automated storage and retrieval systems (ASRS) including shuttle systems, mini-load systems, and cube storage platforms; and robotic picking arms for item-level handling in e-commerce environments. AMRs represent the entry point for mid-market deployments due to lower capital requirements and faster implementation timelines.",
+  },
+  {
+    q: "What is Robotics-as-a-Service (RaaS) in warehouse operations?",
+    a: "RaaS is a deployment and financing model in which warehouse operators pay subscription or per-pick fees for robotic systems rather than purchasing hardware outright. RaaS converts large capital expenditures — previously $2–5M for a credible warehouse automation deployment — into operational expenditure accessible to operators with 100,000–250,000 sq ft facilities. Adoption among independent mid-market 3PLs remains uneven.",
+  },
+  {
+    q: "How does WMS infrastructure affect automation decisions?",
+    a: "WMS platform compatibility directly constrains which robotics vendors an operator can practically deploy. Operators on legacy WMS platforms with limited robotics APIs face a restricted vendor selection set regardless of which AMR or ASRS systems offer the best economics. WMS upgrade cycles and automation deployment cycles are increasingly planned in tandem at mid-market operators for this reason.",
+  },
+];
 ---
 
-<HubPageTemplate canonicalPath={hubCanonicalPath} content={content} faqItems={faqItems}>
-  <Content />
-</HubPageTemplate>
+<MainLayout
+  canonicalPath={hubCanonicalPath}
+  title={hubEntry.data.title}
+  summary={hubEntry.data.summary}
+  seoTitle={String(hubEntry.data.seoTitle)}
+  seoDescription={String(hubEntry.data.seoDescription)}
+  schema={schema}
+  showBreadcrumbs={false}
+  showLocalSubnav={false}
+>
+
+  <!-- Hero -->
+  <section class="mo-hero">
+    <div class="mo-container">
+      <p class="mo-breadcrumb">Home / Market Overview</p>
+      <h1 class="mo-h1">Warehouse Automation<br />Market Overview</h1>
+      <p class="mo-tagline">North America · Mid-Market 3PL · Deployment Economics</p>
+      <p class="mo-intro">Structural analysis of the North American warehouse automation and 3PL market — industry landscape, technology stack, market drivers, segments, and key players — framing the Autonomy Bridge research and advisory work.</p>
+      <cite class="mo-cite">© Autonomy Bridge proprietary analysis, 2026</cite>
+      <div class="mo-pills">
+        <a href="/frameworks" class="mo-pill">Frameworks &rarr;</a>
+        <a href="/methodology" class="mo-pill">Methodology &rarr;</a>
+        <a href="/insights" class="mo-pill">Insights &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Cards -->
+  <section class="mo-section">
+    <div class="mo-container">
+      <p class="mo-section-label">Five analytical sections</p>
+      <div class="mo-grid">
+        {sections.map((s, i) => (
+          <a href={s.href} class="mo-card">
+            <div class="mo-card-top">
+              <span class="mo-card-num">0{i + 1}</span>
+              <span class="mo-card-tag">{s.tag}</span>
+            </div>
+            <h2 class="mo-card-title">{s.title}</h2>
+            <p class="mo-card-desc">{s.desc}</p>
+            <span class="mo-card-cta">Read section &rarr;</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="mo-section mo-section--surface" id="faq">
+    <div class="mo-container">
+      <h2 class="mo-h2">Frequently Asked Questions</h2>
+      <div class="mo-faq">
+        {faqs.map((faq) => (
+          <details class="mo-faq-item">
+            <summary class="mo-faq-q">{faq.q}</summary>
+            <p class="mo-faq-a">{faq.a}</p>
+            <cite class="mo-cite mo-cite--sm">© Autonomy Bridge proprietary analysis, 2026</cite>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="mo-cta">
+    <div class="mo-container">
+      <h2 class="mo-cta-h">Need analysis beyond the overview?</h2>
+      <p class="mo-cta-sub">Advisory engagements and bespoke research go deeper into specific deployment decisions, vendor economics, and operational risk.</p>
+      <div class="mo-cta-btns">
+        <a href="/advisory" class="mo-cta-btn mo-cta-btn--primary">Advisory &rarr;</a>
+        <a href="/bespoke-research" class="mo-cta-btn mo-cta-btn--outline">Bespoke Research &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+</MainLayout>
+
+<style>
+.mo-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Hero */
+.mo-hero {
+  padding: 3.5rem 0 3rem;
+  border-bottom: 1px solid var(--color-border-light);
+}
+.mo-breadcrumb {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--color-text-subtle);
+  letter-spacing: 0.05em;
+  margin-bottom: 1.25rem;
+}
+.mo-h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--color-text-primary);
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+}
+.mo-tagline {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--color-text-muted);
+  letter-spacing: 0.06em;
+  margin-bottom: 1.5rem;
+}
+.mo-intro {
+  max-width: 68ch;
+  font-size: 1.0625rem;
+  line-height: 1.9;
+  color: var(--color-text-secondary);
+  margin-bottom: 1.25rem;
+}
+.mo-cite {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--color-text-accent);
+  border-left: 2px solid var(--color-border-accent);
+  padding-left: 0.625rem;
+  margin-bottom: 1.5rem;
+  font-style: normal;
+}
+.mo-cite--sm {
+  margin-top: 0.75rem;
+  margin-bottom: 0;
+}
+.mo-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.mo-pill {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-border-default);
+  border-radius: 999px;
+  padding: 0.25rem 0.75rem;
+  text-decoration: none;
+  transition: border-color 0.15s, background 0.15s;
+}
+.mo-pill:hover {
+  border-color: var(--color-border-accent);
+  background: var(--color-bg-accent);
+}
+
+/* Sections */
+.mo-section {
+  padding: 3.5rem 0;
+  border-bottom: 1px solid var(--color-border-light);
+}
+.mo-section--surface {
+  background: var(--color-bg-surface);
+}
+.mo-section-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: 1.5rem;
+}
+.mo-h2 {
+  font-size: clamp(1.25rem, 3vw, 1.625rem);
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  color: var(--color-text-primary);
+  margin-bottom: 2rem;
+}
+
+/* Section Cards */
+.mo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+.mo-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border: 1px solid var(--color-border-light);
+  border-top: 3px solid var(--color-border-accent);
+  border-radius: 6px;
+  padding: 1.25rem 1.5rem;
+  background: var(--color-bg-page);
+  text-decoration: none;
+  transition: box-shadow 0.15s, border-color 0.15s;
+}
+.mo-card:hover {
+  box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+}
+.mo-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.25rem;
+}
+.mo-card-num {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--color-border-accent);
+}
+.mo-card-tag {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-subtle);
+  background: var(--color-bg-subtle);
+  padding: 0.1rem 0.4rem;
+  border-radius: 3px;
+}
+.mo-card-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  line-height: 1.25;
+}
+.mo-card-desc {
+  font-size: 0.875rem;
+  line-height: 1.75;
+  color: var(--color-text-secondary);
+  flex: 1;
+}
+.mo-card-cta {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-border-accent);
+  margin-top: 0.5rem;
+}
+
+/* FAQ */
+.mo-faq {
+  max-width: 800px;
+}
+.mo-faq-item {
+  border-bottom: 1px solid var(--color-border-light);
+}
+.mo-faq-item:first-child {
+  border-top: 1px solid var(--color-border-light);
+}
+.mo-faq-q {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  padding: 1.25rem 0;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  line-height: 1.4;
+}
+.mo-faq-q::-webkit-details-marker { display: none; }
+.mo-faq-q::after {
+  content: "+";
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  flex-shrink: 0;
+}
+details[open] .mo-faq-q::after { content: "−"; }
+.mo-faq-a {
+  font-size: 0.9375rem;
+  line-height: 1.9;
+  color: var(--color-text-secondary);
+  padding-bottom: 1rem;
+  text-align: justify;
+}
+
+/* CTA */
+.mo-cta {
+  background: var(--color-cta-bg);
+  padding: 4rem 0;
+}
+.mo-cta-h {
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  font-weight: 700;
+  color: var(--color-cta-text);
+  letter-spacing: -0.015em;
+  margin-bottom: 0.75rem;
+}
+.mo-cta-sub {
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: #94a3b8;
+  max-width: 56ch;
+  margin-bottom: 2rem;
+}
+.mo-cta-btns { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+.mo-cta-btn {
+  display: inline-block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.625rem 1.25rem;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.15s, border-color 0.15s;
+}
+.mo-cta-btn--primary {
+  background: transparent;
+  color: var(--color-cta-text);
+  border: 1.5px solid var(--color-cta-border);
+}
+.mo-cta-btn--primary:hover {
+  background: var(--color-cta-border);
+  color: var(--color-cta-bg);
+}
+.mo-cta-btn--outline {
+  background: transparent;
+  color: #94a3b8;
+  border: 1.5px solid #334155;
+}
+.mo-cta-btn--outline:hover {
+  border-color: #94a3b8;
+  color: var(--color-cta-text);
+}
+</style>

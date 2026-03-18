@@ -23,223 +23,434 @@ const schema = [
   seoTitle="Contact | Autonomy Bridge"
   seoDescription="Structured enquiries for advisory, bespoke research, and warehouse automation decisions."
   schema={schema}
+  showBreadcrumbs={false}
+  showLocalSubnav={false}
 >
-  <article class="max-w-[1100px] mx-auto px-6 py-12 md:py-16">
-    <header>
-      <div class="max-w-[760px]">
-        <h1 class="text-4xl md:text-5xl font-semibold tracking-tight mb-4">Contact</h1>
-        <p class="text-sm text-neutral-500 mb-8">
-          Structured enquiries for advisory, bespoke research, and operator-level automation
-          decisions.
-        </p>
-        <p class="text-base md:text-[17px] leading-8 text-neutral-800">
-          Autonomy Bridge works with a focused set of clients and questions. Use this form if you
-          are evaluating a warehouse automation or AI infrastructure decision, conducting investment
-          or market diligence, or seeking independent research support.
-        </p>
-        <p class="text-base md:text-[17px] leading-8 text-neutral-800 mt-4">
-          The form is designed to make scoping faster. Clear inputs lead to a faster yes, no, or
-          next-step decision.
-        </p>
-        <div class="flex flex-wrap gap-x-4 gap-y-2 mt-6 text-sm">
-          <a href="/advisory" class="underline underline-offset-4">Advisory &rarr;</a>
-          <a href="/bespoke-research" class="underline underline-offset-4">Bespoke Research &rarr;</a>
-          <a href="/frameworks" class="underline underline-offset-4">Frameworks &rarr;</a>
-          <a href="/use-cases" class="underline underline-offset-4">Use Cases &rarr;</a>
+
+  <!-- Hero -->
+  <section class="ct-hero">
+    <div class="ct-container">
+      <p class="ct-breadcrumb">Home / Contact</p>
+      <h1 class="ct-h1">Contact</h1>
+      <p class="ct-tagline">Structured enquiries · Advisory · Bespoke Research</p>
+      <p class="ct-intro">Autonomy Bridge works with a focused set of clients and questions. Use this form if you are evaluating a warehouse automation or AI infrastructure decision, conducting investment or market diligence, or seeking independent research support.</p>
+      <p class="ct-intro ct-intro--sm">The form is designed to make scoping faster. Clear inputs lead to a faster yes, no, or next-step decision.</p>
+      <div class="ct-pills">
+        <a href="/advisory" class="ct-pill">Advisory &rarr;</a>
+        <a href="/bespoke-research" class="ct-pill">Bespoke Research &rarr;</a>
+        <a href="/frameworks" class="ct-pill">Frameworks &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main grid: sidebar + form -->
+  <section class="ct-body">
+    <div class="ct-container ct-grid">
+
+      <!-- Left: context -->
+      <aside class="ct-sidebar">
+
+        <div class="ct-side-block">
+          <h2 class="ct-side-h">What this form is for</h2>
+          <ul class="ct-checklist">
+            <li>Warehouse automation evaluation</li>
+            <li>Robotics deployment or vendor assessment</li>
+            <li>Bespoke market or buyer research</li>
+            <li>Investment diligence on operators, vendors, or market segments</li>
+            <li>Media or publisher enquiries related to industrial automation</li>
+          </ul>
+        </div>
+
+        <div class="ct-side-block">
+          <h2 class="ct-side-h">What to include</h2>
+          <p class="ct-side-p">A useful enquiry usually includes:</p>
+          <ul class="ct-checklist">
+            <li>Company or organization</li>
+            <li>Your role</li>
+            <li>The decision being made</li>
+            <li>Technology, market, or deployment context</li>
+            <li>Any timing constraint</li>
+          </ul>
+          <p class="ct-side-p ct-side-p--note">The clearer the question, the faster the scoping decision.</p>
+        </div>
+
+        <div class="ct-side-block">
+          <h2 class="ct-side-h">Response Time</h2>
+          <p class="ct-side-p">All enquiries are reviewed within two business days.</p>
+        </div>
+
+        <div class="ct-side-block">
+          <h2 class="ct-side-h">Alternative Contact</h2>
+          <p class="ct-side-p">
+            <a href="https://www.linkedin.com/in/deepakgupta5" target="_blank" rel="noopener noreferrer" class="ct-link">LinkedIn &rarr;</a>
+          </p>
+        </div>
+
+      </aside>
+
+      <!-- Right: form -->
+      <div class="ct-form-wrap">
+        <h2 class="ct-form-h">Enquiry Form</h2>
+        <form
+          name="contact"
+          method="POST"
+          action="/contact-success"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          class="ct-form"
+        >
+          <input type="hidden" name="form-name" value="contact" />
+          <div aria-hidden="true" class="ct-hidden">
+            <input type="text" name="bot-field" tabindex="-1" autocomplete="off" />
+          </div>
+
+          <div class="ct-field">
+            <label for="name" class="ct-label">Name</label>
+            <p class="ct-hint">Your full name</p>
+            <input id="name" name="name" type="text" required class="ct-input" />
+          </div>
+
+          <div class="ct-field">
+            <label for="email" class="ct-label">Email</label>
+            <p class="ct-hint">Your reply-to email address</p>
+            <input id="email" name="email" type="email" required class="ct-input" />
+          </div>
+
+          <div class="ct-field">
+            <label for="company" class="ct-label">Company</label>
+            <p class="ct-hint">Organization name</p>
+            <input id="company" name="company" type="text" class="ct-input" />
+          </div>
+
+          <div class="ct-field">
+            <label for="role" class="ct-label">Role</label>
+            <p class="ct-hint">Your title or function</p>
+            <input id="role" name="role" type="text" class="ct-input" />
+          </div>
+
+          <div class="ct-field">
+            <label for="enquiryType" class="ct-label">Enquiry Type</label>
+            <p class="ct-hint">Select the type of enquiry</p>
+            <select id="enquiryType" name="enquiryType" required class="ct-input">
+              <option value="">Select one</option>
+              <option>Advisory</option>
+              <option>Bespoke Research</option>
+              <option>Investment / Diligence</option>
+              <option>Media / Press</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="ct-field">
+            <label for="message" class="ct-label">Message</label>
+            <p class="ct-hint">Describe the decision, context, and what you need. Include company context, your role, the decision being made, relevant technology or market details, and any timing constraint.</p>
+            <textarea id="message" name="message" required class="ct-input ct-textarea"></textarea>
+          </div>
+
+          <div>
+            <button type="submit" class="ct-submit">Submit enquiry</button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- What Happens Next -->
+  <section class="ct-next">
+    <div class="ct-container">
+      <h2 class="ct-next-h">What Happens Next</h2>
+      <div class="ct-steps">
+        <div class="ct-step">
+          <span class="ct-step-num">01</span>
+          <div class="ct-step-body">
+            <h3 class="ct-step-label">Review</h3>
+            <p class="ct-step-desc">Every enquiry is read in full before any response is sent. If the work falls outside current scope or capacity, the reply will say so directly.</p>
+          </div>
+        </div>
+        <div class="ct-step">
+          <span class="ct-step-num">02</span>
+          <div class="ct-step-body">
+            <h3 class="ct-step-label">Scoping Conversation</h3>
+            <p class="ct-step-desc">If there is a fit, a short working call is scheduled. The purpose is to define the problem, not run a sales process.</p>
+          </div>
+        </div>
+        <div class="ct-step">
+          <span class="ct-step-num">03</span>
+          <div class="ct-step-body">
+            <h3 class="ct-step-label">Proposal or Research Brief</h3>
+            <p class="ct-step-desc">If the engagement moves forward, the next step is a scoped proposal or structured research brief covering methodology, deliverables, and timeline.</p>
+          </div>
         </div>
       </div>
-    </header>
+    </div>
+  </section>
 
-    <section class="mt-12 pt-8 border-t border-neutral-200 md:grid md:grid-cols-12 gap-10 md:gap-12">
-      <div class="md:col-span-5">
-        <section>
-          <h2 class="text-2xl md:text-3xl font-semibold tracking-tight mb-4">What this form is for</h2>
-          <p class="text-base md:text-[17px] leading-8 text-neutral-800">
-            Use this form if you need support with:
-          </p>
-          <ul class="list-disc pl-5 space-y-2 mt-4 text-base md:text-[17px] leading-8 text-neutral-800">
-            <li>warehouse automation evaluation</li>
-            <li>robotics deployment or vendor assessment</li>
-            <li>bespoke market or buyer research</li>
-            <li>investment diligence on operators, vendors, or market segments</li>
-            <li>media or publisher enquiries related to industrial automation</li>
-          </ul>
-        </section>
-
-        <section class="mt-12 pt-8 border-t border-neutral-200">
-          <h2 class="text-2xl md:text-3xl font-semibold tracking-tight mb-4">What to include</h2>
-          <p class="text-base md:text-[17px] leading-8 text-neutral-800">
-            A useful enquiry usually includes:
-          </p>
-          <ul class="list-disc pl-5 space-y-2 mt-4 text-base md:text-[17px] leading-8 text-neutral-800">
-            <li>company or organization</li>
-            <li>your role</li>
-            <li>the decision being made</li>
-            <li>the technology, market, or deployment context</li>
-            <li>any timing constraint</li>
-          </ul>
-          <p class="text-base md:text-[17px] leading-8 text-neutral-800 mt-4">
-            The clearer the question, the faster the scoping decision.
-          </p>
-        </section>
-
-        <section class="mt-12 pt-8 border-t border-neutral-200">
-          <h2 class="text-2xl md:text-3xl font-semibold tracking-tight mb-4">Response Time</h2>
-          <p class="text-base md:text-[17px] leading-8 text-neutral-800">
-            All enquiries are reviewed within two business days.
-          </p>
-        </section>
-
-        <section class="mt-12 pt-8 border-t border-neutral-200">
-          <h2 class="text-2xl md:text-3xl font-semibold tracking-tight mb-4">Alternative Contact</h2>
-          <p class="text-base md:text-[17px] leading-8 text-neutral-800">
-            <a
-              href="https://www.linkedin.com/in/deepakgupta5"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="underline underline-offset-4"
-            >
-              LinkedIn
-            </a>
-          </p>
-        </section>
-      </div>
-
-      <div class="md:col-span-7">
-        <section>
-          <h2 class="text-2xl md:text-3xl font-semibold tracking-tight mb-4">Enquiry Form</h2>
-          <form
-            name="contact"
-            method="POST"
-            action="/contact-success"
-            data-netlify="true"
-            netlify-honeypot="bot-field"
-            class="rounded-lg border border-neutral-200 bg-white p-6 md:p-8 space-y-5"
-          >
-            <input type="hidden" name="form-name" value="contact" />
-            <div aria-hidden="true" class="hidden">
-              <input type="text" name="bot-field" tabindex="-1" autocomplete="off" />
-            </div>
-
-            <div class="space-y-2">
-              <label for="name" class="text-sm font-medium text-neutral-900">Name</label>
-              <p class="text-sm text-neutral-500">Your full name</p>
-              <input
-                id="name"
-                name="name"
-                type="text"
-                required
-                class="w-full rounded-md border border-neutral-300 bg-white px-4 py-3 text-base text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:ring-2 focus:ring-neutral-900/10 focus:border-neutral-900"
-              />
-            </div>
-
-            <div class="space-y-2">
-              <label for="email" class="text-sm font-medium text-neutral-900">Email</label>
-              <p class="text-sm text-neutral-500">Your reply-to email address</p>
-              <input
-                id="email"
-                name="email"
-                type="email"
-                required
-                class="w-full rounded-md border border-neutral-300 bg-white px-4 py-3 text-base text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:ring-2 focus:ring-neutral-900/10 focus:border-neutral-900"
-              />
-            </div>
-
-            <div class="space-y-2">
-              <label for="company" class="text-sm font-medium text-neutral-900">Company</label>
-              <p class="text-sm text-neutral-500">Organization name</p>
-              <input
-                id="company"
-                name="company"
-                type="text"
-                class="w-full rounded-md border border-neutral-300 bg-white px-4 py-3 text-base text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:ring-2 focus:ring-neutral-900/10 focus:border-neutral-900"
-              />
-            </div>
-
-            <div class="space-y-2">
-              <label for="role" class="text-sm font-medium text-neutral-900">Role</label>
-              <p class="text-sm text-neutral-500">Your title or function</p>
-              <input
-                id="role"
-                name="role"
-                type="text"
-                class="w-full rounded-md border border-neutral-300 bg-white px-4 py-3 text-base text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:ring-2 focus:ring-neutral-900/10 focus:border-neutral-900"
-              />
-            </div>
-
-            <div class="space-y-2">
-              <label for="enquiryType" class="text-sm font-medium text-neutral-900">Enquiry Type</label>
-              <p class="text-sm text-neutral-500">Select the type of enquiry</p>
-              <select
-                id="enquiryType"
-                name="enquiryType"
-                required
-                class="w-full rounded-md border border-neutral-300 bg-white px-4 py-3 text-base text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:ring-2 focus:ring-neutral-900/10 focus:border-neutral-900"
-              >
-                <option value="">Select one</option>
-                <option>Advisory</option>
-                <option>Bespoke Research</option>
-                <option>Investment / Diligence</option>
-                <option>Media / Press</option>
-                <option>Other</option>
-              </select>
-            </div>
-
-            <div class="space-y-2">
-              <label for="message" class="text-sm font-medium text-neutral-900">Message</label>
-              <p class="text-sm text-neutral-500">
-                Describe the decision, context, and what you need.
-              </p>
-              <textarea
-                id="message"
-                name="message"
-                required
-                class="w-full rounded-md border border-neutral-300 bg-white px-4 py-3 text-base text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:ring-2 focus:ring-neutral-900/10 focus:border-neutral-900 min-h-[180px] resize-y"
-              ></textarea>
-              <p class="text-sm text-neutral-500">
-                Useful inputs include company context, your role, the decision being made, relevant
-                technology or market details, and any timing constraint.
-              </p>
-            </div>
-
-            <div>
-              <button
-                type="submit"
-                class="inline-flex items-center rounded-md bg-neutral-900 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-neutral-700"
-              >
-                Submit enquiry
-              </button>
-            </div>
-          </form>
-        </section>
-      </div>
-    </section>
-
-    <section class="mt-12 pt-8 border-t border-neutral-200">
-      <h2 class="text-2xl md:text-3xl font-semibold tracking-tight mb-4">What Happens Next</h2>
-      <section>
-        <h3 class="text-lg md:text-xl font-semibold mb-2">1. Review</h3>
-        <p class="text-base md:text-[17px] leading-8 text-neutral-800">
-          Every enquiry is read in full before any response is sent. If the work falls outside
-          current scope or capacity, the reply should say so directly.
-        </p>
-      </section>
-
-      <section class="mt-8">
-        <h3 class="text-lg md:text-xl font-semibold mb-2">2. Scoping Conversation</h3>
-        <p class="text-base md:text-[17px] leading-8 text-neutral-800">
-          If there is a fit, a short working call is scheduled. The purpose is to define the
-          problem, not run a sales process.
-        </p>
-      </section>
-
-      <section class="mt-8">
-        <h3 class="text-lg md:text-xl font-semibold mb-2">3. Proposal or Research Brief</h3>
-        <p class="text-base md:text-[17px] leading-8 text-neutral-800">
-          If the engagement moves forward, the next step is a scoped proposal or a structured
-          research brief covering methodology, deliverables, and timeline.
-        </p>
-      </section>
-    </section>
-  </article>
 </MainLayout>
+
+<style>
+.ct-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Hero */
+.ct-hero {
+  padding: 3.5rem 0 3rem;
+  border-bottom: 1px solid var(--color-border-light);
+}
+.ct-breadcrumb {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--color-text-subtle);
+  letter-spacing: 0.05em;
+  margin-bottom: 1.25rem;
+}
+.ct-h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--color-text-primary);
+  line-height: 1.1;
+  margin-bottom: 0.4rem;
+}
+.ct-tagline {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--color-text-muted);
+  letter-spacing: 0.06em;
+  margin-bottom: 1.5rem;
+}
+.ct-intro {
+  max-width: 68ch;
+  font-size: 1rem;
+  line-height: 1.85;
+  color: var(--color-text-secondary);
+  margin-bottom: 0.75rem;
+}
+.ct-intro--sm {
+  font-size: 0.9375rem;
+  margin-bottom: 1.5rem;
+}
+.ct-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.ct-pill {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-border-default);
+  border-radius: 999px;
+  padding: 0.25rem 0.75rem;
+  text-decoration: none;
+  transition: border-color 0.15s, background 0.15s;
+}
+.ct-pill:hover {
+  border-color: var(--color-border-accent);
+  background: var(--color-bg-accent);
+}
+
+/* Body grid */
+.ct-body {
+  padding: 3.5rem 0;
+  border-bottom: 1px solid var(--color-border-light);
+}
+.ct-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 3.5rem;
+  align-items: start;
+}
+@media (max-width: 768px) {
+  .ct-grid { grid-template-columns: 1fr; gap: 2rem; }
+}
+
+/* Sidebar */
+.ct-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.ct-side-block {
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--color-border-light);
+}
+.ct-side-block:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.ct-side-h {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.01em;
+}
+.ct-side-p {
+  font-size: 0.875rem;
+  line-height: 1.75;
+  color: var(--color-text-secondary);
+  margin-bottom: 0.5rem;
+}
+.ct-side-p--note {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  font-style: italic;
+  margin-top: 0.75rem;
+}
+.ct-checklist {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+.ct-checklist li {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+  padding-left: 1.25rem;
+  position: relative;
+}
+.ct-checklist li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--color-border-accent);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  top: 0.15rem;
+}
+.ct-link {
+  font-size: 0.875rem;
+  color: var(--color-text-primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--color-border-accent);
+}
+.ct-link:hover { color: var(--color-text-accent); }
+
+/* Form */
+.ct-form-wrap {
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-border-light);
+  border-radius: 8px;
+  padding: 2rem;
+}
+.ct-form-h {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  letter-spacing: -0.015em;
+  margin-bottom: 1.75rem;
+}
+.ct-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.ct-hidden { display: none; }
+.ct-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.ct-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+.ct-hint {
+  font-size: 0.775rem;
+  color: var(--color-text-muted);
+  line-height: 1.4;
+  margin-bottom: 0.25rem;
+}
+.ct-input {
+  width: 100%;
+  border: 1px solid var(--color-border-default);
+  border-radius: 5px;
+  background: var(--color-bg-page);
+  padding: 0.625rem 0.875rem;
+  font-size: 0.9375rem;
+  color: var(--color-text-primary);
+  outline: none;
+  transition: border-color 0.15s;
+  font-family: inherit;
+}
+.ct-input:focus {
+  border-color: var(--color-border-accent);
+  box-shadow: 0 0 0 3px rgba(217,119,6,0.1);
+}
+.ct-textarea {
+  min-height: 160px;
+  resize: vertical;
+}
+.ct-submit {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.625rem 1.25rem;
+  border-radius: 5px;
+  background: var(--color-cta-bg);
+  color: var(--color-cta-text);
+  border: 1.5px solid var(--color-cta-border);
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+  font-family: inherit;
+}
+.ct-submit:hover {
+  background: #1e293b;
+}
+
+/* What Happens Next */
+.ct-next {
+  padding: 3.5rem 0 4rem;
+  background: var(--color-bg-surface);
+}
+.ct-next-h {
+  font-size: clamp(1.25rem, 3vw, 1.625rem);
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  color: var(--color-text-primary);
+  margin-bottom: 2rem;
+}
+.ct-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  max-width: 640px;
+}
+.ct-step {
+  display: grid;
+  grid-template-columns: 2.5rem 1fr;
+  gap: 1rem;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--color-border-light);
+}
+.ct-step:last-child { border-bottom: none; }
+.ct-step-num {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--color-border-accent);
+  padding-top: 0.2rem;
+}
+.ct-step-label {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 0.375rem;
+}
+.ct-step-desc {
+  font-size: 0.875rem;
+  line-height: 1.8;
+  color: var(--color-text-secondary);
+}
+</style>

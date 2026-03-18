@@ -31,45 +31,131 @@ const schema = [
   summary={summary}
   canonicalPath={canonicalPath}
   schema={schema}
+  showBreadcrumbs={false}
+  showLocalSubnav={false}
 >
-  <article class="prose-surface glossary-term-template">
-    <header class="term-header">
-      <h1 class="type-h1">{term}</h1>
+  <article class="gt-wrap">
+    <header class="gt-header">
+      <p class="gt-breadcrumb">Home / <a href="/glossary">Glossary</a> / {term}</p>
+      <h1 class="gt-h1">{term}</h1>
+      <p class="gt-tagline">Autonomy Bridge · Analytical Definition</p>
     </header>
 
-    <section class="glossary-term-body prose-surface">
+    <section class="gt-body prose-surface">
       <slot />
     </section>
+
+    <footer class="gt-footer">
+      <a href="/glossary" class="gt-back">&larr; Back to Glossary</a>
+      <div class="gt-footer-links">
+        <a href="/frameworks" class="gt-pill">Frameworks &rarr;</a>
+        <a href="/insights" class="gt-pill">Insights &rarr;</a>
+        <a href="/advisory" class="gt-pill">Advisory &rarr;</a>
+      </div>
+    </footer>
   </article>
 </MainLayout>
 
 <style>
-  .glossary-term-template {
-    max-width: 78ch;
-    margin-inline: auto;
-  }
+.gt-wrap {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 4rem;
+}
 
-  .term-header {
-    border: 0.0625rem solid #d1d5db;
-    border-radius: 0.625rem;
-    background: #ffffff;
-    padding: 1rem;
-  }
+.gt-breadcrumb {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--color-text-subtle);
+  letter-spacing: 0.04em;
+  margin-bottom: 1.25rem;
+}
+.gt-breadcrumb a {
+  color: var(--color-text-subtle);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
 
-  .term-header h1,
-  .term-header p {
-    margin: 0;
-  }
+.gt-h1 {
+  font-size: clamp(1.75rem, 5vw, 2.75rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--color-text-primary);
+  line-height: 1.15;
+  margin-bottom: 0.5rem;
+}
 
-  .term-header p + p {
-    margin-top: 0.55rem;
-  }
+.gt-tagline {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--color-text-muted);
+  letter-spacing: 0.06em;
+  margin-bottom: 0;
+}
 
-  .glossary-term-template section + section {
-    margin-top: 1.5rem;
-  }
+.gt-header {
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--color-border-light);
+  margin-bottom: 2rem;
+}
 
-  .glossary-term-body {
-    margin-top: 1.5rem;
-  }
+.gt-body {
+  /* paragraph spacing handled by prose-surface */
+}
+
+/* Override prose-surface link color for brand consistency */
+.gt-body :global(a) {
+  color: var(--color-text-primary);
+  text-decoration-color: var(--color-border-accent);
+}
+.gt-body :global(a:hover) {
+  color: var(--color-text-accent);
+}
+
+/* Paragraph spacing */
+.gt-body :global(p + p) {
+  margin-top: 1.25rem;
+}
+
+.gt-footer {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-border-light);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.gt-back {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  text-decoration: none;
+}
+.gt-back:hover {
+  color: var(--color-text-primary);
+}
+
+.gt-footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.gt-pill {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-border-default);
+  border-radius: 999px;
+  padding: 0.25rem 0.75rem;
+  text-decoration: none;
+  transition: border-color 0.15s, background 0.15s;
+}
+.gt-pill:hover {
+  border-color: var(--color-border-accent);
+  background: var(--color-bg-accent);
+}
 </style>
