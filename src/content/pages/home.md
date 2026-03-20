@@ -8,7 +8,7 @@ document:
   language: "en"
   slug: "home"
 
-title: "Warehouse Automation Economics for High-Stakes Deployment Decisions"
+title: "Robotics Deployment Economics for High-Stakes Industrial Decisions"
 description: "Decision-grade research on warehouse automation economics, robotics deployment, and industrial AI. Structured knowledge platform for warehouse operators, logistics investors, and robotics vendors."
 summary: "Autonomy Bridge is a structured knowledge platform publishing proprietary frameworks, quantitative use cases, and bespoke research on warehouse automation, robotics deployment, and industrial AI."
 
