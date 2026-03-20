@@ -120,6 +120,27 @@ const schema = faqSchema ? [...pageSchema, faqSchema] : pageSchema;
       if (/^Home\s*·/.test(txt)) { p.style.display = "none"; }
     });
 
+    // 5. Hide editorial H2 sections that are redundant with the page layout:
+    //    "How to Use the Frameworks" (info covered by card grid + tagline)
+    //    "Related Resources" (info covered by hub-surfacing pills)
+    //    Hide the H2 and all following siblings until the next H2 or HR.
+    const HIDDEN_SECTIONS = ["how to use", "related resources"];
+    let inHiddenSection = false;
+    Array.from(hubBody.children).forEach((child) => {
+      const tag = child.tagName ?? "";
+      const text = (child.textContent ?? "").trim().toLowerCase();
+      if (tag === "H2") {
+        if (HIDDEN_SECTIONS.some((s) => text.startsWith(s))) {
+          inHiddenSection = true;
+          child.style.display = "none";
+          return;
+        }
+        inHiddenSection = false;
+      }
+      if (tag === "HR") { inHiddenSection = false; }
+      if (inHiddenSection) { (child as HTMLElement).style.display = "none"; }
+    });
+
     // 4. Structure FAQ Q&A pairs (same pattern as detail page Transform 7)
     let inFaq = false;
     Array.from(hubBody.children).forEach((child) => {
