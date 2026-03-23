@@ -8,6 +8,8 @@
 [build.processing]
   skip_processing = true
 
-[[edge_functions]]
-  path = "/*"
-  function = "strip-trailing-slash"
+[[redirects]]
+  from = "/:path*/"
+  to = "/:path*"
+  status = 301
+  force = true
