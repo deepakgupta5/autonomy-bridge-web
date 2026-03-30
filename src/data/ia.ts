@@ -36,6 +36,7 @@ export const useCaseSlugs = [
   'robotics-deployment-3pl-warehouses',
   'amr-deployment-evaluation',
   'goods-to-person-system-evaluation',
+  'retail-dc-automation-evaluation',
 ] as const;
 export const caseStudySlugs = [
   'automation-deployment-risk-assessment',
@@ -160,7 +161,6 @@ export const pendingContentRoutes = [
   '/insights/why-parcel-sortation-automation-breaks-at-low-volume',
   '/insights/why-general-merchandise-3pls-should-not-automate-too-early',
   // Use Cases — Phase 2 ICP Expansion
-  '/use-cases/retail-dc-automation-evaluation',
   '/use-cases/cold-storage-automation-evaluation',
   '/use-cases/parcel-sortation-automation-evaluation',
   '/use-cases/general-merchandise-3pl-automation-evaluation',
