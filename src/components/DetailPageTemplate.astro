@@ -352,6 +352,21 @@ const schema = faqSchema ? [detailSchema, faqSchema] : [detailSchema];
     if (/^(Related case studies|Related frameworks|Related insights|Related use cases?|Glossary terms?):/.test(txt)) { p.style.display = "none"; }
   });
 
+  // ── 10. Strip [C1], [C2] etc. citation markers from body text ────────────
+  // These reference the hidden Appendix sections. Strip them from all text nodes.
+  const CITATION_MARKER_RE = /\s*\[[A-Z]\d+\]/g;
+  function stripCitationMarkers(node) {
+    if (node.nodeType === Node.TEXT_NODE) {
+      if (CITATION_MARKER_RE.test(node.textContent ?? "")) {
+        CITATION_MARKER_RE.lastIndex = 0;
+        node.textContent = (node.textContent ?? "").replace(CITATION_MARKER_RE, "");
+      }
+    } else if (node.nodeType === Node.ELEMENT_NODE && node.nodeName !== "SCRIPT" && node.nodeName !== "STYLE") {
+      Array.from(node.childNodes).forEach(stripCitationMarkers);
+    }
+  }
+  stripCitationMarkers(body);
+
   // ── 9. Hide JSON-LD code blocks (schema.org data embedded in markdown) ───
   // Case study (and some other) markdown files embed a ```json schema block
   // at the bottom. The server already builds structured data in <head>;
@@ -639,7 +654,7 @@ const schema = faqSchema ? [detailSchema, faqSchema] : [detailSchema];
 
   /* Proprietary analysis citations */
   .detail-body :global(.ab-citation) {
-    font-family: var(--font-mono);
+    font-family: var(--font-sans);
     font-size: var(--text-xs);
     color: var(--color-text-subtle);
     font-style: normal;
