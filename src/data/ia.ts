@@ -110,6 +110,19 @@ export const glossaryTermSlugs = [
   'third-party-logistics',
   'robotics-as-a-service',
   'systems-integrator',
+  'peak-labor-cost-avoidance',
+  'idle-capital-cost',
+  'sortation-volume-floor',
+  'labor-intensity-threshold',
+  'cold-rated-system-premium',
+  'fixed-conveyor-sortation',
+  'amr-sortation',
+  'omnichannel-workflow-conflict',
+  'case-level-picking-economics',
+  'freezer-environment-constraint',
+  'ambient-benchmark-error',
+  'customer-concentration-risk',
+  'automation-go-no-go',
 ] as const;
 
 export const topLevelRoutes = [
