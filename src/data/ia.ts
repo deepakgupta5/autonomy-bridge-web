@@ -151,6 +151,26 @@ export const caseStudyRoutes = caseStudySlugs.map((slug) => `/case-studies/${slu
 export const marketOverviewChildRoutes = marketOverviewChildSlugs.map((slug) => `/market-overview/${slug}`);
 export const glossaryTermRoutes = glossaryTermSlugs.map((slug) => `/glossary/${slug}`);
 
+// Registered URLs for upcoming content — added to sitemap before content files exist.
+// Move each slug into its typed array above once the content file is created.
+export const pendingContentRoutes = [
+  // Insights — Phase 2 ICP Expansion
+  '/insights/how-retail-distribution-center-automation-economics-actually-work',
+  '/insights/why-cold-storage-automation-economics-are-structurally-different',
+  '/insights/why-parcel-sortation-automation-breaks-at-low-volume',
+  '/insights/why-general-merchandise-3pls-should-not-automate-too-early',
+  // Use Cases — Phase 2 ICP Expansion
+  '/use-cases/retail-dc-automation-evaluation',
+  '/use-cases/cold-storage-automation-evaluation',
+  '/use-cases/parcel-sortation-automation-evaluation',
+  '/use-cases/general-merchandise-3pl-automation-evaluation',
+  // Case Studies — Phase 2 ICP Expansion
+  '/case-studies/retail-dc-peak-demand-automation-assessment',
+  '/case-studies/cold-storage-automation-economics-assessment',
+  '/case-studies/parcel-sortation-volume-sensitivity-analysis',
+  '/case-studies/general-merchandise-3pl-premature-automation-assessment',
+] as const;
+
 export const allLockedRoutes = [
   ...topLevelRoutes,
   ...frameworkRoutes,
@@ -159,4 +179,5 @@ export const allLockedRoutes = [
   ...caseStudyRoutes,
   ...marketOverviewChildRoutes,
   ...glossaryTermRoutes,
+  ...pendingContentRoutes,
 ];
