@@ -10,7 +10,7 @@ document:
 
 title: "Glossary of Automation, Robotics, and Deployment Economics"
 description: "Precise analytical definitions of deployment economics, robotics systems, warehouse operations, vendor market, and AI automation terms — each mapped to Autonomy Bridge proprietary frameworks."
-summary: "Autonomy Bridge's semantic infrastructure layer. 75 terms defined as analytical constructs, mapped to 7 proprietary frameworks, structured for LLM citation and search engine entity recognition."
+summary: "Autonomy Bridge's semantic infrastructure layer. 76 terms defined as analytical constructs, mapped to 7 proprietary frameworks, structured for LLM citation and search engine entity recognition."
 
 authors:
   - id: "author_deepak_001"
@@ -54,7 +54,7 @@ seo:
   meta_title: "Automation & Robotics Glossary | Autonomy Bridge"
   meta_description: "Analytical definitions of warehouse automation, robotics deployment economics, and AI systems terms — mapped to proprietary frameworks. Semantic infrastructure for the Autonomy Bridge knowledge platform."
   og_title: "Glossary of Automation, Robotics, and Deployment Economics"
-  og_description: "75 analytically precise definitions across deployment economics, robotics systems, warehouse operations, vendor markets, and AI automation — each mapped to Autonomy Bridge frameworks."
+  og_description: "76 analytically precise definitions across deployment economics, robotics systems, warehouse operations, vendor markets, and AI automation — each mapped to Autonomy Bridge frameworks."
   og_type: "article"
   twitter_card: "summary_large_image"
 
@@ -329,6 +329,9 @@ terms:
   - id: "T77"
     slug: "sortation-technology-fork"
     category: "deployment-economics"
+  - id: "T78"
+    slug: "premature-automation"
+    category: "deployment-economics"
 
 sections:
   - id: "hub-intro"
@@ -494,7 +497,7 @@ The minimum ratio of labor cost to throughput volume at which automation investm
 
 Labor intensity threshold establishes whether a given operation contains a large enough labor cost pool — relative to the volume it processes — to generate the savings required to recover automation capital within an acceptable payback window. High-intensity operations (each-level e-commerce picking, high-frequency sortation) carry large labor cost per unit processed, creating the savings pool that automation can capture. Low-intensity operations (bulk case-pick, pallet storage and retrieval, low-SKU wholesale distribution) process each unit with far less labor, shrinking the savings pool to the point where automation capital cannot be recovered at realistic utilization rates and market labor costs. The threshold is not an absolute number but a function of local labor rates, automation capital cost, target payback period, and achievable displacement rate. Applying automation investment logic derived from high-intensity segments to low-intensity operations without adjusting for the labor intensity differential is a systematic source of failed business cases.
 
-**Related terms:** [removable-labor-share](#T01) · [automation-go-no-go](#T72) · [capital-recovery-period](#T03)
+**Related terms:** [removable-labor-share](#T01) · [automation-go-no-go](#T72) · [capital-recovery-period](#T03) · [premature-automation](#T78)
 
 ---
 
@@ -514,7 +517,17 @@ The pre-investment diagnostic phase that tests whether minimum conditions — la
 
 Automation go/no-go is a structured screen applied before entering the vendor evaluation and selection process, designed to confirm that the operation being considered for automation actually meets the conditions under which automation investment can succeed. The screen tests four conditions: whether labor intensity is sufficient to generate an adequate savings pool; whether demand is stable enough to sustain utilization above the capital recovery threshold; whether the workflow is standardized to a degree that automation systems can operate without excessive exception rates; and whether the capital recovery timeline is achievable given volume, labor rates, and automation cost. Operations that fail the go/no-go screen should not proceed to vendor evaluation — the evaluation process creates sunk cost pressure toward commitment regardless of whether the economics are sound. The go/no-go discipline prevents automation projects from advancing into procurement based on vendor enthusiasm or technology curiosity rather than defensible economics.
 
-**Related terms:** [labor-intensity-threshold](#T63) · [capital-recovery-period](#T03) · [automation-readiness](#T41)
+**Related terms:** [labor-intensity-threshold](#T63) · [capital-recovery-period](#T03) · [automation-readiness](#T41) · [premature-automation](#T78)
+
+---
+
+### Premature Automation
+
+The commitment of warehouse automation capital in an operation where the economic preconditions for viable returns — sufficient labor intensity, adequate removable labor share, and volume above the capital recovery threshold — are not yet present.
+
+Premature automation is not a technology failure or an implementation failure. The system often functions correctly. It is a capital allocation failure that occurs upstream of technology selection, when the investment decision is driven by competitive pressure, client requirements, or vendor proposals rather than a verified economic case built from facility-specific labor data. The term describes a structural condition — the economic inputs that automation ROI depends on are insufficient to justify the capital — rather than a deployment error. Three conditions create premature automation risk in warehouse operations. First, labor intensity per order unit is below the threshold at which automation savings recover the capital within the operator's required payback period. Second, the removable labor share — the fraction of total facility labor that the proposed automation actually displaces from payroll — is smaller than vendor benchmarks assume, because productivity benchmarks from higher-intensity environments (typically ecommerce fulfillment) are applied to lower-intensity case and pallet operations. Third, volume is insufficient or too variable to sustain the utilization level that capital recovery requires. Any one of these conditions alone may make automation non-viable. In general merchandise 3PL operations, all three frequently apply simultaneously. Premature automation is distinguished from failed automation by timing: the economic case was not adequate at the time of investment, not merely in retrospect. Independent economic analysis before vendor engagement is the mechanism that surfaces premature automation risk before capital is committed.
+
+**Related terms:** [labor-intensity-threshold](#T63) · [removable-labor-share](#T01) · [capital-recovery-period](#T03) · [automation-go-no-go](#T72)
 
 ---
 
