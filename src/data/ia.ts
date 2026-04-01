@@ -42,6 +42,7 @@ export const useCaseSlugs = [
   'retail-dc-automation-evaluation',
   'cold-storage-automation-evaluation',
   'parcel-sortation-automation-evaluation',
+  'general-merchandise-3pl-automation-evaluation',
 ] as const;
 export const caseStudySlugs = [
   'automation-deployment-risk-assessment',
@@ -168,10 +169,7 @@ export const glossaryTermRoutes = glossaryTermSlugs.map((slug) => `/glossary/${s
 
 // Registered URLs for upcoming content — added to sitemap before content files exist.
 // Move each slug into its typed array above once the content file is created.
-export const pendingContentRoutes = [
-  // Use Cases — Phase 2 ICP Expansion
-  '/use-cases/general-merchandise-3pl-automation-evaluation',
-] as const;
+export const pendingContentRoutes = [] as const;
 
 export const allLockedRoutes = [
   ...topLevelRoutes,
