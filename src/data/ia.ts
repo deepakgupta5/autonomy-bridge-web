@@ -47,6 +47,7 @@ export const caseStudySlugs = [
   'vendor-deployment-viability-assessment',
   'robotics-pricing-strategy-research',
   'retail-dc-peak-demand-automation-assessment',
+  'cold-storage-automation-economics-assessment',
 ] as const;
 export const marketOverviewChildSlugs = [
   'industry-landscape',
@@ -168,7 +169,6 @@ export const pendingContentRoutes = [
   '/use-cases/parcel-sortation-automation-evaluation',
   '/use-cases/general-merchandise-3pl-automation-evaluation',
   // Case Studies — Phase 2 ICP Expansion
-  '/case-studies/cold-storage-automation-economics-assessment',
   '/case-studies/parcel-sortation-volume-sensitivity-analysis',
   '/case-studies/general-merchandise-3pl-premature-automation-assessment',
 ] as const;
