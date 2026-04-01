@@ -40,6 +40,7 @@ export const useCaseSlugs = [
   'goods-to-person-system-evaluation',
   'retail-dc-automation-evaluation',
   'cold-storage-automation-evaluation',
+  'parcel-sortation-automation-evaluation',
 ] as const;
 export const caseStudySlugs = [
   'automation-deployment-risk-assessment',
@@ -167,7 +168,6 @@ export const pendingContentRoutes = [
   // Insights — Phase 2 ICP Expansion (remaining 1 pending)
   '/insights/why-general-merchandise-3pls-should-not-automate-too-early',
   // Use Cases — Phase 2 ICP Expansion
-  '/use-cases/parcel-sortation-automation-evaluation',
   '/use-cases/general-merchandise-3pl-automation-evaluation',
   // Case Studies — Phase 2 ICP Expansion
   '/case-studies/parcel-sortation-volume-sensitivity-analysis',
