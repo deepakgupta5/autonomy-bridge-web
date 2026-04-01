@@ -10,7 +10,7 @@ document:
 
 title: "Glossary of Automation, Robotics, and Deployment Economics"
 description: "Precise analytical definitions of deployment economics, robotics systems, warehouse operations, vendor market, and AI automation terms — each mapped to Autonomy Bridge proprietary frameworks."
-summary: "Autonomy Bridge's semantic infrastructure layer. 74 terms defined as analytical constructs, mapped to 7 proprietary frameworks, structured for LLM citation and search engine entity recognition."
+summary: "Autonomy Bridge's semantic infrastructure layer. 75 terms defined as analytical constructs, mapped to 7 proprietary frameworks, structured for LLM citation and search engine entity recognition."
 
 authors:
   - id: "author_deepak_001"
@@ -54,7 +54,7 @@ seo:
   meta_title: "Automation & Robotics Glossary | Autonomy Bridge"
   meta_description: "Analytical definitions of warehouse automation, robotics deployment economics, and AI systems terms — mapped to proprietary frameworks. Semantic infrastructure for the Autonomy Bridge knowledge platform."
   og_title: "Glossary of Automation, Robotics, and Deployment Economics"
-  og_description: "74 analytically precise definitions across deployment economics, robotics systems, warehouse operations, vendor markets, and AI automation — each mapped to Autonomy Bridge frameworks."
+  og_description: "75 analytically precise definitions across deployment economics, robotics systems, warehouse operations, vendor markets, and AI automation — each mapped to Autonomy Bridge frameworks."
   og_type: "article"
   twitter_card: "summary_large_image"
 
@@ -326,6 +326,9 @@ terms:
   - id: "T75"
     slug: "cold-storage-maintenance-burden"
     category: "deployment-economics"
+  - id: "T77"
+    slug: "sortation-technology-fork"
+    category: "deployment-economics"
 
 sections:
   - id: "hub-intro"
@@ -532,6 +535,16 @@ The elevated frequency and total cost of maintenance interventions required to s
 Cold storage maintenance burden is the most systematically understated cost variable in cold storage automation ROI. Three mechanisms drive the elevation above ambient baselines. First, lubrication degrades faster at low temperatures — cold-specific lubricants have shorter effective intervals than ambient-grade alternatives, and manufacturer-specified maintenance intervals for cold-rated systems are shorter than the ambient intervals vendor proposals typically use for cost modeling. Second, condensation at temperature zone boundaries causes electrical failures — moisture infiltration on sensors, connectors, and drive components at dock doors, zone transitions, and personnel access points creates unscheduled maintenance events that do not appear in ambient maintenance schedules and cannot be fully prevented through design. Third, maintenance labor is more expensive in cold environments: technicians require cold-environment protective equipment, need specialized training for cold-rated system configurations, and complete fewer tasks per maintenance window due to cold-exposure time limits. The cumulative gap between ambient-benchmark maintenance projections and cold-specific actual maintenance cost aggregates materially over a seven-to-ten-year system life — large enough in many cases to shift a marginal cold storage automation investment from viable to non-viable. Pre-deployment ROI validation requires cold-specific maintenance benchmarks from actual cold-environment deployments, not ambient benchmark estimates with cold-environment application assumptions.
 
 **Related terms:** [automation-operating-cost](#T05) · [cold-rated-system-premium](#T64) · [total-cost-of-ownership](#T08) · [capital-recovery-period](#T03)
+
+---
+
+### Sortation Technology Fork
+
+The binary architecture decision between fixed-conveyor sortation and AMR-based sortation that locks a parcel operator's cost structure and volume risk profile for seven to ten years.
+
+The sortation technology fork is not a throughput specification decision — it is a risk profile decision that maps each architecture to a different failure mode under volume contraction or volume expansion. Fixed-conveyor sortation (tilt-tray, cross-belt, sliding shoe systems) offers high throughput ceilings, well-understood maintenance profiles, and mature vendor support at high capital cost. Its risk exposure is on the downside: if volume contracts toward or below the sortation volume floor, the high fixed cost of conveyor infrastructure cannot be reduced, generating sustained per-parcel economics that deteriorate as volume falls. AMR-based sortation offers modular capacity that can be scaled up or down by adjusting fleet size, with lower initial capital commitment. Its risk exposure is on the upside: if volume grows faster than fleet expansion can accommodate, peak-period throughput hits a ceiling that translates directly into missed delivery windows and SLA failures. The correct decision methodology is not a specification comparison at current volume — it is scenario modeling against the plausible volume outcomes this operator faces given their customer concentration profile and growth trajectory. Neither architecture is universally correct; the fork is defined by which risk the operator can least afford.
+
+**Related terms:** [sortation-volume-floor](#T62) · [amr-sortation](#T66) · [fixed-conveyor-sortation](#T65) · [customer-concentration-risk](#T71)
 
 ---
 

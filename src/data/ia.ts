@@ -31,6 +31,7 @@ export const insightSlugs = [
   'why-robotics-pilots-fail-to-scale',
   'how-retail-distribution-center-automation-economics-actually-work',
   'why-cold-storage-automation-economics-are-structurally-different',
+  'why-parcel-sortation-automation-breaks-at-low-volume',
 ] as const;
 export const useCaseSlugs = [
   'warehouse-automation-roi-evaluation',
@@ -131,6 +132,7 @@ export const glossaryTermSlugs = [
   'automation-go-no-go',
   'cold-environment-labor-premium',
   'cold-storage-maintenance-burden',
+  'sortation-technology-fork',
 ] as const;
 
 export const topLevelRoutes = [
@@ -162,8 +164,7 @@ export const glossaryTermRoutes = glossaryTermSlugs.map((slug) => `/glossary/${s
 // Registered URLs for upcoming content — added to sitemap before content files exist.
 // Move each slug into its typed array above once the content file is created.
 export const pendingContentRoutes = [
-  // Insights — Phase 2 ICP Expansion (remaining 2 pending)
-  '/insights/why-parcel-sortation-automation-breaks-at-low-volume',
+  // Insights — Phase 2 ICP Expansion (remaining 1 pending)
   '/insights/why-general-merchandise-3pls-should-not-automate-too-early',
   // Use Cases — Phase 2 ICP Expansion
   '/use-cases/parcel-sortation-automation-evaluation',
