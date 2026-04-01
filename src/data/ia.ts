@@ -52,6 +52,7 @@ export const caseStudySlugs = [
   'retail-dc-peak-demand-automation-assessment',
   'cold-storage-automation-economics-assessment',
   'parcel-sortation-volume-sensitivity-analysis',
+  'general-merchandise-3pl-premature-automation-assessment',
 ] as const;
 export const marketOverviewChildSlugs = [
   'industry-landscape',
@@ -170,8 +171,6 @@ export const glossaryTermRoutes = glossaryTermSlugs.map((slug) => `/glossary/${s
 export const pendingContentRoutes = [
   // Use Cases — Phase 2 ICP Expansion
   '/use-cases/general-merchandise-3pl-automation-evaluation',
-  // Case Studies — Phase 2 ICP Expansion
-  '/case-studies/general-merchandise-3pl-premature-automation-assessment',
 ] as const;
 
 export const allLockedRoutes = [
