@@ -30,6 +30,7 @@ export const insightSlugs = [
   'why-warehouse-automation-projects-fail',
   'why-robotics-pilots-fail-to-scale',
   'how-retail-distribution-center-automation-economics-actually-work',
+  'why-cold-storage-automation-economics-are-structurally-different',
 ] as const;
 export const useCaseSlugs = [
   'warehouse-automation-roi-evaluation',
@@ -37,6 +38,7 @@ export const useCaseSlugs = [
   'amr-deployment-evaluation',
   'goods-to-person-system-evaluation',
   'retail-dc-automation-evaluation',
+  'cold-storage-automation-evaluation',
 ] as const;
 export const caseStudySlugs = [
   'automation-deployment-risk-assessment',
@@ -126,6 +128,8 @@ export const glossaryTermSlugs = [
   'ambient-benchmark-error',
   'customer-concentration-risk',
   'automation-go-no-go',
+  'cold-environment-labor-premium',
+  'cold-storage-maintenance-burden',
 ] as const;
 
 export const topLevelRoutes = [
@@ -157,12 +161,10 @@ export const glossaryTermRoutes = glossaryTermSlugs.map((slug) => `/glossary/${s
 // Registered URLs for upcoming content — added to sitemap before content files exist.
 // Move each slug into its typed array above once the content file is created.
 export const pendingContentRoutes = [
-  // Insights — Phase 2 ICP Expansion (remaining 3 pending)
-  '/insights/why-cold-storage-automation-economics-are-structurally-different',
+  // Insights — Phase 2 ICP Expansion (remaining 2 pending)
   '/insights/why-parcel-sortation-automation-breaks-at-low-volume',
   '/insights/why-general-merchandise-3pls-should-not-automate-too-early',
   // Use Cases — Phase 2 ICP Expansion
-  '/use-cases/cold-storage-automation-evaluation',
   '/use-cases/parcel-sortation-automation-evaluation',
   '/use-cases/general-merchandise-3pl-automation-evaluation',
   // Case Studies — Phase 2 ICP Expansion

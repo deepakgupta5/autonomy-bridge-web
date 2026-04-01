@@ -10,7 +10,7 @@ document:
 
 title: "Glossary of Automation, Robotics, and Deployment Economics"
 description: "Precise analytical definitions of deployment economics, robotics systems, warehouse operations, vendor market, and AI automation terms — each mapped to Autonomy Bridge proprietary frameworks."
-summary: "Autonomy Bridge's semantic infrastructure layer. 72 terms defined as analytical constructs, mapped to 7 proprietary frameworks, structured for LLM citation and search engine entity recognition."
+summary: "Autonomy Bridge's semantic infrastructure layer. 74 terms defined as analytical constructs, mapped to 7 proprietary frameworks, structured for LLM citation and search engine entity recognition."
 
 authors:
   - id: "author_deepak_001"
@@ -54,7 +54,7 @@ seo:
   meta_title: "Automation & Robotics Glossary | Autonomy Bridge"
   meta_description: "Analytical definitions of warehouse automation, robotics deployment economics, and AI systems terms — mapped to proprietary frameworks. Semantic infrastructure for the Autonomy Bridge knowledge platform."
   og_title: "Glossary of Automation, Robotics, and Deployment Economics"
-  og_description: "72 analytically precise definitions across deployment economics, robotics systems, warehouse operations, vendor markets, and AI automation — each mapped to Autonomy Bridge frameworks."
+  og_description: "74 analytically precise definitions across deployment economics, robotics systems, warehouse operations, vendor markets, and AI automation — each mapped to Autonomy Bridge frameworks."
   og_type: "article"
   twitter_card: "summary_large_image"
 
@@ -320,6 +320,12 @@ terms:
   - id: "T72"
     slug: "automation-go-no-go"
     category: "deployment-economics"
+  - id: "T73"
+    slug: "cold-environment-labor-premium"
+    category: "deployment-economics"
+  - id: "T75"
+    slug: "cold-storage-maintenance-burden"
+    category: "deployment-economics"
 
 sections:
   - id: "hub-intro"
@@ -506,6 +512,26 @@ The pre-investment diagnostic phase that tests whether minimum conditions — la
 Automation go/no-go is a structured screen applied before entering the vendor evaluation and selection process, designed to confirm that the operation being considered for automation actually meets the conditions under which automation investment can succeed. The screen tests four conditions: whether labor intensity is sufficient to generate an adequate savings pool; whether demand is stable enough to sustain utilization above the capital recovery threshold; whether the workflow is standardized to a degree that automation systems can operate without excessive exception rates; and whether the capital recovery timeline is achievable given volume, labor rates, and automation cost. Operations that fail the go/no-go screen should not proceed to vendor evaluation — the evaluation process creates sunk cost pressure toward commitment regardless of whether the economics are sound. The go/no-go discipline prevents automation projects from advancing into procurement based on vendor enthusiasm or technology curiosity rather than defensible economics.
 
 **Related terms:** [labor-intensity-threshold](#T63) · [capital-recovery-period](#T03) · [automation-readiness](#T41)
+
+---
+
+### Cold-Environment Labor Premium
+
+The elevated fully burdened labor cost per productive unit in temperature-controlled warehouse environments relative to ambient equivalents, driven by the combined effect of productivity penalty, hazard pay, structural turnover, and mandatory operational constraints.
+
+The cold-environment labor premium is not a single cost line — it is the aggregate of several simultaneous cost inflations that apply to workers in freezer and deep-freeze environments. Worker productivity falls 35–40% in sustained sub-zero conditions relative to the same tasks performed at ambient temperature; the same throughput target requires proportionally more labor hours. Hazard pay premiums add to the direct wage rate. Turnover is structurally higher because few workers sustain long tenure in freezer environments, increasing ongoing onboarding and training cost. Mandatory warm-up breaks required by safety protocols reduce effective productive hours per shift, requiring overstaffing to maintain continuous coverage. Absenteeism is elevated. Temp agency fees for cold-certified workers carry additional premiums in markets where qualified cold-storage labor is scarce. The combined premium means that fully burdened labor cost per productive unit in a -20°F environment is materially higher than in an ambient fulfillment facility processing identical throughput — and this premium is the primary economic justification for cold storage automation investment. Correctly quantifying it at the facility-specific level is the first step in any defensible cold storage ROI model; applying industry averages when facility-specific data is available systematically misrepresents the size of the economic case.
+
+**Related terms:** [removable-labor-share](#T01) · [labor-displacement-rate](#T04) · [cold-rated-system-premium](#T64) · [cold-storage-maintenance-burden](#T75)
+
+---
+
+### Cold Storage Maintenance Burden
+
+The elevated frequency and total cost of maintenance interventions required to sustain cold-rated automation systems at design performance levels relative to equivalent ambient deployments, driven by cold-specific material degradation, condensation-related failure modes, and cold-environment technician requirements.
+
+Cold storage maintenance burden is the most systematically understated cost variable in cold storage automation ROI. Three mechanisms drive the elevation above ambient baselines. First, lubrication degrades faster at low temperatures — cold-specific lubricants have shorter effective intervals than ambient-grade alternatives, and manufacturer-specified maintenance intervals for cold-rated systems are shorter than the ambient intervals vendor proposals typically use for cost modeling. Second, condensation at temperature zone boundaries causes electrical failures — moisture infiltration on sensors, connectors, and drive components at dock doors, zone transitions, and personnel access points creates unscheduled maintenance events that do not appear in ambient maintenance schedules and cannot be fully prevented through design. Third, maintenance labor is more expensive in cold environments: technicians require cold-environment protective equipment, need specialized training for cold-rated system configurations, and complete fewer tasks per maintenance window due to cold-exposure time limits. The cumulative gap between ambient-benchmark maintenance projections and cold-specific actual maintenance cost aggregates materially over a seven-to-ten-year system life — large enough in many cases to shift a marginal cold storage automation investment from viable to non-viable. Pre-deployment ROI validation requires cold-specific maintenance benchmarks from actual cold-environment deployments, not ambient benchmark estimates with cold-environment application assumptions.
+
+**Related terms:** [automation-operating-cost](#T05) · [cold-rated-system-premium](#T64) · [total-cost-of-ownership](#T08) · [capital-recovery-period](#T03)
 
 ---
 
