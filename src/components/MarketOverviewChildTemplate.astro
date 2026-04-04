@@ -28,6 +28,7 @@ const subpages = [
       </p>
       <h1 class="mc-h1">{title}</h1>
       <p class="mc-tagline">Warehouse Automation Market Overview · Autonomy Bridge</p>
+      {summary && summary !== "Market overview analysis." && <p class="mc-summary">{summary}</p>}
     </header>
 
     <!-- Sub-navigation -->
@@ -99,6 +100,13 @@ const subpages = [
   color: var(--color-text-muted);
   letter-spacing: 0.06em;
 }
+.mc-summary {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--color-text-secondary);
+  max-width: 62ch;
+  margin-top: 0.875rem;
+}
 
 /* Sub-nav */
 .mc-subnav {
@@ -131,7 +139,6 @@ const subpages = [
 
 /* Body */
 .mc-body :global(p) {
-  text-align: justify;
   line-height: 1.9;
 }
 .mc-body :global(p + p) {

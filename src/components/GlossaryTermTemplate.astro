@@ -39,6 +39,7 @@ const schema = [
       <p class="gt-breadcrumb">Home / <a href="/glossary">Glossary</a> / {term}</p>
       <h1 class="gt-h1">{term}</h1>
       <p class="gt-tagline">Autonomy Bridge · Analytical Definition</p>
+      {definition && <p class="gt-definition">{definition}</p>}
     </header>
 
     <section class="gt-body prose-surface">
@@ -91,6 +92,13 @@ const schema = [
   color: var(--color-text-muted);
   letter-spacing: 0.06em;
   margin-bottom: 0;
+}
+.gt-definition {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--color-text-secondary);
+  max-width: 60ch;
+  margin-top: 0.875rem;
 }
 
 .gt-header {

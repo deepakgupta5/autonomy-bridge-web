@@ -108,6 +108,7 @@ const schema = [
     <header class="gl-hero">
       <h1 class="gl-h1">Glossary</h1>
       <p class="gl-tagline">Robotics Deployment Economics</p>
+      <p class="gl-meta-line">{metaLine}</p>
       <p class="gl-intro">{intro}</p>
       <div class="gl-pills">
         <a href="/frameworks" class="gl-pill">Frameworks &rarr;</a>
@@ -193,7 +194,14 @@ const schema = [
   font-size: 0.7rem;
   color: var(--color-text-muted);
   letter-spacing: 0.06em;
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+.gl-meta-line {
+  font-size: 0.9375rem;
+  line-height: 1.75;
+  color: var(--color-text-secondary);
+  max-width: 62ch;
+  margin-bottom: 0.875rem;
 }
 .gl-intro {
   max-width: 68ch;

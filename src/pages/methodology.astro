@@ -218,7 +218,10 @@ const externalCitations = [
       <h1 class="meth-h1">Research Methodology</h1>
       <p class="meth-meta">Published: {publishedLabel} · Last updated: {updatedLabel}</p>
       <p class="meth-intro">
-        Autonomy Bridge publishes research designed to support capital allocation decisions in warehouse automation, robotics, and AI infrastructure markets. This page documents the analytical method, data inputs, seven proprietary frameworks, and limitations governing all published research and advisory outputs.
+        If you are evaluating Autonomy Bridge as a research or advisory partner — this page documents exactly how the work is done.
+      </p>
+      <p class="meth-intro">
+        The analytical method, data source hierarchy, seven proprietary frameworks, validation process, and scope limitations governing all published research and advisory outputs.
       </p>
       <cite class="meth-cite">© Autonomy Bridge proprietary analysis, 2026</cite>
       <div class="meth-pills">
@@ -238,7 +241,14 @@ const externalCitations = [
       </div>
       <div class="meth-prose">
         <p>Autonomy Bridge treats automation deployment as an economics problem nested inside a physical operation. The primary research object is not the technology. It is the operating system that forms when equipment, software, labor, layout, order flow, and maintenance interact under real demand conditions.</p>
-        <p>This framing determines which questions are asked at the start of every study: What operational bottleneck is being addressed? Which cost categories are structurally removable versus simply relocated? What utilization threshold is required for economic viability? Which failure modes can erase the projected return before capital is recovered? Under what demand or operational conditions does the recommendation stop holding?</p>
+        <p>This framing determines which questions are asked at the start of every study:</p>
+        <ul class="meth-questions">
+          <li>What operational bottleneck is being addressed?</li>
+          <li>Which cost categories are structurally removable versus simply relocated?</li>
+          <li>What utilization threshold is required for economic viability?</li>
+          <li>Which failure modes can erase the projected return before capital is recovered?</li>
+          <li>Under what demand or operational conditions does the recommendation stop holding?</li>
+        </ul>
         <p>Analysis begins with decision framing, not technology evaluation. A deployment decision is not well-framed until the baseline operating model is defined explicitly — including labor structure, demand variability, layout constraints, and contract duration. Vendor comparison begins only after the operational baseline is established. This sequencing prevents a common failure in automation analysis: technology capability evaluated against an unspecified or optimistic baseline.</p>
         <p>The method applies equally to retrofit and greenfield environments, though it is strongest in retrofit settings where utilization economics, labor substitutability, and operational variance are the primary determinants of outcome.</p>
       </div>
@@ -579,7 +589,24 @@ const externalCitations = [
   font-size: 1rem;
   line-height: 1.9;
   color: var(--color-text-secondary);
-  text-align: justify;
+}
+
+/* ── Research questions list ── */
+.meth-questions {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 72ch;
+}
+.meth-questions li {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+  padding: 0.5rem 0.875rem;
+  border-left: 2px solid var(--color-border-default);
 }
 
 /* ── Data Tiers ── */
@@ -628,7 +655,6 @@ const externalCitations = [
   font-size: var(--text-sm);
   line-height: 1.8;
   color: var(--color-text-secondary);
-  text-align: justify;
 }
 .meth-tier-rule {
   font-size: var(--text-xs);
@@ -757,7 +783,6 @@ const externalCitations = [
   font-size: 0.9rem;
   line-height: 1.8;
   color: var(--color-text-secondary);
-  text-align: justify;
 }
 
 /* ── Validation Stages ── */
@@ -796,7 +821,6 @@ const externalCitations = [
   font-size: 0.9rem;
   line-height: 1.85;
   color: var(--color-text-secondary);
-  text-align: justify;
 }
 
 /* ── Limitations ── */
@@ -820,7 +844,6 @@ const externalCitations = [
   font-size: 0.9rem;
   line-height: 1.85;
   color: var(--color-text-secondary);
-  text-align: justify;
 }
 
 /* ── FAQ ── */
@@ -866,7 +889,6 @@ details[open] .meth-faq-q::after {
   line-height: 1.9;
   color: var(--color-text-secondary);
   padding-bottom: 1.25rem;
-  text-align: justify;
 }
 
 /* ── Citations ── */
