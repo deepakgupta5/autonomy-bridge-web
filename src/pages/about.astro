@@ -1,44 +1,94 @@
 ---
 import MainLayout from "../components/MainLayout.astro";
+import { getEntryByCanonicalPath } from "../utils/contentCollections";
+import { extractFaqItemsFromMarkdown } from "../utils/faq";
+import { buildFaqPageSchema } from "../utils/schema";
 
 const canonicalPath = "/about";
-const title = "About Autonomy Bridge";
-const summary = "Independent research and advisory on robotics deployment economics and industrial automation.";
+const entry = await getEntryByCanonicalPath("pages", canonicalPath);
+const faqItems = extractFaqItemsFromMarkdown(entry.body);
+const faqSchema = buildFaqPageSchema({ canonicalPath, items: faqItems });
+const schema = faqSchema ? [faqSchema] : [];
 ---
 
-<MainLayout canonicalPath={canonicalPath} title={title} summary={summary} seoTitle="About Autonomy Bridge | Autonomy Bridge">
+<MainLayout
+  canonicalPath={canonicalPath}
+  title={entry.data.title}
+  summary={entry.data.summary}
+  seoTitle="About Autonomy Bridge | Autonomy Bridge"
+  schema={schema}
+>
   <article class="ab-page">
 
     <!-- HEADER -->
     <header class="ab-header">
       <div class="ab-container">
         <h1 class="ab-h1">About Autonomy Bridge</h1>
-        <p class="ab-tagline">Independent research and advisory on robotics deployment economics and industrial automation</p>
-        <p class="ab-intro">Autonomy Bridge is an independent research and advisory firm focused on robotics deployment economics and industrial automation.</p>
-        <p class="ab-intro">Built for operators, investors, and technology teams making decisions under real cost, throughput, and deployment constraints across warehouse and manufacturing environments.</p>
-        <p class="ab-intro ab-intro--statement">The objective is not to promote automation — it is to evaluate where automation holds up, where it fails, and what the decision actually requires.</p>
+        <p class="ab-tagline">Principal-led boutique research firm for AI, robotics, and industrial automation markets.</p>
+        <div class="ab-header-links">
+          <a href="/frameworks">Frameworks →</a>
+          <a href="/case-studies">Case Studies →</a>
+          <a href="/methodology">Methodology →</a>
+        </div>
       </div>
     </header>
 
-    <!-- FOUNDER -->
+    <!-- WHAT THE FIRM IS -->
     <section class="ab-section">
+      <div class="ab-container">
+        <h2 class="ab-h2">What Autonomy Bridge Is</h2>
+        <p class="ab-body">Autonomy Bridge is a principal-led boutique research firm producing decision-grade research for vendors, investors, and operators in AI, robotics, and industrial automation markets. The firm helps decision-makers evaluate commercial viability, quantify opportunity, define ICP, and set pricing and go-to-market direction before committing capital or reputation.</p>
+        <p class="ab-body" style="margin-top: 1rem;">Engagements produce decision briefs — explicit assumptions, structured models, and direct recommendations — not literature reviews, category surveys, or background documents. The output is built to resolve a specific decision, not to inform a general understanding of a market.</p>
+        <p class="ab-body" style="margin-top: 1rem;">The firm operates as a structured knowledge platform, modeled on analyst research organizations rather than consulting practices. Its frameworks, research, and market intelligence are independent of any vendor, integrator, or implementation partner.</p>
+      </div>
+    </section>
+
+    <!-- WHAT THE FIRM IS NOT -->
+    <section class="ab-section ab-section--surface">
+      <div class="ab-container">
+        <h2 class="ab-h2">What Autonomy Bridge Is Not</h2>
+        <ul class="ab-not-list">
+          <li>Not a systems integrator — Autonomy Bridge does not implement, configure, or manage automation technology</li>
+          <li>Not a vendor — holds no commercial relationship with robotics or AI suppliers, and accepts no fees, referral arrangements, or sponsored research</li>
+          <li>Not a staffing firm, software reseller, or change management practice</li>
+        </ul>
+        <p class="ab-note">These distinctions are structural: they protect the integrity of the analysis.</p>
+      </div>
+    </section>
+
+    <!-- RESEARCH MANDATE -->
+    <section class="ab-section">
+      <div class="ab-container">
+        <h2 class="ab-h2">Research Mandate</h2>
+        <p class="ab-body">The firm's analytical mission is to produce structured, evidence-based research on AI, robotics, and industrial automation markets — with depth across commercial viability assessment, vendor economics, deployment failure patterns, market entry analysis, ICP definition, and pricing strategy.</p>
+        <p class="ab-body" style="margin-top: 1rem;">The research covers platform categories from intralogistics and service robotics to aerial systems, off-highway autonomy, and wearable robotics, and operator domains from warehousing and manufacturing to healthcare, agriculture, energy infrastructure, and commercial facilities.</p>
+        <p class="ab-body" style="margin-top: 1rem;">Every framework, case study, and research engagement is built to answer the questions that vendors, investors, and operators carry into high-stakes decisions: Is this market real for this product? What does the addressable opportunity actually look like bottom-up? Which buyers are reachable and closeable? What will the market bear on price? Where do deployments fail and why?</p>
+        <div class="ab-mandate-links">
+          <a href="/frameworks" class="ab-text-link">Frameworks →</a>
+          <a href="/methodology" class="ab-text-link">Methodology →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOUNDER -->
+    <section class="ab-section ab-section--surface">
       <div class="ab-container">
         <h2 class="ab-h2">Founder</h2>
         <div class="ab-founder">
           <div class="ab-founder-photo">
             <img
-              src="/images/founder/deepak-gupta.jpg?v=20260316b"
-              alt="Deepak Gupta"
+              src="/founder/deepak-gupta.jpg"
+              alt="Deepak Gupta — Founder and Principal Analyst, Autonomy Bridge"
               loading="lazy"
             />
           </div>
           <div class="ab-founder-bio">
             <h3 class="ab-founder-name">Deepak Gupta</h3>
-            <p class="ab-founder-role">Founder &amp; Principal Analyst</p>
-            <p class="ab-founder-text">Deepak Gupta leads Autonomy Bridge. His background spans robotics go-to-market, industrial procurement, and commercial development across North America, Europe, and Asia-Pacific.</p>
-            <p class="ab-founder-text">He has deep expertise across robotics, SaaS, industrial AI/automation, B2B platforms, and fintech. That operating exposure informs the firm's research model: decisions should be tested against buyer constraints, deployment economics, and execution risk — not category narratives.</p>
+            <p class="ab-founder-role">Founder · Principal Analyst</p>
+            <p class="ab-founder-text">Deepak Gupta is the founder of Autonomy Bridge and serves as its principal analyst. He has held commercial and market development roles at eBay/Baazee, Ottonomy Robotics, and Industrybuying.com, with operating experience across North America, Europe, and Asia-Pacific spanning robotics go-to-market, B2B industrial procurement, and AI market entry.</p>
+            <p class="ab-founder-text">His analytical work focuses on the gap between what vendors claim and what markets actually support — in commercial viability, deployment economics, and go-to-market sequencing.</p>
             <div class="ab-founder-links">
-              <a href="https://www.linkedin.com/in/deepakgupta5" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              <a href="https://www.linkedin.com/in/deepakgupta5" target="_blank" rel="noopener noreferrer">LinkedIn →</a>
               <a href="/contact">Contact</a>
             </div>
           </div>
@@ -46,70 +96,65 @@ const summary = "Independent research and advisory on robotics deployment econom
       </div>
     </section>
 
-    <!-- WHAT THE FIRM DOES -->
-    <section class="ab-section ab-section--surface">
-      <div class="ab-container">
-        <h2 class="ab-h2">What the Firm Does</h2>
-        <p class="ab-body">Autonomy Bridge produces structured research, decision frameworks, applied use cases, and bespoke analysis for robotics deployment and industrial automation decisions. The work is designed for questions such as:</p>
-        <ul class="ab-questions">
-          <li>Whether a deployment can recover capital under actual utilization conditions</li>
-          <li>Whether a vendor model survives beyond pilot stage</li>
-          <li>Whether workflow constraints will limit realized ROI</li>
-          <li>Whether a market entry thesis is credible at the buyer level</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- WHY THIS EXISTS -->
+    <!-- WHY THIS MATTERS -->
     <section class="ab-section">
       <div class="ab-container">
-        <h2 class="ab-h2">Why This Exists</h2>
-        <p class="ab-body">Automation decisions are often made with incomplete economic modeling, optimistic vendor assumptions, and weak visibility into failure patterns.</p>
-        <p class="ab-body" style="margin-top: 1rem;">Autonomy Bridge exists to close that gap with operator-level analysis. The unit of analysis is the actual decision being made: a facility investment, a vendor shortlist, a pilot-to-scale question, a pricing model, or a market-entry bet.</p>
+        <h2 class="ab-h2">Why This Matters</h2>
+        <p class="ab-body">Vendors commit to markets, investors write checks, and operators sign contracts — often without access to independent analysis of whether the commercial assumptions hold. Vendor materials are not neutral. Market size figures are frequently top-down and unverifiable. Deployment economics are modeled on best-case utilization. Failure mode data is not publicly disclosed.</p>
+        <p class="ab-body" style="margin-top: 1rem;">Macro analyst coverage from firms like Gartner, IDC, and McKinsey is built for enterprise strategy teams with long planning horizons. It does not serve the vendor deciding which segment to enter first, the investor stress-testing a deployment thesis, or the operator evaluating whether a specific platform makes economic sense for their environment.</p>
+        <p class="ab-body ab-body--emphasis" style="margin-top: 1rem;">Autonomy Bridge produces structured, independent analysis at the decision unit that actually bears the risk — before the capital is committed or the reputation is staked.</p>
       </div>
     </section>
 
-    <!-- WHAT THE FIRM IS NOT -->
+    <!-- RESEARCH MODEL -->
     <section class="ab-section ab-section--surface">
       <div class="ab-container">
-        <h2 class="ab-h2">What the Firm Is Not</h2>
-        <ul class="ab-not-list">
-          <li>Not a systems integrator, implementation consultant, or staffing firm</li>
-          <li>Not a software reseller or sponsored research publisher</li>
-          <li>Does not take vendor referral fees, sponsored placements, or paid influence arrangements — that boundary exists to preserve analytical independence</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- PLATFORM STRUCTURE -->
-    <section class="ab-section">
-      <div class="ab-container">
-        <h2 class="ab-h2">How the Platform Is Built</h2>
-        <p class="ab-body">The platform is structured around permanent analytical assets — designed to make concepts reusable, assumptions explicit, and decisions easier to stress-test.</p>
+        <h2 class="ab-h2">The Research Model</h2>
+        <p class="ab-body">Autonomy Bridge is built as an analyst platform — not a consulting brochure — modeled on the knowledge architecture of organizations like CB Insights and Verdantix, where structured frameworks, defined methodologies, and permanent research assets do the work that marketing copy cannot.</p>
         <div class="ab-platform-grid">
           <a href="/frameworks" class="ab-platform-link">Frameworks</a>
           <a href="/glossary" class="ab-platform-link">Glossary</a>
           <a href="/use-cases" class="ab-platform-link">Use Cases</a>
           <a href="/case-studies" class="ab-platform-link">Case Studies</a>
-          <a href="/bespoke-research" class="ab-platform-link">Bespoke Research</a>
-          <a href="/advisory" class="ab-platform-link">Advisory</a>
+          <a href="/insights" class="ab-platform-link">Insights</a>
+          <a href="/market-overview" class="ab-platform-link">Market Overview</a>
         </div>
       </div>
     </section>
 
-    <!-- CTA -->
+    <!-- WORK WITH US -->
     <section class="ab-cta-section">
       <div class="ab-container ab-cta-inner">
         <div>
-          <h2 class="ab-cta-heading">Work with Autonomy Bridge</h2>
-          <p class="ab-cta-sub">For ongoing decision support, see Advisory. For a scoped research engagement, see Bespoke Research.</p>
+          <h2 class="ab-cta-heading">Work With Autonomy Bridge</h2>
+          <ul class="ab-cta-services">
+            <li><strong>Advisory</strong> — Ongoing analytical support for vendors, investors, and operators navigating evolving decisions in AI, robotics, and industrial automation markets.</li>
+            <li><strong>Bespoke Research</strong> — A single defined research engagement scoped to a specific question, with a fixed deliverable and a fixed endpoint.</li>
+          </ul>
         </div>
         <div class="ab-cta-actions">
-          <a href="/contact" class="ab-btn-primary">Book 15-min scoping call</a>
-          <a href="/advisory" class="ab-btn-outline">See Advisory</a>
+          <a href="/advisory" class="ab-btn-primary">Engage Advisory →</a>
+          <a href="/bespoke-research" class="ab-btn-outline">Commission Bespoke Research →</a>
         </div>
       </div>
     </section>
+
+    <!-- FAQ -->
+    {faqItems.length > 0 && (
+      <section class="ab-section">
+        <div class="ab-container ab-faq-container">
+          <h2 class="ab-h2">Frequently Asked Questions</h2>
+          <div class="ab-faq-list">
+            {faqItems.map((item) => (
+              <details class="ab-faq-item">
+                <summary class="ab-faq-q">{item.question}</summary>
+                <p class="ab-faq-a">{item.answer}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
 
   </article>
 </MainLayout>
@@ -146,18 +191,22 @@ const summary = "Independent research and advisory on robotics deployment econom
     margin: 0 0 1.5rem;
   }
 
-  .ab-intro {
-    font-size: 1.0625rem;
-    line-height: 1.75;
-    color: var(--color-text-secondary);
-    margin: 0 0 1rem;
+  .ab-header-links {
+    display: flex;
+    gap: 1.25rem;
+    flex-wrap: wrap;
   }
 
-  .ab-intro--statement {
+  .ab-header-links a {
+    font-size: 0.875rem;
+    font-weight: 600;
     color: var(--color-text-primary);
-    font-weight: 500;
-    margin-bottom: 0;
+    text-decoration: none;
+    border-bottom: 1px solid var(--color-border-accent);
+    padding-bottom: 0.1rem;
   }
+
+  .ab-header-links a:hover { color: var(--color-text-muted); }
 
   /* ── SECTIONS ── */
   .ab-section {
@@ -182,6 +231,56 @@ const summary = "Independent research and advisory on robotics deployment econom
     margin: 0;
   }
 
+  .ab-body--emphasis {
+    color: var(--color-text-primary);
+    font-weight: 500;
+  }
+
+  .ab-note {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+    margin: 1rem 0 0;
+  }
+
+  /* ── NOT LIST ── */
+  .ab-not-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .ab-not-list li {
+    font-size: 0.9375rem;
+    line-height: 1.7;
+    color: var(--color-text-secondary);
+    padding: 1rem 1.125rem;
+    background: #ffffff;
+    border: 1px solid var(--color-border-default);
+    border-radius: 0.375rem;
+  }
+
+  /* ── MANDATE LINKS ── */
+  .ab-mandate-links {
+    display: flex;
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+  }
+
+  .ab-text-link {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    text-decoration: none;
+    border-bottom: 1px solid var(--color-border-accent);
+    padding-bottom: 0.1rem;
+  }
+
+  .ab-text-link:hover { color: var(--color-text-muted); }
+
   /* ── FOUNDER ── */
   .ab-founder {
     display: grid;
@@ -191,8 +290,8 @@ const summary = "Independent research and advisory on robotics deployment econom
   }
 
   .ab-founder-photo {
-    width: 4rem;
-    height: 4rem;
+    width: 5rem;
+    height: 5rem;
     border-radius: 0.375rem;
     overflow: hidden;
     border: 1px solid var(--color-border-default);
@@ -244,58 +343,18 @@ const summary = "Independent research and advisory on robotics deployment econom
     padding-bottom: 0.1rem;
   }
 
-  /* ── QUESTIONS LIST ── */
-  .ab-questions {
-    list-style: none;
-    padding: 0;
-    margin: 1.25rem 0 0;
-    display: flex;
-    flex-direction: column;
-    gap: 0.625rem;
-  }
-
-  .ab-questions li {
-    font-size: 0.9375rem;
-    line-height: 1.65;
-    color: var(--color-text-secondary);
-    padding: 0.75rem 1rem;
-    background: #ffffff;
-    border-left: 2px solid var(--color-border-default);
-    border-radius: 0 0.25rem 0.25rem 0;
-  }
-
-  /* ── NOT LIST ── */
-  .ab-not-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-  }
-
-  .ab-not-list li {
-    font-size: 0.9375rem;
-    line-height: 1.7;
-    color: var(--color-text-secondary);
-    padding: 1rem 1.125rem;
-    background: #ffffff;
-    border: 1px solid var(--color-border-default);
-    border-radius: 0.375rem;
-  }
-
   /* ── PLATFORM GRID ── */
   .ab-platform-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 0.75rem;
-    margin-top: 1.25rem;
+    margin-top: 1.5rem;
   }
 
   .ab-platform-link {
     display: block;
     padding: 0.875rem 1rem;
-    background: var(--color-bg-surface);
+    background: #ffffff;
     border: 1px solid var(--color-border-default);
     border-radius: 0.375rem;
     font-size: 0.9375rem;
@@ -308,7 +367,7 @@ const summary = "Independent research and advisory on robotics deployment econom
 
   .ab-platform-link:hover {
     border-color: var(--color-border-accent);
-    background: #ffffff;
+    background: var(--color-bg-surface);
   }
 
   /* ── CTA ── */
@@ -329,22 +388,34 @@ const summary = "Independent research and advisory on robotics deployment econom
     font-size: 1.375rem;
     font-weight: 700;
     color: var(--color-cta-text);
-    margin: 0 0 0.4rem;
+    margin: 0 0 0.75rem;
   }
 
-  .ab-cta-sub {
-    font-size: 0.9375rem;
-    color: #94a3b8;
+  .ab-cta-services {
+    list-style: none;
+    padding: 0;
     margin: 0;
-    max-width: 40ch;
-    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .ab-cta-services li {
+    font-size: 0.875rem;
+    color: #94a3b8;
+    line-height: 1.55;
+  }
+
+  .ab-cta-services li strong {
+    color: var(--color-cta-text);
+    font-weight: 600;
   }
 
   .ab-cta-actions {
     display: flex;
+    flex-direction: column;
     gap: 0.75rem;
     flex-shrink: 0;
-    flex-wrap: wrap;
   }
 
   .ab-btn-primary {
@@ -358,6 +429,7 @@ const summary = "Independent research and advisory on robotics deployment econom
     color: var(--color-cta-text);
     text-decoration: none;
     transition: background 0.15s, border-color 0.15s;
+    white-space: nowrap;
   }
 
   .ab-btn-primary:hover { background: #1e293b; border-color: #f59e0b; }
@@ -372,13 +444,59 @@ const summary = "Independent research and advisory on robotics deployment econom
     color: var(--color-cta-text);
     text-decoration: none;
     transition: border-color 0.15s;
+    white-space: nowrap;
   }
 
   .ab-btn-outline:hover { border-color: var(--color-cta-border); }
 
+  /* ── FAQ ── */
+  .ab-faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .ab-faq-item {
+    border: 1px solid var(--color-border-default);
+    border-radius: 0.375rem;
+    overflow: hidden;
+  }
+
+  .ab-faq-q {
+    display: block;
+    padding: 0.875rem 1rem;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+  }
+
+  .ab-faq-q::-webkit-details-marker { display: none; }
+
+  .ab-faq-q::after {
+    content: "+";
+    float: right;
+    font-weight: 400;
+    color: var(--color-text-muted);
+  }
+
+  details[open] .ab-faq-q::after { content: "−"; }
+
+  .ab-faq-a {
+    padding: 0 1rem 1rem;
+    font-size: 0.9rem;
+    line-height: 1.65;
+    color: var(--color-text-secondary);
+    margin: 0;
+  }
+
+  /* ── RESPONSIVE ── */
   @media (max-width: 48rem) {
     .ab-founder { grid-template-columns: 1fr; }
     .ab-platform-grid { grid-template-columns: 1fr 1fr; }
     .ab-cta-inner { flex-direction: column; align-items: flex-start; }
+    .ab-cta-actions { flex-direction: row; flex-wrap: wrap; }
   }
 </style>

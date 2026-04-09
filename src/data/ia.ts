@@ -61,6 +61,10 @@ export const marketOverviewChildSlugs = [
   'market-drivers',
   'market-segments',
   'key-players',
+  'platform-categories',
+  'operator-domains',
+  'vendor-landscape',
+  'deployment-economics',
 ] as const;
 export const glossaryTermSlugs = [
   'removable-labor-share',

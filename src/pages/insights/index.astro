@@ -5,7 +5,7 @@ import { buildCollectionPageSchema } from "../../utils/schema";
 const canonicalPath = "/insights";
 const title = "Insights";
 const summary =
-  "Structured research on warehouse automation, robotics deployment, industrial AI, and 3PL markets.";
+  "Structured analytical research on AI, robotics, and industrial automation markets. Framework-tagged analysis for vendors, investors, and operators.";
 const schema = [
   buildCollectionPageSchema({
     name: title,
@@ -14,76 +14,105 @@ const schema = [
   }),
 ];
 
+const contentTypes = [
+  {
+    name: "Articles",
+    desc: "Analytical commentary of 800–1,500 words on active topics in AI, robotics, and industrial automation markets. Each article is framework-tagged and cross-linked to relevant glossary terms, use cases, and research.",
+  },
+  {
+    name: "Research Notes",
+    desc: "Short-form, data-driven analysis anchored to a specific finding, dataset, or market development — typically 300–600 words. Research Notes surface a discrete signal with sourcing and context.",
+  },
+  {
+    name: "Market Signals",
+    desc: "Trend alerts and early-stage observations from robotics deployment activity, procurement patterns, and AI adoption across operator domains. Structured observations with identified implications — not forecasts.",
+  },
+  {
+    name: "Industry Commentary",
+    desc: "Interpretive analysis of industry developments, competitive moves, regulatory shifts, and deployment outcomes in AI, robotics, and industrial automation. Applies Autonomy Bridge frameworks to events as they unfold.",
+  },
+];
+
 const articles = [
   {
     href: "/insights/why-warehouse-automation-projects-fail",
     title: "Why Warehouse Automation Projects Fail",
     desc: "Most warehouse automation failures originate during project underwriting, not deployment. Fixed-capacity infrastructure requires stable demand that vendor ROI models systematically understate.",
-    frameworkHref: "/frameworks/automation-failure-framework",
-    frameworkLabel: "Automation Failure Framework",
+    frameworks: ["Automation Failure Framework", "Robotics ROI Model"],
+    frameworkHrefs: ["/frameworks/automation-failure-framework", "/frameworks/robotics-roi-model"],
+    domain: "Intralogistics and Warehouse Automation",
   },
   {
     href: "/insights/why-robotics-pilots-fail-to-scale",
     title: "Why Robotics Pilots Fail to Scale",
     desc: "Robotics pilots test technical feasibility under controlled conditions that do not replicate full warehouse operations. Scaling requires proof of sustained utilization and economic viability.",
-    frameworkHref: "/frameworks/pilot-to-scale-failure-framework",
-    frameworkLabel: "Pilot-to-Scale Failure Framework",
+    frameworks: ["Pilot-to-Scale Failure Framework", "Robotics ROI Model"],
+    frameworkHrefs: ["/frameworks/pilot-to-scale-failure-framework", "/frameworks/robotics-roi-model"],
+    domain: "Intralogistics and Warehouse Automation",
   },
   {
     href: "/insights/why-mid-market-operators-struggle-to-evaluate-warehouse-robotics",
     title: "Why Mid-Market Operators Struggle to Evaluate Warehouse Robotics",
     desc: "Vendor ROI models assume stable demand. Mid-market 3PL operations rarely have it. A structural analysis of evaluation barriers specific to multi-client fulfillment environments.",
-    frameworkHref: "/frameworks/warehouse-automation-decision-framework",
-    frameworkLabel: "Warehouse Automation Decision Framework",
+    frameworks: ["Warehouse Automation Decision Framework", "Robotics ROI Model", "Vendor Evaluation Framework"],
+    frameworkHrefs: ["/frameworks/warehouse-automation-decision-framework", "/frameworks/robotics-roi-model", "/frameworks/vendor-evaluation-framework"],
+    domain: "Intralogistics and Warehouse Automation",
   },
   {
     href: "/insights/how-warehouse-robotics-economics-actually-works",
     title: "How Warehouse Robotics Economics Actually Works",
     desc: "Utilization, not robot speed, governs warehouse automation ROI. A capital allocation analysis covering utilization thresholds, bottleneck dynamics, and conditions for durable returns.",
-    frameworkHref: "/frameworks/robotics-roi-model",
-    frameworkLabel: "Robotics ROI Model",
+    frameworks: ["Robotics ROI Model", "Automation Failure Framework", "Workflow Architecture Framework"],
+    frameworkHrefs: ["/frameworks/robotics-roi-model", "/frameworks/automation-failure-framework", "/frameworks/workflow-architecture-framework"],
+    domain: "Intralogistics and Warehouse Automation",
   },
   {
     href: "/insights/how-warehouse-workflows-determine-automation-success",
     title: "How Warehouse Workflows Determine Automation Success",
     desc: "Warehouse throughput equals the capacity of the slowest linked process. Automation that improves one node without addressing downstream constraints creates congestion, not productivity.",
-    frameworkHref: "/frameworks/workflow-architecture-framework",
-    frameworkLabel: "Workflow Architecture Framework",
+    frameworks: ["Workflow Architecture Framework", "Automation Failure Framework", "Robotics ROI Model"],
+    frameworkHrefs: ["/frameworks/workflow-architecture-framework", "/frameworks/automation-failure-framework", "/frameworks/robotics-roi-model"],
+    domain: "Intralogistics and Warehouse Automation",
   },
   {
     href: "/insights/how-warehouse-operators-evaluate-robotics-vendors",
     title: "How Warehouse Operators Evaluate Robotics Vendors",
     desc: "The four-stage vendor evaluation process used by mid-size 3PL operators — from shortlist formation through cross-functional ROI approval — with emphasis on the utilization threshold.",
-    frameworkHref: "/frameworks/vendor-evaluation-framework",
-    frameworkLabel: "Vendor Evaluation Framework",
+    frameworks: ["Vendor Evaluation Framework", "Robotics ROI Model", "Warehouse Automation Decision Framework"],
+    frameworkHrefs: ["/frameworks/vendor-evaluation-framework", "/frameworks/robotics-roi-model", "/frameworks/warehouse-automation-decision-framework"],
+    domain: "Intralogistics and Warehouse Automation",
   },
   {
     href: "/insights/how-retail-distribution-center-automation-economics-actually-work",
     title: "How Retail Distribution Center Automation Economics Actually Work",
     desc: "Retail DC automation economics are governed by peak demand, not average utilization. A system that delivers strong ROI during a ten-week peak season may generate negative returns across the remaining forty-two weeks.",
-    frameworkHref: "/frameworks/robotics-roi-model",
-    frameworkLabel: "Robotics ROI Model",
+    frameworks: ["Robotics ROI Model"],
+    frameworkHrefs: ["/frameworks/robotics-roi-model"],
+    domain: "Intralogistics and Warehouse Automation",
   },
   {
     href: "/insights/why-cold-storage-automation-economics-are-structurally-different",
     title: "Why Cold Storage Automation Economics Are Structurally Different",
     desc: "Cold storage presents the strongest labor-cost ROI case in the warehouse sector and the most systematically miscalculated capital cost. Ambient benchmarks applied to cold environments produce fundamentally wrong investment cases.",
-    frameworkHref: "/frameworks/robotics-roi-model",
-    frameworkLabel: "Robotics ROI Model",
+    frameworks: ["Robotics ROI Model"],
+    frameworkHrefs: ["/frameworks/robotics-roi-model"],
+    domain: "Intralogistics and Warehouse Automation",
   },
   {
     href: "/insights/why-parcel-sortation-automation-breaks-at-low-volume",
     title: "Why Parcel Sortation Automation Breaks at Low Volume",
     desc: "Parcel sortation automation fails as a step function, not a gradual degradation. When volume drops below the sortation floor, per-parcel economics break regardless of peak utilization.",
-    frameworkHref: "/frameworks/automation-failure-framework",
-    frameworkLabel: "Automation Failure Framework",
+    frameworks: ["Automation Failure Framework"],
+    frameworkHrefs: ["/frameworks/automation-failure-framework"],
+    domain: "Intralogistics and Warehouse Automation",
   },
   {
     href: "/insights/why-general-merchandise-3pls-should-not-automate-too-early",
     title: "Why General Merchandise 3PLs Should Not Automate Too Early",
-    desc: "Case and pallet operations have structurally lower labor intensity per order than ecommerce fulfillment. Many GM 3PL operators fail the economic pre-conditions for viable automation — competitive pressure is not a substitute for the analysis.",
-    frameworkHref: "/frameworks/automation-failure-framework",
-    frameworkLabel: "Automation Failure Framework",
+    desc: "Case and pallet operations have structurally lower labor intensity per order than ecommerce fulfillment. Many GM 3PL operators fail the economic pre-conditions for viable automation.",
+    frameworks: ["Automation Failure Framework"],
+    frameworkHrefs: ["/frameworks/automation-failure-framework"],
+    domain: "Intralogistics and Warehouse Automation",
   },
 ];
 ---
@@ -92,33 +121,42 @@ const articles = [
   canonicalPath={canonicalPath}
   title={title}
   summary={summary}
-  seoTitle="Insights | Autonomy Bridge"
-  seoDescription={summary}
+  seoTitle="Insights | AI, Robotics & Industrial Automation Research — Autonomy Bridge"
+  seoDescription="Structured analytical research on AI, robotics, and industrial automation markets. Framework-tagged analysis on deployment economics, vendor dynamics, commercial viability, and market structure."
   schema={schema}
 >
   <div class="insights-hub">
 
-    <!-- ── Hero ──────────────────────────────── -->
+    <!-- ── Hero ── -->
     <header class="insights-hero">
       <h1 class="type-h1">Insights</h1>
-      <p class="insights-tagline">{summary}</p>
-      <p class="insights-who">For operators diagnosing deployment risk, investors stress-testing automation theses, and vendors mapping market entry.</p>
+      <p class="insights-tagline">Autonomy Bridge's primary research publishing layer — analytical work on AI, robotics, and industrial automation markets.</p>
+      <p class="insights-intro">Content is produced at the intersection of operational evidence and strategic frameworks, drawing on primary market research, vendor intelligence, and deployment data. Every piece is framework-tagged and built to support a decision, not to describe a trend.</p>
+      <p class="insights-intro">Current published depth is in intralogistics and warehouse automation — deployment economics, vendor evaluation, pilot-to-scale failure, and workflow architecture. Coverage is expanding across platform categories and operator domains.</p>
+      <div class="insights-hero-links">
+        <a href="/frameworks">Frameworks →</a>
+        <a href="/use-cases">Use Cases →</a>
+        <a href="/case-studies">Case Studies →</a>
+      </div>
     </header>
 
-    <!-- ── What this hub covers ──────────────── -->
+    <!-- ── Content Types ── -->
     <section class="insights-section">
-      <h2 class="type-h2 section-heading">What this hub covers</h2>
-      <ul class="covers-list">
-        <li>Warehouse automation economics and utilization risk</li>
-        <li>Deployment failure patterns and root cause analysis</li>
-        <li>Workflow architecture and throughput constraints</li>
-        <li>Vendor evaluation and pilot-to-scale risk</li>
-      </ul>
+      <h2 class="type-h2 section-heading">Content Types</h2>
+      <div class="types-grid">
+        {contentTypes.map((t) => (
+          <div class="type-card">
+            <span class="type-name">{t.name}</span>
+            <p class="type-desc">{t.desc}</p>
+          </div>
+        ))}
+      </div>
     </section>
 
-    <!-- ── Featured analysis ─────────────────── -->
+    <!-- ── Featured analysis ── -->
     <section class="insights-section">
-      <h2 class="type-h2 section-heading">Featured analysis</h2>
+      <h2 class="type-h2 section-heading">Featured Analysis</h2>
+      <p class="section-sub">Current featured analysis covers intralogistics and warehouse automation. New analysis across additional platform categories and operator domains is published as it is completed.</p>
       <div class="article-grid">
         {articles.map((a) => (
           <article class="article-card">
@@ -126,34 +164,42 @@ const articles = [
               <a href={a.href}>{a.title}</a>
             </h3>
             <p class="article-desc">{a.desc}</p>
-            <p class="article-meta">
-              Related framework:{" "}
-              <a href={a.frameworkHref} class="meta-link">{a.frameworkLabel}</a>
-            </p>
+            <div class="article-meta">
+              <span class="meta-domain">{a.domain}</span>
+              <div class="meta-frameworks">
+                {a.frameworks.map((f, i) => (
+                  <a href={a.frameworkHrefs[i]} class="meta-fw-link">{f}</a>
+                ))}
+              </div>
+            </div>
           </article>
         ))}
       </div>
     </section>
 
-    <!-- ── Dark CTA ───────────────────────────── -->
+    <!-- ── CTA ── -->
     <section class="insights-cta">
-      <p class="cta-text">Apply this research to your deployment decision.</p>
-      <a href="/contact" class="cta-link">Book 15-min scoping call</a>
+      <div class="insights-cta-text">
+        <p class="cta-heading">Apply this research to your decision.</p>
+        <p class="cta-sub">Advisory engagements and bespoke research go deeper into specific deployment, vendor economics, and commercial viability questions.</p>
+      </div>
+      <div class="insights-cta-links">
+        <a href="/advisory" class="cta-link cta-link--primary">Engage Advisory →</a>
+        <a href="/bespoke-research" class="cta-link cta-link--outline">Commission Bespoke Research →</a>
+      </div>
     </section>
 
-    <!-- ── Related research infrastructure ───── -->
-    <section class="insights-section insights-related">
-      <h2 class="type-h2 section-heading">Related research infrastructure</h2>
-      <p class="related-desc">
-        Insights are linked to structured frameworks, applied use cases, case studies, and glossary
-        terms so each article can be traced back to decision logic and implementation context.
-      </p>
+    <!-- ── Browse ── -->
+    <section class="insights-section">
+      <h2 class="type-h2 section-heading">Browse by Framework, Topic, or Domain</h2>
+      <p class="related-desc">Every piece of content is tagged across framework, topic, operator domain, and platform category so you can filter to the signal that matches your decision context.</p>
       <ul class="nav-pills">
         <li><a href="/frameworks">Frameworks</a></li>
         <li><a href="/use-cases">Use Cases</a></li>
         <li><a href="/case-studies">Case Studies</a></li>
-        <li><a href="/methodology">Methodology</a></li>
         <li><a href="/glossary">Glossary</a></li>
+        <li><a href="/methodology">Methodology</a></li>
+        <li><a href="/market-overview">Market Overview</a></li>
       </ul>
     </section>
 
@@ -161,12 +207,12 @@ const articles = [
 </MainLayout>
 
 <style>
-  /* ── Container ──────────────────────────── */
+  /* ── Container ── */
   .insights-hub {
     max-width: 860px;
   }
 
-  /* ── Hero ───────────────────────────────── */
+  /* ── Hero ── */
   .insights-hero {
     padding-bottom: 2.5rem;
     border-bottom: 1px solid var(--color-border-light);
@@ -182,42 +228,86 @@ const articles = [
     font-size: var(--text-sm);
     line-height: 1.8;
     color: var(--color-text-secondary);
-    margin: 0;
-    max-width: 58ch;
+    margin: 0 0 1rem;
+    max-width: 64ch;
   }
-  .insights-who {
+
+  .insights-intro {
     font-size: 0.9375rem;
     line-height: 1.75;
     color: var(--color-text-secondary);
-    max-width: 62ch;
-    margin: 0.75rem 0 0;
+    max-width: 66ch;
+    margin: 0 0 0.75rem;
   }
 
-  /* ── Sections ───────────────────────────── */
+  .insights-hero-links {
+    display: flex;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+    margin-top: 1.25rem;
+  }
+
+  .insights-hero-links a {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    text-decoration: none;
+    border-bottom: 1px solid var(--color-border-accent);
+    padding-bottom: 0.1rem;
+  }
+
+  /* ── Sections ── */
   .insights-section {
     margin-bottom: 3.5rem;
   }
 
   .section-heading {
-    margin: 0 0 1.5rem;
+    margin: 0 0 1.25rem;
   }
 
-  /* ── Covers list ────────────────────────── */
-  .covers-list {
-    list-style: disc;
-    padding-left: 1.25rem;
-    margin: 0;
-    display: grid;
-    gap: 0.6rem;
-    color: var(--color-text-secondary);
-    font-size: var(--text-base);
+  .section-sub {
+    font-size: 0.9rem;
     line-height: 1.7;
+    color: var(--color-text-muted);
+    margin: 0 0 1.5rem;
+    max-width: 60ch;
   }
 
-  /* ── Article cards ──────────────────────── */
+  /* ── Content Types grid ── */
+  .types-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+
+  .type-card {
+    padding: 1rem 1.125rem;
+    background: var(--color-bg-surface);
+    border: 1px solid var(--color-border-default);
+    border-radius: 0.375rem;
+  }
+
+  .type-name {
+    display: block;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-text-primary);
+    margin-bottom: 0.5rem;
+  }
+
+  .type-desc {
+    font-size: 0.875rem;
+    line-height: 1.65;
+    color: var(--color-text-secondary);
+    margin: 0;
+  }
+
+  /* ── Article cards ── */
   .article-grid {
     display: grid;
-    gap: 1.25rem;
+    gap: 1rem;
   }
 
   .article-card {
@@ -225,9 +315,9 @@ const articles = [
     border-top: 3px solid var(--color-border-accent);
     border-radius: 6px;
     background: var(--color-bg-page);
-    padding: 1.5rem;
+    padding: 1.25rem 1.5rem;
     display: grid;
-    gap: 0.65rem;
+    gap: 0.625rem;
     transition: box-shadow 0.15s;
   }
 
@@ -259,19 +349,38 @@ const articles = [
   }
 
   .article-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem 1rem;
     margin: 0;
+  }
+
+  .meta-domain {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.04em;
+    color: var(--color-text-subtle);
+    background: var(--color-bg-subtle);
+    padding: 0.15rem 0.5rem;
+    border-radius: 3px;
+  }
+
+  .meta-frameworks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.375rem;
+  }
+
+  .meta-fw-link {
     font-family: var(--font-mono);
     font-size: var(--text-xs);
-    color: var(--color-text-muted);
-  }
-
-  .meta-link {
     color: var(--color-text-accent);
     text-decoration: underline;
-    text-underline-offset: 3px;
+    text-underline-offset: 2px;
   }
 
-  /* ── Dark CTA ───────────────────────────── */
+  /* ── CTA ── */
   .insights-cta {
     background: var(--color-cta-bg);
     border-top: 3px solid var(--color-cta-border);
@@ -285,37 +394,67 @@ const articles = [
     margin-bottom: 3.5rem;
   }
 
-  .cta-text {
+  .cta-heading {
     color: var(--color-cta-text);
     font-size: var(--text-base);
-    opacity: 0.85;
+    font-weight: 600;
+    margin: 0 0 0.25rem;
+  }
+
+  .cta-sub {
+    color: #94a3b8;
+    font-size: var(--text-sm);
     margin: 0;
+    max-width: 48ch;
+    line-height: 1.6;
+  }
+
+  .insights-cta-links {
+    display: flex;
+    gap: 0.75rem;
+    flex-shrink: 0;
+    flex-wrap: wrap;
   }
 
   .cta-link {
     display: inline-block;
-    border: 1px solid var(--color-cta-border);
-    color: var(--color-cta-text);
-    padding: 0.55rem 1.25rem;
+    padding: 0.55rem 1.125rem;
     border-radius: 4px;
     font-size: var(--text-sm);
     font-weight: var(--weight-semibold);
     text-decoration: none;
     white-space: nowrap;
-    transition: background 0.15s;
+    transition: background 0.15s, border-color 0.15s;
   }
 
-  .cta-link:hover {
+  .cta-link--primary {
+    border: 1px solid var(--color-cta-border);
+    color: var(--color-cta-text);
+    background: transparent;
+  }
+
+  .cta-link--primary:hover {
     background: rgba(217, 119, 6, 0.15);
   }
 
-  /* ── Related infrastructure ─────────────── */
+  .cta-link--outline {
+    border: 1px solid #334155;
+    color: #94a3b8;
+    background: transparent;
+  }
+
+  .cta-link--outline:hover {
+    border-color: #94a3b8;
+    color: var(--color-cta-text);
+  }
+
+  /* ── Related infrastructure ── */
   .related-desc {
     margin: 0 0 1.25rem;
     font-size: var(--text-sm);
     line-height: 1.75;
     color: var(--color-text-secondary);
-    max-width: 58ch;
+    max-width: 60ch;
   }
 
   .nav-pills {
@@ -342,5 +481,11 @@ const articles = [
   .nav-pills a:hover {
     border-color: var(--color-border-accent);
     color: var(--color-text-accent);
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 40rem) {
+    .types-grid { grid-template-columns: 1fr; }
+    .insights-cta { flex-direction: column; align-items: flex-start; }
   }
 </style>

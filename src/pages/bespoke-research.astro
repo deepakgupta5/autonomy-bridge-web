@@ -1,21 +1,32 @@
 ---
 import MainLayout from "../components/MainLayout.astro";
+import { getEntryByCanonicalPath } from "../utils/contentCollections";
+import { extractFaqItemsFromMarkdown } from "../utils/faq";
+import { buildFaqPageSchema } from "../utils/schema";
 
 const canonicalPath = "/bespoke-research";
-const title = "Bespoke Research";
-const summary = "Custom research built for a defined decision problem in automation, robotics, and industrial AI.";
+const entry = await getEntryByCanonicalPath("pages", canonicalPath);
+const faqItems = extractFaqItemsFromMarkdown(entry.body);
+const faqSchema = buildFaqPageSchema({ canonicalPath, items: faqItems });
+const schema = faqSchema ? [faqSchema] : [];
 ---
 
-<MainLayout canonicalPath={canonicalPath} title={title} summary={summary} seoTitle="Bespoke Research | Autonomy Bridge">
+<MainLayout
+  canonicalPath={canonicalPath}
+  title={entry.data.title}
+  summary={entry.data.summary}
+  seoTitle="Bespoke Research | Autonomy Bridge"
+  schema={schema}
+>
   <article class="br-page">
 
     <!-- HEADER -->
     <header class="br-header">
       <div class="br-container">
         <h1 class="br-h1">Bespoke Research</h1>
-        <p class="br-tagline">Custom research for a defined decision problem in automation, robotics, and industrial AI</p>
-        <p class="br-intro">A bespoke research engagement produces one decision-grade output for one defined problem.</p>
-        <p class="br-intro">For operators validating a deployment decision, investors stress-testing a thesis, or vendors entering a new segment. Built for a specific question — not a generic market overview.</p>
+        <p class="br-tagline">Decision-grade research built for a specific question in AI, robotics, or industrial automation.</p>
+        <p class="br-intro">A bespoke research engagement produces one thing: a decision-grade output built for a specific question in AI, robotics, or industrial automation — not a literature review, not a market survey, not a recycled category report. Every engagement begins with a defined decision problem and ends with a structured research product containing explicit assumptions, a documented analytical model, and direct recommendations. The deliverable is ready to act on.</p>
+        <p class="br-intro">Bespoke Research is the right engagement when the question is defined, the scope is bounded, and the need is a fixed deliverable. For ongoing decisions that evolve over time, see <a href="/advisory">Advisory</a>.</p>
         <div class="br-header-links">
           <a href="/advisory">Advisory →</a>
           <a href="/case-studies">Case Studies →</a>
@@ -31,19 +42,23 @@ const summary = "Custom research built for a defined decision problem in automat
         <div class="br-types-grid">
           <div class="br-type-card">
             <h3 class="br-type-name">Market Entry Analysis</h3>
-            <p><strong>You need to understand the opportunity before committing resources.</strong> Assessment of addressable opportunity, competitive density, entry constraint, and segment sequencing for a defined automation or industrial AI market.</p>
+            <p>A structured assessment of addressable opportunity, competitive density, and entry constraint for a defined platform category, operator domain, or geography. Outputs include demand segmentation by operator type, a bottom-up account count with revenue potential, and a ranked entry sequence with risk-adjusted rationale. Applied by vendors evaluating a new segment and investors assessing a target's market position.</p>
+            <a href="/frameworks/vendor-economics-framework" class="br-type-link">Vendor Economics Framework →</a>
           </div>
           <div class="br-type-card">
             <h3 class="br-type-name">Vendor Economics Assessment</h3>
-            <p><strong>Vendor quotes don't tell the full economic story.</strong> Bottom-up analysis of pricing architecture, unit economics, and margin sustainability across a competitive set of automation platforms or vendors.</p>
+            <p>A bottom-up analysis of vendor unit economics, pricing architecture, and margin sustainability across a competitive set. Applied where procurement teams or investors need to understand whether a vendor's commercial model is defensible at scale — not just whether the technology works. Covers pricing structure, contract terms, customer economics, and competitive positioning.</p>
+            <a href="/frameworks/vendor-evaluation-framework" class="br-type-link">Vendor Evaluation Framework →</a>
           </div>
           <div class="br-type-card">
             <h3 class="br-type-name">Deployment Risk Report</h3>
-            <p><strong>You need to know what can go wrong before the capital is committed.</strong> Diagnostic of operational, integration, and financial failure modes in a specific automation scenario — mapped against throughput constraints and capital recovery conditions.</p>
+            <p>A diagnostic of the operational, integration, and financial failure modes in a specific deployment scenario. Covers pilot-to-scale failure vectors, integration complexity, and the conditions under which a deployment stalls, reverses, or fails to reach target economics. Applied before capital is committed to a deployment program or before an investment in a deployment-stage company.</p>
+            <a href="/frameworks/pilot-to-scale-failure-framework" class="br-type-link">Pilot-to-Scale Failure Framework →</a>
           </div>
           <div class="br-type-card">
-            <h3 class="br-type-name">Automation ROI Model</h3>
-            <p><strong>You need an ROI model built on your actual numbers, not vendor assumptions.</strong> Structured financial model mapping labor displacement, throughput change, integration cost, and payback under operator-specific assumptions and utilization profiles.</p>
+            <h3 class="br-type-name">Commercial Viability Assessment</h3>
+            <p>A structured evaluation of whether a product or platform is commercially viable in a defined market context. Tests demand assumptions against real buyer economics, identifies where the unit economics hold and where they break, and produces a clear viability verdict with the conditions attached. Applied by founders and investors before committing capital or sales resources to a market.</p>
+            <a href="/frameworks/robotics-roi-model" class="br-type-link">Robotics ROI Model →</a>
           </div>
         </div>
       </div>
@@ -55,19 +70,18 @@ const summary = "Custom research built for a defined decision problem in automat
         <h2 class="br-h2">Who Commissions This</h2>
         <div class="br-who-grid">
           <div class="br-who-item">
-            <span class="br-who-label">Warehouse, 3PL &amp; Manufacturing Operators</span>
-            <p>Evaluating vendor proposals, validating pilot economics, or building the case for a capital deployment decision across warehouse or production environments.</p>
+            <span class="br-who-label">Robotics and AI Vendors</span>
+            <p>Vendors commission bespoke research to evaluate market entry into a new platform category or operator domain, define ICP before scaling sales, set pricing against competitive benchmarks, and assess commercial viability before committing development or go-to-market resources.</p>
           </div>
           <div class="br-who-item">
-            <span class="br-who-label">PE &amp; Infrastructure Investors</span>
-            <p>Conducting diligence on a robotics company, automation vendor, or industrial infrastructure asset — stress-testing unit economics and market assumptions.</p>
+            <span class="br-who-label">Investors</span>
+            <p>Investors commission research to size addressable markets with a bottom-up methodology, stress-test vendor economics and deployment assumptions in due diligence, and validate the commercial thesis of a target company before committing capital.</p>
           </div>
           <div class="br-who-item">
-            <span class="br-who-label">Robotics &amp; Automation Vendors</span>
-            <p>Entering a new segment or vertical and needing buyer-side market intelligence to position effectively and shorten the sales cycle.</p>
+            <span class="br-who-label">Operators</span>
+            <p>Operators commission research to evaluate the deployment economics of a specific automation platform in their environment, assess vendor commercial models before signing contracts, and build an evidence base for internal capital approval processes.</p>
           </div>
         </div>
-        <p class="br-who-note">The common requirement is the same: a decision needs a tighter analytical basis than vendor material or surface-level market content can provide.</p>
       </div>
     </section>
 
@@ -76,11 +90,11 @@ const summary = "Custom research built for a defined decision problem in automat
       <div class="br-container">
         <h2 class="br-h2">What You Get</h2>
         <ul class="br-deliverables">
-          <li><span class="br-check">✓</span> A formal structured research document scoped to your decision</li>
-          <li><span class="br-check">✓</span> A financial or quantitative model where required by the scope</li>
-          <li><span class="br-check">✓</span> Sourced claims and documented assumptions throughout</li>
-          <li><span class="br-check">✓</span> Scope, fee basis, and delivery date confirmed in writing before work begins</li>
-          <li><span class="br-check">✓</span> A working review call on delivery if included in scope</li>
+          <li><span class="br-check">✓</span> A structured research product delivered as a formal document: executive summary, findings, framework analysis, and a recommendation layer — formatted for board, investment committee, or executive team use</li>
+          <li><span class="br-check">✓</span> A financial or quantitative model where the research type requires it — commercial viability model, vendor economics build, market sizing model — delivered as a standalone file with all assumptions documented</li>
+          <li><span class="br-check">✓</span> Primary and secondary source citations with reliability grading — no undocumented claims, no unsourced market size figures</li>
+          <li><span class="br-check">✓</span> Internal linking to the relevant Autonomy Bridge frameworks, glossary terms, and reference cases where applicable</li>
+          <li><span class="br-check">✓</span> A defined scope agreement before work begins: research question, output format, data sources, fee, and delivery date confirmed in writing</li>
         </ul>
       </div>
     </section>
@@ -94,28 +108,28 @@ const summary = "Custom research built for a defined decision problem in automat
             <span class="br-step-num">01</span>
             <div class="br-step-content">
               <h3 class="br-step-name">Brief</h3>
-              <p>Submit the question, context, and timeline. No long form — a clear description of the decision you need to support.</p>
+              <p>Submit a research question or decision problem via the contact form. The brief should describe the decision to be made, the context — platform category, operator domain, geography — and any constraints on scope or timeline.</p>
             </div>
           </div>
           <div class="br-step">
             <span class="br-step-num">02</span>
             <div class="br-step-content">
               <h3 class="br-step-name">Scoping</h3>
-              <p>Autonomy Bridge returns a written scope covering output type, methodology, fee basis, and delivery timing. Confirmed before work begins.</p>
+              <p>Autonomy Bridge returns a scoping document within 48 hours. It defines the research question precisely, identifies the output type, maps the data sources and framework references to be applied, and confirms the fee and delivery date.</p>
             </div>
           </div>
           <div class="br-step">
             <span class="br-step-num">03</span>
             <div class="br-step-content">
               <h3 class="br-step-name">Research</h3>
-              <p>Primary and secondary source work, framework-driven analysis, and documented assumptions — built to withstand scrutiny.</p>
+              <p>Primary source collection, market data triangulation, and framework-driven analysis. All claims are sourced and graded. Where quantitative modeling is required, assumptions are documented and validated against comparable market and deployment data.</p>
             </div>
           </div>
           <div class="br-step">
             <span class="br-step-num">04</span>
             <div class="br-step-content">
               <h3 class="br-step-name">Delivery</h3>
-              <p>The completed output is delivered in document form, with a working review call if included in scope.</p>
+              <p>The completed research product is delivered as a structured document on the confirmed date. A 30-minute delivery briefing is included to walk through findings, flag limitations, and address immediate questions.</p>
             </div>
           </div>
         </div>
@@ -127,14 +141,32 @@ const summary = "Custom research built for a defined decision problem in automat
       <div class="br-container br-cta-inner">
         <div>
           <h2 class="br-cta-heading">Start a Research Brief</h2>
-          <p class="br-cta-sub">Begin with a 15-minute scoping call. Scope, fee basis, and delivery date are confirmed in writing before work begins.</p>
+          <p class="br-cta-sub">Describe the decision you need to make and the question that would resolve it.</p>
+          <p class="br-cta-note">Autonomy Bridge will return a scoping document within 48 hours.</p>
         </div>
         <div class="br-cta-actions">
-          <a href="/contact" class="br-btn-primary">Book 15-min scoping call</a>
-          <a href="/advisory" class="br-btn-outline">See Advisory</a>
+          <a href="/contact" class="br-btn-primary">Submit a research brief</a>
+          <a href="/advisory" class="br-btn-outline">Engage Advisory instead →</a>
         </div>
       </div>
     </section>
+
+    <!-- FAQ -->
+    {faqItems.length > 0 && (
+      <section class="br-section">
+        <div class="br-container br-faq-container">
+          <h2 class="br-h2">Frequently Asked Questions</h2>
+          <div class="br-faq-list">
+            {faqItems.map((item) => (
+              <details class="br-faq-item">
+                <summary class="br-faq-q">{item.question}</summary>
+                <p class="br-faq-a">{item.answer}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
 
   </article>
 </MainLayout>
@@ -178,10 +210,17 @@ const summary = "Custom research built for a defined decision problem in automat
     margin: 0 0 1.25rem;
   }
 
+  .br-intro a {
+    color: var(--color-text-primary);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
   .br-header-links {
     display: flex;
     gap: 1.25rem;
     flex-wrap: wrap;
+    margin-top: 1.5rem;
   }
 
   .br-header-links a {
@@ -192,6 +231,8 @@ const summary = "Custom research built for a defined decision problem in automat
     border-bottom: 1px solid var(--color-border-accent);
     padding-bottom: 0.1rem;
   }
+
+  .br-header-links a:hover { color: var(--color-text-muted); }
 
   /* ── SECTIONS ── */
   .br-section {
@@ -240,14 +281,26 @@ const summary = "Custom research built for a defined decision problem in automat
     line-height: 1.7;
     color: var(--color-text-secondary);
     margin: 0;
+    flex: 1;
   }
+
+  .br-type-link {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--color-text-muted);
+    text-decoration: none;
+    font-family: var(--font-mono);
+    letter-spacing: 0.01em;
+    margin-top: 0.25rem;
+  }
+
+  .br-type-link:hover { color: var(--color-text-primary); }
 
   /* ── WHO COMMISSIONS ── */
   .br-who-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1rem;
-    margin-bottom: 1.25rem;
   }
 
   .br-who-item {
@@ -274,14 +327,6 @@ const summary = "Custom research built for a defined decision problem in automat
     line-height: 1.65;
     color: var(--color-text-secondary);
     margin: 0;
-  }
-
-  .br-who-note {
-    font-size: 0.9rem;
-    line-height: 1.7;
-    color: var(--color-text-muted);
-    margin: 0;
-    font-style: italic;
   }
 
   /* ── DELIVERABLES ── */
@@ -379,9 +424,16 @@ const summary = "Custom research built for a defined decision problem in automat
   .br-cta-sub {
     font-size: 0.9375rem;
     color: #94a3b8;
-    margin: 0;
+    margin: 0 0 0.25rem;
     max-width: 44ch;
     line-height: 1.6;
+  }
+
+  .br-cta-note {
+    font-size: 0.8125rem;
+    color: var(--color-text-muted);
+    margin: 0;
+    font-style: italic;
   }
 
   .br-cta-actions {
@@ -420,8 +472,57 @@ const summary = "Custom research built for a defined decision problem in automat
 
   .br-btn-outline:hover { border-color: var(--color-cta-border); }
 
+  /* ── FAQ ── */
+  .br-faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .br-faq-item {
+    border: 1px solid var(--color-border-default);
+    border-radius: 0.375rem;
+    overflow: hidden;
+  }
+
+  .br-faq-q {
+    display: block;
+    padding: 0.875rem 1rem;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+  }
+
+  .br-faq-q::-webkit-details-marker { display: none; }
+
+  .br-faq-q::after {
+    content: "+";
+    float: right;
+    font-weight: 400;
+    color: var(--color-text-muted);
+  }
+
+  details[open] .br-faq-q::after { content: "−"; }
+
+  .br-faq-a {
+    padding: 0 1rem 1rem;
+    font-size: 0.9rem;
+    line-height: 1.65;
+    color: var(--color-text-secondary);
+    margin: 0;
+  }
+
+  /* ── RESPONSIVE ── */
   @media (max-width: 52rem) {
-    .br-types-grid, .br-who-grid { grid-template-columns: 1fr; }
+    .br-types-grid { grid-template-columns: 1fr; }
+    .br-who-grid { grid-template-columns: 1fr 1fr; }
     .br-cta-inner { flex-direction: column; align-items: flex-start; }
+  }
+
+  @media (max-width: 36rem) {
+    .br-who-grid { grid-template-columns: 1fr; }
   }
 </style>

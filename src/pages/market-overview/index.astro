@@ -1,6 +1,5 @@
 ---
 import MainLayout from "../../components/MainLayout.astro";
-import { marketOverviewChildSlugs } from "../../data/ia";
 import { extractFaqItemsFromMarkdown } from "../../utils/faq";
 import { buildCollectionPageSchema, buildFaqPageSchema } from "../../utils/schema";
 import { getEntryByCanonicalPath } from "../../utils/contentCollections";
@@ -19,61 +18,41 @@ const pageSchema = [
 const faqSchema = buildFaqPageSchema({ canonicalPath: hubCanonicalPath, items: faqItems });
 const schema = faqSchema ? [...pageSchema, faqSchema] : pageSchema;
 
-// Real section descriptions from the hub content table
 const sections = [
   {
-    slug: "industry-landscape",
-    href: "/market-overview/industry-landscape",
-    title: "Industry Landscape",
-    desc: "How the North American warehousing and 3PL sector is structured — ownership models, competitive tiers, and the role automation plays in operator differentiation.",
-    tag: "Structure",
+    slug: "platform-categories",
+    href: "/market-overview/platform-categories",
+    title: "Platform Categories",
+    desc: "Profiles of the ten robotics and AI platform categories — vendor populations, commercial maturity, deployment economics, and buyer types.",
+    tag: "Platforms",
   },
   {
-    slug: "technology-stack",
-    href: "/market-overview/technology-stack",
-    title: "Technology Stack",
-    desc: "The core robotics and automation systems in active deployment — AMRs, ASRS, robotic picking, WMS/WCS layers, and how they integrate at the facility level.",
-    tag: "Technology",
+    slug: "operator-domains",
+    href: "/market-overview/operator-domains",
+    title: "Operator Domains",
+    desc: "Profiles of the fifteen operator application domains — adoption stage, vendor density, buyer structure, and research tolerance by domain.",
+    tag: "Operators",
   },
   {
-    slug: "market-drivers",
-    href: "/market-overview/market-drivers",
-    title: "Market Drivers",
-    desc: "The demand-side, labor-side, and capital-side forces accelerating automation adoption across the mid-market operator tier.",
+    slug: "vendor-landscape",
+    href: "/market-overview/vendor-landscape",
+    title: "Vendor Landscape",
+    desc: "How the vendor population is structured across platform categories — market density, pre-Series B concentration, and competitive dynamics.",
+    tag: "Vendors",
+  },
+  {
+    slug: "deployment-economics",
+    href: "/market-overview/deployment-economics",
+    title: "Deployment Economics",
+    desc: "How deployment economics vary across platform and operator combinations — capital requirements, utilisation thresholds, and payback conditions.",
     tag: "Economics",
   },
   {
-    slug: "market-segments",
-    href: "/market-overview/market-segments",
-    title: "Market Segments",
-    desc: "How automation economics and deployment patterns differ across facility types: e-commerce fulfillment, parcel sortation, cold storage, and general merchandise 3PL.",
-    tag: "Segments",
-  },
-  {
-    slug: "key-players",
-    href: "/market-overview/key-players",
-    title: "Key Players",
-    desc: "The robotics vendors, systems integrators, and technology platforms shaping competitive dynamics in the North American warehouse automation market.",
-    tag: "Vendors",
-  },
-];
-
-const faqs = [
-  {
-    q: "What is the current state of warehouse automation adoption in North America?",
-    a: "Warehouse automation adoption in North America has moved beyond pilot deployments. Mid-market 3PL operators — facilities running 50,000 to 500,000 sq ft — now face direct competitive pressure from automated competitors winning RFPs on SLA capability. The primary barrier to adoption at this tier is not technology availability but capital structure, WMS integration complexity, and contract-cycle economics.",
-  },
-  {
-    q: "What types of robots are used in warehouse automation?",
-    a: "North American warehouse operations deploy three primary robot categories: autonomous mobile robots (AMRs) for goods transport; automated storage and retrieval systems (ASRS) including shuttle systems, mini-load systems, and cube storage platforms; and robotic picking arms for item-level handling in e-commerce environments. AMRs represent the entry point for mid-market deployments due to lower capital requirements and faster implementation timelines.",
-  },
-  {
-    q: "What is Robotics-as-a-Service (RaaS) in warehouse operations?",
-    a: "RaaS is a deployment and financing model in which warehouse operators pay subscription or per-pick fees for robotic systems rather than purchasing hardware outright. RaaS converts large capital expenditures — previously $2–5M for a credible warehouse automation deployment — into operational expenditure accessible to operators with 100,000–250,000 sq ft facilities. Adoption among independent mid-market 3PLs remains uneven.",
-  },
-  {
-    q: "How does WMS infrastructure affect automation decisions?",
-    a: "WMS platform compatibility directly constrains which robotics vendors an operator can practically deploy. Operators on legacy WMS platforms with limited robotics APIs face a restricted vendor selection set regardless of which AMR or ASRS systems offer the best economics. WMS upgrade cycles and automation deployment cycles are increasingly planned in tandem at mid-market operators for this reason.",
+    slug: "industry-landscape",
+    href: "/market-overview/industry-landscape",
+    title: "Intralogistics and Warehouse Automation",
+    desc: "Deep-dive on the intralogistics and warehouse automation segment — industry structure, technology stack, market drivers, segments, and key players.",
+    tag: "Deep-Dive",
   },
 ];
 ---
@@ -93,15 +72,15 @@ const faqs = [
   <section class="mo-hero">
     <div class="mo-container">
       <p class="mo-breadcrumb">Home / Market Overview</p>
-      <h1 class="mo-h1">Warehouse Automation<br />Market Overview</h1>
-      <p class="mo-tagline">North America · Mid-Market 3PL · Deployment Economics</p>
-      <p class="mo-intro">Five sections mapping the North American warehouse automation and 3PL market — industry landscape, technology stack, market drivers, market segments, and key players.</p>
-      <p class="mo-intro">Built for operators evaluating automation timelines, investors assessing vendor and market position, and vendors sizing or entering the mid-market 3PL tier.</p>
-      <cite class="mo-cite">© Autonomy Bridge proprietary analysis, 2026</cite>
+      <h1 class="mo-h1">AI, Robotics, and Industrial Automation<br />Market Overview</h1>
+      <p class="mo-tagline">Platform Categories · Operator Domains · Deployment Economics</p>
+      <p class="mo-intro">The AI, robotics, and industrial automation market is not a single market. It is a collection of platform categories — each with distinct vendor populations, deployment economics, and commercial maturity — operating across a wide range of operator application domains.</p>
+      <p class="mo-intro">This section provides structural orientation across the market: how platform categories are defined, which operator domains are active, where commercial adoption is scaling versus still in early or pilot stages, and what the vendor landscape looks like across segments. It is the context layer for all Frameworks, Research, and Use Cases on this site.</p>
+      <cite class="mo-cite">Autonomy Bridge proprietary analysis, 2026</cite>
       <div class="mo-pills">
         <a href="/frameworks" class="mo-pill">Frameworks &rarr;</a>
-        <a href="/methodology" class="mo-pill">Methodology &rarr;</a>
         <a href="/insights" class="mo-pill">Insights &rarr;</a>
+        <a href="/glossary" class="mo-pill">Glossary &rarr;</a>
       </div>
     </div>
   </section>
@@ -127,26 +106,27 @@ const faqs = [
   </section>
 
   <!-- FAQ -->
-  <section class="mo-section mo-section--surface" id="faq">
-    <div class="mo-container">
-      <h2 class="mo-h2">Frequently Asked Questions</h2>
-      <div class="mo-faq">
-        {faqs.map((faq) => (
-          <details class="mo-faq-item">
-            <summary class="mo-faq-q">{faq.q}</summary>
-            <p class="mo-faq-a">{faq.a}</p>
-            <cite class="mo-cite mo-cite--sm">© Autonomy Bridge proprietary analysis, 2026</cite>
-          </details>
-        ))}
+  {faqItems.length > 0 && (
+    <section class="mo-section mo-section--surface" id="faq">
+      <div class="mo-container">
+        <h2 class="mo-h2">Frequently Asked Questions</h2>
+        <div class="mo-faq">
+          {faqItems.map((faq) => (
+            <details class="mo-faq-item">
+              <summary class="mo-faq-q">{faq.question}</summary>
+              <p class="mo-faq-a">{faq.answer}</p>
+            </details>
+          ))}
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  )}
 
   <!-- CTA -->
   <section class="mo-cta">
     <div class="mo-container">
       <h2 class="mo-cta-h">Specific questions need specific analysis.</h2>
-      <p class="mo-cta-sub">Advisory engagements and bespoke research go deeper into specific deployment decisions, vendor economics, and operational risk.</p>
+      <p class="mo-cta-sub">Advisory engagements and bespoke research go deeper into specific market entry, vendor economics, deployment risk, and commercial viability questions.</p>
       <div class="mo-cta-btns">
         <a href="/advisory" class="mo-cta-btn mo-cta-btn--primary">Advisory &rarr;</a>
         <a href="/bespoke-research" class="mo-cta-btn mo-cta-btn--outline">Bespoke Research &rarr;</a>
@@ -206,10 +186,6 @@ const faqs = [
   padding-left: 0.625rem;
   margin-bottom: 1.5rem;
   font-style: normal;
-}
-.mo-cite--sm {
-  margin-top: 0.75rem;
-  margin-bottom: 0;
 }
 .mo-pills {
   display: flex;

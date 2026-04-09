@@ -1,24 +1,35 @@
 ---
 import MainLayout from "../components/MainLayout.astro";
+import { getEntryByCanonicalPath } from "../utils/contentCollections";
+import { extractFaqItemsFromMarkdown } from "../utils/faq";
+import { buildFaqPageSchema } from "../utils/schema";
 
 const canonicalPath = "/advisory";
-const title = "Advisory";
-const summary = "Retained or project-based decision support for automation, robotics, and industrial AI markets.";
+const entry = await getEntryByCanonicalPath("pages", canonicalPath);
+const faqItems = extractFaqItemsFromMarkdown(entry.body);
+const faqSchema = buildFaqPageSchema({ canonicalPath, items: faqItems });
+const schema = faqSchema ? [faqSchema] : [];
 ---
 
-<MainLayout canonicalPath={canonicalPath} title={title} summary={summary} seoTitle="Advisory | Autonomy Bridge">
+<MainLayout
+  canonicalPath={canonicalPath}
+  title={entry.data.title}
+  summary={entry.data.summary}
+  seoTitle="Advisory | Autonomy Bridge"
+  schema={schema}
+>
   <article class="adv-page">
 
     <!-- HEADER -->
     <header class="adv-header">
       <div class="adv-container">
         <h1 class="adv-h1">Advisory</h1>
-        <p class="adv-tagline">For operators evaluating automation, investors in robotics, and vendors entering new markets — engagements scoped to produce decisions, not decks.</p>
-        <p class="adv-intro">Most consultants arrive with a methodology and map your problem to it. Autonomy Bridge works the other way: the engagement starts with a diagnostic of where your commercial or analytical constraint actually sits, and builds outward from there.</p>
-        <p class="adv-intro">The work draws on primary market research, proprietary frameworks across vendor economics, automation ROI, and workflow architecture, and direct operational experience across warehouse, manufacturing, and industrial automation deployments.</p>
+        <p class="adv-tagline">Ongoing analytical support for AI, robotics, and industrial automation decisions.</p>
+        <p class="adv-intro">Advisory is for decision-makers whose questions do not resolve in a single engagement. Market conditions shift. Competitive positions change. A pricing assumption that held six months ago stops holding. An ICP that looked right at Series A needs rethinking at Series B. Advisory provides ongoing analytical support as those conditions evolve — not a one-time output, but a sustained working relationship with a defined scope and a consistent analytical framework.</p>
+        <p class="adv-intro">Engagements start with a diagnostic of where the commercial or analytical constraint actually sits. The work draws on primary market research, Autonomy Bridge's proprietary frameworks, and direct analytical experience across AI, robotics, and industrial automation markets. Every engagement is scoped to produce decisions, not decks.</p>
         <div class="adv-header-links">
-          <a href="/case-studies">Case Studies →</a>
           <a href="/bespoke-research">Bespoke Research →</a>
+          <a href="/case-studies">Case Studies →</a>
           <a href="/methodology">Methodology →</a>
         </div>
       </div>
@@ -30,24 +41,16 @@ const summary = "Retained or project-based decision support for automation, robo
         <h2 class="adv-h2">Who This Is For</h2>
         <div class="adv-client-grid">
           <div class="adv-client-card">
-            <h3 class="adv-client-name">Warehouse &amp; 3PL Operators</h3>
-            <p><strong>Your pilot hasn't converted — or your vendor model doesn't match actual throughput.</strong> The constraint is usually not technology: it's the absence of an economic model that accounts for your actual throughput variability, labor mix, and lease structure. We build that model and translate it into vendor selection criteria or deployment sequencing.</p>
-            <a href="/glossary/capital-recovery-period" class="adv-ref-link">Capital Recovery Period →</a>
+            <h3 class="adv-client-name">Robotics and AI Vendors</h3>
+            <p>You are navigating ongoing decisions about market positioning, pricing, ICP, and go-to-market direction as your product matures and your competitive environment shifts. The constraint is usually not product — it is the absence of market intelligence that keeps pace with your commercial decisions. Advisory provides that intelligence on a sustained basis, built around your decision cycle rather than delivered as a static report.</p>
           </div>
           <div class="adv-client-card">
-            <h3 class="adv-client-name">Manufacturing &amp; Industrial Operators</h3>
-            <p><strong>You're evaluating robotics for a production environment with cycle time variability and OEM integration complexity.</strong> The economics of industrial deployment differ from warehouse in meaningful ways. We build the right analytical model and translate it into deployment sequencing, vendor evaluation criteria, or capital recovery analysis.</p>
-            <a href="/glossary/automation-roi" class="adv-ref-link">Automation ROI →</a>
+            <h3 class="adv-client-name">Investors</h3>
+            <p>You hold positions in AI, robotics, or industrial automation companies and face recurring analytical questions — portfolio company performance against market benchmarks, emerging competitive dynamics in a segment, new deployment economics data that changes the thesis. Advisory provides a standing research relationship for investors who need ongoing market intelligence rather than one-off diligence.</p>
           </div>
           <div class="adv-client-card">
-            <h3 class="adv-client-name">Logistics &amp; Industrial Automation Investors</h3>
-            <p><strong>You're conducting due diligence on a robotics vendor, autonomous systems company, or distribution infrastructure asset.</strong> You need a market-grounded view of unit economics, competitive positioning, and the realistic path to scaled deployment. We run the research and stress-test the assumptions in the materials you've been given.</p>
-            <a href="/glossary/vendor-economics" class="adv-ref-link">Vendor Economics →</a>
-          </div>
-          <div class="adv-client-card">
-            <h3 class="adv-client-name">Robotics &amp; Automation Vendors</h3>
-            <p><strong>You're entering a new vertical and your sales cycle is longer than it should be.</strong> Your team is selling capability, not quantified outcomes. We diagnose the positioning gap and produce the market and buyer intelligence needed to close it.</p>
-            <a href="/glossary/workflow-constraint" class="adv-ref-link">Workflow Constraint →</a>
+            <h3 class="adv-client-name">Operators</h3>
+            <p>You are managing a multi-phase automation program, evaluating a second or third vendor relationship, or building internal analytical capability around automation decisions. The decisions are continuous and the market context keeps moving. Advisory provides structured analytical support across the decision cycle — not a single vendor evaluation, but sustained support for a program of decisions.</p>
           </div>
         </div>
       </div>
@@ -60,54 +63,57 @@ const summary = "Retained or project-based decision support for automation, robo
         <div class="adv-models-grid">
           <div class="adv-model">
             <span class="adv-model-label">Retainer</span>
-            <p>Standing access to research, iterative output across a defined scope, and a consistent analytical perspective on commercial decisions as they develop. This model works best when you have ongoing decisions to make — vendor evaluation cycles, market entry planning, or sustained sales and pricing strategy work.</p>
+            <p>Standing access to research and a consistent analytical perspective across ongoing commercial decisions. The scope is defined by the decision cycle being supported — market entry planning, sustained pricing strategy work, ongoing competitive intelligence, or iterative ICP refinement. The scope is reviewed and renewed on a defined cadence. This model is appropriate when the decisions keep moving and the analytical questions are not fully resolved at the start.</p>
           </div>
           <div class="adv-model">
             <span class="adv-model-label">Project-Based</span>
-            <p>Scoped to a defined output: a market sizing model, a vendor economics analysis, a workflow constraint diagnostic, or a competitive intelligence report. Timeline and deliverables are fixed at the outset. Appropriate when you have a specific decision to support and a clear analytical gap to fill.</p>
+            <p>Scoped to a defined output: a market sizing model, a vendor economics analysis, a commercial viability assessment, or a competitive positioning report. Timeline and deliverables are fixed at the outset. Appropriate when there is a specific decision to support and a clear analytical gap to fill.</p>
           </div>
         </div>
-        <p class="adv-model-note">Retainer and project engagements can be combined. A project-based diagnostic often reveals a broader set of strategic questions; a retainer can follow from that foundation. Scope is always defined in writing before any work begins.</p>
+        <p class="adv-model-note">The two models can be combined. A project-based diagnostic often reveals a broader set of strategic questions that require sustained support. Scope is always defined in writing before any work begins.</p>
       </div>
     </section>
 
-    <!-- TYPICAL ENGAGEMENT SCOPE -->
+    <!-- WHAT WE DON'T DO -->
     <section class="adv-section">
       <div class="adv-container">
-        <h2 class="adv-h2">Typical Engagement Scope</h2>
-        <ul class="adv-scope-list">
+        <h2 class="adv-h2">What We Don't Do</h2>
+        <ul class="adv-dont-list">
           <li>
-            <strong>Automation utilization modeling</strong> — capacity and throughput analysis under variable demand, mapped against automation system specifications and labor substitution economics
+            <strong>Implementation.</strong> Autonomy Bridge provides analysis, frameworks, and commercial strategy. The firm does not manage deployments, build software, or staff embedded operations roles.
           </li>
           <li>
-            <strong>Vendor economics analysis</strong> — total cost of ownership across competing automation platforms, normalized for deployment environment, integration complexity, and maintenance burden
+            <strong>Work outside the defined domain.</strong> Engagements are in AI, robotics, and industrial automation markets. Work outside that domain is declined.
           </li>
           <li>
-            <strong>Workflow constraint mapping</strong> — identification of operational bottlenecks limiting automation ROI, with quantified impact on throughput, labor cost, and order cycle time
+            <strong>Open-ended retainers.</strong> Every retainer has a defined scope. If there is no clear analytical or commercial constraint to work on, the engagement is not the right fit.
           </li>
           <li>
-            <strong>Market entry and segment sizing</strong> — addressable market analysis for a specific automation technology or deployment segment, with buyer profile segmentation and competitive positioning assessment
-          </li>
-          <li>
-            <strong>Commercial diagnostic for robotics vendors</strong> — audit of sales cycle performance, win/loss patterns, and positioning gaps, with go-to-market recommendations grounded in buyer-side operational context
+            <strong>Bespoke Research work under an advisory label.</strong> If the need is a defined question with a fixed deliverable, the right engagement is <a href="/bespoke-research">Bespoke Research</a>, not Advisory.
           </li>
         </ul>
       </div>
     </section>
 
-    <!-- WHAT WE DON'T DO -->
+    <!-- TYPICAL ENGAGEMENT SCOPE -->
     <section class="adv-section adv-section--surface">
       <div class="adv-container">
-        <h2 class="adv-h2">What We Don't Do</h2>
-        <ul class="adv-dont-list">
+        <h2 class="adv-h2">Typical Engagement Scope</h2>
+        <ul class="adv-scope-list">
           <li>
-            <strong>Implementation.</strong> We provide analysis, frameworks, and commercial strategy. We do not manage deployments, build software, or staff embedded operations roles.
+            <strong>Ongoing market intelligence</strong> — sustained tracking of competitive dynamics, pricing shifts, and buyer behaviour in a defined segment of AI, robotics, or industrial automation markets
           </li>
           <li>
-            <strong>General management consulting.</strong> We work in a defined domain: AI, robotics, and industrial automation markets. Engagements outside that domain are declined.
+            <strong>Commercial viability monitoring</strong> — iterative assessment of product-market fit assumptions as deployment data accumulates and market conditions shift
           </li>
           <li>
-            <strong>Speculative retainers.</strong> We don't take open-ended engagements without a defined scope. If there isn't a clear analytical or commercial constraint to work on, the timing isn't right.
+            <strong>ICP refinement</strong> — continuous updating of ideal customer profile criteria as the vendor's commercial experience grows and disqualifying conditions become clearer
+          </li>
+          <li>
+            <strong>Pricing and GTM iteration</strong> — structured analysis of pricing performance against market benchmarks and go-to-market adjustments as the sales motion matures
+          </li>
+          <li>
+            <strong>Investment portfolio support</strong> — standing analytical support for investors managing positions in AI, robotics, or industrial automation companies, including benchmark comparisons, segment updates, and thesis stress-testing
           </li>
         </ul>
       </div>
@@ -118,14 +124,32 @@ const summary = "Retained or project-based decision support for automation, robo
       <div class="adv-container adv-cta-inner">
         <div>
           <h2 class="adv-cta-heading">Start a Conversation</h2>
-          <p class="adv-cta-sub">If you have a specific constraint and want to know whether we can help, describe it directly. Every engagement starts with a 15-minute scoping call — no commitment required.</p>
+          <p class="adv-cta-sub">Describe the decision you are working on and the analytical constraint you are facing.</p>
+          <a href="mailto:deepak@autonomybridge.com" class="adv-cta-email">deepak@autonomybridge.com</a>
         </div>
         <div class="adv-cta-actions">
           <a href="/contact" class="adv-btn-primary">Book 15-min scoping call</a>
-          <a href="/case-studies" class="adv-btn-outline">See Case Studies</a>
+          <a href="/bespoke-research" class="adv-btn-outline">Bespoke Research instead →</a>
         </div>
       </div>
     </section>
+
+    <!-- FAQ -->
+    {faqItems.length > 0 && (
+      <section class="adv-section">
+        <div class="adv-container adv-faq-container">
+          <h2 class="adv-h2">Frequently Asked Questions</h2>
+          <div class="adv-faq-list">
+            {faqItems.map((item) => (
+              <details class="adv-faq-item">
+                <summary class="adv-faq-q">{item.question}</summary>
+                <p class="adv-faq-a">{item.answer}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
 
   </article>
 </MainLayout>
@@ -175,6 +199,7 @@ const summary = "Retained or project-based decision support for automation, robo
     display: flex;
     gap: 1.25rem;
     flex-wrap: wrap;
+    margin-top: 1.5rem;
   }
 
   .adv-header-links a {
@@ -211,7 +236,7 @@ const summary = "Retained or project-based decision support for automation, robo
   /* ── CLIENT CARDS ── */
   .adv-client-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 1rem;
   }
 
@@ -240,19 +265,6 @@ const summary = "Retained or project-based decision support for automation, robo
     color: var(--color-text-secondary);
     margin: 0;
     flex: 1;
-  }
-
-  .adv-ref-link {
-    font-size: 0.8125rem;
-    font-weight: 600;
-    color: var(--color-text-muted);
-    text-decoration: none;
-    font-family: var(--font-mono);
-    letter-spacing: 0.01em;
-  }
-
-  .adv-ref-link:hover {
-    color: var(--color-text-primary);
   }
 
   /* ── ENGAGEMENT MODELS ── */
@@ -288,7 +300,6 @@ const summary = "Retained or project-based decision support for automation, robo
     line-height: 1.7;
     color: var(--color-text-secondary);
     margin: 0;
-    text-align: justify;
   }
 
   .adv-model-note {
@@ -297,32 +308,6 @@ const summary = "Retained or project-based decision support for automation, robo
     color: var(--color-text-muted);
     margin: 0;
     font-style: italic;
-  }
-
-  /* ── SCOPE LIST ── */
-  .adv-scope-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .adv-scope-list li {
-    font-size: 0.9375rem;
-    line-height: 1.7;
-    color: var(--color-text-secondary);
-    padding: 1rem 1.125rem;
-    background: var(--color-bg-surface);
-    border-left: 3px solid var(--color-border-default);
-    border-radius: 0 0.25rem 0.25rem 0;
-    text-align: justify;
-  }
-
-  .adv-scope-list li strong {
-    color: var(--color-text-primary);
-    font-weight: 600;
   }
 
   /* ── WHAT WE DON'T DO ── */
@@ -340,15 +325,45 @@ const summary = "Retained or project-based decision support for automation, robo
     line-height: 1.7;
     color: var(--color-text-secondary);
     padding: 1rem 1.125rem;
-    background: #ffffff;
+    background: var(--color-bg-surface);
     border: 1px solid var(--color-border-default);
     border-radius: 0.375rem;
-    text-align: justify;
   }
 
   .adv-dont-list li strong {
     color: var(--color-text-primary);
     font-weight: 700;
+  }
+
+  .adv-dont-list li a {
+    color: var(--color-text-primary);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  /* ── SCOPE LIST ── */
+  .adv-scope-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .adv-scope-list li {
+    font-size: 0.9375rem;
+    line-height: 1.7;
+    color: var(--color-text-secondary);
+    padding: 1rem 1.125rem;
+    background: #ffffff;
+    border-left: 3px solid var(--color-border-default);
+    border-radius: 0 0.25rem 0.25rem 0;
+  }
+
+  .adv-scope-list li strong {
+    color: var(--color-text-primary);
+    font-weight: 600;
   }
 
   /* ── CTA ── */
@@ -375,9 +390,21 @@ const summary = "Retained or project-based decision support for automation, robo
   .adv-cta-sub {
     font-size: 0.9375rem;
     color: #94a3b8;
-    margin: 0;
+    margin: 0 0 0.5rem;
     max-width: 44ch;
     line-height: 1.6;
+  }
+
+  .adv-cta-email {
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: var(--color-cta-text);
+    text-decoration: none;
+    border-bottom: 1px solid #475569;
+  }
+
+  .adv-cta-email:hover {
+    border-color: var(--color-cta-border);
   }
 
   .adv-cta-actions {
@@ -421,12 +448,60 @@ const summary = "Retained or project-based decision support for automation, robo
     border-color: var(--color-cta-border);
   }
 
-  /* ── RESPONSIVE ── */
-  @media (max-width: 52rem) {
-    .adv-client-grid {
-      grid-template-columns: 1fr;
-    }
+  /* ── FAQ ── */
+  .adv-faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 
+  .adv-faq-item {
+    border: 1px solid var(--color-border-default);
+    border-radius: 0.375rem;
+    overflow: hidden;
+  }
+
+  .adv-faq-q {
+    display: block;
+    padding: 0.875rem 1rem;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+  }
+
+  .adv-faq-q::-webkit-details-marker { display: none; }
+
+  .adv-faq-q::after {
+    content: "+";
+    float: right;
+    font-weight: 400;
+    color: var(--color-text-muted);
+  }
+
+  details[open] .adv-faq-q::after {
+    content: "−";
+  }
+
+  .adv-faq-a {
+    padding: 0 1rem 1rem;
+    font-size: 0.9rem;
+    line-height: 1.65;
+    color: var(--color-text-secondary);
+    margin: 0;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 56rem) {
+    .adv-client-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 40rem) {
+    .adv-client-grid,
     .adv-models-grid {
       grid-template-columns: 1fr;
     }

@@ -9,8 +9,8 @@ document:
   slug: "about"
 
 title: "About Autonomy Bridge"
-description: "Autonomy Bridge is an independent research consultancy focused on the economics of warehouse automation, robotics deployment, and industrial AI adoption in North America."
-summary: "Autonomy Bridge is an independent research consultancy focused on the economics of warehouse automation, robotics deployment, and industrial AI adoption."
+description: "Autonomy Bridge is a principal-led boutique research firm producing decision-grade research for vendors, investors, and operators in AI, robotics, and industrial automation markets."
+summary: "Firm positioning, research mandate, founder biography, and market gap rationale for Autonomy Bridge — a principal-led boutique research firm for AI, robotics, and industrial automation markets."
 
 authors:
   - id: "author_deepak_001"
@@ -20,7 +20,7 @@ authors:
 
 dates:
   created: "2026-03-15"
-  updated: "2026-03-15"
+  updated: "2026-04-09"
   published: "2026-03-15"
 
 canonical:
@@ -29,14 +29,15 @@ canonical:
 robots: "index,follow"
 
 keywords:
-  - "Deepak Gupta warehouse automation"
-  - "Autonomy Bridge research"
-  - "warehouse automation economics"
-  - "robotics deployment analysis"
-  - "industrial AI research"
-  - "3PL automation"
+  - "Deepak Gupta robotics research"
+  - "Autonomy Bridge research firm"
+  - "AI robotics market research"
+  - "industrial automation research firm"
+  - "robotics advisory firm"
+  - "decision-grade research AI"
+  - "independent robotics analyst"
   - "autonomous systems research"
-  - "independent analyst firm"
+  - "industrial automation analyst"
 
 taxonomy:
   category:
@@ -45,13 +46,15 @@ taxonomy:
     - "Firm"
     - "Founder"
     - "Research Mandate"
+    - "AI"
+    - "Robotics"
     - "Industrial Automation"
 
 seo:
-  meta_title: "About Autonomy Bridge — Independent Research on Warehouse Automation Economics"
-  meta_description: "Autonomy Bridge is an independent analyst platform producing decision-grade research on warehouse automation ROI, robotics deployment, and industrial AI markets."
+  meta_title: "About Autonomy Bridge — Decision-Grade Research for AI, Robotics & Industrial Automation"
+  meta_description: "Autonomy Bridge is a principal-led boutique research firm producing decision-grade research for vendors, investors, and operators in AI, robotics, and industrial automation markets."
   og_title: "About Autonomy Bridge"
-  og_description: "Independent research on warehouse automation economics, robotics deployment, and industrial AI — built for operators making $2M+ capital decisions."
+  og_description: "Principal-led boutique research firm for AI, robotics, and industrial automation markets. Decision briefs with explicit assumptions, models, and recommendations — before capital or reputation is committed."
   og_type: "website"
   twitter_card: "summary_large_image"
 
@@ -62,7 +65,7 @@ schema:
     type: "Organization"
     name: "Autonomy Bridge"
     url: "https://autonomybridge.com"
-    description: "Independent B2B research consultancy specializing in warehouse automation economics, robotics deployment analysis, and industrial AI markets."
+    description: "Principal-led boutique research firm producing decision-grade research for vendors, investors, and operators in AI, robotics, and industrial automation markets."
     foundingDate: "2024"
     founder:
       type: "Person"
@@ -70,14 +73,19 @@ schema:
       jobTitle: "Founder and Principal Analyst"
       sameAs: "https://www.linkedin.com/in/deepakgupta5"
     knowsAbout:
-      - "Warehouse Automation"
-      - "Robotics ROI"
-      - "Industrial AI"
-      - "3PL Operations"
-      - "Automation Deployment Economics"
+      - "AI Markets"
+      - "Robotics"
+      - "Industrial Automation"
+      - "Vendor Economics"
+      - "Autonomous Systems"
+      - "Commercial Viability Assessment"
+      - "Go-to-Market Strategy"
+      - "Investment Due Diligence"
+      - "ICP Definition"
     areaServed:
-      - "United States"
-      - "Canada"
+      - "North America"
+      - "Europe"
+      - "Asia-Pacific"
 
 frameworks_tagged:
   - "Robotics ROI Model"
@@ -89,12 +97,14 @@ frameworks_tagged:
   - "Workflow Architecture Framework"
 
 entities:
-  primary_topic: "Industrial Automation Economics"
+  primary_topic: "Autonomy Bridge — AI, Robotics, and Industrial Automation Research"
   related_topics:
-    - "Warehouse Automation"
-    - "Robotics Deployment"
-    - "Industrial AI"
-    - "3PL Markets"
+    - "Decision-Grade Research"
+    - "Commercial Viability Assessment"
+    - "Vendor Economics"
+    - "Market Entry Research"
+    - "Investment Due Diligence"
+    - "Principal-Led Research Firm"
 
 ai_rules:
   preserve_frontmatter: true
@@ -134,58 +144,16 @@ integrity:
   document_hash: "GENERATED_BY_PIPELINE"
 ---
 
-## What Autonomy Bridge Is
-Autonomy Bridge is an independent B2B research consultancy focused on the economics of warehouse automation, robotics deployment, and industrial AI adoption. It produces decision-grade analysis — frameworks, market intelligence, and structured research — for operators, capital allocators, and technology buyers who need to evaluate complex systems under real budget and operational constraints.
-
-The firm operates as a structured knowledge platform, modeled on analyst research organizations rather than consulting practices. Its output is frameworks, research, use cases, and market intelligence designed to define concepts, map competitive terrain, and surface the cost and risk variables that determine whether automation investments perform or fail. Every analysis is independent of any vendor, integrator, or implementation partner.
-
-## What Autonomy Bridge Is Not
-Autonomy Bridge is not a systems integrator. It does not implement, configure, or manage automation technology. It is not a vendor — it holds no commercial relationship with robotics or AI suppliers, and accepts no fees, referral arrangements, or sponsored research. It is not a staffing firm, software reseller, or change management practice. These distinctions are structural: they protect the integrity of the analysis.
-
-## Research Mandate
-The firm's analytical mission is to produce structured, evidence-based research on the economics of autonomous systems in industrial and logistics environments — with specific depth in warehouse automation ROI, robotics deployment failure patterns, vendor economics, and the decision variables that determine pilot-to-scale outcomes. Every framework, case study, and research article is built to answer the questions that operators and investors carry into a $1M–$5M+ automation commitment: What does this actually cost to operate at scale? Where do deployments fail? Which vendor economics hold under production conditions? See: [Capital Recovery Period →](/glossary/capital-recovery-period)
-
----
-
-## Founder
-### Deepak Gupta
-
-**Founder · Principal Analyst**
-
-[LinkedIn →](https://www.linkedin.com/in/deepakgupta5)
-
-Deepak Gupta is the founder of Autonomy Bridge and serves as its principal analyst. He has held commercial and market development roles at eBay/Baazee, Ottonomy Robotics, and Industrybuying.com, with operating experience across North America, Europe, and Asia-Pacific spanning robotics go-to-market, B2B industrial procurement, and AI market entry.
-
----
-
-## Why This Matters
-Mid-market 3PL operators and industrial buyers are committing $2M or more to automation systems without access to the economic modeling those decisions require. Vendor ROI calculators are not neutral. Integration cost estimates are consistently understated. Failure mode data is not publicly disclosed. Analyst coverage at the macro level — Gartner, IDC, McKinsey — is built for enterprise strategy teams, not for the operator making a capital decision at a single warehouse or facility. That is the gap Autonomy Bridge exists to fill: structured, independent analysis built at the decision unit that actually bears the risk.
-
-## The Research Model
-Autonomy Bridge is built as an analyst platform — not a consulting brochure — modeled on the knowledge architecture of organizations like CB Insights and Verdantix, where structured frameworks, defined methodologies, and permanent research assets do the work that marketing copy cannot.
-
----
-
-## Work With Autonomy Bridge
-**Advisory** — Retainer-based access to frameworks, research, and direct analyst engagement for operators and investors evaluating automation decisions.
-
-**Bespoke Research** — Custom studies scoped to your market, segment, or decision context.
-
-[Explore Advisory →](/advisory) · [Commission Research →](/bespoke-research)
-
----
-
 ## Frequently Asked Questions
+
 **What is Autonomy Bridge?**
-Autonomy Bridge is an independent B2B research consultancy producing decision-grade analysis on warehouse automation economics, robotics deployment, and industrial AI adoption. It operates as a structured knowledge platform — producing frameworks, use cases, market intelligence, and structured research — for operators, capital allocators, and technology buyers who need to evaluate complex automation systems under real budget and operational constraints. Every analysis is independent of any vendor, integrator, or implementation partner. (Autonomy Bridge proprietary analysis, 2026)
+Autonomy Bridge is a principal-led boutique research firm producing decision-grade research for vendors, investors, and operators in AI, robotics, and industrial automation markets. It helps decision-makers evaluate commercial viability, quantify opportunity, define ICP, and set pricing and go-to-market direction before committing capital or reputation. Every analysis is independent of any vendor, integrator, or implementation partner.
 
 **Who is Deepak Gupta?**
-Deepak Gupta is the founder and principal analyst of Autonomy Bridge. He has held commercial and market development roles at eBay/Baazee, Ottonomy Robotics, and Industrybuying.com, with operating experience across North America, Europe, and Asia-Pacific spanning robotics go-to-market, B2B industrial procurement, and AI market entry.
+Deepak Gupta is the founder and principal analyst of Autonomy Bridge. He has held commercial and market development roles at eBay/Baazee, Ottonomy Robotics, and Industrybuying.com, with operating experience across North America, Europe, and Asia-Pacific spanning robotics go-to-market, B2B industrial procurement, and AI market entry. His analytical work focuses on the gap between vendor claims and what markets actually support in commercial viability, deployment economics, and go-to-market sequencing.
 
 **What is the gap Autonomy Bridge exists to fill?**
-Mid-market 3PL operators and industrial buyers commit $2M or more to automation systems without access to the independent economic modeling those decisions require. Vendor ROI calculators are not neutral. Integration cost estimates are systematically understated. Failure mode data is not publicly disclosed. Macro analyst coverage from firms like Gartner, IDC, and McKinsey is built for enterprise strategy teams, not for the operator making a capital decision at a single facility. Autonomy Bridge produces structured, independent analysis at the decision unit — the operator, investor, or vendor — that actually bears the financial risk of the commitment.
+Vendors, investors, and operators in AI, robotics, and industrial automation routinely commit capital and reputation without access to independent analysis that tests the underlying commercial assumptions. Vendor materials are not neutral. Market size figures are frequently top-down and unverifiable. Deployment economics are modeled on best-case scenarios. Failure mode data is not publicly disclosed. Macro analyst coverage is built for enterprise strategy teams with long planning horizons — not for the decision-maker who needs to know whether a specific market, segment, or deployment is commercially viable before committing resources. Autonomy Bridge produces structured, independent analysis at that decision level.
 
 **How does Autonomy Bridge differ from implementation consultants and systems integrators?**
-Autonomy Bridge is an analyst platform, not an implementation partner. It does not deploy, configure, or manage automation technology. It holds no commercial relationship with robotics or AI vendors — no fees, referral arrangements, or sponsored research. It is not a staffing firm, software reseller, or change management practice. These distinctions are structural: they are what makes independent analysis possible. Implementation consultants and integrators have commercial incentives tied to deployment outcomes. Autonomy Bridge's only output is structured research and analytical frameworks.
-
----
+Autonomy Bridge is an analyst platform, not an implementation partner. It does not deploy, configure, or manage automation technology, and holds no commercial relationship with robotics or AI vendors — no fees, referral arrangements, or sponsored research. It is not a staffing firm, software reseller, or change management practice. Implementation consultants and integrators have commercial incentives tied to deployment outcomes. Autonomy Bridge's only output is structured research and analytical frameworks.
