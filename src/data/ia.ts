@@ -33,6 +33,12 @@ export const insightSlugs = [
   'why-cold-storage-automation-economics-are-structurally-different',
   'why-parcel-sortation-automation-breaks-at-low-volume',
   'why-general-merchandise-3pls-should-not-automate-too-early',
+  'how-robotics-vendors-misjudge-their-addressable-market',
+  'how-investors-should-size-robotics-markets',
+  'why-robotics-pilots-fail-to-convert-to-commercial-contracts',
+  'why-healthcare-robotics-deployments-follow-a-different-economic-logic',
+  'why-commercial-viability-and-technical-readiness-are-not-the-same-thing',
+  'how-aerial-robotics-vendors-are-pricing-into-inspection-markets',
 ] as const;
 export const useCaseSlugs = [
   'warehouse-automation-roi-evaluation',
@@ -43,6 +49,9 @@ export const useCaseSlugs = [
   'cold-storage-automation-evaluation',
   'parcel-sortation-automation-evaluation',
   'general-merchandise-3pl-automation-evaluation',
+  'service-robotics-deployment-evaluation',
+  'aerial-robotics-commercial-viability-evaluation',
+  'humanoid-platform-commercial-readiness',
 ] as const;
 export const caseStudySlugs = [
   'automation-deployment-risk-assessment',
@@ -54,6 +63,10 @@ export const caseStudySlugs = [
   'cold-storage-automation-economics-assessment',
   'parcel-sortation-volume-sensitivity-analysis',
   'general-merchandise-3pl-premature-automation-assessment',
+  'service-robotics-commercial-viability-assessment',
+  'healthcare-automation-investor-market-sizing',
+  'icp-definition-inspection-robotics',
+  'off-highway-autonomy-deployment-economics',
 ] as const;
 export const marketOverviewChildSlugs = [
   'industry-landscape',

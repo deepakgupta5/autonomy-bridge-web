@@ -1,6 +1,21 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 
+/** Strips :::directive blocks from markdown before rendering.
+ *  Without remark-directive installed, each :::name…::: block (no internal
+ *  blank lines) parses as a single top-level paragraph whose text starts with
+ *  ":::".  This plugin removes those paragraphs from the AST.
+ */
+function remarkStripDirectives() {
+  return function (tree) {
+    tree.children = tree.children.filter((node) => {
+      if (node.type !== 'paragraph') return true;
+      const first = node.children?.[0];
+      return !(first?.type === 'text' && first.value.startsWith(':::'));
+    });
+  };
+}
+
 const topLevelCanonicalPaths = new Set([
   '/',
   '/insights',
@@ -72,6 +87,7 @@ export default defineConfig({
   },
   markdown: {
     syntaxHighlight: false,
+    remarkPlugins: [remarkStripDirectives],
   },
   integrations: [
     sitemap({
