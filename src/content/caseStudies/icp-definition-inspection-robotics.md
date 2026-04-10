@@ -159,7 +159,7 @@ Each segment was scored against all four criteria. The account population within
 
 - The company's sales motion — driven by founder relationships in oil and gas — was concentrated in the segment with the weakest ICP fit at current platform specifications. The utility segment, which represented the highest-density viable ICP, had received minimal commercial attention.
 
-- Within the utility segment, the highest-concentration viable accounts were mid-size regional electric cooperatives and investor-owned utilities with transmission networks of 500–2,000 circuit miles — large enough to generate inspection volume above the platform's utilization threshold, but small enough that their existing inspection programs used chartered helicopters and contract rope-access teams whose costs were well above the platform's cost per inspection event.
+- Within the utility segment, the highest-concentration viable accounts were mid-size regional electric cooperatives and investor-owned utilities with transmission networks of 500–2,000 circuit miles. These networks were large enough to generate inspection volume above the platform's utilization threshold. They were also small enough that their existing inspection programs relied on chartered helicopters and contract rope-access teams whose costs were well above the platform's cost per inspection event.
 
 ---
 

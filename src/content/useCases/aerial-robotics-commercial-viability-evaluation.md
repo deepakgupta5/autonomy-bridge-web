@@ -179,11 +179,11 @@ Capital recovery requires that annual displacement exceeds annualized platform c
 
 Three thresholds determine viability across operator domains:
 
-**Inspection frequency floor.** For hardware ownership pricing at typical aerial platform costs of $50,000–$200,000 per system, the minimum annual inspection event count required for capital recovery within 36 months is in the range of 150–500 events per year depending on manual inspection cost per event. Operators below this inspection frequency threshold cannot support hardware ownership economics and require inspection-as-a-service pricing.
+**Inspection frequency floor.** For hardware ownership pricing at typical aerial platform costs of $50,000–$200,000 per system, the minimum annual inspection event count required for capital recovery within 36 months is in the range of 150–500 events per year depending on manual inspection cost per event (Source: Autonomy Bridge proprietary analysis, 2026). Operators below this inspection frequency threshold cannot support hardware ownership economics and require inspection-as-a-service pricing.
 
 **Manual inspection cost floor.** The manual inspection method the platform replaces must cost more than the platform's cost per event at the operator's inspection frequency. Platforms replacing low-cost manual methods (ground-level visual inspection, low-cost contract labor) generate smaller displacement than platforms replacing high-cost methods (helicopter charter at $1,500–$4,000 per flight hour, rope access at $800–$2,000 per day).
 
-**Regulatory cost ceiling.** If regulatory compliance costs — particularly BVLOS waiver development and maintenance for large-area operations — exceed 20–25% of total deployment cost, the effective cost per inspection event rises to a level that eliminates the economic advantage over manual inspection methods for all but the highest-cost manual inspection baselines. (Autonomy Bridge proprietary analysis, 2026)
+**Regulatory cost ceiling.** If regulatory compliance costs — particularly BVLOS waiver development and maintenance for large-area operations — exceed 20–25% of total deployment cost, the effective cost per inspection event rises to a level that eliminates the economic advantage over manual inspection methods for all but the highest-cost manual inspection baselines (Source: Autonomy Bridge proprietary analysis, 2026).
 
 ---
 

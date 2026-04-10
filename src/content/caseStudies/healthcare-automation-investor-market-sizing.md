@@ -117,7 +117,7 @@ integrity:
 
 A venture and growth equity firm with a healthcare technology portfolio was evaluating a potential Series A investment in a robotics company developing autonomous platforms for hospital logistics — specifically, autonomous mobile robots for medication delivery, specimen transport, and linen and supply logistics within acute care hospital facilities.
 
-The target company's investor materials presented a total addressable market of $4.2 billion, derived by multiplying the number of acute care hospital facilities in the United States by an estimated average system value. The investment committee found the figure credible on its face but wanted an independent assessment of the market size before proceeding with term sheet discussions. The question was whether the $4.2 billion figure was a reliable basis for evaluating the company's revenue trajectory and market position.
+The target company's investor materials presented a total addressable market of $4.2 billion, derived by multiplying the number of acute care hospital facilities in the United States by an estimated average system value (Source: Autonomy Bridge proprietary analysis, 2026). The investment committee found the figure credible on its face but wanted an independent assessment of the market size before proceeding with term sheet discussions. The question was whether the $4.2 billion figure was a reliable basis for evaluating the company's revenue trajectory and market position.
 
 ---
 
@@ -147,13 +147,13 @@ The SAM was then subjected to a penetration model using adoption curve data from
 
 ## Key Findings {#key-findings}
 
-- The bottom-up SAM for the platform, at its current price point and system specifications, was approximately $840 million — approximately one-fifth of the $4.2 billion TAM presented in the target company's investor materials.
+- The bottom-up SAM for the platform, at its current price point and system specifications, was approximately $840 million — approximately one-fifth of the $4.2 billion TAM presented in the target company's investor materials (Source: Autonomy Bridge proprietary analysis, 2026).
 
-- The primary driver of the TAM-to-SAM compression was labor economics: the majority of U.S. acute care hospitals employed clinical support staff at fully-loaded costs below the threshold required for the platform to generate a return within a 48-month payback window — the maximum acceptable for hospital capital committee approval.
+- The primary driver of the TAM-to-SAM compression was labor economics: the majority of U.S. acute care hospitals employed clinical support staff at fully-loaded costs below the threshold required for the platform to generate a return within a 48-month payback window — the maximum acceptable for hospital capital committee approval (Source: Autonomy Bridge proprietary analysis, 2026).
 
 - A secondary driver was integration cost: the platform required EHR integration and elevator control system integration that added $80,000–$140,000 per hospital deployment in integration cost. When this cost was included in total cost of ownership, the payback window at median hospital labor cost exceeded 60 months — outside capital committee approval thresholds for the majority of the hospital population.
 
-- The viable segment was concentrated in: large urban academic medical centers and teaching hospitals (above 400 beds) in high-labor-cost markets, and large community hospitals in metropolitan markets where clinical support staff wages exceeded $26 per hour fully loaded.
+- The viable segment was concentrated in large urban academic medical centers and teaching hospitals (above 400 beds) in high-labor-cost markets. It also included large community hospitals in metropolitan markets where clinical support staff wages exceeded $26 per hour fully loaded.
 
 - At a base-case penetration rate derived from analogous hospital technology adoption curves (12% of SAM by year 5), projected revenue at year 5 was $101 million — compared to the target company's own projection of $380 million derived from TAM-based assumptions.
 

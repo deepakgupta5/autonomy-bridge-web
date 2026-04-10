@@ -143,7 +143,7 @@ The Automation Failure Framework identifies five categories of deployment failur
 
 **Labor removal analysis.** The vendor models calculated labor savings by multiplying manned truck operator headcount by fully-loaded operator cost. The operator's labor structure included shift supervisors, dispatch personnel, and maintenance staff whose roles would not be eliminated by autonomous operation — only truck operators would be displaced. The vendor models had applied the full haul truck labor cost to the displacement calculation rather than the removable fraction attributable to truck operators alone.
 
-**Infrastructure cost analysis.** Both sites required haul road upgrades to meet AHS operating specifications: road grading tolerances, berm height standards, and communications infrastructure (LiDAR reflector arrays and cellular repeaters) necessary for autonomous navigation. The vendor proposals had listed these as operator-provided requirements without including them in the total cost of ownership model. Independent estimates of the road upgrade and communications infrastructure costs added $8.2 million to the total deployment cost across both sites.
+**Infrastructure cost analysis.** Both sites required haul road upgrades to meet AHS operating specifications: road grading tolerances, berm height standards, and communications infrastructure (LiDAR reflector arrays and cellular repeaters). These upgrades were necessary for autonomous navigation. The vendor proposals had listed these as operator-provided requirements without including them in the total cost of ownership model. Independent estimates of the road upgrade and communications infrastructure costs added $8.2 million to the total deployment cost across both sites.
 
 **Ramp period analysis.** The vendor models assumed full fleet utilization within 90 days of system commissioning. Industry data from comparable AHS deployments at similar-scale operations showed actual ramp periods of 180–270 days before reaching 80% of target utilization — reflecting the time required for haul road mapping, fleet management system calibration, supervisor training, and regulatory compliance documentation.
 
@@ -153,7 +153,7 @@ The Automation Failure Framework identifies five categories of deployment failur
 
 - The vendor payback models used benchmark assumptions that did not reflect the operator's site conditions across three of the five Automation Failure Framework categories.
 
-- Utilization shortfall: autonomous operating hours per vehicle per day at the operator's sites were estimated at 18.5–19.5 hours — not 22. The 2.5–3.5 hour gap resulted from haul road maintenance requirements and the regulatory supervisor ratio, neither of which was reflected in vendor benchmarks.
+- Utilization shortfall: autonomous operating hours per vehicle per day at the operator's sites were estimated at 18.5–19.5 hours — not 22 (Source: Autonomy Bridge proprietary analysis, 2026). The 2.5–3.5 hour gap resulted from haul road maintenance requirements and the regulatory supervisor ratio, neither of which was reflected in vendor benchmarks.
 
 - Labor removal overstatement: the removable labor fraction was limited to haul truck operators — approximately 68% of the total haul fleet labor cost the vendor models had used. Shift supervisors, dispatch, and maintenance staff represented 32% of haul fleet labor and were not eliminable through autonomous operation alone.
 

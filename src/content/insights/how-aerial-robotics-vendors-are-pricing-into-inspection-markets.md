@@ -153,7 +153,7 @@ Aerial robotics platforms — autonomous drones and UAV systems designed for ass
 
 ## The Pricing Model Mismatch {#the-pricing-model-mismatch}
 
-Most aerial robotics vendors price their platforms through a combination of hardware sale (or lease) and recurring software subscription. The hardware purchase covers the drone fleet, charging infrastructure, and ground control systems. The software subscription covers data processing, analytics, reporting, and platform management. Total cost of ownership over a 3-year period for a mid-scale inspection deployment typically ranges from $200,000 to $600,000 depending on fleet size, software tier, and integration requirements.
+Most aerial robotics vendors price their platforms through a combination of hardware sale (or lease) and recurring software subscription. The hardware purchase covers the drone fleet, charging infrastructure, and ground control systems. The software subscription covers data processing, analytics, reporting, and platform management. Total cost of ownership over a 3-year period for a mid-scale inspection deployment typically ranges from $200,000 to $600,000 depending on fleet size, software tier, and integration requirements (Source: Autonomy Bridge proprietary analysis, 2026).
 
 Inspection buyers — asset owners in energy, utilities, pipelines, telecommunications, and industrial facilities — evaluate inspection programs differently. Their baseline cost is the current annual spend on manual inspection: inspector labor, access equipment (scaffolding, rope access, helicopters), travel, and the indirect cost of asset downtime during inspection. They evaluate automation as a cost-per-inspection-event reduction against this baseline.
 

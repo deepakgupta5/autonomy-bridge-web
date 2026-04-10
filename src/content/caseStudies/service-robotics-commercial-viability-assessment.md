@@ -157,7 +157,7 @@ The pricing model analysis examined how buyers in each viable segment evaluated 
 
 - Healthcare-adjacent commercial facilities were excluded from the viable segment at current pricing due to infection control requirements that added deployment cost and reduced autonomous task completion rate below the threshold required for payback.
 
-- The company's hardware-plus-subscription pricing model was misaligned with the viable segment's procurement structure. Facility management buyers in the viable segment evaluated service costs on an annual per-square-foot basis and could not translate a hardware purchase price plus annual software fee into a cost comparison against their existing cleaning and service labor contracts. The pricing model required buyers to perform an economic translation the vendor had not provided.
+- The company's hardware-plus-subscription pricing model was misaligned with the viable segment's procurement structure. Facility management buyers in the viable segment evaluated service costs on an annual per-square-foot basis. They could not translate a hardware purchase price plus annual software fee into a cost comparison against existing labor contracts. The pricing model required buyers to perform an economic translation the vendor had not provided.
 
 - A managed service pricing model — annual program fee per facility, inclusive of hardware, software, and service delivery — would align with how viable buyers evaluated and approved service costs, and would allow the vendor to price against the existing service contract rather than against a capital equipment purchase decision.
 

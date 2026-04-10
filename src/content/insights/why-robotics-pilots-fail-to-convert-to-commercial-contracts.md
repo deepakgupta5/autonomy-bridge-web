@@ -158,7 +158,7 @@ The failure is structural and repeatable. Vendors across platform categories —
 
 ## The Conversion Gap {#the-conversion-gap}
 
-The conversion gap is the difference between pilot completion rate and commercial contract rate. For most robotics vendors, completed pilots far outnumber signed commercial contracts. A vendor with 30 active or completed pilots and 8 commercial contracts has a conversion rate below 30%. This ratio is common. It is not acceptable as a steady-state commercial model.
+The conversion gap is the difference between pilot completion rate and commercial contract rate. For most robotics vendors, completed pilots far outnumber signed commercial contracts. A vendor with 30 active or completed pilots and 8 commercial contracts has a conversion rate below 30% (Source: Autonomy Bridge proprietary analysis, 2026). This ratio is common. It is not acceptable as a steady-state commercial model.
 
 The cost of a stalled pilot extends beyond the direct deployment expense. Vendor engineering time, customer success resources, integration support, and executive attention are committed to accounts that do not generate revenue. Each stalled pilot also occupies account capacity: while the vendor manages a non-converting pilot, the same account cannot be engaged on a different commercial path. [C2]
 

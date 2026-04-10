@@ -68,7 +68,7 @@ The fully loaded cost of each turnover event typically includes four components 
 
 **Scheduling and overtime premium** — Turnover creates short-term coverage gaps typically filled by overtime from existing staff, adding a wage premium on top of the direct replacement cost.
 
-When these components are aggregated, the fully loaded cost per turnover event typically falls in the range of 20–30% of annual salary for the replaced role — a figure that most automation ROI models exclude entirely, understating the economic case for deployment. (Autonomy Bridge proprietary analysis, 2026)
+When these components are aggregated, the fully loaded cost per turnover event typically falls in the range of 20–30% of annual salary for the replaced role. Most automation ROI models exclude this figure entirely, understating the economic case for deployment. (Autonomy Bridge proprietary analysis, 2026)
 
 ## Turnover Rate as an Automation Trigger
 

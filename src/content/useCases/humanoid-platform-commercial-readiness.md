@@ -129,11 +129,11 @@ This context defines the commercial readiness question precisely: not whether a 
 
 **Should this operator or investor commit capital to humanoid platform deployment or integration based on current demonstration capability?**
 
-The central evaluation error for operators and investors assessing humanoid platforms is conflating technical demonstration capability with production deployment readiness. A platform that completes a pick-and-place task reliably in a structured demonstration has demonstrated technical feasibility for that task under controlled conditions. It has not demonstrated the reliability, cycle time, exception handling capability, and maintenance cost profile required to operate in a production environment where the task must be completed at production rate, across a full shift, with real-world variation in item presentation, ambient conditions, and workflow interaction. See: [Commercial Viability →](/glossary/commercial-viability)
+The central evaluation error for operators and investors assessing humanoid platforms is conflating technical demonstration capability with production deployment readiness. A platform that completes a pick-and-place task reliably in a structured demonstration has demonstrated technical feasibility for that task under controlled conditions. It has not demonstrated the reliability, cycle time, exception handling, and maintenance cost profile required for production. In a production environment, the task must complete at production rate across a full shift, with real-world variation in item presentation, ambient conditions, and workflow interaction. See: [Commercial Viability →](/glossary/commercial-viability)
 
 The decision question for operators is: does this platform meet the technical and economic threshold for production deployment in my specific facility, for the specific task set I am evaluating, at a cost structure that generates a return within an acceptable payback window? The decision question for investors is: does this platform have the technical and commercial maturity to support the revenue trajectory and customer acquisition assumptions in the investment thesis?
 
-Both questions require answers that vendor demonstration data, as currently available, cannot provide. [C1]
+Both questions require answers that vendor demonstration data, as currently available, cannot provide.
 
 ---
 
@@ -183,11 +183,11 @@ Annual labor displacement achievable = Fully-loaded labor cost per hour × Displ
 
 Three economic readiness conditions determine deployment viability at current pricing:
 
-**High fully-loaded labor cost.** At $35–$50 per hour fully loaded — consistent with skilled manufacturing labor in high-cost markets — a platform achieving 60% autonomous task completion across a 2,000-hour annual task exposure displaces $42,000–$60,000 per year. This clears the required displacement threshold for platforms priced at $125,000–$180,000 with a 36-month payback target.
+**High fully-loaded labor cost.** At $35–$50 per hour fully loaded — consistent with skilled manufacturing labor in high-cost markets (Source: Autonomy Bridge proprietary analysis, 2026) — a platform achieving 60% autonomous task completion across a 2,000-hour annual task exposure displaces $42,000–$60,000 per year. This clears the required displacement threshold for platforms priced at $125,000–$180,000 with a 36-month payback target.
 
 **Sufficient displaceable task hours.** The platform must be assigned to tasks that constitute enough labor hours per year to generate required displacement. A platform deployed on a task that occupies 4 hours per day for 250 days generates 1,000 task hours per year — half the exposure of a full-shift deployment. Task assignment determines whether the deployment generates enough displacement to recover capital.
 
-**Autonomous task completion rate at production conditions.** Current commercially available humanoid platforms achieve autonomous task completion rates of 70–85% in structured demonstration environments. Production environment rates for unstructured warehouse picking and manufacturing assembly tasks are not yet publicly documented at scale. Operators and investors should apply significant uncertainty discounts to vendor demonstration completion rates when modeling production deployment economics. (Autonomy Bridge proprietary analysis, 2026)
+**Autonomous task completion rate at production conditions.** Current commercially available humanoid platforms achieve autonomous task completion rates of 70–85% in structured demonstration environments (Source: Autonomy Bridge proprietary analysis, 2026). Production environment rates for unstructured warehouse picking and manufacturing assembly tasks are not yet publicly documented at scale. Operators and investors should apply significant uncertainty discounts to vendor demonstration completion rates when modeling production deployment economics.
 
 ---
 

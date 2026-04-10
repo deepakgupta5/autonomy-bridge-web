@@ -166,7 +166,7 @@ The TAM figure counts every facility in the category. It does not distinguish be
 > **TAM = all facilities in category × average system value**
 > **SAM = facilities where deployment economics are viable × system value per viable deployment**
 
-The gap between TAM and SAM in robotics is not a marginal discount. In most platform categories, fewer than 20% of facilities in the theoretical total addressable market meet the economic conditions required for a viable deployment at current system pricing. Vendors who plan against TAM are building pipelines, hiring sales capacity, and setting board expectations against a number that overstates their realistic market by a factor of four or more.
+The gap between TAM and SAM in robotics is not a marginal discount. In most platform categories, fewer than 20% of facilities in the theoretical total addressable market meet the economic conditions required for a viable deployment at current system pricing (Source: Autonomy Bridge proprietary analysis, 2026). Vendors who plan against TAM are building pipelines, hiring sales capacity, and setting board expectations against a number that overstates their realistic market by a factor of four or more.
 
 See: [Serviceable Addressable Market →](/glossary/serviceable-addressable-market)
 
