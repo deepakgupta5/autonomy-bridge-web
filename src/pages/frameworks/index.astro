@@ -15,20 +15,26 @@ const frameworksHubContent = {
   summary: hubEntry.data.summary,
   intro: hubEntry.data.description,
   emptyState: "No framework entries are available.",
-  items: detailEntries.map((entry) => ({
-    title: entry.data.title,
-    href: entry.data.canonicalPath,
-    description: entry.data.summary,
-    metadata: [`Published: ${String(entry.data.datePublished)}`],
-    taxonomy: Array.from(
-      new Set([
-        ...entry.data.frameworks,
-        ...entry.data.topics,
-        ...entry.data.technologies,
-        ...entry.data.industries,
-      ])
-    ),
-  })),
+  items: [...detailEntries]
+    .sort((a, b) => {
+      const da = new Date(String(a.data.datePublished)).getTime();
+      const db = new Date(String(b.data.datePublished)).getTime();
+      return db - da;
+    })
+    .map((entry) => ({
+      title: entry.data.title,
+      href: entry.data.canonicalPath,
+      description: entry.data.summary,
+      metadata: [`Published: ${String(entry.data.datePublished)}`],
+      taxonomy: Array.from(
+        new Set([
+          ...entry.data.frameworks,
+          ...entry.data.topics,
+          ...entry.data.technologies,
+          ...entry.data.industries,
+        ])
+      ),
+    })),
 };
 ---
 

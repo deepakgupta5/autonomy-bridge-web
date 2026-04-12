@@ -14,22 +14,24 @@ const detailEntries = await getEntriesByCanonicalPrefix("useCases", `${hubCanoni
 });
 
 const detailBySlug = new Map(detailEntries.map((entry) => [entry.data.slug, entry]));
-const items: HubPageContent["items"] = useCaseSlugs.flatMap((slug) => {
-  const entry = detailBySlug.get(slug);
-  if (!entry) {
-    return [];
-  }
-
-  return [
-    {
-      title: entry.data.title,
-      href: entry.data.canonicalPath,
-      description: entry.data.description,
-      metadata: [`Updated: ${String(entry.data.dateModified)}`],
-      taxonomy: entry.data.topics.length > 0 ? entry.data.topics : ["use-cases"],
-    },
-  ];
-});
+const items: HubPageContent["items"] = useCaseSlugs
+  .flatMap((slug) => {
+    const entry = detailBySlug.get(slug);
+    if (!entry) return [];
+    return [entry];
+  })
+  .sort((a, b) => {
+    const da = new Date(String(a.data.datePublished)).getTime();
+    const db = new Date(String(b.data.datePublished)).getTime();
+    return db - da;
+  })
+  .map((entry) => ({
+    title: entry.data.title,
+    href: entry.data.canonicalPath,
+    description: entry.data.description,
+    metadata: [`Updated: ${String(entry.data.dateModified)}`],
+    taxonomy: entry.data.topics.length > 0 ? entry.data.topics : ["use-cases"],
+  }));
 
 const content: HubPageContent = {
   title: hubEntry.data.title,

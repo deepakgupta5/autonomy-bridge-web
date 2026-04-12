@@ -39,6 +39,14 @@ export const insightSlugs = [
   'why-healthcare-robotics-deployments-follow-a-different-economic-logic',
   'why-commercial-viability-and-technical-readiness-are-not-the-same-thing',
   'how-aerial-robotics-vendors-are-pricing-into-inspection-markets',
+  'why-robotics-enterprise-deals-stall',
+  'how-robotics-pricing-models-determine-commercial-viability',
+  'why-63-exoskeleton-companies-cant-break-through-distribution',
+  'why-maritime-autonomy-revenue-is-not-what-it-appears',
+  'why-direct-only-channel-doesnt-scale-in-robotics',
+  'what-autonomous-vehicle-companies-get-wrong-about-freight-sales',
+  'how-underwater-robotics-startups-can-break-incumbent-lock-in',
+  'what-warehouse-automation-vendors-need-to-know-about-how-buyers-decide',
 ] as const;
 export const useCaseSlugs = [
   'warehouse-automation-roi-evaluation',

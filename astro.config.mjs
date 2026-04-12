@@ -1,11 +1,7 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 
-/** Strips :::directive blocks from markdown before rendering.
- *  Without remark-directive installed, each :::name…::: block (no internal
- *  blank lines) parses as a single top-level paragraph whose text starts with
- *  ":::".  This plugin removes those paragraphs from the AST.
- */
+/** Strips :::directive blocks from markdown before rendering. */
 function remarkStripDirectives() {
   return function (tree) {
     tree.children = tree.children.filter((node) => {
@@ -13,6 +9,46 @@ function remarkStripDirectives() {
       const first = node.children?.[0];
       return !(first?.type === 'text' && first.value.startsWith(':::'));
     });
+  };
+}
+
+/** Strips {#anchor-id} annotations from heading text nodes.
+ *  e.g. "## The TAM Trap {#the-tam-trap}" → "## The TAM Trap"
+ */
+function remarkStripHeadingIds() {
+  return function (tree) {
+    function walk(node) {
+      if (node.type === 'heading' && Array.isArray(node.children)) {
+        const last = node.children[node.children.length - 1];
+        if (last?.type === 'text') {
+          last.value = last.value.replace(/\s*\{#[^}]+\}$/, '');
+          if (last.value === '') node.children.pop();
+        }
+      }
+      if (Array.isArray(node.children)) node.children.forEach(walk);
+    }
+    walk(tree);
+  };
+}
+
+/** Strips all ## Appendix: sections and everything after them.
+ *  These are internal metadata sections (Citations, Assets, Metadata Snapshot)
+ *  not intended for public rendering.
+ */
+function remarkStripAppendix() {
+  return function (tree) {
+    const children = tree.children;
+    for (let i = 0; i < children.length; i++) {
+      const node = children[i];
+      if (
+        node.type === 'heading' &&
+        node.children?.[0]?.type === 'text' &&
+        node.children[0].value.startsWith('Appendix:')
+      ) {
+        children.splice(i);
+        break;
+      }
+    }
   };
 }
 
@@ -87,7 +123,7 @@ export default defineConfig({
   },
   markdown: {
     syntaxHighlight: false,
-    remarkPlugins: [remarkStripDirectives],
+    remarkPlugins: [remarkStripDirectives, remarkStripHeadingIds, remarkStripAppendix],
   },
   integrations: [
     sitemap({

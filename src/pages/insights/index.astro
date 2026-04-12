@@ -1,6 +1,9 @@
 ---
 import MainLayout from "../../components/MainLayout.astro";
 import { buildCollectionPageSchema } from "../../utils/schema";
+import { insightSlugs } from "../../data/ia";
+import { getEntriesByCanonicalPrefix } from "../../utils/contentCollections";
+import { formatSlugLabel } from "../../utils/slugLabel";
 
 const canonicalPath = "/insights";
 const title = "Insights";
@@ -33,88 +36,28 @@ const contentTypes = [
   },
 ];
 
-const articles = [
-  {
-    href: "/insights/why-warehouse-automation-projects-fail",
-    title: "Why Warehouse Automation Projects Fail",
-    desc: "Most warehouse automation failures originate during project underwriting, not deployment. Fixed-capacity infrastructure requires stable demand that vendor ROI models systematically understate.",
-    frameworks: ["Automation Failure Framework", "Robotics ROI Model"],
-    frameworkHrefs: ["/frameworks/automation-failure-framework", "/frameworks/robotics-roi-model"],
-    domain: "Intralogistics and Warehouse Automation",
-  },
-  {
-    href: "/insights/why-robotics-pilots-fail-to-scale",
-    title: "Why Robotics Pilots Fail to Scale",
-    desc: "Robotics pilots test technical feasibility under controlled conditions that do not replicate full warehouse operations. Scaling requires proof of sustained utilization and economic viability.",
-    frameworks: ["Pilot-to-Scale Failure Framework", "Robotics ROI Model"],
-    frameworkHrefs: ["/frameworks/pilot-to-scale-failure-framework", "/frameworks/robotics-roi-model"],
-    domain: "Intralogistics and Warehouse Automation",
-  },
-  {
-    href: "/insights/why-mid-market-operators-struggle-to-evaluate-warehouse-robotics",
-    title: "Why Mid-Market Operators Struggle to Evaluate Warehouse Robotics",
-    desc: "Vendor ROI models assume stable demand. Mid-market 3PL operations rarely have it. A structural analysis of evaluation barriers specific to multi-client fulfillment environments.",
-    frameworks: ["Warehouse Automation Decision Framework", "Robotics ROI Model", "Vendor Evaluation Framework"],
-    frameworkHrefs: ["/frameworks/warehouse-automation-decision-framework", "/frameworks/robotics-roi-model", "/frameworks/vendor-evaluation-framework"],
-    domain: "Intralogistics and Warehouse Automation",
-  },
-  {
-    href: "/insights/how-warehouse-robotics-economics-actually-works",
-    title: "How Warehouse Robotics Economics Actually Works",
-    desc: "Utilization, not robot speed, governs warehouse automation ROI. A capital allocation analysis covering utilization thresholds, bottleneck dynamics, and conditions for durable returns.",
-    frameworks: ["Robotics ROI Model", "Automation Failure Framework", "Workflow Architecture Framework"],
-    frameworkHrefs: ["/frameworks/robotics-roi-model", "/frameworks/automation-failure-framework", "/frameworks/workflow-architecture-framework"],
-    domain: "Intralogistics and Warehouse Automation",
-  },
-  {
-    href: "/insights/how-warehouse-workflows-determine-automation-success",
-    title: "How Warehouse Workflows Determine Automation Success",
-    desc: "Warehouse throughput equals the capacity of the slowest linked process. Automation that improves one node without addressing downstream constraints creates congestion, not productivity.",
-    frameworks: ["Workflow Architecture Framework", "Automation Failure Framework", "Robotics ROI Model"],
-    frameworkHrefs: ["/frameworks/workflow-architecture-framework", "/frameworks/automation-failure-framework", "/frameworks/robotics-roi-model"],
-    domain: "Intralogistics and Warehouse Automation",
-  },
-  {
-    href: "/insights/how-warehouse-operators-evaluate-robotics-vendors",
-    title: "How Warehouse Operators Evaluate Robotics Vendors",
-    desc: "The four-stage vendor evaluation process used by mid-size 3PL operators — from shortlist formation through cross-functional ROI approval — with emphasis on the utilization threshold.",
-    frameworks: ["Vendor Evaluation Framework", "Robotics ROI Model", "Warehouse Automation Decision Framework"],
-    frameworkHrefs: ["/frameworks/vendor-evaluation-framework", "/frameworks/robotics-roi-model", "/frameworks/warehouse-automation-decision-framework"],
-    domain: "Intralogistics and Warehouse Automation",
-  },
-  {
-    href: "/insights/how-retail-distribution-center-automation-economics-actually-work",
-    title: "How Retail Distribution Center Automation Economics Actually Work",
-    desc: "Retail DC automation economics are governed by peak demand, not average utilization. A system that delivers strong ROI during a ten-week peak season may generate negative returns across the remaining forty-two weeks.",
-    frameworks: ["Robotics ROI Model"],
-    frameworkHrefs: ["/frameworks/robotics-roi-model"],
-    domain: "Intralogistics and Warehouse Automation",
-  },
-  {
-    href: "/insights/why-cold-storage-automation-economics-are-structurally-different",
-    title: "Why Cold Storage Automation Economics Are Structurally Different",
-    desc: "Cold storage presents the strongest labor-cost ROI case in the warehouse sector and the most systematically miscalculated capital cost. Ambient benchmarks applied to cold environments produce fundamentally wrong investment cases.",
-    frameworks: ["Robotics ROI Model"],
-    frameworkHrefs: ["/frameworks/robotics-roi-model"],
-    domain: "Intralogistics and Warehouse Automation",
-  },
-  {
-    href: "/insights/why-parcel-sortation-automation-breaks-at-low-volume",
-    title: "Why Parcel Sortation Automation Breaks at Low Volume",
-    desc: "Parcel sortation automation fails as a step function, not a gradual degradation. When volume drops below the sortation floor, per-parcel economics break regardless of peak utilization.",
-    frameworks: ["Automation Failure Framework"],
-    frameworkHrefs: ["/frameworks/automation-failure-framework"],
-    domain: "Intralogistics and Warehouse Automation",
-  },
-  {
-    href: "/insights/why-general-merchandise-3pls-should-not-automate-too-early",
-    title: "Why General Merchandise 3PLs Should Not Automate Too Early",
-    desc: "Case and pallet operations have structurally lower labor intensity per order than ecommerce fulfillment. Many GM 3PL operators fail the economic pre-conditions for viable automation.",
-    frameworks: ["Automation Failure Framework"],
-    frameworkHrefs: ["/frameworks/automation-failure-framework"],
-    domain: "Intralogistics and Warehouse Automation",
-  },
-];
+const detailEntries = await getEntriesByCanonicalPrefix("insights", "/insights/", { includeExact: false });
+const detailBySlug = new Map(detailEntries.map((entry) => [entry.data.slug, entry]));
+
+const articles = insightSlugs
+  .flatMap((slug) => {
+    const entry = detailBySlug.get(slug);
+    if (!entry) return [];
+    return [entry];
+  })
+  .sort((a, b) => {
+    const da = new Date(String(a.data.datePublished)).getTime();
+    const db = new Date(String(b.data.datePublished)).getTime();
+    return db - da;
+  })
+  .map((entry) => ({
+    href: entry.data.canonicalPath,
+    title: entry.data.title,
+    desc: entry.data.description,
+    frameworks: entry.data.frameworks.map((f: string) => formatSlugLabel(f)),
+    frameworkHrefs: entry.data.frameworks.map((f: string) => `/frameworks/${f}`),
+    domain: entry.data.topics.length > 0 ? entry.data.topics[0] : "AI, Robotics, and Industrial Automation",
+  }));
 ---
 
 <MainLayout
