@@ -68,6 +68,21 @@ Static marketing site for Autonomy Bridge (warehouse automation advisory). Built
 - See `SEO & AI Citation/` folder for AI visibility frameworks
 - **Lesson:** Static sites with good schema.org markup outperform dynamic sites in AI citation. Prioritise `Organization`, `Service`, and `FAQPage` schema before any other SEO work.
 
+### April 2026: Glossary SEO pass (Incidents #042, #043)
+GSC flagged `/glossary/labor-turnover-rate` as "Crawled, currently not indexed" and surfaced multiple glossary pages with the same issue. Root causes:
+
+1. **Template double-rendered the definition.** `GlossaryTermTemplate.astro` rendered frontmatter `definition` inside `<p class="gt-definition">`, and every glossary markdown body opened with the same sentence. 76 of 77 pages shipped with a visible duplicate paragraph. Google's thin-content heuristic triggered.
+   Fix: remove the redundant `{definition && <p>...</p>}` render from the template. One-line change, propagates to every sibling page. Frontmatter field retained because it still feeds `DefinedTerm` JSON-LD + SEO meta description.
+
+2. **Related-terms rendered as raw slugs.** Markdown bodies had `[removable-labor-share](/glossary/removable-labor-share)` as the anchor syntax, so the visible label was the slug. Weak anchor text starves the sibling page of link equity and signals to Google that the source page has weak outbound context.
+   Fix: one-shot Python sweep (`scripts/fix_glossary_content.py`) that builds a slug-to-title map from all 77 files and rewrites `[slug](/glossary/slug)` to `[Title](/glossary/slug)`. 186 anchors rewrote in one pass.
+
+3. **Em-dashes and en-dashes pervasive in content** (Rule 38 violation). Sweep replaces em-dash with ` - ` (space hyphen space) and en-dash with `-` (tight hyphen). 388 + 53 replacements across 77 files.
+
+**Gotcha:** first sweep implementation used whitespace-collapsing regex (`re.sub(r" {2,}-", " -", text)`) intended to clean up consecutive-em-dash artifacts. That regex matched legitimate YAML list indentation (`  - item`) in frontmatter and collapsed it to ` - item`, breaking `hub.md` YAML parse and killing the Astro build. Revert + rewrite sweep as pure `str.replace()` on single chars only. Any whitespace-aware regex on Markdown content files MUST scope itself to the body only, after frontmatter is split off.
+
+**Outcome:** local build verified 157 pages, 6.8 s, no errors. Visible-body checks pass: definition appears once, related-terms render as "Removable Labor Share" etc., no em/en-dashes in rendered HTML, `DefinedTerm` schema still emitted. Deployed via Netlify auto-deploy. GSC "Validate fix" pending user-side click.
+
 ---
 
 ## Common Errors and Fixes
@@ -96,4 +111,4 @@ Static marketing site for Autonomy Bridge (warehouse automation advisory). Built
 
 ---
 
-*Last updated: March 2026*
+*Last updated: April 15, 2026*
