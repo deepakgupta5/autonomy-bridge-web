@@ -46,6 +46,6 @@ The technical, contractual, or operational dependencies that make switching from
 
 Vendor lock-in in automation deployments arises from proprietary hardware interfaces, closed software APIs, WMS integration dependencies, and institutional knowledge concentration in vendor-specific systems. Once a facility has integrated a vendor's robotics platform into its WMS, trained its technical staff on vendor-specific maintenance procedures, and built operational processes around the system's capabilities and constraints, the switching cost can equal or exceed the original deployment cost. Vendors have strong incentives to design systems that increase switching costs over time. Customers should evaluate lock-in risk during vendor selection by auditing data export capabilities, API openness, and what happens to operations if the vendor is acquired, discontinues a product line, or raises maintenance pricing after the initial contract expires.
 
-**Related terms:** [vendor-economics](/glossary/vendor-economics) · [integration-cost](/glossary/integration-cost) · wms-integration
+**Related terms:** [Vendor Economics](/glossary/vendor-economics) · [Integration Cost](/glossary/integration-cost) · wms-integration
 
 ---

@@ -40,7 +40,7 @@ migration:
 
 The multiple between peak daily or weekly order volume and average baseline volume, used to size automation systems and assess demand variability risk.
 
-The peak-to-average ratio expresses how much higher order volume climbs at peak demand relative to a typical operating period. A facility with 10,000 daily orders on average and 35,000 at peak has a peak-to-average ratio of 3.5x. This ratio is a primary driver of automation sizing decisions and utilization risk. A system sized for peak must carry excess capacity during average periods, depressing utilization and weakening economics. A system sized for average throughput cannot fulfill peak demand without supplemental labor. High peak-to-average ratios (above 2.5x) favor flexible automation architectures — such as AMR deployments — that can scale fleet size, rather than fixed automation that cannot adapt to volume swings without fundamental redesign.
+The peak-to-average ratio expresses how much higher order volume climbs at peak demand relative to a typical operating period. A facility with 10,000 daily orders on average and 35,000 at peak has a peak-to-average ratio of 3.5x. This ratio is a primary driver of automation sizing decisions and utilization risk. A system sized for peak must carry excess capacity during average periods, depressing utilization and weakening economics. A system sized for average throughput cannot fulfill peak demand without supplemental labor. High peak-to-average ratios (above 2.5x) favor flexible automation architectures  -  such as AMR deployments  -  that can scale fleet size, rather than fixed automation that cannot adapt to volume swings without fundamental redesign.
 
 **Related terms:** demand-variability · utilization-rate · fleet-sizing
 

@@ -42,8 +42,8 @@ migration:
 
 The ratio of automation-eliminated labor hours to total pre-automation labor hours in the affected workflow stages.
 
-Labor displacement rate measures how much of the existing labor requirement an automation system actually removes from an operation. It is calculated as eliminated labor hours divided by total labor hours in the affected scope, expressed as a percentage. A rate of 40% means the system removes four of every ten labor hours in scope; six remain. This is distinct from removable labor share, which defines the ceiling; the displacement rate measures actual realized displacement post-deployment. Displacement rates vary significantly by workflow type: high-travel-intensity picking operations achieve higher displacement than exception-heavy inbound or returns workflows. Labor displacement rate is a post-deployment verification metric — comparing it to pre-deployment projections is the primary diagnostic for identifying whether an automation business case is tracking to plan.
+Labor displacement rate measures how much of the existing labor requirement an automation system actually removes from an operation. It is calculated as eliminated labor hours divided by total labor hours in the affected scope, expressed as a percentage. A rate of 40% means the system removes four of every ten labor hours in scope; six remain. This is distinct from removable labor share, which defines the ceiling; the displacement rate measures actual realized displacement post-deployment. Displacement rates vary significantly by workflow type: high-travel-intensity picking operations achieve higher displacement than exception-heavy inbound or returns workflows. Labor displacement rate is a post-deployment verification metric  -  comparing it to pre-deployment projections is the primary diagnostic for identifying whether an automation business case is tracking to plan.
 
-**Related terms:** [removable-labor-share](/glossary/removable-labor-share) · utilization-rate · workflow-bottleneck
+**Related terms:** [Removable Labor Share](/glossary/removable-labor-share) · utilization-rate · workflow-bottleneck
 
 ---

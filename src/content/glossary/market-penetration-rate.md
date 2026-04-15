@@ -42,8 +42,8 @@ migration:
 
 The proportion of addressable warehouses or facilities within a defined market segment that have deployed a given automation technology.
 
-Market penetration rate measures how broadly a technology has been adopted within a defined addressable market — for example, the share of North American 3PL warehouses that have deployed AMR systems. Low penetration rates signal either early market stage or structural adoption barriers. High penetration rates in a segment indicate market maturation where competitive differentiation depends less on technology access and more on operational execution. For vendors, penetration rate maps the remaining addressable opportunity; for customers, it signals how tested and supported the technology is across comparable deployments. Market penetration analysis is most useful when segmented by facility type, size tier, and order volume — aggregate penetration figures obscure significant variation by sub-segment.
+Market penetration rate measures how broadly a technology has been adopted within a defined addressable market  -  for example, the share of North American 3PL warehouses that have deployed AMR systems. Low penetration rates signal either early market stage or structural adoption barriers. High penetration rates in a segment indicate market maturation where competitive differentiation depends less on technology access and more on operational execution. For vendors, penetration rate maps the remaining addressable opportunity; for customers, it signals how tested and supported the technology is across comparable deployments. Market penetration analysis is most useful when segmented by facility type, size tier, and order volume  -  aggregate penetration figures obscure significant variation by sub-segment.
 
-**Related terms:** [vendor-economics](/glossary/vendor-economics) · 3pl-distribution-facility · demand-variability
+**Related terms:** [Vendor Economics](/glossary/vendor-economics) · 3pl-distribution-facility · demand-variability
 
 ---

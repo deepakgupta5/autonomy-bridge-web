@@ -48,6 +48,6 @@ The operational and financial exposure created during the period between automat
 
 Ramp risk describes the gap between go-live and operational stability in an automation deployment. During ramp, throughput targets are not yet met, integration errors are frequent, staff are still learning exception handling, and the system is operating below design utilization. This period generates a negative cash flow against the capital commitment before the expected labor savings materialize. Ramp risk is higher when integration complexity is elevated, when operator training is compressed, or when go-live is timed poorly relative to demand cycles. Deployments launched ahead of peak season with compressed ramp timelines carry the highest exposure: if the system is not stable when volume peaks, the facility may not be able to fulfill orders reliably. Ramp risk is a deployment sequencing variable, not a technology quality variable.
 
-**Related terms:** [capital-recovery-period](/glossary/capital-recovery-period) · [pilot-to-scale-failure](/glossary/pilot-to-scale-failure) · [integration-cost](/glossary/integration-cost)
+**Related terms:** [Capital Recovery Period](/glossary/capital-recovery-period) · [Pilot-to-Scale Failure](/glossary/pilot-to-scale-failure) · [Integration Cost](/glossary/integration-cost)
 
 ---

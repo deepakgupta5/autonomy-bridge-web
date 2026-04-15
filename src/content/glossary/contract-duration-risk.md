@@ -44,7 +44,7 @@ The financial exposure created when automation capital commitments extend beyond
 
 Contract duration risk is the mismatch between automation asset life and the length of client agreements whose order volume underwrites the economics of that automation. A 3PL operator that commits a five-year capital recovery timeline to serve a client on a two-year contract carries significant exposure: if the client exits or reduces volume at contract renewal, the installed infrastructure must be recovered from remaining clients or absorbed as a loss. This risk is structural in multi-client 3PL environments where client relationships are inherently uncertain. Mitigations include automation architecture choices that serve multiple clients rather than a single account, pass-through automation cost clauses in client contracts, and conservative utilization assumptions that reflect realistic client retention probabilities rather than contracted volume ceilings.
 
-**Related terms:** 3pl-distribution-facility · demand-variability · [capital-recovery-period](/glossary/capital-recovery-period)
+**Related terms:** 3pl-distribution-facility · demand-variability · [Capital Recovery Period](/glossary/capital-recovery-period)
 
 ---
 

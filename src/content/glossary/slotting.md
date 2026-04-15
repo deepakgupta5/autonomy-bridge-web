@@ -42,8 +42,8 @@ migration:
 
 The assignment of SKUs to specific storage locations within a warehouse based on velocity, weight, pick frequency, and operational compatibility.
 
-Slotting is the process of assigning specific inventory items to specific storage positions within a warehouse to optimize pick efficiency, ergonomics, and throughput. Effective slotting places high-velocity items in ergonomically accessible positions close to pick stations or high-traffic aisles; low-velocity items are assigned to less accessible positions where slower retrieval does not constrain throughput. In automated environments, slotting decisions are encoded into the WMS and storage management software, not just physical positioning. Poor slotting creates unnecessary travel distance, ergonomic stress at manual stations, and throughput losses in automated systems where high-velocity SKUs are stored in slow-access positions. Slotting must be maintained dynamically as velocity profiles change — static slotting decisions degrade in performance as product mix evolves.
+Slotting is the process of assigning specific inventory items to specific storage positions within a warehouse to optimize pick efficiency, ergonomics, and throughput. Effective slotting places high-velocity items in ergonomically accessible positions close to pick stations or high-traffic aisles; low-velocity items are assigned to less accessible positions where slower retrieval does not constrain throughput. In automated environments, slotting decisions are encoded into the WMS and storage management software, not just physical positioning. Poor slotting creates unnecessary travel distance, ergonomic stress at manual stations, and throughput losses in automated systems where high-velocity SKUs are stored in slow-access positions. Slotting must be maintained dynamically as velocity profiles change  -  static slotting decisions degrade in performance as product mix evolves.
 
-**Related terms:** [sku-velocity](/glossary/sku-velocity) · throughput-density · workflow-bottleneck
+**Related terms:** [SKU Velocity](/glossary/sku-velocity) · throughput-density · workflow-bottleneck
 
 ---

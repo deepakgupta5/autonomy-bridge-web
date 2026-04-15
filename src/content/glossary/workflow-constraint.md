@@ -44,8 +44,8 @@ migration:
 
 Any process, resource, or system limit that prevents a warehouse workflow from operating at a higher throughput, regardless of performance improvements at other stages.
 
-A workflow constraint is the binding limitation on total system output — the stage or resource whose capacity ceiling is reached before any other element in the workflow. The concept is derived from the theory of constraints: in any linked process system, total output equals the output rate of the slowest node. In warehouse workflows, the constraint shifts depending on demand volume, labor allocation, and time of day — what constrains throughput during a morning peak may differ from what constrains it during an afternoon trough. Automation that does not address the active constraint adds no throughput benefit regardless of how much it improves its target stage. Identifying the true constraint at each point in the operating cycle is the prerequisite to intelligent automation investment decisions.
+A workflow constraint is the binding limitation on total system output  -  the stage or resource whose capacity ceiling is reached before any other element in the workflow. The concept is derived from the theory of constraints: in any linked process system, total output equals the output rate of the slowest node. In warehouse workflows, the constraint shifts depending on demand volume, labor allocation, and time of day  -  what constrains throughput during a morning peak may differ from what constrains it during an afternoon trough. Automation that does not address the active constraint adds no throughput benefit regardless of how much it improves its target stage. Identifying the true constraint at each point in the operating cycle is the prerequisite to intelligent automation investment decisions.
 
-**Related terms:** workflow-bottleneck · [throughput-modeling](/glossary/throughput-modeling) · [dwell-time](/glossary/dwell-time)
+**Related terms:** workflow-bottleneck · [Throughput Modeling](/glossary/throughput-modeling) · [Dwell Time](/glossary/dwell-time)
 
 ---

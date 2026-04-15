@@ -48,6 +48,6 @@ The confidence level or operational condition above which an automation system t
 
 The autonomous decision threshold defines the boundary between automated action and human escalation in a robotics or AI system. When a robotic grasping system's confidence in its grasp plan exceeds the threshold, it executes autonomously; below it, the task is routed to a human operator. The threshold is a calibrated parameter that balances throughput (higher thresholds produce fewer escalations and higher autonomous task rates) against error risk (too-high thresholds allow low-confidence actions that produce mistakes). Threshold calibration is specific to each task type, item class, and consequence severity. Managing and refining decision thresholds is an ongoing operational discipline in deployed automation systems, not a one-time configuration choice.
 
-**Related terms:** [exception-handling-rate](/glossary/exception-handling-rate) · [human-machine-coordination](/glossary/human-machine-coordination) · [computer-vision-reliability](/glossary/computer-vision-reliability)
+**Related terms:** [Exception Handling Rate](/glossary/exception-handling-rate) · [Human-Machine Coordination](/glossary/human-machine-coordination) · [Computer Vision Reliability](/glossary/computer-vision-reliability)
 
 ---

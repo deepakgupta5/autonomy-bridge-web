@@ -44,6 +44,6 @@ A high-density automated storage and retrieval architecture using multiple indep
 
 Multi-shuttle systems operate multiple independent carrier units simultaneously within a storage structure, with each shuttle moving horizontally within its assigned level and vertical lifts handling tier changes. This architecture achieves higher throughput and storage density than single-aisle crane-based systems because multiple retrieval operations can run in parallel. The tradeoff is capital intensity: multi-shuttle systems represent a significant fixed infrastructure commitment and require consistent order volume across their full storage depth to operate efficiently. They are most commonly deployed in high-SKU-count, high-throughput environments where goods-to-person pick rates must be sustained across large assortment widths. The system is optimized for environments with predictable demand rather than volatile volume swings.
 
-**Related terms:** goods-to-person-system · [pick-station-throughput](/glossary/pick-station-throughput) · utilization-rate
+**Related terms:** goods-to-person-system · [Pick Station Throughput](/glossary/pick-station-throughput) · utilization-rate
 
 ---

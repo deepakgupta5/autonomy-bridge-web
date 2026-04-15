@@ -44,8 +44,8 @@ migration:
 
 A systems integrator that bridges automation hardware vendors and customer operational environments, responsible for software integration, deployment execution, and ongoing system support.
 
-Integration partners occupy a critical but often underweighted role in automation deployments. They translate a robotics vendor's platform into a functioning operational system within a specific facility's technology and workflow environment — connecting robotic systems to the WMS, configuring task management logic, building exception handling workflows, and training facility staff. Integration partner quality has a direct bearing on deployment outcome independent of the underlying technology quality. A capable technology on a weak integration creates the same operational failure as a weak technology — the difference is that the root cause is harder to diagnose. Evaluating the integration partner's experience with the specific vendor platform, WMS environment, and facility type should be treated as a co-equal vendor selection decision.
+Integration partners occupy a critical but often underweighted role in automation deployments. They translate a robotics vendor's platform into a functioning operational system within a specific facility's technology and workflow environment  -  connecting robotic systems to the WMS, configuring task management logic, building exception handling workflows, and training facility staff. Integration partner quality has a direct bearing on deployment outcome independent of the underlying technology quality. A capable technology on a weak integration creates the same operational failure as a weak technology  -  the difference is that the root cause is harder to diagnose. Evaluating the integration partner's experience with the specific vendor platform, WMS environment, and facility type should be treated as a co-equal vendor selection decision.
 
-**Related terms:** [integration-cost](/glossary/integration-cost) · wms-integration · [ramp-risk](/glossary/ramp-risk)
+**Related terms:** [Integration Cost](/glossary/integration-cost) · wms-integration · [Ramp Risk](/glossary/ramp-risk)
 
 ---

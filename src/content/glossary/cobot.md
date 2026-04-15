@@ -42,8 +42,8 @@ migration:
 
 A robot designed to operate alongside human workers in shared workspaces, with force-limiting, speed-limiting, or sensing capabilities that reduce the risk of contact injury.
 
-Collaborative robots are designed with safety architectures that allow them to work within proximity of human operators without the physical guarding required by conventional industrial robots. Safety mechanisms include force and torque sensing that triggers immediate stops on unexpected contact, speed limiting in human-occupied zones, and spatial monitoring using vision or LIDAR systems. In warehouse contexts, cobots are deployed at packing, labeling, or assembly stations where human judgment is required for irregular tasks but robotic assistance improves speed or ergonomics. The key economic distinction from full automation is that cobots augment rather than replace human workers — the labor cost reduction is partial, and throughput gains depend on the human-robot workflow being well-designed rather than simply co-located.
+Collaborative robots are designed with safety architectures that allow them to work within proximity of human operators without the physical guarding required by conventional industrial robots. Safety mechanisms include force and torque sensing that triggers immediate stops on unexpected contact, speed limiting in human-occupied zones, and spatial monitoring using vision or LIDAR systems. In warehouse contexts, cobots are deployed at packing, labeling, or assembly stations where human judgment is required for irregular tasks but robotic assistance improves speed or ergonomics. The key economic distinction from full automation is that cobots augment rather than replace human workers  -  the labor cost reduction is partial, and throughput gains depend on the human-robot workflow being well-designed rather than simply co-located.
 
-**Related terms:** [human-machine-coordination](/glossary/human-machine-coordination) · pick-rates · workflow-bottleneck
+**Related terms:** [Human-Machine Coordination](/glossary/human-machine-coordination) · pick-rates · workflow-bottleneck
 
 ---
