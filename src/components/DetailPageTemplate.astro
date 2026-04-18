@@ -231,11 +231,11 @@ const schema = faqSchema ? [detailSchema, faqSchema] : [detailSchema];
         figure.appendChild(caption);
         p.replaceWith(figure);
       } else {
-        // Diagram data not found — hide the placeholder
+        // Diagram data not found ,  hide the placeholder
         p.style.display = "none";
       }
     } else {
-      // No fig_N match — hide the placeholder
+      // No fig_N match ,  hide the placeholder
       p.style.display = "none";
     }
   });
@@ -370,7 +370,7 @@ const schema = faqSchema ? [detailSchema, faqSchema] : [detailSchema];
   // ── 9. Hide JSON-LD code blocks (schema.org data embedded in markdown) ───
   // Case study (and some other) markdown files embed a ```json schema block
   // at the bottom. The server already builds structured data in <head>;
-  // the markdown version renders as a visible <pre> — hide it.
+  // the markdown version renders as a visible <pre> ,  hide it.
   body.querySelectorAll("pre").forEach((pre) => {
     const text = (pre.textContent ?? "").trim();
     if (text.startsWith("{") && text.includes('"@context"')) {

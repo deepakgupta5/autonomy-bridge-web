@@ -10,7 +10,7 @@ document:
 
 title: "Contact"
 description: "Contact Autonomy Bridge to start an advisory engagement or commission bespoke research across AI, robotics, and industrial automation markets."
-summary: "Contact page for Autonomy Bridge — principal-led boutique research firm for vendors, investors, and operators in AI, robotics, and industrial automation markets."
+summary: "Contact page for Autonomy Bridge ,  principal-led boutique research firm for vendors, investors, and operators in AI, robotics, and industrial automation markets."
 
 authors:
   - id: "author_deepak_001"
@@ -46,7 +46,7 @@ taxonomy:
     - "Contact"
 
 seo:
-  meta_title: "Contact | Autonomy Bridge — AI, Robotics & Industrial Automation Research"
+  meta_title: "Contact | Autonomy Bridge ,  AI, Robotics & Industrial Automation Research"
   meta_description: "Contact Autonomy Bridge to start an advisory engagement or commission bespoke research. Decision-grade research for vendors, investors, and operators in AI, robotics, and industrial automation."
   og_title: "Contact | Autonomy Bridge"
   og_description: "Start an advisory engagement or commission bespoke research across AI, robotics, and industrial automation markets."
@@ -116,7 +116,7 @@ Every enquiry is read in full before any response is sent. If the engagement fal
 
 ### 2. Scoping Conversation
 
-If there is a fit, a short working call is scheduled — 30 minutes, no pitch. The purpose is to define the problem, not to sell a solution.
+If there is a fit, a short working call is scheduled ,  30 minutes, no pitch. The purpose is to define the problem, not to sell a solution.
 
 ### 3. Proposal or Research Brief
 

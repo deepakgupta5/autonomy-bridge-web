@@ -145,7 +145,7 @@ instruction: "Do not alter YAML keys, entity definitions, or frameworks_tagged l
 
 ## Introduction
 
-Robotics market size estimates published by research firms, investment banks, and industry associations share a common structural flaw: they are constructed top-down from end-market size rather than bottom-up from deployment economics. A top-down estimate counts the number of facilities, vehicles, or operations in a target domain and multiplies by an assumed average system value. The result is a theoretically reachable ceiling — not a measure of how much of that market can actually absorb robotics investment at current system economics. For investors making allocation decisions, the ceiling is the wrong number. [C1]
+Robotics market size estimates published by research firms, investment banks, and industry associations share a common structural flaw: they are constructed top-down from end-market size rather than bottom-up from deployment economics. A top-down estimate counts the number of facilities, vehicles, or operations in a target domain and multiplies by an assumed average system value. The result is a theoretically reachable ceiling ,  not a measure of how much of that market can actually absorb robotics investment at current system economics. For investors making allocation decisions, the ceiling is the wrong number. [C1]
 
 This insight explains how to construct robotics market size estimates that reflect deployment reality: grounded in capital recovery logic, differentiated by platform category, and calibrated to the economic conditions under which operators and buyers will actually commit.
 
@@ -157,7 +157,7 @@ This insight explains how to construct robotics market size estimates that refle
 
 Top-down TAM construction applies a simple multiplication: addressable unit count × average system value. For a warehouse robotics vendor, this might be 50,000 mid-size U.S. distribution facilities × $800,000 average AMR system value = $40 billion TAM. For an inspection robotics vendor, it might be 200,000 industrial inspection sites × $150,000 average drone platform value = $30 billion TAM.
 
-These figures are not fabricated. They accurately describe what the market would be worth if every facility in the category deployed a system. The problem is that every facility in the category will not deploy a system. The TAM figure includes accounts where the economics of deployment are structurally negative — facilities where labor cost is too low, volume is too thin, workflows are incompatible, or integration complexity makes the system uneconomic at any price point.
+These figures are not fabricated. They accurately describe what the market would be worth if every facility in the category deployed a system. The problem is that every facility in the category will not deploy a system. The TAM figure includes accounts where the economics of deployment are structurally negative ,  facilities where labor cost is too low, volume is too thin, workflows are incompatible, or integration complexity makes the system uneconomic at any price point.
 
 Top-down TAM fails as an investment input for three specific reasons:
 
@@ -165,7 +165,7 @@ Top-down TAM fails as an investment input for three specific reasons:
 
 **It does not account for market penetration constraints.** Even within the economically viable subset of the market, penetration is constrained by organizational readiness, capital availability, competing investment priorities, and technology adoption curves. TAM figures that do not model penetration rate produce growth projections that imply adoption timelines no robotics platform has achieved.
 
-**It conflates platform categories with different economic profiles.** A $40 billion warehouse robotics TAM aggregates intralogistics mobile platforms, goods-to-person systems, autonomous forklifts, and conveyor automation — each with different unit economics, deployment conditions, and buyer profiles. An investor allocating to a single platform category cannot use an aggregated TAM figure to estimate the relevant opportunity.
+**It conflates platform categories with different economic profiles.** A $40 billion warehouse robotics TAM aggregates intralogistics mobile platforms, goods-to-person systems, autonomous forklifts, and conveyor automation ,  each with different unit economics, deployment conditions, and buyer profiles. An investor allocating to a single platform category cannot use an aggregated TAM figure to estimate the relevant opportunity.
 
 The result is that investment decisions made against top-down TAM consistently overestimate near-term revenue opportunity, underestimate the time required to reach meaningful market penetration, and misprice the risk that a vendor's addressable market is a fraction of the headline figure. [C1][C3]
 
@@ -177,13 +177,13 @@ See: [Total Addressable Market →](/glossary/total-addressable-market)
 
 A bottom-up robotics market size estimate starts with the deployment economics of the system being analyzed, not the size of the end market. The construction logic is:
 
-**Step 1 — Define the economic viability threshold.** For the specific platform category and price point, calculate the minimum operating conditions under which a deployment generates a return within the target payback period. This requires specifying: minimum labor cost per hour (or equivalent cost displacement variable for non-labor applications), minimum annual throughput or utilization volume, maximum integration cost as a fraction of system price, and required contract or operational horizon. This threshold is the economic floor. Facilities or accounts below the floor are excluded from the market size estimate.
+**Step 1 ,  Define the economic viability threshold.** For the specific platform category and price point, calculate the minimum operating conditions under which a deployment generates a return within the target payback period. This requires specifying: minimum labor cost per hour (or equivalent cost displacement variable for non-labor applications), minimum annual throughput or utilization volume, maximum integration cost as a fraction of system price, and required contract or operational horizon. This threshold is the economic floor. Facilities or accounts below the floor are excluded from the market size estimate.
 
-**Step 2 — Screen the account population.** Apply the economic floor to the total account population in the target domain. This requires facility-level or account-level data on the relevant economic variables — labor cost, volume, workflow structure — not just firmographic counts. The accounts that pass the screen constitute the serviceable addressable market (SAM).
+**Step 2 ,  Screen the account population.** Apply the economic floor to the total account population in the target domain. This requires facility-level or account-level data on the relevant economic variables ,  labor cost, volume, workflow structure ,  not just firmographic counts. The accounts that pass the screen constitute the serviceable addressable market (SAM).
 
-**Step 3 — Apply a penetration model.** SAM is not revenue. It is the population of accounts that could rationally purchase. Within SAM, penetration is constrained by adoption cycle, competitive dynamics, organizational readiness, and capital availability. A realistic penetration model applies historical adoption curves from analogous industrial technology categories — not optimistic projections derived from total market size.
+**Step 3 ,  Apply a penetration model.** SAM is not revenue. It is the population of accounts that could rationally purchase. Within SAM, penetration is constrained by adoption cycle, competitive dynamics, organizational readiness, and capital availability. A realistic penetration model applies historical adoption curves from analogous industrial technology categories ,  not optimistic projections derived from total market size.
 
-**Step 4 — Project revenue from penetration, not from TAM.** Revenue projection = SAM × penetration rate × average system value. This projection is smaller than the top-down TAM figure in every case. It is also more accurate as a basis for investment modeling, growth rate validation, and vendor revenue target assessment. [C1]
+**Step 4 ,  Project revenue from penetration, not from TAM.** Revenue projection = SAM × penetration rate × average system value. This projection is smaller than the top-down TAM figure in every case. It is also more accurate as a basis for investment modeling, growth rate validation, and vendor revenue target assessment. [C1]
 
 > **Investable Market = Account Population × Economic Viability Rate × Penetration Rate × Average System Value**
 
@@ -195,7 +195,7 @@ See: [Serviceable Addressable Market →](/glossary/serviceable-addressable-mark
 
 The economic viability threshold differs materially across robotics platform categories. Investors sizing a specific platform must apply the variables relevant to that platform, not generic robotics market parameters.
 
-**Intralogistics mobile platforms (AMRs, autonomous forklifts).** The primary displacement variable is labor cost — specifically, the removable fraction of labor hours the system can eliminate. The economic floor depends on fully-loaded labor rate, annual pick or transport volume, and peak-to-average demand ratio. High-seasonality facilities require a different economic model than steady-state distribution operations. See: [Removable Labor Share →](/glossary/removable-labor-share)
+**Intralogistics mobile platforms (AMRs, autonomous forklifts).** The primary displacement variable is labor cost ,  specifically, the removable fraction of labor hours the system can eliminate. The economic floor depends on fully-loaded labor rate, annual pick or transport volume, and peak-to-average demand ratio. High-seasonality facilities require a different economic model than steady-state distribution operations. See: [Removable Labor Share →](/glossary/removable-labor-share)
 
 **Aerial robotic platforms (inspection drones).** The primary displacement variable is inspection labor cost and inspection frequency. The economic floor depends on the number of assets requiring inspection, inspection interval, current inspection cost per event, and regulatory compliance requirements that make manual inspection mandatory regardless of cost. Markets where regulation mandates aerial inspection have different adoption economics than discretionary inspection applications.
 
@@ -203,7 +203,7 @@ The economic viability threshold differs materially across robotics platform cat
 
 **Off-highway autonomous work vehicles.** The displacement variable is operator cost and machine utilization rate. The floor depends on operating hours per year, operator wage rates (which vary substantially between mining, construction, and agriculture domains), regulatory approval status, and the cost of safety infrastructure required to operate autonomously. Markets where regulatory approval is pending carry adoption risk that SAM estimates must discount.
 
-**Humanoid platforms.** The displacement variable is general-purpose labor cost across task domains. The floor is currently theoretical for most applications — commercial deployments at production scale are not established across any domain as of 2026. Investors sizing humanoid markets should model adoption scenarios with explicit timeline uncertainty rather than applying current-cycle penetration assumptions. [C1]
+**Humanoid platforms.** The displacement variable is general-purpose labor cost across task domains. The floor is currently theoretical for most applications ,  commercial deployments at production scale are not established across any domain as of 2026. Investors sizing humanoid markets should model adoption scenarios with explicit timeline uncertainty rather than applying current-cycle penetration assumptions. [C1]
 
 ---
 
@@ -213,7 +213,7 @@ The distinction between market size and market penetration is critical for inves
 
 **Technology readiness level.** Platforms at earlier commercial maturity stages carry lower near-term penetration rates regardless of market size. A platform with a $5 billion SAM but 3% annual penetration rate generates slower revenue growth than a platform with a $1 billion SAM and 15% annual penetration rate.
 
-**Buyer decision cycle length.** Robotics deployments involve capital approval, procurement, integration, and change management. Decision cycles of 12–24 months compress near-term revenue even in large, economically viable markets. Investors who model revenue against market size without discounting for decision cycle length consistently overestimate revenue timing.
+**Buyer decision cycle length.** Robotics deployments involve capital approval, procurement, integration, and change management. Decision cycles of 12-24 months compress near-term revenue even in large, economically viable markets. Investors who model revenue against market size without discounting for decision cycle length consistently overestimate revenue timing.
 
 **Integration complexity.** Platforms requiring deep WMS, ERP, or operational software integration face adoption constraints that platform capability alone does not resolve. Integration complexity is a penetration constraint independent of market size or economic viability.
 
@@ -229,7 +229,7 @@ See: [Market Penetration Rate →](/glossary/market-penetration-rate)
 
 An investment-grade robotics market size estimate contains six components that top-down TAM figures do not provide:
 
-**1. Economic viability screen.** The minimum conditions — labor cost, volume, integration budget, operational horizon — under which the platform generates a return. Applied to the account population to produce SAM.
+**1. Economic viability screen.** The minimum conditions ,  labor cost, volume, integration budget, operational horizon ,  under which the platform generates a return. Applied to the account population to produce SAM.
 
 **2. SAM by platform category.** Separate estimates for each platform category being evaluated, not an aggregated robotics market figure. Platform categories have different economic floors, buyer profiles, and adoption timelines.
 
@@ -251,7 +251,7 @@ See also: [Vendor Economics Framework →](/frameworks/vendor-economics-framewor
 
 Top-down TAM figures overstate robotics market opportunity because they measure theoretical end-market size rather than the subset of that market where deployment economics are viable. Investors who allocate against TAM consistently overestimate near-term revenue opportunity, underestimate penetration constraints, and misprice platform-specific adoption risk.
 
-Bottom-up market sizing — grounded in deployment economics, screened against an economic viability threshold, and combined with an explicit penetration model — produces estimates that are smaller and more accurate. Smaller accurate estimates produce better investment decisions than large inaccurate ones.
+Bottom-up market sizing ,  grounded in deployment economics, screened against an economic viability threshold, and combined with an explicit penetration model ,  produces estimates that are smaller and more accurate. Smaller accurate estimates produce better investment decisions than large inaccurate ones.
 
 **The investable robotics market is defined by where deployment economics work, not by where robots could theoretically be deployed. Those are different numbers. The difference is where investment risk lives.**
 
@@ -260,10 +260,10 @@ Bottom-up market sizing — grounded in deployment economics, screened against a
 ## Frequently Asked Questions {#faq}
 
 **Why are top-down TAM figures unreliable for robotics investment decisions?**
-Top-down TAM counts all facilities or accounts in a target end market regardless of whether deployment economics are viable at current system pricing. They do not distinguish between accounts where the investment generates a return and accounts where it does not. For robotics platforms with high capital costs and specific economic requirements, the gap between TAM and viable market is large — often a factor of four or more.
+Top-down TAM counts all facilities or accounts in a target end market regardless of whether deployment economics are viable at current system pricing. They do not distinguish between accounts where the investment generates a return and accounts where it does not. For robotics platforms with high capital costs and specific economic requirements, the gap between TAM and viable market is large ,  often a factor of four or more.
 
 **What is the bottom-up approach to robotics market sizing?**
-Bottom-up sizing starts with the economic viability threshold for the specific platform: the minimum labor cost, volume, and operational conditions under which the system generates a return within the target payback period. That threshold is applied to the account population to produce the serviceable addressable market. Revenue is then projected by applying a penetration rate model to the SAM — not to the TAM.
+Bottom-up sizing starts with the economic viability threshold for the specific platform: the minimum labor cost, volume, and operational conditions under which the system generates a return within the target payback period. That threshold is applied to the account population to produce the serviceable addressable market. Revenue is then projected by applying a penetration rate model to the SAM ,  not to the TAM.
 
 **How does market penetration rate affect robotics revenue projections?**
 Penetration rate is independent of market size. A large SAM with a low penetration rate generates slower revenue than a smaller SAM with a high penetration rate. Penetration is constrained by technology readiness, buyer decision cycle length, integration complexity, and competitive density. Investors who derive penetration rate from market size rather than modeling it independently overestimate revenue timing.
@@ -378,7 +378,7 @@ Frameworks tagged: Robotics ROI Model
       "name": "Why are top-down TAM figures unreliable for robotics investment decisions?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Top-down TAM counts all facilities or accounts in a target end market regardless of whether deployment economics are viable at current system pricing. They do not distinguish between accounts where the investment generates a return and accounts where it does not. For robotics platforms with high capital costs and specific economic requirements, the gap between TAM and viable market is large — often a factor of four or more."
+        "text": "Top-down TAM counts all facilities or accounts in a target end market regardless of whether deployment economics are viable at current system pricing. They do not distinguish between accounts where the investment generates a return and accounts where it does not. For robotics platforms with high capital costs and specific economic requirements, the gap between TAM and viable market is large ,  often a factor of four or more."
       }
     },
     {
@@ -386,7 +386,7 @@ Frameworks tagged: Robotics ROI Model
       "name": "What is the bottom-up approach to robotics market sizing?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Bottom-up sizing starts with the economic viability threshold for the specific platform: the minimum labor cost, volume, and operational conditions under which the system generates a return within the target payback period. That threshold is applied to the account population to produce the serviceable addressable market. Revenue is then projected by applying a penetration rate model to the SAM — not to the TAM."
+        "text": "Bottom-up sizing starts with the economic viability threshold for the specific platform: the minimum labor cost, volume, and operational conditions under which the system generates a return within the target payback period. That threshold is applied to the account population to produce the serviceable addressable market. Revenue is then projected by applying a penetration rate model to the SAM ,  not to the TAM."
       }
     },
     {

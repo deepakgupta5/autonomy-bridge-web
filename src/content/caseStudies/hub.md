@@ -8,7 +8,7 @@ document:
   language: "en"
   slug: "case-studies"
 
-title: "Case Studies — Autonomy Bridge"
+title: "Case Studies ,  Autonomy Bridge"
 description: "Anonymised research and advisory engagement case studies from Autonomy Bridge covering deployment risk assessment, market entry analysis, market sizing, vendor deployment viability, and pricing strategy across AI, robotics, and industrial automation markets."
 summary: "Five anonymised case studies drawn from Autonomy Bridge engagement history across operators, industrial technology companies, private equity firms, and robotics vendors. Each study follows the problem → approach → output → outcome structure and maps to one or more Autonomy Bridge frameworks."
 
@@ -63,9 +63,9 @@ taxonomy:
     - "vendor-evaluation-framework"
 
 seo:
-  meta_title: "Case Studies | AI, Robotics & Industrial Automation Engagements — Autonomy Bridge"
+  meta_title: "Case Studies | AI, Robotics & Industrial Automation Engagements ,  Autonomy Bridge"
   meta_description: "Anonymised case studies from Autonomy Bridge covering deployment risk assessment, market entry analysis, market sizing, vendor viability, and pricing strategy in AI, robotics, and industrial automation markets."
-  og_title: "Case Studies — Autonomy Bridge"
+  og_title: "Case Studies ,  Autonomy Bridge"
   og_description: "Five anonymised engagements across operators, PE firms, robotics vendors, and industrial technology companies. Framework-referenced evidence of applied research outcomes in AI, robotics, and industrial automation."
   og_type: "website"
   twitter_card: "summary_large_image"
@@ -130,7 +130,7 @@ integrity:
 
 # Case Studies {#top}
 
-Case studies are anonymised records of Autonomy Bridge research and advisory engagements — structured as problem → approach → output → outcome. Each study documents a specific decision problem, the analytical approach applied, the output produced, and the decision it enabled. All client names, specific financials, and identifying details are anonymised or composited.
+Case studies are anonymised records of Autonomy Bridge research and advisory engagements ,  structured as problem → approach → output → outcome. Each study documents a specific decision problem, the analytical approach applied, the output produced, and the decision it enabled. All client names, specific financials, and identifying details are anonymised or composited.
 
 Case studies are evidence of framework application in real engagement contexts. They are not testimonials or marketing narratives. Each maps to one or more Autonomy Bridge frameworks and connects to the use cases and glossary terms that define the analytical vocabulary used in the engagement.
 
@@ -158,7 +158,7 @@ A regional 3PL operator needed an independent assessment of a proposed goods-to-
 **Frameworks:** [Warehouse Automation Decision Framework](/frameworks/warehouse-automation-decision-framework) · [Vendor Economics Framework](/frameworks/vendor-economics-framework)
 **Domain:** Robotics Market Entry · Intralogistics
 
-A mid-size industrial automation company evaluated whether to enter the North American warehouse robotics market through organic development or acquisition. The engagement structured the operator decision logic — the utilisation-driven economics that govern automation capital approval — and screened two acquisition candidates against defined commercial and financial criteria.
+A mid-size industrial automation company evaluated whether to enter the North American warehouse robotics market through organic development or acquisition. The engagement structured the operator decision logic ,  the utilisation-driven economics that govern automation capital approval ,  and screened two acquisition candidates against defined commercial and financial criteria.
 
 ---
 
@@ -168,7 +168,7 @@ A mid-size industrial automation company evaluated whether to enter the North Am
 **Frameworks:** [Robotics ROI Model](/frameworks/robotics-roi-model) · [Warehouse Automation Decision Framework](/frameworks/warehouse-automation-decision-framework)
 **Domain:** Investment Due Diligence · AI and Robotics Markets
 
-A PE firm required a market sizing model grounded in real deployment economics rather than theoretical robotics adoption potential. The engagement distinguished the economically viable addressable market — operator environments where automation can sustain utilisation above the capital recovery threshold — from the theoretical total addressable market used in vendor materials.
+A PE firm required a market sizing model grounded in real deployment economics rather than theoretical robotics adoption potential. The engagement distinguished the economically viable addressable market ,  operator environments where automation can sustain utilisation above the capital recovery threshold ,  from the theoretical total addressable market used in vendor materials.
 
 ---
 
@@ -178,7 +178,7 @@ A PE firm required a market sizing model grounded in real deployment economics r
 **Frameworks:** [Pilot-to-Scale Failure Framework](/frameworks/pilot-to-scale-failure-framework) · [Vendor Evaluation Framework](/frameworks/vendor-evaluation-framework)
 **Domain:** Robotics Vendor Commercial Viability · Intralogistics
 
-A venture-backed robotics company was experiencing stalled deployments — pilots that completed without converting to full facility commitments. The engagement identified that stalls occurred consistently at the capital approval gate, not the operational evaluation stage, because vendor proposals lacked utilisation modelling across full demand cycles, disaggregated labour substitution estimates, and downside scenario analysis.
+A venture-backed robotics company was experiencing stalled deployments ,  pilots that completed without converting to full facility commitments. The engagement identified that stalls occurred consistently at the capital approval gate, not the operational evaluation stage, because vendor proposals lacked utilisation modelling across full demand cycles, disaggregated labour substitution estimates, and downside scenario analysis.
 
 ---
 
@@ -188,7 +188,7 @@ A venture-backed robotics company was experiencing stalled deployments — pilot
 **Frameworks:** [Vendor Economics Framework](/frameworks/vendor-economics-framework)
 **Domain:** Robotics Vendor Pricing · Intralogistics
 
-A robotics vendor evaluated how different pricing structures — capital purchase, subscription-based robotics-as-a-service, and usage-based pricing — affected operator adoption decisions. The engagement analysed how each pricing model shifted financial risk between vendor and operator under different utilisation and demand stability conditions.
+A robotics vendor evaluated how different pricing structures ,  capital purchase, subscription-based robotics-as-a-service, and usage-based pricing ,  affected operator adoption decisions. The engagement analysed how each pricing model shifted financial risk between vendor and operator under different utilisation and demand stability conditions.
 
 ---
 
@@ -196,7 +196,7 @@ A robotics vendor evaluated how different pricing structures — capital purchas
 
 Each case study applies Autonomy Bridge frameworks as its analytical foundation. The [Robotics ROI Model](/frameworks/robotics-roi-model) governs economic evaluation across operator and investor engagements. The [Pilot-to-Scale Failure Framework](/frameworks/pilot-to-scale-failure-framework) structures vendor deployment stall analysis. The [Vendor Economics Framework](/frameworks/vendor-economics-framework) anchors both the pricing strategy research and the market entry assessment. The [Warehouse Automation Decision Framework](/frameworks/warehouse-automation-decision-framework) provides the operator decision logic used in the market sizing and market entry engagements.
 
-Glossary terms referenced across these case studies — including [Capital Recovery Period](/glossary/capital-recovery-period), [Removable Labor Share](/glossary/removable-labor-share), [Vendor Economics](/glossary/vendor-economics), and [Pilot-to-Scale Failure](/glossary/pilot-to-scale-failure) — are defined in the [Glossary](/glossary).
+Glossary terms referenced across these case studies ,  including [Capital Recovery Period](/glossary/capital-recovery-period), [Removable Labor Share](/glossary/removable-labor-share), [Vendor Economics](/glossary/vendor-economics), and [Pilot-to-Scale Failure](/glossary/pilot-to-scale-failure) ,  are defined in the [Glossary](/glossary).
 
 **[Engage Advisory →](/advisory) · [Commission Bespoke Research →](/bespoke-research)**
 
@@ -208,7 +208,7 @@ Glossary terms referenced across these case studies — including [Capital Recov
 {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
-  "name": "Case Studies — Autonomy Bridge",
+  "name": "Case Studies ,  Autonomy Bridge",
   "description": "Anonymised research and advisory engagement case studies from Autonomy Bridge covering deployment risk assessment, market entry analysis, market sizing, vendor deployment viability, and pricing strategy across AI, robotics, and industrial automation markets.",
   "url": "https://autonomybridge.com/case-studies",
   "inLanguage": "en",

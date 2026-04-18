@@ -8,8 +8,8 @@ document:
   language: "en"
   slug: "platform-categories"
 
-title: "Platform Categories — AI, Robotics, and Industrial Automation"
-description: "Detailed profiles of the ten robotics and AI platform categories — vendor populations, commercial maturity, deployment economics, and buyer types across intralogistics, service robotics, humanoid platforms, aerial systems, and more."
+title: "Platform Categories ,  AI, Robotics, and Industrial Automation"
+description: "Detailed profiles of the ten robotics and AI platform categories ,  vendor populations, commercial maturity, deployment economics, and buyer types across intralogistics, service robotics, humanoid platforms, aerial systems, and more."
 summary: "Subsection of the Autonomy Bridge Market Overview covering the ten defined platform categories in AI, robotics, and industrial automation markets. Forthcoming."
 
 authors:
@@ -53,10 +53,10 @@ taxonomy:
     - "Aerial Systems"
 
 seo:
-  meta_title: "Platform Categories | AI, Robotics & Industrial Automation Market Overview — Autonomy Bridge"
-  meta_description: "Detailed profiles of the ten robotics and AI platform categories — vendor populations, commercial maturity, deployment economics, and buyer types. Part of the Autonomy Bridge Market Overview."
+  meta_title: "Platform Categories | AI, Robotics & Industrial Automation Market Overview ,  Autonomy Bridge"
+  meta_description: "Detailed profiles of the ten robotics and AI platform categories ,  vendor populations, commercial maturity, deployment economics, and buyer types. Part of the Autonomy Bridge Market Overview."
   og_title: "Platform Categories | Autonomy Bridge Market Overview"
-  og_description: "Ten defined platform categories in AI, robotics, and industrial automation — from intralogistics mobile platforms to wearable robotics and humanoid systems."
+  og_description: "Ten defined platform categories in AI, robotics, and industrial automation ,  from intralogistics mobile platforms to wearable robotics and humanoid systems."
   og_type: "article"
   twitter_card: "summary_large_image"
 
@@ -112,7 +112,7 @@ integrity:
 
 # Platform Categories {#top}
 
-This section provides detailed profiles of the ten robotics and AI platform categories tracked by Autonomy Bridge — covering vendor population size, pre-Series B density, commercial adoption maturity, typical buyer types, and deployment economics for each category.
+This section provides detailed profiles of the ten robotics and AI platform categories tracked by Autonomy Bridge ,  covering vendor population size, pre-Series B density, commercial adoption maturity, typical buyer types, and deployment economics for each category.
 
 The ten platform categories are: intralogistics mobile platforms, commercial indoor service mobile platforms, mobile manipulation platforms, humanoid platforms, aerial robotic platforms, surface maritime robotic platforms, underwater robotic platforms, off-highway autonomous work vehicles, on-road autonomous vehicles, and wearable robotics platforms.
 
@@ -128,8 +128,8 @@ Detailed platform profiles are in development. For current structural orientatio
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "name": "Platform Categories — AI, Robotics, and Industrial Automation",
-  "description": "Detailed profiles of the ten robotics and AI platform categories — vendor populations, commercial maturity, deployment economics, and buyer types.",
+  "name": "Platform Categories ,  AI, Robotics, and Industrial Automation",
+  "description": "Detailed profiles of the ten robotics and AI platform categories ,  vendor populations, commercial maturity, deployment economics, and buyer types.",
   "url": "https://autonomybridge.com/market-overview/platform-categories",
   "datePublished": "2026-04-09",
   "dateModified": "2026-04-09",

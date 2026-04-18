@@ -8,8 +8,8 @@ document:
   language: "en"
   slug: "deployment-economics"
 
-title: "Deployment Economics — AI, Robotics, and Industrial Automation"
-description: "How deployment economics vary across platform category and operator domain combinations — capital requirements, utilisation thresholds, payback conditions, and the factors that determine whether a robotics or AI deployment reaches target economics."
+title: "Deployment Economics ,  AI, Robotics, and Industrial Automation"
+description: "How deployment economics vary across platform category and operator domain combinations ,  capital requirements, utilisation thresholds, payback conditions, and the factors that determine whether a robotics or AI deployment reaches target economics."
 summary: "Subsection of the Autonomy Bridge Market Overview covering deployment economics across platform categories and operator domains in AI, robotics, and industrial automation markets. Forthcoming."
 
 authors:
@@ -51,10 +51,10 @@ taxonomy:
     - "Capital Recovery"
 
 seo:
-  meta_title: "Deployment Economics | AI, Robotics & Industrial Automation Market Overview — Autonomy Bridge"
-  meta_description: "How deployment economics vary across platform category and operator domain combinations — capital requirements, utilisation thresholds, and payback conditions for robotics and AI deployments."
+  meta_title: "Deployment Economics | AI, Robotics & Industrial Automation Market Overview ,  Autonomy Bridge"
+  meta_description: "How deployment economics vary across platform category and operator domain combinations ,  capital requirements, utilisation thresholds, and payback conditions for robotics and AI deployments."
   og_title: "Deployment Economics | Autonomy Bridge Market Overview"
-  og_description: "Deployment economics across platform categories and operator domains in AI, robotics, and industrial automation — capital requirements, utilisation thresholds, and payback conditions."
+  og_description: "Deployment economics across platform categories and operator domains in AI, robotics, and industrial automation ,  capital requirements, utilisation thresholds, and payback conditions."
   og_type: "article"
   twitter_card: "summary_large_image"
 
@@ -107,11 +107,11 @@ integrity:
 
 # Deployment Economics {#top}
 
-This section maps how deployment economics vary across combinations of platform category and operator domain — covering capital requirements, utilisation thresholds, payback conditions, integration cost drivers, and the structural factors that determine whether a robotics or AI deployment reaches its target economics.
+This section maps how deployment economics vary across combinations of platform category and operator domain ,  covering capital requirements, utilisation thresholds, payback conditions, integration cost drivers, and the structural factors that determine whether a robotics or AI deployment reaches its target economics.
 
 Deployment economics are not uniform across the market. The capital required, the utilisation floor needed for positive returns, and the conditions under which deployments stall or fail differ materially by platform category and operator domain. A deployment that is economically straightforward in one combination is not viable in another. This section makes those differences visible in structured form.
 
-Detailed deployment economics profiles by platform and domain combination are in development. Current published depth is in intralogistics and warehouse automation — see [Intralogistics and Warehouse Automation](/market-overview/industry-landscape) for that analysis. For the analytical frameworks used to evaluate deployment economics across any context, see the [Robotics ROI Model](/frameworks/robotics-roi-model) and [Automation Failure Framework](/frameworks/automation-failure-framework).
+Detailed deployment economics profiles by platform and domain combination are in development. Current published depth is in intralogistics and warehouse automation ,  see [Intralogistics and Warehouse Automation](/market-overview/industry-landscape) for that analysis. For the analytical frameworks used to evaluate deployment economics across any context, see the [Robotics ROI Model](/frameworks/robotics-roi-model) and [Automation Failure Framework](/frameworks/automation-failure-framework).
 
 **[Market Overview →](/market-overview) · [Robotics ROI Model →](/frameworks/robotics-roi-model) · [Automation Failure Framework →](/frameworks/automation-failure-framework)**
 
@@ -123,8 +123,8 @@ Detailed deployment economics profiles by platform and domain combination are in
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "name": "Deployment Economics — AI, Robotics, and Industrial Automation",
-  "description": "How deployment economics vary across platform category and operator domain combinations — capital requirements, utilisation thresholds, and payback conditions for robotics and AI deployments.",
+  "name": "Deployment Economics ,  AI, Robotics, and Industrial Automation",
+  "description": "How deployment economics vary across platform category and operator domain combinations ,  capital requirements, utilisation thresholds, and payback conditions for robotics and AI deployments.",
   "url": "https://autonomybridge.com/market-overview/deployment-economics",
   "datePublished": "2026-04-09",
   "dateModified": "2026-04-09",

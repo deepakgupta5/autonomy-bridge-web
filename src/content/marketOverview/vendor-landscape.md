@@ -8,8 +8,8 @@ document:
   language: "en"
   slug: "vendor-landscape"
 
-title: "Vendor Landscape — AI, Robotics, and Industrial Automation"
-description: "How the vendor population is structured across AI, robotics, and industrial automation platform categories — market density, pre-Series B concentration, commercial maturity, and competitive dynamics by category."
+title: "Vendor Landscape ,  AI, Robotics, and Industrial Automation"
+description: "How the vendor population is structured across AI, robotics, and industrial automation platform categories ,  market density, pre-Series B concentration, commercial maturity, and competitive dynamics by category."
 summary: "Subsection of the Autonomy Bridge Market Overview covering the vendor landscape across platform categories in AI, robotics, and industrial automation markets. Forthcoming."
 
 authors:
@@ -51,10 +51,10 @@ taxonomy:
     - "Vendor Economics"
 
 seo:
-  meta_title: "Vendor Landscape | AI, Robotics & Industrial Automation Market Overview — Autonomy Bridge"
-  meta_description: "How the vendor population is structured across AI, robotics, and industrial automation platform categories — market density, pre-Series B concentration, and competitive dynamics."
+  meta_title: "Vendor Landscape | AI, Robotics & Industrial Automation Market Overview ,  Autonomy Bridge"
+  meta_description: "How the vendor population is structured across AI, robotics, and industrial automation platform categories ,  market density, pre-Series B concentration, and competitive dynamics."
   og_title: "Vendor Landscape | Autonomy Bridge Market Overview"
-  og_description: "Vendor population structure across ten platform categories in AI, robotics, and industrial automation — density, maturity, and competitive dynamics by category."
+  og_description: "Vendor population structure across ten platform categories in AI, robotics, and industrial automation ,  density, maturity, and competitive dynamics by category."
   og_type: "article"
   twitter_card: "summary_large_image"
 
@@ -107,7 +107,7 @@ integrity:
 
 # Vendor Landscape {#top}
 
-This section maps the vendor population across the ten AI, robotics, and industrial automation platform categories — covering estimated vendor count, pre-Series B density, commercial adoption maturity, and the competitive dynamics that shape deployment and investment decisions in each category.
+This section maps the vendor population across the ten AI, robotics, and industrial automation platform categories ,  covering estimated vendor count, pre-Series B density, commercial adoption maturity, and the competitive dynamics that shape deployment and investment decisions in each category.
 
 Vendor landscape analysis addresses three questions relevant to vendors, investors, and operators: how crowded is the category, how commercially mature are the active vendors, and where is the market still dominated by early-stage companies carrying substantial deployment and financial risk.
 
@@ -123,8 +123,8 @@ Detailed vendor landscape profiles by platform category are in development. For 
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "name": "Vendor Landscape — AI, Robotics, and Industrial Automation",
-  "description": "How the vendor population is structured across AI, robotics, and industrial automation platform categories — market density, pre-Series B concentration, and competitive dynamics.",
+  "name": "Vendor Landscape ,  AI, Robotics, and Industrial Automation",
+  "description": "How the vendor population is structured across AI, robotics, and industrial automation platform categories ,  market density, pre-Series B concentration, and competitive dynamics.",
   "url": "https://autonomybridge.com/market-overview/vendor-landscape",
   "datePublished": "2026-04-09",
   "dateModified": "2026-04-09",

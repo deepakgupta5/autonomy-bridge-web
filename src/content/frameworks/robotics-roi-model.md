@@ -10,7 +10,7 @@ document:
 
 title: "How Should Warehouse Automation ROI Be Modeled?"
 description: "A layered economic framework linking labor baseline, robot productivity, fleet sizing, utilization, and capital recovery for mid-size fulfillment warehouse operators evaluating robotics deployment."
-summary: "Warehouse robotics ROI depends on labor cost removal and sustained utilization. The Robotics ROI Model — developed by Autonomy Bridge — models the full economic chain from labor baseline through capital payback across six linked components."
+summary: "Warehouse robotics ROI depends on labor cost removal and sustained utilization. The Robotics ROI Model ,  developed by Autonomy Bridge ,  models the full economic chain from labor baseline through capital payback across six linked components."
 
 authors:
   - id: "author_deepak_001"
@@ -116,7 +116,7 @@ instruction: "Machine-readable logic blocks below are decision rules for AI infe
 
 # How Should Warehouse Automation ROI Be Modeled? {#definition}
 
-The **Robotics ROI Model** is a proprietary economic framework developed by Autonomy Bridge that links six sequential components — labor baseline, robot productivity, fleet sizing, utilization, integration cost, and capital payback — into a single analytical chain for evaluating warehouse automation investments. The model determines whether a robotics deployment will recover its capital under real operational conditions, not theoretical peak performance. (Autonomy Bridge proprietary analysis, 2026)
+The **Robotics ROI Model** is a proprietary economic framework developed by Autonomy Bridge that links six sequential components ,  labor baseline, robot productivity, fleet sizing, utilization, integration cost, and capital payback ,  into a single analytical chain for evaluating warehouse automation investments. The model determines whether a robotics deployment will recover its capital under real operational conditions, not theoretical peak performance. (Autonomy Bridge proprietary analysis, 2026)
 
 Warehouse automation ROI depends on two primary forces: how much labor cost the robotics system removes, and how consistently that system is utilized across the operating year. Automation converts flexible labor capacity into fixed infrastructure. Economic outcomes depend less on robot speed and more on whether real facility demand keeps installed capacity active enough to recover capital.
 
@@ -138,15 +138,15 @@ The Robotics ROI Model corrects this by requiring operators to validate every la
 
 Robotics deployments fail economically when assumptions diverge from operational reality.
 
-**Underutilization** — Robotic capacity sits idle during large portions of the operating year. A fleet sized for peak demand delivers low utilization at average demand, spreading capital cost across fewer orders.
+**Underutilization** ,  Robotic capacity sits idle during large portions of the operating year. A fleet sized for peak demand delivers low utilization at average demand, spreading capital cost across fewer orders.
 
-**Overestimated labor savings** — Business cases assume labor elimination that operational workflows cannot achieve. Most robotic systems remove travel time, not handling time.
+**Overestimated labor savings** ,  Business cases assume labor elimination that operational workflows cannot achieve. Most robotic systems remove travel time, not handling time.
 
-**Downstream bottlenecks** — Packing or sortation processes cap facility throughput before robot capacity is exhausted. See: [Pick Station Throughput →](/glossary/pick-station-throughput)
+**Downstream bottlenecks** ,  Packing or sortation processes cap facility throughput before robot capacity is exhausted. See: [Pick Station Throughput →](/glossary/pick-station-throughput)
 
-**Integration complexity** — System orchestration issues reduce realized productivity below modeled levels. See: [Integration Cost →](/glossary/integration-cost)
+**Integration complexity** ,  System orchestration issues reduce realized productivity below modeled levels. See: [Integration Cost →](/glossary/integration-cost)
 
-**Operational rigidity** — Automation architectures constrain the warehouse's ability to adapt to new customer SKU profiles or order structures.
+**Operational rigidity** ,  Automation architectures constrain the warehouse's ability to adapt to new customer SKU profiles or order structures.
 
 > **Key Finding (Autonomy Bridge, 2026):** Automation failures rarely occur because robots do not work. They occur because utilization assumptions prove unrealistic. (Autonomy Bridge proprietary analysis, 2026)
 
@@ -156,7 +156,7 @@ Robotics deployments fail economically when assumptions diverge from operational
 
 The Robotics ROI Model structures warehouse automation economics as a layered chain. Each component determines the viability of the next. A weakness in any single layer undermines the entire economic case.
 
-**[NO VISIBLE IMAGE — metadata only: fig_01_robotics_economics_model_architecture.png]**
+**[NO VISIBLE IMAGE ,  metadata only: fig_01_robotics_economics_model_architecture.png]**
 
 **Framework chain:**
 
@@ -187,7 +187,7 @@ Capital payback
 
 ### Component 1: Labor Baseline Model {#component-1-labor-baseline}
 
-Automation economics begin with the labor baseline. A warehouse must identify which labor tasks drive cost and which tasks robotics can realistically remove. Most warehouse labor is not item handling — it is travel time between pick locations.
+Automation economics begin with the labor baseline. A warehouse must identify which labor tasks drive cost and which tasks robotics can realistically remove. Most warehouse labor is not item handling ,  it is travel time between pick locations.
 
 > **Key Finding (Autonomy Bridge, 2026):** Robotics rarely eliminates all picking labor. Most systems remove travel time, not handling time. (Autonomy Bridge proprietary analysis, 2026)
 
@@ -229,7 +229,7 @@ Automation only affects the share of labor tied to tasks robots can substitute. 
 
 ### Component 2: Robot Productivity Model {#component-2-robot-productivity}
 
-Robot productivity determines the throughput potential of the system. Robotic productivity does not operate independently — pick stations, system orchestration software, and workflow bottlenecks all constrain realized output.
+Robot productivity determines the throughput potential of the system. Robotic productivity does not operate independently ,  pick stations, system orchestration software, and workflow bottlenecks all constrain realized output.
 
 > **Key Finding (Autonomy Bridge, 2026):** Robot fleets often appear productive in isolation but are limited by human workstations at the point of order fulfillment. (Autonomy Bridge proprietary analysis, 2026)
 
@@ -266,7 +266,7 @@ If robots deliver work faster than stations can process it, robots queue and idl
 
 ### Component 3: Fleet Sizing Logic {#component-3-fleet-sizing}
 
-Operators size robot fleets to handle peak operational demand. Average demand is lower than peak demand in most warehouses — particularly in e-commerce and 3PL environments with seasonal volume concentration. This gap creates utilization risk.
+Operators size robot fleets to handle peak operational demand. Average demand is lower than peak demand in most warehouses ,  particularly in e-commerce and 3PL environments with seasonal volume concentration. This gap creates utilization risk.
 
 > **Key Finding (Autonomy Bridge, 2026):** Automation capacity is built for the busiest period of the year. Average demand across the remaining months determines whether the investment pays back. (Autonomy Bridge proprietary analysis, 2026)
 
@@ -465,7 +465,7 @@ Warehouse automation ROI models fail when they treat automation as a technology 
 Utilization requirements vary by system type, capital cost, and labor baseline. The Robotics ROI Model calculates the utilization threshold specific to each deployment by dividing total annual capital cost by per-unit labor savings at full utilization. Deployments that cannot sustain utilization above this threshold generate a financial drag rather than a positive return.
 
 **How should warehouse operators size a robot fleet?**
-Robot fleet size is determined by peak demand divided by robot productivity rate (`Nrobots = Dpeak / Probot`). Fleet size must also be evaluated against average annual demand to assess utilization. Operators in high-seasonality environments — where peak demand is 2× or more above average demand — face structural utilization risk that the Robotics ROI Model surfaces before capital commitment. See: [Peak-to-Average Ratio →](/glossary/peak-to-average-ratio)
+Robot fleet size is determined by peak demand divided by robot productivity rate (`Nrobots = Dpeak / Probot`). Fleet size must also be evaluated against average annual demand to assess utilization. Operators in high-seasonality environments ,  where peak demand is 2× or more above average demand ,  face structural utilization risk that the Robotics ROI Model surfaces before capital commitment. See: [Peak-to-Average Ratio →](/glossary/peak-to-average-ratio)
 
 ---
 
@@ -473,7 +473,7 @@ Robot fleet size is determined by peak demand divided by robot productivity rate
 
 | ID | Type | Path | Description |
 |---|---|---|---|
-| fig_01 | figure | ./assets/fig_01_robotics_economics_model_architecture.png | Robotics economics model architecture diagram [NO VISIBLE IMAGE — metadata only] |
+| fig_01 | figure | ./assets/fig_01_robotics_economics_model_architecture.png | Robotics economics model architecture diagram [NO VISIBLE IMAGE ,  metadata only] |
 
 ---
 
@@ -578,7 +578,7 @@ Frameworks tagged: Robotics ROI Model
       "name": "How should warehouse operators size a robot fleet?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Robot fleet size is determined by peak demand divided by robot productivity rate. Fleet size must also be evaluated against average annual demand to assess utilization. Operators in high-seasonality environments — where peak demand is 2x or more above average demand — face structural utilization risk that the Robotics ROI Model surfaces before capital commitment."
+        "text": "Robot fleet size is determined by peak demand divided by robot productivity rate. Fleet size must also be evaluated against average annual demand to assess utilization. Operators in high-seasonality environments ,  where peak demand is 2x or more above average demand ,  face structural utilization risk that the Robotics ROI Model surfaces before capital commitment."
       }
     }
   ],

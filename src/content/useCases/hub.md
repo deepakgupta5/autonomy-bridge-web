@@ -8,8 +8,8 @@ document:
   language: "en"
   slug: "use-cases"
 
-title: "Use Cases — Autonomy Bridge"
-description: "Applied decision-framework evaluations for AI, robotics, and industrial automation decisions — covering deployment economics, ROI evaluation, vendor selection, and operational fit assessment."
+title: "Use Cases ,  Autonomy Bridge"
+description: "Applied decision-framework evaluations for AI, robotics, and industrial automation decisions ,  covering deployment economics, ROI evaluation, vendor selection, and operational fit assessment."
 summary: "The Use Cases hub indexes structured evaluations applying Autonomy Bridge frameworks to specific decision problems in AI, robotics, and industrial automation markets. Current published depth is in intralogistics and warehouse automation. Coverage expands across platform categories and operator domains as new use cases are published."
 
 authors:
@@ -61,9 +61,9 @@ taxonomy:
     - "pilot-to-scale-failure-framework"
 
 seo:
-  meta_title: "Use Cases | AI, Robotics & Industrial Automation Decision Evaluations — Autonomy Bridge"
+  meta_title: "Use Cases | AI, Robotics & Industrial Automation Decision Evaluations ,  Autonomy Bridge"
   meta_description: "Applied decision-framework evaluations for AI, robotics, and industrial automation. Deployment economics, ROI evaluation, vendor selection, and operational fit assessment across platform categories and operator domains."
-  og_title: "Use Cases — Autonomy Bridge"
+  og_title: "Use Cases ,  Autonomy Bridge"
   og_description: "Structured evaluations applying Autonomy Bridge frameworks to specific decision problems in AI, robotics, and industrial automation markets."
   og_type: "website"
   twitter_card: "summary_large_image"
@@ -120,7 +120,7 @@ integrity:
 
 Use Cases are structured decision-framework evaluations applying Autonomy Bridge analytical models to specific decision problems in AI, robotics, and industrial automation markets. Each use case defines the decision context, the analytical approach, the key variables, and the economic or operational logic that determines whether a deployment, investment, or market entry is viable.
 
-Use cases are not vendor case studies. They do not start from a product and describe its benefits. They start from the decision a vendor, investor, or operator needs to make and work through the framework-driven analysis required to resolve it — independent of which system or vendor is under consideration.
+Use cases are not vendor case studies. They do not start from a product and describe its benefits. They start from the decision a vendor, investor, or operator needs to make and work through the framework-driven analysis required to resolve it ,  independent of which system or vendor is under consideration.
 
 Current published use cases cover intralogistics and warehouse automation. New use cases across additional platform categories and operator domains are published as the coverage map expands.
 
@@ -169,7 +169,7 @@ Evaluates the specific risks of deploying robotics in multi-client 3PL facilitie
 ## How Use Cases Connect to Frameworks {#framework-connections}
 Each use case applies one or more Autonomy Bridge frameworks as its analytical foundation. The [Robotics ROI Model](/frameworks/robotics-roi-model) governs economic evaluation across deployment and investment decisions. The [Workflow Architecture Framework](/frameworks/workflow-architecture-framework) provides the constraint analysis methodology for any deployment where throughput bottlenecks determine system value. The [Automation Failure Framework](/frameworks/automation-failure-framework) identifies structural failure modes relevant to deployment risk evaluation. The [Warehouse Automation Decision Framework](/frameworks/warehouse-automation-decision-framework) structures go/no-go and technology selection decisions across operator environments.
 
-Glossary terms referenced across these use cases — including [Removable Labor Share](/glossary/removable-labor-share), [Capital Recovery Period](/glossary/capital-recovery-period), [Peak-to-Average Ratio](/glossary/peak-to-average-ratio), and [Workflow Constraint](/glossary/workflow-constraint) — are defined in the [Glossary](/glossary).
+Glossary terms referenced across these use cases ,  including [Removable Labor Share](/glossary/removable-labor-share), [Capital Recovery Period](/glossary/capital-recovery-period), [Peak-to-Average Ratio](/glossary/peak-to-average-ratio), and [Workflow Constraint](/glossary/workflow-constraint) ,  are defined in the [Glossary](/glossary).
 
 **[Engage Advisory →](/advisory) · [Commission Bespoke Research →](/bespoke-research)**
 
@@ -181,8 +181,8 @@ Glossary terms referenced across these use cases — including [Removable Labor 
 {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
-  "name": "Use Cases — Autonomy Bridge",
-  "description": "Applied decision-framework evaluations for AI, robotics, and industrial automation decisions — covering deployment economics, ROI evaluation, vendor selection, and operational fit assessment.",
+  "name": "Use Cases ,  Autonomy Bridge",
+  "description": "Applied decision-framework evaluations for AI, robotics, and industrial automation decisions ,  covering deployment economics, ROI evaluation, vendor selection, and operational fit assessment.",
   "url": "https://autonomybridge.com/use-cases",
   "inLanguage": "en",
   "speakable": {

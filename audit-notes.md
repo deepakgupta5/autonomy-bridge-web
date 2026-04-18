@@ -1,4 +1,4 @@
-# Autonomy Bridge Website — Full Audit Notes (All Sessions)
+# Autonomy Bridge Website ,  Full Audit Notes (All Sessions)
 
 **Project:** `/Users/deepakgupta/Documents/New project/autonomy-bridge-web`
 **Framework:** Astro 4.x, static site, content collections (markdown)
@@ -20,7 +20,7 @@
 
 ---
 
-## Sessions 1–3: Core Pages
+## Sessions 1-3: Core Pages
 
 Pages rebuilt from scratch with full brand pattern:
 - Homepage (`src/pages/index.astro`)
@@ -45,31 +45,31 @@ Pages rebuilt from scratch with full brand pattern:
 - "Also in this section" pill nav
 - FAQ structuring
 
-### DetailPageTemplate.astro — Full rewrite
+### DetailPageTemplate.astro ,  Full rewrite
 - Hero: eyebrow → H1 → sans tagline
 - Single `<section class="detail-body prose-surface"><slot /></section>`
 - Dark CTA banner
 - Related content pill layout
 - Client-side transforms:
   1. Strip `{#anchor}` from heading text
-  2. Replace `[NO VISIBLE IMAGE — metadata only: fig_N]` with `<figure class="inline-diagram">`
+  2. Replace `[NO VISIBLE IMAGE ,  metadata only: fig_N]` with `<figure class="inline-diagram">`
   3. Hide `## Appendix` sections + siblings
   4. Wrap `(Autonomy Bridge proprietary analysis...)` in `<cite class="ab-citation">`
 
 ### astro.config.mjs
-- `markdown: { syntaxHighlight: false }` — disables Shiki dark theme
+- `markdown: { syntaxHighlight: false }` ,  disables Shiki dark theme
 
 ---
 
 ## Session 5: Insights + DetailPageTemplate Transforms
 
-### `src/pages/insights/index.astro` — Full rewrite
+### `src/pages/insights/index.astro` ,  Full rewrite
 - Hero: H1 + sans tagline
 - 6 article cards with amber top border
 - Dark CTA banner
 - Related research pill nav
 
-### DetailPageTemplate.astro — New transforms
+### DetailPageTemplate.astro ,  New transforms
 - **T5**: Hide first H1 in body (duplicate of hero H1)
 - **T6**: Hide `:::directive` blocks (ai-contract, hard-truth, logic-block)
 - **T7**: Structure FAQ Q&A pairs into `.faq-qa-pair > .faq-q + .faq-a`
@@ -110,20 +110,20 @@ Pages rebuilt from scratch with full brand pattern:
 - Section order: hub-intro → hub-grid → hub-cta → hub-body → hub-surfacing
 - Hub cleanup script step 3: hides nav paragraph
 - Hub cleanup script step 4: FAQ Q&A structuring
-- `hub-body { background: transparent }` — prevents white box
+- `hub-body { background: transparent }` ,  prevents white box
 
 ---
 
 ## Session 9 (Chat 2): Technical SEO + AI Discoverability
 
-### `public/robots.txt` — Created
+### `public/robots.txt` ,  Created
 - Allows Googlebot, Bingbot
 - Allows AI discovery bots: OAI-SearchBot, ChatGPT-User, Claude-SearchBot, PerplexityBot
 - Allows AI training bots: GPTBot, Google-Extended, ClaudeBot
 - Blocks: /wp-admin/, /admin/, /temp/, /drafts/, /search?, /checkout/
 - References sitemap-index.xml
 
-### `public/llms.txt` — Created
+### `public/llms.txt` ,  Created
 - Machine-readable site brief for LLM crawlers
 - Covers: methodology, key frameworks, entity definitions, reference URLs
 
@@ -132,7 +132,7 @@ Pages rebuilt from scratch with full brand pattern:
 - Astro generates `sitemap-index.xml`, not `sitemap.xml`
 
 ### DMARC Report (reviewed)
-- Google daily aggregate report — clean bill of health
+- Google daily aggregate report ,  clean bill of health
 - 1 email sent, DKIM pass, SPF pass, disposition: none
 - No spoofing detected
 
@@ -143,7 +143,7 @@ Pages rebuilt from scratch with full brand pattern:
 | Artifact | Transform |
 |----------|-----------|
 | `{#anchor-id}` in headings | T1: strip text |
-| `[NO VISIBLE IMAGE — metadata only: fig_N]` | T2: replace with `<figure>` |
+| `[NO VISIBLE IMAGE ,  metadata only: fig_N]` | T2: replace with `<figure>` |
 | `## Appendix: ...` sections | T3: hide + siblings |
 | `(Autonomy Bridge proprietary analysis, 2026)` | T4: wrap in `<cite>` |
 | Duplicate `# Title` H1 at body top | T5: hide |
@@ -156,8 +156,8 @@ Pages rebuilt from scratch with full brand pattern:
 
 ## Key File Paths
 
-- `src/components/DetailPageTemplate.astro` — framework/insight/use-case/case-study detail layout
-- `src/components/HubPageTemplate.astro` — hub page layout
+- `src/components/DetailPageTemplate.astro` ,  framework/insight/use-case/case-study detail layout
+- `src/components/HubPageTemplate.astro` ,  hub page layout
 - `src/components/Breadcrumbs.astro`
 - `src/components/ContentCard.astro`
 - `src/styles/tokens.css`

@@ -73,7 +73,7 @@ frameworks_tagged:
   - "Workflow Architecture Framework"
 
 entities:
-  primary_topic: "Advisory — AI, Robotics, and Industrial Automation"
+  primary_topic: "Advisory ,  AI, Robotics, and Industrial Automation"
   related_frameworks:
     - "robotics-roi-model"
     - "vendor-economics-framework"
@@ -110,7 +110,7 @@ integrity:
 ## Frequently Asked Questions
 
 **What is the difference between Advisory and Bespoke Research?**
-Advisory is for ongoing decisions that continue to evolve — the questions are not fully resolved at the start, and the analytical need recurs as market conditions change. Bespoke Research is for a defined question with a fixed scope, a clear deliverable, and a fixed endpoint. If the need is a one-time output, Bespoke Research is the right engagement. If the decisions keep moving and require sustained analytical support, Advisory is the right structure.
+Advisory is for ongoing decisions that continue to evolve ,  the questions are not fully resolved at the start, and the analytical need recurs as market conditions change. Bespoke Research is for a defined question with a fixed scope, a clear deliverable, and a fixed endpoint. If the need is a one-time output, Bespoke Research is the right engagement. If the decisions keep moving and require sustained analytical support, Advisory is the right structure.
 
 **Who are Autonomy Bridge advisory clients?**
 Autonomy Bridge serves three client types in AI, robotics, and industrial automation markets. Vendors navigating ongoing commercial decisions about market positioning, ICP, pricing, and go-to-market direction as their product and competitive environment evolve. Investors holding positions in AI, robotics, or industrial automation companies who need standing market intelligence rather than one-off diligence. Operators managing multi-phase automation programs who need sustained analytical support across a program of decisions rather than a single vendor evaluation.

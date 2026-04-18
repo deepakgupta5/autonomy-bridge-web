@@ -58,11 +58,11 @@ taxonomy:
 
 seo:
   meta_title: "Decision-Grade Research for AI, Robotics & Industrial Automation | Autonomy Bridge"
-  meta_description: "Autonomy Bridge produces decision-grade research for AI, robotics, and industrial automation markets. Commercial viability, opportunity sizing, ICP definition, and GTM direction — before capital or reputation is committed."
+  meta_description: "Autonomy Bridge produces decision-grade research for AI, robotics, and industrial automation markets. Commercial viability, opportunity sizing, ICP definition, and GTM direction ,  before capital or reputation is committed."
   og_title: "Decision-Grade Research for AI, Robotics, and Industrial Automation Markets"
   og_description: "Principal-led boutique research firm for vendors, investors, and operators in AI, robotics, and industrial automation. Engagements produce decision briefs with explicit assumptions, models, and recommendations."
   og_type: "website"
-  og_image: "[NO ASSET — populate or remove before deploy]"
+  og_image: "[NO ASSET ,  populate or remove before deploy]"
   twitter_card: "summary_large_image"
   twitter_title: "Decision-Grade Research for AI, Robotics & Industrial Automation | Autonomy Bridge"
   twitter_description: "Decision briefs with explicit assumptions, models, and recommendations. For vendors, investors, and operators in AI, robotics, and industrial automation."
@@ -155,7 +155,7 @@ Decision-grade research produces an output that can be acted on directly. It con
 Vendors in AI, robotics, and industrial automation use Autonomy Bridge to evaluate market entry, define ICP, and set pricing direction before committing sales resources. Investors use it to size addressable markets, assess vendor economics, and stress-test deployment assumptions before making investment decisions. Operators use it to evaluate automation economics, shortlist vendors, and structure procurement.
 
 **What markets does Autonomy Bridge cover?**
-Autonomy Bridge covers AI, robotics, and industrial automation across platform categories — including intralogistics, service robotics, mobile manipulation, humanoid platforms, aerial systems, off-highway autonomous vehicles, on-road autonomy, and wearable robotics — and across operator domains including warehousing, manufacturing, healthcare, agriculture, construction, energy infrastructure, and commercial facilities.
+Autonomy Bridge covers AI, robotics, and industrial automation across platform categories ,  including intralogistics, service robotics, mobile manipulation, humanoid platforms, aerial systems, off-highway autonomous vehicles, on-road autonomy, and wearable robotics ,  and across operator domains including warehousing, manufacturing, healthcare, agriculture, construction, energy infrastructure, and commercial facilities.
 
 **What does Autonomy Bridge not do?**
 Autonomy Bridge does not execute implementations, manage systems integration, or provide ongoing operational support. The firm does not write RFPs on behalf of buyers, manage vendor relationships, or serve as a procurement intermediary. All engagements produce research outputs, not managed services.

@@ -8,9 +8,9 @@ document:
   language: "en"
   slug: "bespoke-research"
 
-title: "Bespoke Research — Autonomy Bridge"
+title: "Bespoke Research ,  Autonomy Bridge"
 description: "Decision-grade custom research for vendors, investors, and operators in AI, robotics, and industrial automation markets. Market entry analysis, vendor economics, deployment risk, and commercial viability assessments."
-summary: "Autonomy Bridge bespoke research engagements produce a single decision-grade output built for a specific question — not a literature review or recycled category report. Each engagement begins with a defined decision problem and ends with a structured research product with explicit assumptions, models, and recommendations."
+summary: "Autonomy Bridge bespoke research engagements produce a single decision-grade output built for a specific question ,  not a literature review or recycled category report. Each engagement begins with a defined decision problem and ends with a structured research product with explicit assumptions, models, and recommendations."
 
 authors:
   - id: "author_deepak_001"
@@ -55,10 +55,10 @@ taxonomy:
     - "Investment Due Diligence"
 
 seo:
-  meta_title: "Bespoke Research — Decision-Grade AI, Robotics & Industrial Automation Research | Autonomy Bridge"
+  meta_title: "Bespoke Research ,  Decision-Grade AI, Robotics & Industrial Automation Research | Autonomy Bridge"
   meta_description: "Custom research for vendors, investors, and operators in AI, robotics, and industrial automation. Market entry analysis, vendor economics assessments, deployment risk reports, and commercial viability assessments."
   og_title: "Bespoke Research | Autonomy Bridge"
-  og_description: "Decision-grade research built for a specific question in AI, robotics, or industrial automation. Not literature reviews — structured outputs with explicit assumptions, models, and recommendations."
+  og_description: "Decision-grade research built for a specific question in AI, robotics, or industrial automation. Not literature reviews ,  structured outputs with explicit assumptions, models, and recommendations."
   og_type: "website"
   twitter_card: "summary_large_image"
 
@@ -74,7 +74,7 @@ frameworks_tagged:
   - "Vendor Evaluation Framework"
 
 entities:
-  primary_topic: "Bespoke Research — AI, Robotics, and Industrial Automation"
+  primary_topic: "Bespoke Research ,  AI, Robotics, and Industrial Automation"
   related_entities:
     - "Vendor Economics"
     - "Deployment Risk"
@@ -133,7 +133,7 @@ integrity:
 Bespoke research from Autonomy Bridge produces a single decision-grade output for a specific question in AI, robotics, or industrial automation. It is not a literature review, a market survey, or a recycled category report. Every engagement begins with a defined decision problem. It ends with a structured research product containing explicit assumptions, a documented analytical model, and direct recommendations. The deliverable is scoped, structured, and ready to act on.
 
 **What are the four bespoke research product types?**
-Autonomy Bridge produces four named research products. Market Entry Analysis is a structured assessment of addressable opportunity, competitive density, and entry constraint for a defined platform category, operator domain, or geography — including bottom-up account sizing and a ranked entry sequence. Vendor Economics Assessment is a bottom-up analysis of vendor unit economics, pricing architecture, and margin sustainability across a competitive set. Deployment Risk Report is a diagnostic of operational, integration, and financial failure modes in a specific deployment scenario, including pilot-to-scale failure vectors and the conditions under which a deployment stalls or fails to reach target economics. Commercial Viability Assessment is a structured evaluation of whether a product or platform is commercially viable in a defined market context, testing demand assumptions against real buyer economics.
+Autonomy Bridge produces four named research products. Market Entry Analysis is a structured assessment of addressable opportunity, competitive density, and entry constraint for a defined platform category, operator domain, or geography ,  including bottom-up account sizing and a ranked entry sequence. Vendor Economics Assessment is a bottom-up analysis of vendor unit economics, pricing architecture, and margin sustainability across a competitive set. Deployment Risk Report is a diagnostic of operational, integration, and financial failure modes in a specific deployment scenario, including pilot-to-scale failure vectors and the conditions under which a deployment stalls or fails to reach target economics. Commercial Viability Assessment is a structured evaluation of whether a product or platform is commercially viable in a defined market context, testing demand assumptions against real buyer economics.
 
 **Who commissions bespoke research from Autonomy Bridge?**
 Three client types commission bespoke research. Robotics and AI vendors use it to evaluate market entry, define ICP, set pricing, and assess commercial viability before committing sales or development resources. Investors commission it to size addressable markets, stress-test vendor economics, and validate the commercial thesis of a target company in due diligence. Operators commission it to evaluate deployment economics, assess vendor commercial models before signing contracts, and build an evidence base for internal capital approval.

@@ -26,18 +26,18 @@ const publishedLabel = formatDate(entry.data.datePublished);
 const updatedLabel = formatDate(entry.data.dateModified);
 const schemaType = entry.data.schemaType ?? "ScholarlyArticle";
 
-// Hardcoded FAQ items matching the HTML below — used to emit a proper
+// Hardcoded FAQ items matching the HTML below ,  used to emit a proper
 // FAQPage schema with mainEntity (required by Google Rich Results).
 const faqItems = [
   {
     question: "What makes Autonomy Bridge research decision-grade rather than descriptive?",
     answer:
-      "Decision-grade research is structured to support a specific capital allocation or operational choice — not to describe the market generally. Every Autonomy Bridge analysis begins with a defined decision problem, establishes an explicit operational baseline before evaluating technology, and tests recommendations against downside demand scenarios rather than base case or peak assumptions. The output is a recommendation that holds across a stated range of conditions, with disclosed failure modes and explicit assumption boundaries — not a technology assessment or market overview.",
+      "Decision-grade research is structured to support a specific capital allocation or operational choice ,  not to describe the market generally. Every Autonomy Bridge analysis begins with a defined decision problem, establishes an explicit operational baseline before evaluating technology, and tests recommendations against downside demand scenarios rather than base case or peak assumptions. The output is a recommendation that holds across a stated range of conditions, with disclosed failure modes and explicit assumption boundaries ,  not a technology assessment or market overview.",
   },
   {
     question: "How does Autonomy Bridge treat vendor-supplied performance data?",
     answer:
-      "Vendor data is assigned to Tier 4 in the evidence hierarchy — the lowest analytical weight tier. No vendor performance claim receives analytical credit outside the specific operating conditions under which it was documented. Claims conditional on perfect inventory quality, continuous uptime, curated SKU profiles, or atypical order structures are restated with those dependencies made explicit before being incorporated into any model. Where a finding depends materially on vendor-supplied data without independent corroboration, that dependency is flagged in the published output.",
+      "Vendor data is assigned to Tier 4 in the evidence hierarchy ,  the lowest analytical weight tier. No vendor performance claim receives analytical credit outside the specific operating conditions under which it was documented. Claims conditional on perfect inventory quality, continuous uptime, curated SKU profiles, or atypical order structures are restated with those dependencies made explicit before being incorporated into any model. Where a finding depends materially on vendor-supplied data without independent corroboration, that dependency is flagged in the published output.",
   },
   {
     question: "What is the standard framework integration sequence for a warehouse automation study?",
@@ -47,7 +47,7 @@ const faqItems = [
   {
     question: "What are the primary limitations of Autonomy Bridge methodology?",
     answer:
-      "Four structural constraints bound the methodology: data availability (analysis quality is proportional to input quality; findings dependent on modeled rather than observed inputs are disclosed as bounded); deployment domain (methodology is calibrated for mid-size US and Canadian fulfillment and 3PL environments — other contexts require recalibration); forward-looking assumptions (multi-year demand stability projections carry higher uncertainty than conclusions based on current conditions); and scope exclusions (research does not certify equipment, validate regulatory compliance, or replace site engineering assessment).",
+      "Four structural constraints bound the methodology: data availability (analysis quality is proportional to input quality; findings dependent on modeled rather than observed inputs are disclosed as bounded); deployment domain (methodology is calibrated for mid-size US and Canadian fulfillment and 3PL environments ,  other contexts require recalibration); forward-looking assumptions (multi-year demand stability projections carry higher uncertainty than conclusions based on current conditions); and scope exclusions (research does not certify equipment, validate regulatory compliance, or replace site engineering assessment).",
   },
 ];
 
@@ -115,7 +115,7 @@ const frameworks = [
     code: "C6",
     href: "/frameworks/vendor-evaluation-framework",
     name: "Vendor Evaluation Framework",
-    desc: "Provides a neutral, architecture-first comparison methodology. Maps competing systems by the operational logic they apply — what motion they eliminate, where fixed capacity is introduced, what labor remains.",
+    desc: "Provides a neutral, architecture-first comparison methodology. Maps competing systems by the operational logic they apply ,  what motion they eliminate, where fixed capacity is introduced, what labor remains.",
     group: "Vendor",
   },
   {
@@ -149,7 +149,7 @@ const validationStages = [
   {
     num: "03",
     label: "Failure mode cross-check",
-    desc: "The Automation Failure Framework is applied systematically to the proposed architecture. Each failure mode category — technical, operational, financial — is evaluated against the specific deployment context. Failure modes that can erase the economic case under plausible conditions are documented as no-go triggers, not buried in caveats.",
+    desc: "The Automation Failure Framework is applied systematically to the proposed architecture. Each failure mode category ,  technical, operational, financial ,  is evaluated against the specific deployment context. Failure modes that can erase the economic case under plausible conditions are documented as no-go triggers, not buried in caveats.",
   },
   {
     num: "04",
@@ -161,7 +161,7 @@ const validationStages = [
 const limitations = [
   {
     label: "Data availability",
-    desc: "Analysis quality is proportional to input quality. Where Tier 1 operational data is unavailable, findings are bounded by the quality of modeled and secondary inputs. Bounded conclusions are disclosed as such. Analysis does not convert weak source data into false precision — the recommendation is narrowed and the unresolved inputs are stated explicitly.",
+    desc: "Analysis quality is proportional to input quality. Where Tier 1 operational data is unavailable, findings are bounded by the quality of modeled and secondary inputs. Bounded conclusions are disclosed as such. Analysis does not convert weak source data into false precision ,  the recommendation is narrowed and the unresolved inputs are stated explicitly.",
   },
   {
     label: "Deployment domain",
@@ -188,8 +188,8 @@ const internalCitations = [
 ];
 
 const externalCitations = [
-  { code: "C8", title: "Bureau of Labor Statistics — Occupational Employment and Wage Statistics", href: "https://www.bls.gov/oes/" },
-  { code: "C9", title: "Statistics Canada — Labour Force Survey", href: "https://www.statcan.gc.ca/en/subjects-start/labour_labour_force_survey" },
+  { code: "C8", title: "Bureau of Labor Statistics ,  Occupational Employment and Wage Statistics", href: "https://www.bls.gov/oes/" },
+  { code: "C9", title: "Statistics Canada ,  Labour Force Survey", href: "https://www.statcan.gc.ca/en/subjects-start/labour_labour_force_survey" },
 ];
 ---
 
@@ -218,7 +218,7 @@ const externalCitations = [
       <h1 class="meth-h1">Research Methodology</h1>
       <p class="meth-meta">Published: {publishedLabel} · Last updated: {updatedLabel}</p>
       <p class="meth-intro">
-        If you are evaluating Autonomy Bridge as a research or advisory partner — this page documents exactly how the work is done.
+        If you are evaluating Autonomy Bridge as a research or advisory partner ,  this page documents exactly how the work is done.
       </p>
       <p class="meth-intro">
         The analytical method, data source hierarchy, seven proprietary frameworks, validation process, and scope limitations governing all published research and advisory outputs.
@@ -249,7 +249,7 @@ const externalCitations = [
           <li>Which failure modes can erase the projected return before capital is recovered?</li>
           <li>Under what demand or operational conditions does the recommendation stop holding?</li>
         </ul>
-        <p>Analysis begins with decision framing, not technology evaluation. A deployment decision is not well-framed until the baseline operating model is defined explicitly — including labor structure, demand variability, layout constraints, and contract duration. Vendor comparison begins only after the operational baseline is established. This sequencing prevents a common failure in automation analysis: technology capability evaluated against an unspecified or optimistic baseline.</p>
+        <p>Analysis begins with decision framing, not technology evaluation. A deployment decision is not well-framed until the baseline operating model is defined explicitly ,  including labor structure, demand variability, layout constraints, and contract duration. Vendor comparison begins only after the operational baseline is established. This sequencing prevents a common failure in automation analysis: technology capability evaluated against an unspecified or optimistic baseline.</p>
         <p>The method applies equally to retrofit and greenfield environments, though it is strongest in retrofit settings where utilization economics, labor substitutability, and operational variance are the primary determinants of outcome.</p>
       </div>
     </div>
@@ -307,7 +307,7 @@ const externalCitations = [
         <span class="meth-num">03</span>
         <h2 class="meth-h2">Analytical Models</h2>
       </div>
-      <p class="meth-section-lead">Seven proprietary frameworks — each addressing a distinct decision problem. Together they form an integrated analytical system applicable across warehouse automation, 3PL operations, and AI infrastructure evaluation.</p>
+      <p class="meth-section-lead">Seven proprietary frameworks ,  each addressing a distinct decision problem. Together they form an integrated analytical system applicable across warehouse automation, 3PL operations, and AI infrastructure evaluation.</p>
       <cite class="meth-cite meth-cite--sm">© Autonomy Bridge proprietary analysis, 2026</cite>
       <div class="meth-fw-grid">
         {frameworks.map((fw) => (
@@ -346,7 +346,7 @@ const externalCitations = [
         ))}
       </div>
       <div class="meth-integration-note">
-        <p>The Vendor Economics Framework [C5] is applied when vendor financial durability is a material consideration — particularly in long-term contracts with high integration lock-in. The Workflow Architecture Framework [C7] is applied when the deployment boundary extends beyond a single subsystem and downstream impacts require explicit modeling.</p>
+        <p>The Vendor Economics Framework [C5] is applied when vendor financial durability is a material consideration ,  particularly in long-term contracts with high integration lock-in. The Workflow Architecture Framework [C7] is applied when the deployment boundary extends beyond a single subsystem and downstream impacts require explicit modeling.</p>
         <p>Cross-framework integration is governed by a consistency rule: assumptions established in one framework carry forward to all subsequent frameworks in the analysis chain. Assumption drift across frameworks is eliminated by treating the decision model as a single connected system, not a collection of independent assessments.</p>
       </div>
     </div>
@@ -401,20 +401,20 @@ const externalCitations = [
       <div class="meth-faq">
         <details class="meth-faq-item">
           <summary class="meth-faq-q">What makes Autonomy Bridge research decision-grade rather than descriptive?</summary>
-          <p class="meth-faq-a">Decision-grade research is structured to support a specific capital allocation or operational choice — not to describe the market generally. Every Autonomy Bridge analysis begins with a defined decision problem, establishes an explicit operational baseline before evaluating technology, and tests recommendations against downside demand scenarios rather than base case or peak assumptions. The output is a recommendation that holds across a stated range of conditions, with disclosed failure modes and explicit assumption boundaries — not a technology assessment or market overview.</p>
+          <p class="meth-faq-a">Decision-grade research is structured to support a specific capital allocation or operational choice ,  not to describe the market generally. Every Autonomy Bridge analysis begins with a defined decision problem, establishes an explicit operational baseline before evaluating technology, and tests recommendations against downside demand scenarios rather than base case or peak assumptions. The output is a recommendation that holds across a stated range of conditions, with disclosed failure modes and explicit assumption boundaries ,  not a technology assessment or market overview.</p>
           <cite class="meth-cite meth-cite--sm">© Autonomy Bridge proprietary analysis, 2026</cite>
         </details>
         <details class="meth-faq-item">
           <summary class="meth-faq-q">How does Autonomy Bridge treat vendor-supplied performance data?</summary>
-          <p class="meth-faq-a">Vendor data is assigned to Tier 4 in the evidence hierarchy — the lowest analytical weight tier. No vendor performance claim receives analytical credit outside the specific operating conditions under which it was documented. Claims conditional on perfect inventory quality, continuous uptime, curated SKU profiles, or atypical order structures are restated with those dependencies made explicit before being incorporated into any model. Where a finding depends materially on vendor-supplied data without independent corroboration, that dependency is flagged in the published output.</p>
+          <p class="meth-faq-a">Vendor data is assigned to Tier 4 in the evidence hierarchy ,  the lowest analytical weight tier. No vendor performance claim receives analytical credit outside the specific operating conditions under which it was documented. Claims conditional on perfect inventory quality, continuous uptime, curated SKU profiles, or atypical order structures are restated with those dependencies made explicit before being incorporated into any model. Where a finding depends materially on vendor-supplied data without independent corroboration, that dependency is flagged in the published output.</p>
         </details>
         <details class="meth-faq-item">
           <summary class="meth-faq-q">What is the standard framework integration sequence for a warehouse automation study?</summary>
-          <p class="meth-faq-a">The standard sequence is: Warehouse Automation Decision Framework (decision framing and architecture selection) → Robotics ROI Model (economic viability testing) → Automation Failure Framework (risk case construction) → Pilot-to-Scale Failure Framework (scale condition validation) → Vendor Evaluation Framework (architecture-neutral vendor comparison). The Vendor Economics Framework is added when vendor financial durability is a material consideration. The Workflow Architecture Framework is added when downstream workflow impacts require explicit modeling. Assumptions set in any framework carry forward unchanged to all subsequent frameworks — assumption drift across the chain is not permitted.</p>
+          <p class="meth-faq-a">The standard sequence is: Warehouse Automation Decision Framework (decision framing and architecture selection) → Robotics ROI Model (economic viability testing) → Automation Failure Framework (risk case construction) → Pilot-to-Scale Failure Framework (scale condition validation) → Vendor Evaluation Framework (architecture-neutral vendor comparison). The Vendor Economics Framework is added when vendor financial durability is a material consideration. The Workflow Architecture Framework is added when downstream workflow impacts require explicit modeling. Assumptions set in any framework carry forward unchanged to all subsequent frameworks ,  assumption drift across the chain is not permitted.</p>
         </details>
         <details class="meth-faq-item">
           <summary class="meth-faq-q">What are the primary limitations of Autonomy Bridge methodology?</summary>
-          <p class="meth-faq-a">Four structural constraints bound the methodology: data availability (analysis quality is proportional to input quality; findings dependent on modeled rather than observed inputs are disclosed as bounded); deployment domain (methodology is calibrated for mid-size US and Canadian fulfillment and 3PL environments — other contexts require recalibration); forward-looking assumptions (multi-year demand stability projections carry higher uncertainty than conclusions based on current conditions); and scope exclusions (research does not certify equipment, validate regulatory compliance, or replace site engineering assessment).</p>
+          <p class="meth-faq-a">Four structural constraints bound the methodology: data availability (analysis quality is proportional to input quality; findings dependent on modeled rather than observed inputs are disclosed as bounded); deployment domain (methodology is calibrated for mid-size US and Canadian fulfillment and 3PL environments ,  other contexts require recalibration); forward-looking assumptions (multi-year demand stability projections carry higher uncertainty than conclusions based on current conditions); and scope exclusions (research does not certify equipment, validate regulatory compliance, or replace site engineering assessment).</p>
         </details>
       </div>
     </div>

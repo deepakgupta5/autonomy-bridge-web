@@ -10,7 +10,7 @@ document:
 
 title: "About Autonomy Bridge"
 description: "Autonomy Bridge is a principal-led boutique research firm producing decision-grade research for vendors, investors, and operators in AI, robotics, and industrial automation markets."
-summary: "Firm positioning, research mandate, founder biography, and market gap rationale for Autonomy Bridge — a principal-led boutique research firm for AI, robotics, and industrial automation markets."
+summary: "Firm positioning, research mandate, founder biography, and market gap rationale for Autonomy Bridge ,  a principal-led boutique research firm for AI, robotics, and industrial automation markets."
 
 authors:
   - id: "author_deepak_001"
@@ -51,10 +51,10 @@ taxonomy:
     - "Industrial Automation"
 
 seo:
-  meta_title: "About Autonomy Bridge — Decision-Grade Research for AI, Robotics & Industrial Automation"
+  meta_title: "About Autonomy Bridge ,  Decision-Grade Research for AI, Robotics & Industrial Automation"
   meta_description: "Autonomy Bridge is a principal-led boutique research firm producing decision-grade research for vendors, investors, and operators in AI, robotics, and industrial automation markets."
   og_title: "About Autonomy Bridge"
-  og_description: "Principal-led boutique research firm for AI, robotics, and industrial automation markets. Decision briefs with explicit assumptions, models, and recommendations — before capital or reputation is committed."
+  og_description: "Principal-led boutique research firm for AI, robotics, and industrial automation markets. Decision briefs with explicit assumptions, models, and recommendations ,  before capital or reputation is committed."
   og_type: "website"
   twitter_card: "summary_large_image"
 
@@ -97,7 +97,7 @@ frameworks_tagged:
   - "Workflow Architecture Framework"
 
 entities:
-  primary_topic: "Autonomy Bridge — AI, Robotics, and Industrial Automation Research"
+  primary_topic: "Autonomy Bridge ,  AI, Robotics, and Industrial Automation Research"
   related_topics:
     - "Decision-Grade Research"
     - "Commercial Viability Assessment"
@@ -117,7 +117,7 @@ assets:
   - id: "img_founder_deepak"
     type: "image"
     path: "./images/deepak-gupta-placeholder.jpg"
-    alt: "Deepak Gupta — Founder and Principal Analyst, Autonomy Bridge"
+    alt: "Deepak Gupta ,  Founder and Principal Analyst, Autonomy Bridge"
     caption: "Deepak Gupta, Founder and Principal Analyst"
     replace_with: "deepak-gupta.jpg"
 
@@ -153,7 +153,7 @@ Autonomy Bridge is a principal-led boutique research firm producing decision-gra
 Deepak Gupta is the founder and principal analyst of Autonomy Bridge. He has held commercial and market development roles at eBay/Baazee, Ottonomy Robotics, and Industrybuying.com, with operating experience across North America, Europe, and Asia-Pacific spanning robotics go-to-market, B2B industrial procurement, and AI market entry. His analytical work focuses on the gap between vendor claims and what markets actually support in commercial viability, deployment economics, and go-to-market sequencing.
 
 **What is the gap Autonomy Bridge exists to fill?**
-Vendors, investors, and operators in AI, robotics, and industrial automation routinely commit capital and reputation without independent analysis. The underlying commercial assumptions are rarely tested before resources are committed. Vendor materials are not neutral. Market size figures are frequently top-down and unverifiable. Deployment economics are modeled on best-case scenarios. Failure mode data is not publicly disclosed. Macro analyst coverage is built for enterprise strategy teams with long planning horizons — not for the decision-maker who needs to know whether a specific market, segment, or deployment is commercially viable before committing resources. Autonomy Bridge produces structured, independent analysis at that decision level.
+Vendors, investors, and operators in AI, robotics, and industrial automation routinely commit capital and reputation without independent analysis. The underlying commercial assumptions are rarely tested before resources are committed. Vendor materials are not neutral. Market size figures are frequently top-down and unverifiable. Deployment economics are modeled on best-case scenarios. Failure mode data is not publicly disclosed. Macro analyst coverage is built for enterprise strategy teams with long planning horizons ,  not for the decision-maker who needs to know whether a specific market, segment, or deployment is commercially viable before committing resources. Autonomy Bridge produces structured, independent analysis at that decision level.
 
 **How does Autonomy Bridge differ from implementation consultants and systems integrators?**
-Autonomy Bridge is an analyst platform, not an implementation partner. It does not deploy, configure, or manage automation technology, and holds no commercial relationship with robotics or AI vendors — no fees, referral arrangements, or sponsored research. It is not a staffing firm, software reseller, or change management practice. Implementation consultants and integrators have commercial incentives tied to deployment outcomes. Autonomy Bridge's only output is structured research and analytical frameworks.
+Autonomy Bridge is an analyst platform, not an implementation partner. It does not deploy, configure, or manage automation technology, and holds no commercial relationship with robotics or AI vendors ,  no fees, referral arrangements, or sponsored research. It is not a staffing firm, software reseller, or change management practice. Implementation consultants and integrators have commercial incentives tied to deployment outcomes. Autonomy Bridge's only output is structured research and analytical frameworks.

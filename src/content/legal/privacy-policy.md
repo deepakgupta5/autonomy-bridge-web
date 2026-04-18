@@ -106,9 +106,9 @@ Last updated: March 15, 2026 · Applies to users in Canada and the United States
 Autonomy Bridge is a B2B research consultancy. We do not run e-commerce, manage user accounts, or store payment data. This page explains what we collect, what we do not collect, and how we use data.
 
 ## What We Collect
-**Contact form submissions** — When you submit our contact form, we receive your name, email address, and message content through Netlify Forms. We use this only to respond to your inquiry.
+**Contact form submissions** ,  When you submit our contact form, we receive your name, email address, and message content through Netlify Forms. We use this only to respond to your inquiry.
 
-**Analytics data** — We may use a privacy-first analytics tool such as Plausible to understand aggregate, anonymized traffic patterns like page views, referral sources, and approximate geography. No personal identifiers are linked to this data. No cookies are set by that analytics tool.
+**Analytics data** ,  We may use a privacy-first analytics tool such as Plausible to understand aggregate, anonymized traffic patterns like page views, referral sources, and approximate geography. No personal identifiers are linked to this data. No cookies are set by that analytics tool.
 
 ## What We Do Not Collect
 - No user accounts or passwords
@@ -124,9 +124,9 @@ Contact form data is used only to respond to your message. We do not add you to 
 Contact form submissions are retained for up to 12 months and then deleted. Aggregate, non-personal analytics data may be retained indefinitely in aggregated form only.
 
 ## Third-Party Services
-**Netlify** — We host the site on Netlify, which serves site files and processes contact form submissions.
+**Netlify** ,  We host the site on Netlify, which serves site files and processes contact form submissions.
 
-**Analytics providers** — If Plausible or a similar privacy-first analytics tool is used, it is configured for aggregate measurement and not advertising.
+**Analytics providers** ,  If Plausible or a similar privacy-first analytics tool is used, it is configured for aggregate measurement and not advertising.
 
 ## Your Rights (Canada & US)
 Canadian residents may have rights under PIPEDA and applicable provincial privacy laws. US residents may have rights under applicable state laws. You may request access to, correction of, or deletion of personal data we hold about you.

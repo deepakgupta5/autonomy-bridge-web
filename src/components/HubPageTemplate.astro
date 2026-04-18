@@ -92,11 +92,11 @@ const schema = faqSchema ? [...pageSchema, faqSchema] : pageSchema;
   // ── Hub body cleanup ─────────────────────────────────────────────────────
   // Hub markdown bodies often open with an H2 that repeats the page H1 title,
   // and contain an "X Index" H2 section that duplicates the card grid below.
-  // Both are redundant with the server-rendered hero + hub-grid — hide them.
+  // Both are redundant with the server-rendered hero + hub-grid ,  hide them.
   const hubBody = document.querySelector(".hub-body");
   if (hubBody) {
     // 1. Hide first H2 if its text matches or is a prefix of the page H1
-    //    (e.g. H1 "X — Autonomy Bridge" vs H2 "X")
+    //    (e.g. H1 "X ,  Autonomy Bridge" vs H2 "X")
     const pageH1Text = document.querySelector(".hub-intro h1")?.textContent?.trim() ?? "";
     const firstH2 = hubBody.querySelector("h2");
     const firstH2Text = firstH2?.textContent?.trim() ?? "";
