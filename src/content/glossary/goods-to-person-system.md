@@ -48,7 +48,7 @@ migration:
 
 A warehouse fulfillment architecture in which automation brings inventory to stationary human pick stations, eliminating picker travel as the primary labor efficiency lever.
 
-Goods-to-person systems invert the conventional warehouse picking model: instead of pickers traveling to inventory locations, robotic or mechanized systems retrieve inventory containers and deliver them to ergonomically designed pick stations where a human operator extracts the required items. GTP architectures reduce picker travel  -  which typically consumes 50-70% of picking labor time in manual operations  -  to near zero, dramatically increasing picks-per-hour and reducing labor requirements per unit processed. The system ceiling is pick station throughput: total GTP output cannot exceed the rate at which pick station operators can process presented containers. GTP deployments are most economically justified in high-SKU-count, high-pick-rate operations with stable order profiles. In operations with high demand variability or frequent SKU range changes, the fixed infrastructure cost of GTP creates utilization risk if volume falls below design assumptions. (Autonomy Bridge proprietary analysis, 2026)
+Goods-to-person systems bring inventory to a workstation. Evaluate the complete workflow, including replenishment, exceptions and workstation capacity. Measure avoidable labor for that operation rather than assuming an industry displacement percentage.
 
 **Related terms:** [Pick Station Throughput](/glossary/pick-station-throughput) · [Automated Storage and Retrieval System (ASRS)](/glossary/automated-storage-retrieval-system) · [Autonomous Mobile Robot (AMR)](/glossary/autonomous-mobile-robot) · [SKU Velocity](/glossary/sku-velocity)
 

@@ -127,7 +127,7 @@ integrity:
 
 # How Warehouse Automation Decisions Are Actually Made {#definition}
 
-The **Warehouse Automation Decision Framework** is a proprietary operator-side analytical model developed by Autonomy Bridge that evaluates warehouse robotics deployment as a capital allocation decision under demand uncertainty. The framework structures the decision through five sequential phases ,  Problem Identification, Vendor Evaluation, Pilot Deployment, ROI Modeling, and Scaling Decision ,  replacing vendor ROI assumptions with an operator-driven model focused on utilization risk, integration complexity, and workflow constraints. (Autonomy Bridge proprietary analysis, 2026)
+The **Warehouse Automation Decision Framework** is a proprietary operator-side analytical model developed by Autonomy Bridge that evaluates warehouse robotics deployment as a capital allocation decision under demand uncertainty. The framework structures the decision through five sequential phases ,  Problem Identification, Vendor Evaluation, Pilot Deployment, ROI Modeling, and Scaling Decision ,  replacing vendor ROI assumptions with an operator-driven model focused on utilization risk, integration complexity, and workflow constraints. (Autonomy Bridge analytical interpretation; underlying evidence not independently verified)
 
 Warehouse automation deployment in mid-size 3PL fulfillment centers is not primarily a technology decision. It is a capital allocation decision under demand uncertainty. The relevant question is whether converting variable labor capacity into fixed robotic capacity improves facility economics under real operating conditions.
 
@@ -154,7 +154,7 @@ rule_id: "HT-001"
 content: "Warehouse robotics rarely fail because the technology does not function. They fail because the facility cannot maintain sufficient utilization to justify fixed capital investment."
 :::
 
-(Autonomy Bridge proprietary analysis, 2026)
+(Autonomy Bridge analytical interpretation; underlying evidence not independently verified)
 
 ---
 
@@ -178,7 +178,7 @@ rule_id: "HT-002"
 content: "Automation does not eliminate operational bottlenecks. It often moves the bottleneck to another stage of the workflow."
 :::
 
-(Autonomy Bridge proprietary analysis, 2026)
+(Autonomy Bridge analytical interpretation; underlying evidence not independently verified)
 
 ---
 
@@ -217,7 +217,7 @@ rule_id: "HT-003"
 content: "Operational fit must be proven before financial projections become credible."
 :::
 
-(Autonomy Bridge proprietary analysis, 2026)
+(Autonomy Bridge analytical interpretation; underlying evidence not independently verified)
 
 **[NO VISIBLE IMAGE ,  metadata only: fig_001 ,  Warehouse automation decision framework, five-phase sequential flow]**
 
@@ -281,7 +281,11 @@ Automation cannot be evaluated using static ROI models because throughput varies
 
 #### Conceptual Economic Model
 
-$$ROI = \frac{(C_{labor} \times L_{sub} \times U) - C_{capex}}{Time}$$
+```
+ROI_H = (sum(S_t, t=1..H) - C0) / C0
+```
+
+C0 is initial installed investment in currency units; S_t is incremental net cash benefit in year t after operating costs; H is the chosen horizon in years. ROI_H is dimensionless for C0 > 0. A cash amount divided by time is a rate, not an ROI. Avoid counting depreciation as an extra cash cost after including C0.
 
 Automation produces positive ROI only if actual system utilization converts theoretical labor savings into real operating savings. See: [Removable Labor Share →](/glossary/removable-labor-share) · [Capital Recovery Period →](/glossary/capital-recovery-period)
 
@@ -301,7 +305,7 @@ rule_id: "HT-004"
 content: "Most vendor ROI models assume high utilization and near-complete labor substitution. Real warehouse operations rarely sustain both simultaneously."
 :::
 
-(Autonomy Bridge proprietary analysis, 2026)
+(Autonomy Bridge analytical interpretation; underlying evidence not independently verified)
 
 **[NO VISIBLE IMAGE ,  metadata only: fig_003 ,  Warehouse automation economic model, ROI as function of utilization and labor savings]**
 
@@ -345,7 +349,7 @@ rule_id: "HT-005"
 content: "Automation systems are usually designed around peak throughput requirements, but ROI depends primarily on average utilization."
 :::
 
-(Autonomy Bridge proprietary analysis, 2026)
+(Autonomy Bridge analytical interpretation; underlying evidence not independently verified)
 
 ---
 
@@ -401,7 +405,7 @@ rule_id: "HT-006"
 content: "Pilot deployments validate operational feasibility, but they do not guarantee economic viability at full scale."
 :::
 
-(Autonomy Bridge proprietary analysis, 2026)
+(Autonomy Bridge analytical interpretation; underlying evidence not independently verified)
 
 ### Implementation Protocol
 
@@ -428,7 +432,7 @@ rule_id: "HT-007"
 content: "Automation projects often fail because operators commit capital before validating utilization assumptions."
 :::
 
-(Autonomy Bridge proprietary analysis, 2026)
+(Autonomy Bridge analytical interpretation; underlying evidence not independently verified)
 
 **Applied analyses using this framework:**
 - [Goods-to-Person System Evaluation →](/use-cases/goods-to-person-system-evaluation)
@@ -460,7 +464,7 @@ rule_id: "HT-008"
 content: "Automation economics change dramatically when demand stability increases. Multi-client 3PL environments face a much higher utilization risk than captive distribution networks."
 :::
 
-(Autonomy Bridge proprietary analysis, 2026)
+(Autonomy Bridge analytical interpretation; underlying evidence not independently verified)
 
 ---
 
@@ -504,111 +508,3 @@ Updated: 2026-03-15
 Author: Deepak Gupta (author_deepak_001), Founder & Principal Analyst, Autonomy Bridge
 Schema Type: Article / FAQPage
 Frameworks tagged: Warehouse Automation Decision Framework
-
-```json
-{
-  "@context": "https://schema.org",
-  "@type": ["Article", "FAQPage"],
-  "headline": "How Warehouse Automation Decisions Are Actually Made",
-  "description": "An operator-side analytical framework for evaluating warehouse robotics deployment as a capital allocation decision under demand uncertainty in mid-size 3PL fulfillment centers.",
-  "datePublished": "2026-03-15",
-  "dateModified": "2026-03-15",
-  "inLanguage": "en",
-  "speakable": {
-    "@type": "SpeakableSpecification",
-    "cssSelector": ["#definition", "#faq"]
-  },
-  "author": [
-    {
-      "@type": "Person",
-      "name": "Deepak Gupta",
-      "@id": "author_deepak_001",
-      "jobTitle": "Founder & Principal Analyst",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Autonomy Bridge",
-        "url": "https://autonomybridge.com"
-      },
-      "url": "https://autonomybridge.com/about",
-      "sameAs": "https://www.linkedin.com/in/deepakgupta5"
-    }
-  ],
-  "publisher": {
-    "@type": "Organization",
-    "name": "Autonomy Bridge",
-    "url": "https://autonomybridge.com",
-    "sameAs": [
-      "https://www.linkedin.com/company/autonomybridge",
-      "https://twitter.com/autonomybridge"
-    ]
-  },
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://autonomybridge.com/frameworks/warehouse-automation-decision-framework"
-  },
-  "isPartOf": {
-    "@type": "WebPage",
-    "name": "Autonomy Bridge Frameworks",
-    "url": "https://autonomybridge.com/frameworks"
-  },
-  "keywords": [
-    "warehouse automation decision framework",
-    "warehouse automation",
-    "3PL fulfillment",
-    "robotics ROI",
-    "automation economics",
-    "warehouse robotics",
-    "AMR deployment",
-    "fulfillment center automation",
-    "utilization risk",
-    "capital allocation"
-  ],
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is the Warehouse Automation Decision Framework?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The Warehouse Automation Decision Framework is a proprietary operator-side analytical model developed by Autonomy Bridge that evaluates warehouse robotics deployment as a capital allocation decision under demand uncertainty. It structures the decision through five sequential phases ,  Problem Identification, Vendor Evaluation, Pilot Deployment, ROI Modeling, and Scaling Decision ,  and is designed for mid-size 3PL fulfillment warehouses operating in multi-client, variable-demand environments."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Why is warehouse automation a capital allocation decision rather than a technology decision?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Warehouse automation converts variable labor capacity into fixed infrastructure cost. Once deployed, the capital cost is fixed regardless of whether demand keeps the system active. The economic outcome depends on whether real facility demand sustains sufficient utilization to recover that capital ,  not on whether the robots perform well technically."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What makes 3PL warehouses especially high-risk for automation deployment?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Multi-client 3PL warehouses face three compounding utilization risks: seasonal demand swings that create large peaks and valleys, client churn that can remove significant order volume after deployment, and promotional spikes that distort demand patterns. Systems sized for peak demand regularly operate at low utilization during average periods, slowing capital recovery."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the most common reason warehouse automation pilots fail to scale?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Pilot deployments fail to scale because the pilot environment is insulated from the full-deployment conditions that stress the system. Pilots typically run in a single zone at higher-than-average demand density. At full scale, congestion, station limits, integration complexity, and demand variability interact in ways the pilot did not surface."
-      }
-    }
-  ],
-  "about": [
-    { "@type": "Thing", "name": "Warehouse Automation Economics" },
-    { "@type": "Thing", "name": "3PL Fulfillment Operations" },
-    { "@type": "Thing", "name": "Robotics Deployment Risk" },
-    { "@type": "Thing", "name": "Capital Allocation Under Uncertainty" },
-    { "@type": "Thing", "name": "Utilization Risk" }
-  ],
-  "mentions": [
-    { "@type": "CreativeWork", "name": "Goods-to-Person System Evaluation", "url": "https://autonomybridge.com/use-cases/goods-to-person-system-evaluation" },
-    { "@type": "CreativeWork", "name": "Warehouse Automation ROI Evaluation", "url": "https://autonomybridge.com/use-cases/warehouse-automation-roi-evaluation" },
-    { "@type": "CreativeWork", "name": "Robotics Market Entry Decision Analysis", "url": "https://autonomybridge.com/case-studies/robotics-market-entry-decision-analysis" },
-    { "@type": "CreativeWork", "name": "Pilot-to-Scale Failure Framework", "url": "https://autonomybridge.com/frameworks/pilot-to-scale-failure-framework" }
-  ]
-}
-```

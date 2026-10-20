@@ -1,0 +1,557 @@
+{
+  "passed": true,
+  "detail_pages": 55,
+  "figures": 19,
+  "pages": [
+    {
+      "route": "/frameworks/automation-failure-framework",
+      "h1": 1,
+      "figures": 0,
+      "fragment_targets_preserved": true,
+      "schema_identity_preserved": true,
+      "faq_matches_visible_text": true,
+      "unverified_dates_omitted": true,
+      "reference_destinations_preserved": true
+    },
+    {
+      "route": "/frameworks/pilot-to-scale-failure-framework",
+      "h1": 1,
+      "figures": 0,
+      "fragment_targets_preserved": true,
+      "schema_identity_preserved": true,
+      "faq_matches_visible_text": true,
+      "unverified_dates_omitted": true,
+      "reference_destinations_preserved": true
+    },
+    {
+      "route": "/frameworks/robotics-roi-model",
+      "h1": 1,
+      "figures": 1,
+      "fragment_targets_preserved": true,
+      "schema_identity_preserved": true,
+      "faq_matches_visible_text": true,
+      "unverified_dates_omitted": true,
+      "reference_destinations_preserved": true
+    },
+    {
+      "route": "/frameworks/vendor-economics-framework",
+      "h1": 1,
+      "figures": 0,
+      "fragment_targets_preserved": true,
+      "schema_identity_preserved": true,
+      "faq_matches_visible_text": true,
+      "unverified_dates_omitted": true,
+      "reference_destinations_preserved": true
+    },
+    {
+      "route": "/frameworks/vendor-evaluation-framework",
+      "h1": 1,
+      "figures": 5,
+      "fragment_targets_preserved": true,
+      "schema_identity_preserved": true,
+      "faq_matches_visible_text": true,
+      "unverified_dates_omitted": true,
+      "reference_destinations_preserved": true
+    },
+    {
+      "route": "/frameworks/warehouse-automation-decision-framework",
+      "h1": 1,
+      "figures": 5,
+      "fragment_targets_preserved": true,
+      "schema_identity_preserved": true,
+      "faq_matches_visible_text": true,
+      "unverified_dates_omitted": true,
+      "reference_destinations_preserved": true
+    },
+    {
+      "route": "/frameworks/workflow-architecture-framework",
+      "h1": 1,
+      "figures": 8,
+      "fragment_targets_preserved": true,
+      "schema_identity_preserved": true,
+      "faq_matches_visible_text": true,
+      "unverified_dates_omitted": true,
+      "reference_destinations_preserved": true
+    },
+    {
+      "route": "/insights/how-aerial-robotics-vendors-are-pricing-into-inspection-markets",
+      "h1": 1,
+      "figures": 0,
+      "fragment_targets_preserved": true,
+      "schema_identity_preserved": true,
+      "faq_matches_visible_text": true,
+      "unverified_dates_omitted": true,
+      "reference_destinations_preserved": true
+    },
+    {
+      "route": "/insights/how-investors-should-size-robotics-markets",
+      "h1": 1,
+      "figures": 0,
+      "fragment_targets_preserved": true,
+      "schema_identity_preserved": true,
+      "faq_matches_visible_text": true,
+      "unverified_dates_omitted": true,
+      "reference_destinations_preserved": true
+    },
+    {
+      "route": "/insights/how-retail-distribution-center-automation-economics-actually-work",
+      "h1": 1,
+      "figures": 0,
+      "fragment_targets_preserved": true,
+      "schema_identity_preserved": true,
+      "faq_matches_visible_text": true,
+      "unverified_dates_omitted": true,
+      "reference_destinations_preserved": true
+    },
+    {
+      "route": "/insights/how-robotics-pricing-models-determine-commercial-viability",
+      "h1": 1,
+      "figures": 0,
+      "fragment_targets_preserved": true,
+      "schema_identity_preserved": true,
+      "faq_matches_visible_text": true,
+      "unverified_dates_omitted": true,
+      "reference_destinations_preserved": true
+    },
+    {
+      "route": "/insights/how-robotics-vendors-misjudge-their-addressable-market",
+      "h1": 1,
+      "figures": 0,
+      "fragment_targets_preserved": true,
+      "schema_identity_preserved": true,
+      "faq_matches_visible_text": true,
+      "unverified_dates_omitted": true,
+      "reference_destinations_preserved": true
+    },
+    {
+      "route": "/insights/how-underwater-robotics-startups-can-break-incumbent-lock-in",
+      "h1": 1,
+      "figures": 0,
+      "fragment_targets_preserved": true,
+      "schema_identity_preserved": true,
+      "faq_matches_visible_text": true,
+      "unverified_dates_omitted": true,
+      "reference_destinations_preserved": true
+    },
+    {
+      "route": "/insights/how-warehouse-operators-evaluate-robotics-vendors",
+      "h1": 1,
+      "figures": 0,
+      "fragment_targets_preserved": true,
+      "schema_identity_preserved": true,
+      "faq_matches_visible_text": true,
+      "unverified_dates_omitted": true,
+      "reference_destinations_preserved": true
+    },
+    {
+      "route": "/insights/how-warehouse-robotics-economics-actually-works",
+      "h1": 1,
+      "figures": 0,
+      "fragment_targets_preserved": true,
+      "schema_identity_preserved": true,
+      "faq_matches_visible_text": true,
+      "unverified_dates_omitted": true,
+      "reference_destinations_preserved": true
+    },
+    {
+      "route": "/insights/how-warehouse-workflows-determine-automation-success",
+      "h1": 1,
+      "figures": 0,
+      "fragment_targets_preserved": true,
+      "schema_identity_preserved": true,
+      "faq_matches_visible_text": true,
+      "unverified_dates_omitted": true,
+      "reference_destinations_preserved": true
+    },
+    {
+      "route": "/insights/what-autonomous-vehicle-companies-get-wrong-about-freight-sales",
+      "h1": 1,
+      "figures": 0,
+      "fragment_targets_preserved": true,
+      "schema_identity_preserved": true,
+      "faq_matches_visible_text": true,
+      "unverified_dates_omitted": true,
+      "reference_destinations_preserved": true
+    },
+    {
+      "route": "/insights/what-warehouse-automation-vendors-need-to-know-about-how-buyers-decide",
+      "h1": 1,
+      "figures": 0,
+      "fragment_targets_preserved": true,
+      "schema_identity_preserved": true,
+      "faq_matches_visible_text": true,
+      "unverified_dates_omitted": true,
+      "reference_destinations_preserved": true
+    },
+    {
+      "route": "/insights/why-63-exoskeleton-companies-cant-break-through-distribution",
+      "h1": 1,
+      "figures": 0,
+      "fragment_targets_preserved": true,
+      "schema_identity_preserved": true,
+      "faq_matches_visible_text": true,
+      "unverified_dates_omitted": true,
+      "reference_destinations_preserved": true
+    },
+    {
+      "route": "/insights/why-cold-storage-automation-economics-are-structurally-different",
+      "h1": 1,
+      "figures": 0,
+      "fragment_targets_preserved": true,
+      "schema_identity_preserved": true,
+      "faq_matches_visible_text": true,
+      "unverified_dates_omitted": true,
+      "reference_destinations_preserved": true
+    },
+    {
+      "route": "/insights/why-commercial-viability-and-technical-readiness-are-not-the-same-thing",
+      "h1": 1,
+      "figures": 0,
+      "fragment_targets_preserved": true,
+      "schema_identity_preserved": true,
+      "faq_matches_visible_text": true,
+      "unverified_dates_omitted": true,
+      "reference_destinations_preserved": true
+    },
+    {
+      "route": "/insights/why-direct-only-channel-doesnt-scale-in-robotics",
+      "h1": 1,
+      "figures": 0,
+      "fragment_targets_preserved": true,
+      "schema_identity_preserved": true,
+      "faq_matches_visible_text": true,
+      "unverified_dates_omitted": true,
+      "reference_destinations_preserved": true
+    },
+    {
+      "route": "/insights/why-general-merchandise-3pls-should-not-automate-too-early",
+      "h1": 1,
+      "figures": 0,
+      "fragment_targets_preserved": true,
+      "schema_identity_preserved": true,
+      "faq_matches_visible_text": true,
+      "unverified_dates_omitted": true,
+      "reference_destinations_preserved": true
+    },
+    {
+      "route": "/insights/why-healthcare-robotics-deployments-follow-a-different-economic-logic",
+      "h1": 1,
+      "figures": 0,
+      "fragment_targets_preserved": true,
+      "schema_identity_preserved": true,
+      "faq_matches_visible_text": true,
+      "unverified_dates_omitted": true,
+      "reference_destinations_preserved": true
+    },
+    {
+      "route": "/insights/why-maritime-autonomy-revenue-is-not-what-it-appears",
+      "h1": 1,
+      "figures": 0,
+      "fragment_targets_preserved": true,
+      "schema_identity_preserved": true,
+      "faq_matches_visible_text": true,
+      "unverified_dates_omitted": true,
+      "reference_destinations_preserved": true
+    },
+    {
+      "route": "/insights/why-mid-market-operators-struggle-to-evaluate-warehouse-robotics",
+      "h1": 1,
+      "figures": 0,
+      "fragment_targets_preserved": true,
+      "schema_identity_preserved": true,
+      "faq_matches_visible_text": true,
+      "unverified_dates_omitted": true,
+      "reference_destinations_preserved": true
+    },
+    {
+      "route": "/insights/why-parcel-sortation-automation-breaks-at-low-volume",
+      "h1": 1,
+      "figures": 0,
+      "fragment_targets_preserved": true,
+      "schema_identity_preserved": true,
+      "faq_matches_visible_text": true,
+      "unverified_dates_omitted": true,
+      "reference_destinations_preserved": true
+    },
+    {
+      "route": "/insights/why-robotics-enterprise-deals-stall",
+      "h1": 1,
+      "figures": 0,
+      "fragment_targets_preserved": true,
+      "schema_identity_preserved": true,
+      "faq_matches_visible_text": true,
+      "unverified_dates_omitted": true,
+      "reference_destinations_preserved": true
+    },
+    {
+      "route": "/insights/why-robotics-pilots-fail-to-convert-to-commercial-contracts",
+      "h1": 1,
+      "figures": 0,
+      "fragment_targets_preserved": true,
+      "schema_identity_preserved": true,
+      "faq_matches_visible_text": true,
+      "unverified_dates_omitted": true,
+      "reference_destinations_preserved": true
+    },
+    {
+      "route": "/insights/why-robotics-pilots-fail-to-scale",
+      "h1": 1,
+      "figures": 0,
+      "fragment_targets_preserved": true,
+      "schema_identity_preserved": true,
+      "faq_matches_visible_text": true,
+      "unverified_dates_omitted": true,
+      "reference_destinations_preserved": true
+    },
+    {
+      "route": "/insights/why-warehouse-automation-projects-fail",
+      "h1": 1,
+      "figures": 0,
+      "fragment_targets_preserved": true,
+      "schema_identity_preserved": true,
+      "faq_matches_visible_text": true,
+      "unverified_dates_omitted": true,
+      "reference_destinations_preserved": true
+    },
+    {
+      "route": "/use-cases/aerial-robotics-commercial-viability-evaluation",
+      "h1": 1,
+      "figures": 0,
+      "fragment_targets_preserved": true,
+      "schema_identity_preserved": true,
+      "faq_matches_visible_text": true,
+      "unverified_dates_omitted": true,
+      "reference_destinations_preserved": true
+    },
+    {
+      "route": "/use-cases/amr-deployment-evaluation",
+      "h1": 1,
+      "figures": 0,
+      "fragment_targets_preserved": true,
+      "schema_identity_preserved": true,
+      "faq_matches_visible_text": true,
+      "unverified_dates_omitted": true,
+      "reference_destinations_preserved": true
+    },
+    {
+      "route": "/use-cases/cold-storage-automation-evaluation",
+      "h1": 1,
+      "figures": 0,
+      "fragment_targets_preserved": true,
+      "schema_identity_preserved": true,
+      "faq_matches_visible_text": true,
+      "unverified_dates_omitted": true,
+      "reference_destinations_preserved": true
+    },
+    {
+      "route": "/use-cases/general-merchandise-3pl-automation-evaluation",
+      "h1": 1,
+      "figures": 0,
+      "fragment_targets_preserved": true,
+      "schema_identity_preserved": true,
+      "faq_matches_visible_text": true,
+      "unverified_dates_omitted": true,
+      "reference_destinations_preserved": true
+    },
+    {
+      "route": "/use-cases/goods-to-person-system-evaluation",
+      "h1": 1,
+      "figures": 0,
+      "fragment_targets_preserved": true,
+      "schema_identity_preserved": true,
+      "faq_matches_visible_text": true,
+      "unverified_dates_omitted": true,
+      "reference_destinations_preserved": true
+    },
+    {
+      "route": "/use-cases/humanoid-platform-commercial-readiness",
+      "h1": 1,
+      "figures": 0,
+      "fragment_targets_preserved": true,
+      "schema_identity_preserved": true,
+      "faq_matches_visible_text": true,
+      "unverified_dates_omitted": true,
+      "reference_destinations_preserved": true
+    },
+    {
+      "route": "/use-cases/parcel-sortation-automation-evaluation",
+      "h1": 1,
+      "figures": 0,
+      "fragment_targets_preserved": true,
+      "schema_identity_preserved": true,
+      "faq_matches_visible_text": true,
+      "unverified_dates_omitted": true,
+      "reference_destinations_preserved": true
+    },
+    {
+      "route": "/use-cases/retail-dc-automation-evaluation",
+      "h1": 1,
+      "figures": 0,
+      "fragment_targets_preserved": true,
+      "schema_identity_preserved": true,
+      "faq_matches_visible_text": true,
+      "unverified_dates_omitted": true,
+      "reference_destinations_preserved": true
+    },
+    {
+      "route": "/use-cases/robotics-deployment-3pl-warehouses",
+      "h1": 1,
+      "figures": 0,
+      "fragment_targets_preserved": true,
+      "schema_identity_preserved": true,
+      "faq_matches_visible_text": true,
+      "unverified_dates_omitted": true,
+      "reference_destinations_preserved": true
+    },
+    {
+      "route": "/use-cases/service-robotics-deployment-evaluation",
+      "h1": 1,
+      "figures": 0,
+      "fragment_targets_preserved": true,
+      "schema_identity_preserved": true,
+      "faq_matches_visible_text": true,
+      "unverified_dates_omitted": true,
+      "reference_destinations_preserved": true
+    },
+    {
+      "route": "/use-cases/warehouse-automation-roi-evaluation",
+      "h1": 1,
+      "figures": 0,
+      "fragment_targets_preserved": true,
+      "schema_identity_preserved": true,
+      "faq_matches_visible_text": true,
+      "unverified_dates_omitted": true,
+      "reference_destinations_preserved": true
+    },
+    {
+      "route": "/case-studies/ai-robotics-market-sizing-engagement",
+      "h1": 1,
+      "figures": 0,
+      "fragment_targets_preserved": true,
+      "schema_identity_preserved": true,
+      "faq_matches_visible_text": true,
+      "unverified_dates_omitted": true,
+      "reference_destinations_preserved": true
+    },
+    {
+      "route": "/case-studies/automation-deployment-risk-assessment",
+      "h1": 1,
+      "figures": 0,
+      "fragment_targets_preserved": true,
+      "schema_identity_preserved": true,
+      "faq_matches_visible_text": true,
+      "unverified_dates_omitted": true,
+      "reference_destinations_preserved": true
+    },
+    {
+      "route": "/case-studies/cold-storage-automation-economics-assessment",
+      "h1": 1,
+      "figures": 0,
+      "fragment_targets_preserved": true,
+      "schema_identity_preserved": true,
+      "faq_matches_visible_text": true,
+      "unverified_dates_omitted": true,
+      "reference_destinations_preserved": true
+    },
+    {
+      "route": "/case-studies/general-merchandise-3pl-premature-automation-assessment",
+      "h1": 1,
+      "figures": 0,
+      "fragment_targets_preserved": true,
+      "schema_identity_preserved": true,
+      "faq_matches_visible_text": true,
+      "unverified_dates_omitted": true,
+      "reference_destinations_preserved": true
+    },
+    {
+      "route": "/case-studies/healthcare-automation-investor-market-sizing",
+      "h1": 1,
+      "figures": 0,
+      "fragment_targets_preserved": true,
+      "schema_identity_preserved": true,
+      "faq_matches_visible_text": true,
+      "unverified_dates_omitted": true,
+      "reference_destinations_preserved": true
+    },
+    {
+      "route": "/case-studies/icp-definition-inspection-robotics",
+      "h1": 1,
+      "figures": 0,
+      "fragment_targets_preserved": true,
+      "schema_identity_preserved": true,
+      "faq_matches_visible_text": true,
+      "unverified_dates_omitted": true,
+      "reference_destinations_preserved": true
+    },
+    {
+      "route": "/case-studies/off-highway-autonomy-deployment-economics",
+      "h1": 1,
+      "figures": 0,
+      "fragment_targets_preserved": true,
+      "schema_identity_preserved": true,
+      "faq_matches_visible_text": true,
+      "unverified_dates_omitted": true,
+      "reference_destinations_preserved": true
+    },
+    {
+      "route": "/case-studies/parcel-sortation-volume-sensitivity-analysis",
+      "h1": 1,
+      "figures": 0,
+      "fragment_targets_preserved": true,
+      "schema_identity_preserved": true,
+      "faq_matches_visible_text": true,
+      "unverified_dates_omitted": true,
+      "reference_destinations_preserved": true
+    },
+    {
+      "route": "/case-studies/retail-dc-peak-demand-automation-assessment",
+      "h1": 1,
+      "figures": 0,
+      "fragment_targets_preserved": true,
+      "schema_identity_preserved": true,
+      "faq_matches_visible_text": true,
+      "unverified_dates_omitted": true,
+      "reference_destinations_preserved": true
+    },
+    {
+      "route": "/case-studies/robotics-market-entry-decision-analysis",
+      "h1": 1,
+      "figures": 0,
+      "fragment_targets_preserved": true,
+      "schema_identity_preserved": true,
+      "faq_matches_visible_text": true,
+      "unverified_dates_omitted": true,
+      "reference_destinations_preserved": true
+    },
+    {
+      "route": "/case-studies/robotics-pricing-strategy-research",
+      "h1": 1,
+      "figures": 0,
+      "fragment_targets_preserved": true,
+      "schema_identity_preserved": true,
+      "faq_matches_visible_text": true,
+      "unverified_dates_omitted": true,
+      "reference_destinations_preserved": true
+    },
+    {
+      "route": "/case-studies/service-robotics-commercial-viability-assessment",
+      "h1": 1,
+      "figures": 0,
+      "fragment_targets_preserved": true,
+      "schema_identity_preserved": true,
+      "faq_matches_visible_text": true,
+      "unverified_dates_omitted": true,
+      "reference_destinations_preserved": true
+    },
+    {
+      "route": "/case-studies/vendor-deployment-viability-assessment",
+      "h1": 1,
+      "figures": 0,
+      "fragment_targets_preserved": true,
+      "schema_identity_preserved": true,
+      "faq_matches_visible_text": true,
+      "unverified_dates_omitted": true,
+      "reference_destinations_preserved": true
+    }
+  ]
+}

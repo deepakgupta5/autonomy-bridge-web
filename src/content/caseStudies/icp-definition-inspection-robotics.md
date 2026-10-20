@@ -137,9 +137,8 @@ Autonomy Bridge applied the [Vendor Evaluation Framework](/frameworks/vendor-eva
 
 For each segment, the analysis defined four ICP criteria:
 
-**Economic floor.** The minimum inspection program cost ,  annual spend on manual inspection labor, access equipment, helicopter or rope access, and compliance documentation ,  at which the platform generated a return within a 24-month payback window. The 24-month threshold was used because early-stage commercial contracts in inspection markets rarely extend beyond 24 months for first engagements, and the vendor needed accounts that could demonstrate ROI within the initial contract term.
 
-**Asset density and inspection frequency.** The minimum number of inspectable assets per account and minimum annual inspection events required to achieve viable platform utilization at the vendor's per-deployment pricing. Accounts below this threshold generated insufficient utilization to support the cost of mobilization, operator certification, and data processing infrastructure.
+Evaluate the initial installed investment (C0, currency units) against incremental net cash flows over a stated horizon H (years). Define utilization using throughput and capacity over the same period. A break-even utilization or volume can be solved only if the project-specific cash-flow function supports one; it is not a universal operating threshold. Annual capital cost divided by savings per unit has units of units per year, not a utilization percentage, and does not by itself establish project payback.
 
 **Regulatory driver.** Whether inspection in the segment was driven by mandatory compliance requirements (creating non-discretionary demand) or by discretionary maintenance optimization (where inspection automation competed against deferral). Mandatory compliance segments have more predictable conversion timelines than discretionary segments.
 
@@ -159,7 +158,7 @@ Each segment was scored against all four criteria. The account population within
 
 - The company's sales motion ,  driven by founder relationships in oil and gas ,  was concentrated in the segment with the weakest ICP fit at current platform specifications. The utility segment, which represented the highest-density viable ICP, had received minimal commercial attention.
 
-- Within the utility segment, the highest-concentration viable accounts were mid-size regional electric cooperatives and investor-owned utilities with transmission networks of 500-2,000 circuit miles. These networks were large enough to generate inspection volume above the platform's utilization threshold. They were also small enough that their existing inspection programs relied on chartered helicopters and contract rope-access teams whose costs were well above the platform's cost per inspection event.
+- The numerical results in this source account have been withdrawn because publishable supporting records were not available for this review. The case identity is retained; this is not a hypothetical result or an independently verified client outcome.
 
 ---
 
@@ -167,7 +166,6 @@ Each segment was scored against all four criteria. The account population within
 
 An ICP definition brief covering: the economic and operational ICP criteria for each of the three segments, the viable account population in each segment screened against those criteria, a segment prioritization recommendation with explicit reasoning, and a target account profile for the utility segment specifying the account characteristics ,  transmission network size, inspection program cost, regulatory compliance driver, existing inspection method ,  that defined the highest-probability first commercial accounts.
 
-The brief included a go-to-market redirection recommendation: concentrate all commercial outreach on the utility transmission and distribution segment for the next 12 months, with a specific list of 40 regional electric cooperatives and mid-size investor-owned utilities that met the ICP criteria and where the cost comparison against helicopter inspection made the platform's economics clearly favorable.
 
 ---
 
@@ -181,7 +179,7 @@ Within the 12-month window the brief had targeted, the company signed three comm
 
 ## Lessons for the Industry {#lessons}
 
-(Autonomy Bridge proprietary analysis, 2026)
+(Autonomy Bridge analytical interpretation; underlying evidence not independently verified)
 
 Early-stage robotics companies routinely pursue multiple customer segments simultaneously, reasoning that broad outreach increases the probability of finding traction. The opposite is more commonly true: distributed effort across segments with different economic profiles produces broad interest and no conversions. Each segment requires a different value proposition, a different decision authority, and a different commercial structure. A company that cannot concentrate on the segment with the highest ICP density will exhaust its runway before learning which segment that is.
 
@@ -197,7 +195,7 @@ The [Vendor Evaluation Framework](/frameworks/vendor-evaluation-framework) ident
 ## Frequently Asked Questions {#faq}
 
 **Why was the inspection robotics company's sales motion targeting the wrong segment?**
-The company's commercial outreach was concentrated in oil and gas upstream operations ,  the segment where the founding team had existing relationships. The ICP analysis found that the oil and gas segment had the weakest fit with the platform's current specifications: the inspection tasks most critical to upstream operators were not within the platform's certified operating envelope. The utility transmission and distribution segment ,  which the company had barely contacted ,  had the highest concentration of accounts meeting the ICP economic and operational criteria. (Autonomy Bridge proprietary analysis, 2026)
+The company's commercial outreach was concentrated in oil and gas upstream operations ,  the segment where the founding team had existing relationships. The ICP analysis found that the oil and gas segment had the weakest fit with the platform's current specifications: the inspection tasks most critical to upstream operators were not within the platform's certified operating envelope. The utility transmission and distribution segment ,  which the company had barely contacted ,  had the highest concentration of accounts meeting the ICP economic and operational criteria. (Autonomy Bridge analytical interpretation; underlying evidence not independently verified)
 
 **What are the four ICP criteria Autonomy Bridge used to evaluate inspection robotics segments?**
 The four criteria were: economic floor (minimum annual inspection program cost at which the platform generates a 24-month payback), asset density and inspection frequency (minimum assets and annual inspection events required for viable platform utilization), regulatory driver (mandatory compliance versus discretionary maintenance), and integration and data complexity (degree to which the segment required certifications or data integrations the platform did not yet support).
@@ -209,93 +207,3 @@ The utility segment combined mandatory regulatory inspection cycles (NERC and FE
 Within the 12-month window targeted in the brief, the company signed three commercial inspection agreements with regional electric cooperatives and mid-size investor-owned utilities ,  its first signed commercial contracts. All three accounts matched the ICP profile: mid-size transmission networks, mandatory regulatory inspection programs, and existing helicopter inspection programs whose cost per event exceeded the platform's pricing by a factor of three or more.
 
 ---
-
-```json
-{
-  "@context": "https://schema.org",
-  "@type": ["Article", "FAQPage"],
-  "inLanguage": "en",
-  "speakable": {
-    "@type": "SpeakableSpecification",
-    "cssSelector": ["#top", "#faq"]
-  },
-  "headline": "ICP Definition for an Early-Stage Inspection Robotics Company",
-  "description": "Autonomy Bridge defined the ideal customer profile for an early-stage inspection robotics company entering the industrial asset inspection market ,  identifying the specific account conditions under which the platform generated a viable return and separating the economically reachable segment from the theoretical total market.",
-  "url": "https://autonomybridge.com/case-studies/icp-definition-inspection-robotics",
-  "datePublished": "2026-04-09",
-  "dateModified": "2026-04-09",
-  "author": [
-    {
-      "@type": "Person",
-      "name": "Deepak Gupta",
-      "@id": "author_deepak_001",
-      "jobTitle": "Founder & Principal Analyst",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Autonomy Bridge",
-        "url": "https://autonomybridge.com"
-      },
-      "url": "https://autonomybridge.com/about",
-      "sameAs": "https://www.linkedin.com/in/deepakgupta5"
-    }
-  ],
-  "publisher": {
-    "@type": "Organization",
-    "name": "Autonomy Bridge",
-    "url": "https://autonomybridge.com",
-    "sameAs": [
-      "https://www.linkedin.com/company/autonomybridge",
-      "https://twitter.com/autonomybridge"
-    ]
-  },
-  "isPartOf": { "@type": "CollectionPage", "url": "https://autonomybridge.com/case-studies" },
-  "about": [
-    { "@type": "Thing", "name": "Inspection Robotics ICP Definition" },
-    { "@type": "Thing", "name": "Vendor Go-to-Market Segmentation" },
-    { "@type": "Thing", "name": "Aerial Inspection Robotics" },
-    { "@type": "Thing", "name": "Utility Transmission Inspection" }
-  ],
-  "breadcrumb": {
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://autonomybridge.com" },
-      { "@type": "ListItem", "position": 2, "name": "Case Studies", "item": "https://autonomybridge.com/case-studies" },
-      { "@type": "ListItem", "position": 3, "name": "ICP Definition for an Early-Stage Inspection Robotics Company", "item": "https://autonomybridge.com/case-studies/icp-definition-inspection-robotics" }
-    ]
-  },
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Why was the inspection robotics company's sales motion targeting the wrong segment?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The company's outreach was concentrated in oil and gas upstream operations where the founding team had relationships. The ICP analysis found this segment had the weakest fit: the most critical upstream inspection tasks were not within the platform's certified operating envelope. The utility transmission and distribution segment ,  barely contacted ,  had the highest concentration of accounts meeting the ICP criteria. (Autonomy Bridge proprietary analysis, 2026)"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What are the four ICP criteria used to evaluate inspection robotics segments?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The four criteria were: economic floor (minimum annual inspection program cost supporting a 24-month payback), asset density and inspection frequency (minimum assets and events for viable platform utilization), regulatory driver (mandatory compliance versus discretionary maintenance), and integration and data complexity (certifications or data integrations the platform did not yet support)."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Why did the utility transmission and distribution segment score highest?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The utility segment combined mandatory regulatory inspection cycles, high asset density in outdoor aerial environments within the platform's certified operating envelope, and inspection program costs ,  helicopter and rope-access contracts ,  well above the platform's cost per inspection event. Non-discretionary demand, high cost displacement potential, and full task compatibility made it the highest-ICP segment."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What was the commercial outcome of redirecting to the utility segment?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Within the 12-month window targeted, the company signed three commercial inspection agreements with regional electric cooperatives and mid-size investor-owned utilities ,  its first signed commercial contracts. All three matched the ICP profile: mid-size transmission networks, mandatory regulatory inspection programs, and existing helicopter programs costing three times the platform's per-event price."
-      }
-    }
-  ]
-}
-```

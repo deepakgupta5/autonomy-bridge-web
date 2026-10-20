@@ -141,7 +141,6 @@ Both questions require answers that vendor demonstration data, as currently avai
 
 The commercial readiness assessment applies the [Warehouse Automation Decision Framework](/frameworks/warehouse-automation-decision-framework) and [Automation Failure Framework](/frameworks/automation-failure-framework) to evaluate humanoid platform readiness across four dimensions.
 
-**Technical readiness for production conditions.** Production environments differ from demonstration environments in five measurable ways: task variation (real items vary in weight, shape, and presentation; demonstrations use controlled item sets), exception frequency (production lines encounter jams, misfeeds, damaged items, and out-of-sequence events at rates demonstrations do not replicate), cycle time requirement (production rate dictates task completion speed; demonstrations optimize for successful completion, not throughput), shift duration (production operation requires sustained performance across 8-12 hour shifts; demonstrations are episodic), and maintenance interval (production deployment requires defined maintenance schedules that do not disrupt production flow). A platform is technically ready for production deployment when it meets specifications across all five dimensions ,  not just the task completion dimension demonstrations measure.
 
 **Economic viability for the target task set.** The platform must generate a return on the investment required for deployment ,  hardware, integration, safety infrastructure, and ongoing support ,  within a commercially acceptable payback window at the target task set's labor displacement value. Labor displacement value depends on the fully-loaded cost of the human labor the platform replaces and the fraction of that labor the platform can actually displace given the task set's exception handling requirements. See: [Capital Recovery Period →](/glossary/capital-recovery-period)
 
@@ -159,7 +158,7 @@ The commercial readiness of a humanoid platform is task-set-specific, not genera
 
 ### Cycle Time at Production Rate
 
-Cycle time at production rate is the task completion speed the platform must sustain to match the throughput requirement of the production environment. A platform that can complete a pick operation in 8 seconds under demonstration conditions may achieve 12-15 seconds under production conditions with real item variation and exception handling. If the production environment requires a 6-second cycle time for line balance, the platform is not production-ready for that application regardless of its demonstration performance.
+Use measurements and documented assumptions for the operation being evaluated. The previous numerical range or performance claim was not supported by publishable evidence and has been withdrawn; no general benchmark is asserted here.
 
 ### Exception Handling Capability
 
@@ -167,7 +166,7 @@ Exception handling capability is the platform's ability to recognize and respond
 
 ### Total Cost of Deployment
 
-Total cost of deployment for a humanoid platform includes hardware (currently $50,000-$250,000 per unit at 2026 pricing for commercially available platforms), integration with existing systems, safety infrastructure modifications, maintenance contract, and the ramp period during which production rate targets are not achieved. At current hardware pricing, the labor displacement required for a viable 36-month payback is in the range of $40,000-$80,000 per unit per year ,  achievable in high-labor-cost manufacturing environments but not in lower-wage warehouse applications at current pricing. See: [Ramp Risk →](/glossary/ramp-risk)
+Related reading: [Ramp Risk →](/glossary/ramp-risk)
 
 ---
 
@@ -177,17 +176,11 @@ The commercial readiness economic model calculates required annual labor displac
 
 > **Required Annual Displacement = Total Deployment Cost ÷ Target Payback Period (years)**
 
-At current humanoid platform pricing ($50,000-$250,000 per unit) and a 36-month payback target, required annual displacement per unit is $17,000-$83,000.
 
 Annual labor displacement achievable = Fully-loaded labor cost per hour × Displaceable hours per year × Autonomous task completion rate at production conditions.
 
 Three economic readiness conditions determine deployment viability at current pricing:
 
-**High fully-loaded labor cost.** At $35-$50 per hour fully loaded ,  consistent with skilled manufacturing labor in high-cost markets (Source: Autonomy Bridge proprietary analysis, 2026) ,  a platform achieving 60% autonomous task completion across a 2,000-hour annual task exposure displaces $42,000-$60,000 per year. This clears the required displacement threshold for platforms priced at $125,000-$180,000 with a 36-month payback target.
-
-**Sufficient displaceable task hours.** The platform must be assigned to tasks that constitute enough labor hours per year to generate required displacement. A platform deployed on a task that occupies 4 hours per day for 250 days generates 1,000 task hours per year ,  half the exposure of a full-shift deployment. Task assignment determines whether the deployment generates enough displacement to recover capital.
-
-**Autonomous task completion rate at production conditions.** Current commercially available humanoid platforms achieve autonomous task completion rates of 70-85% in structured demonstration environments (Source: Autonomy Bridge proprietary analysis, 2026). Production environment rates for unstructured warehouse picking and manufacturing assembly tasks are not yet publicly documented at scale. Operators and investors should apply significant uncertainty discounts to vendor demonstration completion rates when modeling production deployment economics.
 
 ---
 
@@ -199,7 +192,6 @@ Humanoid platform deployments introduce four implementation requirements that cu
 
 **Novel maintenance requirements.** Humanoid platforms have complex mechanical systems ,  joints, actuators, balance systems, sensor arrays ,  that require maintenance competencies not present in most manufacturing or warehouse maintenance teams. Maintenance training, spare parts inventory, and vendor support contract terms are critical deployment cost variables that early-stage humanoid vendors may not yet have mature service infrastructure to support.
 
-**Ramp period uncertainty.** The ramp period for humanoid platforms in production environments ,  the time from system commissioning to sustained production-rate operation ,  is not established by industry experience as of 2026. Operators and investors should model ramp periods of 6-18 months before sustained production performance, with explicit uncertainty ranges, rather than applying the 90-180 day ramp assumptions established for warehouse AMR and goods-to-person deployments.
 
 **Regulatory and insurance landscape.** Insurance underwriting for humanoid platform deployments in production environments is an emerging area with limited actuarial history. Operators should verify insurability and premium impact before capital commitment. Regulatory requirements for humanoid platform deployment in specific industries ,  food processing, pharmaceutical manufacturing, healthcare ,  may impose qualification and validation requirements that add cost and timeline beyond standard industrial automation deployment.
 
@@ -209,7 +201,7 @@ Humanoid platform deployments introduce four implementation requirements that cu
 
 Humanoid platforms represent a genuinely novel platform category with the potential to address task sets that purpose-built automation does not serve economically ,  unstructured manipulation, general-purpose logistics, and flexible manufacturing tasks requiring dexterous handling. That potential is real. The commercial deployment conditions required to realize it at production scale are not yet established.
 
-Operators evaluating humanoid platforms in 2026 are making decisions without the industry experience data ,  ramp times, production-condition task completion rates, maintenance cost profiles, integration complexity actuals ,  that supports confident capital commitment. The appropriate evaluation posture is structured pilot design with explicit commercial readiness criteria defined before deployment begins, not capital commitment based on demonstration performance. The [Warehouse Automation Decision Framework](/frameworks/warehouse-automation-decision-framework) provides the decision criteria structure for defining those thresholds before pilot investment is made. (Autonomy Bridge proprietary analysis, 2026)
+Operators evaluating humanoid platforms in 2026 are making decisions without the industry experience data ,  ramp times, production-condition task completion rates, maintenance cost profiles, integration complexity actuals ,  that supports confident capital commitment. The appropriate evaluation posture is structured pilot design with explicit commercial readiness criteria defined before deployment begins, not capital commitment based on demonstration performance. The [Warehouse Automation Decision Framework](/frameworks/warehouse-automation-decision-framework) provides the decision criteria structure for defining those thresholds before pilot investment is made. (Autonomy Bridge analytical interpretation; underlying evidence not independently verified)
 
 **Related use cases:** [Warehouse Automation ROI Evaluation](/use-cases/warehouse-automation-roi-evaluation) · [Service Robotics Deployment Evaluation](/use-cases/service-robotics-deployment-evaluation) · [AMR Deployment Evaluation](/use-cases/amr-deployment-evaluation)
 **Related frameworks:** [Warehouse Automation Decision Framework](/frameworks/warehouse-automation-decision-framework) · [Automation Failure Framework](/frameworks/automation-failure-framework)
@@ -221,105 +213,13 @@ Operators evaluating humanoid platforms in 2026 are making decisions without the
 ## Frequently Asked Questions {#faq}
 
 **What is the humanoid platform commercial readiness assessment use case?**
-The Humanoid Platform Commercial Readiness Assessment applies the Warehouse Automation Decision Framework and Automation Failure Framework to evaluate whether a humanoid robotics platform has reached commercial readiness for production deployment in manufacturing or warehouse environments. The assessment evaluates four dimensions: technical readiness for production conditions, economic viability for the target task set at current pricing, integration complexity with existing automation infrastructure, and operator adoption capacity. (Autonomy Bridge proprietary analysis, 2026)
+The Humanoid Platform Commercial Readiness Assessment applies the Warehouse Automation Decision Framework and Automation Failure Framework to evaluate whether a humanoid robotics platform has reached commercial readiness for production deployment in manufacturing or warehouse environments. The assessment evaluates four dimensions: technical readiness for production conditions, economic viability for the target task set at current pricing, integration complexity with existing automation infrastructure, and operator adoption capacity. (Autonomy Bridge analytical interpretation; underlying evidence not independently verified)
 
 **What is the difference between demonstration capability and production deployment readiness for humanoid platforms?**
 Demonstration capability proves the platform can complete a defined task under controlled conditions with optimized item presentation, limited exception exposure, and dedicated vendor support. Production deployment readiness requires sustained performance at production cycle time across full shifts, under real item variation, with autonomous exception handling, and without production disruption during maintenance events. No commercially available humanoid platform has publicly documented production deployment readiness across a full operational environment as of 2026.
 
-**What labor cost is required for humanoid platform deployment to be economically viable at current pricing?**
-At current humanoid hardware pricing of $50,000-$250,000 per unit and a 36-month payback target, required annual labor displacement per unit is $17,000-$83,000. At a fully-loaded labor cost of $35-$50 per hour and a 60% autonomous task completion rate at production conditions, viable deployment requires 970-2,370 annual task hours per unit. This economics profile is achievable in high-labor-cost skilled manufacturing environments but is not consistently achievable in lower-wage warehouse applications at current platform pricing.
 
 **How should operators structure humanoid platform pilots to evaluate commercial readiness?**
 Operators should define commercial readiness criteria before pilot deployment begins: the minimum cycle time at production rate, the maximum acceptable exception frequency, the minimum autonomous task completion rate, and the maintenance interval requirement. The pilot should be instrumented to measure all four criteria under production conditions ,  not demonstration conditions. A pilot that does not measure production-condition performance cannot generate the evidence required to support a capital commitment decision.
 
 ---
-
-```json
-{
-  "@context": "https://schema.org",
-  "@type": ["Article", "FAQPage"],
-  "headline": "Humanoid Platform Commercial Readiness Assessment",
-  "description": "A structured decision-framework assessment for evaluating whether a humanoid robotics platform has reached commercial readiness for deployment in manufacturing or warehouse environments ,  covering technical readiness criteria, economic viability conditions, operator adoption constraints, and the gap between demonstration capability and production deployment viability.",
-  "url": "https://autonomybridge.com/use-cases/humanoid-platform-commercial-readiness",
-  "datePublished": "2026-04-09",
-  "dateModified": "2026-04-09",
-  "inLanguage": "en",
-  "speakable": {
-    "@type": "SpeakableSpecification",
-    "cssSelector": ["#top", "#faq"]
-  },
-  "author": [
-    {
-      "@type": "Person",
-      "name": "Deepak Gupta",
-      "@id": "author_deepak_001",
-      "jobTitle": "Founder & Principal Analyst",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Autonomy Bridge",
-        "url": "https://autonomybridge.com"
-      },
-      "url": "https://autonomybridge.com/about",
-      "sameAs": "https://www.linkedin.com/in/deepakgupta5"
-    }
-  ],
-  "publisher": {
-    "@type": "Organization",
-    "name": "Autonomy Bridge",
-    "url": "https://autonomybridge.com",
-    "sameAs": [
-      "https://www.linkedin.com/company/autonomybridge",
-      "https://twitter.com/autonomybridge"
-    ]
-  },
-  "isPartOf": { "@type": "CollectionPage", "url": "https://autonomybridge.com/use-cases" },
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is the humanoid platform commercial readiness assessment use case?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The Humanoid Platform Commercial Readiness Assessment applies the Warehouse Automation Decision Framework and Automation Failure Framework to evaluate whether a humanoid robotics platform has reached commercial readiness for production deployment. It evaluates four dimensions: technical readiness for production conditions, economic viability for the target task set at current pricing, integration complexity with existing automation, and operator adoption capacity. (Autonomy Bridge proprietary analysis, 2026)"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the difference between demonstration capability and production deployment readiness for humanoid platforms?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Demonstration capability proves the platform can complete a task under controlled conditions. Production deployment readiness requires sustained performance at production cycle time across full shifts, under real item variation, with autonomous exception handling, and without production disruption during maintenance events. No commercially available humanoid platform has publicly documented production deployment readiness across a full operational environment as of 2026."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What labor cost is required for humanoid platform deployment to be economically viable at current pricing?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "At current humanoid hardware pricing of $50,000-$250,000 per unit and a 36-month payback target, required annual labor displacement per unit is $17,000-$83,000. At fully-loaded labor cost of $35-$50 per hour and 60% autonomous task completion at production conditions, viable deployment requires 970-2,370 annual task hours per unit ,  achievable in high-labor-cost skilled manufacturing but not consistently achievable in lower-wage warehouse applications at current pricing."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How should operators structure humanoid platform pilots to evaluate commercial readiness?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Operators should define commercial readiness criteria before pilot deployment: minimum cycle time at production rate, maximum acceptable exception frequency, minimum autonomous task completion rate, and maintenance interval requirement. The pilot must be instrumented to measure all four criteria under production conditions ,  not demonstration conditions. A pilot that does not measure production-condition performance cannot generate the evidence required to support a capital commitment decision."
-      }
-    }
-  ],
-  "about": [
-    { "@type": "Thing", "name": "Humanoid Platform Commercial Readiness" },
-    { "@type": "Thing", "name": "Manufacturing Automation Decision" },
-    { "@type": "Thing", "name": "Technical Readiness vs Commercial Viability" },
-    { "@type": "Thing", "name": "Production Scale Robotics" }
-  ],
-  "breadcrumb": {
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://autonomybridge.com" },
-      { "@type": "ListItem", "position": 2, "name": "Use Cases", "item": "https://autonomybridge.com/use-cases" },
-      { "@type": "ListItem", "position": 3, "name": "Humanoid Platform Commercial Readiness Assessment", "item": "https://autonomybridge.com/use-cases/humanoid-platform-commercial-readiness" }
-    ]
-  }
-}
-```

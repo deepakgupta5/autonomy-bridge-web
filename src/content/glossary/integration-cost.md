@@ -44,7 +44,7 @@ migration:
 
 The capital and labor expense of connecting a robotics or automation system to existing warehouse management, ERP, and operational technology infrastructure.
 
-Integration cost covers the engineering, software development, testing, and project management required to connect a new automation system to the facility's existing technology environment  -  primarily WMS, ERP, and any existing automation controls. Integration costs are routinely underestimated in automation business cases because they are scoped after vendor selection, often performed under time pressure, and dependent on the quality of documentation from both the vendor and the incumbent technology stack. In complex multi-system environments, integration can represent 20-40% of total deployment cost. Integration cost overruns are one of the leading causes of automation projects exceeding budget and extending capital recovery timelines. The vendor evaluation process should include a structured integration scoping exercise before commercial commitment.
+Scope the interfaces, data mapping, testing, commissioning and support work for the proposed integration. Include internal labor and external charges in the cash-flow model. No standard percentage of installed cost is established here.
 
 **Related terms:** wms-integration · [Ramp Risk](/glossary/ramp-risk) · [Total Cost of Ownership](/glossary/total-cost-of-ownership)
 

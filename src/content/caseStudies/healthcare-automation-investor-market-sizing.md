@@ -117,7 +117,6 @@ integrity:
 
 A venture and growth equity firm with a healthcare technology portfolio was evaluating a potential Series A investment in a robotics company developing autonomous platforms for hospital logistics ,  specifically, autonomous mobile robots for medication delivery, specimen transport, and linen and supply logistics within acute care hospital facilities.
 
-The target company's investor materials presented a total addressable market of $4.2 billion, derived by multiplying the number of acute care hospital facilities in the United States by an estimated average system value (Source: Autonomy Bridge proprietary analysis, 2026). The investment committee found the figure credible on its face but wanted an independent assessment of the market size before proceeding with term sheet discussions. The question was whether the $4.2 billion figure was a reliable basis for evaluating the company's revenue trajectory and market position.
 
 ---
 
@@ -127,7 +126,6 @@ The investment firm needed a market size estimate grounded in the actual economi
 
 Specifically, the firm needed to know: what fraction of the U.S. acute care hospital population had the labor cost structure, operational conditions, and integration readiness to support a viable deployment at the target company's current price point? What was the realistic serviceable addressable market, and what revenue timeline did that SAM imply at plausible penetration rates?
 
-The question mattered because the target company's valuation and revenue projections were built against the $4.2 billion TAM. If the actual SAM was materially smaller, the company's projected revenue trajectory required a reassessment ,  and the investment decision required different assumptions.
 
 ---
 
@@ -137,25 +135,19 @@ Autonomy Bridge applied the [Robotics ROI Model](/frameworks/robotics-roi-model)
 
 The analysis began by defining the economic viability threshold for the platform: the minimum conditions under which a hospital deployment generated a return within a payback period acceptable to hospital capital committees. Variables assessed included: nursing and clinical support staff labor cost by hospital type and geography, the removable fraction of staff time attributable to transport tasks the platform could address, system price and total cost of ownership including EHR and building systems integration, and the ramp period required to reach full utilization.
 
-The U.S. acute care hospital population was then screened against the economic viability threshold. The screen excluded hospitals below the minimum bed count required to generate enough transport task volume for viable utilization, hospitals in labor markets where fully-loaded clinical support staff cost fell below the threshold required for payback, and hospitals whose existing IT infrastructure and building systems were assessed as incompatible with autonomous vehicle integration at reasonable cost.
+Evaluate the initial installed investment (C0, currency units) against incremental net cash flows over a stated horizon H (years). Define utilization using throughput and capacity over the same period. A break-even utilization or volume can be solved only if the project-specific cash-flow function supports one; it is not a universal operating threshold. Annual capital cost divided by savings per unit has units of units per year, not a utilization percentage, and does not by itself establish project payback.
 
 A separate regulatory screen was applied to exclude hospital categories where Centers for Medicare and Medicaid Services (CMS) conditions of participation or state health department requirements created deployment barriers independent of economics.
 
-The SAM was then subjected to a penetration model using adoption curve data from analogous hospital technology categories ,  electronic medication administration records, automated pharmacy dispensing systems ,  to produce revenue projections at year 3, year 5, and year 8.
+The numerical results in this source account have been withdrawn because publishable supporting records were not available for this review. The case identity is retained; this is not a hypothetical result or an independently verified client outcome.
 
 ---
 
 ## Key Findings {#key-findings}
 
-- The bottom-up SAM for the platform, at its current price point and system specifications, was approximately $840 million ,  approximately one-fifth of the $4.2 billion TAM presented in the target company's investor materials (Source: Autonomy Bridge proprietary analysis, 2026).
 
-- The primary driver of the TAM-to-SAM compression was labor economics: the majority of U.S. acute care hospitals employed clinical support staff at fully-loaded costs below the threshold required for the platform to generate a return within a 48-month payback window ,  the maximum acceptable for hospital capital committee approval (Source: Autonomy Bridge proprietary analysis, 2026).
+- Evaluate the initial installed investment (C0, currency units) against incremental net cash flows over a stated horizon H (years). Define utilization using throughput and capacity over the same period. A break-even utilization or volume can be solved only if the project-specific cash-flow function supports one; it is not a universal operating threshold. Annual capital cost divided by savings per unit has units of units per year, not a utilization percentage, and does not by itself establish project payback.
 
-- A secondary driver was integration cost: the platform required EHR integration and elevator control system integration that added $80,000-$140,000 per hospital deployment in integration cost. When this cost was included in total cost of ownership, the payback window at median hospital labor cost exceeded 60 months ,  outside capital committee approval thresholds for the majority of the hospital population.
-
-- The viable segment was concentrated in large urban academic medical centers and teaching hospitals (above 400 beds) in high-labor-cost markets. It also included large community hospitals in metropolitan markets where clinical support staff wages exceeded $26 per hour fully loaded.
-
-- At a base-case penetration rate derived from analogous hospital technology adoption curves (12% of SAM by year 5), projected revenue at year 5 was $101 million ,  compared to the target company's own projection of $380 million derived from TAM-based assumptions.
 
 - The revenue gap between the target company's projection and the bottom-up projection was not a product capability problem. It was a market definition problem: the company's revenue model was built against a market that was theoretically large but economically inaccessible at its current price point for the majority of target accounts.
 
@@ -163,9 +155,6 @@ The SAM was then subjected to a penetration model using adoption curve data from
 
 ## Output {#output}
 
-A market sizing brief covering: the economic viability threshold derivation, the SAM screening methodology applied to the U.S. acute care hospital population, the SAM estimate with segment breakdown by hospital type and geography, the penetration model with adoption curve sourcing and assumptions, and revenue projections at year 3, year 5, and year 8 under base, upside, and downside scenarios.
-
-The brief included a section on the conditions under which the SAM could expand: specifically, a system price reduction of approximately 30% (achievable through hardware cost reduction at scale), a simplified integration pathway reducing integration cost below $50,000 per deployment, or a shift to a managed service pricing model that reframed the deployment as an operating cost substitution rather than a capital expenditure ,  each of which would meaningfully increase the viable hospital population.
 
 A sensitivity table showed how SAM and year-5 revenue projections changed across combinations of system price and integration cost ,  giving the investment committee a range of scenarios rather than a single point estimate.
 
@@ -181,7 +170,7 @@ The firm proceeded with the investment on the restructured terms. The investment
 
 ## Lessons for the Industry {#lessons}
 
-(Autonomy Bridge proprietary analysis, 2026)
+(Autonomy Bridge analytical interpretation; underlying evidence not independently verified)
 
 TAM figures in robotics investment materials are almost universally top-down constructions: facility count multiplied by average system value. They are not incorrect as theoretical ceilings. They are consistently incorrect as investment planning inputs because they include the large fraction of the theoretical market where the economics of deployment do not work at the platform's current price point.
 
@@ -198,106 +187,9 @@ The [Robotics ROI Model](/frameworks/robotics-roi-model) provides the deployment
 
 ## Frequently Asked Questions {#faq}
 
-**What was the difference between the target company's TAM and the bottom-up SAM Autonomy Bridge produced?**
-The target company's investor materials presented a TAM of $4.2 billion derived from total U.S. acute care hospital count multiplied by average system value. The bottom-up SAM, screened against the economic viability threshold for the platform at its current price point, was approximately $840 million ,  approximately one-fifth of the TAM figure. The compression resulted primarily from hospital labor economics: the majority of U.S. acute care hospitals employ clinical support staff at costs below the threshold required for the platform to generate a return within 48 months. (Autonomy Bridge proprietary analysis, 2026)
-
-**Why is integration cost a critical variable in hospital robotics market sizing?**
-EHR integration, pharmacy system integration, and elevator control system integration add $80,000-$140,000 per hospital deployment in cost that is not reflected in system list price. When integration cost is included in total cost of ownership, the payback period at median hospital labor costs exceeds the capital committee approval threshold for the majority of the hospital population ,  removing those hospitals from the viable market regardless of platform capability.
 
 **How did the bottom-up SAM affect the investment decision?**
 The investment firm restructured the term sheet with a lower entry valuation and milestone-based tranches tied to SAM expansion triggers ,  evidence of integration cost reduction and penetration within the defined viable segment ,  rather than revenue targets derived from the TAM. The investment proceeded on the restructured terms. The SAM analysis shifted the deal from a pass to a conditional proceed.
 
-**What conditions would expand the SAM for hospital logistics robotics?**
-Three conditions materially expand the viable hospital population: a system price reduction of approximately 30% achievable through hardware cost reduction at manufacturing scale; a simplified integration pathway reducing per-deployment integration cost below $50,000; or a shift to managed service pricing that reframes the deployment as an operating cost substitution rather than a capital expenditure. Each condition reduces the economic floor and brings a larger fraction of the hospital population within the viable segment.
 
 ---
-
-```json
-{
-  "@context": "https://schema.org",
-  "@type": ["Article", "FAQPage"],
-  "inLanguage": "en",
-  "speakable": {
-    "@type": "SpeakableSpecification",
-    "cssSelector": ["#top", "#faq"]
-  },
-  "headline": "Market Sizing for an Investor in Healthcare Automation",
-  "description": "Autonomy Bridge built a bottom-up market size estimate for a healthcare-focused investment firm evaluating a portfolio position in hospital logistics automation ,  replacing the top-down TAM figures in the target company's materials with a deployment-economics-based SAM.",
-  "url": "https://autonomybridge.com/case-studies/healthcare-automation-investor-market-sizing",
-  "datePublished": "2026-04-09",
-  "dateModified": "2026-04-09",
-  "author": [
-    {
-      "@type": "Person",
-      "name": "Deepak Gupta",
-      "@id": "author_deepak_001",
-      "jobTitle": "Founder & Principal Analyst",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Autonomy Bridge",
-        "url": "https://autonomybridge.com"
-      },
-      "url": "https://autonomybridge.com/about",
-      "sameAs": "https://www.linkedin.com/in/deepakgupta5"
-    }
-  ],
-  "publisher": {
-    "@type": "Organization",
-    "name": "Autonomy Bridge",
-    "url": "https://autonomybridge.com",
-    "sameAs": [
-      "https://www.linkedin.com/company/autonomybridge",
-      "https://twitter.com/autonomybridge"
-    ]
-  },
-  "isPartOf": { "@type": "CollectionPage", "url": "https://autonomybridge.com/case-studies" },
-  "about": [
-    { "@type": "Thing", "name": "Healthcare Automation Market Sizing" },
-    { "@type": "Thing", "name": "Robotics Investment Due Diligence" },
-    { "@type": "Thing", "name": "Hospital Logistics Automation" },
-    { "@type": "Thing", "name": "Bottom-Up SAM Construction" }
-  ],
-  "breadcrumb": {
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://autonomybridge.com" },
-      { "@type": "ListItem", "position": 2, "name": "Case Studies", "item": "https://autonomybridge.com/case-studies" },
-      { "@type": "ListItem", "position": 3, "name": "Market Sizing for an Investor in Healthcare Automation", "item": "https://autonomybridge.com/case-studies/healthcare-automation-investor-market-sizing" }
-    ]
-  },
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What was the difference between the target company's TAM and the bottom-up SAM Autonomy Bridge produced?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The target company's investor materials presented a TAM of $4.2 billion. The bottom-up SAM, screened against the economic viability threshold for the platform at its current price point, was approximately $840 million ,  one-fifth of the TAM figure. The compression resulted primarily from hospital labor economics: the majority of U.S. acute care hospitals employ clinical support staff at costs below the threshold required for a 48-month payback. (Autonomy Bridge proprietary analysis, 2026)"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Why is integration cost a critical variable in hospital robotics market sizing?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "EHR integration, pharmacy system integration, and elevator control system integration add $80,000-$140,000 per hospital deployment in cost not reflected in list price. When included in total cost of ownership, the payback period at median hospital labor costs exceeds capital committee approval thresholds for the majority of the hospital population ,  removing those hospitals from the viable market regardless of platform capability."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How did the bottom-up SAM affect the investment decision?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The investment firm restructured the term sheet with a lower entry valuation and milestone-based tranches tied to SAM expansion triggers rather than TAM-derived revenue targets. The investment proceeded on the restructured terms. The SAM analysis shifted the deal from a pass to a conditional proceed."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What conditions would expand the SAM for hospital logistics robotics?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Three conditions materially expand the viable hospital population: a system price reduction of approximately 30% through hardware cost reduction at scale; a simplified integration pathway reducing per-deployment integration cost below $50,000; or a shift to managed service pricing that reframes the deployment as an operating cost substitution rather than a capital expenditure."
-      }
-    }
-  ]
-}
-```

@@ -76,6 +76,14 @@ export function renderResearchBody(html: string, diagrams: DiagramAsset[], hubPa
     // hid some sources that were not duplicated in the related navigation.
     if (tag(n) === 'pre' && value.startsWith('{') && value.includes('"@context"')) remove(n);
   }
+  // Claim withdrawals can leave empty source sections. Keep their fragment
+  // destinations while omitting headings that no longer introduce content.
+  for (const n of [...root.childNodes].reverse()) {
+    if (!/^h[2-6]$/.test(tag(n))) continue;
+    const following = root.childNodes.slice(root.childNodes.indexOf(n) + 1).find(x =>
+      !(['hr', 'span'].includes(tag(x)) || (x.nodeName === '#text' && !text(x).trim())));
+    if (!following || /^h[2-6]$/.test(tag(following))) remove(n);
+  }
   function clean(n: Node, linked = false) {
     if (['script','style','pre','code'].includes(tag(n))) return;
     if (n.nodeName === '#text') {

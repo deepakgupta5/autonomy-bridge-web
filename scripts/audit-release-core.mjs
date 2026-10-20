@@ -26,6 +26,8 @@ assert(report.pages['/contact'].after.articleText.includes('Send enquiry'));
 for(const needle of ['organizational question','defined requirement','existing attempt'])assert(report.pages['/ai-consulting'].after.articleText.toLowerCase().includes(needle));
 
 assert(readFileSync(join(dist,'robots.txt')).equals(readFileSync(join(baseline,'robots.txt'))));
-assert(readFileSync(join(dist,'_redirects')).equals(readFileSync(join(baseline,'_redirects'))));
-report.crawler_rules_and_redirects_unchanged=true;
+const lines=s=>s.split('\n').filter(l=>l.trim()&&!l.startsWith('#'));
+const exception=JSON.parse(readFileSync('config/research-review-exceptions.json'));
+assert.deepEqual(lines(readFileSync(join(dist,'_redirects'),'utf8')), [...lines(readFileSync(join(baseline,'_redirects'),'utf8')),exception.redirect_line]);
+report.crawler_rules_unchanged=true;report.redirect_registry_preserved_with_approved_diagram_redirect=true;
 writeFileSync(output,JSON.stringify(report,null,2)+'\n');console.log('Passed: five core pages, title/description/OG/schema consistency, audiences, form-only Contact, crawler/redirect preservation.');

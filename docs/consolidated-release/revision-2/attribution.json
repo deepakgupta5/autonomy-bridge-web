@@ -1,0 +1,686 @@
+{
+  "passed": true,
+  "public_files_scanned": 240,
+  "public_email_or_mailto_matches": 0,
+  "research_detail_pages": 55,
+  "research": [
+    {
+      "route": "/frameworks/automation-failure-framework",
+      "authors": [
+        "Deepak Gupta"
+      ],
+      "visible_schema_parity": true,
+      "public_references": [
+        "https://www.federalreserve.gov/releases/g17/CapNotes.htm"
+      ],
+      "proprietary_analysis_excerpts": [],
+      "numerical_claims": [
+        "U is dimensionless (multiply by 100 for percent). A hypothetical 600 tasks completed against 1,000 tasks of sustainable capacity over the same hour gives U = 60%; capacity divided by actual volume would instead be 1.67, a different ratio. Use the same task mix and operating schedule; zero capacity makes the ratio undefined. See the Federal Reserve capacity-utilization definition for output divided by capacity, not an AMR-specific threshold."
+      ],
+      "treatment": "Claim-level withdrawals and revisions are recorded in revision-2 ledgers. Remaining source accounts are identified as not independently verified; linked definitions are not evidence for client outcomes.",
+      "exception": "Definition/method references do not independently substantiate proprietary findings."
+    },
+    {
+      "route": "/frameworks/pilot-to-scale-failure-framework",
+      "authors": [
+        "Deepak Gupta"
+      ],
+      "visible_schema_parity": true,
+      "public_references": [],
+      "proprietary_analysis_excerpts": [],
+      "numerical_claims": [],
+      "treatment": "Claim-level withdrawals and revisions are recorded in revision-2 ledgers. Remaining source accounts are identified as not independently verified; linked definitions are not evidence for client outcomes.",
+      "exception": "No public third-party source links in article body; proprietary claims not independently substantiated."
+    },
+    {
+      "route": "/frameworks/robotics-roi-model",
+      "authors": [
+        "Deepak Gupta"
+      ],
+      "visible_schema_parity": true,
+      "public_references": [
+        "https://www.federalreserve.gov/releases/g17/CapNotes.htm",
+        "https://nvlpubs.nist.gov/nistpubs/ams/NIST.AMS.200-11.pdf"
+      ],
+      "proprietary_analysis_excerpts": [],
+      "numerical_claims": [
+        "Hypothetical example: 600 tasks completed in an hour against capacity of 1,000 tasks in that hour gives U = 0.60 (60%). With demand of 600 tasks/hour, Load = 0.60 and Rcapacity = 1.67. Neither ratio is a profitability threshold.",
+        "Hypothetical example: C0 = $300,000, annual avoidable labor cash cost = $120,000, annual incremental operating cash cost = $20,000, and no other benefits. S = $100,000/year. Simple payback is 3 years. At H = 5 years, ROI_H = ($500,000 − $300,000)/$300,000 = 66.7%. This is a worked example, not a client result or a recommended hurdle rate.",
+        "Method reference: NIST AMS 200-11, Appendix A1.3, printed pages 25–27 distinguishes payback time, uniform and uneven cash flows, and the limitations of payback. The horizon ROI expression above is explicitly defined here as cumulative net return divided by initial investment; it is not attributed to NIST as an empirical robotics finding."
+      ],
+      "treatment": "Claim-level withdrawals and revisions are recorded in revision-2 ledgers. Remaining source accounts are identified as not independently verified; linked definitions are not evidence for client outcomes.",
+      "exception": "Definition/method references do not independently substantiate proprietary findings."
+    },
+    {
+      "route": "/frameworks/vendor-economics-framework",
+      "authors": [
+        "Deepak Gupta"
+      ],
+      "visible_schema_parity": true,
+      "public_references": [],
+      "proprietary_analysis_excerpts": [],
+      "numerical_claims": [
+        "Here S_t is net cash benefit in year t after subscription, service and usage charges; C0 is the initial implementation investment. ROI_H is dimensionless for C0 > 0. If C0 is zero, compare net cash flows or discounted value instead of dividing by zero. Total-cost comparisons must sum recurring charges over the same horizon. RaaS models shift automation cost from capital expenditure to operating expense. This reduces initial financial exposure but introduces recurring payments that accumulate over the contract lifecycle."
+      ],
+      "treatment": "Claim-level withdrawals and revisions are recorded in revision-2 ledgers. Remaining source accounts are identified as not independently verified; linked definitions are not evidence for client outcomes.",
+      "exception": "No public third-party source links in article body; proprietary claims not independently substantiated."
+    },
+    {
+      "route": "/frameworks/vendor-evaluation-framework",
+      "authors": [
+        "Deepak Gupta"
+      ],
+      "visible_schema_parity": true,
+      "public_references": [],
+      "proprietary_analysis_excerpts": [],
+      "numerical_claims": [],
+      "treatment": "Claim-level withdrawals and revisions are recorded in revision-2 ledgers. Remaining source accounts are identified as not independently verified; linked definitions are not evidence for client outcomes.",
+      "exception": "No public third-party source links in article body; proprietary claims not independently substantiated."
+    },
+    {
+      "route": "/frameworks/warehouse-automation-decision-framework",
+      "authors": [
+        "Deepak Gupta"
+      ],
+      "visible_schema_parity": true,
+      "public_references": [],
+      "proprietary_analysis_excerpts": [],
+      "numerical_claims": [
+        "C0 is initial installed investment in currency units; S_t is incremental net cash benefit in year t after operating costs; H is the chosen horizon in years. ROI_H is dimensionless for C0 > 0. A cash amount divided by time is a rate, not an ROI. Avoid counting depreciation as an extra cash cost after including C0."
+      ],
+      "treatment": "Claim-level withdrawals and revisions are recorded in revision-2 ledgers. Remaining source accounts are identified as not independently verified; linked definitions are not evidence for client outcomes.",
+      "exception": "No public third-party source links in article body; proprietary claims not independently substantiated."
+    },
+    {
+      "route": "/frameworks/workflow-architecture-framework",
+      "authors": [
+        "Deepak Gupta"
+      ],
+      "visible_schema_parity": true,
+      "public_references": [],
+      "proprietary_analysis_excerpts": [],
+      "numerical_claims": [],
+      "treatment": "Claim-level withdrawals and revisions are recorded in revision-2 ledgers. Remaining source accounts are identified as not independently verified; linked definitions are not evidence for client outcomes.",
+      "exception": "No public third-party source links in article body; proprietary claims not independently substantiated."
+    },
+    {
+      "route": "/insights/how-aerial-robotics-vendors-are-pricing-into-inspection-markets",
+      "authors": [
+        "Deepak Gupta"
+      ],
+      "visible_schema_parity": true,
+      "public_references": [],
+      "proprietary_analysis_excerpts": [],
+      "numerical_claims": [],
+      "treatment": "Claim-level withdrawals and revisions are recorded in revision-2 ledgers. Remaining source accounts are identified as not independently verified; linked definitions are not evidence for client outcomes.",
+      "exception": "No public third-party source links in article body; proprietary claims not independently substantiated."
+    },
+    {
+      "route": "/insights/how-investors-should-size-robotics-markets",
+      "authors": [
+        "Deepak Gupta"
+      ],
+      "visible_schema_parity": true,
+      "public_references": [],
+      "proprietary_analysis_excerpts": [],
+      "numerical_claims": [],
+      "treatment": "Claim-level withdrawals and revisions are recorded in revision-2 ledgers. Remaining source accounts are identified as not independently verified; linked definitions are not evidence for client outcomes.",
+      "exception": "No public third-party source links in article body; proprietary claims not independently substantiated."
+    },
+    {
+      "route": "/insights/how-retail-distribution-center-automation-economics-actually-work",
+      "authors": [
+        "Deepak Gupta"
+      ],
+      "visible_schema_parity": true,
+      "public_references": [],
+      "proprietary_analysis_excerpts": [],
+      "numerical_claims": [],
+      "treatment": "Claim-level withdrawals and revisions are recorded in revision-2 ledgers. Remaining source accounts are identified as not independently verified; linked definitions are not evidence for client outcomes.",
+      "exception": "No public third-party source links in article body; proprietary claims not independently substantiated."
+    },
+    {
+      "route": "/insights/how-robotics-pricing-models-determine-commercial-viability",
+      "authors": [
+        "Deepak Gupta"
+      ],
+      "visible_schema_parity": true,
+      "public_references": [],
+      "proprietary_analysis_excerpts": [],
+      "numerical_claims": [],
+      "treatment": "Claim-level withdrawals and revisions are recorded in revision-2 ledgers. Remaining source accounts are identified as not independently verified; linked definitions are not evidence for client outcomes.",
+      "exception": "No public third-party source links in article body; proprietary claims not independently substantiated."
+    },
+    {
+      "route": "/insights/how-robotics-vendors-misjudge-their-addressable-market",
+      "authors": [
+        "Deepak Gupta"
+      ],
+      "visible_schema_parity": true,
+      "public_references": [],
+      "proprietary_analysis_excerpts": [],
+      "numerical_claims": [],
+      "treatment": "Claim-level withdrawals and revisions are recorded in revision-2 ledgers. Remaining source accounts are identified as not independently verified; linked definitions are not evidence for client outcomes.",
+      "exception": "No public third-party source links in article body; proprietary claims not independently substantiated."
+    },
+    {
+      "route": "/insights/how-underwater-robotics-startups-can-break-incumbent-lock-in",
+      "authors": [
+        "Deepak Gupta"
+      ],
+      "visible_schema_parity": true,
+      "public_references": [],
+      "proprietary_analysis_excerpts": [],
+      "numerical_claims": [],
+      "treatment": "Claim-level withdrawals and revisions are recorded in revision-2 ledgers. Remaining source accounts are identified as not independently verified; linked definitions are not evidence for client outcomes.",
+      "exception": "No public third-party source links in article body; proprietary claims not independently substantiated."
+    },
+    {
+      "route": "/insights/how-warehouse-operators-evaluate-robotics-vendors",
+      "authors": [
+        "Deepak Gupta"
+      ],
+      "visible_schema_parity": true,
+      "public_references": [],
+      "proprietary_analysis_excerpts": [],
+      "numerical_claims": [],
+      "treatment": "Claim-level withdrawals and revisions are recorded in revision-2 ledgers. Remaining source accounts are identified as not independently verified; linked definitions are not evidence for client outcomes.",
+      "exception": "No public third-party source links in article body; proprietary claims not independently substantiated."
+    },
+    {
+      "route": "/insights/how-warehouse-robotics-economics-actually-works",
+      "authors": [
+        "Deepak Gupta"
+      ],
+      "visible_schema_parity": true,
+      "public_references": [],
+      "proprietary_analysis_excerpts": [],
+      "numerical_claims": [],
+      "treatment": "Claim-level withdrawals and revisions are recorded in revision-2 ledgers. Remaining source accounts are identified as not independently verified; linked definitions are not evidence for client outcomes.",
+      "exception": "No public third-party source links in article body; proprietary claims not independently substantiated."
+    },
+    {
+      "route": "/insights/how-warehouse-workflows-determine-automation-success",
+      "authors": [
+        "Deepak Gupta"
+      ],
+      "visible_schema_parity": true,
+      "public_references": [],
+      "proprietary_analysis_excerpts": [],
+      "numerical_claims": [],
+      "treatment": "Claim-level withdrawals and revisions are recorded in revision-2 ledgers. Remaining source accounts are identified as not independently verified; linked definitions are not evidence for client outcomes.",
+      "exception": "No public third-party source links in article body; proprietary claims not independently substantiated."
+    },
+    {
+      "route": "/insights/what-autonomous-vehicle-companies-get-wrong-about-freight-sales",
+      "authors": [
+        "Deepak Gupta"
+      ],
+      "visible_schema_parity": true,
+      "public_references": [],
+      "proprietary_analysis_excerpts": [],
+      "numerical_claims": [],
+      "treatment": "Claim-level withdrawals and revisions are recorded in revision-2 ledgers. Remaining source accounts are identified as not independently verified; linked definitions are not evidence for client outcomes.",
+      "exception": "No public third-party source links in article body; proprietary claims not independently substantiated."
+    },
+    {
+      "route": "/insights/what-warehouse-automation-vendors-need-to-know-about-how-buyers-decide",
+      "authors": [
+        "Deepak Gupta"
+      ],
+      "visible_schema_parity": true,
+      "public_references": [],
+      "proprietary_analysis_excerpts": [],
+      "numerical_claims": [],
+      "treatment": "Claim-level withdrawals and revisions are recorded in revision-2 ledgers. Remaining source accounts are identified as not independently verified; linked definitions are not evidence for client outcomes.",
+      "exception": "No public third-party source links in article body; proprietary claims not independently substantiated."
+    },
+    {
+      "route": "/insights/why-63-exoskeleton-companies-cant-break-through-distribution",
+      "authors": [
+        "Deepak Gupta"
+      ],
+      "visible_schema_parity": true,
+      "public_references": [],
+      "proprietary_analysis_excerpts": [],
+      "numerical_claims": [],
+      "treatment": "Claim-level withdrawals and revisions are recorded in revision-2 ledgers. Remaining source accounts are identified as not independently verified; linked definitions are not evidence for client outcomes.",
+      "exception": "No public third-party source links in article body; proprietary claims not independently substantiated."
+    },
+    {
+      "route": "/insights/why-cold-storage-automation-economics-are-structurally-different",
+      "authors": [
+        "Deepak Gupta"
+      ],
+      "visible_schema_parity": true,
+      "public_references": [],
+      "proprietary_analysis_excerpts": [],
+      "numerical_claims": [],
+      "treatment": "Claim-level withdrawals and revisions are recorded in revision-2 ledgers. Remaining source accounts are identified as not independently verified; linked definitions are not evidence for client outcomes.",
+      "exception": "No public third-party source links in article body; proprietary claims not independently substantiated."
+    },
+    {
+      "route": "/insights/why-commercial-viability-and-technical-readiness-are-not-the-same-thing",
+      "authors": [
+        "Deepak Gupta"
+      ],
+      "visible_schema_parity": true,
+      "public_references": [],
+      "proprietary_analysis_excerpts": [],
+      "numerical_claims": [],
+      "treatment": "Claim-level withdrawals and revisions are recorded in revision-2 ledgers. Remaining source accounts are identified as not independently verified; linked definitions are not evidence for client outcomes.",
+      "exception": "No public third-party source links in article body; proprietary claims not independently substantiated."
+    },
+    {
+      "route": "/insights/why-direct-only-channel-doesnt-scale-in-robotics",
+      "authors": [
+        "Deepak Gupta"
+      ],
+      "visible_schema_parity": true,
+      "public_references": [],
+      "proprietary_analysis_excerpts": [],
+      "numerical_claims": [],
+      "treatment": "Claim-level withdrawals and revisions are recorded in revision-2 ledgers. Remaining source accounts are identified as not independently verified; linked definitions are not evidence for client outcomes.",
+      "exception": "No public third-party source links in article body; proprietary claims not independently substantiated."
+    },
+    {
+      "route": "/insights/why-general-merchandise-3pls-should-not-automate-too-early",
+      "authors": [
+        "Deepak Gupta"
+      ],
+      "visible_schema_parity": true,
+      "public_references": [],
+      "proprietary_analysis_excerpts": [],
+      "numerical_claims": [],
+      "treatment": "Claim-level withdrawals and revisions are recorded in revision-2 ledgers. Remaining source accounts are identified as not independently verified; linked definitions are not evidence for client outcomes.",
+      "exception": "No public third-party source links in article body; proprietary claims not independently substantiated."
+    },
+    {
+      "route": "/insights/why-healthcare-robotics-deployments-follow-a-different-economic-logic",
+      "authors": [
+        "Deepak Gupta"
+      ],
+      "visible_schema_parity": true,
+      "public_references": [],
+      "proprietary_analysis_excerpts": [],
+      "numerical_claims": [],
+      "treatment": "Claim-level withdrawals and revisions are recorded in revision-2 ledgers. Remaining source accounts are identified as not independently verified; linked definitions are not evidence for client outcomes.",
+      "exception": "No public third-party source links in article body; proprietary claims not independently substantiated."
+    },
+    {
+      "route": "/insights/why-maritime-autonomy-revenue-is-not-what-it-appears",
+      "authors": [
+        "Deepak Gupta"
+      ],
+      "visible_schema_parity": true,
+      "public_references": [],
+      "proprietary_analysis_excerpts": [],
+      "numerical_claims": [],
+      "treatment": "Claim-level withdrawals and revisions are recorded in revision-2 ledgers. Remaining source accounts are identified as not independently verified; linked definitions are not evidence for client outcomes.",
+      "exception": "No public third-party source links in article body; proprietary claims not independently substantiated."
+    },
+    {
+      "route": "/insights/why-mid-market-operators-struggle-to-evaluate-warehouse-robotics",
+      "authors": [
+        "Deepak Gupta"
+      ],
+      "visible_schema_parity": true,
+      "public_references": [],
+      "proprietary_analysis_excerpts": [],
+      "numerical_claims": [],
+      "treatment": "Claim-level withdrawals and revisions are recorded in revision-2 ledgers. Remaining source accounts are identified as not independently verified; linked definitions are not evidence for client outcomes.",
+      "exception": "No public third-party source links in article body; proprietary claims not independently substantiated."
+    },
+    {
+      "route": "/insights/why-parcel-sortation-automation-breaks-at-low-volume",
+      "authors": [
+        "Deepak Gupta"
+      ],
+      "visible_schema_parity": true,
+      "public_references": [],
+      "proprietary_analysis_excerpts": [],
+      "numerical_claims": [],
+      "treatment": "Claim-level withdrawals and revisions are recorded in revision-2 ledgers. Remaining source accounts are identified as not independently verified; linked definitions are not evidence for client outcomes.",
+      "exception": "No public third-party source links in article body; proprietary claims not independently substantiated."
+    },
+    {
+      "route": "/insights/why-robotics-enterprise-deals-stall",
+      "authors": [
+        "Deepak Gupta"
+      ],
+      "visible_schema_parity": true,
+      "public_references": [],
+      "proprietary_analysis_excerpts": [],
+      "numerical_claims": [],
+      "treatment": "Claim-level withdrawals and revisions are recorded in revision-2 ledgers. Remaining source accounts are identified as not independently verified; linked definitions are not evidence for client outcomes.",
+      "exception": "No public third-party source links in article body; proprietary claims not independently substantiated."
+    },
+    {
+      "route": "/insights/why-robotics-pilots-fail-to-convert-to-commercial-contracts",
+      "authors": [
+        "Deepak Gupta"
+      ],
+      "visible_schema_parity": true,
+      "public_references": [],
+      "proprietary_analysis_excerpts": [],
+      "numerical_claims": [],
+      "treatment": "Claim-level withdrawals and revisions are recorded in revision-2 ledgers. Remaining source accounts are identified as not independently verified; linked definitions are not evidence for client outcomes.",
+      "exception": "No public third-party source links in article body; proprietary claims not independently substantiated."
+    },
+    {
+      "route": "/insights/why-robotics-pilots-fail-to-scale",
+      "authors": [
+        "Deepak Gupta"
+      ],
+      "visible_schema_parity": true,
+      "public_references": [],
+      "proprietary_analysis_excerpts": [],
+      "numerical_claims": [
+        "C0 is installed investment (currency units), S_t is net cash benefit in year t, and H is the horizon in years. ROI_H is dimensionless for C0 > 0; simple payback in years is C0/S only when positive annual net savings S are constant."
+      ],
+      "treatment": "Claim-level withdrawals and revisions are recorded in revision-2 ledgers. Remaining source accounts are identified as not independently verified; linked definitions are not evidence for client outcomes.",
+      "exception": "No public third-party source links in article body; proprietary claims not independently substantiated."
+    },
+    {
+      "route": "/insights/why-warehouse-automation-projects-fail",
+      "authors": [
+        "Deepak Gupta"
+      ],
+      "visible_schema_parity": true,
+      "public_references": [],
+      "proprietary_analysis_excerpts": [],
+      "numerical_claims": [],
+      "treatment": "Claim-level withdrawals and revisions are recorded in revision-2 ledgers. Remaining source accounts are identified as not independently verified; linked definitions are not evidence for client outcomes.",
+      "exception": "No public third-party source links in article body; proprietary claims not independently substantiated."
+    },
+    {
+      "route": "/use-cases/aerial-robotics-commercial-viability-evaluation",
+      "authors": [
+        "Deepak Gupta"
+      ],
+      "visible_schema_parity": true,
+      "public_references": [],
+      "proprietary_analysis_excerpts": [],
+      "numerical_claims": [],
+      "treatment": "Claim-level withdrawals and revisions are recorded in revision-2 ledgers. Remaining source accounts are identified as not independently verified; linked definitions are not evidence for client outcomes.",
+      "exception": "No public third-party source links in article body; proprietary claims not independently substantiated."
+    },
+    {
+      "route": "/use-cases/amr-deployment-evaluation",
+      "authors": [
+        "Deepak Gupta"
+      ],
+      "visible_schema_parity": true,
+      "public_references": [],
+      "proprietary_analysis_excerpts": [],
+      "numerical_claims": [],
+      "treatment": "Claim-level withdrawals and revisions are recorded in revision-2 ledgers. Remaining source accounts are identified as not independently verified; linked definitions are not evidence for client outcomes.",
+      "exception": "No public third-party source links in article body; proprietary claims not independently substantiated."
+    },
+    {
+      "route": "/use-cases/cold-storage-automation-evaluation",
+      "authors": [
+        "Deepak Gupta"
+      ],
+      "visible_schema_parity": true,
+      "public_references": [],
+      "proprietary_analysis_excerpts": [],
+      "numerical_claims": [],
+      "treatment": "Claim-level withdrawals and revisions are recorded in revision-2 ledgers. Remaining source accounts are identified as not independently verified; linked definitions are not evidence for client outcomes.",
+      "exception": "No public third-party source links in article body; proprietary claims not independently substantiated."
+    },
+    {
+      "route": "/use-cases/general-merchandise-3pl-automation-evaluation",
+      "authors": [
+        "Deepak Gupta"
+      ],
+      "visible_schema_parity": true,
+      "public_references": [],
+      "proprietary_analysis_excerpts": [],
+      "numerical_claims": [],
+      "treatment": "Claim-level withdrawals and revisions are recorded in revision-2 ledgers. Remaining source accounts are identified as not independently verified; linked definitions are not evidence for client outcomes.",
+      "exception": "No public third-party source links in article body; proprietary claims not independently substantiated."
+    },
+    {
+      "route": "/use-cases/goods-to-person-system-evaluation",
+      "authors": [
+        "Deepak Gupta"
+      ],
+      "visible_schema_parity": true,
+      "public_references": [],
+      "proprietary_analysis_excerpts": [],
+      "numerical_claims": [],
+      "treatment": "Claim-level withdrawals and revisions are recorded in revision-2 ledgers. Remaining source accounts are identified as not independently verified; linked definitions are not evidence for client outcomes.",
+      "exception": "No public third-party source links in article body; proprietary claims not independently substantiated."
+    },
+    {
+      "route": "/use-cases/humanoid-platform-commercial-readiness",
+      "authors": [
+        "Deepak Gupta"
+      ],
+      "visible_schema_parity": true,
+      "public_references": [],
+      "proprietary_analysis_excerpts": [],
+      "numerical_claims": [],
+      "treatment": "Claim-level withdrawals and revisions are recorded in revision-2 ledgers. Remaining source accounts are identified as not independently verified; linked definitions are not evidence for client outcomes.",
+      "exception": "No public third-party source links in article body; proprietary claims not independently substantiated."
+    },
+    {
+      "route": "/use-cases/parcel-sortation-automation-evaluation",
+      "authors": [
+        "Deepak Gupta"
+      ],
+      "visible_schema_parity": true,
+      "public_references": [],
+      "proprietary_analysis_excerpts": [],
+      "numerical_claims": [],
+      "treatment": "Claim-level withdrawals and revisions are recorded in revision-2 ledgers. Remaining source accounts are identified as not independently verified; linked definitions are not evidence for client outcomes.",
+      "exception": "No public third-party source links in article body; proprietary claims not independently substantiated."
+    },
+    {
+      "route": "/use-cases/retail-dc-automation-evaluation",
+      "authors": [
+        "Deepak Gupta"
+      ],
+      "visible_schema_parity": true,
+      "public_references": [],
+      "proprietary_analysis_excerpts": [],
+      "numerical_claims": [],
+      "treatment": "Claim-level withdrawals and revisions are recorded in revision-2 ledgers. Remaining source accounts are identified as not independently verified; linked definitions are not evidence for client outcomes.",
+      "exception": "No public third-party source links in article body; proprietary claims not independently substantiated."
+    },
+    {
+      "route": "/use-cases/robotics-deployment-3pl-warehouses",
+      "authors": [
+        "Deepak Gupta"
+      ],
+      "visible_schema_parity": true,
+      "public_references": [],
+      "proprietary_analysis_excerpts": [],
+      "numerical_claims": [],
+      "treatment": "Claim-level withdrawals and revisions are recorded in revision-2 ledgers. Remaining source accounts are identified as not independently verified; linked definitions are not evidence for client outcomes.",
+      "exception": "No public third-party source links in article body; proprietary claims not independently substantiated."
+    },
+    {
+      "route": "/use-cases/service-robotics-deployment-evaluation",
+      "authors": [
+        "Deepak Gupta"
+      ],
+      "visible_schema_parity": true,
+      "public_references": [],
+      "proprietary_analysis_excerpts": [],
+      "numerical_claims": [],
+      "treatment": "Claim-level withdrawals and revisions are recorded in revision-2 ledgers. Remaining source accounts are identified as not independently verified; linked definitions are not evidence for client outcomes.",
+      "exception": "No public third-party source links in article body; proprietary claims not independently substantiated."
+    },
+    {
+      "route": "/use-cases/warehouse-automation-roi-evaluation",
+      "authors": [
+        "Deepak Gupta"
+      ],
+      "visible_schema_parity": true,
+      "public_references": [],
+      "proprietary_analysis_excerpts": [],
+      "numerical_claims": [],
+      "treatment": "Claim-level withdrawals and revisions are recorded in revision-2 ledgers. Remaining source accounts are identified as not independently verified; linked definitions are not evidence for client outcomes.",
+      "exception": "No public third-party source links in article body; proprietary claims not independently substantiated."
+    },
+    {
+      "route": "/case-studies/ai-robotics-market-sizing-engagement",
+      "authors": [
+        "Deepak Gupta"
+      ],
+      "visible_schema_parity": true,
+      "public_references": [],
+      "proprietary_analysis_excerpts": [],
+      "numerical_claims": [],
+      "treatment": "Claim-level withdrawals and revisions are recorded in revision-2 ledgers. Remaining source accounts are identified as not independently verified; linked definitions are not evidence for client outcomes.",
+      "exception": "No public third-party source links in article body; proprietary claims not independently substantiated."
+    },
+    {
+      "route": "/case-studies/automation-deployment-risk-assessment",
+      "authors": [
+        "Deepak Gupta"
+      ],
+      "visible_schema_parity": true,
+      "public_references": [],
+      "proprietary_analysis_excerpts": [],
+      "numerical_claims": [],
+      "treatment": "Claim-level withdrawals and revisions are recorded in revision-2 ledgers. Remaining source accounts are identified as not independently verified; linked definitions are not evidence for client outcomes.",
+      "exception": "No public third-party source links in article body; proprietary claims not independently substantiated."
+    },
+    {
+      "route": "/case-studies/cold-storage-automation-economics-assessment",
+      "authors": [
+        "Deepak Gupta"
+      ],
+      "visible_schema_parity": true,
+      "public_references": [],
+      "proprietary_analysis_excerpts": [],
+      "numerical_claims": [],
+      "treatment": "Claim-level withdrawals and revisions are recorded in revision-2 ledgers. Remaining source accounts are identified as not independently verified; linked definitions are not evidence for client outcomes.",
+      "exception": "No public third-party source links in article body; proprietary claims not independently substantiated."
+    },
+    {
+      "route": "/case-studies/general-merchandise-3pl-premature-automation-assessment",
+      "authors": [
+        "Deepak Gupta"
+      ],
+      "visible_schema_parity": true,
+      "public_references": [],
+      "proprietary_analysis_excerpts": [],
+      "numerical_claims": [],
+      "treatment": "Claim-level withdrawals and revisions are recorded in revision-2 ledgers. Remaining source accounts are identified as not independently verified; linked definitions are not evidence for client outcomes.",
+      "exception": "No public third-party source links in article body; proprietary claims not independently substantiated."
+    },
+    {
+      "route": "/case-studies/healthcare-automation-investor-market-sizing",
+      "authors": [
+        "Deepak Gupta"
+      ],
+      "visible_schema_parity": true,
+      "public_references": [],
+      "proprietary_analysis_excerpts": [],
+      "numerical_claims": [],
+      "treatment": "Claim-level withdrawals and revisions are recorded in revision-2 ledgers. Remaining source accounts are identified as not independently verified; linked definitions are not evidence for client outcomes.",
+      "exception": "No public third-party source links in article body; proprietary claims not independently substantiated."
+    },
+    {
+      "route": "/case-studies/icp-definition-inspection-robotics",
+      "authors": [
+        "Deepak Gupta"
+      ],
+      "visible_schema_parity": true,
+      "public_references": [],
+      "proprietary_analysis_excerpts": [],
+      "numerical_claims": [],
+      "treatment": "Claim-level withdrawals and revisions are recorded in revision-2 ledgers. Remaining source accounts are identified as not independently verified; linked definitions are not evidence for client outcomes.",
+      "exception": "No public third-party source links in article body; proprietary claims not independently substantiated."
+    },
+    {
+      "route": "/case-studies/off-highway-autonomy-deployment-economics",
+      "authors": [
+        "Deepak Gupta"
+      ],
+      "visible_schema_parity": true,
+      "public_references": [],
+      "proprietary_analysis_excerpts": [],
+      "numerical_claims": [],
+      "treatment": "Claim-level withdrawals and revisions are recorded in revision-2 ledgers. Remaining source accounts are identified as not independently verified; linked definitions are not evidence for client outcomes.",
+      "exception": "No public third-party source links in article body; proprietary claims not independently substantiated."
+    },
+    {
+      "route": "/case-studies/parcel-sortation-volume-sensitivity-analysis",
+      "authors": [
+        "Deepak Gupta"
+      ],
+      "visible_schema_parity": true,
+      "public_references": [],
+      "proprietary_analysis_excerpts": [],
+      "numerical_claims": [],
+      "treatment": "Claim-level withdrawals and revisions are recorded in revision-2 ledgers. Remaining source accounts are identified as not independently verified; linked definitions are not evidence for client outcomes.",
+      "exception": "No public third-party source links in article body; proprietary claims not independently substantiated."
+    },
+    {
+      "route": "/case-studies/retail-dc-peak-demand-automation-assessment",
+      "authors": [
+        "Deepak Gupta"
+      ],
+      "visible_schema_parity": true,
+      "public_references": [],
+      "proprietary_analysis_excerpts": [],
+      "numerical_claims": [],
+      "treatment": "Claim-level withdrawals and revisions are recorded in revision-2 ledgers. Remaining source accounts are identified as not independently verified; linked definitions are not evidence for client outcomes.",
+      "exception": "No public third-party source links in article body; proprietary claims not independently substantiated."
+    },
+    {
+      "route": "/case-studies/robotics-market-entry-decision-analysis",
+      "authors": [
+        "Deepak Gupta"
+      ],
+      "visible_schema_parity": true,
+      "public_references": [],
+      "proprietary_analysis_excerpts": [],
+      "numerical_claims": [],
+      "treatment": "Claim-level withdrawals and revisions are recorded in revision-2 ledgers. Remaining source accounts are identified as not independently verified; linked definitions are not evidence for client outcomes.",
+      "exception": "No public third-party source links in article body; proprietary claims not independently substantiated."
+    },
+    {
+      "route": "/case-studies/robotics-pricing-strategy-research",
+      "authors": [
+        "Deepak Gupta"
+      ],
+      "visible_schema_parity": true,
+      "public_references": [],
+      "proprietary_analysis_excerpts": [],
+      "numerical_claims": [],
+      "treatment": "Claim-level withdrawals and revisions are recorded in revision-2 ledgers. Remaining source accounts are identified as not independently verified; linked definitions are not evidence for client outcomes.",
+      "exception": "No public third-party source links in article body; proprietary claims not independently substantiated."
+    },
+    {
+      "route": "/case-studies/service-robotics-commercial-viability-assessment",
+      "authors": [
+        "Deepak Gupta"
+      ],
+      "visible_schema_parity": true,
+      "public_references": [],
+      "proprietary_analysis_excerpts": [],
+      "numerical_claims": [],
+      "treatment": "Claim-level withdrawals and revisions are recorded in revision-2 ledgers. Remaining source accounts are identified as not independently verified; linked definitions are not evidence for client outcomes.",
+      "exception": "No public third-party source links in article body; proprietary claims not independently substantiated."
+    },
+    {
+      "route": "/case-studies/vendor-deployment-viability-assessment",
+      "authors": [
+        "Deepak Gupta"
+      ],
+      "visible_schema_parity": true,
+      "public_references": [],
+      "proprietary_analysis_excerpts": [],
+      "numerical_claims": [],
+      "treatment": "Claim-level withdrawals and revisions are recorded in revision-2 ledgers. Remaining source accounts are identified as not independently verified; linked definitions are not evidence for client outcomes.",
+      "exception": "No public third-party source links in article body; proprietary claims not independently substantiated."
+    }
+  ],
+  "scope": "Source/built attribution audit; not independent validation of underlying proprietary records. Unsubstantiated public dates omitted; original source date records retained visibly."
+}

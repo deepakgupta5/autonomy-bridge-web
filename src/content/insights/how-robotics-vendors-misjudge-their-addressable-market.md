@@ -157,7 +157,7 @@ This is not a data problem. The data required to define a serviceable market cor
 
 ## The TAM Trap {#the-tam-trap}
 
-The standard market sizing approach for robotics vendors follows a top-down structure: identify the total number of facilities in the target end market, multiply by an estimated system value, and call the result the total addressable market. A vendor selling autonomous mobile robots for warehouse applications might calculate: 20,000 mid-size warehouses in North America × $500,000 average system value = $10 billion TAM.
+Use measurements and documented assumptions for the operation being evaluated. The previous numerical range or performance claim was not supported by publishable evidence and has been withdrawn; no general benchmark is asserted here.
 
 This number is not wrong as a conceptual ceiling. It is wrong as an operational planning input.
 
@@ -166,7 +166,6 @@ The TAM figure counts every facility in the category. It does not distinguish be
 > **TAM = all facilities in category × average system value**
 > **SAM = facilities where deployment economics are viable × system value per viable deployment**
 
-The gap between TAM and SAM in robotics is not a marginal discount. In most platform categories, fewer than 20% of facilities in the theoretical total addressable market meet the economic conditions required for a viable deployment at current system pricing (Source: Autonomy Bridge proprietary analysis, 2026). Vendors who plan against TAM are building pipelines, hiring sales capacity, and setting board expectations against a number that overstates their realistic market by a factor of four or more.
 
 See: [Serviceable Addressable Market →](/glossary/serviceable-addressable-market)
 
@@ -180,7 +179,7 @@ ICP definition failure occurs when vendors define their target customer by firmo
 
 The economic and operational criteria that matter for most robotics platforms include:
 
-**Labor cost basis.** The system must displace labor cost at a rate sufficient to recover capital over the target payback period. If the target account's fully-loaded labor cost is below the threshold required, the system cannot generate a return regardless of operational fit.
+Evaluate the initial installed investment (C0, currency units) against incremental net cash flows over a stated horizon H (years). Define utilization using throughput and capacity over the same period. A break-even utilization or volume can be solved only if the project-specific cash-flow function supports one; it is not a universal operating threshold. Annual capital cost divided by savings per unit has units of units per year, not a utilization percentage, and does not by itself establish project payback.
 
 **Volume stability.** Fixed-capacity automation requires sustained utilization. If the account's volume is seasonal, contract-dependent, or structurally variable, the system will be underutilized during low-demand periods while carrying its full fixed cost.
 
@@ -230,7 +229,7 @@ The commercial consequences of ICP definition failure compound over time.
 
 Correcting ICP definition failure requires replacing firmographic segmentation with deployment economics screening.
 
-**Step 1: Define the economic floor.** Identify the minimum conditions ,  labor cost per hour, annual throughput volume, peak-to-average ratio, workflow structure ,  under which the system generates a return at the target payback period. This is the economic floor. Accounts below the floor are not viable at current system economics.
+Evaluate the initial installed investment (C0, currency units) against incremental net cash flows over a stated horizon H (years). Define utilization using throughput and capacity over the same period. A break-even utilization or volume can be solved only if the project-specific cash-flow function supports one; it is not a universal operating threshold. Annual capital cost divided by savings per unit has units of units per year, not a utilization percentage, and does not by itself establish project payback.
 
 **Step 2: Define the operational compatibility criteria.** Specify the workflow conditions the system requires: task structure, SKU density, facility layout parameters, WMS integration requirements, floor space configuration. Accounts that do not meet these criteria require workflow restructuring whose cost must be included in the investment model.
 
@@ -310,119 +309,3 @@ Updated: 2026-04-09
 Author: Deepak Gupta (author_deepak_001), Founder & Principal Analyst, Autonomy Bridge
 Schema Type: Article / FAQPage
 Frameworks tagged: Vendor Economics Framework
-
-```json
-{
-  "@context": "https://schema.org",
-  "@type": ["Article", "FAQPage"],
-  "headline": "How Robotics Vendors Misjudge Their Addressable Market",
-  "description": "Most robotics vendors define their addressable market by technology category and end-market size rather than by the specific conditions under which their product is economically viable. This insight explains how ICP definition failure causes misdirected sales effort, unsustainable pilot pipelines, and commercial stall.",
-  "datePublished": "2026-04-09",
-  "dateModified": "2026-04-09",
-  "inLanguage": "en",
-  "speakable": {
-    "@type": "SpeakableSpecification",
-    "cssSelector": ["#introduction", "#faq"]
-  },
-  "author": [
-    {
-      "@type": "Person",
-      "name": "Deepak Gupta",
-      "@id": "author_deepak_001",
-      "jobTitle": "Founder & Principal Analyst",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Autonomy Bridge",
-        "url": "https://autonomybridge.com"
-      },
-      "url": "https://autonomybridge.com/about",
-      "sameAs": "https://www.linkedin.com/in/deepakgupta5"
-    }
-  ],
-  "publisher": {
-    "@type": "Organization",
-    "name": "Autonomy Bridge",
-    "url": "https://autonomybridge.com",
-    "sameAs": [
-      "https://www.linkedin.com/company/autonomybridge",
-      "https://twitter.com/autonomybridge"
-    ]
-  },
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://autonomybridge.com/insights/how-robotics-vendors-misjudge-their-addressable-market"
-  },
-  "isPartOf": {
-    "@type": "WebPage",
-    "name": "Autonomy Bridge Insights",
-    "url": "https://autonomybridge.com/insights"
-  },
-  "keywords": [
-    "robotics vendor addressable market",
-    "robotics ICP definition",
-    "serviceable addressable market robotics",
-    "robotics go-to-market failure",
-    "robotics TAM miscalculation",
-    "robotics vendor economics",
-    "robotics commercial viability",
-    "ICP definition failure",
-    "robotics sales pipeline",
-    "robotics market sizing"
-  ],
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is the difference between TAM and SAM for a robotics vendor?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "TAM counts all facilities in the target end market regardless of whether the economics of deployment are viable. SAM is the subset of those facilities where the system can generate a return at its current price point given the account's labor cost, volume, workflow structure, and integration readiness. For most robotics platforms, SAM is significantly smaller than TAM."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Why do robotics vendors use firmographic ICP criteria instead of economic criteria?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Firmographic criteria ,  industry, facility count, revenue, geography ,  are easy to collect and segment. Economic and operational deployment criteria require primary research and account-level analysis. Vendors default to firmographic segmentation because it is faster, not because it is more accurate."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is deployment condition mismatch?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Deployment condition mismatch occurs when a vendor advances an account through the sales pipeline ,  sometimes to pilot ,  before discovering that the fundamental economic conditions for a viable deployment are absent. The three most common forms are the volume floor problem, the labor removal ceiling problem, and the integration complexity problem."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How does ICP definition failure affect pilot conversion rates?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Vendors with poorly defined ICP criteria accumulate pilots with accounts that have low probability of commercial conversion. The pilot validates system functionality but cannot close commercially because the economic case does not exist for that account at current system pricing. Pilot pipeline bloat is the direct operational consequence."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What framework does Autonomy Bridge use to correct ICP definition errors?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The Vendor Economics Framework structures the analysis required to define a robotics vendor's serviceable addressable market based on deployment economics rather than end-market size. It covers labor cost floor calculation, removable labor share analysis, volume threshold modeling, and account population screening."
-      }
-    }
-  ],
-  "about": [
-    { "@type": "Thing", "name": "Robotics Vendor Commercialization" },
-    { "@type": "Thing", "name": "ICP Definition" },
-    { "@type": "Thing", "name": "Addressable Market Sizing" },
-    { "@type": "Thing", "name": "Robotics Go-to-Market" },
-    { "@type": "Thing", "name": "Commercial Viability Assessment" }
-  ],
-  "mentions": [
-    { "@type": "CreativeWork", "name": "Vendor Economics Framework", "url": "https://autonomybridge.com/frameworks/vendor-economics-framework" },
-    { "@type": "CreativeWork", "name": "Robotics ROI Model", "url": "https://autonomybridge.com/frameworks/robotics-roi-model" },
-    { "@type": "CreativeWork", "name": "Vendor Evaluation Framework", "url": "https://autonomybridge.com/frameworks/vendor-evaluation-framework" },
-    { "@type": "CreativeWork", "name": "Pilot-to-Scale Failure Framework", "url": "https://autonomybridge.com/frameworks/pilot-to-scale-failure-framework" }
-  ]
-}
-```

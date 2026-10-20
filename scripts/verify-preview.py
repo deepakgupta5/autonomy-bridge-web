@@ -28,7 +28,9 @@ class Page(HTMLParser):
 root=Path(__file__).resolve().parents[1]; dist=Path(os.environ.get('AB_AUDIT_DIST', root/'dist'))
 candidate = '--release-candidate' in sys.argv[2:]
 apex = '--canonical-apex' in sys.argv[2:]
-if len(sys.argv) < 2 or set(sys.argv[2:]) - {'--release-candidate','--canonical-apex'}:
+review = '--research-review' in sys.argv[2:]
+exceptions=json.loads((root/'config/research-review-exceptions.json').read_text())
+if len(sys.argv) < 2 or set(sys.argv[2:]) - {'--release-candidate','--canonical-apex','--research-review'}:
  raise SystemExit('Usage: python3 scripts/verify-preview.py /path/to/0285946-baseline/dist (required)')
 base=Path(sys.argv[1])
 if not (base/'index.html').is_file() or len(list(base.rglob('*.html'))) != 157:
@@ -87,6 +89,16 @@ result['lost_baseline_routes']=sorted(set(old)-set(pages));result['changed_exist
 def dates(page):return [(s.get('@type'),s.get('datePublished'),s.get('dateModified')) for s in page.scripts if s.get('datePublished') or s.get('dateModified')]
 result['changed_research_dates_except_methodology']=[p for p in research-{'/methodology'} if p not in old or dates(pages[p])!=dates(old[p])]
 result['changed_research_titles_except_framework']=[p for p in research-{'/methodology','/frameworks/pilot-to-scale-failure-framework'} if p not in old or pages[p].title!=old[p].title]
+if review:
+ result['reviewed_research_date_changes']=result['changed_research_dates_except_methodology']
+ # No unverified public dates in this pending-release artifact. A separate release-date fixture tests actual dated output.
+ result['changed_research_dates_except_methodology']=[p for p in research-{'/methodology'} if dates(pages[p])]
+ result['reviewed_research_title_changes']=[p for p in result['changed_research_titles_except_framework'] if p in exceptions['title_routes']]
+ result['changed_research_titles_except_framework']=[p for p in result['changed_research_titles_except_framework'] if p not in exceptions['title_routes']]
+ registry=lambda text:[line.strip() for line in text.splitlines() if line.strip() and not line.startswith('#')]
+ original=registry(subprocess.check_output(['git','show','0285946:public/_redirects'],cwd=root,text=True))
+ result['redirects_unchanged']=registry((dist/'_redirects').read_text())==original+[exceptions['redirect_line']]
+ result['approved_diagram_redirect_added']=result['redirects_unchanged']
 allowed=json.loads((root/'docs/preview/historical-broken-links.json').read_text())
 if len(allowed) != 8: raise SystemExit('Historical broken-link exception register must contain exactly eight destinations')
 result['unexpected_broken_destinations']=sorted(set(broken)-set(allowed))

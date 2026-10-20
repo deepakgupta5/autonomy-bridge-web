@@ -105,8 +105,8 @@ const renderedBody = renderResearchBody(await Astro.slots.render("default"), dia
       <p class="detail-eyebrow type-eyebrow">{contentTypeLabel}</p>
       <h1 id={renderedBody.heroId} class="type-h1">{title}</h1>
       <p class="detail-tagline">{summary}</p>
-      <p class="research-byline">{authors?.length && <span>By {authors.join(', ')} · </span>}{datePublished && <span>Originally published <time datetime={datePublished}>{datePublished}</time></span>}{dateModified && <span> · Source record updated <time datetime={dateModified}>{dateModified}</time></span>}</p>
-      <p class="research-evidence-note">Evidence scope: proprietary-analysis labels identify AutonomyBridge’s analysis, not independent verification. Numerical estimates and thresholds without a linked supporting source should be treated as unverified analytical inputs, not general benchmarks. Internal framework links provide context, not external substantiation. Read the page-specific assumptions and limitations and the <a href="/methodology">Methodology</a>.</p>
+      <p class="research-byline">{authors?.length && <span>By {authors.join(', ')} · </span>}{datePublished && <span>Source date record: <time datetime={datePublished}>{datePublished}</time></span>}{dateModified && <span> · Historical source revision: <time datetime={dateModified}>{dateModified}</time></span>}</p>
+      <p class="research-evidence-note">Evidence scope: these pages distinguish analytical interpretations, illustrative calculations and source accounts. Unsupported numerical benchmarks identified in the review have been withdrawn. Retained case narratives are source accounts, not independently verified client outcomes; they have not been relabelled as hypothetical. Internal framework links provide context, not external substantiation. Read the page-specific assumptions and limitations and the <a href="/methodology">Methodology</a>.</p>
     </header>
 
     <p><a href={resolvedHubPath}>All {resolvedHubLabel} →</a></p>

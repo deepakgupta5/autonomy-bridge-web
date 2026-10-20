@@ -148,7 +148,7 @@ integrity:
 
 # How Warehouse Workflows Determine Whether Robotics Works {#definition}
 
-The **Workflow Architecture Framework** is a proprietary analytical model developed by Autonomy Bridge that evaluates whether a warehouse's workflow structure is structurally compatible with robotics deployment before any vendor technology is selected. The framework analyzes task architecture, labor time decomposition, SKU velocity distribution, order structure, and task density to determine whether automation will deliver durable operational improvement ,  treating robotics deployment as a workflow compatibility problem, not a robot capability problem. (Autonomy Bridge proprietary analysis, 2026)
+The **Workflow Architecture Framework** is a proprietary analytical model developed by Autonomy Bridge that evaluates whether a warehouse's workflow structure is structurally compatible with robotics deployment before any vendor technology is selected. The framework analyzes task architecture, labor time decomposition, SKU velocity distribution, order structure, and task density to determine whether automation will deliver durable operational improvement ,  treating robotics deployment as a workflow compatibility problem, not a robot capability problem. (Autonomy Bridge analytical interpretation; underlying evidence not independently verified)
 
 Warehouse robotics performance is primarily determined by workflow structure, not robot capability alone. Task composition, order structure, SKU velocity distribution, and task density determine whether automation meaningfully substitutes labor or simply shifts work within the operation.
 
@@ -204,7 +204,7 @@ If robot utilization decreases,
 ROI_automation = f(W_task, T_travel, T_handle, D_task, V_sku, D_order, F_density, C_congestion, L_removable)
 ```
 
-Where the economic outcome depends on whether workflow structure supports sustained robotic productivity. (Autonomy Bridge proprietary analysis, 2026)
+Where the economic outcome depends on whether workflow structure supports sustained robotic productivity. (Autonomy Bridge analytical interpretation; underlying evidence not independently verified)
 
 See: [Throughput Modeling →](/glossary/throughput-modeling) · [Workflow Constraint →](/glossary/workflow-constraint)
 
@@ -496,7 +496,7 @@ The Workflow Architecture Framework is a proprietary analytical model developed 
 Warehouse labor time decomposes into travel time and handling time: `T_labor = T_travel + T_handling`. Transport robotics ,  including AMRs and goods-to-person systems ,  primarily eliminates travel time, not handling time. If travel time represents the majority of labor cost in a facility, transport robotics can remove a large share of that cost. If handling time dominates, transport robotics produces limited labor substitution regardless of robot speed or fleet size.
 
 **What is task density and why does it affect robot productivity?**
-Task density is the volume of executable warehouse tasks per unit area per unit time: `D_task = Tasks / (Area × Time)`. Robot productivity scales with task density because robots generate economic value only while actively executing tasks. Low task density produces idle robots ,  a robot waiting for work imposes fixed capital cost without generating throughput. Facilities with fragmented SKU catalogs, low order volume, or wide storage zones structurally suppress task density below the threshold required for robotics viability.
+Evaluate the initial installed investment (C0, currency units) against incremental net cash flows over a stated horizon H (years). Define utilization using throughput and capacity over the same period. A break-even utilization or volume can be solved only if the project-specific cash-flow function supports one; it is not a universal operating threshold. Annual capital cost divided by savings per unit has units of units per year, not a utilization percentage, and does not by itself establish project payback.
 
 **Why does SKU velocity distribution matter for warehouse automation?**
 SKU velocity distribution determines how concentrated pick activity is across a warehouse's inventory. When a small number of SKUs account for a large share of picks, pick activity is spatially dense and predictable ,  conditions that maximize robot utilization and station productivity. When SKU demand is widely distributed across a large catalog, activity disperses across the warehouse, travel distances increase, and robot idle time rises. A long-tail SKU distribution is one of the most common structural barriers to robotics viability in 3PL environments.
@@ -530,111 +530,3 @@ Updated: 2026-03-15
 Author: Deepak Gupta (author_deepak_001), Founder & Principal Analyst, Autonomy Bridge
 Schema Type: Article / FAQPage
 Frameworks tagged: Workflow Architecture Framework
-
-```json
-{
-  "@context": "https://schema.org",
-  "@type": ["Article", "FAQPage"],
-  "headline": "How Warehouse Workflows Determine Whether Robotics Works",
-  "description": "An analytical framework for evaluating whether a warehouse's workflow architecture is structurally compatible with robotics deployment before any technology is selected.",
-  "datePublished": "2026-03-15",
-  "dateModified": "2026-03-15",
-  "inLanguage": "en",
-  "speakable": {
-    "@type": "SpeakableSpecification",
-    "cssSelector": ["#definition", "#faq"]
-  },
-  "author": [
-    {
-      "@type": "Person",
-      "name": "Deepak Gupta",
-      "@id": "author_deepak_001",
-      "jobTitle": "Founder & Principal Analyst",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Autonomy Bridge",
-        "url": "https://autonomybridge.com"
-      },
-      "url": "https://autonomybridge.com/about",
-      "sameAs": "https://www.linkedin.com/in/deepakgupta5"
-    }
-  ],
-  "publisher": {
-    "@type": "Organization",
-    "name": "Autonomy Bridge",
-    "url": "https://autonomybridge.com",
-    "sameAs": [
-      "https://www.linkedin.com/company/autonomybridge",
-      "https://twitter.com/autonomybridge"
-    ]
-  },
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://autonomybridge.com/frameworks/workflow-architecture-framework"
-  },
-  "isPartOf": {
-    "@type": "WebPage",
-    "name": "Autonomy Bridge Frameworks",
-    "url": "https://autonomybridge.com/frameworks"
-  },
-  "keywords": [
-    "workflow architecture framework",
-    "warehouse automation compatibility",
-    "warehouse robotics",
-    "workflow architecture",
-    "3PL automation",
-    "robot productivity",
-    "task density",
-    "SKU velocity",
-    "fulfillment automation",
-    "labor substitution"
-  ],
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is the Workflow Architecture Framework?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The Workflow Architecture Framework is a proprietary analytical model developed by Autonomy Bridge that evaluates whether a warehouse's workflow structure is structurally compatible with robotics deployment before any vendor technology is selected. It analyzes task architecture, labor time decomposition, SKU velocity distribution, order structure, and task density to determine whether automation will deliver durable operational improvement."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How does travel time vs handling time determine robotics ROI?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Warehouse labor time decomposes into travel time and handling time. Transport robotics primarily eliminates travel time, not handling time. If travel time represents the majority of labor cost in a facility, transport robotics can remove a large share of that cost. If handling time dominates, transport robotics produces limited labor substitution regardless of robot speed or fleet size."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is task density and why does it affect robot productivity?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Task density is the volume of executable warehouse tasks per unit area per unit time. Robot productivity scales with task density because robots generate economic value only while actively executing tasks. Low task density produces idle robots ,  a robot waiting for work imposes fixed capital cost without generating throughput. Facilities with fragmented SKU catalogs, low order volume, or wide storage zones structurally suppress task density below the threshold required for robotics viability."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Why does SKU velocity distribution matter for warehouse automation?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "SKU velocity distribution determines how concentrated pick activity is across a warehouse's inventory. When a small number of SKUs account for a large share of picks, pick activity is spatially dense and predictable ,  conditions that maximize robot utilization and station productivity. When SKU demand is widely distributed across a large catalog, activity disperses, travel distances increase, and robot idle time rises. A long-tail SKU distribution is one of the most common structural barriers to robotics viability in 3PL environments."
-      }
-    }
-  ],
-  "about": [
-    { "@type": "Thing", "name": "Warehouse Workflow Architecture Framework" },
-    { "@type": "Thing", "name": "Robot Fleet Density" },
-    { "@type": "Thing", "name": "SKU Velocity Distribution" },
-    { "@type": "Thing", "name": "Task Density" },
-    { "@type": "Thing", "name": "Labor Time Decomposition" }
-  ],
-  "mentions": [
-    { "@type": "CreativeWork", "name": "AMR Deployment Evaluation", "url": "https://autonomybridge.com/use-cases/amr-deployment-evaluation" },
-    { "@type": "CreativeWork", "name": "Goods-to-Person System Evaluation", "url": "https://autonomybridge.com/use-cases/goods-to-person-system-evaluation" },
-    { "@type": "CreativeWork", "name": "Automation Deployment Risk Assessment", "url": "https://autonomybridge.com/case-studies/automation-deployment-risk-assessment" },
-    { "@type": "CreativeWork", "name": "Automation Failure Framework", "url": "https://autonomybridge.com/frameworks/automation-failure-framework" }
-  ]
-}
-```

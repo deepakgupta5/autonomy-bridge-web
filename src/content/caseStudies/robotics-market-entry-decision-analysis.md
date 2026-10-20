@@ -148,7 +148,7 @@ The acquisition target screening evaluated two candidate companies against crite
 - Ecommerce fulfillment warehouses offer stronger demand conditions for robotics adoption than multi-client 3PL facilities.
 - Vendor pricing structures significantly influence operator adoption decisions.
 - Product architectures aligned with workflow constraints achieve faster deployment adoption than architectures optimised for technical performance alone.
-- Robotics market demand must be evaluated through the economics of warehouse operations. Facilities approve automation investments only when demand conditions can sustain robotic utilization above the capital recovery threshold required to justify capital expenditure.
+- Evaluate the initial installed investment (C0, currency units) against incremental net cash flows over a stated horizon H (years). Define utilization using throughput and capacity over the same period. A break-even utilization or volume can be solved only if the project-specific cash-flow function supports one; it is not a universal operating threshold. Annual capital cost divided by savings per unit has units of units per year, not a utilization percentage, and does not by itself establish project payback.
 
 ---
 
@@ -168,7 +168,7 @@ The client determined that organic product development would not produce a compe
 
 ## Lessons for the Industry {#lessons}
 
-(Autonomy Bridge proprietary analysis, 2026)
+(Autonomy Bridge analytical interpretation; underlying evidence not independently verified)
 
 Robotics market entry decisions cannot be evaluated through technology capability or headline market size projections alone. Adoption in warehouse automation is governed by operator economics ,  the structural conditions that determine whether automation systems remain above the utilization threshold required for capital recovery.
 
@@ -186,106 +186,16 @@ Market entry strategies must evaluate not only competitive technology positionin
 ## Frequently Asked Questions {#faq}
 
 **What did the robotics market entry decision analysis determine?**
-The analysis determined that the industrial automation company could not produce a competitive position in warehouse robotics through organic product development within its investment horizon. Acquisition was the viable path under specific commercial restructuring conditions for one of two screened targets. The engagement structured the decision around operator economics ,  utilization stability and capital recovery logic ,  rather than technology capability, and identified adoption barriers specific to the mid-market 3PL segment. (Autonomy Bridge proprietary analysis, 2026)
+The analysis determined that the industrial automation company could not produce a competitive position in warehouse robotics through organic product development within its investment horizon. Acquisition was the viable path under specific commercial restructuring conditions for one of two screened targets. The engagement structured the decision around operator economics ,  utilization stability and capital recovery logic ,  rather than technology capability, and identified adoption barriers specific to the mid-market 3PL segment. (Autonomy Bridge analytical interpretation; underlying evidence not independently verified)
 
 **How should robotics vendors evaluate warehouse automation market entry?**
-Market entry decisions must be evaluated through operator economics, not technology capability or headline automation market size. Warehouse operators approve automation investments based on whether demand conditions can sustain utilization above the capital recovery threshold ,  not on robot performance specifications. Vendors that align product architecture with real warehouse workflow constraints and operator capital approval logic achieve higher deployment conversion rates than vendors that evaluate markets through theoretical automation potential alone.
+Evaluate the initial installed investment (C0, currency units) against incremental net cash flows over a stated horizon H (years). Define utilization using throughput and capacity over the same period. A break-even utilization or volume can be solved only if the project-specific cash-flow function supports one; it is not a universal operating threshold. Annual capital cost divided by savings per unit has units of units per year, not a utilization percentage, and does not by itself establish project payback.
 
 **What determines the economically viable addressable market for warehouse robotics?**
-The economically viable addressable market is the subset of warehouse facilities where demand conditions can realistically sustain automation utilization above the capital recovery threshold. It is materially smaller than the theoretical total addressable market because it excludes facilities with insufficient throughput stability, high client concentration risk, or workflow architectures that cannot absorb automation productivity gains downstream. Market sizing based on installed robot counts or automation interest surveys systematically overstates the viable market.
+Evaluate the initial installed investment (C0, currency units) against incremental net cash flows over a stated horizon H (years). Define utilization using throughput and capacity over the same period. A break-even utilization or volume can be solved only if the project-specific cash-flow function supports one; it is not a universal operating threshold. Annual capital cost divided by savings per unit has units of units per year, not a utilization percentage, and does not by itself establish project payback.
 
 **Why do warehouse operators approve automation based on economics rather than technology?**
 Automation converts variable labor cost into fixed infrastructure. The economic outcome depends on whether facility demand keeps installed capacity utilized enough to recover capital over the system life ,  not on robot speed, navigation accuracy, or AI optimization. Operators evaluate automation as a capital allocation decision under uncertain demand conditions, requiring utilization modeling across realistic demand scenarios before approving capital. Technology capability determines what the system can do; operator economics determines whether the investment pays.
 
 
 ---
-
-```json
-{
-  "@context": "https://schema.org",
-  "@type": ["Article", "FAQPage"],
-  "inLanguage": "en",
-  "speakable": {
-    "@type": "SpeakableSpecification",
-    "cssSelector": ["#top", "#faq"]
-  },
-  "headline": "Robotics Market Entry Decision Analysis",
-  "description": "Structured market analysis for a mid-size industrial automation company evaluating entry into the North American warehouse robotics market ,  assessing operator decision logic, competitive dynamics, and two acquisition targets.",
-  "url": "https://autonomybridge.com/case-studies/robotics-market-entry-decision-analysis",
-  "datePublished": "2026-03-15",
-  "dateModified": "2026-03-15",
-  "author": [
-    {
-      "@type": "Person",
-      "name": "Deepak Gupta",
-      "@id": "author_deepak_001",
-      "jobTitle": "Founder & Principal Analyst",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Autonomy Bridge",
-        "url": "https://autonomybridge.com"
-      },
-      "url": "https://autonomybridge.com/about",
-      "sameAs": "https://www.linkedin.com/in/deepakgupta5"
-    }
-  ],
-  "publisher": {
-    "@type": "Organization",
-    "name": "Autonomy Bridge",
-    "url": "https://autonomybridge.com",
-    "sameAs": [
-      "https://www.linkedin.com/company/autonomybridge",
-      "https://twitter.com/autonomybridge"
-    ]
-  },
-  "isPartOf": { "@type": "CollectionPage", "url": "https://autonomybridge.com/case-studies" },
-  "about": [
-    { "@type": "Thing", "name": "Warehouse Robotics Market Entry" },
-    { "@type": "Thing", "name": "Operator Decision Logic" },
-    { "@type": "Thing", "name": "Acquisition Screening" },
-    { "@type": "Thing", "name": "AMR Competitive Landscape" }
-  ],
-  "breadcrumb": {
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://autonomybridge.com" },
-      { "@type": "ListItem", "position": 2, "name": "Case Studies", "item": "https://autonomybridge.com/case-studies" },
-      { "@type": "ListItem", "position": 3, "name": "Robotics Market Entry Decision Analysis", "item": "https://autonomybridge.com/case-studies/robotics-market-entry-decision-analysis" }
-    ]
-  },
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What did the robotics market entry decision analysis determine?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The analysis determined that the industrial automation company could not produce a competitive position in warehouse robotics through organic product development within its investment horizon. Acquisition was the viable path under specific commercial restructuring conditions for one of two screened targets. The engagement structured the decision around operator economics ,  utilization stability and capital recovery logic ,  rather than technology capability, and identified adoption barriers specific to the mid-market 3PL segment. (Autonomy Bridge proprietary analysis, 2026)"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How should robotics vendors evaluate warehouse automation market entry?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Market entry decisions must be evaluated through operator economics, not technology capability or headline automation market size. Warehouse operators approve automation investments based on whether demand conditions can sustain utilization above the capital recovery threshold ,  not on robot performance specifications. Vendors that align product architecture with real warehouse workflow constraints and operator capital approval logic achieve higher deployment conversion rates than vendors that evaluate markets through theoretical automation potential alone."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What determines the economically viable addressable market for warehouse robotics?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The economically viable addressable market is the subset of warehouse facilities where demand conditions can realistically sustain automation utilization above the capital recovery threshold. It is materially smaller than the theoretical total addressable market because it excludes facilities with insufficient throughput stability, high client concentration risk, or workflow architectures that cannot absorb automation productivity gains downstream. Market sizing based on installed robot counts or automation interest surveys systematically overstates the viable market."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Why do warehouse operators approve automation based on economics rather than technology?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Automation converts variable labor cost into fixed infrastructure. The economic outcome depends on whether facility demand keeps installed capacity utilized enough to recover capital over the system life ,  not on robot speed, navigation accuracy, or AI optimization. Operators evaluate automation as a capital allocation decision under uncertain demand conditions, requiring utilization modeling across realistic demand scenarios before approving capital. Technology capability determines what the system can do; operator economics determines whether the investment pays."
-      }
-    }
-  ]
-}
-```

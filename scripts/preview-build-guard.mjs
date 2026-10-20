@@ -9,3 +9,7 @@ if (deploymentPolicy.mode !== 'production') {
   console.error('Release candidate requires its exact approved Netlify target/context and public copy.');
   process.exit(1);
 }
+
+if (process.env.NETLIFY && deploymentPolicy.mode === "production" && !/^\d{4}-\d{2}-\d{2}$/.test(deploymentPolicy.researchRevisionDate || "")) {
+ console.error("Material research revisions require the approved actual release date before remote publication."); process.exit(1);
+}

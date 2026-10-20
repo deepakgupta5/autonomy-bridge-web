@@ -46,7 +46,7 @@ migration:
 
 The ongoing annual cost of running an automation system, including maintenance, software licensing, consumables, and dedicated technical staff.
 
-Automation operating cost covers all recurring expenditures required to keep a deployed system running at designed performance levels. This includes preventive and corrective maintenance contracts, software platform licensing and update fees, replacement components and consumables, energy costs attributable to the automation system, and the salaries of dedicated technicians or integration staff. In most automation business cases, operating costs are modeled at 8-15% of total capital cost per year, though the actual range varies significantly by system type and vendor contract structure. The economic comparison that matters is not automation operating cost versus zero, but automation operating cost versus the fully loaded labor cost it replaces  -  including overtime, turnover, benefits, and recruiting. Underestimating operating cost is a common source of ROI shortfall in year two and beyond.
+Use measurements and documented assumptions for the operation being evaluated. The previous numerical range or performance claim was not supported by publishable evidence and has been withdrawn; no general benchmark is asserted here.
 
 **Related terms:** [Total Cost of Ownership](/glossary/total-cost-of-ownership) · [Capital Recovery Period](/glossary/capital-recovery-period) · [Vendor Economics](/glossary/vendor-economics)
 

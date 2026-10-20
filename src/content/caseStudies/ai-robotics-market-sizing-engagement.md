@@ -165,7 +165,7 @@ The firm's investment committee used the brief as the primary market context doc
 
 ## Lessons for the Industry {#lessons}
 
-(Autonomy Bridge proprietary analysis, 2026)
+(Autonomy Bridge analytical interpretation; underlying evidence not independently verified)
 
 Market sizing in warehouse automation must incorporate the economic constraints that determine whether deployments remain viable. Large theoretical automation markets shrink substantially when evaluated through [utilization threshold](/glossary/capital-recovery-period) stability, workflow compatibility, and [demand variability](/glossary/peak-to-average-ratio).
 
@@ -183,106 +183,16 @@ The [Robotics ROI Model](/frameworks/robotics-roi-model) and [Warehouse Automati
 ## Frequently Asked Questions {#faq}
 
 **What did the AI and robotics market sizing engagement find for private equity?**
-The engagement found that the economically viable addressable market for warehouse automation is materially smaller than the theoretical total addressable market when evaluated through utilization stability and deployment economics. Multi-client 3PL warehouses face significant utilization risk that limits viable addressable market size. The analysis also surfaced a customer concentration risk in the target software company that had not been identified in prior diligence ,  a finding that revised the firm's valuation assumptions. (Autonomy Bridge proprietary analysis, 2026)
+The engagement found that the economically viable addressable market for warehouse automation is materially smaller than the theoretical total addressable market when evaluated through utilization stability and deployment economics. Multi-client 3PL warehouses face significant utilization risk that limits viable addressable market size. The analysis also surfaced a customer concentration risk in the target software company that had not been identified in prior diligence ,  a finding that revised the firm's valuation assumptions. (Autonomy Bridge analytical interpretation; underlying evidence not independently verified)
 
 **How should private equity firms evaluate warehouse automation market sizing?**
-PE firms should build market sizing models structured around the operator decision rather than installed robot unit counts or theoretical automation adoption rates. The correct segmentation distinguishes the economically qualified addressable market ,  facilities where operators can realistically sustain automation above the capital recovery threshold ,  from the theoretical total addressable market. Growth projections that assume universal automation adoption systematically overstate the market a software or hardware vendor can realistically address.
+Evaluate the initial installed investment (C0, currency units) against incremental net cash flows over a stated horizon H (years). Define utilization using throughput and capacity over the same period. A break-even utilization or volume can be solved only if the project-specific cash-flow function supports one; it is not a universal operating threshold. Annual capital cost divided by savings per unit has units of units per year, not a utilization percentage, and does not by itself establish project payback.
 
 **What is the difference between total addressable market and economically qualified addressable market in warehouse robotics?**
-The total addressable market counts all warehouse facilities that could theoretically deploy automation based on size, sector, or labor cost. The economically qualified addressable market is the subset where operators can sustain automation utilization above the capital recovery threshold under realistic demand variability ,  accounting for client concentration, seasonal demand patterns, and contract duration relative to the investment's depreciation period. The economically qualified addressable market is the relevant input for investment thesis construction.
+Evaluate the initial installed investment (C0, currency units) against incremental net cash flows over a stated horizon H (years). Define utilization using throughput and capacity over the same period. A break-even utilization or volume can be solved only if the project-specific cash-flow function supports one; it is not a universal operating threshold. Annual capital cost divided by savings per unit has units of units per year, not a utilization percentage, and does not by itself establish project payback.
 
 **What is demand durability in warehouse automation investment analysis?**
 Demand durability refers to the sustainability of the buying conditions that drive automation adoption ,  specifically whether labor cost pressure and ecommerce fulfillment volume growth create sustained purchasing urgency rather than cyclical interest. Demand durability analysis distinguishes structural drivers (persistent labor shortage, permanent wage escalation) from cyclical tailwinds (pandemic-era ecommerce surge, supply chain disruption) that may reverse, returning utilization risk to the operator and reducing the viable deployment base.
 
 
 ---
-
-```json
-{
-  "@context": "https://schema.org",
-  "@type": ["Article", "FAQPage"],
-  "inLanguage": "en",
-  "speakable": {
-    "@type": "SpeakableSpecification",
-    "cssSelector": ["#top", "#faq"]
-  },
-  "headline": "AI and Robotics Market Sizing for Private Equity",
-  "description": "Market sizing model grounded in warehouse deployment economics for a PE firm conducting due diligence on a warehouse automation software company ,  distinguishing the economically viable addressable market from theoretical robotics adoption potential.",
-  "url": "https://autonomybridge.com/case-studies/ai-robotics-market-sizing-engagement",
-  "datePublished": "2026-03-15",
-  "dateModified": "2026-03-15",
-  "author": [
-    {
-      "@type": "Person",
-      "name": "Deepak Gupta",
-      "@id": "author_deepak_001",
-      "jobTitle": "Founder & Principal Analyst",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Autonomy Bridge",
-        "url": "https://autonomybridge.com"
-      },
-      "url": "https://autonomybridge.com/about",
-      "sameAs": "https://www.linkedin.com/in/deepakgupta5"
-    }
-  ],
-  "publisher": {
-    "@type": "Organization",
-    "name": "Autonomy Bridge",
-    "url": "https://autonomybridge.com",
-    "sameAs": [
-      "https://www.linkedin.com/company/autonomybridge",
-      "https://twitter.com/autonomybridge"
-    ]
-  },
-  "isPartOf": { "@type": "CollectionPage", "url": "https://autonomybridge.com/case-studies" },
-  "about": [
-    { "@type": "Thing", "name": "Warehouse Automation Market Sizing" },
-    { "@type": "Thing", "name": "Private Equity Due Diligence" },
-    { "@type": "Thing", "name": "Economically Qualified Addressable Market" },
-    { "@type": "Thing", "name": "Demand Durability" }
-  ],
-  "breadcrumb": {
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://autonomybridge.com" },
-      { "@type": "ListItem", "position": 2, "name": "Case Studies", "item": "https://autonomybridge.com/case-studies" },
-      { "@type": "ListItem", "position": 3, "name": "AI and Robotics Market Sizing for Private Equity", "item": "https://autonomybridge.com/case-studies/ai-robotics-market-sizing-engagement" }
-    ]
-  },
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What did the AI and robotics market sizing engagement find for private equity?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The engagement found that the economically viable addressable market for warehouse automation is materially smaller than the theoretical total addressable market when evaluated through utilization stability and deployment economics. Multi-client 3PL warehouses face significant utilization risk that limits viable addressable market size. The analysis also surfaced a customer concentration risk in the target software company that had not been identified in prior diligence ,  a finding that revised the firm's valuation assumptions. (Autonomy Bridge proprietary analysis, 2026)"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How should private equity firms evaluate warehouse automation market sizing?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "PE firms should build market sizing models structured around the operator decision rather than installed robot unit counts or theoretical automation adoption rates. The correct segmentation distinguishes the economically qualified addressable market ,  facilities where operators can realistically sustain automation above the capital recovery threshold ,  from the theoretical total addressable market. Growth projections that assume universal automation adoption systematically overstate the market a software or hardware vendor can realistically address."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the difference between total addressable market and economically qualified addressable market in warehouse robotics?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The total addressable market counts all warehouse facilities that could theoretically deploy automation based on size, sector, or labor cost. The economically qualified addressable market is the subset where operators can sustain automation utilization above the capital recovery threshold under realistic demand variability ,  accounting for client concentration, seasonal demand patterns, and contract duration relative to the investment's depreciation period. The economically qualified addressable market is the relevant input for investment thesis construction."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is demand durability in warehouse automation investment analysis?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Demand durability refers to the sustainability of the buying conditions that drive automation adoption ,  specifically whether labor cost pressure and ecommerce fulfillment volume growth create sustained purchasing urgency rather than cyclical interest. Demand durability analysis distinguishes structural drivers (persistent labor shortage, permanent wage escalation) from cyclical tailwinds (pandemic-era ecommerce surge, supply chain disruption) that may reverse, returning utilization risk to the operator and reducing the viable deployment base."
-      }
-    }
-  ]
-}
-```

@@ -9,8 +9,8 @@ document:
   slug: "service-robotics-commercial-viability-assessment"
 
 title: "Commercial Viability Assessment for a Service Robotics Vendor"
-description: "Autonomy Bridge assessed whether a commercial indoor service robotics vendor had the unit economics, buyer segment fit, and pricing model to reach commercial viability ,  and identified the specific conditions under which the platform could generate a return for target accounts."
-summary: "A seed-stage service robotics company had a functioning platform and a large theoretical market but could not determine which buyer segments had the economics to support a deployment at its current price point. Autonomy Bridge built the commercial viability screen, identified the viable segment, and found the vendor's pricing model was misaligned with how buyers in that segment evaluated cost."
+description: "Commercial Viability Assessment for a Service Robotics Vendor. A source account of the evaluation scope and decision context. Unsupported quantitative outcomes have been withdrawn; the account is not independently verified."
+summary: "Commercial Viability Assessment for a Service Robotics Vendor. A source account of the evaluation scope and decision context. Unsupported quantitative outcomes have been withdrawn; the account is not independently verified."
 
 authors:
   - id: "author_deepak_001"
@@ -54,9 +54,9 @@ taxonomy:
 
 seo:
   meta_title: "Commercial Viability Assessment for a Service Robotics Vendor | Case Study ,  Autonomy Bridge"
-  meta_description: "A service robotics vendor had a functioning platform but no clear view of which buyer segments could support a deployment at its price point. Autonomy Bridge built the commercial viability screen and identified the pricing model mismatch."
+  meta_description: "Commercial Viability Assessment for a Service Robotics Vendor. A source account of the evaluation scope and decision context. Unsupported quantitative outcomes have been withdrawn; the account is not independently verified."
   og_title: "Commercial Viability Assessment for a Service Robotics Vendor ,  Autonomy Bridge"
-  og_description: "The platform worked. The market was large. But fewer than 15% of target accounts met the economic conditions required for a viable deployment ,  and the pricing model was structured for the wrong segment."
+  og_description: "Commercial Viability Assessment for a Service Robotics Vendor. A source account of the evaluation scope and decision context. Unsupported quantitative outcomes have been withdrawn; the account is not independently verified."
   og_type: "article"
   twitter_card: "summary_large_image"
 
@@ -151,11 +151,8 @@ The pricing model analysis examined how buyers in each viable segment evaluated 
 
 ## Key Findings {#key-findings}
 
-- The total commercial facility count the company had used as its market size overstated the economically viable segment by a factor of approximately seven. Fewer than 15% of facilities in the target size range met the minimum labor cost and service frequency conditions required for a 36-month payback at the platform's current price.
 
-- The viable segment was concentrated in large commercial office buildings in high-labor-cost metropolitan markets (San Francisco, New York, Boston, Seattle) and large-format hospitality venues where service labor cost exceeded $28 per hour fully loaded and daily service hours exceeded six hours per day.
-
-- Healthcare-adjacent commercial facilities were excluded from the viable segment at current pricing due to infection control requirements that added deployment cost and reduced autonomous task completion rate below the threshold required for payback.
+- Evaluate the initial installed investment (C0, currency units) against incremental net cash flows over a stated horizon H (years). Define utilization using throughput and capacity over the same period. A break-even utilization or volume can be solved only if the project-specific cash-flow function supports one; it is not a universal operating threshold. Annual capital cost divided by savings per unit has units of units per year, not a utilization percentage, and does not by itself establish project payback.
 
 - The company's hardware-plus-subscription pricing model was misaligned with the viable segment's procurement structure. Facility management buyers in the viable segment evaluated service costs on an annual per-square-foot basis. They could not translate a hardware purchase price plus annual software fee into a cost comparison against existing labor contracts. The pricing model required buyers to perform an economic translation the vendor had not provided.
 
@@ -183,7 +180,7 @@ The company's first three commercial accounts were signed within the viable segm
 
 ## Lessons for the Industry {#lessons}
 
-(Autonomy Bridge proprietary analysis, 2026)
+(Autonomy Bridge analytical interpretation; underlying evidence not independently verified)
 
 Service robotics vendors face the same market definition error that recurs across platform categories: total end-market size is used as the planning basis when the economically viable subset is a fraction of that figure. For service robotics specifically, the error compounds because service labor cost varies significantly by geography and facility type ,  the conditions that determine viability are not uniformly distributed across the apparent market.
 
@@ -200,8 +197,6 @@ The [Vendor Economics Framework](/frameworks/vendor-economics-framework) identif
 
 ## Frequently Asked Questions {#faq}
 
-**What did the commercial viability assessment find about the service robotics vendor's addressable market?**
-The assessment found that the total commercial facility count the company used as its market size overstated the economically viable segment by approximately seven times. Fewer than 15% of facilities in the target size range met the minimum labor cost and service frequency conditions required for a 36-month payback at the platform's current price. The viable segment was concentrated in large commercial office buildings in high-labor-cost metropolitan markets and large-format hospitality venues. (Autonomy Bridge proprietary analysis, 2026)
 
 **Why was the vendor's hardware-plus-subscription pricing model a commercial viability problem?**
 Facility management buyers in the viable segment evaluated service costs on an annual per-square-foot basis ,  the same basis as their existing cleaning and service labor contracts. A hardware purchase price plus annual software fee required buyers to perform an economic translation the vendor had not provided, creating evaluation friction that prevented direct cost comparison. A managed service annual program fee removed this friction by positioning the platform as a service contract alternative rather than a capital equipment purchase.
@@ -213,93 +208,3 @@ Annual managed service program pricing ,  structured as an annual per-square-foo
 Vendors should apply an economic viability screen ,  minimum labor cost, daily service hours, facility size, and autonomous task completion rate ,  to the total account population to identify the subset where the platform generates a return within the buyer's acceptable payback window. The viable account population, not the total facility count, is the serviceable addressable market against which go-to-market planning and revenue targets should be set.
 
 ---
-
-```json
-{
-  "@context": "https://schema.org",
-  "@type": ["Article", "FAQPage"],
-  "inLanguage": "en",
-  "speakable": {
-    "@type": "SpeakableSpecification",
-    "cssSelector": ["#top", "#faq"]
-  },
-  "headline": "Commercial Viability Assessment for a Service Robotics Vendor",
-  "description": "Autonomy Bridge assessed whether a commercial indoor service robotics vendor had the unit economics, buyer segment fit, and pricing model to reach commercial viability ,  and identified the specific conditions under which the platform could generate a return for target accounts.",
-  "url": "https://autonomybridge.com/case-studies/service-robotics-commercial-viability-assessment",
-  "datePublished": "2026-04-09",
-  "dateModified": "2026-04-09",
-  "author": [
-    {
-      "@type": "Person",
-      "name": "Deepak Gupta",
-      "@id": "author_deepak_001",
-      "jobTitle": "Founder & Principal Analyst",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Autonomy Bridge",
-        "url": "https://autonomybridge.com"
-      },
-      "url": "https://autonomybridge.com/about",
-      "sameAs": "https://www.linkedin.com/in/deepakgupta5"
-    }
-  ],
-  "publisher": {
-    "@type": "Organization",
-    "name": "Autonomy Bridge",
-    "url": "https://autonomybridge.com",
-    "sameAs": [
-      "https://www.linkedin.com/company/autonomybridge",
-      "https://twitter.com/autonomybridge"
-    ]
-  },
-  "isPartOf": { "@type": "CollectionPage", "url": "https://autonomybridge.com/case-studies" },
-  "about": [
-    { "@type": "Thing", "name": "Service Robotics Commercial Viability" },
-    { "@type": "Thing", "name": "Vendor Economics" },
-    { "@type": "Thing", "name": "Pricing Model Design" },
-    { "@type": "Thing", "name": "Serviceable Addressable Market" }
-  ],
-  "breadcrumb": {
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://autonomybridge.com" },
-      { "@type": "ListItem", "position": 2, "name": "Case Studies", "item": "https://autonomybridge.com/case-studies" },
-      { "@type": "ListItem", "position": 3, "name": "Commercial Viability Assessment for a Service Robotics Vendor", "item": "https://autonomybridge.com/case-studies/service-robotics-commercial-viability-assessment" }
-    ]
-  },
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What did the commercial viability assessment find about the service robotics vendor's addressable market?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The assessment found that the total commercial facility count the company used as its market size overstated the economically viable segment by approximately seven times. Fewer than 15% of facilities in the target size range met the minimum labor cost and service frequency conditions required for a 36-month payback at the platform's current price. The viable segment was concentrated in large commercial office buildings in high-labor-cost metropolitan markets and large-format hospitality venues. (Autonomy Bridge proprietary analysis, 2026)"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Why was the vendor's hardware-plus-subscription pricing model a commercial viability problem?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Facility management buyers in the viable segment evaluated service costs on an annual per-square-foot basis ,  the same basis as their existing cleaning and service labor contracts. A hardware purchase price plus annual software fee required buyers to perform an economic translation the vendor had not provided, creating evaluation friction that prevented direct cost comparison. A managed service annual program fee removed this friction by positioning the platform as a service contract alternative rather than a capital equipment purchase."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the correct pricing model structure for service robotics platforms targeting facility management buyers?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Annual managed service program pricing ,  structured as an annual per-square-foot or per-facility fee inclusive of platform access, maintenance, and service delivery ,  aligns with how facility management buyers evaluate and budget service costs. This model allows direct comparison against existing service labor contracts, fits within operating budget approval rather than capital expenditure approval, and transfers operational risk to the vendor."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How should service robotics vendors define their serviceable addressable market?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Vendors should apply an economic viability screen ,  minimum labor cost, daily service hours, facility size, and autonomous task completion rate ,  to the total account population to identify the subset where the platform generates a return within the buyer's acceptable payback window. The viable account population, not the total facility count, is the serviceable addressable market against which go-to-market planning and revenue targets should be set."
-      }
-    }
-  ]
-}
-```

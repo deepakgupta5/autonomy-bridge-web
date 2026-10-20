@@ -44,7 +44,7 @@ migration:
 
 The proportion of scheduled operating hours during which an automation system is fully functional and available to process work, a primary reliability metric.
 
-System uptime measures the percentage of planned operating time that an automation system is available for productive work, excluding scheduled maintenance windows and including unplanned downtime from mechanical failures, software faults, integration errors, or safety stops. Vendor specifications typically cite uptime figures in the 95-99% range under controlled conditions; actual deployed uptime varies with facility environment, WMS integration stability, and maintenance program quality. In high-throughput 24/7 operations, even a 98% uptime figure translates to over 175 hours of annual downtime  -  enough to create significant throughput shortfalls if demand is concentrated. System uptime must be assessed as a distribution across operating scenarios, not a single headline figure, and vendor contracts should specify uptime guarantees with defined remediation terms.
+Define planned operating time and the treatment of scheduled maintenance before calculating available time divided by planned time. Keep uptime separate from productive utilization. Assess the financial effect of downtime against the actual demand schedule and contract obligations.
 
 **Related terms:** fleet-utilization · [Ramp Risk](/glossary/ramp-risk) · [Automation Operating Cost](/glossary/automation-operating-cost)
 

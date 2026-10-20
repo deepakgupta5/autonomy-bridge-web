@@ -1,3 +1,5 @@
+> Historical report for `02b5395`. Current factual corrections, settled crawler policy and verification: [revision-2/review.md](revision-2/review.md). The revision-2 report supersedes the open crawler decision and date/attribution treatment below.
+
 # Consolidated production release — owner review required
 
 This draft implements the corrected [issue #4](https://github.com/deepakgupta5/autonomy-bridge-web/issues/4), including [issue #2](https://github.com/deepakgupta5/autonomy-bridge-web/issues/2). It supersedes the email-only instructions and audit assumptions in PR #6. **Do not merge or deploy yet.** No real enquiry has been sent. Search Console/Bing access is separate and nonblocking.

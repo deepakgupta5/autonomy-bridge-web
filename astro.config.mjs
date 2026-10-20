@@ -1,5 +1,7 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
+import { deploymentPolicy } from './config/deployment-policy.mjs';
+import revisedResearch from './config/material-research-revisions.json' assert { type: 'json' };
 
 /** Strips :::directive blocks from markdown before rendering. */
 function remarkStripDirectives() {
@@ -145,6 +147,7 @@ export default defineConfig({
   integrations: [
     sitemap({
       filter: (entry) => isAllowedSitemapPath(toPathname(entry)),
+      serialize: item => ({...item, ...(revisedResearch.includes(toPathname(item.url)) && deploymentPolicy.researchRevisionDate ? {lastmod: deploymentPolicy.researchRevisionDate} : {})}),
     }),
   ],
 });

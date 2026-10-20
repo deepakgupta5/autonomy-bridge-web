@@ -8,6 +8,9 @@ const attr=(n,k)=>n.attrs?.find(a=>a.name===k)?.value;
 const text=n=>n.value??(n.childNodes??[]).map(text).join('');
 const select=(nodes,tag)=>nodes.filter(n=>n.tagName===tag);
 const results=[];
+const revised=JSON.parse(readFileSync('config/material-research-revisions.json'));
+const dates=JSON.parse(readFileSync('config/research-review-exceptions.json'));
+
 for(const family of ['frameworks','insights','use-cases','case-studies'])for(const file of readdirSync(join(dist,family)).filter(x=>x.endsWith('.html'))){
  const route=`/${family}/${file.replace(/\.html$/,'')}`;
  const html=readFileSync(join(dist,family,file),'utf8'),nodes=walk(parse(html));
@@ -22,7 +25,17 @@ for(const family of ['frameworks','insights','use-cases','case-studies'])for(con
  for(const id of old.map(n=>attr(n,'id')).filter(Boolean))assert(ids.includes(id),route+' lost fragment '+id);
  const structured=ns=>select(ns,'script').filter(n=>attr(n,'type')==='application/ld+json').map(n=>JSON.parse(text(n)));
  // Baseline is the canonical PR build, so full schema must match, not only dates.
- assert.deepEqual(structured(nodes),structured(old),route+' schema');
+ const now=structured(nodes),prior=structured(old);
+ const normalize=(entries,changed)=>entries.map(e=>{
+  const x=structuredClone(e);delete x.datePublished;delete x.dateModified;
+  if(dates.title_routes.includes(route)&&x['@type']==='BreadcrumbList')delete x.itemListElement.at(-1).name;
+  if(changed){delete x.headline;delete x.description;if(x['@type']==='FAQPage')return null;}
+  return x;
+ }).filter(Boolean);
+ assert.deepEqual(normalize(now,revised.includes(route)),normalize(prior,revised.includes(route)),route+' schema identity');
+ const article=now.flat().find(e=>[e['@type']].flat().some(t=>['Article','TechArticle','CaseStudy'].includes(t)));assert(article,route+' article');assert.equal(article.headline??article.name,text(select(nodes,'h1')[0]),route+' schema headline');
+ for(const e of now){assert(!e.datePublished&&!e.dateModified,route+' unverified date');if(e['@type']==='FAQPage')for(const q of e.mainEntity){const plain=text(body).replace(/\s+/g,' ');assert(plain.includes(q.name.replace(/\s+/g,' ')),route+' FAQ question');assert(plain.includes(q.acceptedAnswer.text.replace(/\s+/g,' ')),route+' FAQ answer');}}
+
  const figures=select(bodyNodes,'figure');
  for(const f of figures){
   const fn=walk(f),img=select(fn,'img');assert.equal(img.length,1,route);
@@ -34,7 +47,7 @@ for(const family of ['frameworks','insights','use-cases','case-studies'])for(con
  const oldLinks=select(walk(oldBody),'a').map(n=>attr(n,'href'));
  const newLinks=select(nodes,'a').map(n=>attr(n,'href'));
  for(const link of oldLinks)assert(newLinks.includes(link),route+' lost reference '+link);
- results.push({route,h1:1,figures:figures.length,fragment_targets_preserved:true,schema_unchanged:true,reference_destinations_preserved:true});
+ results.push({route,h1:1,figures:figures.length,fragment_targets_preserved:true,schema_identity_preserved:true,faq_matches_visible_text:true,unverified_dates_omitted:true,reference_destinations_preserved:true});
 }
 writeFileSync(out,JSON.stringify({passed:true,detail_pages:results.length,figures:results.reduce((s,r)=>s+r.figures,0),pages:results},null,2)+'\n');
 console.log(`${results.length} detail pages; ${results.reduce((s,r)=>s+r.figures,0)} figures; all static checks passed`);

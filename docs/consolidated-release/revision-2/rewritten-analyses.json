@@ -1,0 +1,178 @@
+[
+  {
+    "route": "/insights/how-robotics-pricing-models-determine-commercial-viability",
+    "before_title": "\"How Robotics Pricing Models Determine Commercial Viability\"",
+    "after_title": "How Robotics Pricing Models Shape Commercial Evaluation",
+    "after_description": "An analytical guide to comparing robotics pricing with buyer budgets, approval paths and vendor cash-flow requirements.",
+    "treatment": "Replace unsupported empirical narrative with explicit analytical questions; preserve URL, legacy fragments and reference destinations. Withdraw firm company/numeric/causal claims instead of relabelling them as hypothetical facts.",
+    "source_before_commit": "02b5395",
+    "sections": [
+      [
+        "Match the commercial offer to the buying process",
+        "Identify the budget owner, approval authority and contract requirements for the proposed purchase. Compare outright purchase, lease, subscription and outcome-based options against those constraints. A pricing structure should be evaluated alongside its total cost and allocation of responsibility; changing the structure does not establish a conversion-rate improvement."
+      ],
+      [
+        "Compare cash flows on both sides",
+        "For the buyer, model payments and incremental operating costs over a common horizon. For the vendor, model hardware acquisition, financing, service obligations, renewal assumptions and residual value. A recurring revenue contract does not by itself establish profitable unit economics."
+      ],
+      [
+        "Test the proposed explanation",
+        "Ask whether a stalled purchase reflects an unaffordable price, an unavailable budget category, an incomplete business case or an operational concern. Treat pricing mismatch as a hypothesis to test with the buyer, not a measured explanation for a stated share of robotics companies."
+      ]
+    ]
+  },
+  {
+    "route": "/insights/how-underwater-robotics-startups-can-break-incumbent-lock-in",
+    "before_title": "\"How Underwater Robotics Startups Can Break Incumbent Lock-In\"",
+    "after_title": "How Underwater Robotics Startups Can Assess Incumbent Lock-In",
+    "after_description": "Questions for evaluating underwater robotics procurement, integration, delivery capacity and routes to market.",
+    "treatment": "Replace unsupported empirical narrative with explicit analytical questions; preserve URL, legacy fragments and reference destinations. Withdraw firm company/numeric/causal claims instead of relabelling them as hypothetical facts.",
+    "source_before_commit": "02b5395",
+    "sections": [
+      [
+        "Examine the buyer’s switching requirements",
+        "Map the existing equipment, software, operating procedures and service relationships that a replacement would affect. Ask the buyer which requirements are contractual or operational and what evidence a new supplier would need to provide. Do not assume that technical performance alone explains a purchasing decision."
+      ],
+      [
+        "Separate demand from delivery capacity",
+        "Distinguish an expression of interest, a trial, a purchase order and a repeatable delivery commitment. Model manufacturing, deployment and support capacity against the specific contracts under consideration. Unverified company funding, booking and customer claims have been withdrawn from this account."
+      ],
+      [
+        "Evaluate a route to market",
+        "Compare direct sales, an integration partner and a specialist service offer using the target buyer’s procurement requirements. Test the commercial hypothesis through buyer interviews and documented opportunity evidence; this page does not establish an industry sales-cycle benchmark."
+      ]
+    ]
+  },
+  {
+    "route": "/insights/what-autonomous-vehicle-companies-get-wrong-about-freight-sales",
+    "before_title": "\"What Autonomous Vehicle Companies Get Wrong About Freight Sales\"",
+    "after_title": "What Autonomous Vehicle Companies Should Examine in Freight Sales",
+    "after_description": "An analytical checklist for relating autonomous freight proposals to route economics, operating requirements and procurement.",
+    "treatment": "Replace unsupported empirical narrative with explicit analytical questions; preserve URL, legacy fragments and reference destinations. Withdraw firm company/numeric/causal claims instead of relabelling them as hypothetical facts.",
+    "source_before_commit": "02b5395",
+    "sections": [
+      [
+        "Start with the freight operation",
+        "Specify the route, schedule, payload, service requirements and exception handling that the proposed system must support. Compare the complete operating model with the buyer’s current alternative. A successful demonstration is a different evidence item from an enforceable freight contract."
+      ],
+      [
+        "Make the economic comparison explicit",
+        "Include vehicle and infrastructure costs, remote assistance, maintenance, insurance, staffing and operating constraints where applicable. Use route-specific assumptions and record their sources. No company revenue or sector-wide funding figure is established by this analysis."
+      ],
+      [
+        "Qualify the buying decision",
+        "Identify the operational sponsor, budget authority, risk review and procurement requirements. Define what evidence would allow each party to make a decision. Treat a proposed commercial bottleneck as a hypothesis; do not infer causation from fundraising or company closures alone."
+      ]
+    ]
+  },
+  {
+    "route": "/insights/what-warehouse-automation-vendors-need-to-know-about-how-buyers-decide",
+    "before_title": "\"What Warehouse Automation Vendors Need to Know About How Their Buyers Actually Decide\"",
+    "after_title": "What Warehouse Automation Vendors Should Examine in Buyer Decisions",
+    "after_description": "A practical analytical checklist for warehouse automation business cases, cash flows, demand assumptions and decision ownership.",
+    "treatment": "Replace unsupported empirical narrative with explicit analytical questions; preserve URL, legacy fragments and reference destinations. Withdraw firm company/numeric/causal claims instead of relabelling them as hypothetical facts.",
+    "source_before_commit": "02b5395",
+    "sections": [
+      [
+        "Build the buyer’s cash-flow case",
+        "Separate theoretical labor productivity from avoidable payroll cost. Estimate installed investment, incremental operating costs and other cash benefits over the buyer’s chosen horizon. Use the Robotics ROI Model for the distinction between payback time and horizon return."
+      ],
+      [
+        "Test demand and implementation assumptions",
+        "Use the facility’s demand history, task mix and operating schedule. Assess charging, workstation, integration and ramp constraints. Do not infer that halving utilization doubles payback: the result depends on the modeled net-cash-flow function."
+      ],
+      [
+        "Clarify approval and delivery responsibilities",
+        "Identify who validates the operational assumptions, owns the business case and approves expenditure. Document acceptance criteria, service obligations and escalation paths. Publicly unsupported company metrics and general labor-displacement percentages have been withdrawn; they are not benchmarks for a proposal."
+      ]
+    ]
+  },
+  {
+    "route": "/insights/why-63-exoskeleton-companies-cant-break-through-distribution",
+    "before_title": "\"Why 63 Exoskeleton Companies Can't Break Through Distribution\"",
+    "after_title": "Why Exoskeleton Distribution Requires More Than Product Fit",
+    "after_description": "Analytical questions about exoskeleton buyer budgets, evaluation requirements and distribution economics.",
+    "treatment": "Replace unsupported empirical narrative with explicit analytical questions; preserve URL, legacy fragments and reference destinations. Withdraw firm company/numeric/causal claims instead of relabelling them as hypothetical facts.",
+    "source_before_commit": "02b5395",
+    "sections": [
+      [
+        "Understand the purchasing category",
+        "Ask the buyer whether the proposed equipment is evaluated through safety, ergonomics, operations or a capital process. Determine the relevant decision authority and evaluation requirements rather than assuming a universal budget or price ceiling."
+      ],
+      [
+        "Examine channel incentives",
+        "Compare the support, training, inventory and evaluation work required of a distributor with the proposed commercial terms. Model the economics of a particular relationship; no company-count, margin or channel-conversion benchmark is established here."
+      ],
+      [
+        "Test adoption in context",
+        "Define the task, user needs and assessment criteria before an evaluation. Distinguish user acceptance, purchasing approval and sustained use. Company-specific commercial claims without publishable support have been removed; the remaining questions are analytical propositions, not measured sector findings."
+      ]
+    ]
+  },
+  {
+    "route": "/insights/why-direct-only-channel-doesnt-scale-in-robotics",
+    "before_title": "\"Why Direct-Only Channel Doesn't Scale in Robotics\"",
+    "after_title": "When Robotics Vendors Should Evaluate a Partner Channel",
+    "after_description": "An analytical comparison of direct and partner-led robotics sales, delivery responsibilities and channel economics.",
+    "treatment": "Replace unsupported empirical narrative with explicit analytical questions; preserve URL, legacy fragments and reference destinations. Withdraw firm company/numeric/causal claims instead of relabelling them as hypothetical facts.",
+    "source_before_commit": "02b5395",
+    "sections": [
+      [
+        "Identify the constraint before choosing a channel",
+        "Examine whether a sales or delivery constraint concerns buyer access, technical integration, local support, procurement requirements or internal capacity. A partner may address a specific constraint, but channel expansion does not guarantee revenue growth."
+      ],
+      [
+        "Compare the operating models",
+        "Model direct and partner-led offers using their actual acquisition, training, integration, support and working-capital requirements. Specify which party owns each obligation and how the parties are paid. Do not apply an unsourced standard channel margin or conversion uplift."
+      ],
+      [
+        "Define a limited evaluation",
+        "Agree on target opportunities, responsibilities and evidence needed to assess the relationship. Review results against the agreed scope. The analysis does not establish that a particular channel is necessary for every robotics company."
+      ]
+    ]
+  },
+  {
+    "route": "/insights/why-maritime-autonomy-revenue-is-not-what-it-appears",
+    "before_title": "\"Why Maritime Autonomy Revenue Is Not What It Appears\"",
+    "after_title": "How to Examine Maritime Autonomy Revenue Quality",
+    "after_description": "Questions for distinguishing maritime autonomy contract scope, repeatability, delivery obligations and revenue assumptions.",
+    "treatment": "Replace unsupported empirical narrative with explicit analytical questions; preserve URL, legacy fragments and reference destinations. Withdraw firm company/numeric/causal claims instead of relabelling them as hypothetical facts.",
+    "source_before_commit": "02b5395",
+    "sections": [
+      [
+        "Identify what the reported measure means",
+        "Distinguish an announced agreement, a contract value, backlog, recognized revenue and cash received. Record the period, scope and source for any comparison. Unsupported company totals have been withdrawn rather than treated as interchangeable measures."
+      ],
+      [
+        "Examine delivery and repeatability",
+        "Assess whether the proposed work is a one-off project, a repeat service or a continuing contract. Identify vessel, staffing, maintenance, regulatory and data-delivery responsibilities for the specific operation. Do not infer a sustainable business model from an announced contract alone."
+      ],
+      [
+        "Test the commercial interpretation",
+        "Compare the assumptions behind expected revenue with delivery capacity, costs and contract terms. Treat conclusions about revenue quality as hypotheses requiring transaction-specific evidence, not as a verified ranking of named vendors."
+      ]
+    ]
+  },
+  {
+    "route": "/insights/why-robotics-enterprise-deals-stall",
+    "before_title": "\"Why Robotics Enterprise Deals Stall ,  And Where They Actually Die\"",
+    "after_title": "Why Robotics Enterprise Deals May Stall",
+    "after_description": "An analytical guide to diagnosing robotics procurement delays, evidence gaps and decision ownership.",
+    "treatment": "Replace unsupported empirical narrative with explicit analytical questions; preserve URL, legacy fragments and reference destinations. Withdraw firm company/numeric/causal claims instead of relabelling them as hypothetical facts.",
+    "source_before_commit": "02b5395",
+    "sections": [
+      [
+        "Map the unresolved decision",
+        "Identify the stakeholders responsible for operations, finance, procurement, security and implementation. Ask what each needs to decide and which evidence is missing. A prolonged opportunity does not by itself identify the cause of delay."
+      ],
+      [
+        "Distinguish technical and commercial evidence",
+        "A pilot may answer an operational question without establishing a business case, approval path or implementation owner. Define the intended decision before collecting further pilot evidence. No universal sales-cycle length or conversion rate is asserted here."
+      ],
+      [
+        "Evaluate interventions without promising an outcome",
+        "Consider parallel stakeholder work, a clearer financial case or explicit decision criteria where the opportunity evidence supports them. Track outcomes against a defined baseline. Unsupported claims of quantified improvement, company counts and generalized commercial causation have been withdrawn."
+      ]
+    ]
+  }
+]

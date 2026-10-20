@@ -10,7 +10,9 @@ const page = pages[route];
 // Approved public proof is already in the active copy. Legacy whole-page private
 // overlays must not restore superseded wording or layouts in local reviews.
 let body = page.html;
-if (deploymentPolicy.mode === 'production') body = body.replace(/<p class="revision-date">.*?<\/p>/g, `<p class="revision-date">Last updated: ${deploymentPolicy.publicationDate}</p>`);
+const isLegal = ['/privacy-policy', '/terms-of-use', '/cookie-policy'].includes(route);
+if (isLegal) body = body.replace(/<p class="revision-date">.*?<\/p>/g, deploymentPolicy.researchRevisionDate ? `<p class="revision-date">Last updated: ${deploymentPolicy.researchRevisionDate}</p>` : '<p class="revision-date">Revision prepared for release; publication pending.</p>');
+else if (deploymentPolicy.mode === 'production') body = body.replace(/<p class="revision-date">.*?<\/p>/g, `<p class="revision-date">Last updated: ${deploymentPolicy.publicationDate}</p>`);
 const schema = route === '/methodology' ? [{ '@context': 'https://schema.org', '@type': 'Article', headline: page.name, datePublished: '2026-03-15', ...(deploymentPolicy.mode === 'production' ? {dateModified: deploymentPolicy.publicationDate} : {}) }] : [];
 ---
 <MainLayout title={page.name} canonicalPath={route} seoTitle={page.metadata.title} seoDescription={page.metadata.description} schema={schema} showLocalSubnav={route === '/methodology'}>

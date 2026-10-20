@@ -48,7 +48,7 @@ migration:
 
 A high-density automated system that stores and retrieves inventory containers, totes, or cases using mechanized equipment  -  including crane-based systems, shuttle systems, and cube storage grids  -  without direct human handling in the storage zone.
 
-ASRS systems eliminate the travel time that makes manual picking labor-intensive by bringing inventory to stationary human pick stations (goods-to-person) or by retrieving and delivering items through automated conveyance. System types include unit-load cranes for pallet-level storage, mini-load cranes for tote and case handling, multi-shuttle systems for high-throughput tote retrieval, and cube storage grids (AutoStore architecture) for very high storage density in constrained footprints. ASRS deployments require capital commitments of $3-10M and implementation timelines of 12-24 months, which limits their primary market to high-volume operations and well-capitalised mid-market facilities. The economic justification requires sufficient and sustained order volume to absorb the fixed infrastructure cost  -  ASRS systems have the highest utilization sensitivity of any warehouse automation category. (Autonomy Bridge proprietary analysis, 2026)
+Use measurements and documented assumptions for the operation being evaluated. The previous numerical range or performance claim was not supported by publishable evidence and has been withdrawn; no general benchmark is asserted here.
 
 **Related terms:** [Goods-to-Person System (GTP)](/glossary/goods-to-person-system) · [Multi-Shuttle System](/glossary/multi-shuttle-system) · [Capital Recovery Period](/glossary/capital-recovery-period) · [Peak-to-Average Ratio](/glossary/peak-to-average-ratio)
 
