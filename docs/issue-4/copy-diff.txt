@@ -1,0 +1,241 @@
+Review-only text diff of active metadata and HTML; not a patch to apply.
+
+--- / BEFORE
++++ / AFTER
+@@ -1,13 +1,13 @@
+ {
+-  "title": "Commercial Leadership & AI Consulting | AutonomyBridge",
+-  "description": "Deepak Gupta helps startups and growing businesses with fractional commercial leadership, practical AI consulting and hands-on implementation."
++  "title": "Commercial Leadership & Hands-on AI | AutonomyBridge",
++  "description": "Deepak Gupta provides commercial leadership for startups and SMBs, and hands-on AI consulting and implementation for businesses and nonprofits."
+ }
+ <section class="home-opening"><div class="home-intro"><h1>Commercial leadership. <span class="home-no-break">Hands-on</span> AI implementation.</h1>
+ <p>I’m Deepak Gupta. I combine experience running commercial teams with the ability to build AI solutions myself. Work with me on growth and sales, practical AI applications, or a challenge that needs both.</p>
+-<p><a class="copy-button" href="/contact">Discuss your business challenge</a></p></div><div class="home-services"><div class="home-service"><h2 id="commercial-leadership">Commercial leadership</h2>
+-<p>Choose where to grow, turn opportunities into customers and strengthen your sales operation. Fractional leadership or a defined commercial project.</p>
++<p><a class="copy-button" href="/contact">Discuss your challenge</a></p></div><div class="home-services"><div class="home-service"><h2 id="commercial-leadership">Commercial leadership</h2>
++<p>For startups and SMBs needing accountable sales or commercial leadership. Choose fractional sales leadership or a defined project to strengthen the team, win customers or develop a market.</p>
+ <p><a class="copy-link" href="/commercial-leadership">Explore commercial leadership</a></p></div><div class="home-service"><h2 id="ai-consulting-and-implementation">AI consulting and implementation</h2>
+-<p>Use your data to find opportunities to improve revenue or costs, build a useful application, or improve an existing AI workflow.</p>
++<p>For businesses and nonprofits with teams, existing workflows and a practical implementation or adoption problem. Start with an organizational question, a defined requirement or an AI attempt that needs work.</p>
+ <p><a class="copy-link" href="/ai-consulting">Explore AI consulting and implementation</a></p></div></div></section>
+ <section class="home-experience"><h2 id="experience-in-both-kinds-of-work">Experience in both kinds of work</h2>
+ <div class="home-experience-grid"><div><h3 id="commercial-responsibility">Commercial responsibility</h3>
+@@ -25,14 +25,14 @@
+ <div class="home-proof"><h3 id="from-pilots-to-enterprise-customers">From pilots to enterprise customers</h3>
+ <p>A manufacturing data platform had technical validation but few paying customers. I repositioned the offer around operations leaders’ priorities and personally led the sales process. Three paid pilots were signed within eight weeks. All three subsequently became annual contracts.</p>
+ <p><a class="copy-link" href="/commercial-leadership">Explore commercial leadership</a></p></div></div></section>
+-<section class="home-detail"><div class="home-question"><h2 id="what-would-make-ai-useful-to-your-business">What would make AI useful to your business?</h2>
++<section class="home-detail"><div class="home-question"><h2 id="what-would-make-ai-useful-to-your-business">What would make AI useful to your team?</h2>
+ <ul>
+-<li>You have data but cannot see where money or effort is being wasted.</li>
++<li>You have an organizational question but information is scattered across records and systems.</li>
+ <li>You have a clear application in mind but need help building it.</li>
+-<li>Excessive checking, corrections or workarounds are erasing the benefit of tools you’ve tried.</li>
++<li>A pilot has stalled, or excessive checking, disconnected tools, inconsistent use or unclear ownership are erasing the benefit.</li>
+ </ul></div><div class="home-answer">
+ <p>If you’re unsure where to start, I help identify worthwhile applications. If you have a defined requirement, I assess what it needs and work with you on implementation.</p>
+-<p>I use AI to analyse business information. For implementation, I configure tools, connect systems and build workflows around the application. I can also lead delivery with your team and specialists involved in your project. Testing, appropriate human review and ownership are part of making the result usable.</p>
++<p>I use AI to analyse your organization’s information. For implementation, I configure tools, connect systems and build workflows around the application. I can also lead delivery with your team and specialists involved in your project. Testing, appropriate human review and ownership are part of making the result usable.</p>
+ <div class="home-proof"><h3 id="finding-a-margin-problem-in-imperfect-data">Finding a margin problem in imperfect data</h3>
+ <p>A services business could not tell whether each service line justified the effort it consumed. I used AI to organise and analyse incomplete financial and operating records, then recommended changes to pricing and scope for a recurring service line. The founder adopted those changes, and the line’s margin subsequently improved.</p>
+ <p><a class="copy-link" href="/ai-consulting">Explore AI consulting and implementation</a></p></div></div></section>
+@@ -47,4 +47,4 @@
+ <p><a class="copy-link" href="/research">Explore research and resources</a></p></section>
+ <section class="home-closing"><h2 id="what-would-you-like-to-change">What would you like to change?</h2>
+ <p>Tell me what needs attention. You don’t need a finished brief, a chosen AI tool or a fully defined leadership role.</p>
+-<p><a class="copy-button" href="/contact">Discuss your business challenge</a></p></section>
++<p><a class="copy-button" href="/contact">Discuss your challenge</a></p></section>
+--- /commercial-leadership BEFORE
++++ /commercial-leadership AFTER
+@@ -1,11 +1,11 @@
+ {
+-  "title": "Fractional Commercial Leadership | AutonomyBridge",
+-  "description": "Fractional leadership and defined projects covering sales teams, positioning, pricing, partnerships and growth decisions, led by Deepak Gupta."
++  "title": "Fractional Sales & Commercial Leadership | AutonomyBridge",
++  "description": "Deepak Gupta leads sales teams, forecasting and key opportunities for startups and SMBs, with fractional leadership and defined commercial projects."
+ }
+ <section class="core-hero"><div><h1 id="commercial-leadership-for-sales-growth-and-market-decisions">Commercial leadership for sales, growth and market decisions</h1>
+-<p>Fractional leadership and defined projects for startup founders and small and medium-sized business leaders.</p>
++<p>Fractional sales leadership, broader commercial leadership and defined projects for startups and small and medium-sized businesses (SMBs).</p>
+ <p>I’m Deepak Gupta. I can lead your sales team, own the forecast and personally manage important opportunities. I also help assess where to grow, refine your offering and pricing, and develop new markets or partnerships.</p>
+-<p><a class="copy-button" href="/contact">Discuss your business challenge</a></p></div><aside class="core-context"><p>This may be relevant when:</p>
++<p><a class="copy-button" href="/contact">Discuss your challenge</a></p></div><aside class="core-context"><p>This may be relevant when:</p>
+ <ul>
+ <li>You’ve hired salespeople, but important deals still depend on you.</li>
+ <li>The team is busy, yet the pipeline and forecast are difficult to trust.</li>
+@@ -30,7 +30,7 @@
+ <p>Personally lead discovery, shape proposals and pilot arrangements, address buying concerns and manage negotiations. Coordinate with delivery so customer commitments reflect what the business can provide.</p>
+ </div><div><h2 id="positioning-pricing-and-routes-to-customers">Positioning, pricing and routes to customers</h2>
+ <p>Clarify the buyer, the value of the offering and how it should be positioned and priced. Develop direct sales, partnerships or channel approaches suited to the opportunity.</p>
+-</div><div><h2 id="growth-choices-and-market-entry">Growth choices and market entry</h2>
++</div><div><h2 id="growth-choices-and-market-entry">Business development and market entry</h2>
+ <p>Compare opportunities, test assumptions with customers and build the commercial case for investment. Help decide where to focus and lead the work to enter or develop a market.</p></div></div></section>
+ <section class="core-engagement"><h2 id="choose-the-involvement-the-business-needs">Choose the involvement the business needs</h2>
+ <div class="core-grid"><div><h3 id="fractional-commercial-leadership">Fractional commercial leadership</h3>
+@@ -48,4 +48,4 @@
+ <p>I take responsibility for the work and decisions within that remit, track performance and act on what it shows. We also identify what depends on your team, access to information or decisions from other leaders.</p></div></section>
+ <section class="core-closing"><h2 id="what-needs-leadership-or-progress-right-now">What needs leadership or progress right now?</h2>
+ <p>Tell me where the team needs support, which opportunity is stuck or what commercial decision you need to make. You don’t need to decide in advance whether the answer is a fractional role or a defined project.</p>
+-<p><a class="copy-button" href="/contact">Discuss your business challenge</a></p></section>
++<p><a class="copy-button" href="/contact">Discuss your challenge</a></p></section>
+--- /ai-consulting BEFORE
++++ /ai-consulting AFTER
+@@ -1,37 +1,37 @@
+ {
+-  "title": "AI Consulting & Implementation | AutonomyBridge",
+-  "description": "Use AI to improve business decisions and everyday work. Deepak Gupta provides analysis, workflow builds, integrations and implementation support."
++  "title": "AI Consulting & Implementation for Teams | AutonomyBridge",
++  "description": "Hands-on AI consulting for businesses and nonprofits: assess a question, build a workflow or improve stalled implementation and team adoption."
+ }
+ <section class="core-hero"><div><h1 id="use-ai-to-make-better-decisions-and-improve-everyday-work">Use AI to make better decisions and improve everyday work</h1>
+-<p>AI consulting and hands-on implementation for startup founders and small and medium-sized business leaders.</p>
+-<p>I’m Deepak Gupta. I help you use AI to find opportunities to earn more or reduce costs, analyse business information and improve how work gets done. I personally carry out analysis, configure tools and build workflows and integrations. I can also lead implementation with your team and specialists involved in your project.</p>
+-<p><a class="copy-button" href="/contact">Discuss your business challenge</a></p></div><aside class="core-context"><p>You may be starting with:</p>
+-<p>A business question. Information is spread across invoices, spreadsheets or other systems, and you need to understand what is driving sales, costs or margins.</p>
+-<p>A defined requirement. You know which task or workflow you want to improve and need someone to build it around the way your business works.</p>
+-<p>An existing attempt. You have AI tools or a pilot, but excessive checking, disconnected systems or inconsistent team use are limiting the benefit.</p>
++<p>AI consulting and hands-on implementation for businesses and nonprofits with teams, existing workflows and a practical implementation or adoption problem.</p>
++<p>I’m Deepak Gupta. I help you assess where AI could improve service delivery, response time, staff effort, information quality or operational decisions. If a pilot has stalled, tools are disconnected, checking takes too much time or no one owns the workflow, I help work through what needs to change. I personally carry out analysis, configure tools and build workflows and integrations. I can also lead implementation with your team and specialists involved in your project.</p>
++<p><a class="copy-button" href="/contact">Discuss your challenge</a></p></div><aside class="core-context"><p>You may be starting with:</p>
++<p>An organizational question. Information is spread across documents, spreadsheets or other systems, and you need to understand a decision, a service or how work gets done.</p>
++<p>A defined requirement. You know which task or workflow you want to improve and need someone to build it around the way your team works.</p>
++<p>An existing attempt. You have AI tools or a stalled pilot, but excessive checking, disconnected tools, inconsistent use or unclear ownership are limiting the benefit.</p>
+ </aside></section>
+ <section class="core-outcomes"><h2 id="what-should-become-better">What should become better?</h2>
+ <div class="core-grid core-three"><div><h3 id="better-decisions">Better decisions</h3>
+-<p>Use your information to understand customer demand, pricing, margins and operating patterns, with findings you can act on and clear limits on what the data supports.</p>
++<p>Use your information to understand demand, service delivery, costs and operating patterns, with findings you can act on and clear limits on what the data supports.</p>
+ </div><div><h3 id="better-workflows">Better workflows</h3>
+ <p>Improve how enquiries, documents and other incoming work are handled. Reduce repetitive preparation, copying and rework, and get useful information to the person who needs to act.</p>
+ </div><div><h3 id="practical-team-use">Practical team use</h3>
+-<p>Give people a useful workflow they can use consistently as part of their everyday work.</p>
++<p>Give people a useful workflow they can use consistently, with clear ownership and review responsibilities as part of their everyday work.</p>
+ </div></div><p>We assess the improvement alongside the cost of tools, checking and maintenance.</p></section>
+ <section class="core-row"><div><h2 id="decide-what-is-worth-pursuing-first">Decide what is worth pursuing first</h2></div><div>
+-<p>If you’re exploring where AI could help, we start with the business decision or work you want to improve. I assess the available information, potential benefit and implementation effort, then recommend what to pursue first, what to defer and what is unlikely to justify the cost.</p>
++<p>If you’re exploring where AI could help, we start with the organizational question or work you want to improve. I assess the available information, potential benefit and implementation effort, then recommend what to pursue first, what to defer and what is unlikely to justify the cost.</p>
+ <p>The result may be an AI-assisted analysis that helps you make a specific decision, or a repeatable workflow worth testing. Where simpler automation or a process change would serve you better, I recommend that approach.</p>
+ <p>If you already have a defined requirement, we assess it directly and agree the intended result and delivery scope.</p></div></section>
+-<section class="core-capabilities"><h2 id="from-a-business-need-to-working-delivery">From a business need to working delivery</h2>
++<section class="core-capabilities"><h2 id="from-a-business-need-to-working-delivery">From an organizational need to working delivery</h2>
+ <div class="core-grid"><div><h3 id="ai-assisted-analysis">AI-assisted analysis</h3>
+-<p>I use AI to organise and analyse business information, investigate patterns and compare scenarios. I direct the questions, check findings against the available records and apply judgment to what the business should do next. Missing or inconsistent data remains visible in the conclusions.</p>
++<p>I use AI to organise and analyse your organization’s information, investigate patterns and compare scenarios. I direct the questions, check findings against the available records and apply judgment to what your organization should do next. Missing or inconsistent data remains visible in the conclusions.</p>
+ </div><div><h3 id="tools-workflows-and-integrations">Tools, workflows and integrations</h3>
+ <p>I configure tools and build connections between systems around the task. That includes the information coming in, the output needed, review points and how exceptions are handled. I assess your existing tools first and use them where they fit the requirement.</p>
+ </div><div><h3 id="testing-and-adjustment">Testing and adjustment</h3>
+ <p>We test against examples of the actual work, including incomplete information and difficult cases. I review the results with the people using the application and adjust the design before expanding its use.</p>
+ </div><div><h3 id="improving-an-existing-attempt">Improving an existing attempt</h3>
+ <p>I examine where the benefit is being lost: data, instructions, output quality, system connections, review effort or team use. The work may involve rebuilding a step, narrowing the application or changing how it fits into daily work.</p>
+-</div></div><p>The delivery scope includes responsibilities, permitted use of business data, access and the controls needed for any system connections.</p></section>
++</div></div><p>The delivery scope includes responsibilities, permitted use of your organization’s data, access and the controls needed for any system connections.</p></section>
+ <section class="core-row"><div><h2 id="make-it-useful-to-the-people-doing-the-work">Make it useful to the people doing the work</h2></div><div>
+ <p>I involve users in testing and refinement. We define what AI handles, what a person checks and what needs escalation. Human review is part of the design where the consequences of an error require it.</p>
+ <p>If people work around the application or use it inconsistently, I investigate why. The workflow may add effort, the instructions may be unclear, or the task may need a different approach. Training and adjustments are based on what happens in use.</p>
+@@ -43,5 +43,5 @@
+ <p>A services company was slow to respond to enquiries. I built an AI-assisted intake workflow, then revised extraction and reply templates with the coordinators when the first version proved unreliable. I narrowed the scope and retained review before sending.</p>
+ <p>Over six months after handover, average first response time fell from about one and a half business days to about six hours. Better capture and a review queue contributed to the improvement, with human review still required before replies were sent.</p></div></div></section>
+ <section class="core-closing"><h2 id="what-would-you-like-to-improve">What would you like to improve?</h2>
+-<p>Bring a business question, a defined application or an AI attempt that needs work. Tell me what you want to change and what is getting in the way. You don’t need to arrive with a chosen tool or a finished specification.</p>
+-<p><a class="copy-button" href="/contact">Discuss your business challenge</a></p></section>
++<p>Bring an organizational question, a defined requirement or an AI attempt that needs work. Tell me what you want to change and what is getting in the way. You don’t need to arrive with a chosen tool or a finished specification.</p>
++<p><a class="copy-button" href="/contact">Discuss your challenge</a></p></section>
+--- /about BEFORE
++++ /about AFTER
+@@ -1,10 +1,11 @@
+ {
+-  "title": "About Deepak Gupta | AutonomyBridge",
+-  "description": "Meet Deepak Gupta and explore the commercial operating experience, hands-on AI work and robotics background behind AutonomyBridge."
++  "title": "Deepak Gupta: Commercial Leadership & AI | AutonomyBridge",
++  "description": "Meet Deepak Gupta: commercial leadership for startups and SMBs, alongside hands-on AI implementation for businesses and nonprofits."
+ }
+ <section class="about-opening"><div><h1 id="deepak-gupta">Deepak Gupta</h1></div><div>
+ <p class="copy-lead">Commercial leadership and hands-on AI implementation</p>
+-<p>I work with startup founders and small and medium-sized business leaders on growth, commercial execution and practical uses of AI.</p>
++<p>I provide fractional sales and commercial leadership for startups and SMBs that need accountable leadership, stronger sales teams or progress on a defined commercial project.</p>
++<p>My AI consulting and implementation work serves businesses and nonprofits with teams, existing workflows and a practical implementation or adoption problem.</p>
+ <p>My background combines running commercial teams, developing markets and winning customers with personally building AI-assisted tools and workflows. Through AutonomyBridge, you work directly with me, whether the need is ongoing commercial leadership, a defined project or help putting AI to use.</p></div></section>
+ <section class="core-row about-experience"><div><h2 id="experience-making-commercial-decisions-and-carrying-them-through">Experience making commercial decisions and carrying them through</h2></div><div>
+ <p>My career spans B2B platforms, industrial technology and robotics. I have built and led commercial teams, managed complex sales and established qualification, forecasting and review practices across regions.</p>
+@@ -15,9 +16,9 @@
+ <p>I personally use AI to organise and analyse business information, configure tools, build workflows and connect systems. I also work through the testing and adjustments needed to make those applications useful in practice.</p>
+ <p>In one services engagement, I used AI to analyse incomplete financial and operating information and inform changes to pricing and scope.</p>
+ <p>In another, I built an enquiry-handling workflow, including information extraction, draft replies and a CRM connection. I revised it with the users when the first version proved unreliable and retained human review before sending.</p>
+-<p>These experiences inform how I approach delivery: define the business purpose, work with the information available, test against real tasks and make the remaining limitations clear.</p></div></section>
++<p>These experiences inform how I approach delivery: define the purpose of the work, work with the information available, test against real tasks and make the remaining limitations clear.</p></div></section>
+ <section class="core-row core-outcomes"><div><h2 id="business-judgment-alongside-implementation">Business judgment alongside implementation</h2></div><div>
+-<p>Commercial experience helps me judge which questions matter and what an improvement would mean for the business. Hands-on AI ability lets me carry out the analysis or build directly against a defined requirement.</p>
++<p>Commercial experience helps me assess growth choices and lead sales work. Hands-on AI ability lets me carry out analysis or build against a defined requirement, with attention to the team’s work and the intended result.</p>
+ <p>You can engage me for either service separately. Where a project needs both, I can connect the commercial decisions with the implementation work.</p></div></section>
+ <section class="core-row"><div><h2 id="a-grounding-in-robotics-and-industrial-automation">A grounding in robotics and industrial automation</h2></div><div>
+ <p>My robotics work has required connecting technical capability with customer needs, deployment conditions and commercial viability. It has also shaped my research into deployment economics, vendor evaluation and the adoption of new technology.</p>
+@@ -28,4 +29,4 @@
+ <h3><a href="/commercial-leadership">Commercial Leadership</a></h3>
+ <h3><a href="/ai-consulting">AI Consulting &amp; Implementation</a></h3>
+ <p>If you’re unsure which fits, describe the situation and what you want to change.</p>
+-<p><a class="copy-button" href="/contact">Discuss your business challenge</a></p></section>
++<p><a class="copy-button" href="/contact">Discuss your challenge</a></p></section>
+--- /contact BEFORE
++++ /contact AFTER
+@@ -1,52 +1,10 @@
+ {
+-  "title": "Contact Deepak Gupta | AutonomyBridge",
+-  "description": "Discuss commercial leadership, AI consulting and implementation, or a research question with Deepak Gupta. Start with your situation or project."
++  "title": "Contact Deepak Gupta: Leadership & AI | AutonomyBridge",
++  "description": "Email Deepak Gupta about commercial leadership, AI implementation or a research question. Describe your organization, your work and what needs to improve."
+ }
+-<section class="copy-section">
+-<h1 id="discuss-your-business-challenge">Discuss your business challenge</h1>
+-<p>Get in touch about commercial leadership, AI consulting and implementation or a question arising from the research.</p>
+-<p>You may have a defined project or simply know that something needs to improve. You don’t need to choose an engagement model before contacting me.</p>
+-</section>
+-<section class="copy-section">
+-<p>Tell me a little about your business, what you want to change and where you need help. If there’s a relevant deadline or something you’ve already tried, include that too.</p>
+-<p>Please leave out confidential and sensitive information.</p>
+-</section>
+-<section class="copy-section">
+-<h2 id="name-required">Name — required</h2>
+-<h3 id="email-required">Email — required</h3>
+-<p>Use the address where you’d like me to reply.</p>
+-<h3 id="company-or-organisation-required">Company or organisation — required</h3>
+-<h3 id="website-optional">Website — optional</h3>
+-<h3 id="your-message-required">Your message — required</h3>
+-<p>Briefly describe your situation and what you’d like to improve.</p>
+-<p><a class="copy-button" href="/contact">Send enquiry</a></p>
+-<h3 id="prefer-email-contact-deepak-autonomybridge-com">Prefer email? Contact deepak@autonomybridge.com</h3>
+-<p>Privacy: Read the Privacy Policy for information about how enquiries are handled.</p>
+-<p><a class="copy-link" href="/privacy-policy">Privacy Policy</a></p>
+-</section>
+-<section class="copy-section">
+-<p>I’ll review your enquiry and reply by email. We can clarify what you need, whether I can help and the appropriate next step. If a conversation would be useful, we can arrange it then.</p>
+-</section>
+-<section class="copy-section">
+-<h2 id="thank-you-for-getting-in-touch">Thank you for getting in touch</h2>
+-<p>Your enquiry has been submitted. I’ll review it and reply using the email address you provided.</p>
+-<p><a class="copy-link" href="/">Return to Home</a></p>
+-</section>
+-<section class="copy-section">
+-<h2 id="missing-name">Missing name</h2>
+-<p>Please enter your name.</p>
+-<h3 id="missing-email">Missing email</h3>
+-<p>Please enter your email address.</p>
+-<h3 id="invalid-email">Invalid email</h3>
+-<p>Please enter a valid email address.</p>
+-<h3 id="missing-company">Missing company</h3>
+-<p>Please enter your company or organisation.</p>
+-<h3 id="missing-message">Missing message</h3>
+-<p>Please enter a message.</p>
+-<h3 id="form-error-summary">Form error summary</h3>
+-<p>Please check the highlighted fields.</p>
+-<h3 id="confirmed-submission-failure">Confirmed submission failure</h3>
+-<p>Your enquiry wasn’t submitted. Please try again or email deepak@autonomybridge.com.</p>
+-<h3 id="submission-outcome-unknown">Submission outcome unknown</h3>
+-<p>We couldn’t confirm whether your enquiry was submitted. Please don’t submit it again yet. Email deepak@autonomybridge.com and mention that you tried the form so I can check whether it arrived.</p>
+-</section>
++<header><h1 id="discuss-your-business-challenge">Discuss what you want to improve</h1>
++<p>Get in touch about commercial leadership for your business, AI consulting and implementation for your business or nonprofit, or a question arising from the research.</p>
++<p>You may have a defined project or simply know that something needs to improve. You don’t need to choose an engagement model before contacting me.</p></header>
++<div class="contact-grid"><div><p>Tell me a little about your organization and its work, what you want to change and where you need help. If there’s a relevant deadline or something you’ve already tried, include that too.</p>
++<p>Please leave out confidential and sensitive information.</p></div>
++<div><h2>Email Deepak</h2><p><a class="copy-button" href="mailto:deepak@autonomybridge.com">deepak@autonomybridge.com</a></p></div></div>

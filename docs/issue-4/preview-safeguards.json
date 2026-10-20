@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "local_pages_noindex": 160,
+  "private_preview_flag_tested": true,
+  "stale_overlay_not_restored": true,
+  "local_contact_email_only": true,
+  "production_guard_negative_controls": [
+    {
+      "override": {
+        "CONTEXT": "deploy-preview"
+      },
+      "rejected": true
+    },
+    {
+      "override": {
+        "SITE_ID": "wrong"
+      },
+      "rejected": true
+    },
+    {
+      "override": {
+        "AB_PRIVATE_PREVIEW": "1"
+      },
+      "rejected": true
+    }
+  ]
+}

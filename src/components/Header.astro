@@ -41,12 +41,12 @@ function isActive(href: string): boolean {
         ))
       }
     </nav>
-    <a href="/contact" class="header-cta">Discuss your business challenge</a>
+    <a href="/contact" class="header-cta">Discuss your challenge</a>
     <details class="home-mobile-menu">
       <summary>Menu</summary>
       <nav aria-label="Mobile primary">
         {primaryNavItems.map((item) => <a href={item.href} aria-current={isActive(item.href) ? 'page' : undefined}>{item.label}</a>)}
-        <a href="/contact" class="header-cta">Discuss your business challenge</a>
+        <a href="/contact" class="header-cta">Discuss your challenge</a>
       </nav>
     </details>
   </div>

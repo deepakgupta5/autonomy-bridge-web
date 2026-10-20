@@ -1,0 +1,3 @@
+import {readFileSync,writeFileSync} from 'node:fs';import {spawnSync} from 'node:child_process';
+const result=spawnSync(`${process.env.HOME}/.codex/skills/playwright/scripts/playwright_cli.sh`,['--session','abissue2','run-code',readFileSync('scripts/issue4-browser-check.js','utf8')],{encoding:'utf8',maxBuffer:10*1024*1024});
+const match=result.stdout.match(/### Result\n([^\n]+)/);if(!match){console.log(result.stdout+result.stderr);process.exit(1);}const report=JSON.parse(match[1]);writeFileSync('docs/issue-4/browser.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report,null,2));process.exit(report.passed?0:1);
