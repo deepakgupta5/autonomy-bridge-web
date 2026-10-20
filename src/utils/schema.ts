@@ -1,4 +1,4 @@
-const SITE_URL = "https://www.autonomybridge.com";
+const SITE_URL = "https://autonomybridge.com";
 const ORGANIZATION_ID = `${SITE_URL}#organization`;
 const WEBSITE_ID = `${SITE_URL}#website`;
 

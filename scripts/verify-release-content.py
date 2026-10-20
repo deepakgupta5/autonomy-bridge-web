@@ -14,7 +14,9 @@ class Paragraphs(HTMLParser):
   if self.current is not None:self.current+=s
  def handle_endtag(self,tag):
   if tag=='p' and self.current is not None:self.items.append(self.current);self.current=None
-with zipfile.ZipFile(sys.argv[1]) as z:source=json.loads(z.read('website_copy.json'))
+if Path(sys.argv[1]).suffix == '.json':source=json.loads(Path(sys.argv[1]).read_text())
+else:
+ with zipfile.ZipFile(sys.argv[1]) as z:source=json.loads(z.read('website_copy.json'))
 assert source['version']=='2'
 positions=json.loads((root/'scripts/private-proof-lines.json').read_text());pages=json.loads((root/'src/data/preview-copy.json').read_text());checks=[]
 for route,indices in positions.items():
@@ -44,5 +46,5 @@ for f in files:
  p=root/f
  if not p.is_file():continue
  assert not re.search(r'gh[pousr]_[A-Za-z0-9]{30,}|-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----',p.read_text(errors='ignore')),f
-result={'passed':True,'audited_directory':str(dist.resolve()),'proof_total':sum(x['approved_paragraphs'] for x in checks),'proof':checks,'placeholder_and_google_scan':'passed','contact':'Netlify form enabled' if form_enabled else 'email-only, no form','private_source_paths_and_common_secret_patterns':'passed; not a universal secret detector','owner_approval':'https://github.com/deepakgupta5/autonomy-bridge-web/pull/1#issuecomment-6281916360','scope':'Only approved website excerpts; underlying private evidence excluded; owner attestation not independent records audit'}
-(root/'docs/release/candidate-content-checks.json').write_text(json.dumps(result,indent=2)+'\n');print(json.dumps(result,indent=2))
+result={'passed':True,'controlling_source_sha256':hashlib.sha256(Path(sys.argv[1]).read_bytes()).hexdigest(),'audited_directory':str(dist.resolve()),'proof_total':sum(x['approved_paragraphs'] for x in checks),'proof':checks,'placeholder_and_google_scan':'passed','contact':'Netlify form enabled' if form_enabled else 'email-only, no form','private_source_paths_and_common_secret_patterns':'passed; not a universal secret detector','owner_approval':'https://github.com/deepakgupta5/autonomy-bridge-web/pull/1#issuecomment-6281916360','scope':'Only approved website excerpts; underlying private evidence excluded; owner attestation not independent records audit'}
+Path(os.environ.get('AB_AUDIT_REPORT',root/'docs/release/candidate-content-checks.json')).write_text(json.dumps(result,indent=2)+'\n');print(json.dumps(result,indent=2))
