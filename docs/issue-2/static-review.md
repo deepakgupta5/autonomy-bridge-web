@@ -42,3 +42,16 @@ Netlify reports a failed Deploy Preview for PR #3. The existing production-conte
 See `owner-decisions.md`: ROI equation/threshold accuracy, public source attribution and training-bot preferences remain owner decisions. Search Console has no property available in the current signed-in account; Bing requires sign-in. No indexation/performance claims. No new login, DNS, analytics, crawler-policy, form transport or provider change.
 
 Dependency installation reports pre-existing Node 20 engine incompatibility warnings in the Netlify dependency tree and 21 npm audit vulnerabilities. This PR promotes the already-installed parse5 7.3.0 to a direct dependency without changing its resolved version or the Netlify dependency tree; dependency remediation is outside this scoped rendering change.
+
+## Live versus candidate URL sample
+
+| Route | Live apex response | Live canonical | Candidate canonical |
+| --- | --- | --- | --- |
+| `/` | 200, no redirect | `https://www.autonomybridge.com` | `https://autonomybridge.com` |
+| `/commercial-leadership` | 200, no redirect | `https://www.autonomybridge.com/commercial-leadership` | `https://autonomybridge.com/commercial-leadership` |
+| `/frameworks/robotics-roi-model` | 200, no redirect | `https://www.autonomybridge.com/frameworks/robotics-roi-model` | `https://autonomybridge.com/frameworks/robotics-roi-model` |
+| `/glossary/autonomous-mobile-robot` | 200, no redirect | `https://www.autonomybridge.com/glossary/autonomous-mobile-robot` | `https://autonomybridge.com/glossary/autonomous-mobile-robot` |
+| `/methodology` | 200, no redirect | `https://autonomybridge.com/methodology` | `https://autonomybridge.com/methodology` |
+| `/sitemap` | 200, no redirect | `https://www.autonomybridge.com/sitemap` | `https://autonomybridge.com/sitemap` |
+
+All 156 XML destinations were checked live, not only this sample. Candidate HTML is local and not deployed; live signals will remain old until separately approved release. The existing dense raster figure needs zoom on mobile; no chart text or thresholds were rewritten.
