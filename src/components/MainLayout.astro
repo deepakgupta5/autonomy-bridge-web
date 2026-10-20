@@ -92,7 +92,8 @@ const resolvedOgUrl = canonicalHref ?? metadata.absoluteCanonicalUrl;
     <title>{metadata.titleTag}</title>
     {metadata.description && <meta name="description" content={metadata.description} />}
     {metadata.keywordsContent && <meta name="keywords" content={metadata.keywordsContent} />}
-    <meta name="robots" content={metadata.robots} />
+    <!-- This entire branch is preview-only, including production-mode local builds. -->
+    <meta name="robots" content="noindex,nofollow" />
     <link rel="canonical" href={canonicalHref ?? metadata.absoluteCanonicalUrl} />
     <meta property="og:site_name" content="AutonomyBridge" />
     <meta property="og:type" content={ogType ?? metadata.ogType} />

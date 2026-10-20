@@ -1,0 +1,42 @@
+{
+  "/glossary/commercial-viability": [
+    "/case-studies/service-robotics-commercial-viability-assessment",
+    "/insights/why-commercial-viability-and-technical-readiness-are-not-the-same-thing",
+    "/use-cases/aerial-robotics-commercial-viability-evaluation",
+    "/use-cases/humanoid-platform-commercial-readiness",
+    "/use-cases/service-robotics-deployment-evaluation"
+  ],
+  "/glossary/ideal-customer-profile": [
+    "/case-studies/icp-definition-inspection-robotics",
+    "/insights/how-robotics-vendors-misjudge-their-addressable-market"
+  ],
+  "/glossary/serviceable-addressable-market": [
+    "/case-studies/healthcare-automation-investor-market-sizing",
+    "/case-studies/icp-definition-inspection-robotics",
+    "/case-studies/service-robotics-commercial-viability-assessment",
+    "/insights/how-investors-should-size-robotics-markets",
+    "/insights/how-robotics-vendors-misjudge-their-addressable-market"
+  ],
+  "/glossary/technical-readiness-level": [
+    "/insights/why-commercial-viability-and-technical-readiness-are-not-the-same-thing",
+    "/use-cases/humanoid-platform-commercial-readiness"
+  ],
+  "/glossary/total-addressable-market": [
+    "/case-studies/healthcare-automation-investor-market-sizing",
+    "/insights/how-investors-should-size-robotics-markets"
+  ],
+  "/glossary/utilization-threshold": [
+    "/case-studies/off-highway-autonomy-deployment-economics"
+  ],
+  "/glossary/vendor-pricing-model": [
+    "/case-studies/icp-definition-inspection-robotics",
+    "/case-studies/service-robotics-commercial-viability-assessment",
+    "/insights/how-aerial-robotics-vendors-are-pricing-into-inspection-markets",
+    "/use-cases/aerial-robotics-commercial-viability-evaluation"
+  ],
+  "/use-cases/inspection-robotics-roi-evaluation": [
+    "/insights/how-aerial-robotics-vendors-are-pricing-into-inspection-markets",
+    "/use-cases/aerial-robotics-commercial-viability-evaluation",
+    "/use-cases/service-robotics-deployment-evaluation"
+  ]
+}

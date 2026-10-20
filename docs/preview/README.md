@@ -28,6 +28,8 @@ All 14 replacement routes use V2 copy, including legal placeholders and the neut
 
 Research keeps all 147 inventoried URLs. Research breadcrumbs and active states cover every family. Market Overview lists four market-context pages and five intralogistics pages. Research enquiry modules replace obsolete commissioned-research CTAs. The case-study hub now uses the approved evidence distinction rather than describing every study as a client engagement. Individual case-study bodies, evidence qualifications and original dates remain unchanged. The narrow framework identity patch leaves the related insight unchanged.
 
+Every generated preview page emits `noindex,nofollow`, in both marker and private-overlay builds. This complements loopback access and does not replace access control.
+
 The existing 11 redirect entries, including slash variants, are byte-identical. The existing www canonical convention and Methodology's non-www canonical are preserved. Host normalization remains a separate decision. Methodology retains `2026-03-15` as datePublished; dateModified is omitted pending actual release, and the visible revision-date field remains identifiable. Legal dates remain placeholders.
 
 HTML sitemap: 158 destinations. XML sitemap: 156 entries, adding the three new routes to the previous 153 and retaining the existing legal exclusion policy. `/contact-success` is excluded from both and uses noindex,nofollow. The sitemap directory itself and the confirmation utility account for the difference between 158 destinations and 160 built pages.
@@ -47,11 +49,15 @@ Browser tests intercept every mock POST. Explicit `{accepted:true}` is an interf
 ## Verification
 
 - Node 20 production build: 160 pages.
-- `python3 scripts/verify-preview.py /path/to/baseline/dist`: compares built routes to the supplied 147-route register, walks research reachability, checks links/fragments, sitemaps, metadata, breadcrumbs, redirects, existing canonicals and research dates.
+- `python3 scripts/verify-preview.py /path/to/baseline/dist`: requires the independent 157-page baseline build and fails on missing/incomplete baseline input. It compares built routes to the supplied 147-route register, walks research reachability, checks links/fragments, sitemaps, metadata, breadcrumbs, redirects, existing canonicals and research dates.
 - `docs/preview/verification.json`: exact results and all eight ambiguous broken destinations with referring pages. No additional missing page destinations or fragment failures were found. All 140 children also appear directly in their family hub listings.
 - Browser checks at 1440, 768 and 390 pixels across 12 representative routes: no horizontal overflow, one visible H1, correct active navigation. Home desktop/mobile and Contact mobile screenshots were inspected locally.
 - `scripts/browser-check.js` and `scripts/run-browser-check.mjs`: controlled Playwright form and keyboard checks; results recorded separately. Start the dev server and dedicated `abpreview` Playwright session before running.
 - Baseline was built separately from the source commit. No baseline routes were lost, no existing canonical changed, no research publication/modification date changed outside Methodology, and no research title changed outside the requested framework and Methodology replacements.
+
+The verifier fails on all reported unexpected differences, including missing metadata, lost routes, changed canonicals/research dates, preview robots directives, sitemap deviations and broken destinations. `historical-broken-links.json` is the fixed exception register for the eight historical targets and their existing referrers; new referrers also fail. Repairs may remove an existing exception without requiring a broken link to remain.
+
+Run `python3 scripts/test-preview-verifier.py /path/to/baseline/dist` for nine negative controls. It temporarily alters local build artifacts, confirms each defect is rejected, restores every artifact and reruns the clean audit. Results: `verifier-negative-controls.json`.
 
 The eight historical broken destinations have no matching registered page or supported unambiguous replacement. They remain explicit defects, with no invented pages or blanket hub redirects. External citation availability and live redirect HTTP behaviour were not reverified; source redirects were verified byte-for-byte.
 

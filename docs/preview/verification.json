@@ -58,5 +58,12 @@
   "lost_baseline_routes": [],
   "changed_existing_canonicals": [],
   "changed_research_dates_except_methodology": [],
-  "changed_research_titles_except_framework": []
+  "changed_research_titles_except_framework": [],
+  "unexpected_broken_destinations": [],
+  "new_broken_link_referrers": {},
+  "preview_robots_errors": [],
+  "xml_missing_expected": [],
+  "xml_unexpected": [],
+  "failures": [],
+  "passed": true
 }
