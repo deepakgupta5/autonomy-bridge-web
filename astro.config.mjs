@@ -105,7 +105,7 @@ function isDateBasedPath(pathname) {
 
 function toPathname(entry) {
   const asString = typeof entry === 'string' ? entry : String(entry);
-  return normalizePathname(new URL(asString, 'https://www.autonomybridge.com').pathname);
+  return normalizePathname(new URL(asString, 'https://autonomybridge.com').pathname);
 }
 
 function isAllowedSitemapPath(pathname) {
@@ -123,7 +123,7 @@ function isAllowedSitemapPath(pathname) {
 }
 
 export default defineConfig({
-  site: 'https://www.autonomybridge.com',
+  site: 'https://autonomybridge.com',
   trailingSlash: 'never',
   build: {
     format: 'file',

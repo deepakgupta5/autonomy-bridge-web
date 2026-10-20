@@ -15,6 +15,6 @@ let body = overlay[route] ?? page.html;
 if (deploymentPolicy.mode === 'production') body = body.replace(/<p class="revision-date">.*?<\/p>/g, `<p class="revision-date">Last updated: ${deploymentPolicy.publicationDate}</p>`);
 const schema = route === '/methodology' ? [{ '@context': 'https://schema.org', '@type': 'Article', headline: page.name, datePublished: '2026-03-15', ...(deploymentPolicy.mode === 'production' ? {dateModified: deploymentPolicy.publicationDate} : {}) }] : [];
 ---
-<MainLayout title={page.name} canonicalPath={route} canonicalHref={route === "/methodology" ? "https://autonomybridge.com/methodology" : undefined} seoTitle={page.metadata.title} seoDescription={page.metadata.description} schema={schema} showLocalSubnav={route === '/methodology'}>
+<MainLayout title={page.name} canonicalPath={route} seoTitle={page.metadata.title} seoDescription={page.metadata.description} schema={schema} showLocalSubnav={route === '/methodology'}>
   <article class:list={['approved-copy', { 'home-copy': route === '/', 'core-copy': ['/commercial-leadership', '/ai-consulting', '/about', '/research'].includes(route), 'policy-copy': route.includes('policy') || route === '/terms-of-use' || route === '/methodology' }]} set:html={body} />
 </MainLayout>
