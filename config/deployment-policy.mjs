@@ -5,7 +5,7 @@ export const deploymentPolicy = Object.freeze({
   origin: 'https://autonomybridge.com', // exact approved HTTPS production origin
   siteId: '3df07dc5-6950-4241-98eb-cf95df3d271d', // independently verified Netlify site ID
   publicationDate: '2026-10-19', // actual release day, set only at approved publication
-  formEnabled: true, // production only; false provides email-only fallback
+  formEnabled: false, // production only; false provides email-only fallback
 });
 
 export function validTarget(policy) {

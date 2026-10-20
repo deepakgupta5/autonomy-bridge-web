@@ -1,59 +1,19 @@
 ---
-import {deploymentPolicy} from '../../config/deployment-policy.mjs';
 import MainLayout from '../components/MainLayout.astro';
 import pages from '../data/preview-copy.json';
 import '../styles/copy.css';
 import '../styles/core.css';
-const metadata = pages['/contact'].metadata;
-const fields = [
- {name:'name', label:'Name', type:'text', required:true, autocomplete:'name'},
- {name:'email', label:'Email', type:'email', required:true, autocomplete:'email', hint:'Use the address where you’d like me to reply.'},
- {name:'company', label:'Company or organisation', type:'text', required:true, autocomplete:'organization'},
- {name:'website', label:'Website', type:'text', required:false, autocomplete:'url'},
- {name:'message', label:'Your message', required:true, hint:'Briefly describe your situation and what you’d like to improve.'},
-];
+const page = pages['/contact'];
 ---
-<MainLayout title="Contact" canonicalPath="/contact" seoTitle={metadata.title} seoDescription={metadata.description}>
-<article class="approved-copy core-copy contact-copy">
-<header><h1>Discuss your business challenge</h1>
-<p>Get in touch about commercial leadership, AI consulting and implementation or a question arising from the research.</p>
-<p>You may have a defined project or simply know that something needs to improve. You don’t need to choose an engagement model before contacting me.</p></header>
-<div class="contact-grid">
-<div><p>Tell me a little about your business, what you want to change and where you need help. If there’s a relevant deadline or something you’ve already tried, include that too.</p>
-<p>Please leave out confidential and sensitive information.</p>
-{deploymentPolicy.mode === 'local' && <p class="test-notice">Preview form: no enquiries or notifications are sent. Submission outcomes require a controlled local test response.</p>}</div>
-{(deploymentPolicy.mode === 'local' || deploymentPolicy.formEnabled) ? <form name="contact" method="POST" action="/contact-success" data-netlify="true" netlify-honeypot="bot-field" novalidate>
-<input type="hidden" name="form-name" value="contact" />
-<!-- Prepared receipt correlation field; preview transport remains loopback-only. -->
-<input type="hidden" name="submission-reference" value="" />
-<input type="hidden" name="receipt-kind" value="autonomybridge-contact-v1" />
-<div hidden><label for="bot-field">Leave blank</label><input id="bot-field" name="bot-field" tabindex="-1" autocomplete="off" /></div>
-<p id="form-status" role="alert" tabindex="-1"></p>
-{fields.map(field => <div class="field">
-<label for={field.name}>{field.label} <span>— {field.required ? 'required' : 'optional'}</span></label>
-{field.hint && <p id={`${field.name}-hint`} class="hint">{field.hint}</p>}
-{field.name === 'message' ? <textarea id={field.name} name={field.name} required rows="6" aria-describedby={`${field.name}-hint ${field.name}-error`}></textarea> : <input id={field.name} name={field.name} type={field.type} required={field.required} autocomplete={field.autocomplete} aria-describedby={`${field.hint ? field.name+'-hint ' : ''}${field.name}-error`} />}
-<p class="field-error" id={`${field.name}-error`}></p>
-</div>)}
-<button class="copy-button" type="submit" disabled>Send enquiry</button>
-<noscript><p>This form needs JavaScript. Please use the email link above if JavaScript is unavailable.</p></noscript>
-</form> : <p role="status">The enquiry form is temporarily unavailable. Please email <a href="mailto:deepak@autonomybridge.com">deepak@autonomybridge.com</a>.</p>}</div></article>
+<MainLayout title="Contact" canonicalPath="/contact" seoTitle={page.metadata.title} seoDescription={page.metadata.description}>
+<article class="approved-copy core-copy contact-copy" set:html={page.html} />
 </MainLayout>
-<script>
-import { mountContactForm } from '../utils/contact-form';
-const form = document.querySelector<HTMLFormElement>('form[name="contact"]');
-if (form) mountContactForm(form);
-</script>
 <style>
-.contact-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:4rem;margin-top:3rem}.contact-grid h2{font-size:var(--role-h2-size);margin-top:2rem}form{background:var(--color-bg-surface);border:1px solid var(--color-border-light);border-radius:6px;padding:2rem}.field{margin-bottom:1.3rem}label{display:block;font-weight:600;margin-bottom:.5rem}label span{font-size:.8rem;font-weight:400}input,textarea{box-sizing:border-box;width:100%;padding:.8rem;border:1px solid var(--color-border-default);border-radius:4px;font:inherit;background:white;color:var(--color-text-primary)}.hint{font-size:.85rem;margin:0 0 .4rem}.field-error,#form-status{color:#9e2929;font-size:.9rem}.field-error:empty,#form-status:empty{display:none}[aria-invalid=true]{border:2px solid #9e2929}button{cursor:pointer;font:inherit}button:disabled{opacity:.6;cursor:wait}.test-notice{border-left:3px solid var(--color-border-accent);padding-left:1rem;font-size:.85rem}@media(max-width:800px){.contact-grid{grid-template-columns:1fr;gap:1.5rem}form{padding:1.2rem}}
-</style>
-<style>
-.contact-copy>header{display:grid;grid-template-columns:1fr 1.2fr;column-gap:4rem;padding:.5rem 0 2rem;border-bottom:2px solid var(--color-border-accent)}
-.contact-copy>header h1{grid-row:1/3;font-size:clamp(2.125rem,2rem + 1vw,3rem);line-height:1.15;max-width:20ch}
-.contact-copy>header p{grid-column:2}.contact-copy>header p:last-child{margin-bottom:0}
-.contact-copy .contact-grid{margin-top:2.5rem}.contact-copy .contact-grid h2{font-size:1.25rem}
-.contact-copy form{background:white;border-radius:0;border-top:2px solid var(--color-border-accent)}
-.contact-copy form .copy-button{font-size:.875rem;font-family:var(--font-sans);font-weight:600}
-@media(max-width:1000px){.contact-copy>header,.contact-grid{column-gap:2rem}}
-@media(max-width:800px){.contact-copy>header{display:block}.contact-copy>header h1{max-width:none}.contact-grid{margin-top:2rem}}
+.contact-copy :global(.contact-grid){display:grid;grid-template-columns:1fr 1.2fr;gap:4rem;margin-top:2.5rem}
+.contact-copy :global(header){display:grid;grid-template-columns:1fr 1.2fr;column-gap:4rem;padding:.5rem 0 2rem;border-bottom:2px solid var(--color-border-accent)}
+.contact-copy :global(header h1){grid-row:1/3;font-size:clamp(2.125rem,2rem + 1vw,3rem);line-height:1.15;max-width:20ch}
+.contact-copy :global(header p){grid-column:2}.contact-copy :global(header p:last-child){margin-bottom:0}
+.contact-copy :global(.contact-grid h2){font-size:1.25rem}
+@media(max-width:1000px){.contact-copy :global(header),.contact-copy :global(.contact-grid){column-gap:2rem}}
+@media(max-width:800px){.contact-copy :global(header){display:block}.contact-copy :global(header h1){max-width:none}.contact-copy :global(.contact-grid){grid-template-columns:1fr;gap:1.5rem}}
 </style>

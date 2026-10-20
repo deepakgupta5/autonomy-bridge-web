@@ -1,0 +1,211 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "route": "/",
+      "width": 1440,
+      "overflow": false,
+      "h1": [
+        "Commercial leadership. Hands-on AI implementation."
+      ],
+      "forms": 0,
+      "mailLinks": [],
+      "canonical": "https://autonomybridge.com/",
+      "focus": {
+        "text": "Skip to content",
+        "outline": "solid"
+      },
+      "skip": true
+    },
+    {
+      "route": "/commercial-leadership",
+      "width": 1440,
+      "overflow": false,
+      "h1": [
+        "Commercial leadership for sales, growth and market decisions"
+      ],
+      "forms": 0,
+      "mailLinks": [],
+      "canonical": "https://autonomybridge.com/commercial-leadership",
+      "focus": {
+        "text": "Skip to content",
+        "outline": "solid"
+      },
+      "skip": true
+    },
+    {
+      "route": "/ai-consulting",
+      "width": 1440,
+      "overflow": false,
+      "h1": [
+        "Use AI to make better decisions and improve everyday work"
+      ],
+      "forms": 0,
+      "mailLinks": [],
+      "canonical": "https://autonomybridge.com/ai-consulting",
+      "focus": {
+        "text": "Skip to content",
+        "outline": "solid"
+      },
+      "skip": true
+    },
+    {
+      "route": "/about",
+      "width": 1440,
+      "overflow": false,
+      "h1": [
+        "Deepak Gupta"
+      ],
+      "forms": 0,
+      "mailLinks": [],
+      "canonical": "https://autonomybridge.com/about",
+      "focus": {
+        "text": "Skip to content",
+        "outline": "solid"
+      },
+      "skip": true
+    },
+    {
+      "route": "/contact",
+      "width": 1440,
+      "overflow": false,
+      "h1": [
+        "Discuss what you want to improve"
+      ],
+      "forms": 0,
+      "mailLinks": [
+        "mailto:deepak@autonomybridge.com"
+      ],
+      "canonical": "https://autonomybridge.com/contact",
+      "focus": {
+        "text": "Skip to content",
+        "outline": "solid"
+      },
+      "skip": true
+    },
+    {
+      "route": "/",
+      "width": 390,
+      "overflow": false,
+      "h1": [
+        "Commercial leadership. Hands-on AI implementation."
+      ],
+      "forms": 0,
+      "mailLinks": [],
+      "canonical": "https://autonomybridge.com/",
+      "focus": {
+        "text": "Skip to content",
+        "outline": "solid"
+      },
+      "skip": true,
+      "mobileMenu": true,
+      "menuFocus": "solid"
+    },
+    {
+      "route": "/commercial-leadership",
+      "width": 390,
+      "overflow": false,
+      "h1": [
+        "Commercial leadership for sales, growth and market decisions"
+      ],
+      "forms": 0,
+      "mailLinks": [],
+      "canonical": "https://autonomybridge.com/commercial-leadership",
+      "focus": {
+        "text": "Skip to content",
+        "outline": "solid"
+      },
+      "skip": true,
+      "mobileMenu": true,
+      "menuFocus": "solid"
+    },
+    {
+      "route": "/ai-consulting",
+      "width": 390,
+      "overflow": false,
+      "h1": [
+        "Use AI to make better decisions and improve everyday work"
+      ],
+      "forms": 0,
+      "mailLinks": [],
+      "canonical": "https://autonomybridge.com/ai-consulting",
+      "focus": {
+        "text": "Skip to content",
+        "outline": "solid"
+      },
+      "skip": true,
+      "mobileMenu": true,
+      "menuFocus": "solid"
+    },
+    {
+      "route": "/about",
+      "width": 390,
+      "overflow": false,
+      "h1": [
+        "Deepak Gupta"
+      ],
+      "forms": 0,
+      "mailLinks": [],
+      "canonical": "https://autonomybridge.com/about",
+      "focus": {
+        "text": "Skip to content",
+        "outline": "solid"
+      },
+      "skip": true,
+      "mobileMenu": true,
+      "menuFocus": "solid"
+    },
+    {
+      "route": "/contact",
+      "width": 390,
+      "overflow": false,
+      "h1": [
+        "Discuss what you want to improve"
+      ],
+      "forms": 0,
+      "mailLinks": [
+        "mailto:deepak@autonomybridge.com"
+      ],
+      "canonical": "https://autonomybridge.com/contact",
+      "focus": {
+        "text": "Skip to content",
+        "outline": "solid"
+      },
+      "skip": true,
+      "mobileMenu": true,
+      "menuFocus": "solid"
+    }
+  ],
+  "noJS": [
+    {
+      "route": "/",
+      "h1": 1,
+      "articleVisible": true,
+      "forms": 0
+    },
+    {
+      "route": "/commercial-leadership",
+      "h1": 1,
+      "articleVisible": true,
+      "forms": 0
+    },
+    {
+      "route": "/ai-consulting",
+      "h1": 1,
+      "articleVisible": true,
+      "forms": 0
+    },
+    {
+      "route": "/about",
+      "h1": 1,
+      "articleVisible": true,
+      "forms": 0
+    },
+    {
+      "route": "/contact",
+      "h1": 1,
+      "articleVisible": true,
+      "forms": 0
+    }
+  ]
+}
