@@ -8,7 +8,7 @@ const metadata = pages['/contact'].metadata;
 const fields = [
  {name:'name', label:'Name', type:'text', required:true, autocomplete:'name'},
  {name:'email', label:'Email', type:'email', required:true, autocomplete:'email', hint:'Use the address where you’d like me to reply.'},
- {name:'company', label:'Company or organisation', type:'text', required:true, autocomplete:'organization', hint:'Not required for a privacy request.'},
+ {name:'company', label:'Company or organisation', type:'text', required:false, autocomplete:'organization'},
  {name:'website', label:'Website', type:'text', required:false, autocomplete:'url'},
  {name:'message', label:'Your message', required:true, hint:'Briefly describe your situation and what you’d like to improve.'},
 ];
@@ -29,7 +29,6 @@ const fields = [
 <input type="hidden" name="receipt-kind" value="autonomybridge-contact-v1" />
 <div hidden><label for="bot-field">Leave blank</label><input id="bot-field" name="bot-field" tabindex="-1" autocomplete="off" /></div>
 <p id="form-status" role="alert" tabindex="-1"></p>
-<div class="privacy-choice"><label for="privacy-request"><input type="checkbox" id="privacy-request" name="privacy-request" value="yes" /> This is a privacy request</label><p class="hint">You do not need a company or organisation to make a privacy request.</p></div>
 {fields.map(field => <div class="field">
 <label for={field.name}>{field.label} <span id={`${field.name}-requirement`}>— {field.required ? 'required' : 'optional'}</span></label>
 {field.hint && <p id={`${field.name}-hint`} class="hint">{field.hint}</p>}
@@ -58,5 +57,3 @@ if (form) mountContactForm(form);
 @media(max-width:1000px){.contact-copy>header,.contact-grid{column-gap:2rem}}
 @media(max-width:800px){.contact-copy>header{display:block}.contact-copy>header h1{max-width:none}.contact-grid{margin-top:2rem}}
 </style>
-
-<style>.privacy-choice{margin-bottom:1.5rem}.privacy-choice input{width:auto;margin-right:.5rem}.privacy-choice label{font-size:.95rem}</style>

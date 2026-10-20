@@ -7,15 +7,7 @@ import {submitNetlifyContact} from './netlify-contact-transport.mjs';
 export function mountContactForm(form: HTMLFormElement) {
   const button = form.querySelector<HTMLButtonElement>('button[type=submit]')!;
   const status = form.querySelector<HTMLElement>('#form-status')!;
-  const missing = { name: 'Please enter your name.', email: 'Please enter your email address.', company: 'Please enter your company or organisation.', message: 'Please enter a message.' };
-  const privacy = form.elements.namedItem('privacy-request') as HTMLInputElement;
-  const company = form.elements.namedItem('company') as HTMLInputElement;
-  const syncPrivacy = () => {
-    company.required = !privacy.checked;
-    form.querySelector('#company-requirement')!.textContent = privacy.checked ? '— optional for privacy requests' : '— required';
-    if (privacy.checked) { form.querySelector('#company-error')!.textContent = ''; company.setAttribute('aria-invalid', 'false'); }
-  };
-  privacy.addEventListener('change', syncPrivacy); syncPrivacy();
+  const missing = { name: 'Please enter your name.', email: 'Please enter your email address.', message: 'Please enter a message.' };
   let busy = false;
   button.disabled = false;
   form.addEventListener('submit', async event => {
@@ -24,7 +16,7 @@ export function mountContactForm(form: HTMLFormElement) {
     let first: HTMLInputElement | HTMLTextAreaElement | null = null;
     for (const [name, message] of Object.entries(missing)) {
       const field = form.elements.namedItem(name) as HTMLInputElement | HTMLTextAreaElement;
-      const error = name === 'company' && privacy.checked ? '' : !field.value.trim() ? message : name === 'email' && !field.validity.valid ? 'Please enter a valid email address.' : '';
+      const error = !field.value.trim() ? message : name === 'email' && !field.validity.valid ? 'Please enter a valid email address.' : '';
       form.querySelector(`#${name}-error`)!.textContent = error;
       field.setAttribute('aria-invalid', String(Boolean(error)));
       if (error && !first) first = field;
