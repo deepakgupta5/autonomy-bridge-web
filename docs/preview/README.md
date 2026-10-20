@@ -75,3 +75,9 @@ The eight historical broken destinations have no matching registered page or sup
 Browser console notes: the baseline has no favicon.ico, producing a 404; controlled failure fixtures deliberately produce failed-request console entries. No application script exception was observed.
 
 No production release is implied by passing preview checks.
+
+## Typography review correction
+
+The shared sans-serif token now matches the bundled `Inter Variable` family. Replacement pages and retained custom research heroes use the shared heading scale: H1 32–44px, H2 22–28px, H3 20px, with 16px body copy. Peer service/proof sections use matching heading levels. Repeated sections share left alignment and spacing rather than alternating indented panels. Approved wording is unchanged; the 18 private paragraphs remain in the ignored local overlay only.
+
+The production build and baseline verifier passed after these changes. Local browser inspection confirmed the font and heading sizes on Home, AI Consulting, Commercial Leadership, Market Overview and a glossary term at 1280px, plus Home at 390px; no horizontal overflow was observed in those checks. Home screenshots were inspected at both widths. The earlier full browser/form suite and verifier negative controls were not rerun for this typography-only correction.
