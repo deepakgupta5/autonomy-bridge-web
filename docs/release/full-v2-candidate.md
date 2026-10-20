@@ -40,8 +40,12 @@ npm run preview -- --host 127.0.0.1 --port 4322 --outDir /private/tmp/ab-full-v2
 
 The baseline must be the independent 157-page build from 0285946. Browser script: `scripts/release-browser-check.js` via the existing Playwright CLI. Never submit a real enquiry as part of these checks.
 
-## Concrete deployment blocker
+## Netlify connection and correction follow-up
 
-No verified Netlify site UUID or authenticated account configuration is available in this checkout; no `.netlify` link exists. The exact target and any dashboard-injected scripts need account verification. A new login needs Deepak's explicit authorization. No target is guessed and no provider setting is changed. Final reviewer acceptance of this candidate, including the narrowed notices and known defects, is still requested. Use `release-change-review.md` after obtaining that target evidence. Publication and a real test are distinct; the latter still needs separate authorization.
+The existing authenticated Netlify account is now linked to `autonomybridgenetlify`, site UUID `3df07dc5-6950-4241-98eb-cf95df3d271d`, production URL `https://autonomybridge.com`, GitHub repository `deepakgupta5/autonomy-bridge-web`, production branch `main`. No new login was needed. Read-only API inspection found zero configured site snippets and the existing published commit is still baseline `0285946a6a500f9207a9c466c7de11a4cffb22a8`. See `netlify-connection-check.json`. No settings, deployment or enquiries changed.
+
+The Contact audit now reads `AB_AUDIT_DIST/contact.html`, consistently with all other artifact checks. A fresh build in `/private/tmp/ab-full-v2-corrected` passed the content and route audits. Disposable negative controls insert a form or remove the email link in the selected artifact; each fails with an explicit audited-Contact error. Workspace `dist` is neither consulted for Contact nor changed by those controls. See `contact-audit-negative-controls.json`.
+
+The earlier account-access blocker is resolved. Activation/deployment has not been performed in this connection/fix update; source remains candidate, email-only, with target/date activation still required. No real enquiry is authorized or needed for the email-only candidate.
 
 Sources for provider context: [Netlify privacy statement](https://www.netlify.com/privacy/) distinguishes its controller disclosures from customer processing; it does not prove this account's retention or settings. [Netlify Forms setup](https://docs.netlify.com/manage/forms/setup/) requires form detection configuration; markup alone is not evidence of receiving-service acceptance. No such acceptance is claimed for this email-only release.

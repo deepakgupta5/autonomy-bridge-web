@@ -1,5 +1,6 @@
 {
   "kind": "local candidate, not deployed",
+  "audited_directory": "/private/tmp/ab-full-v2-corrected",
   "files": {
     ".well-known/security.txt": "750eae10831ad559dddd24e96e3f632a3d1cee6e6bedeca53f6797e8611e8de5",
     "_astro/_slug_.BxQTvIB1.css": "8b80bfb2a1d423cd50398986b862670b40c742d802b818458ea047fa8836d285",
@@ -225,7 +226,6 @@
     "privacy-policy.html": "0bcc6410a7085a3b83e0453bd8f20d489ef1f90903dfac784d984b8ba58aed77",
     "research.html": "ea5694ec82d651756f5f1c072b49de794732543b407dd9a80a2fed4664d98247",
     "robots.txt": "91960db62cad2a3bae5ee61647f9ab308492b9ff89a34780a72b103d18789e17",
-    "settings.json": "966256236d062e5a493241249acf8ca3517a6c593b950879f4f80bcd7d525382",
     "sitemap-0.xml": "0166ea96e63f7e5f3683e0ea7413d5ba5f0f6043a859085157a494507bb014ba",
     "sitemap-index.xml": "388fa8ce72076c57b6ce19193e1990c27e4d0e023052cabf8b3199006228d799",
     "sitemap.html": "c4ac9f1e8c75ebdae599262ca1472478008c28a298f4d28a97363bbb25a2202d",
