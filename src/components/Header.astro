@@ -18,7 +18,7 @@ function isActive(href: string): boolean {
 }
 ---
 
-<header class:list={['site-header', { 'home-header': normalizedCurrentPath === '/' }]}>
+<header class="site-header home-header">
   <div class="site-header-inner">
     <a class="site-brand" href="/">
       <span class="brand-badge">AB</span>
@@ -42,18 +42,19 @@ function isActive(href: string): boolean {
       }
     </nav>
     <a href="/contact" class="header-cta">Discuss your business challenge</a>
-    {normalizedCurrentPath === '/' && <details class="home-mobile-menu">
+    <details class="home-mobile-menu">
       <summary>Menu</summary>
       <nav aria-label="Mobile primary">
-        {primaryNavItems.map((item) => <a href={item.href}>{item.label}</a>)}
+        {primaryNavItems.map((item) => <a href={item.href} aria-current={isActive(item.href) ? 'page' : undefined}>{item.label}</a>)}
         <a href="/contact" class="header-cta">Discuss your business challenge</a>
       </nav>
-    </details>}
+    </details>
   </div>
 </header>
 
 <style>
   .home-mobile-menu {display:none;}
+  .home-mobile-menu a[aria-current="page"] {font-weight:700;background:var(--color-bg-surface);}
   .home-header .site-header-inner {max-width:72rem;padding:1.25rem 2rem;}
   .home-header .header-cta {padding:.85rem 1rem;}
   @media (min-width:1051px) {
