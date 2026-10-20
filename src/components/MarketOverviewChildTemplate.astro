@@ -1,4 +1,5 @@
 ---
+import ResearchEnquiry from "./ResearchEnquiry.astro";
 import MainLayout from "./MainLayout.astro";
 
 interface Props {
@@ -18,30 +19,19 @@ const subpages = [
 ];
 ---
 
-<MainLayout title={title} summary={summary} canonicalPath={canonicalPath} showBreadcrumbs={false} showLocalSubnav={false}>
+<MainLayout title={title} summary={summary} canonicalPath={canonicalPath} showBreadcrumbs={true} showLocalSubnav={true}>
   <div class="mc-wrap">
 
     <!-- Header -->
     <header class="mc-header">
-      <p class="mc-breadcrumb">
-        Home / <a href="/market-overview">Market Overview</a> / {title}
-      </p>
+
       <h1 class="mc-h1">{title}</h1>
       <p class="mc-tagline">Warehouse Automation Market Overview · Autonomy Bridge</p>
       {summary && summary !== "Market overview analysis." && <p class="mc-summary">{summary}</p>}
     </header>
 
     <!-- Sub-navigation -->
-    <nav class="mc-subnav" aria-label="Market overview sections">
-      {subpages.map((page) => (
-        <a
-          href={page.href}
-          class={`mc-subnav-link${page.href === canonicalPath ? " mc-subnav-link--active" : ""}`}
-        >
-          {page.label}
-        </a>
-      ))}
-    </nav>
+
 
     <!-- Body content -->
     <article class="mc-body prose-surface">
@@ -49,14 +39,7 @@ const subpages = [
     </article>
 
     <!-- CTA -->
-    <section class="mc-cta">
-      <h2 class="mc-cta-h">Apply this context to a specific decision</h2>
-      <p class="mc-cta-sub">Advisory engagements and bespoke research go beyond market context into specific deployment economics, vendor assessment, and operational risk.</p>
-      <div class="mc-cta-btns">
-        <a href="/advisory" class="mc-cta-btn mc-cta-btn--primary">Advisory &rarr;</a>
-        <a href="/frameworks" class="mc-cta-btn mc-cta-btn--outline">Frameworks &rarr;</a>
-      </div>
-    </section>
+    <ResearchEnquiry kind="market" />
 
   </div>
 </MainLayout>

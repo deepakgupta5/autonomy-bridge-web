@@ -1,0 +1,16 @@
+---
+import fs from 'node:fs';
+import MainLayout from './MainLayout.astro';
+import pages from '../data/preview-copy.json';
+import '../styles/copy.css';
+const { route } = Astro.props;
+const page = pages[route];
+const privatePath = `${process.cwd()}/.preview-private/copy.json`;
+if (process.env.AB_PRIVATE_PREVIEW === '1' && !fs.existsSync(privatePath)) throw new Error('Import the V2 ZIP using scripts/import-private-proof.py first.');
+const overlay = process.env.AB_PRIVATE_PREVIEW === '1' && fs.existsSync(privatePath) ? JSON.parse(fs.readFileSync(privatePath, 'utf8')) : {};
+const body = overlay[route] ?? page.html;
+const schema = route === '/methodology' ? [{ '@context': 'https://schema.org', '@type': 'Article', headline: page.name, datePublished: '2026-03-15' }] : [];
+---
+<MainLayout title={page.name} canonicalPath={route} canonicalHref={route === "/methodology" ? "https://autonomybridge.com/methodology" : undefined} seoTitle={page.metadata.title} seoDescription={page.metadata.description} schema={schema} showLocalSubnav={route === '/methodology'}>
+  <article class:list={['approved-copy', { 'policy-copy': route.includes('policy') || route === '/terms-of-use' || route === '/methodology' }]} set:html={body} />
+</MainLayout>

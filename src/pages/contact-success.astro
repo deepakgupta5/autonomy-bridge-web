@@ -1,74 +1,17 @@
 ---
-import MainLayout from "../components/MainLayout.astro";
-
-const canonicalPath = "/contact-success";
-const title = "Enquiry Received";
-const summary = "Your enquiry has been submitted.";
+import MainLayout from '../components/MainLayout.astro';
+import pages from '../data/preview-copy.json';
+const metadata = pages['/contact-success'].metadata;
 ---
-
-<MainLayout
-  canonicalPath={canonicalPath}
-  title={title}
-  summary={summary}
-  seoTitle="Enquiry Received | Autonomy Bridge"
-  robots="noindex,nofollow"
->
-  <article class="success-page">
-    <h1 class="type-h1">Enquiry received.</h1>
-    <p>
-      All enquiries are reviewed within two business days. If the work is a fit, you will hear back
-      with a short scoping call request.
-    </p>
-    <p>If the question falls outside current scope or capacity, you will be told directly.</p>
-    <div class="success-actions">
-      <a href="/advisory" class="success-link">Advisory &rarr;</a>
-      <a href="/frameworks" class="success-link">Browse Frameworks &rarr;</a>
-      <a href="/" class="success-link">Home</a>
-    </div>
-  </article>
+<MainLayout title="Enquiry Submitted" canonicalPath="/contact-success" seoTitle={metadata.title} seoDescription={metadata.description} robots="noindex,nofollow" showBreadcrumbs={false} showLocalSubnav={false}>
+<section id="unconfirmed"><h1 class="type-h1">Submission not confirmed</h1><p>This page alone does not confirm an enquiry was accepted.</p></section>
+<section id="confirmed" hidden><h1 class="type-h1">Thank you for getting in touch</h1><p>Your enquiry has been submitted. I’ll review it and reply using the email address you provided.</p><p>Local interface test only. Service acceptance and mailbox delivery are not verified.</p></section>
+<p><a href="/">Return to Home</a></p>
 </MainLayout>
-
-<style>
-  .success-page {
-    max-width: 640px;
-    margin: 0 auto;
-    padding: 4rem 1.5rem 5rem;
-    font-family: var(--font-sans);
-    font-size: var(--text-base);
-    line-height: 1.7;
-    color: var(--color-text-secondary);
-  }
-
-  .success-page :global(h1) {
-    margin-bottom: 1.25rem;
-  }
-
-  .success-page p + p {
-    margin-top: 1rem;
-  }
-
-  .success-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-    margin-top: 2.5rem;
-  }
-
-  .success-link {
-    display: inline-block;
-    padding: 0.5rem 1.1rem;
-    border: 1px solid var(--color-border-default);
-    border-radius: 4px;
-    font-size: var(--text-sm);
-    font-weight: var(--weight-semibold);
-    color: var(--color-text-primary);
-    text-decoration: none;
-    background: var(--color-bg-page);
-    transition: border-color 0.15s, background 0.15s;
-  }
-
-  .success-link:hover {
-    border-color: var(--color-border-strong);
-    background: var(--color-bg-surface);
-  }
-</style>
+<script>
+if (sessionStorage.getItem('ab-preview-accepted') === '1') {
+ document.querySelector<HTMLElement>('#unconfirmed')!.hidden = true;
+ document.querySelector<HTMLElement>('#confirmed')!.hidden = false;
+ sessionStorage.removeItem('ab-preview-accepted');
+}
+</script>

@@ -4,13 +4,10 @@ export interface NavItem {
 }
 
 export const primaryNavItems: NavItem[] = [
-  { label: 'Insights', href: '/insights' },
-  { label: 'Market Overview', href: '/market-overview' },
-  { label: 'Frameworks', href: '/frameworks' },
-  { label: 'Methodology', href: '/methodology' },
-  { label: 'Advisory', href: '/advisory' },
-  { label: 'Bespoke Research', href: '/bespoke-research' },
+  { label: 'Commercial Leadership', href: '/commercial-leadership' },
+  { label: 'AI Consulting', href: '/ai-consulting' },
   { label: 'About', href: '/about' },
+  { label: 'Research', href: '/research' },
 ];
 
 export const frameworkSlugs = [
@@ -167,6 +164,7 @@ export const glossaryTermSlugs = [
 ] as const;
 
 export const topLevelRoutes = [
+  '/commercial-leadership', '/ai-consulting', '/research',
   '/',
   '/insights',
   '/market-overview',

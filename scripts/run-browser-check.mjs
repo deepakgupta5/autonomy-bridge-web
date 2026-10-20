@@ -1,0 +1,12 @@
+import { readFileSync, writeFileSync } from 'node:fs';
+import { spawnSync } from 'node:child_process';
+const cli = process.env.PLAYWRIGHT_CLI || `${process.env.HOME}/.codex/skills/playwright/scripts/playwright_cli.sh`;
+const inventory = JSON.parse(readFileSync('docs/preview/research-inventory.json','utf8'));
+const core = Object.keys(JSON.parse(readFileSync('src/data/preview-copy.json','utf8')));
+const routes = [...new Set([...inventory,...core])];
+const code = readFileSync(new URL('./browser-check.js',import.meta.url),'utf8').replace('/* ROUTES */ []',JSON.stringify(routes));
+const result = spawnSync(cli, ['--session','abpreview','run-code',code], {encoding:'utf8'});
+const payload = result.stdout.match(/### Result\n([^\n]+)/);
+if (payload) writeFileSync('docs/preview/browser-results.json',JSON.stringify(JSON.parse(payload[1]),null,2)+'\n');
+process.stdout.write(result.stdout+result.stderr);
+process.exit(result.status || (result.stdout.includes('### Error') ? 1 : 0));

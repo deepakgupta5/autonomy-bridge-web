@@ -1,0 +1,6 @@
+---
+const { kind = 'general' } = Astro.props;
+const heading = kind === 'market' ? 'Questions about this market research?' : kind === 'use-case' ? 'Questions about a use case?' : 'Questions about this research?';
+---
+<section class="research-enquiry"><h2>{heading}</h2><p>Get in touch to discuss the question and context.</p><a href="/contact">Discuss this research →</a></section>
+<style>.research-enquiry{margin:3rem 0;padding:2rem;background:var(--color-cta-bg);color:var(--color-cta-text);border-top:3px solid var(--color-cta-border);border-radius:6px}.research-enquiry h2{font-size:1.4rem}.research-enquiry a{color:inherit;text-underline-offset:4px}</style>

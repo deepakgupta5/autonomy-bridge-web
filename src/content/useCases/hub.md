@@ -171,7 +171,7 @@ Each use case applies one or more Autonomy Bridge frameworks as its analytical f
 
 Glossary terms referenced across these use cases ,  including [Removable Labor Share](/glossary/removable-labor-share), [Capital Recovery Period](/glossary/capital-recovery-period), [Peak-to-Average Ratio](/glossary/peak-to-average-ratio), and [Workflow Constraint](/glossary/workflow-constraint) ,  are defined in the [Glossary](/glossary).
 
-**[Engage Advisory →](/advisory) · [Commission Bespoke Research →](/bespoke-research)**
+**[Commercial Leadership →](/commercial-leadership) · [AI Consulting & Implementation →](/ai-consulting)**
 
 ---
 

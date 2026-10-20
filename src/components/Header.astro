@@ -1,6 +1,6 @@
 ---
 import { primaryNavItems } from "../data/ia";
-import { normalizePathname } from "../utils/navigation";
+import { normalizePathname, isResearchPath } from "../utils/navigation";
 
 interface Props {
   currentPath: string;
@@ -10,6 +10,7 @@ const { currentPath } = Astro.props;
 const normalizedCurrentPath = normalizePathname(currentPath);
 
 function isActive(href: string): boolean {
+  if (href === "/research") return isResearchPath(normalizedCurrentPath);
   if (href === "/") {
     return normalizedCurrentPath === "/";
   }
@@ -23,8 +24,8 @@ function isActive(href: string): boolean {
       <span class="brand-badge">AB</span>
       <span class="brand-divider" aria-hidden="true"></span>
       <span class="brand-text">
-        <span class="brand-name">Autonomy Bridge</span>
-        <span class="brand-tagline">Robotics Deployment Economics</span>
+        <span class="brand-name">AutonomyBridge</span>
+        <span class="brand-tagline">Commercial leadership and AI implementation</span>
       </span>
     </a>
     <nav class="site-nav" aria-label="Primary">
@@ -40,7 +41,7 @@ function isActive(href: string): boolean {
         ))
       }
     </nav>
-    <a href="/contact" class="header-cta">Book 15-min call</a>
+    <a href="/contact" class="header-cta">Discuss your business challenge</a>
   </div>
 </header>
 
@@ -51,7 +52,7 @@ function isActive(href: string): boolean {
   }
 
   .site-header-inner {
-    max-width: 72rem;
+    max-width: 82rem;
     margin: 0 auto;
     padding: 1rem;
     display: flex;
@@ -153,7 +154,7 @@ function isActive(href: string): boolean {
     border-color: var(--color-cta-border);
   }
 
-  @media (max-width: 60rem) {
+  @media (max-width: 78rem) {
     .site-header-inner {
       align-items: flex-start;
       flex-direction: column;

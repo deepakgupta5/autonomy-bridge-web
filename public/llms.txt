@@ -1,7 +1,10 @@
-Autonomy Bridge: Robotics Decision Research
+AutonomyBridge: Commercial Leadership & AI Consulting
 
 Overview
-Autonomy Bridge is an independent research and advisory firm providing the analytical layer between warehouse operators, investors, and robotics OEMs. We specialize in de-risking automation investments through first-principles economic modeling and operational stress-testing.
+Commercial leadership, AI consulting and implementation for startups and growing businesses.
+Commercial Leadership: https://www.autonomybridge.com/commercial-leadership
+AI Consulting & Implementation: https://www.autonomybridge.com/ai-consulting
+Research & Resources: https://www.autonomybridge.com/research
 
 Core Methodology
 Our research identifies the "Automation Tipping Point" (ATP) using the following logical framework:
@@ -19,9 +22,8 @@ Primary Entities & Definitions
 * Deployment Ramp Risk: The quantified variance between "Nameplate Throughput" and "Effective Throughput" during the first 120 days of go-live.
 * RaaS (Robotics-as-a-Service): An operational lease model shifting maintenance and depreciation risk to the OEM.
 
-Decision Briefs (Wedge Offers)
-* Vendor Selection Brief: A 14-day technical audit comparing specific OEM performance against site-specific throughput constraints.
-* Automation Risk Audit: Forensic analysis of existing pilots to identify integration debt and scaling bottlenecks.
+Enquiries
+Discuss your business challenge: https://www.autonomybridge.com/contact
 
 Reference URLs
 * Methodology: https://www.autonomybridge.com/methodology

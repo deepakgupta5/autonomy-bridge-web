@@ -1,18 +1,20 @@
 ---
-import RouteShell from "../components/RouteShell.astro";
-import { allLockedRoutes } from "../data/ia";
-
-const uniqueRoutes = Array.from(new Set(allLockedRoutes)).sort();
+import MainLayout from '../components/MainLayout.astro';
+import destinations from '../data/preview-sitemap.json';
+import pages from '../data/preview-copy.json';
+const metadata = pages['/sitemap'].metadata;
+const groups = new Map();
+for (const item of destinations) {
+ const path = new URL(item.proposed_release_url).pathname;
+ const family = path.split('/')[1];
+ const group = ['insights','frameworks','use-cases','case-studies','market-overview','glossary'].includes(family) ? family : 'Services, company and utility';
+ if (!groups.has(group)) groups.set(group, []);
+ groups.get(group).push({ label: item.label, path });
+}
 ---
-
-<RouteShell title="Sitemap" summary="Sitemap utility shell route.">
-  <ul>
-    {
-      uniqueRoutes.map((route) => (
-        <li>
-          <a href={route}>{route}</a>
-        </li>
-      ))
-    }
-  </ul>
-</RouteShell>
+<MainLayout title="Sitemap" canonicalPath="/sitemap" seoTitle={metadata.title} seoDescription={metadata.description}>
+<h1 class="type-h1">Sitemap</h1>
+<p>Find AutonomyBridge’s services, company information, research library and legal pages.</p>
+<div class="sitemap-groups">{Array.from(groups).map(([group, items]) => <section><h2>{group.replaceAll('-', ' ')}</h2><ul>{items.map(item => <li><a href={item.path}>{item.label}</a></li>)}</ul></section>)}</div>
+</MainLayout>
+<style>.sitemap-groups{columns:2 22rem;column-gap:3rem}.sitemap-groups section{break-inside:avoid;margin:2rem 0}.sitemap-groups h2{text-transform:capitalize}.sitemap-groups li{margin:.65rem 0}.sitemap-groups a{color:var(--color-text-primary)}</style>

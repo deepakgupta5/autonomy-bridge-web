@@ -1,0 +1,17 @@
+
+.approved-copy {max-width:70rem;margin:auto;}
+.approved-copy h1 {font-size:clamp(2rem,4.6vw,3.8rem);line-height:1.12;letter-spacing:-.035em;max-width:23ch;margin:1rem 0 1.5rem;}
+.approved-copy h2 {font-size:clamp(1.5rem,3vw,2.25rem);line-height:1.25;letter-spacing:-.02em;margin:0 0 1.5rem;max-width:30ch;}
+.approved-copy h3 {font-size:1.15rem;line-height:1.4;margin:2rem 0 .6rem;}
+.approved-copy p,.approved-copy li {max-width:74ch;color:var(--color-text-secondary);line-height:1.85;}
+.approved-copy a {color:var(--color-text-primary);text-underline-offset:4px;}
+.copy-section {padding:3rem 0;border-bottom:1px solid var(--color-border-light);}
+.copy-section:first-child {padding-top:.5rem;}
+.copy-section:nth-child(even) {background:var(--color-bg-surface);padding:2.5rem;border-radius:6px;margin:2rem 0;}
+.copy-button {display:inline-block;background:var(--color-cta-bg);color:var(--color-cta-text)!important;border:1px solid var(--color-cta-border);padding:.8rem 1.1rem;border-radius:5px;text-decoration:none;font-weight:600;}
+.copy-link {font-weight:600;}
+.service-links {display:flex;flex-wrap:wrap;gap:1.5rem;}
+.policy-copy {max-width:74ch;}
+.policy-copy h2 {margin-top:3rem;}
+mark {background:#fff1bb;color:#483600;padding:.1rem;}
+@media(max-width:600px){.copy-section:nth-child(even){padding:1.2rem;}.copy-section{padding:2rem 0;}}

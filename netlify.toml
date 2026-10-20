@@ -1,4 +1,5 @@
 [build]
+  ignore = "exit 0" # Preview branch: skip all automatic Netlify builds. Remove only at approved release.
   command = "npm run build"
   publish = "dist"
 

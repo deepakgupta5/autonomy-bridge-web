@@ -9,8 +9,8 @@ document:
   slug: "case-studies"
 
 title: "Case Studies ,  Autonomy Bridge"
-description: "Anonymised research and advisory engagement case studies from Autonomy Bridge covering deployment risk assessment, market entry analysis, market sizing, vendor deployment viability, and pricing strategy across AI, robotics, and industrial automation markets."
-summary: "Five anonymised case studies drawn from Autonomy Bridge engagement history across operators, industrial technology companies, private equity firms, and robotics vendors. Each study follows the problem → approach → output → outcome structure and maps to one or more Autonomy Bridge frameworks."
+description: "Applied analyses of deployment, market-entry, market-sizing and pricing decisions."
+summary: "Applied analyses of deployment, market-entry, market-sizing and pricing decisions."
 
 authors:
   - id: "author_deepak_001"
@@ -64,9 +64,9 @@ taxonomy:
 
 seo:
   meta_title: "Case Studies | AI, Robotics & Industrial Automation Engagements ,  Autonomy Bridge"
-  meta_description: "Anonymised case studies from Autonomy Bridge covering deployment risk assessment, market entry analysis, market sizing, vendor viability, and pricing strategy in AI, robotics, and industrial automation markets."
+  meta_description: "Applied analyses of deployment, market-entry, market-sizing and pricing decisions."
   og_title: "Case Studies ,  Autonomy Bridge"
-  og_description: "Five anonymised engagements across operators, PE firms, robotics vendors, and industrial technology companies. Framework-referenced evidence of applied research outcomes in AI, robotics, and industrial automation."
+  og_description: "Applied analyses of deployment, market-entry, market-sizing and pricing decisions."
   og_type: "website"
   twitter_card: "summary_large_image"
 
@@ -130,7 +130,7 @@ integrity:
 
 # Case Studies {#top}
 
-Case studies are anonymised records of Autonomy Bridge research and advisory engagements ,  structured as problem → approach → output → outcome. Each study documents a specific decision problem, the analytical approach applied, the output produced, and the decision it enabled. All client names, specific financials, and identifying details are anonymised or composited.
+Research findings, modelled scenarios and accounts of client work provide different kinds of evidence. An illustrative outcome is not an observed client result. Consider the publication date, operating context and supporting evidence before applying a conclusion to your business.
 
 Case studies are evidence of framework application in real engagement contexts. They are not testimonials or marketing narratives. Each maps to one or more Autonomy Bridge frameworks and connects to the use cases and glossary terms that define the analytical vocabulary used in the engagement.
 
@@ -198,7 +198,7 @@ Each case study applies Autonomy Bridge frameworks as its analytical foundation.
 
 Glossary terms referenced across these case studies ,  including [Capital Recovery Period](/glossary/capital-recovery-period), [Removable Labor Share](/glossary/removable-labor-share), [Vendor Economics](/glossary/vendor-economics), and [Pilot-to-Scale Failure](/glossary/pilot-to-scale-failure) ,  are defined in the [Glossary](/glossary).
 
-**[Engage Advisory →](/advisory) · [Commission Bespoke Research →](/bespoke-research)**
+**[Commercial Leadership →](/commercial-leadership) · [AI Consulting & Implementation →](/ai-consulting)**
 
 ---
 
@@ -209,7 +209,7 @@ Glossary terms referenced across these case studies ,  including [Capital Recove
   "@context": "https://schema.org",
   "@type": "CollectionPage",
   "name": "Case Studies ,  Autonomy Bridge",
-  "description": "Anonymised research and advisory engagement case studies from Autonomy Bridge covering deployment risk assessment, market entry analysis, market sizing, vendor deployment viability, and pricing strategy across AI, robotics, and industrial automation markets.",
+  "description": "Applied analyses of deployment, market-entry, market-sizing and pricing decisions.",
   "url": "https://autonomybridge.com/case-studies",
   "inLanguage": "en",
   "speakable": {

@@ -1,0 +1,57 @@
+/** Preview transport never calls Netlify or any external receiver.
+ * Existing Netlify form name/action/field encoding remain in the HTML.
+ * Service acceptance and mailbox delivery must be verified at approved release.
+ */
+export function mountContactForm(form: HTMLFormElement) {
+  const button = form.querySelector<HTMLButtonElement>('button[type=submit]')!;
+  const status = form.querySelector<HTMLElement>('#form-status')!;
+  const missing = { name: 'Please enter your name.', email: 'Please enter your email address.', company: 'Please enter your company or organisation.', message: 'Please enter a message.' };
+  let busy = false;
+  button.disabled = false;
+  form.addEventListener('submit', async event => {
+    event.preventDefault();
+    if (busy) return;
+    let first: HTMLInputElement | HTMLTextAreaElement | null = null;
+    for (const [name, message] of Object.entries(missing)) {
+      const field = form.elements.namedItem(name) as HTMLInputElement | HTMLTextAreaElement;
+      const error = !field.value.trim() ? message : name === 'email' && !field.validity.valid ? 'Please enter a valid email address.' : '';
+      form.querySelector(`#${name}-error`)!.textContent = error;
+      field.setAttribute('aria-invalid', String(Boolean(error)));
+      if (error && !first) first = field;
+    }
+    if (first) { status.textContent = 'Please check the highlighted fields.'; first.focus(); return; }
+    busy = true; button.disabled = true; status.textContent = '';
+    const unknown = 'We couldn’t confirm whether your enquiry was submitted. Please don’t submit it again yet. Email deepak@autonomybridge.com and mention that you tried the form so I can check whether it arrived.';
+    const failed = 'Your enquiry wasn’t submitted. Please try again or email deepak@autonomybridge.com.';
+    const controller = new AbortController();
+    const timer = window.setTimeout(() => controller.abort(), 10000);
+    try {
+      // Loopback-only mock endpoint; no production notification settings are changed.
+      if (!['localhost','127.0.0.1','[::1]'].includes(location.hostname)) throw new Error('Preview requires loopback');
+      const response = await fetch('/__preview/contact', {
+        method: 'POST', signal: controller.signal,
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(new FormData(form) as any),
+      });
+      if ([400,404,405,422].includes(response.status)) {
+        status.textContent = failed;
+      } else {
+        const result = response.ok ? await response.json() : null;
+        // A 200 HTML page, timeout, server error or ambiguous reply is never success.
+        if (result?.accepted === true) {
+          sessionStorage.setItem('ab-preview-accepted', '1');
+          location.assign('/contact-success');
+          return;
+        }
+        status.textContent = unknown;
+        button.dataset.outcome = 'unknown';
+      }
+    } catch { status.textContent = unknown; button.dataset.outcome = 'unknown'; }
+    finally {
+      clearTimeout(timer);
+      // Unknown outcome is held for follow-up instead of encouraging duplicate sends.
+      busy = button.dataset.outcome === 'unknown'; button.disabled = busy;
+      if (status.textContent) status.focus();
+    }
+  });
+}
