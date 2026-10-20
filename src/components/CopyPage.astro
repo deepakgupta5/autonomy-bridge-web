@@ -3,6 +3,7 @@ import fs from 'node:fs';
 import MainLayout from './MainLayout.astro';
 import pages from '../data/preview-copy.json';
 import '../styles/copy.css';
+import '../styles/home.css';
 const { route } = Astro.props;
 const page = pages[route];
 const privatePath = `${process.cwd()}/.preview-private/copy.json`;
@@ -12,5 +13,5 @@ const body = overlay[route] ?? page.html;
 const schema = route === '/methodology' ? [{ '@context': 'https://schema.org', '@type': 'Article', headline: page.name, datePublished: '2026-03-15' }] : [];
 ---
 <MainLayout title={page.name} canonicalPath={route} canonicalHref={route === "/methodology" ? "https://autonomybridge.com/methodology" : undefined} seoTitle={page.metadata.title} seoDescription={page.metadata.description} schema={schema} showLocalSubnav={route === '/methodology'}>
-  <article class:list={['approved-copy', { 'policy-copy': route.includes('policy') || route === '/terms-of-use' || route === '/methodology' }]} set:html={body} />
+  <article class:list={['approved-copy', { 'home-copy': route === '/', 'policy-copy': route.includes('policy') || route === '/terms-of-use' || route === '/methodology' }]} set:html={body} />
 </MainLayout>
