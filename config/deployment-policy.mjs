@@ -5,7 +5,7 @@ export const deploymentPolicy = Object.freeze({
   origin: 'https://autonomybridge.com', // exact approved HTTPS production origin
   siteId: '3df07dc5-6950-4241-98eb-cf95df3d271d', // independently verified Netlify site ID
   publicationDate: '2026-10-19', // actual release day, set only at approved publication
-  researchRevisionDate: null, // set to actual release date only when this revision is approved for publication
+  researchRevisionDate: '2026-10-20', // set to actual release date only when this revision is approved for publication
   formEnabled: true, // production form; real submission testing requires separate authorization
 });
 

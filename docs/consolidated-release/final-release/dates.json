@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "release_date": "2026-10-20",
+  "timezone": "America/Vancouver",
+  "material_routes": 86,
+  "visible_schema_xml_parity": true,
+  "unrelated_routes_not_stamped": true,
+  "legal_dates_match": true,
+  "historical_publication_dates_not_invented": true
+}

@@ -91,8 +91,15 @@ result['changed_research_dates_except_methodology']=[p for p in research-{'/meth
 result['changed_research_titles_except_framework']=[p for p in research-{'/methodology','/frameworks/pilot-to-scale-failure-framework'} if p not in old or pages[p].title!=old[p].title]
 if review:
  result['reviewed_research_date_changes']=result['changed_research_dates_except_methodology']
- # No unverified public dates in this pending-release artifact. A separate release-date fixture tests actual dated output.
- result['changed_research_dates_except_methodology']=[p for p in research-{'/methodology'} if dates(pages[p])]
+ import re
+ policy=(root/'config/deployment-policy.mjs').read_text()
+ match=re.search(r"researchRevisionDate: '(\d{4}-\d{2}-\d{2})'",policy)
+ release_date=match[1] if match else None
+ revised=set(json.loads((root/'config/material-research-revisions.json').read_text()))
+ def invalid_dates(path):
+  values=dates(pages[path]);expected=release_date if path in revised else None
+  return any(pub or mod!=expected for _,pub,mod in values) or bool(expected) != bool(values)
+ result['changed_research_dates_except_methodology']=[p for p in research-{'/methodology'} if invalid_dates(p)]
  result['reviewed_research_title_changes']=[p for p in result['changed_research_titles_except_framework'] if p in exceptions['title_routes']]
  result['changed_research_titles_except_framework']=[p for p in result['changed_research_titles_except_framework'] if p not in exceptions['title_routes']]
  registry=lambda text:[line.strip() for line in text.splitlines() if line.strip() and not line.startswith('#')]

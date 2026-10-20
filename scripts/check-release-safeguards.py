@@ -20,4 +20,4 @@ for p in html:
 assert 'name="contact"' in (tmp/'dist/contact.html').read_text()
 r=subprocess.run(['node','scripts/preview-build-guard.mjs'],cwd=tmp,env={**env,'CI':'true'},capture_output=True);assert r.returncode!=0
 report={'passed':True,'production_guard_negative_controls':controls,'local_ci_rejected':True,'local_pages_noindex':160,'stale_overlay_not_restored':True,'local_form_present':True,'local_build':str(tmp/'dist'),'scope':'Isolated source copy with mode local; main branch policy unchanged.'}
-(root/'docs/consolidated-release/preview-safeguards.json').write_text(json.dumps(report,indent=2)+'\n');print(json.dumps(report,indent=2))
+Path(os.environ.get('AB_SAFEGUARD_REPORT',root/'docs/consolidated-release/preview-safeguards.json')).write_text(json.dumps(report,indent=2)+'\n');print(json.dumps(report,indent=2))

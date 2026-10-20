@@ -1,3 +1,4 @@
+import {deploymentPolicy} from '../config/deployment-policy.mjs';
 import {readFileSync,writeFileSync,readdirSync,existsSync} from 'node:fs';
 import {join} from 'node:path';
 import assert from 'node:assert/strict';
@@ -34,7 +35,7 @@ for(const family of ['frameworks','insights','use-cases','case-studies'])for(con
  }).filter(Boolean);
  assert.deepEqual(normalize(now,revised.includes(route)),normalize(prior,revised.includes(route)),route+' schema identity');
  const article=now.flat().find(e=>[e['@type']].flat().some(t=>['Article','TechArticle','CaseStudy'].includes(t)));assert(article,route+' article');assert.equal(article.headline??article.name,text(select(nodes,'h1')[0]),route+' schema headline');
- for(const e of now){assert(!e.datePublished&&!e.dateModified,route+' unverified date');if(e['@type']==='FAQPage')for(const q of e.mainEntity){const plain=text(body).replace(/\s+/g,' ');assert(plain.includes(q.name.replace(/\s+/g,' ')),route+' FAQ question');assert(plain.includes(q.acceptedAnswer.text.replace(/\s+/g,' ')),route+' FAQ answer');}}
+ for(const e of now){assert(!e.datePublished,route+' unverified publication date');const expected=e===article&&revised.includes(route)?deploymentPolicy.researchRevisionDate:undefined;assert.equal(e.dateModified,expected??undefined,route+' modification date');if(e['@type']==='FAQPage')for(const q of e.mainEntity){const plain=text(body).replace(/\s+/g,' ');assert(plain.includes(q.name.replace(/\s+/g,' ')),route+' FAQ question');assert(plain.includes(q.acceptedAnswer.text.replace(/\s+/g,' ')),route+' FAQ answer');}}
 
  const figures=select(bodyNodes,'figure');
  for(const f of figures){

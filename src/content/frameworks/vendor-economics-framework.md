@@ -181,7 +181,7 @@ Unlike vendor ROI calculators, which assume stable utilisation and linear saving
         <div style="font-size: 0.65rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.5rem;">Risk Profile</div>
         <div style="font-size: 0.7rem; color: #334155; margin-bottom: 0.75rem; line-height: 1.4;">High upfront exposure · idle capacity = sunk cost</div>
         <div style="font-size: 0.65rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.5rem;">Long-term Cost</div>
-        <div style="font-size: 0.7rem; color: #334155; line-height: 1.4;">Lower if system remains deployed · service fees continue</div>
+        <div style="font-size: 0.7rem; color: #334155; line-height: 1.4;">Compare installed and recurring costs over the same horizon</div>
       </div>
       <div style="background: #f1f5f9; padding: 0.4rem 0.75rem; border-top: 1px solid #e2e8f0;">
         <span style="font-size: 0.65rem; color: #475569;">Best fit: stable, high-utilisation deployments</span>
@@ -199,7 +199,7 @@ Unlike vendor ROI calculators, which assume stable utilisation and linear saving
         <div style="font-size: 0.65rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.5rem;">Risk Profile</div>
         <div style="font-size: 0.7rem; color: #334155; margin-bottom: 0.75rem; line-height: 1.4;">Low upfront · recurring fees accumulate over time</div>
         <div style="font-size: 0.65rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.5rem;">Long-term Cost</div>
-        <div style="font-size: 0.7rem; color: #334155; line-height: 1.4;">Can exceed ownership cost in long-term deployments</div>
+        <div style="font-size: 0.7rem; color: #334155; line-height: 1.4;">May exceed ownership cost, depending on fees and horizon</div>
       </div>
       <div style="background: #fffbeb; padding: 0.4rem 0.75rem; border-top: 1px solid #fde68a;">
         <span style="font-size: 0.65rem; color: #92400e;">Best fit: uncertain demand · shorter contracts</span>
@@ -284,7 +284,7 @@ ROI_H = (sum(S_t, t=1..H) - C0) / C0
 
 Here S_t is net cash benefit in year t after subscription, service and usage charges; C0 is the initial implementation investment. ROI_H is dimensionless for C0 > 0. If C0 is zero, compare net cash flows or discounted value instead of dividing by zero. Total-cost comparisons must sum recurring charges over the same horizon. RaaS models shift automation cost from capital expenditure to operating expense. This reduces initial financial exposure but introduces recurring payments that accumulate over the contract lifecycle.
 
-- If system utilisation increases → subscription cost per operational unit decreases.
+- For a fixed subscription fee over a defined period, higher completed volume reduces the fixed subscription cost per unit. A constant usage-based charge per unit does not decrease merely because volume rises.
 - If deployment duration increases → total subscription payments may exceed equivalent ownership cost.
 
 > **Hard Truth**
@@ -512,7 +512,7 @@ Automation pricing outcomes are highly sensitive to a small set of operational v
 
 | Variable | Sensitivity Mechanism |
 |---|---|
-| Utilisation | Determines how efficiently automation capacity is used. If utilisation declines, effective cost per operational unit rises regardless of pricing model. |
+| Utilisation | For a fixed cost component over a defined period, lower completed volume raises that component’s cost per unit. A constant usage-based per-unit charge is unchanged by volume alone. |
 | Operational Cost Baseline | Establishes the savings pool automation can access. Higher baseline costs increase ROI potential at lower utilisation. |
 | Deployment Duration | As deployment duration increases, subscription cost accumulation becomes more significant relative to ownership cost. |
 | Vendor Dependency | If automation systems require proprietary software or service contracts, switching costs increase and long-term cost trajectory becomes vendor-controlled. |
@@ -522,7 +522,7 @@ Automation pricing outcomes are highly sensitive to a small set of operational v
 | Failure Mode | Description |
 |---|---|
 | Underutilised Capacity | Systems sized for peak demand remain idle during average operating periods. Fixed cost continues regardless. |
-| Subscription Cost Accumulation | Recurring subscription fees accumulate to exceed capital ownership cost in long-term deployments without fee renegotiation. |
+| Subscription Cost Accumulation | Recurring subscription fees may exceed capital ownership cost, depending on purchase prices, subscription and service fees, usage charges, and the comparison horizon. |
 | Integration Cost Overrun | Unexpected integration work increases deployment cost and delays ramp to productive utilisation. |
 | Vendor Lock-In | Systems dependent on proprietary software restrict future vendor choice and expose operators to unilateral fee increases. |
 
@@ -533,7 +533,7 @@ Automation pricing outcomes are highly sensitive to a small set of operational v
 
 ## Reference Scenarios {#reference-scenarios}
 
-**Intralogistics AMR deployment:** A 3PL evaluates three vendor proposals for an AMR fleet. Capital purchase imposes high upfront exposure but lower lifetime cost under stable multi-year contracts. RaaS reduces initial risk but accumulates to exceed ownership cost if client contracts remain stable for 4+ years. Hybrid pricing creates software lock-in that prevents switching when a competing AMR platform offers better economics at contract renewal.
+**Intralogistics AMR deployment:** A 3PL evaluates three vendor proposals for an AMR fleet. Capital purchase imposes upfront investment. Compare its installed and ongoing costs with the RaaS initial and recurring costs over the same horizon. Without prices, fees and operating assumptions, neither a lower lifetime cost nor a crossover year can be calculated. Hybrid pricing creates software lock-in that prevents switching when a competing AMR platform offers better economics at contract renewal.
 
 **Aerial inspection deployment:** An energy operator evaluates drone inspection vendors. RaaS pricing aligns cost with the variable inspection schedule ,  fees scale with missions flown. Capital purchase becomes viable only if inspection frequency is high enough to sustain utilisation. Hybrid pricing introduces proprietary data platform dependency that is often underestimated relative to hardware cost.
 
@@ -563,7 +563,7 @@ The Vendor Economics Framework applies to deployments where pricing model select
 The Vendor Economics Framework is a proprietary analytical model developed by Autonomy Bridge that evaluates how robotics vendor pricing structures ,  capital purchase, RaaS, and hybrid ,  convert automation into different cost structures, utilisation risk profiles, and long-term economic exposure. It applies across all robotic platform types and enables operators and investors to compare pricing models using consistent operational variables rather than vendor ROI projections.
 
 **What is the difference between capital purchase and RaaS for robotics deployments?**
-Under a capital purchase model, the operator owns the automation system and bears fixed infrastructure cost regardless of utilisation. Under RaaS, automation is delivered through subscription payments, converting capital expenditure into operating expense. Capital purchase creates higher upfront exposure but lower lifetime cost if the system remains deployed long-term. RaaS reduces initial financial risk but can accumulate to exceed ownership cost over multi-year deployments if subscription fees are not renegotiated.
+Under a capital purchase model, the operator owns the automation system and bears fixed infrastructure cost regardless of utilisation. Under RaaS, automation is delivered through subscription payments, converting capital expenditure into operating expense. Capital purchase creates upfront exposure; whether its lifetime cost is lower depends on the two cost paths over a common horizon. RaaS reduces initial financial risk but can accumulate to exceed ownership cost over multi-year deployments if subscription fees are not renegotiated.
 
 **Why is vendor lock-in a risk in robotics deployments?**
 Robotics systems across all platform types rely on proprietary fleet management software, task orchestration platforms, and vendor-specific integration components. When critical system functionality depends on a single vendor's software stack, switching costs increase substantially ,  operators must replace not just hardware but also integration layers, training, and operational processes. This dependency is typically underestimated at procurement because software licensing fees appear modest relative to hardware costs.

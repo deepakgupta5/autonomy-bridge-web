@@ -1,0 +1,432 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "route": "/",
+      "width": 1440,
+      "overflow": false,
+      "h1": 1,
+      "mailLinks": 0,
+      "canonical": "https://autonomybridge.com/",
+      "focus": "solid",
+      "skip": true
+    },
+    {
+      "route": "/commercial-leadership",
+      "width": 1440,
+      "overflow": false,
+      "h1": 1,
+      "mailLinks": 0,
+      "canonical": "https://autonomybridge.com/commercial-leadership",
+      "focus": "solid",
+      "skip": true
+    },
+    {
+      "route": "/ai-consulting",
+      "width": 1440,
+      "overflow": false,
+      "h1": 1,
+      "mailLinks": 0,
+      "canonical": "https://autonomybridge.com/ai-consulting",
+      "focus": "solid",
+      "skip": true
+    },
+    {
+      "route": "/about",
+      "width": 1440,
+      "overflow": false,
+      "h1": 1,
+      "mailLinks": 0,
+      "canonical": "https://autonomybridge.com/about",
+      "focus": "solid",
+      "skip": true
+    },
+    {
+      "route": "/contact",
+      "width": 1440,
+      "overflow": false,
+      "h1": 1,
+      "mailLinks": 0,
+      "canonical": "https://autonomybridge.com/contact",
+      "focus": "solid",
+      "skip": true
+    },
+    {
+      "route": "/privacy-policy",
+      "width": 1440,
+      "overflow": false,
+      "h1": 1,
+      "mailLinks": 0,
+      "canonical": "https://autonomybridge.com/privacy-policy",
+      "focus": "solid",
+      "skip": true
+    },
+    {
+      "route": "/terms-of-use",
+      "width": 1440,
+      "overflow": false,
+      "h1": 1,
+      "mailLinks": 0,
+      "canonical": "https://autonomybridge.com/terms-of-use",
+      "focus": "solid",
+      "skip": true
+    },
+    {
+      "route": "/cookie-policy",
+      "width": 1440,
+      "overflow": false,
+      "h1": 1,
+      "mailLinks": 0,
+      "canonical": "https://autonomybridge.com/cookie-policy",
+      "focus": "solid",
+      "skip": true
+    },
+    {
+      "route": "/frameworks/robotics-roi-model",
+      "width": 1440,
+      "overflow": false,
+      "h1": 1,
+      "mailLinks": 0,
+      "canonical": "https://autonomybridge.com/frameworks/robotics-roi-model",
+      "focus": "solid",
+      "skip": true
+    },
+    {
+      "route": "/frameworks/automation-failure-framework",
+      "width": 1440,
+      "overflow": false,
+      "h1": 1,
+      "mailLinks": 0,
+      "canonical": "https://autonomybridge.com/frameworks/automation-failure-framework",
+      "focus": "solid",
+      "skip": true
+    },
+    {
+      "route": "/glossary/autonomous-mobile-robot",
+      "width": 1440,
+      "overflow": false,
+      "h1": 1,
+      "mailLinks": 0,
+      "canonical": "https://autonomybridge.com/glossary/autonomous-mobile-robot",
+      "focus": "solid",
+      "skip": true
+    },
+    {
+      "route": "/frameworks/vendor-economics-framework",
+      "width": 1440,
+      "overflow": false,
+      "h1": 1,
+      "mailLinks": 0,
+      "canonical": "https://autonomybridge.com/frameworks/vendor-economics-framework",
+      "focus": "solid",
+      "skip": true
+    },
+    {
+      "route": "/",
+      "width": 768,
+      "overflow": false,
+      "h1": 1,
+      "mailLinks": 0,
+      "canonical": "https://autonomybridge.com/",
+      "focus": "solid",
+      "skip": true
+    },
+    {
+      "route": "/commercial-leadership",
+      "width": 768,
+      "overflow": false,
+      "h1": 1,
+      "mailLinks": 0,
+      "canonical": "https://autonomybridge.com/commercial-leadership",
+      "focus": "solid",
+      "skip": true
+    },
+    {
+      "route": "/ai-consulting",
+      "width": 768,
+      "overflow": false,
+      "h1": 1,
+      "mailLinks": 0,
+      "canonical": "https://autonomybridge.com/ai-consulting",
+      "focus": "solid",
+      "skip": true
+    },
+    {
+      "route": "/about",
+      "width": 768,
+      "overflow": false,
+      "h1": 1,
+      "mailLinks": 0,
+      "canonical": "https://autonomybridge.com/about",
+      "focus": "solid",
+      "skip": true
+    },
+    {
+      "route": "/contact",
+      "width": 768,
+      "overflow": false,
+      "h1": 1,
+      "mailLinks": 0,
+      "canonical": "https://autonomybridge.com/contact",
+      "focus": "solid",
+      "skip": true
+    },
+    {
+      "route": "/privacy-policy",
+      "width": 768,
+      "overflow": false,
+      "h1": 1,
+      "mailLinks": 0,
+      "canonical": "https://autonomybridge.com/privacy-policy",
+      "focus": "solid",
+      "skip": true
+    },
+    {
+      "route": "/terms-of-use",
+      "width": 768,
+      "overflow": false,
+      "h1": 1,
+      "mailLinks": 0,
+      "canonical": "https://autonomybridge.com/terms-of-use",
+      "focus": "solid",
+      "skip": true
+    },
+    {
+      "route": "/cookie-policy",
+      "width": 768,
+      "overflow": false,
+      "h1": 1,
+      "mailLinks": 0,
+      "canonical": "https://autonomybridge.com/cookie-policy",
+      "focus": "solid",
+      "skip": true
+    },
+    {
+      "route": "/frameworks/robotics-roi-model",
+      "width": 768,
+      "overflow": false,
+      "h1": 1,
+      "mailLinks": 0,
+      "canonical": "https://autonomybridge.com/frameworks/robotics-roi-model",
+      "focus": "solid",
+      "skip": true
+    },
+    {
+      "route": "/frameworks/automation-failure-framework",
+      "width": 768,
+      "overflow": false,
+      "h1": 1,
+      "mailLinks": 0,
+      "canonical": "https://autonomybridge.com/frameworks/automation-failure-framework",
+      "focus": "solid",
+      "skip": true
+    },
+    {
+      "route": "/glossary/autonomous-mobile-robot",
+      "width": 768,
+      "overflow": false,
+      "h1": 1,
+      "mailLinks": 0,
+      "canonical": "https://autonomybridge.com/glossary/autonomous-mobile-robot",
+      "focus": "solid",
+      "skip": true
+    },
+    {
+      "route": "/frameworks/vendor-economics-framework",
+      "width": 768,
+      "overflow": false,
+      "h1": 1,
+      "mailLinks": 0,
+      "canonical": "https://autonomybridge.com/frameworks/vendor-economics-framework",
+      "focus": "solid",
+      "skip": true
+    },
+    {
+      "route": "/",
+      "width": 390,
+      "overflow": false,
+      "h1": 1,
+      "mailLinks": 0,
+      "canonical": "https://autonomybridge.com/",
+      "focus": "solid",
+      "skip": true,
+      "mobileMenu": true
+    },
+    {
+      "route": "/commercial-leadership",
+      "width": 390,
+      "overflow": false,
+      "h1": 1,
+      "mailLinks": 0,
+      "canonical": "https://autonomybridge.com/commercial-leadership",
+      "focus": "solid",
+      "skip": true,
+      "mobileMenu": true
+    },
+    {
+      "route": "/ai-consulting",
+      "width": 390,
+      "overflow": false,
+      "h1": 1,
+      "mailLinks": 0,
+      "canonical": "https://autonomybridge.com/ai-consulting",
+      "focus": "solid",
+      "skip": true,
+      "mobileMenu": true
+    },
+    {
+      "route": "/about",
+      "width": 390,
+      "overflow": false,
+      "h1": 1,
+      "mailLinks": 0,
+      "canonical": "https://autonomybridge.com/about",
+      "focus": "solid",
+      "skip": true,
+      "mobileMenu": true
+    },
+    {
+      "route": "/contact",
+      "width": 390,
+      "overflow": false,
+      "h1": 1,
+      "mailLinks": 0,
+      "canonical": "https://autonomybridge.com/contact",
+      "focus": "solid",
+      "skip": true,
+      "mobileMenu": true
+    },
+    {
+      "route": "/privacy-policy",
+      "width": 390,
+      "overflow": false,
+      "h1": 1,
+      "mailLinks": 0,
+      "canonical": "https://autonomybridge.com/privacy-policy",
+      "focus": "solid",
+      "skip": true,
+      "mobileMenu": true
+    },
+    {
+      "route": "/terms-of-use",
+      "width": 390,
+      "overflow": false,
+      "h1": 1,
+      "mailLinks": 0,
+      "canonical": "https://autonomybridge.com/terms-of-use",
+      "focus": "solid",
+      "skip": true,
+      "mobileMenu": true
+    },
+    {
+      "route": "/cookie-policy",
+      "width": 390,
+      "overflow": false,
+      "h1": 1,
+      "mailLinks": 0,
+      "canonical": "https://autonomybridge.com/cookie-policy",
+      "focus": "solid",
+      "skip": true,
+      "mobileMenu": true
+    },
+    {
+      "route": "/frameworks/robotics-roi-model",
+      "width": 390,
+      "overflow": false,
+      "h1": 1,
+      "mailLinks": 0,
+      "canonical": "https://autonomybridge.com/frameworks/robotics-roi-model",
+      "focus": "solid",
+      "skip": true,
+      "mobileMenu": true
+    },
+    {
+      "route": "/frameworks/automation-failure-framework",
+      "width": 390,
+      "overflow": false,
+      "h1": 1,
+      "mailLinks": 0,
+      "canonical": "https://autonomybridge.com/frameworks/automation-failure-framework",
+      "focus": "solid",
+      "skip": true,
+      "mobileMenu": true
+    },
+    {
+      "route": "/glossary/autonomous-mobile-robot",
+      "width": 390,
+      "overflow": false,
+      "h1": 1,
+      "mailLinks": 0,
+      "canonical": "https://autonomybridge.com/glossary/autonomous-mobile-robot",
+      "focus": "solid",
+      "skip": true,
+      "mobileMenu": true
+    },
+    {
+      "route": "/frameworks/vendor-economics-framework",
+      "width": 390,
+      "overflow": false,
+      "h1": 1,
+      "mailLinks": 0,
+      "canonical": "https://autonomybridge.com/frameworks/vendor-economics-framework",
+      "focus": "solid",
+      "skip": true,
+      "mobileMenu": true
+    }
+  ],
+  "noJS": {
+    "form": 1,
+    "disabled": true,
+    "instruction": "This form needs JavaScript to submit and verify receipt. Enable JavaScript and reload this page to use it. No enquiry has been sent."
+  },
+  "formResults": [
+    {
+      "mode": "accepted",
+      "invalid": {
+        "name": "Please enter your name.",
+        "email": "Please enter your email address.",
+        "company": "Please enter your company or organisation.",
+        "message": "Please enter a message.",
+        "focus": "name",
+        "posts": 0
+      },
+      "invalidEmail": "Please enter a valid email address.",
+      "posts": 1,
+      "receiptGets": 1,
+      "unexpected": 0,
+      "state": {
+        "confirmed": true,
+        "message": "Thank you for getting in touch\n\nYour enquiry has been submitted. I’ll review it and reply using the email address you provided."
+      }
+    },
+    {
+      "mode": "unknown",
+      "invalid": {
+        "name": "Please enter your name.",
+        "email": "Please enter your email address.",
+        "company": "Please enter your company or organisation.",
+        "message": "Please enter a message.",
+        "focus": "name",
+        "posts": 0
+      },
+      "invalidEmail": "Please enter a valid email address.",
+      "posts": 1,
+      "receiptGets": 10,
+      "unexpected": 0,
+      "state": {
+        "status": "We couldn’t confirm receipt. Your enquiry may have arrived. Keep a copy of your message and any reference shown below. Please do not submit it again now; a missing confirmation does not mean delivery failed. Reference: 6b79d01b-7aa2-4cba-982b-2544ab6b8e3e",
+        "disabled": true,
+        "preserved": "Offline privacy request, intercepted only.",
+        "focus": "form-status"
+      }
+    }
+  ],
+  "rejected": {
+    "status": "Your enquiry wasn’t submitted. Your entries are still here. Please check them and try again. If the problem continues, keep a copy and return later.",
+    "preserved": "Must reject before transmission on loopback",
+    "retryEnabled": true
+  },
+  "scope": "All production-origin requests intercepted and fulfilled locally; no real enquiry, Netlify event or mailbox delivery tested.",
+  "artifact": "/private/tmp/ab-final-approved",
+  "loopback": "http://127.0.0.1:4332"
+}

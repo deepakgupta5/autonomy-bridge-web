@@ -1,3 +1,4 @@
+import {deploymentPolicy} from '../config/deployment-policy.mjs';
 import {readFileSync,writeFileSync,readdirSync} from 'node:fs';
 import {join} from 'node:path';
 import {parse} from 'parse5';
@@ -16,7 +17,7 @@ for(const family of ['frameworks','insights','use-cases','case-studies'])for(con
  const article=schemas.find(n=>[n['@type']].flat().some(t=>['Article','TechArticle','CaseStudy'].includes(t)));assert(article,route);
  const byline=nodes.find(n=>hasClass(n,'research-byline'));assert(byline,route+' byline');
  const names=[article.author].flat().map(a=>a.name);for(const name of names)assert(text(byline).includes(name),route+' author parity');
- assert(!article.datePublished&&!article.dateModified,route+' unverified public dates');assert(text(byline).includes('Source date record:'),route+' historical source dates');
+ assert(!article.datePublished,route+' unverified publication date');const revised=JSON.parse(readFileSync('config/material-research-revisions.json'));assert.equal(article.dateModified,revised.includes(route)?deploymentPolicy.researchRevisionDate??undefined:undefined,route+' release modification date');assert(text(byline).includes('Source date record:'),route+' historical source dates');
  const body=nodes.find(n=>hasClass(n,'detail-body')),bn=walk(body);
  const publicReferences=[...new Set(bn.filter(n=>n.tagName==='a').map(n=>attr(n,'href')).filter(h=>/^https?:/.test(h)&&!new URL(h).hostname.endsWith('autonomybridge.com')))];
  const claims=bn.filter(n=>['p','li','td'].includes(n.tagName)).map(text).filter(t=>/\d\s*(?:%|percent|months?|years?|hours?|million|billion)|[>$€£]\s*\d|\b\d+[–-]\d+\b/i.test(t));
