@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "production_guard_negative_controls": [
+    {
+      "override": {
+        "CONTEXT": "deploy-preview"
+      },
+      "rejected": true
+    },
+    {
+      "override": {
+        "SITE_ID": "wrong"
+      },
+      "rejected": true
+    },
+    {
+      "override": {
+        "AB_PRIVATE_PREVIEW": "1"
+      },
+      "rejected": true
+    }
+  ],
+  "local_ci_rejected": true,
+  "local_pages_noindex": 160,
+  "stale_overlay_not_restored": true,
+  "local_form_present": true,
+  "local_build": "/private/tmp/ab-release-local-q4ir2mkj/dist",
+  "scope": "Isolated source copy with mode local; main branch policy unchanged."
+}

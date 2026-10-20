@@ -15,7 +15,7 @@ export async function submitNetlifyContact(data, {
     return { outcome: 'rejected', reason: 'invalid-origin' };
   }
   const body = new URLSearchParams(data);
-  for (const field of ['name', 'email', 'company', 'message']) {
+  for (const field of ['name', 'email', 'message', ...(body.get('privacy-request') === 'yes' ? [] : ['company'])]) {
     if (!body.get(field)?.trim()) return { outcome: 'rejected', reason: 'invalid-fields' };
   }
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(body.get('email')) || body.get('bot-field')) {

@@ -117,13 +117,13 @@ export const diagramAssetMap: Record<string, DiagramAsset[]> = {
   "robotics-roi-model": [
     {
       originalFilename: "1_robotics payback economics framework.png",
-      normalizedFilename: "robotics-roi-model-diagram-01.png",
+      normalizedFilename: "robotics-roi-model-diagram-01.svg",
       frameworkSlug: "robotics-roi-model",
       diagramOrder: 1,
-      caption: "robotics payback economics framework",
-      publicPath: "/diagrams/frameworks/robotics-roi-model/robotics-roi-model-diagram-01.png",
-      width: 1726,
-      height: 1202,
+      caption: "Robotics capacity, utilization and cash-flow model. Worked examples are hypothetical; no universal threshold is established.",
+      publicPath: "/diagrams/frameworks/robotics-roi-model/robotics-roi-model-diagram-01.svg",
+      width: 1000,
+      height: 1050,
     },
   ],
   "vendor-economics-framework": [

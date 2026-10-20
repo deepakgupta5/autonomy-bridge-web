@@ -1,0 +1,2 @@
+Passed: verified-event marker only, no enquiry data stored, expiry, one POST with receipt polling, ambiguous response never success. Offline fixtures only.
+Passed offline: required fields, email syntax, honeypot, privacy request without company, disabled/wrong-origin rejection, HTML/422/wrong-reference/network outcomes unknown. No real requests made.

@@ -164,73 +164,55 @@ Deployment failures emerge from combinations of utilization instability, integra
 The Automation Failure Framework evaluates robotics deployments through a causal chain connecting operational constraints to economic outcomes.
 
 <div style="font-family: 'IBM Plex Mono', 'Courier New', monospace; margin: 2rem 0;">
-
 <div style="background: #f1f5f9; border: 1px solid #cbd5e1; border-radius: 6px; padding: 2rem 1.5rem; max-width: 680px;">
-
-  <div style="font-size: 0.65rem; font-weight: 700; letter-spacing: 0.12em; color: #475569; text-transform: uppercase; margin-bottom: 1.5rem;">
-    Fig 1 ,  Automation Failure Mechanism Model
-  </div>
-
-  <!-- Causal chain -->
-  <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 0; margin-bottom: 2rem;">
-
-    <div style="background: #0f172a; color: #f8fafc; padding: 0.6rem 1.2rem; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.04em; border-radius: 3px;">
-      ROBOTICS DEPLOYMENT
-    </div>
-    <div style="width: 2px; height: 20px; background: #cbd5e1; margin-left: 1.5rem;"></div>
-
-    <div style="background: #f1f5f9; border: 1px solid #cbd5e1; color: #334155; padding: 0.6rem 1.2rem; font-size: 0.8rem; font-weight: 500; border-radius: 3px;">
-      Operational Constraints
-    </div>
-    <div style="width: 2px; height: 20px; background: #cbd5e1; margin-left: 1.5rem;"></div>
-
-    <div style="background: #fef3c7; border: 1px solid #d97706; color: #92400e; padding: 0.6rem 1.2rem; font-size: 0.8rem; font-weight: 600; border-radius: 3px;">
-      Failure Mechanism Activated
-    </div>
-    <div style="width: 2px; height: 20px; background: #cbd5e1; margin-left: 1.5rem;"></div>
-
-    <div style="background: #f1f5f9; border: 1px solid #cbd5e1; color: #334155; padding: 0.6rem 1.2rem; font-size: 0.8rem; font-weight: 500; border-radius: 3px;">
-      Economic Underperformance
-    </div>
-
-  </div>
-
-  <!-- Four failure mechanisms -->
-  <div style="font-size: 0.65rem; font-weight: 700; letter-spacing: 0.12em; color: #475569; text-transform: uppercase; margin-bottom: 1rem;">
-    Four Structural Failure Mechanisms
-  </div>
-
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
-
-    <div style="background: #ffffff; border: 1px solid #e2e8f0; border-left: 3px solid #0f172a; padding: 0.75rem 1rem; border-radius: 3px;">
-      <div style="font-size: 0.7rem; font-weight: 700; color: #0f172a; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.25rem;">Utilization Failure</div>
-      <div style="font-size: 0.75rem; color: #475569; line-height: 1.4;">Workload density cannot sustain installed capacity</div>
-    </div>
-
-    <div style="background: #ffffff; border: 1px solid #e2e8f0; border-left: 3px solid #0f172a; padding: 0.75rem 1rem; border-radius: 3px;">
-      <div style="font-size: 0.7rem; font-weight: 700; color: #0f172a; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.25rem;">Task Mismatch</div>
-      <div style="font-size: 0.75rem; color: #475569; line-height: 1.4;">System architecture does not align with the task structure</div>
-    </div>
-
-    <div style="background: #ffffff; border: 1px solid #e2e8f0; border-left: 3px solid #0f172a; padding: 0.75rem 1rem; border-radius: 3px;">
-      <div style="font-size: 0.7rem; font-weight: 700; color: #0f172a; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.25rem;">Integration Failure</div>
-      <div style="font-size: 0.75rem; color: #475569; line-height: 1.4;">Software and data integration reduces effective throughput</div>
-    </div>
-
-    <div style="background: #ffffff; border: 1px solid #e2e8f0; border-left: 3px solid #0f172a; padding: 0.75rem 1rem; border-radius: 3px;">
-      <div style="font-size: 0.7rem; font-weight: 700; color: #0f172a; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.25rem;">Scaling Failure</div>
-      <div style="font-size: 0.75rem; color: #475569; line-height: 1.4;">Pilot performance cannot replicate at full deployment scale</div>
-    </div>
-
-  </div>
-
-  <div style="margin-top: 1rem; font-size: 0.65rem; color: #94a3b8; letter-spacing: 0.04em;">
-    Source: Automation Failure Framework · Autonomy Bridge, 2026
-  </div>
-
+<div style="font-size: 0.65rem; font-weight: 700; letter-spacing: 0.12em; color: #475569; text-transform: uppercase; margin-bottom: 1.5rem;">
+Fig 1 ,  Automation Failure Mechanism Model
+</div>
+<!-- Causal chain -->
+<div style="display: flex; flex-direction: column; align-items: flex-start; gap: 0; margin-bottom: 2rem;">
+<div style="background: #0f172a; color: #f8fafc; padding: 0.6rem 1.2rem; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.04em; border-radius: 3px;">
+ROBOTICS DEPLOYMENT
+</div>
+<div style="width: 2px; height: 20px; background: #cbd5e1; margin-left: 1.5rem;"></div>
+<div style="background: #f1f5f9; border: 1px solid #cbd5e1; color: #334155; padding: 0.6rem 1.2rem; font-size: 0.8rem; font-weight: 500; border-radius: 3px;">
+Operational Constraints
+</div>
+<div style="width: 2px; height: 20px; background: #cbd5e1; margin-left: 1.5rem;"></div>
+<div style="background: #fef3c7; border: 1px solid #d97706; color: #92400e; padding: 0.6rem 1.2rem; font-size: 0.8rem; font-weight: 600; border-radius: 3px;">
+Failure Mechanism Activated
+</div>
+<div style="width: 2px; height: 20px; background: #cbd5e1; margin-left: 1.5rem;"></div>
+<div style="background: #f1f5f9; border: 1px solid #cbd5e1; color: #334155; padding: 0.6rem 1.2rem; font-size: 0.8rem; font-weight: 500; border-radius: 3px;">
+Economic Underperformance
 </div>
 </div>
-
+<!-- Four failure mechanisms -->
+<div style="font-size: 0.65rem; font-weight: 700; letter-spacing: 0.12em; color: #475569; text-transform: uppercase; margin-bottom: 1rem;">
+Four Structural Failure Mechanisms
+</div>
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
+<div style="background: #ffffff; border: 1px solid #e2e8f0; border-left: 3px solid #0f172a; padding: 0.75rem 1rem; border-radius: 3px;">
+<div style="font-size: 0.7rem; font-weight: 700; color: #0f172a; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.25rem;">Utilization Failure</div>
+<div style="font-size: 0.75rem; color: #475569; line-height: 1.4;">Workload density cannot sustain installed capacity</div>
+</div>
+<div style="background: #ffffff; border: 1px solid #e2e8f0; border-left: 3px solid #0f172a; padding: 0.75rem 1rem; border-radius: 3px;">
+<div style="font-size: 0.7rem; font-weight: 700; color: #0f172a; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.25rem;">Task Mismatch</div>
+<div style="font-size: 0.75rem; color: #475569; line-height: 1.4;">System architecture does not align with the task structure</div>
+</div>
+<div style="background: #ffffff; border: 1px solid #e2e8f0; border-left: 3px solid #0f172a; padding: 0.75rem 1rem; border-radius: 3px;">
+<div style="font-size: 0.7rem; font-weight: 700; color: #0f172a; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.25rem;">Integration Failure</div>
+<div style="font-size: 0.75rem; color: #475569; line-height: 1.4;">Software and data integration reduces effective throughput</div>
+</div>
+<div style="background: #ffffff; border: 1px solid #e2e8f0; border-left: 3px solid #0f172a; padding: 0.75rem 1rem; border-radius: 3px;">
+<div style="font-size: 0.7rem; font-weight: 700; color: #0f172a; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.25rem;">Scaling Failure</div>
+<div style="font-size: 0.75rem; color: #475569; line-height: 1.4;">Pilot performance cannot replicate at full deployment scale</div>
+</div>
+</div>
+<div style="margin-top: 1rem; font-size: 0.65rem; color: #94a3b8; letter-spacing: 0.04em;">
+Source: Automation Failure Framework · Autonomy Bridge, 2026
+</div>
+</div>
+</div>
 Four structural failure mechanisms explain why robotics deployments fail economically: utilization failure, task mismatch, integration failure, and scaling failure. Each mechanism has identifiable preconditions, machine-readable logic, and diagnostic indicators that can be evaluated before capital commitment.
 
 ---
@@ -264,12 +246,14 @@ Utilization measures how much of installed robotics capacity is actively used by
 Utilization:
 
 ```
-U = Installed Capacity / Actual Task Volume
+U = Actual Task Volume / Sustainable Capacity
 
 Where:
   Actual Task Volume  = tasks processed by the system per period
-  Installed Capacity  = maximum throughput capability of the deployed system
+  Sustainable Capacity = tasks the system can sustainably process over that same period
 ```
+
+U is dimensionless (multiply by 100 for percent). A hypothetical 600 tasks completed against 1,000 tasks of sustainable capacity over the same hour gives U = 60%; capacity divided by actual volume would instead be 1.67, a different ratio. Use the same task mix and operating schedule; zero capacity makes the ratio undefined. See the [Federal Reserve capacity-utilization definition](https://www.federalreserve.gov/releases/g17/CapNotes.htm) for output divided by capacity, not an AMR-specific threshold.
 
 Utilization risk manifests differently by platform type. In warehouse AMR deployments, client churn and seasonal demand swings reduce task volume against fixed fleet capacity. In inspection drone deployments, asset maintenance scheduling and weather windows compress active operating periods. In service robot deployments, occupancy variability and shift patterns determine whether fleet utilization is sustainable. In each case, automation capacity remains fixed when demand changes. See: [Peak-to-Average Ratio →](/glossary/peak-to-average-ratio)
 
@@ -400,69 +384,59 @@ The Automation Failure Framework is applied as an early-stage risk screen before
 Deployment failures emerge from combinations of utilization instability, integration complexity, task mismatch, and scaling limits ,  not from isolated technical defects. The failure mechanisms interact: task mismatch reduces utilization, which compounds capital recovery risk; integration failure reduces effective throughput, which can trigger apparent scaling failure before true capacity limits are reached.
 
 <div style="font-family: 'IBM Plex Mono', 'Courier New', monospace; margin: 2rem 0;">
-
 <div style="background: #f1f5f9; border: 1px solid #cbd5e1; border-radius: 6px; padding: 2rem 1.5rem; max-width: 680px;">
-
-  <div style="font-size: 0.65rem; font-weight: 700; letter-spacing: 0.12em; color: #475569; text-transform: uppercase; margin-bottom: 1.5rem;">
-    Fig 2 ,  Robotics Deployment Risk Categories
-  </div>
-
-  <div style="display: flex; flex-direction: column; gap: 0.75rem;">
-
-    <!-- Utilization Failure -->
-    <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 4px; overflow: hidden;">
-      <div style="background: #0f172a; padding: 0.5rem 1rem;">
-        <span style="font-size: 0.7rem; font-weight: 700; color: #f8fafc; text-transform: uppercase; letter-spacing: 0.1em;">Utilization Failure</span>
-      </div>
-      <div style="padding: 0.75rem 1rem; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.5rem;">
-        <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 0.5rem 0.75rem; border-radius: 3px; font-size: 0.72rem; color: #334155;">Insufficient task volume</div>
-        <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 0.5rem 0.75rem; border-radius: 3px; font-size: 0.72rem; color: #334155;">Demand volatility</div>
-        <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 0.5rem 0.75rem; border-radius: 3px; font-size: 0.72rem; color: #334155;">Contract or client churn</div>
-      </div>
-    </div>
-
-    <!-- Integration Failure -->
-    <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 4px; overflow: hidden;">
-      <div style="background: #334155; padding: 0.5rem 1rem;">
-        <span style="font-size: 0.7rem; font-weight: 700; color: #f8fafc; text-transform: uppercase; letter-spacing: 0.1em;">Integration Failure</span>
-      </div>
-      <div style="padding: 0.75rem 1rem; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.5rem;">
-        <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 0.5rem 0.75rem; border-radius: 3px; font-size: 0.72rem; color: #334155;">Platform incompatibility</div>
-        <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 0.5rem 0.75rem; border-radius: 3px; font-size: 0.72rem; color: #334155;">Middleware complexity</div>
-        <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 0.5rem 0.75rem; border-radius: 3px; font-size: 0.72rem; color: #334155;">Data synchronisation issues</div>
-      </div>
-    </div>
-
-    <!-- Task Mismatch -->
-    <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 4px; overflow: hidden;">
-      <div style="background: #475569; padding: 0.5rem 1rem;">
-        <span style="font-size: 0.7rem; font-weight: 700; color: #f8fafc; text-transform: uppercase; letter-spacing: 0.1em;">Task Mismatch</span>
-      </div>
-      <div style="padding: 0.75rem 1rem; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.5rem;">
-        <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 0.5rem 0.75rem; border-radius: 3px; font-size: 0.72rem; color: #334155;">Architecture misaligned with task structure</div>
-        <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 0.5rem 0.75rem; border-radius: 3px; font-size: 0.72rem; color: #334155;">Task density fragmentation</div>
-        <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 0.5rem 0.75rem; border-radius: 3px; font-size: 0.72rem; color: #334155;">Bottleneck stage not targeted</div>
-      </div>
-    </div>
-
-    <!-- Scaling Failure -->
-    <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 4px; overflow: hidden;">
-      <div style="background: #d97706; padding: 0.5rem 1rem;">
-        <span style="font-size: 0.7rem; font-weight: 700; color: #0f172a; text-transform: uppercase; letter-spacing: 0.1em;">Scaling Failure</span>
-      </div>
-      <div style="padding: 0.75rem 1rem; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.5rem;">
-        <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 0.5rem 0.75rem; border-radius: 3px; font-size: 0.72rem; color: #334155;">Unit congestion at scale</div>
-        <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 0.5rem 0.75rem; border-radius: 3px; font-size: 0.72rem; color: #334155;">Orchestration limits</div>
-        <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 0.5rem 0.75rem; border-radius: 3px; font-size: 0.72rem; color: #334155;">Shared infrastructure constraints</div>
-      </div>
-    </div>
-
-  </div>
-
-  <div style="margin-top: 1rem; font-size: 0.65rem; color: #94a3b8; letter-spacing: 0.04em;">
-    Source: Automation Failure Framework · Autonomy Bridge, 2026
-  </div>
-
+<div style="font-size: 0.65rem; font-weight: 700; letter-spacing: 0.12em; color: #475569; text-transform: uppercase; margin-bottom: 1.5rem;">
+Fig 2 ,  Robotics Deployment Risk Categories
+</div>
+<div style="display: flex; flex-direction: column; gap: 0.75rem;">
+<!-- Utilization Failure -->
+<div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 4px; overflow: hidden;">
+<div style="background: #0f172a; padding: 0.5rem 1rem;">
+<span style="font-size: 0.7rem; font-weight: 700; color: #f8fafc; text-transform: uppercase; letter-spacing: 0.1em;">Utilization Failure</span>
+</div>
+<div style="padding: 0.75rem 1rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 0.5rem;">
+<div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 0.5rem 0.75rem; border-radius: 3px; font-size: 0.72rem; color: #334155;">Insufficient task volume</div>
+<div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 0.5rem 0.75rem; border-radius: 3px; font-size: 0.72rem; color: #334155;">Demand volatility</div>
+<div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 0.5rem 0.75rem; border-radius: 3px; font-size: 0.72rem; color: #334155;">Contract or client churn</div>
+</div>
+</div>
+<!-- Integration Failure -->
+<div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 4px; overflow: hidden;">
+<div style="background: #334155; padding: 0.5rem 1rem;">
+<span style="font-size: 0.7rem; font-weight: 700; color: #f8fafc; text-transform: uppercase; letter-spacing: 0.1em;">Integration Failure</span>
+</div>
+<div style="padding: 0.75rem 1rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 0.5rem;">
+<div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 0.5rem 0.75rem; border-radius: 3px; font-size: 0.72rem; color: #334155;">Platform incompatibility</div>
+<div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 0.5rem 0.75rem; border-radius: 3px; font-size: 0.72rem; color: #334155;">Middleware complexity</div>
+<div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 0.5rem 0.75rem; border-radius: 3px; font-size: 0.72rem; color: #334155;">Data synchronisation issues</div>
+</div>
+</div>
+<!-- Task Mismatch -->
+<div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 4px; overflow: hidden;">
+<div style="background: #475569; padding: 0.5rem 1rem;">
+<span style="font-size: 0.7rem; font-weight: 700; color: #f8fafc; text-transform: uppercase; letter-spacing: 0.1em;">Task Mismatch</span>
+</div>
+<div style="padding: 0.75rem 1rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 0.5rem;">
+<div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 0.5rem 0.75rem; border-radius: 3px; font-size: 0.72rem; color: #334155;">Architecture misaligned with task structure</div>
+<div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 0.5rem 0.75rem; border-radius: 3px; font-size: 0.72rem; color: #334155;">Task density fragmentation</div>
+<div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 0.5rem 0.75rem; border-radius: 3px; font-size: 0.72rem; color: #334155;">Bottleneck stage not targeted</div>
+</div>
+</div>
+<!-- Scaling Failure -->
+<div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 4px; overflow: hidden;">
+<div style="background: #d97706; padding: 0.5rem 1rem;">
+<span style="font-size: 0.7rem; font-weight: 700; color: #0f172a; text-transform: uppercase; letter-spacing: 0.1em;">Scaling Failure</span>
+</div>
+<div style="padding: 0.75rem 1rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 0.5rem;">
+<div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 0.5rem 0.75rem; border-radius: 3px; font-size: 0.72rem; color: #334155;">Unit congestion at scale</div>
+<div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 0.5rem 0.75rem; border-radius: 3px; font-size: 0.72rem; color: #334155;">Orchestration limits</div>
+<div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 0.5rem 0.75rem; border-radius: 3px; font-size: 0.72rem; color: #334155;">Shared infrastructure constraints</div>
+</div>
+</div>
+</div>
+<div style="margin-top: 1rem; font-size: 0.65rem; color: #94a3b8; letter-spacing: 0.04em;">
+Source: Automation Failure Framework · Autonomy Bridge, 2026
+</div>
 </div>
 </div>
 

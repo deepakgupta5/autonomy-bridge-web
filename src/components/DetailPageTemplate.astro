@@ -105,6 +105,8 @@ const renderedBody = renderResearchBody(await Astro.slots.render("default"), dia
       <p class="detail-eyebrow type-eyebrow">{contentTypeLabel}</p>
       <h1 id={renderedBody.heroId} class="type-h1">{title}</h1>
       <p class="detail-tagline">{summary}</p>
+      <p class="research-byline">{authors?.length && <span>By {authors.join(', ')} · </span>}{datePublished && <span>Originally published <time datetime={datePublished}>{datePublished}</time></span>}{dateModified && <span> · Source record updated <time datetime={dateModified}>{dateModified}</time></span>}</p>
+      <p class="research-evidence-note">Evidence scope: proprietary-analysis labels identify AutonomyBridge’s analysis, not independent verification. Numerical estimates and thresholds without a linked supporting source should be treated as unverified analytical inputs, not general benchmarks. Internal framework links provide context, not external substantiation. Read the page-specific assumptions and limitations and the <a href="/methodology">Methodology</a>.</p>
     </header>
 
     <p><a href={resolvedHubPath}>All {resolvedHubLabel} →</a></p>
@@ -415,3 +417,7 @@ const renderedBody = renderResearchBody(await Astro.slots.render("default"), dia
     letter-spacing: 0.01em;
   }
 </style>
+
+<style>.research-byline{font-size:.875rem;color:var(--color-text-secondary)}.research-evidence-note{font-size:.875rem;line-height:1.65;border-left:2px solid var(--color-border-accent);padding-left:1rem;max-width:85ch}</style>
+
+<style>.detail-body :global(pre){max-width:100%;min-width:0;white-space:pre-wrap;overflow-wrap:anywhere}</style>

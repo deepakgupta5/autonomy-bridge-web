@@ -215,8 +215,8 @@ Clabor = Lworkers × Wrate × Hhours
 
 Where:
 - `Lworkers` = number of workers
-- `Wrate` = fully burdened wage rate (including benefits and overhead)
-- `Hhours` = labor hours required
+- `Wrate` = fully burdened wage rate, in currency per worker-hour (including benefits and overhead)
+- `Hhours` = scheduled hours per worker in the same year; do not multiply total team hours by worker count again
 
 Automation only affects the share of labor tied to tasks robots can substitute. If labor substitution is limited, automation savings are capped. See: [Removable Labor Share →](/glossary/removable-labor-share)
 
@@ -241,8 +241,8 @@ Probot = Tasks / Cycle Time
 
 Where:
 - `Probot` = robot productivity rate
-- `Tasks` = number of completed transport or retrieval actions
-- `Cycle Time` = robot travel and handling cycle
+- `Tasks` = completed actions per cycle, measured in tasks per robot-cycle
+- `Cycle Time` = elapsed hours per robot-cycle, including the modeled handling and waiting time; Probot is tasks per robot-hour
 
 Total system throughput is constrained by the bottleneck:
 
@@ -251,9 +251,9 @@ Tsystem = min(Trobot, Tstation)
 ```
 
 Where:
-- `Tsystem` = system throughput
-- `Trobot` = throughput produced by robots
-- `Tstation` = processing capacity of human workstations
+- `Tsystem` = sustainable system capacity, in tasks per hour
+- `Trobot` = sustainable fleet capacity in tasks per hour (Nrobots × Probot before shared constraints)
+- `Tstation` = sustainable combined workstation capacity in tasks per hour
 
 If robots deliver work faster than stations can process it, robots queue and idle. Adding robots without adding station capacity produces no throughput gain. See: [Pick Station Throughput →](/glossary/pick-station-throughput)
 
@@ -279,18 +279,24 @@ Tsystem ≥ Dpeak
 Fleet size:
 
 ```
-Nrobots = Dpeak / Probot
+Nrobots = ceil(Dpeak / Probot)
 ```
 
-Where `Nrobots` = number of robots required to handle peak demand.
+Where `Dpeak` is peak demand in tasks per hour and `Probot` is tasks per robot-hour over the same operating conditions. `Nrobots` is a whole-robot lower bound, rounded up; station, charging, availability and congestion constraints still need validation. For a hypothetical 120 tasks/hour and 25 tasks/robot-hour, ceil(120/25) = 5 robots before those constraints.
 
-Average utilization:
+Output utilization and demand loading are distinct:
 
 ```
-U = Tsystem / Davg
+U = Qactual / Qcapacity
+Load = Davg / Tsystem
+Rcapacity = Tsystem / Davg
 ```
 
-Where `U` = utilization of installed robotic capacity.
+`Qactual` is completed tasks and `Qcapacity` is sustainable task capacity over the same specified period, task mix and work schedule. `U` is dimensionless; multiply by 100 for percent. `Davg` and `Tsystem` are both tasks per hour. Load is a planning proxy for utilization only if demand is served; `Rcapacity` is a capacity-to-demand ratio, not utilization. A zero capacity makes U undefined; zero demand makes Rcapacity undefined. Investigate inconsistent measurement if measured output exceeds the stated sustainable capacity.
+
+Hypothetical example: 600 tasks completed in an hour against capacity of 1,000 tasks in that hour gives U = 0.60 (60%). With demand of 600 tasks/hour, Load = 0.60 and Rcapacity = 1.67. Neither ratio is a profitability threshold.
+
+Definition reference: the [Federal Reserve capacity-utilization notes](https://www.federalreserve.gov/releases/g17/CapNotes.htm) use output divided by capacity and define capacity on a sustainable operating schedule. This is a definition reference, not evidence for a robotics performance benchmark.
 
 See: [Peak-to-Average Ratio →](/glossary/peak-to-average-ratio)
 
@@ -311,21 +317,21 @@ Automation shifts cost structure from variable to fixed:
 
 | Model | Cost Structure |
 |---|---|
-| Manual | `Costmanual ≈ Variable Labor` |
-| Automation | `Costautomation = Ccapex + Clabor_remaining` |
+| Manual | Baseline operating cash cost over a stated horizon, in currency |
+| Automation | Initial installed investment plus operating cash costs over that same horizon, in currency |
 
-Return on investment:
+Model inputs (a dependency list, not an ROI calculation):
 
 ```
-ROI = f(Ccapex, Clabor, U, V, T)
+ROI_H depends on C0, annual net cash flows, and horizon H
 ```
 
 Where:
-- `Ccapex` = automation capital cost
-- `Clabor` = labor cost baseline
+- `Ccapex` = initial automation capital cost, included in C0
+- `Clabor` = annual labor cost baseline, in currency per year
 - `U` = utilization
-- `V` = annual order volume
-- `T` = system throughput capacity
+- `V` = annual order volume, in orders per year
+- `T` = system throughput capacity, in tasks per hour
 
 Annual labor savings depend on system utilization:
 
@@ -333,13 +339,13 @@ Annual labor savings depend on system utilization:
 Savingsannual = f(U, Clabor, Lsub)
 ```
 
-Where `Lsub` = share of labor removed by automation. See: [Removable Labor Share →](/glossary/removable-labor-share)
+This is a dependency statement, not a numerical savings formula. Where `Lsub` = share of baseline labor cost that can actually be avoided, not simply redeployed. Do not multiply realized savings by utilization again. See: [Removable Labor Share →](/glossary/removable-labor-share)
 
 **Machine-readable logic:**
 
-- If utilization increases → annual savings increase and payback time decreases.
+- Higher utilization can improve savings only when additional output creates avoidable cash costs or other incremental cash benefits; it is not a guarantee.
 - If utilization declines → capital recovery slows.
-- If utilization falls below the economic threshold → robotics becomes a financial drag.
+- Calculate a project-specific break-even scenario from cash flows and the chosen horizon. No universal minimum utilization or congestion percentage is established here.
 
 ---
 
@@ -347,7 +353,7 @@ Where `Lsub` = share of labor removed by automation. See: [Removable Labor Share
 
 Automation deployment requires integration across software, infrastructure, and workflows. These costs are systematically underestimated in ROI models. Integration complexity materially changes payback outcomes.
 
-> **Key Finding (Autonomy Bridge, 2026):** Integration costs are frequently comparable to hardware costs in complex deployments. (Autonomy Bridge proprietary analysis, 2026)
+> **Key Finding (Autonomy Bridge, 2026):** Integration costs must be estimated explicitly for the deployment; no general ratio to hardware cost is established here. (Autonomy Bridge proprietary analysis, 2026)
 
 Integration cost categories include:
 
@@ -395,30 +401,30 @@ Payback depends on whether labor savings generated by automation exceed capital 
 
 > **Key Finding (Autonomy Bridge, 2026):** Automation does not reduce all labor. It reduces the portion of labor tied to the automated task. (Autonomy Bridge proprietary analysis, 2026)
 
-Conceptual payback equation:
+Use net cash flows, a stated horizon and a consistent currency:
 
 ```
-ROI = Ccapex / (Total Savings − Ccapex)
+S_t = avoidable labor cash cost_t + other incremental cash benefits_t
+      - incremental operating cash costs_t
+Simple payback = C0 / S                         (years, constant S > 0)
+ROI_H = (sum(S_t, t=1..H) - C0) / C0           (dimensionless, C0 > 0)
 ```
 
-Annual savings depend on utilization and labor substitution:
+`C0` is the initial installed investment, including hardware, integration, facility changes and initial ramp costs not already counted in S_t. `S_t` is net cash benefit for year t after incremental maintenance, software, energy and support costs. Count each cost once. Labor redeployment is not automatically a cash saving. The same currency and price basis must be used throughout.
 
-```
-Total Savings = ∑ Savingst
-Savingst = Clabor × Lsub × U
-```
+Simple payback uses constant annual net cash benefit S (currency/year). If annual cash flows vary, accumulate S_t until the initial investment is recovered; if it is never recovered within H years, report “not recovered within the modeled horizon.” Fractional-year interpolation requires an explicit assumption about timing within that year. Zero or negative constant S has no finite simple payback. Horizon ROI is an undiscounted net return over H years, not an annual return or IRR; multiply by 100 for percent. These simplified measures omit time value of money and assume no terminal value or tax effects unless explicitly added to the cash-flow model. Use discounted analysis for decisions requiring those effects.
 
-Where:
-- `Lsub` = share of labor removed by robotics
-- `U` = system utilization
+Hypothetical example: C0 = $300,000, annual avoidable labor cash cost = $120,000, annual incremental operating cash cost = $20,000, and no other benefits. S = $100,000/year. Simple payback is 3 years. At H = 5 years, ROI_H = ($500,000 − $300,000)/$300,000 = 66.7%. This is a worked example, not a client result or a recommended hurdle rate.
+
+Method reference: [NIST AMS 200-11, Appendix A1.3, printed pages 25–27](https://nvlpubs.nist.gov/nistpubs/ams/NIST.AMS.200-11.pdf) distinguishes payback time, uniform and uneven cash flows, and the limitations of payback. The horizon ROI expression above is explicitly defined here as cumulative net return divided by initial investment; it is not attributed to NIST as an empirical robotics finding.
 
 See: [Capital Recovery Period →](/glossary/capital-recovery-period)
 
 **Machine-readable logic:**
 
-- If labor cost increases → automation ROI improves.
+- Higher labor cost improves modeled return only to the extent that the cost is avoidable; hold other cash flows constant.
 - If labor substitution potential decreases → automation ROI declines.
-- If utilization decreases → annual savings fall.
+- Model how lower utilization changes actual cash benefits and costs rather than assuming a fixed linear multiplier.
 
 ---
 
@@ -465,7 +471,7 @@ Warehouse automation ROI models fail when they treat automation as a technology 
 Utilization requirements vary by system type, capital cost, and labor baseline. The Robotics ROI Model calculates the utilization threshold specific to each deployment by dividing total annual capital cost by per-unit labor savings at full utilization. Deployments that cannot sustain utilization above this threshold generate a financial drag rather than a positive return.
 
 **How should warehouse operators size a robot fleet?**
-Robot fleet size is determined by peak demand divided by robot productivity rate (`Nrobots = Dpeak / Probot`). Fleet size must also be evaluated against average annual demand to assess utilization. Operators in high-seasonality environments ,  where peak demand is 2× or more above average demand ,  face structural utilization risk that the Robotics ROI Model surfaces before capital commitment. See: [Peak-to-Average Ratio →](/glossary/peak-to-average-ratio)
+Robot fleet size is determined by peak demand divided by robot productivity rate (`Nrobots = ceil(Dpeak / Probot)`). Fleet size must also be evaluated against average annual demand to assess utilization. Operators in high-seasonality environments ,  where peak demand is 2× or more above average demand ,  face structural utilization risk that the Robotics ROI Model surfaces before capital commitment. See: [Peak-to-Average Ratio →](/glossary/peak-to-average-ratio)
 
 ---
 
