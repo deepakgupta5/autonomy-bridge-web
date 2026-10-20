@@ -4,11 +4,21 @@ import sitemap from '@astrojs/sitemap';
 /** Strips :::directive blocks from markdown before rendering. */
 function remarkStripDirectives() {
   return function (tree) {
+    const nodeText = node => node.value ?? (node.children ?? []).map(nodeText).join('\n');
+    let inDirective = false;
     tree.children = tree.children.filter((node) => {
-      if (node.type !== 'paragraph') return true;
-      const first = node.children?.[0];
-      return !(first?.type === 'text' && first.value.startsWith(':::'));
+      const value = nodeText(node).trim();
+      if (inDirective) {
+        if (/(?:^|\n):::$/.test(value)) inDirective = false;
+        return false;
+      }
+      if (/^:::[a-z]/.test(value)) {
+        inDirective = !value.endsWith(':::');
+        return false;
+      }
+      return value !== ':::';
     });
+    if (inDirective) throw new Error('Unclosed internal Markdown directive');
   };
 }
 
