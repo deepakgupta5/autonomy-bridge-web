@@ -1,0 +1,36 @@
+{
+  "menu": {
+    "open": true,
+    "links": [
+      {
+        "text": "Commercial Leadership",
+        "visible": true
+      },
+      {
+        "text": "AI Consulting",
+        "visible": true
+      },
+      {
+        "text": "About",
+        "visible": true
+      },
+      {
+        "text": "Research",
+        "visible": true
+      },
+      {
+        "text": "Discuss your business challenge",
+        "visible": true
+      }
+    ]
+  },
+  "focus": {
+    "text": "Commercial Leadership",
+    "outline": "solid"
+  },
+  "figure": {
+    "loaded": true,
+    "alt": "robotics payback economics framework",
+    "width": 356
+  }
+}
