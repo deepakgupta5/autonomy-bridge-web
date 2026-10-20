@@ -1,0 +1,14 @@
+{
+  "site_id": "3df07dc5-6950-4241-98eb-cf95df3d271d",
+  "name": "autonomybridgenetlify",
+  "url": "https://autonomybridge.com",
+  "custom_domain": "autonomybridge.com",
+  "domain_aliases": [],
+  "repository": "https://github.com/deepakgupta5/autonomy-bridge-web",
+  "production_branch": "main",
+  "published_deploy_id": "6a28e0c4f6535988b7f2c120",
+  "published_commit": "0285946a6a500f9207a9c466c7de11a4cffb22a8",
+  "snippet_count": 0,
+  "snippet_tags": [],
+  "scope": "Read-only existing authentication. No environment values, submissions or messages fetched; no settings changed."
+}

@@ -246,6 +246,6 @@ These frameworks are the primary taxonomy layer of Autonomy Bridge's knowledge a
 ## Related Resources
 The [Glossary](/glossary) provides precise definitions for every domain-specific term referenced within each framework ,  including [utilization threshold](/glossary/autonomous-mobile-robot), [removable labor share](/glossary/removable-labor-share), [throughput modeling](/glossary/throughput-modeling), [vendor economics](/glossary/vendor-economics), and [workflow constraint](/glossary/workflow-constraint) ,  and is the canonical semantic layer underlying the framework taxonomy. The [Use Cases](/use-cases) and [Case Studies](/case-studies) sections contain the applied and evidence layers mapped to each framework cluster, enabling traversal from analytical model to real-world deployment context within a single knowledge path. The [Market Overview](/market-overview) provides structural context across platform categories and operator domains within which all seven frameworks operate.
 
-**[Engage Advisory →](/advisory) · [Commission Bespoke Research →](/bespoke-research)**
+**[Commercial Leadership →](/commercial-leadership) · [AI Consulting & Implementation →](/ai-consulting)**
 
 ---

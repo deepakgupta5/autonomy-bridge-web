@@ -168,3 +168,8 @@ body {
   color: var(--color-text-secondary);
   max-width: 68ch;
 }
+
+:focus-visible{outline:3px solid var(--color-border-accent);outline-offset:4px;}
+.skip-link{position:absolute;top:-5rem;left:1rem;z-index:100;background:white;padding:1rem;}.skip-link:focus{top:1rem;}
+.preview-notice{padding:.6rem 1rem;background:#fff1bb;color:#483600;text-align:center;font-size:.8rem;}
+@media(max-width:600px){.page-content{padding:1.5rem 1rem 3rem!important;}}

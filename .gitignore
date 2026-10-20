@@ -27,3 +27,8 @@ pnpm-debug.log*
 
 # Claude workspace config
 .claude/
+
+# Private V2 proof overlay and local browser evidence
+.preview-private/
+output/playwright/
+.playwright-cli/

@@ -1,0 +1,32 @@
+{
+  "passed": true,
+  "audited_directory": "/private/tmp/ab-production-2026-10-19",
+  "proof_total": 18,
+  "proof": [
+    {
+      "route": "/",
+      "approved_paragraphs": 6,
+      "source_and_build_match": true
+    },
+    {
+      "route": "/commercial-leadership",
+      "approved_paragraphs": 3,
+      "source_and_build_match": true
+    },
+    {
+      "route": "/ai-consulting",
+      "approved_paragraphs": 4,
+      "source_and_build_match": true
+    },
+    {
+      "route": "/about",
+      "approved_paragraphs": 5,
+      "source_and_build_match": true
+    }
+  ],
+  "placeholder_and_google_scan": "passed",
+  "contact": "email-only, no form",
+  "private_source_paths_and_common_secret_patterns": "passed; not a universal secret detector",
+  "owner_approval": "https://github.com/deepakgupta5/autonomy-bridge-web/pull/1#issuecomment-6281916360",
+  "scope": "Only approved website excerpts; underlying private evidence excluded; owner attestation not independent records audit"
+}

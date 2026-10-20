@@ -18,13 +18,21 @@ export interface LocalSubnavConfig {
 const topLevelLabelByPath = new Map<string, string>([
   ...primaryNavItems.map((item) => [item.href, item.label] as const),
   ["/contact", "Contact"],
+  ["/ai-consulting", "AI Consulting & Implementation"],
   ["/privacy-policy", "Privacy Policy"],
   ["/terms-of-use", "Terms of Use"],
   ["/cookie-policy", "Cookie Policy"],
   ["/sitemap", "Sitemap"],
 ]);
 
+export const researchLinks: LocalSubnavLink[] = [{"label": "Research & Resources", "href": "/research"}, {"label": "Insights", "href": "/insights"}, {"label": "Market Overview", "href": "/market-overview"}, {"label": "Frameworks", "href": "/frameworks"}, {"label": "Use Cases", "href": "/use-cases"}, {"label": "Case Studies", "href": "/case-studies"}, {"label": "Glossary", "href": "/glossary"}, {"label": "Research Methodology", "href": "/methodology"}];
+export function isResearchPath(path: string): boolean { return researchLinks.some(item => path === item.href || path.startsWith(item.href + "/")); }
+
 const marketOverviewLinks: LocalSubnavLink[] = [
+  { label: "Platform Categories", href: "/market-overview/platform-categories" },
+  { label: "Operator Domains", href: "/market-overview/operator-domains" },
+  { label: "Vendor Landscape", href: "/market-overview/vendor-landscape" },
+  { label: "Deployment Economics", href: "/market-overview/deployment-economics" },
   { label: "Industry Landscape", href: "/market-overview/industry-landscape" },
   { label: "Technology Stack", href: "/market-overview/technology-stack" },
   { label: "Market Drivers", href: "/market-overview/market-drivers" },
@@ -64,13 +72,21 @@ function withCurrentPageLast(items: BreadcrumbItem[]): BreadcrumbItem[] {
   });
 }
 
-export function buildBreadcrumbs(pathname: string): BreadcrumbItem[] {
+export function buildBreadcrumbs(pathname: string, pageTitle?: string): BreadcrumbItem[] {
   const current = normalizePathname(pathname);
 
   if (current === "/") {
     return [{ label: "Home" }];
   }
 
+  if (isResearchPath(current) && current !== '/research') {
+    const hub = researchLinks.find(item => current === item.href || current.startsWith(item.href + '/'))!;
+    return withCurrentPageLast([
+      { label: 'Home', href: '/' }, { label: 'Research', href: '/research' },
+      { label: hub.label === 'Research Methodology' ? 'Methodology' : hub.label, href: hub.href },
+      ...(current === hub.href ? [] : [{ label: pageTitle || titleCaseFromSlug(current.split('/').pop()!) }]),
+    ]);
+  }
   if (topLevelLabelByPath.has(current)) {
     return withCurrentPageLast([
       { label: "Home", href: "/" },
@@ -114,5 +130,6 @@ export function getLocalSubnav(pathname: string): LocalSubnavConfig | null {
     };
   }
 
+  if (isResearchPath(current)) return { heading: "Research navigation", links: researchLinks };
   return null;
 }

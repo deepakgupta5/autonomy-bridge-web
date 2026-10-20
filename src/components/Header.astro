@@ -1,6 +1,6 @@
 ---
 import { primaryNavItems } from "../data/ia";
-import { normalizePathname } from "../utils/navigation";
+import { normalizePathname, isResearchPath } from "../utils/navigation";
 
 interface Props {
   currentPath: string;
@@ -10,6 +10,7 @@ const { currentPath } = Astro.props;
 const normalizedCurrentPath = normalizePathname(currentPath);
 
 function isActive(href: string): boolean {
+  if (href === "/research") return isResearchPath(normalizedCurrentPath);
   if (href === "/") {
     return normalizedCurrentPath === "/";
   }
@@ -17,14 +18,14 @@ function isActive(href: string): boolean {
 }
 ---
 
-<header class="site-header">
+<header class="site-header home-header">
   <div class="site-header-inner">
     <a class="site-brand" href="/">
       <span class="brand-badge">AB</span>
       <span class="brand-divider" aria-hidden="true"></span>
       <span class="brand-text">
-        <span class="brand-name">Autonomy Bridge</span>
-        <span class="brand-tagline">Robotics Deployment Economics</span>
+        <span class="brand-name">AutonomyBridge</span>
+        <span class="brand-tagline">Commercial leadership and AI implementation</span>
       </span>
     </a>
     <nav class="site-nav" aria-label="Primary">
@@ -40,18 +41,44 @@ function isActive(href: string): boolean {
         ))
       }
     </nav>
-    <a href="/contact" class="header-cta">Book 15-min call</a>
+    <a href="/contact" class="header-cta">Discuss your business challenge</a>
+    <details class="home-mobile-menu">
+      <summary>Menu</summary>
+      <nav aria-label="Mobile primary">
+        {primaryNavItems.map((item) => <a href={item.href} aria-current={isActive(item.href) ? 'page' : undefined}>{item.label}</a>)}
+        <a href="/contact" class="header-cta">Discuss your business challenge</a>
+      </nav>
+    </details>
   </div>
 </header>
 
 <style>
+  .home-mobile-menu {display:none;}
+  .home-mobile-menu a[aria-current="page"] {font-weight:700;background:var(--color-bg-surface);}
+  .home-header .site-header-inner {max-width:72rem;padding:1.25rem 2rem;}
+  .home-header .header-cta {padding:.85rem 1rem;}
+  @media (min-width:1051px) {
+    .home-header .site-header-inner {flex-direction:row;align-items:center;}
+    .home-header .site-nav {width:auto;gap:1rem;}
+    .home-header .brand-tagline {display:none;}
+  }
+  @media (max-width:1050px) {
+    .home-header .site-header-inner {display:flex;flex-direction:row;align-items:center;position:relative;padding:1rem;}
+    .home-header .site-nav,.home-header .site-header-inner>.header-cta {display:none;}
+    .home-header .brand-tagline {display:none;}
+    .home-mobile-menu {display:block;}
+    .home-mobile-menu summary {cursor:pointer;padding:.65rem .75rem;min-height:1.4rem;font-size:.875rem;font-weight:600;}
+    .home-mobile-menu nav {position:absolute;top:100%;left:0;right:0;padding:1rem;background:white;border-bottom:1px solid var(--color-border-default);box-shadow:0 8px 12px #0f172a0d;z-index:10;display:grid;gap:.25rem;}
+    .home-mobile-menu nav>a:not(.header-cta) {padding:.75rem;color:var(--color-text-primary);text-decoration:none;}
+    .home-mobile-menu .header-cta {margin-top:.5rem;text-align:center;white-space:normal;line-height:1.5;}
+  }
   .site-header {
     border-bottom: 0.0625rem solid var(--color-border-light);
     background: #ffffff;
   }
 
   .site-header-inner {
-    max-width: 72rem;
+    max-width: 82rem;
     margin: 0 auto;
     padding: 1rem;
     display: flex;
@@ -153,7 +180,7 @@ function isActive(href: string): boolean {
     border-color: var(--color-cta-border);
   }
 
-  @media (max-width: 60rem) {
+  @media (max-width: 78rem) {
     .site-header-inner {
       align-items: flex-start;
       flex-direction: column;

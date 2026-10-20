@@ -1,4 +1,5 @@
 ---
+import ResearchEnquiry from "../../components/ResearchEnquiry.astro";
 import MainLayout from "../../components/MainLayout.astro";
 import { extractFaqItemsFromMarkdown } from "../../utils/faq";
 import { buildCollectionPageSchema, buildFaqPageSchema } from "../../utils/schema";
@@ -50,10 +51,14 @@ const sections = [
   {
     slug: "industry-landscape",
     href: "/market-overview/industry-landscape",
-    title: "Intralogistics and Warehouse Automation",
+    title: "Industry Landscape",
     desc: "Deep-dive on the intralogistics and warehouse automation segment ,  industry structure, technology stack, market drivers, segments, and key players.",
-    tag: "Deep-Dive",
+    tag: "Intralogistics",
   },
+  { slug: "technology-stack", href: "/market-overview/technology-stack", title: "Technology Stack", desc: "", tag: "Intralogistics" },
+  { slug: "market-drivers", href: "/market-overview/market-drivers", title: "Market Drivers", desc: "", tag: "Intralogistics" },
+  { slug: "market-segments", href: "/market-overview/market-segments", title: "Market Segments", desc: "", tag: "Intralogistics" },
+  { slug: "key-players", href: "/market-overview/key-players", title: "Key Players", desc: "", tag: "Intralogistics" },
 ];
 ---
 
@@ -64,14 +69,14 @@ const sections = [
   seoTitle={String(hubEntry.data.seoTitle)}
   seoDescription={String(hubEntry.data.seoDescription)}
   schema={schema}
-  showBreadcrumbs={false}
-  showLocalSubnav={false}
+  showBreadcrumbs={true}
+  showLocalSubnav={true}
 >
 
   <!-- Hero -->
   <section class="mo-hero">
     <div class="mo-container">
-      <p class="mo-breadcrumb">Home / Market Overview</p>
+
       <h1 class="mo-h1">AI, Robotics, and Industrial Automation<br />Market Overview</h1>
       <p class="mo-tagline">Platform Categories · Operator Domains · Deployment Economics</p>
       <p class="mo-intro">The AI, robotics, and industrial automation market is not a single market. It is a collection of platform categories ,  each with distinct vendor populations, deployment economics, and commercial maturity ,  operating across a wide range of operator application domains.</p>
@@ -85,25 +90,18 @@ const sections = [
     </div>
   </section>
 
-  <!-- Section Cards -->
-  <section class="mo-section">
-    <div class="mo-container">
-      <p class="mo-section-label">Five analytical sections</p>
-      <div class="mo-grid">
-        {sections.map((s, i) => (
-          <a href={s.href} class="mo-card">
-            <div class="mo-card-top">
-              <span class="mo-card-num">0{i + 1}</span>
-              <span class="mo-card-tag">{s.tag}</span>
-            </div>
-            <h2 class="mo-card-title">{s.title}</h2>
-            <p class="mo-card-desc">{s.desc}</p>
-            <span class="mo-card-cta">Read section &rarr;</span>
-          </a>
-        ))}
-      </div>
-    </div>
-  </section>
+  <!-- Four market-context pages and five retained intralogistics pages. -->
+  {[{name:'Market context',items:sections.slice(0,4)}, {name:'Intralogistics and warehouse automation',items:sections.slice(4)}].map(group => (
+    <section class="mo-section"><div class="mo-container">
+      <h2 class="mo-h2">{group.name}</h2>
+      <div class="mo-grid">{group.items.map(s => (
+        <a href={s.href} class="mo-card"><h3 class="mo-card-title">{s.title}</h3>
+          {s.desc && <p class="mo-card-desc">{s.desc}</p>}
+          <span class="mo-card-cta">Read section &rarr;</span>
+        </a>
+      ))}</div>
+    </div></section>
+  ))}
 
   <!-- FAQ -->
   {faqItems.length > 0 && (
@@ -123,16 +121,7 @@ const sections = [
   )}
 
   <!-- CTA -->
-  <section class="mo-cta">
-    <div class="mo-container">
-      <h2 class="mo-cta-h">Specific questions need specific analysis.</h2>
-      <p class="mo-cta-sub">Advisory engagements and bespoke research go deeper into specific market entry, vendor economics, deployment risk, and commercial viability questions.</p>
-      <div class="mo-cta-btns">
-        <a href="/advisory" class="mo-cta-btn mo-cta-btn--primary">Advisory &rarr;</a>
-        <a href="/bespoke-research" class="mo-cta-btn mo-cta-btn--outline">Bespoke Research &rarr;</a>
-      </div>
-    </div>
-  </section>
+  <ResearchEnquiry kind="market" />
 
 </MainLayout>
 
@@ -156,7 +145,7 @@ const sections = [
   margin-bottom: 1.25rem;
 }
 .mo-h1 {
-  font-size: clamp(2rem, 5vw, 3rem);
+  font-size: var(--role-h1-size);
   font-weight: 700;
   letter-spacing: -0.02em;
   color: var(--color-text-primary);

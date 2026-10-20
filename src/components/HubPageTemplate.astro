@@ -1,4 +1,5 @@
 ---
+import ResearchEnquiry from "./ResearchEnquiry.astro";
 import type { HubPageContent } from "../data/hubContent";
 import MainLayout from "./MainLayout.astro";
 import ContentCard from "./ContentCard.astro";
@@ -63,10 +64,7 @@ const schema = faqSchema ? [...pageSchema, faqSchema] : pageSchema;
     )
   }
 
-  <section class="hub-cta">
-    <p class="hub-cta-text">{ctaText}</p>
-    <a href="/advisory" class="hub-cta-link">Engage Advisory &rarr;</a>
-  </section>
+  <ResearchEnquiry kind={canonicalPath === "/use-cases" ? "use-case" : "general"} />
 
   <section class="hub-body prose-surface">
     <slot />

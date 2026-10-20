@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "checks": [
+    "Source mode, form flag, exact origin/site/context and server gate fail closed",
+    "Local source refuses remote builds even with release environment settings",
+    "Wired UI: confirmed acceptance alone redirects; failure/unknown preserve inputs; unknown blocks duplicate sends; service and fixture markers distinct",
+    "Activation and email-only diffs apply cleanly without modifying checkout; placeholder target rejected"
+  ],
+  "limits": "Offline fixtures only. No deployment, Netlify receipt or mailbox delivery tested."
+}

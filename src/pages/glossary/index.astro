@@ -99,8 +99,8 @@ const schema = [
   seoTitle={String(hubEntry.data.seoTitle)}
   seoDescription={String(hubEntry.data.seoDescription)}
   schema={schema}
-  showBreadcrumbs={false}
-  showLocalSubnav={false}
+  showBreadcrumbs={true}
+  showLocalSubnav={true}
 >
   <div class="gl-wrap">
 
@@ -182,7 +182,7 @@ const schema = [
   margin-bottom: 2rem;
 }
 .gl-h1 {
-  font-size: clamp(2rem, 5vw, 3rem);
+  font-size: var(--role-h1-size);
   font-weight: 700;
   letter-spacing: -0.02em;
   color: var(--color-text-primary);

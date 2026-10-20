@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "negative_controls": [
+    {
+      "control": "form inserted",
+      "rejected": true
+    },
+    {
+      "control": "email removed",
+      "rejected": true
+    }
+  ],
+  "clean_artifact_passed": true,
+  "workspace_dist_untouched": true
+}

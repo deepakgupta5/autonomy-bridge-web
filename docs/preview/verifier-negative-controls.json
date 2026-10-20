@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "checks": [
+    "Missing description fails",
+    "Changed canonical fails",
+    "Changed research date fails",
+    "Indexable preview fails",
+    "Unknown broken destination fails",
+    "New referrer to historical broken destination fails",
+    "Lost baseline route fails",
+    "Missing baseline fails",
+    "Unavailable baseline fails"
+  ],
+  "restored_build_passed": true
+}

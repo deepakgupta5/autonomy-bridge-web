@@ -54,6 +54,9 @@ function remarkStripAppendix() {
 
 const topLevelCanonicalPaths = new Set([
   '/',
+  '/commercial-leadership',
+  '/ai-consulting',
+  '/research',
   '/insights',
   '/market-overview',
   '/frameworks',

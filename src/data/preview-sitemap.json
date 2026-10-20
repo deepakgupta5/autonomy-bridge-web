@@ -1,0 +1,634 @@
+[
+  {
+    "label": "Home",
+    "proposed_release_url": "https://autonomybridge.com/"
+  },
+  {
+    "label": "Commercial Leadership",
+    "proposed_release_url": "https://autonomybridge.com/commercial-leadership"
+  },
+  {
+    "label": "AI Consulting & Implementation",
+    "proposed_release_url": "https://autonomybridge.com/ai-consulting"
+  },
+  {
+    "label": "About",
+    "proposed_release_url": "https://autonomybridge.com/about"
+  },
+  {
+    "label": "Research & Resources",
+    "proposed_release_url": "https://autonomybridge.com/research"
+  },
+  {
+    "label": "Contact",
+    "proposed_release_url": "https://autonomybridge.com/contact"
+  },
+  {
+    "label": "Insights",
+    "proposed_release_url": "https://autonomybridge.com/insights"
+  },
+  {
+    "label": "How Aerial Robotics Vendors Are Pricing Into Inspection Markets",
+    "proposed_release_url": "https://autonomybridge.com/insights/how-aerial-robotics-vendors-are-pricing-into-inspection-markets"
+  },
+  {
+    "label": "How Investors Should Size Robotics Markets",
+    "proposed_release_url": "https://autonomybridge.com/insights/how-investors-should-size-robotics-markets"
+  },
+  {
+    "label": "How Retail Distribution Center Automation Economics Actually Work",
+    "proposed_release_url": "https://autonomybridge.com/insights/how-retail-distribution-center-automation-economics-actually-work"
+  },
+  {
+    "label": "How Robotics Pricing Models Determine Commercial Viability",
+    "proposed_release_url": "https://autonomybridge.com/insights/how-robotics-pricing-models-determine-commercial-viability"
+  },
+  {
+    "label": "How Robotics Vendors Misjudge Their Addressable Market",
+    "proposed_release_url": "https://autonomybridge.com/insights/how-robotics-vendors-misjudge-their-addressable-market"
+  },
+  {
+    "label": "How Underwater Robotics Startups Can Break Incumbent Lock-In",
+    "proposed_release_url": "https://autonomybridge.com/insights/how-underwater-robotics-startups-can-break-incumbent-lock-in"
+  },
+  {
+    "label": "How Warehouse Operators Evaluate Robotics Vendors",
+    "proposed_release_url": "https://autonomybridge.com/insights/how-warehouse-operators-evaluate-robotics-vendors"
+  },
+  {
+    "label": "How Warehouse Robotics Economics Actually Works",
+    "proposed_release_url": "https://autonomybridge.com/insights/how-warehouse-robotics-economics-actually-works"
+  },
+  {
+    "label": "How Warehouse Workflows Determine Automation Success",
+    "proposed_release_url": "https://autonomybridge.com/insights/how-warehouse-workflows-determine-automation-success"
+  },
+  {
+    "label": "What Autonomous Vehicle Companies Get Wrong About Freight Sales",
+    "proposed_release_url": "https://autonomybridge.com/insights/what-autonomous-vehicle-companies-get-wrong-about-freight-sales"
+  },
+  {
+    "label": "What Warehouse Automation Vendors Need to Know About How Their Buyers Actually Decide",
+    "proposed_release_url": "https://autonomybridge.com/insights/what-warehouse-automation-vendors-need-to-know-about-how-buyers-decide"
+  },
+  {
+    "label": "Why 63 Exoskeleton Companies Can't Break Through Distribution",
+    "proposed_release_url": "https://autonomybridge.com/insights/why-63-exoskeleton-companies-cant-break-through-distribution"
+  },
+  {
+    "label": "Why Cold Storage Automation Economics Are Structurally Different",
+    "proposed_release_url": "https://autonomybridge.com/insights/why-cold-storage-automation-economics-are-structurally-different"
+  },
+  {
+    "label": "Why Commercial Viability and Technical Readiness Are Not the Same Thing",
+    "proposed_release_url": "https://autonomybridge.com/insights/why-commercial-viability-and-technical-readiness-are-not-the-same-thing"
+  },
+  {
+    "label": "Why Direct-Only Channel Doesn't Scale in Robotics",
+    "proposed_release_url": "https://autonomybridge.com/insights/why-direct-only-channel-doesnt-scale-in-robotics"
+  },
+  {
+    "label": "Why General Merchandise 3PLs Should Not Automate Too Early",
+    "proposed_release_url": "https://autonomybridge.com/insights/why-general-merchandise-3pls-should-not-automate-too-early"
+  },
+  {
+    "label": "Why Healthcare Robotics Deployments Follow a Different Economic Logic",
+    "proposed_release_url": "https://autonomybridge.com/insights/why-healthcare-robotics-deployments-follow-a-different-economic-logic"
+  },
+  {
+    "label": "Why Maritime Autonomy Revenue Is Not What It Appears",
+    "proposed_release_url": "https://autonomybridge.com/insights/why-maritime-autonomy-revenue-is-not-what-it-appears"
+  },
+  {
+    "label": "Why Mid-Market Operators Struggle to Evaluate Warehouse Robotics",
+    "proposed_release_url": "https://autonomybridge.com/insights/why-mid-market-operators-struggle-to-evaluate-warehouse-robotics"
+  },
+  {
+    "label": "Why Parcel Sortation Automation Breaks at Low Volume",
+    "proposed_release_url": "https://autonomybridge.com/insights/why-parcel-sortation-automation-breaks-at-low-volume"
+  },
+  {
+    "label": "Why Robotics Enterprise Deals Stall, And Where They Actually Die",
+    "proposed_release_url": "https://autonomybridge.com/insights/why-robotics-enterprise-deals-stall"
+  },
+  {
+    "label": "Why Robotics Pilots Fail to Convert to Commercial Contracts",
+    "proposed_release_url": "https://autonomybridge.com/insights/why-robotics-pilots-fail-to-convert-to-commercial-contracts"
+  },
+  {
+    "label": "Why Robotics Pilots Fail to Scale",
+    "proposed_release_url": "https://autonomybridge.com/insights/why-robotics-pilots-fail-to-scale"
+  },
+  {
+    "label": "Why Warehouse Automation Projects Fail",
+    "proposed_release_url": "https://autonomybridge.com/insights/why-warehouse-automation-projects-fail"
+  },
+  {
+    "label": "Market Overview",
+    "proposed_release_url": "https://autonomybridge.com/market-overview"
+  },
+  {
+    "label": "Deployment Economics, AI, Robotics, and Industrial Automation",
+    "proposed_release_url": "https://autonomybridge.com/market-overview/deployment-economics"
+  },
+  {
+    "label": "Industry Landscape",
+    "proposed_release_url": "https://autonomybridge.com/market-overview/industry-landscape"
+  },
+  {
+    "label": "Key Players",
+    "proposed_release_url": "https://autonomybridge.com/market-overview/key-players"
+  },
+  {
+    "label": "Market Drivers",
+    "proposed_release_url": "https://autonomybridge.com/market-overview/market-drivers"
+  },
+  {
+    "label": "Market Segments",
+    "proposed_release_url": "https://autonomybridge.com/market-overview/market-segments"
+  },
+  {
+    "label": "Operator Application Domains, AI, Robotics, and Industrial Automation",
+    "proposed_release_url": "https://autonomybridge.com/market-overview/operator-domains"
+  },
+  {
+    "label": "Platform Categories, AI, Robotics, and Industrial Automation",
+    "proposed_release_url": "https://autonomybridge.com/market-overview/platform-categories"
+  },
+  {
+    "label": "Technology Stack",
+    "proposed_release_url": "https://autonomybridge.com/market-overview/technology-stack"
+  },
+  {
+    "label": "Vendor Landscape, AI, Robotics, and Industrial Automation",
+    "proposed_release_url": "https://autonomybridge.com/market-overview/vendor-landscape"
+  },
+  {
+    "label": "Frameworks",
+    "proposed_release_url": "https://autonomybridge.com/frameworks"
+  },
+  {
+    "label": "How Robotics Vendors Structure Pricing",
+    "proposed_release_url": "https://autonomybridge.com/frameworks/vendor-economics-framework"
+  },
+  {
+    "label": "How Should Warehouse Automation ROI Be Modeled?",
+    "proposed_release_url": "https://autonomybridge.com/frameworks/robotics-roi-model"
+  },
+  {
+    "label": "How Warehouse Automation Decisions Are Actually Made",
+    "proposed_release_url": "https://autonomybridge.com/frameworks/warehouse-automation-decision-framework"
+  },
+  {
+    "label": "How Warehouse Workflows Determine Whether Robotics Works",
+    "proposed_release_url": "https://autonomybridge.com/frameworks/workflow-architecture-framework"
+  },
+  {
+    "label": "What Is the Vendor Deployment Viability Framework?",
+    "proposed_release_url": "https://autonomybridge.com/frameworks/vendor-evaluation-framework"
+  },
+  {
+    "label": "Why Robotics Deployments Fail Economically",
+    "proposed_release_url": "https://autonomybridge.com/frameworks/automation-failure-framework"
+  },
+  {
+    "label": "Pilot-to-Scale Failure Framework",
+    "proposed_release_url": "https://autonomybridge.com/frameworks/pilot-to-scale-failure-framework"
+  },
+  {
+    "label": "Use Cases",
+    "proposed_release_url": "https://autonomybridge.com/use-cases"
+  },
+  {
+    "label": "Aerial Robotics Commercial Viability Evaluation",
+    "proposed_release_url": "https://autonomybridge.com/use-cases/aerial-robotics-commercial-viability-evaluation"
+  },
+  {
+    "label": "AMR Deployment Evaluation",
+    "proposed_release_url": "https://autonomybridge.com/use-cases/amr-deployment-evaluation"
+  },
+  {
+    "label": "Cold Storage Automation Evaluation",
+    "proposed_release_url": "https://autonomybridge.com/use-cases/cold-storage-automation-evaluation"
+  },
+  {
+    "label": "General Merchandise 3PL Automation Evaluation",
+    "proposed_release_url": "https://autonomybridge.com/use-cases/general-merchandise-3pl-automation-evaluation"
+  },
+  {
+    "label": "Goods-to-Person System Evaluation",
+    "proposed_release_url": "https://autonomybridge.com/use-cases/goods-to-person-system-evaluation"
+  },
+  {
+    "label": "Humanoid Platform Commercial Readiness Assessment",
+    "proposed_release_url": "https://autonomybridge.com/use-cases/humanoid-platform-commercial-readiness"
+  },
+  {
+    "label": "Parcel Sortation Automation Evaluation",
+    "proposed_release_url": "https://autonomybridge.com/use-cases/parcel-sortation-automation-evaluation"
+  },
+  {
+    "label": "Retail DC Automation Evaluation",
+    "proposed_release_url": "https://autonomybridge.com/use-cases/retail-dc-automation-evaluation"
+  },
+  {
+    "label": "Robotics Deployment in 3PL Warehouses",
+    "proposed_release_url": "https://autonomybridge.com/use-cases/robotics-deployment-3pl-warehouses"
+  },
+  {
+    "label": "Service Robotics Deployment Evaluation",
+    "proposed_release_url": "https://autonomybridge.com/use-cases/service-robotics-deployment-evaluation"
+  },
+  {
+    "label": "Warehouse Automation ROI Evaluation",
+    "proposed_release_url": "https://autonomybridge.com/use-cases/warehouse-automation-roi-evaluation"
+  },
+  {
+    "label": "Case Studies",
+    "proposed_release_url": "https://autonomybridge.com/case-studies"
+  },
+  {
+    "label": "AI and Robotics Market Sizing for Private Equity",
+    "proposed_release_url": "https://autonomybridge.com/case-studies/ai-robotics-market-sizing-engagement"
+  },
+  {
+    "label": "Automation Investment Screening for a 3PL Operator",
+    "proposed_release_url": "https://autonomybridge.com/case-studies/automation-deployment-risk-assessment"
+  },
+  {
+    "label": "Cold Storage Automation Economics Assessment",
+    "proposed_release_url": "https://autonomybridge.com/case-studies/cold-storage-automation-economics-assessment"
+  },
+  {
+    "label": "Commercial Viability Assessment for a Service Robotics Vendor",
+    "proposed_release_url": "https://autonomybridge.com/case-studies/service-robotics-commercial-viability-assessment"
+  },
+  {
+    "label": "Deployment Economics Assessment for an Off-Highway Autonomy Operator",
+    "proposed_release_url": "https://autonomybridge.com/case-studies/off-highway-autonomy-deployment-economics"
+  },
+  {
+    "label": "General Merchandise 3PL Premature Automation Assessment",
+    "proposed_release_url": "https://autonomybridge.com/case-studies/general-merchandise-3pl-premature-automation-assessment"
+  },
+  {
+    "label": "ICP Definition for an Early-Stage Inspection Robotics Company",
+    "proposed_release_url": "https://autonomybridge.com/case-studies/icp-definition-inspection-robotics"
+  },
+  {
+    "label": "Market Sizing for an Investor in Healthcare Automation",
+    "proposed_release_url": "https://autonomybridge.com/case-studies/healthcare-automation-investor-market-sizing"
+  },
+  {
+    "label": "Parcel Sortation Volume Sensitivity Analysis",
+    "proposed_release_url": "https://autonomybridge.com/case-studies/parcel-sortation-volume-sensitivity-analysis"
+  },
+  {
+    "label": "Retail DC Peak Demand Automation Assessment",
+    "proposed_release_url": "https://autonomybridge.com/case-studies/retail-dc-peak-demand-automation-assessment"
+  },
+  {
+    "label": "Robotics Market Entry Decision Analysis",
+    "proposed_release_url": "https://autonomybridge.com/case-studies/robotics-market-entry-decision-analysis"
+  },
+  {
+    "label": "Robotics Pricing Strategy Research",
+    "proposed_release_url": "https://autonomybridge.com/case-studies/robotics-pricing-strategy-research"
+  },
+  {
+    "label": "Vendor Deployment Viability Assessment",
+    "proposed_release_url": "https://autonomybridge.com/case-studies/vendor-deployment-viability-assessment"
+  },
+  {
+    "label": "Glossary",
+    "proposed_release_url": "https://autonomybridge.com/glossary"
+  },
+  {
+    "label": "AI Inference Latency",
+    "proposed_release_url": "https://autonomybridge.com/glossary/ai-inference-latency"
+  },
+  {
+    "label": "Ambient Benchmark Error",
+    "proposed_release_url": "https://autonomybridge.com/glossary/ambient-benchmark-error"
+  },
+  {
+    "label": "AMR Sortation",
+    "proposed_release_url": "https://autonomybridge.com/glossary/amr-sortation"
+  },
+  {
+    "label": "Automated Guided Vehicle (AGV)",
+    "proposed_release_url": "https://autonomybridge.com/glossary/automated-guided-vehicle"
+  },
+  {
+    "label": "Automated Storage and Retrieval System (ASRS)",
+    "proposed_release_url": "https://autonomybridge.com/glossary/automated-storage-retrieval-system"
+  },
+  {
+    "label": "Automation Go/No-Go",
+    "proposed_release_url": "https://autonomybridge.com/glossary/automation-go-no-go"
+  },
+  {
+    "label": "Automation Operating Cost",
+    "proposed_release_url": "https://autonomybridge.com/glossary/automation-operating-cost"
+  },
+  {
+    "label": "Automation Readiness",
+    "proposed_release_url": "https://autonomybridge.com/glossary/automation-readiness"
+  },
+  {
+    "label": "Autonomous Case Handling",
+    "proposed_release_url": "https://autonomybridge.com/glossary/autonomous-case-handling"
+  },
+  {
+    "label": "Autonomous Decision Threshold",
+    "proposed_release_url": "https://autonomybridge.com/glossary/autonomous-decision-threshold"
+  },
+  {
+    "label": "Autonomous Inventory Management",
+    "proposed_release_url": "https://autonomybridge.com/glossary/autonomous-inventory-management"
+  },
+  {
+    "label": "Autonomous Mobile Robot (AMR)",
+    "proposed_release_url": "https://autonomybridge.com/glossary/autonomous-mobile-robot"
+  },
+  {
+    "label": "Autonomous Systems Maturity",
+    "proposed_release_url": "https://autonomybridge.com/glossary/autonomous-systems-maturity"
+  },
+  {
+    "label": "Capital Recovery Period",
+    "proposed_release_url": "https://autonomybridge.com/glossary/capital-recovery-period"
+  },
+  {
+    "label": "Case-Level Picking Economics",
+    "proposed_release_url": "https://autonomybridge.com/glossary/case-level-picking-economics"
+  },
+  {
+    "label": "Cold Storage Maintenance Burden",
+    "proposed_release_url": "https://autonomybridge.com/glossary/cold-storage-maintenance-burden"
+  },
+  {
+    "label": "Cold-Environment Labor Premium",
+    "proposed_release_url": "https://autonomybridge.com/glossary/cold-environment-labor-premium"
+  },
+  {
+    "label": "Cold-Rated System Premium",
+    "proposed_release_url": "https://autonomybridge.com/glossary/cold-rated-system-premium"
+  },
+  {
+    "label": "Collaborative Robot (Cobot)",
+    "proposed_release_url": "https://autonomybridge.com/glossary/cobot"
+  },
+  {
+    "label": "Competitive Displacement",
+    "proposed_release_url": "https://autonomybridge.com/glossary/competitive-displacement"
+  },
+  {
+    "label": "Computer Vision Reliability",
+    "proposed_release_url": "https://autonomybridge.com/glossary/computer-vision-reliability"
+  },
+  {
+    "label": "Contract Duration Risk",
+    "proposed_release_url": "https://autonomybridge.com/glossary/contract-duration-risk"
+  },
+  {
+    "label": "Cost Per Unit Processed",
+    "proposed_release_url": "https://autonomybridge.com/glossary/cost-per-unit-processed"
+  },
+  {
+    "label": "Customer Concentration Risk",
+    "proposed_release_url": "https://autonomybridge.com/glossary/customer-concentration-risk"
+  },
+  {
+    "label": "Digital Twin",
+    "proposed_release_url": "https://autonomybridge.com/glossary/digital-twin"
+  },
+  {
+    "label": "Dwell Time",
+    "proposed_release_url": "https://autonomybridge.com/glossary/dwell-time"
+  },
+  {
+    "label": "Edge Computing",
+    "proposed_release_url": "https://autonomybridge.com/glossary/edge-computing"
+  },
+  {
+    "label": "Exception Handling Rate",
+    "proposed_release_url": "https://autonomybridge.com/glossary/exception-handling-rate"
+  },
+  {
+    "label": "Fixed Conveyor Sortation",
+    "proposed_release_url": "https://autonomybridge.com/glossary/fixed-conveyor-sortation"
+  },
+  {
+    "label": "Fleet Management Software",
+    "proposed_release_url": "https://autonomybridge.com/glossary/fleet-management-software"
+  },
+  {
+    "label": "Freezer Environment Constraint",
+    "proposed_release_url": "https://autonomybridge.com/glossary/freezer-environment-constraint"
+  },
+  {
+    "label": "Goods-to-Person System (GTP)",
+    "proposed_release_url": "https://autonomybridge.com/glossary/goods-to-person-system"
+  },
+  {
+    "label": "Human-Machine Coordination",
+    "proposed_release_url": "https://autonomybridge.com/glossary/human-machine-coordination"
+  },
+  {
+    "label": "Idle Capital Cost",
+    "proposed_release_url": "https://autonomybridge.com/glossary/idle-capital-cost"
+  },
+  {
+    "label": "Inbound Processing Rate",
+    "proposed_release_url": "https://autonomybridge.com/glossary/inbound-processing-rate"
+  },
+  {
+    "label": "Integration Cost",
+    "proposed_release_url": "https://autonomybridge.com/glossary/integration-cost"
+  },
+  {
+    "label": "Integration Partner",
+    "proposed_release_url": "https://autonomybridge.com/glossary/integration-partner"
+  },
+  {
+    "label": "Labor Absorption Capacity",
+    "proposed_release_url": "https://autonomybridge.com/glossary/labor-absorption-capacity"
+  },
+  {
+    "label": "Labor Displacement Rate",
+    "proposed_release_url": "https://autonomybridge.com/glossary/labor-displacement-rate"
+  },
+  {
+    "label": "Labor Intensity Threshold",
+    "proposed_release_url": "https://autonomybridge.com/glossary/labor-intensity-threshold"
+  },
+  {
+    "label": "Labor Turnover Rate",
+    "proposed_release_url": "https://autonomybridge.com/glossary/labor-turnover-rate"
+  },
+  {
+    "label": "Market Penetration Rate",
+    "proposed_release_url": "https://autonomybridge.com/glossary/market-penetration-rate"
+  },
+  {
+    "label": "Mobile Manipulation Robot",
+    "proposed_release_url": "https://autonomybridge.com/glossary/mobile-manipulation-robot"
+  },
+  {
+    "label": "Multi-Shuttle System",
+    "proposed_release_url": "https://autonomybridge.com/glossary/multi-shuttle-system"
+  },
+  {
+    "label": "Omnichannel Workflow Conflict",
+    "proposed_release_url": "https://autonomybridge.com/glossary/omnichannel-workflow-conflict"
+  },
+  {
+    "label": "Order Profile",
+    "proposed_release_url": "https://autonomybridge.com/glossary/order-profile"
+  },
+  {
+    "label": "Peak Labor Cost Avoidance",
+    "proposed_release_url": "https://autonomybridge.com/glossary/peak-labor-cost-avoidance"
+  },
+  {
+    "label": "Peak-to-Average Ratio",
+    "proposed_release_url": "https://autonomybridge.com/glossary/peak-to-average-ratio"
+  },
+  {
+    "label": "Pick Path Optimization",
+    "proposed_release_url": "https://autonomybridge.com/glossary/pick-path-optimization"
+  },
+  {
+    "label": "Pick Station Throughput",
+    "proposed_release_url": "https://autonomybridge.com/glossary/pick-station-throughput"
+  },
+  {
+    "label": "Pilot-to-Scale Failure",
+    "proposed_release_url": "https://autonomybridge.com/glossary/pilot-to-scale-failure"
+  },
+  {
+    "label": "Predictive Maintenance",
+    "proposed_release_url": "https://autonomybridge.com/glossary/predictive-maintenance"
+  },
+  {
+    "label": "Premature Automation",
+    "proposed_release_url": "https://autonomybridge.com/glossary/premature-automation"
+  },
+  {
+    "label": "Process Standardization",
+    "proposed_release_url": "https://autonomybridge.com/glossary/process-standardization"
+  },
+  {
+    "label": "Ramp Risk",
+    "proposed_release_url": "https://autonomybridge.com/glossary/ramp-risk"
+  },
+  {
+    "label": "Reinforcement Learning in Robotics",
+    "proposed_release_url": "https://autonomybridge.com/glossary/reinforcement-learning-in-robotics"
+  },
+  {
+    "label": "Removable Labor Share",
+    "proposed_release_url": "https://autonomybridge.com/glossary/removable-labor-share"
+  },
+  {
+    "label": "Returns Processing Rate",
+    "proposed_release_url": "https://autonomybridge.com/glossary/returns-processing-rate"
+  },
+  {
+    "label": "Robotics-as-a-Service (RaaS)",
+    "proposed_release_url": "https://autonomybridge.com/glossary/robotics-as-a-service"
+  },
+  {
+    "label": "Sensor Fusion",
+    "proposed_release_url": "https://autonomybridge.com/glossary/sensor-fusion"
+  },
+  {
+    "label": "SKU Velocity",
+    "proposed_release_url": "https://autonomybridge.com/glossary/sku-velocity"
+  },
+  {
+    "label": "Slotting",
+    "proposed_release_url": "https://autonomybridge.com/glossary/slotting"
+  },
+  {
+    "label": "Sortation Technology Fork",
+    "proposed_release_url": "https://autonomybridge.com/glossary/sortation-technology-fork"
+  },
+  {
+    "label": "Sortation Volume Floor",
+    "proposed_release_url": "https://autonomybridge.com/glossary/sortation-volume-floor"
+  },
+  {
+    "label": "System Uptime",
+    "proposed_release_url": "https://autonomybridge.com/glossary/system-uptime"
+  },
+  {
+    "label": "Systems Integrator (Warehouse Automation)",
+    "proposed_release_url": "https://autonomybridge.com/glossary/systems-integrator"
+  },
+  {
+    "label": "Task Orchestration",
+    "proposed_release_url": "https://autonomybridge.com/glossary/task-orchestration"
+  },
+  {
+    "label": "Third-Party Logistics (3PL)",
+    "proposed_release_url": "https://autonomybridge.com/glossary/third-party-logistics"
+  },
+  {
+    "label": "Throughput Modeling",
+    "proposed_release_url": "https://autonomybridge.com/glossary/throughput-modeling"
+  },
+  {
+    "label": "Total Cost of Ownership",
+    "proposed_release_url": "https://autonomybridge.com/glossary/total-cost-of-ownership"
+  },
+  {
+    "label": "Vendor Economics",
+    "proposed_release_url": "https://autonomybridge.com/glossary/vendor-economics"
+  },
+  {
+    "label": "Vendor Lock-In",
+    "proposed_release_url": "https://autonomybridge.com/glossary/vendor-lock-in"
+  },
+  {
+    "label": "Vendor Reference Site",
+    "proposed_release_url": "https://autonomybridge.com/glossary/vendor-reference-site"
+  },
+  {
+    "label": "Warehouse Execution System (WES)",
+    "proposed_release_url": "https://autonomybridge.com/glossary/warehouse-execution-system"
+  },
+  {
+    "label": "Warehouse Management System (WMS)",
+    "proposed_release_url": "https://autonomybridge.com/glossary/warehouse-management-system"
+  },
+  {
+    "label": "Workflow Constraint",
+    "proposed_release_url": "https://autonomybridge.com/glossary/workflow-constraint"
+  },
+  {
+    "label": "Research Methodology",
+    "proposed_release_url": "https://autonomybridge.com/methodology"
+  },
+  {
+    "label": "Advisory",
+    "proposed_release_url": "https://autonomybridge.com/advisory"
+  },
+  {
+    "label": "Robotics & Automation Research",
+    "proposed_release_url": "https://autonomybridge.com/bespoke-research"
+  },
+  {
+    "label": "Privacy Policy",
+    "proposed_release_url": "https://autonomybridge.com/privacy-policy"
+  },
+  {
+    "label": "Terms of Use",
+    "proposed_release_url": "https://autonomybridge.com/terms-of-use"
+  },
+  {
+    "label": "Cookie Policy",
+    "proposed_release_url": "https://autonomybridge.com/cookie-policy"
+  }
+]

@@ -8,7 +8,7 @@ document:
   language: "en"
   slug: "pilot-to-scale-failure-framework"
 
-title: "Why Robotics Pilots Fail to Scale"
+title: "Pilot-to-Scale Failure Framework"
 description: "The Pilot-to-Scale Failure Framework models why robotics systems that perform well in controlled pilots fail under full operational deployment ,  identifying five structural constraints that drive post-installation breakdowns across all platform types and domains."
 summary: "The Pilot-to-Scale Failure Framework models why robotics systems that succeed in controlled pilots fail under full operational deployment. It identifies five structural constraints ,  unit density and congestion, queue formation, orchestration complexity, environmental constraints, and integration architecture ,  that apply across intralogistics, inspection, service, aerial, surgical, and field robotics deployments."
 
@@ -51,9 +51,9 @@ taxonomy:
     - "Deployment Failure"
 
 seo:
-  meta_title: "Why Robotics Pilots Fail to Scale | Pilot-to-Scale Failure Framework | Autonomy Bridge"
+  meta_title: "Pilot-to-Scale Failure Framework | AutonomyBridge"
   meta_description: "The Pilot-to-Scale Failure Framework identifies five structural reasons robotics systems succeed in pilots but fail at full operational scale: unit congestion, queue formation, orchestration breakdown, environmental constraints, and integration instability."
-  og_title: "Why Robotics Pilots Fail to Scale"
+  og_title: "Pilot-to-Scale Failure Framework | AutonomyBridge"
   og_description: "The Pilot-to-Scale Failure Framework explains why robotics systems break down after installation across all platform types ,  and how to evaluate scaling viability before committing to full deployment."
   og_type: "article"
   twitter_card: "summary_large_image"
@@ -119,7 +119,7 @@ integrity:
   document_hash: "GENERATED_BY_PIPELINE"
 ---
 
-# Why Robotics Pilots Fail to Scale {#definition}
+# Pilot-to-Scale Failure Framework {#definition}
 
 The **Pilot-to-Scale Failure Framework** is a proprietary operational analysis model developed by Autonomy Bridge that identifies five structural constraints ,  unit density and congestion, queue formation, orchestration complexity, environmental constraints, and integration architecture ,  that cause robotics systems to succeed in controlled pilots but fail under full operational deployment. The framework evaluates the transition from pilot environment to operational scale, focusing on system-level behavior rather than task-level performance metrics. It applies across all robotic platform types: intralogistics mobile platforms, aerial systems, service robots, inspection platforms, surgical robots, off-highway autonomous vehicles, and wearable systems. (Autonomy Bridge proprietary analysis, 2026)
 

@@ -1,4 +1,5 @@
 ---
+import {deploymentPolicy} from '../../config/deployment-policy.mjs';
 import Breadcrumbs from "./Breadcrumbs.astro";
 import Footer from "./Footer.astro";
 import Header from "./Header.astro";
@@ -7,7 +8,7 @@ import "../styles/global.css";
 import "@fontsource-variable/inter";
 import "@fontsource/ibm-plex-serif/600.css";
 import "@fontsource/ibm-plex-serif/700.css";
-import { buildBreadcrumbs, getLocalSubnav, normalizePathname } from "../utils/navigation";
+import { buildBreadcrumbs, getLocalSubnav, normalizePathname, researchLinks } from "../utils/navigation";
 import { resolvePageMetadata } from "../utils/metadata";
 import { buildDefaultLayoutSchemas, type SchemaNode } from "../utils/schema";
 
@@ -58,7 +59,7 @@ const metadata = resolvePageMetadata({
   robots,
   ogType,
 });
-const breadcrumbs = showBreadcrumbs ? buildBreadcrumbs(currentPath) : [];
+const breadcrumbs = showBreadcrumbs ? buildBreadcrumbs(currentPath, title) : [];
 const localSubnav = showLocalSubnav ? getLocalSubnav(currentPath) : null;
 const breadcrumbSchemaItems = breadcrumbs.map((item, index) => ({
   label: item.label,
@@ -77,22 +78,16 @@ const resolvedOgUrl = canonicalHref ?? metadata.absoluteCanonicalUrl;
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZX7LHWYBWP"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-ZX7LHWYBWP');
-    </script>
+    <!-- Optional analytics off by approved launch decision. No Google loader/config. -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{metadata.titleTag}</title>
     {metadata.description && <meta name="description" content={metadata.description} />}
     {metadata.keywordsContent && <meta name="keywords" content={metadata.keywordsContent} />}
-    <meta name="robots" content={metadata.robots} />
+    <!-- Source policy stays local until publication approval; build mode cannot override it. -->
+    <meta name="robots" content={deploymentPolicy.mode === 'local' ? 'noindex,nofollow' : (robots ?? metadata.robots)} />
     <link rel="canonical" href={canonicalHref ?? metadata.absoluteCanonicalUrl} />
-    <meta property="og:site_name" content="Autonomy Bridge" />
+    <meta property="og:site_name" content="AutonomyBridge" />
     <meta property="og:type" content={ogType ?? metadata.ogType} />
     <meta property="og:title" content={resolvedOgTitle} />
     {resolvedOgDescription && <meta property="og:description" content={resolvedOgDescription} />}
@@ -107,10 +102,13 @@ const resolvedOgUrl = canonicalHref ?? metadata.absoluteCanonicalUrl;
     }
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    {deploymentPolicy.mode === 'local' && <aside class="preview-notice">Local review preview — publication approval pending. Legal fields and selected proof require review.</aside>}
     <Header currentPath={currentPath} />
-    <main class="page-main">
+    <main class="page-main" id="main-content">
       <div class="page-content">
         {breadcrumbs.length > 1 && <Breadcrumbs items={breadcrumbs} />}
+        {currentPath.startsWith("/market-overview") && <LocalSubnav heading="Research navigation" links={researchLinks} currentPath={currentPath} />}
         {localSubnav && (
           <LocalSubnav
             heading={localSubnav.heading}

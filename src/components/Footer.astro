@@ -9,52 +9,11 @@ interface FooterGroup {
   links: FooterLink[];
 }
 
-const footerGroups: FooterGroup[] = [
-  {
-    heading: "Follow Us",
-    links: [{ label: "LinkedIn", href: "https://www.linkedin.com/company/autonomy-bridge/" }],
-  },
-  {
-    heading: "Knowledge",
-    links: [
-      { label: "Insights", href: "/insights" },
-      { label: "Frameworks", href: "/frameworks" },
-      { label: "Use Cases", href: "/use-cases" },
-      { label: "Case Studies", href: "/case-studies" },
-      { label: "Glossary", href: "/glossary" },
-    ],
-  },
-  {
-    heading: "Services",
-    links: [
-      { label: "Advisory", href: "/advisory" },
-      { label: "Bespoke Research", href: "/bespoke-research" },
-    ],
-  },
-  {
-    heading: "Company",
-    links: [
-      { label: "About", href: "/about" },
-      { label: "Contact", href: "/contact" },
-    ],
-  },
-  {
-    heading: "Legal",
-    links: [
-      { label: "Privacy Policy", href: "/privacy-policy" },
-      { label: "Terms of Use", href: "/terms-of-use" },
-      { label: "Cookie Policy", href: "/cookie-policy" },
-    ],
-  },
-  {
-    heading: "Utility",
-    links: [{ label: "Sitemap", href: "/sitemap" }],
-  },
-];
+const footerGroups: FooterGroup[] = [{"heading": "Services", "links": [{"label": "Commercial Leadership", "href": "/commercial-leadership"}, {"label": "AI Consulting & Implementation", "href": "/ai-consulting"}]}, {"heading": "Research", "links": [{"label": "Research & Resources", "href": "/research"}, {"label": "Insights", "href": "/insights"}, {"label": "Market Overview", "href": "/market-overview"}, {"label": "Frameworks", "href": "/frameworks"}, {"label": "Use Cases", "href": "/use-cases"}, {"label": "Case Studies", "href": "/case-studies"}, {"label": "Glossary", "href": "/glossary"}, {"label": "Research Methodology", "href": "/methodology"}]}, {"heading": "Company", "links": [{"label": "About", "href": "/about"}, {"label": "Contact", "href": "/contact"}, {"label": "LinkedIn", "href": "https://www.linkedin.com/company/autonomy-bridge/"}]}, {"heading": "Legal and utility", "links": [{"label": "Privacy Policy", "href": "/privacy-policy"}, {"label": "Terms of Use", "href": "/terms-of-use"}, {"label": "Cookie Policy", "href": "/cookie-policy"}, {"label": "Sitemap", "href": "/sitemap"}]}];
 ---
 
 <footer class="site-footer">
-  <div class="site-footer-inner">
+  <div class="site-footer-inner"><section><h2 class="type-h3">AutonomyBridge</h2><p>Commercial leadership, AI consulting and implementation for startups and growing businesses.</p><p>© {new Date().getFullYear()} AutonomyBridge. All rights reserved.</p></section>
     {
       footerGroups.map((group) => (
         <section class="footer-group">

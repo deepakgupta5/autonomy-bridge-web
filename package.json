@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "node ./node_modules/astro/astro.js build",
+    "build": "node scripts/preview-build-guard.mjs && node ./node_modules/astro/astro.js build",
     "preview": "astro preview",
     "astro": "astro"
   },

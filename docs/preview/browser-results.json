@@ -1,0 +1,324 @@
+{
+  "checks": [
+    "All 160 local routes return HTTP 200",
+    "Keyboard skip link receives first focus",
+    "Skip link reaches main content",
+    "Required-fields summary",
+    "Four required fields, optional website",
+    "First invalid field focused",
+    "Invalid email message",
+    "Confirmed failure retains entered information",
+    "Confirmed failure permits retry",
+    "HTTP 200 HTML never becomes acceptance",
+    "Unknown outcome prevents immediate duplicate submission",
+    "Unknown outcome retains entered information",
+    "Network failure is unknown and preserves input",
+    "Explicit local acceptance fixture displays confirmation",
+    "Direct success URL or reload does not claim acceptance",
+    "Success page excluded from indexing"
+  ],
+  "httpRoutes": 160,
+  "layouts": [
+    {
+      "path": "/",
+      "width": 1440,
+      "overflow": false,
+      "headings": 1,
+      "active": []
+    },
+    {
+      "path": "/commercial-leadership",
+      "width": 1440,
+      "overflow": false,
+      "headings": 1,
+      "active": [
+        "Commercial Leadership"
+      ]
+    },
+    {
+      "path": "/ai-consulting",
+      "width": 1440,
+      "overflow": false,
+      "headings": 1,
+      "active": [
+        "AI Consulting"
+      ]
+    },
+    {
+      "path": "/about",
+      "width": 1440,
+      "overflow": false,
+      "headings": 1,
+      "active": [
+        "About"
+      ]
+    },
+    {
+      "path": "/research",
+      "width": 1440,
+      "overflow": false,
+      "headings": 1,
+      "active": [
+        "Research"
+      ]
+    },
+    {
+      "path": "/contact",
+      "width": 1440,
+      "overflow": false,
+      "headings": 1,
+      "active": []
+    },
+    {
+      "path": "/methodology",
+      "width": 1440,
+      "overflow": false,
+      "headings": 1,
+      "active": [
+        "Research"
+      ]
+    },
+    {
+      "path": "/privacy-policy",
+      "width": 1440,
+      "overflow": false,
+      "headings": 1,
+      "active": []
+    },
+    {
+      "path": "/sitemap",
+      "width": 1440,
+      "overflow": false,
+      "headings": 1,
+      "active": []
+    },
+    {
+      "path": "/market-overview",
+      "width": 1440,
+      "overflow": false,
+      "headings": 1,
+      "active": [
+        "Research"
+      ]
+    },
+    {
+      "path": "/glossary/automation-readiness",
+      "width": 1440,
+      "overflow": false,
+      "headings": 1,
+      "active": [
+        "Research"
+      ]
+    },
+    {
+      "path": "/frameworks/pilot-to-scale-failure-framework",
+      "width": 1440,
+      "overflow": false,
+      "headings": 1,
+      "active": [
+        "Research"
+      ]
+    },
+    {
+      "path": "/",
+      "width": 768,
+      "overflow": false,
+      "headings": 1,
+      "active": []
+    },
+    {
+      "path": "/commercial-leadership",
+      "width": 768,
+      "overflow": false,
+      "headings": 1,
+      "active": [
+        "Commercial Leadership"
+      ]
+    },
+    {
+      "path": "/ai-consulting",
+      "width": 768,
+      "overflow": false,
+      "headings": 1,
+      "active": [
+        "AI Consulting"
+      ]
+    },
+    {
+      "path": "/about",
+      "width": 768,
+      "overflow": false,
+      "headings": 1,
+      "active": [
+        "About"
+      ]
+    },
+    {
+      "path": "/research",
+      "width": 768,
+      "overflow": false,
+      "headings": 1,
+      "active": [
+        "Research"
+      ]
+    },
+    {
+      "path": "/contact",
+      "width": 768,
+      "overflow": false,
+      "headings": 1,
+      "active": []
+    },
+    {
+      "path": "/methodology",
+      "width": 768,
+      "overflow": false,
+      "headings": 1,
+      "active": [
+        "Research"
+      ]
+    },
+    {
+      "path": "/privacy-policy",
+      "width": 768,
+      "overflow": false,
+      "headings": 1,
+      "active": []
+    },
+    {
+      "path": "/sitemap",
+      "width": 768,
+      "overflow": false,
+      "headings": 1,
+      "active": []
+    },
+    {
+      "path": "/market-overview",
+      "width": 768,
+      "overflow": false,
+      "headings": 1,
+      "active": [
+        "Research"
+      ]
+    },
+    {
+      "path": "/glossary/automation-readiness",
+      "width": 768,
+      "overflow": false,
+      "headings": 1,
+      "active": [
+        "Research"
+      ]
+    },
+    {
+      "path": "/frameworks/pilot-to-scale-failure-framework",
+      "width": 768,
+      "overflow": false,
+      "headings": 1,
+      "active": [
+        "Research"
+      ]
+    },
+    {
+      "path": "/",
+      "width": 390,
+      "overflow": false,
+      "headings": 1,
+      "active": []
+    },
+    {
+      "path": "/commercial-leadership",
+      "width": 390,
+      "overflow": false,
+      "headings": 1,
+      "active": [
+        "Commercial Leadership"
+      ]
+    },
+    {
+      "path": "/ai-consulting",
+      "width": 390,
+      "overflow": false,
+      "headings": 1,
+      "active": [
+        "AI Consulting"
+      ]
+    },
+    {
+      "path": "/about",
+      "width": 390,
+      "overflow": false,
+      "headings": 1,
+      "active": [
+        "About"
+      ]
+    },
+    {
+      "path": "/research",
+      "width": 390,
+      "overflow": false,
+      "headings": 1,
+      "active": [
+        "Research"
+      ]
+    },
+    {
+      "path": "/contact",
+      "width": 390,
+      "overflow": false,
+      "headings": 1,
+      "active": []
+    },
+    {
+      "path": "/methodology",
+      "width": 390,
+      "overflow": false,
+      "headings": 1,
+      "active": [
+        "Research"
+      ]
+    },
+    {
+      "path": "/privacy-policy",
+      "width": 390,
+      "overflow": false,
+      "headings": 1,
+      "active": []
+    },
+    {
+      "path": "/sitemap",
+      "width": 390,
+      "overflow": false,
+      "headings": 1,
+      "active": []
+    },
+    {
+      "path": "/market-overview",
+      "width": 390,
+      "overflow": false,
+      "headings": 1,
+      "active": [
+        "Research"
+      ]
+    },
+    {
+      "path": "/glossary/automation-readiness",
+      "width": 390,
+      "overflow": false,
+      "headings": 1,
+      "active": [
+        "Research"
+      ]
+    },
+    {
+      "path": "/frameworks/pilot-to-scale-failure-framework",
+      "width": 390,
+      "overflow": false,
+      "headings": 1,
+      "active": [
+        "Research"
+      ]
+    }
+  ],
+  "transport": "Intercepted loopback-only fixtures; no real receiving service or mailbox tested"
+}
