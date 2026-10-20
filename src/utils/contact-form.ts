@@ -26,12 +26,12 @@ export function mountContactForm(form: HTMLFormElement) {
     const unknown = 'We couldn’t confirm whether your enquiry was submitted. Please don’t submit it again yet. Email deepak@autonomybridge.com and mention that you tried the form so I can check whether it arrived.';
     const failed = 'Your enquiry wasn’t submitted. Please try again or email deepak@autonomybridge.com.';
     const controller = new AbortController();
-    const timer = window.setTimeout(() => controller.abort(), 10000);
+    const timer = window.setTimeout(() => controller.abort(), 30000);
     try {
       if (deploymentPolicy.mode !== 'local') {
         const result = await submitNetlifyContact(new URLSearchParams(new FormData(form) as any), {
           enabled: deploymentPolicy.formEnabled, origin: location.origin, allowedOrigin: deploymentPolicy.origin,
-          signal: controller.signal,
+          signal: controller.signal, receiptAttempts: 10,
         });
         if (result.outcome === 'accepted') {
           sessionStorage.setItem('ab-service-accepted', '1');

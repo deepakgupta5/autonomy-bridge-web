@@ -1,10 +1,11 @@
 /** Prepared adapter. Source policy keeps it disabled in local preview.
  * HTTP success from the form POST is NOT proof of acceptance. Only a server-side
- * Netlify submissions lookup for this random reference can confirm receipt.
+ * Netlify verified-submission event for this random reference can confirm receipt.
  */
 export async function submitNetlifyContact(data, {
   enabled = false, origin, allowedOrigin = 'https://autonomybridge.com', signal, fetchImpl = fetch,
-  reference = () => crypto.randomUUID(),
+  reference = () => crypto.randomUUID(), receiptAttempts = 1,
+  wait = ms => new Promise(resolve => setTimeout(resolve, ms)),
 } = {}) {
   if (!enabled) return { outcome: 'rejected', reason: 'disabled' };
   let url;
@@ -24,6 +25,7 @@ export async function submitNetlifyContact(data, {
   if (!/^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(id)) return { outcome: 'rejected', reason: 'invalid-reference' };
   body.set('form-name', 'contact');
   body.set('submission-reference', id);
+  body.set('receipt-kind', 'autonomybridge-contact-v1');
   // No automatic re-POST, including after timeout: the receiver may have stored it.
   try {
     await fetchImpl(new URL('/contact-success', url), {
@@ -31,7 +33,9 @@ export async function submitNetlifyContact(data, {
       headers: {'Content-Type': 'application/x-www-form-urlencoded'}, body,
     });
   } catch { /* A redirect/network error cannot establish non-receipt. Verify below. */ }
-  try {
+  for (let attempt=0; attempt<Math.min(receiptAttempts,10) && !signal?.aborted; attempt++) {
+   if (attempt) await wait(1500);
+   try {
     const receipt = await fetchImpl(new URL('/.netlify/functions/contact-receipt?reference=' + id, url), {
       method: 'GET', signal, cache: 'no-store', credentials: 'same-origin', redirect: 'error',
     });
@@ -39,6 +43,7 @@ export async function submitNetlifyContact(data, {
       const result = await receipt.json();
       if (result.accepted === true && result.reference === id) return {outcome: 'accepted', reference: id};
     }
-  } catch { /* Timeout, malformed JSON and unavailable verification remain unknown. */ }
+   } catch { /* Only receipt lookup is retried; never send the form again. */ }
+  }
   return {outcome: 'unknown', reference: id};
 }
