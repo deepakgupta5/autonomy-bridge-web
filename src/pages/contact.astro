@@ -35,7 +35,6 @@ const fields = [
 {field.name === 'message' ? <textarea id={field.name} name={field.name} required rows="6" aria-describedby={`${field.name}-hint ${field.name}-error`}></textarea> : <input id={field.name} name={field.name} type={field.type} required={field.required} autocomplete={field.autocomplete} aria-describedby={`${field.hint ? field.name+'-hint ' : ''}${field.name}-error`} />}
 <p class="field-error" id={`${field.name}-error`}></p>
 </div>)}
-<p>Privacy: Read the <a href="/privacy-policy">Privacy Policy</a> for information about how enquiries are handled.</p>
 <button class="copy-button" type="submit" disabled>Send enquiry</button>
 <noscript><p>This form needs JavaScript. Please use the email link above if JavaScript is unavailable.</p></noscript>
 </form> : <p role="status">The enquiry form is temporarily unavailable. Please email <a href="mailto:deepak@autonomybridge.com">deepak@autonomybridge.com</a>.</p>}</div></article>
