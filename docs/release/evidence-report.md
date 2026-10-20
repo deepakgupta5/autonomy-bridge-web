@@ -1,5 +1,7 @@
 # Release preparation evidence report
 
+**Historical investigation snapshot. Current candidate and decisions:** [full-v2-candidate.md](full-v2-candidate.md). Owner proof approval is recorded in comment 6281916360; full selected copy is now public. Current release scope is email-only and optional analytics off. The older pending-proof and draft-notice statements below describe the investigation state, not current blockers.
+
 Investigation date: 2026-10-19 (America/Vancouver; HTTP observation 2026-10-20 01:49 UTC). Base: `cda1143cf14808544d7e7f96d5670b55c5557526`. Scope: [owner instruction on PR #1](https://github.com/deepakgupta5/autonomy-bridge-web/pull/1#issuecomment-6281406421). Design approval is not publication approval.
 
 | Item | Verified fact / source | Change prepared | Unresolved fact / decision | Release gate |

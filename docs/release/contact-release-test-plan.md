@@ -1,5 +1,7 @@
 # Form release and post-deployment verification
 
+**Current full-V2 candidate is email-only.** No form activation or live form test is needed for that content release. The owner-approved proof is restored. This procedure applies when a later reviewed update enables the form with matching privacy/cookie notices. See `full-v2-candidate.md`.
+
 Preparation only. Nothing is activated or sent. This plan follows the [owner's corrected sequence](https://github.com/deepakgupta5/autonomy-bridge-web/pull/1#issuecomment-6281611214), superseding the earlier prepublication delivery-test requirement. **Unperformed live delivery testing alone does not hold the content release.** Proof, privacy/provider/retention facts, legal wording and explicit publication approval remain separate gates. No isolated test deployment is required.
 
 ## Before release

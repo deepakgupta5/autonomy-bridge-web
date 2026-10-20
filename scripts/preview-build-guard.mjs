@@ -1,5 +1,5 @@
 import {deploymentPolicy, validTarget} from '../config/deployment-policy.mjs';
-if (deploymentPolicy.mode === 'local') {
+if (deploymentPolicy.mode !== 'production') {
   if (process.env.NETLIFY || process.env.CI) {
     console.error('Preview-only branch: remote builds disabled pending approval. Build locally.');
     process.exit(1);

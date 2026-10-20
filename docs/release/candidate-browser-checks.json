@@ -1,0 +1,165 @@
+{
+  "passed": true,
+  "layouts": [
+    {
+      "route": "/",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "route": "/commercial-leadership",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "route": "/ai-consulting",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "route": "/about",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "route": "/research",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "route": "/contact",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "route": "/privacy-policy",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "route": "/cookie-policy",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "route": "/terms-of-use",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "route": "/methodology",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "route": "/",
+      "width": 768,
+      "passed": true
+    },
+    {
+      "route": "/commercial-leadership",
+      "width": 768,
+      "passed": true
+    },
+    {
+      "route": "/ai-consulting",
+      "width": 768,
+      "passed": true
+    },
+    {
+      "route": "/about",
+      "width": 768,
+      "passed": true
+    },
+    {
+      "route": "/research",
+      "width": 768,
+      "passed": true
+    },
+    {
+      "route": "/contact",
+      "width": 768,
+      "passed": true
+    },
+    {
+      "route": "/privacy-policy",
+      "width": 768,
+      "passed": true
+    },
+    {
+      "route": "/cookie-policy",
+      "width": 768,
+      "passed": true
+    },
+    {
+      "route": "/terms-of-use",
+      "width": 768,
+      "passed": true
+    },
+    {
+      "route": "/methodology",
+      "width": 768,
+      "passed": true
+    },
+    {
+      "route": "/",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "route": "/commercial-leadership",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "route": "/ai-consulting",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "route": "/about",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "route": "/research",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "route": "/contact",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "route": "/privacy-policy",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "route": "/cookie-policy",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "route": "/terms-of-use",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "route": "/methodology",
+      "width": 390,
+      "passed": true
+    }
+  ],
+  "keyboard": "Skip link focus and target passed",
+  "contact": "Email-only; direct success URL unconfirmed and noindex",
+  "optionalRequests": [],
+  "browserStorage": {
+    "local": [],
+    "session": []
+  },
+  "cookieCount": 0,
+  "pageErrors": [],
+  "limitations": "Local clean browser only. Existing favicon.ico 404. No deployed-host verification or real enquiry."
+}

@@ -1,5 +1,5 @@
 {
-  "scope": "Only 18 selected V2 paragraph occurrences; exact wording and figures excluded from public repo",
+  "scope": "18 selected V2 paragraph occurrences approved for public website and repository; underlying evidence remains private",
   "source_zip_sha256": "5353576453a416ac700fe91b9b3432992414ec04a9709002dfdc11efcab98ade",
   "entries": [
     {
@@ -7,8 +7,8 @@
       "route": "/",
       "copy_text_line_1_based": 15,
       "source": "V2 website_copy.json",
-      "accuracy": "unverified",
-      "publication_permission": "pending",
+      "accuracy": "owner confirmed accurate and in context; not independently audited",
+      "publication_permission": "owner approved website and repository publication",
       "private_detail": ".preview-private/release-evidence/proof-confirmation.md"
     },
     {
@@ -16,8 +16,8 @@
       "route": "/",
       "copy_text_line_1_based": 17,
       "source": "V2 website_copy.json",
-      "accuracy": "unverified",
-      "publication_permission": "pending",
+      "accuracy": "owner confirmed accurate and in context; not independently audited",
+      "publication_permission": "owner approved website and repository publication",
       "private_detail": ".preview-private/release-evidence/proof-confirmation.md"
     },
     {
@@ -25,8 +25,8 @@
       "route": "/",
       "copy_text_line_1_based": 26,
       "source": "V2 website_copy.json",
-      "accuracy": "unverified",
-      "publication_permission": "pending",
+      "accuracy": "owner confirmed accurate and in context; not independently audited",
+      "publication_permission": "owner approved website and repository publication",
       "private_detail": ".preview-private/release-evidence/proof-confirmation.md"
     },
     {
@@ -34,8 +34,8 @@
       "route": "/",
       "copy_text_line_1_based": 36,
       "source": "V2 website_copy.json",
-      "accuracy": "unverified",
-      "publication_permission": "pending",
+      "accuracy": "owner confirmed accurate and in context; not independently audited",
+      "publication_permission": "owner approved website and repository publication",
       "private_detail": ".preview-private/release-evidence/proof-confirmation.md"
     },
     {
@@ -43,8 +43,8 @@
       "route": "/",
       "copy_text_line_1_based": 44,
       "source": "V2 website_copy.json",
-      "accuracy": "unverified",
-      "publication_permission": "pending",
+      "accuracy": "owner confirmed accurate and in context; not independently audited",
+      "publication_permission": "owner approved website and repository publication",
       "private_detail": ".preview-private/release-evidence/proof-confirmation.md"
     },
     {
@@ -52,8 +52,8 @@
       "route": "/",
       "copy_text_line_1_based": 45,
       "source": "V2 website_copy.json",
-      "accuracy": "unverified",
-      "publication_permission": "pending",
+      "accuracy": "owner confirmed accurate and in context; not independently audited",
+      "publication_permission": "owner approved website and repository publication",
       "private_detail": ".preview-private/release-evidence/proof-confirmation.md"
     },
     {
@@ -61,8 +61,8 @@
       "route": "/commercial-leadership",
       "copy_text_line_1_based": 38,
       "source": "V2 website_copy.json",
-      "accuracy": "unverified",
-      "publication_permission": "pending",
+      "accuracy": "owner confirmed accurate and in context; not independently audited",
+      "publication_permission": "owner approved website and repository publication",
       "private_detail": ".preview-private/release-evidence/proof-confirmation.md"
     },
     {
@@ -70,8 +70,8 @@
       "route": "/commercial-leadership",
       "copy_text_line_1_based": 40,
       "source": "V2 website_copy.json",
-      "accuracy": "unverified",
-      "publication_permission": "pending",
+      "accuracy": "owner confirmed accurate and in context; not independently audited",
+      "publication_permission": "owner approved website and repository publication",
       "private_detail": ".preview-private/release-evidence/proof-confirmation.md"
     },
     {
@@ -79,8 +79,8 @@
       "route": "/commercial-leadership",
       "copy_text_line_1_based": 42,
       "source": "V2 website_copy.json",
-      "accuracy": "unverified",
-      "publication_permission": "pending",
+      "accuracy": "owner confirmed accurate and in context; not independently audited",
+      "publication_permission": "owner approved website and repository publication",
       "private_detail": ".preview-private/release-evidence/proof-confirmation.md"
     },
     {
@@ -88,8 +88,8 @@
       "route": "/ai-consulting",
       "copy_text_line_1_based": 42,
       "source": "V2 website_copy.json",
-      "accuracy": "unverified",
-      "publication_permission": "pending",
+      "accuracy": "owner confirmed accurate and in context; not independently audited",
+      "publication_permission": "owner approved website and repository publication",
       "private_detail": ".preview-private/release-evidence/proof-confirmation.md"
     },
     {
@@ -97,8 +97,8 @@
       "route": "/ai-consulting",
       "copy_text_line_1_based": 43,
       "source": "V2 website_copy.json",
-      "accuracy": "unverified",
-      "publication_permission": "pending",
+      "accuracy": "owner confirmed accurate and in context; not independently audited",
+      "publication_permission": "owner approved website and repository publication",
       "private_detail": ".preview-private/release-evidence/proof-confirmation.md"
     },
     {
@@ -106,8 +106,8 @@
       "route": "/ai-consulting",
       "copy_text_line_1_based": 45,
       "source": "V2 website_copy.json",
-      "accuracy": "unverified",
-      "publication_permission": "pending",
+      "accuracy": "owner confirmed accurate and in context; not independently audited",
+      "publication_permission": "owner approved website and repository publication",
       "private_detail": ".preview-private/release-evidence/proof-confirmation.md"
     },
     {
@@ -115,8 +115,8 @@
       "route": "/ai-consulting",
       "copy_text_line_1_based": 46,
       "source": "V2 website_copy.json",
-      "accuracy": "unverified",
-      "publication_permission": "pending",
+      "accuracy": "owner confirmed accurate and in context; not independently audited",
+      "publication_permission": "owner approved website and repository publication",
       "private_detail": ".preview-private/release-evidence/proof-confirmation.md"
     },
     {
@@ -124,8 +124,8 @@
       "route": "/about",
       "copy_text_line_1_based": 9,
       "source": "V2 website_copy.json",
-      "accuracy": "unverified",
-      "publication_permission": "pending",
+      "accuracy": "owner confirmed accurate and in context; not independently audited",
+      "publication_permission": "owner approved website and repository publication",
       "private_detail": ".preview-private/release-evidence/proof-confirmation.md"
     },
     {
@@ -133,8 +133,8 @@
       "route": "/about",
       "copy_text_line_1_based": 10,
       "source": "V2 website_copy.json",
-      "accuracy": "unverified",
-      "publication_permission": "pending",
+      "accuracy": "owner confirmed accurate and in context; not independently audited",
+      "publication_permission": "owner approved website and repository publication",
       "private_detail": ".preview-private/release-evidence/proof-confirmation.md"
     },
     {
@@ -142,8 +142,8 @@
       "route": "/about",
       "copy_text_line_1_based": 11,
       "source": "V2 website_copy.json",
-      "accuracy": "unverified",
-      "publication_permission": "pending",
+      "accuracy": "owner confirmed accurate and in context; not independently audited",
+      "publication_permission": "owner approved website and repository publication",
       "private_detail": ".preview-private/release-evidence/proof-confirmation.md"
     },
     {
@@ -151,8 +151,8 @@
       "route": "/about",
       "copy_text_line_1_based": 15,
       "source": "V2 website_copy.json",
-      "accuracy": "unverified",
-      "publication_permission": "pending",
+      "accuracy": "owner confirmed accurate and in context; not independently audited",
+      "publication_permission": "owner approved website and repository publication",
       "private_detail": ".preview-private/release-evidence/proof-confirmation.md"
     },
     {
@@ -160,9 +160,10 @@
       "route": "/about",
       "copy_text_line_1_based": 16,
       "source": "V2 website_copy.json",
-      "accuracy": "unverified",
-      "publication_permission": "pending",
+      "accuracy": "owner confirmed accurate and in context; not independently audited",
+      "publication_permission": "owner approved website and repository publication",
       "private_detail": ".preview-private/release-evidence/proof-confirmation.md"
     }
-  ]
+  ],
+  "approval_source": "https://github.com/deepakgupta5/autonomy-bridge-web/pull/1#issuecomment-6281916360"
 }

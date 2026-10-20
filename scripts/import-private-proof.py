@@ -9,7 +9,12 @@ public=json.loads((root/'src/data/preview-copy.json').read_text())
 positions=json.loads((root/'scripts/private-proof-lines.json').read_text());overlay={}
 for route,indices in positions.items():
  lines=next(p['copy_text'].splitlines() for p in data['pages'] if p['route']==route)
- replacements=iter('<p>'+html.escape(lines[i])+'</p>' for i in indices)
+ paragraphs=['<p>'+html.escape(lines[i])+'</p>' for i in indices]
+ if 'proof-pending' not in public[route]['html']:
+  assert all(p in public[route]['html'] for p in paragraphs), 'Approved public proof differs from V2'
+  overlay[route]=public[route]['html']
+  continue
+ replacements=iter(paragraphs)
  overlay[route]=re.sub(r'<p class="proof-pending">.*?</p>',lambda _:next(replacements),public[route]['html'],flags=re.S)
 path=root/'.preview-private/copy.json';path.parent.mkdir(exist_ok=True);path.write_text(json.dumps(overlay,ensure_ascii=False,indent=2)+'\n')
 print('Private overlay restored locally. Use AB_PRIVATE_PREVIEW=1 with the localhost dev server.')

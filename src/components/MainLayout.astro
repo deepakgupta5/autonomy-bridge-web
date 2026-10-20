@@ -85,7 +85,7 @@ const resolvedOgUrl = canonicalHref ?? metadata.absoluteCanonicalUrl;
     {metadata.description && <meta name="description" content={metadata.description} />}
     {metadata.keywordsContent && <meta name="keywords" content={metadata.keywordsContent} />}
     <!-- Source policy stays local until publication approval; build mode cannot override it. -->
-    <meta name="robots" content={deploymentPolicy.mode === 'production' ? (robots ?? metadata.robots) : 'noindex,nofollow'} />
+    <meta name="robots" content={deploymentPolicy.mode === 'local' ? 'noindex,nofollow' : (robots ?? metadata.robots)} />
     <link rel="canonical" href={canonicalHref ?? metadata.absoluteCanonicalUrl} />
     <meta property="og:site_name" content="AutonomyBridge" />
     <meta property="og:type" content={ogType ?? metadata.ogType} />
@@ -103,7 +103,7 @@ const resolvedOgUrl = canonicalHref ?? metadata.absoluteCanonicalUrl;
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
-    {deploymentPolicy.mode !== 'production' && <aside class="preview-notice">Local review preview — publication approval pending. Legal fields and selected proof require review.</aside>}
+    {deploymentPolicy.mode === 'local' && <aside class="preview-notice">Local review preview — publication approval pending. Legal fields and selected proof require review.</aside>}
     <Header currentPath={currentPath} />
     <main class="page-main" id="main-content">
       <div class="page-content">

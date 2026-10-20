@@ -2,7 +2,7 @@
 from pathlib import Path
 from html.parser import HTMLParser
 from urllib.parse import urlsplit, unquote
-import json,sys,collections,subprocess
+import json,sys,collections,subprocess,os
 class Page(HTMLParser):
  def __init__(self,text):
   super().__init__(); self.links=[];self.mainlinks=[];self.ids=set();self.meta={};self.canonical='';self.scripts=[];self.script=None;self.inmain=False;self.title='';self.intitle=False;self.breadcrumb=[];self.incrumb=False;self.crumbdepth=0;self.feed(text)
@@ -25,8 +25,9 @@ class Page(HTMLParser):
  def handle_data(self,data):
   if self.intitle:self.title+=data
   if self.script is not None:self.script+=data
-root=Path(__file__).resolve().parents[1]; dist=root/'dist'
-if len(sys.argv) != 2:
+root=Path(__file__).resolve().parents[1]; dist=Path(os.environ.get('AB_AUDIT_DIST', root/'dist'))
+candidate = len(sys.argv) == 3 and sys.argv[2] == '--release-candidate'
+if len(sys.argv) != 2 and not candidate:
  raise SystemExit('Usage: python3 scripts/verify-preview.py /path/to/0285946-baseline/dist (required)')
 base=Path(sys.argv[1])
 if not (base/'index.html').is_file() or len(list(base.rglob('*.html'))) != 157:
@@ -89,7 +90,7 @@ allowed=json.loads((root/'docs/preview/historical-broken-links.json').read_text(
 if len(allowed) != 8: raise SystemExit('Historical broken-link exception register must contain exactly eight destinations')
 result['unexpected_broken_destinations']=sorted(set(broken)-set(allowed))
 result['new_broken_link_referrers']={target:sorted(sources-set(allowed.get(target,[]))) for target,sources in broken.items() if sources-set(allowed.get(target,[]))}
-result['preview_robots_errors']=sorted(path for path,page in pages.items() if page.meta.get('robots') != 'noindex,nofollow')
+result['preview_robots_errors']=sorted(path for path,page in pages.items() if page.meta.get('robots') != ('noindex,nofollow' if not candidate or path == '/contact-success' else 'index,follow'))
 result['xml_missing_expected']=sorted((expected-{'/privacy-policy','/terms-of-use','/cookie-policy'}|{'/sitemap'})-xmlpaths)
 result['xml_unexpected']=sorted(xmlpaths-(expected-{'/privacy-policy','/terms-of-use','/cookie-policy'}|{'/sitemap'}))
 empty_checks=[
@@ -106,6 +107,6 @@ for key,count in [('built_pages',160),('research_pages',147),('html_sitemap_expe
 if not result['redirects_unchanged']: failures.append('redirects_unchanged')
 result['failures']=failures
 result['passed']=not failures
-(root/'docs/preview/verification.json').write_text(json.dumps(result,indent=2)+'\n')
+(root/('docs/release/candidate-route-audit.json' if candidate else 'docs/preview/verification.json')).write_text(json.dumps(result,indent=2)+'\n')
 print(json.dumps(result,indent=2))
 if failures: raise SystemExit('Preview verification failed: '+', '.join(failures))

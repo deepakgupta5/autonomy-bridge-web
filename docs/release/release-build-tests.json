@@ -1,7 +1,6 @@
 {
   "passed": true,
   "checks": [
-    "production-form: 160 pages; expected robots/banner/form/email; no Google loader or tracking ID",
     "email-only: 160 pages; expected robots/banner/form/email; no Google loader or tracking ID",
     "Candidate rejects private overlay, wrong site and preview deployment context"
   ],

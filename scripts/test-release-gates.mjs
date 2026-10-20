@@ -5,7 +5,7 @@ import vm from 'node:vm';
 import ts from 'typescript';
 import {deploymentPolicy, allowedRuntime} from '../config/deployment-policy.mjs';
 const checks=[];
-const policy={mode:'production',origin:'https://autonomybridge.com',siteId:'00000000-0000-4000-8000-000000000001',formEnabled:true};
+const policy={mode:'production',origin:'https://autonomybridge.com',siteId:'00000000-0000-4000-8000-000000000001',publicationDate:'2026-10-19',formEnabled:true};
 const env={SITE_ID:policy.siteId,CONTEXT:'production',AB_CONTACT_RECEIPTS_ENABLED:'true'};
 assert.equal(allowedRuntime(deploymentPolicy,env,policy.origin),false);
 assert.equal(allowedRuntime(policy,env,policy.origin),true);
@@ -29,11 +29,11 @@ for(const outcome of ['accepted','unknown','rejected','throw']) {
  if(outcome==='unknown'||outcome==='throw'){assert.equal(button.disabled,true);await listener({preventDefault(){}});assert.equal(sends,1);}
 }
 checks.push('Wired UI: confirmed acceptance alone redirects; failure/unknown preserve inputs; unknown blocks duplicate sends; service and fixture markers distinct');
-const diff=spawnSync('python3',['scripts/prepare-release-patch.py','--origin',policy.origin,'--site-id',policy.siteId],{encoding:'utf8'});
-assert.equal(diff.status,0);assert.match(diff.stdout,/\+  mode: 'production'/);assert.match(diff.stdout,/\+  formEnabled: true/);
+const diff=spawnSync('python3',['scripts/prepare-release-patch.py','--origin',policy.origin,'--publication-date','2026-10-19','--site-id',policy.siteId],{encoding:'utf8'});
+assert.equal(diff.status,0);assert.match(diff.stdout,/\+  mode: 'production'/);assert.doesNotMatch(diff.stdout,/\+  formEnabled: true/);
 assert.equal(spawnSync('git',['apply','--check','-'],{input:diff.stdout}).status,0);
-assert.equal(spawnSync('python3',['scripts/prepare-release-patch.py','--origin',policy.origin,'--site-id','PLACEHOLDER']).status,2);
-const fallback=spawnSync('python3',['scripts/prepare-release-patch.py','--origin',policy.origin,'--site-id',policy.siteId,'--email-only'],{encoding:'utf8'});
+assert.equal(spawnSync('python3',['scripts/prepare-release-patch.py','--origin',policy.origin,'--publication-date','2026-10-19','--site-id','PLACEHOLDER']).status,2);
+const fallback=spawnSync('python3',['scripts/prepare-release-patch.py','--origin',policy.origin,'--publication-date','2026-10-19','--site-id',policy.siteId,'--email-only'],{encoding:'utf8'});
 assert.equal(fallback.status,0);assert.doesNotMatch(fallback.stdout,/\+  formEnabled: true/);
 assert.equal(spawnSync('git',['apply','--check','-'],{input:fallback.stdout}).status,0);
 checks.push('Activation and email-only diffs apply cleanly without modifying checkout; placeholder target rejected');

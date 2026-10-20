@@ -10,12 +10,12 @@ for path in root.iterdir():
         shutil.copy2(path,target/path.name)
 (target/'node_modules').symlink_to(root/'node_modules',target_is_directory=True)
 site='00000000-0000-4000-8000-000000000001'
-patch=subprocess.check_output(['python3',str(root/'scripts/prepare-release-patch.py'),'--origin','https://autonomybridge.com','--site-id',site],cwd=root)
+patch=subprocess.check_output(['python3',str(root/'scripts/prepare-release-patch.py'),'--origin','https://autonomybridge.com','--publication-date','2026-10-19','--site-id',site],cwd=root)
 subprocess.run(['git','apply','--unsafe-paths','-'],input=patch,cwd=target,check=True)
 env={**os.environ,'SITE_ID':site,'CONTEXT':'production','NETLIFY':'true'}
 env.pop('AB_PRIVATE_PREVIEW',None)
 checks=[]
-for mode in ['production-form','email-only']:
+for mode in ['email-only']:
     if mode=='email-only':
         config=target/'config/deployment-policy.mjs'
         config.write_text(config.read_text().replace('formEnabled: true','formEnabled: false'))
@@ -25,6 +25,10 @@ for mode in ['production-form','email-only']:
     home=(target/'dist/index.html').read_text();contact=(target/'dist/contact.html').read_text();success=(target/'dist/contact-success.html').read_text()
     assert 'content="index,follow"' in home
     assert 'content="noindex,nofollow"' in success
+    assert 'Last updated: 2026-10-19' in (target/'dist/privacy-policy.html').read_text()
+    assert 'dateModified' in (target/'dist/methodology.html').read_text()
+    assert '2026-03-15' in (target/'dist/methodology.html').read_text()
+    assert 'Publication pending' not in (target/'dist/privacy-policy.html').read_text()
     assert 'preview-notice' not in home.split('<body',1)[1]
     assert 'mailto:deepak@autonomybridge.com' in contact
     assert ('<form name="contact"' in contact)==(mode=='production-form')

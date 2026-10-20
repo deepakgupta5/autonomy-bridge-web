@@ -1,4 +1,6 @@
-# Evidence-supported notice corrections — review draft
+# Evidence-supported notice corrections — historical review draft
+
+Superseded for the current email-only candidate by the exact page changes in `src/data/preview-copy.json` and the disposition in `full-v2-candidate.md`. The placeholder proposals below are historical and are not rendered in the candidate.
 
 These proposals supplement V2; they are not final legal approval or claims about unverified practices. Publication dates remain placeholders. Approved service wording and research limitations remain unchanged.
 
