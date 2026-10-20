@@ -1,16 +1,16 @@
-/** Preparatory adapter. Not imported by the preview form; never enabled implicitly.
+/** Prepared adapter. Source policy keeps it disabled in local preview.
  * HTTP success from the form POST is NOT proof of acceptance. Only a server-side
  * Netlify submissions lookup for this random reference can confirm receipt.
  */
 export async function submitNetlifyContact(data, {
-  enabled = false, origin, signal, fetchImpl = fetch,
+  enabled = false, origin, allowedOrigin = 'https://autonomybridge.com', signal, fetchImpl = fetch,
   reference = () => crypto.randomUUID(),
 } = {}) {
   if (!enabled) return { outcome: 'rejected', reason: 'disabled' };
   let url;
   try { url = new URL(origin); }
   catch { return { outcome: 'rejected', reason: 'invalid-origin' }; }
-  if (url.protocol !== 'https:' || !['autonomybridge.com', 'www.autonomybridge.com'].includes(url.hostname) || url.port) {
+  if (url.protocol !== 'https:' || url.origin !== allowedOrigin || url.port) {
     return { outcome: 'rejected', reason: 'invalid-origin' };
   }
   const body = new URLSearchParams(data);

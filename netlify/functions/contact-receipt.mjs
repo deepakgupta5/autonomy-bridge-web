@@ -2,7 +2,7 @@
  * code change enables it AND server-only configuration is supplied. Never log
  * request bodies, tokens, API responses or submission records.
  */
-const RELEASE_APPROVED = false;
+import {deploymentPolicy, allowedRuntime} from '../../config/deployment-policy.mjs';
 const referencePattern = /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
 
 export async function verifyReceipt(reference, {enabled = false, formId, token, fetchImpl = fetch, now = Date.now()} = {}) {
@@ -29,14 +29,14 @@ export async function verifyReceipt(reference, {enabled = false, formId, token, 
 
 export default async function handler(request) {
   const headers = {'Content-Type': 'application/json', 'Cache-Control': 'no-store', 'X-Content-Type-Options': 'nosniff'};
-  if (!RELEASE_APPROVED) return new Response(JSON.stringify({accepted: false}), {status: 503, headers});
   const url = new URL(request.url);
-  if (request.method !== 'GET' || !['autonomybridge.com', 'www.autonomybridge.com'].includes(url.hostname) ||
+  if (!allowedRuntime(deploymentPolicy, process.env, url.origin)) return new Response(JSON.stringify({accepted: false}), {status: 503, headers});
+  if (request.method !== 'GET' ||
       !referencePattern.test(url.searchParams.get('reference') || '')) {
     return new Response(JSON.stringify({accepted: false}), {status: 400, headers});
   }
   const result = await verifyReceipt(url.searchParams.get('reference'), {
-    enabled: process.env.CONTEXT === 'production' && process.env.AB_CONTACT_RECEIPTS_ENABLED === 'true',
+    enabled: true, // allowedRuntime checked source mode, exact origin/site and server gate
     formId: process.env.AB_NETLIFY_CONTACT_FORM_ID, token: process.env.AB_NETLIFY_FORMS_TOKEN,
   });
   return new Response(JSON.stringify(result), {status: result.accepted ? 200 : 202, headers});

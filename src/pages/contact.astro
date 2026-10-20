@@ -1,4 +1,5 @@
 ---
+import {deploymentPolicy} from '../../config/deployment-policy.mjs';
 import MainLayout from '../components/MainLayout.astro';
 import pages from '../data/preview-copy.json';
 import '../styles/copy.css';
@@ -22,8 +23,8 @@ const fields = [
 <p>Please leave out confidential and sensitive information.</p>
 <p>Prefer email? Contact <a href="mailto:deepak@autonomybridge.com">deepak@autonomybridge.com</a></p>
 <h2>What happens next</h2><p>I’ll review your enquiry and reply by email. We can clarify what you need, whether I can help and the appropriate next step. If a conversation would be useful, we can arrange it then.</p>
-<p class="test-notice">Preview form: no enquiries or notifications are sent. Submission outcomes require a controlled local test response.</p></div>
-<form name="contact" method="POST" action="/contact-success" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+{deploymentPolicy.mode === 'local' && <p class="test-notice">Preview form: no enquiries or notifications are sent. Submission outcomes require a controlled local test response.</p>}</div>
+{(deploymentPolicy.mode === 'local' || deploymentPolicy.formEnabled) ? <form name="contact" method="POST" action="/contact-success" data-netlify="true" netlify-honeypot="bot-field" novalidate>
 <input type="hidden" name="form-name" value="contact" />
 <!-- Prepared receipt correlation field; preview transport remains loopback-only. -->
 <input type="hidden" name="submission-reference" value="" />
@@ -37,12 +38,13 @@ const fields = [
 </div>)}
 <p>Privacy: Read the <a href="/privacy-policy">Privacy Policy</a> for information about how enquiries are handled.</p>
 <button class="copy-button" type="submit" disabled>Send enquiry</button>
-<noscript><p>The preview form needs JavaScript. No enquiry has been sent.</p></noscript>
-</form></div></article>
+<noscript><p>This form needs JavaScript. Please use the email link above if JavaScript is unavailable.</p></noscript>
+</form> : <p role="status">The enquiry form is temporarily unavailable. Please email <a href="mailto:deepak@autonomybridge.com">deepak@autonomybridge.com</a>.</p>}</div></article>
 </MainLayout>
 <script>
 import { mountContactForm } from '../utils/contact-form';
-mountContactForm(document.querySelector('form[name="contact"]')!);
+const form = document.querySelector<HTMLFormElement>('form[name="contact"]');
+if (form) mountContactForm(form);
 </script>
 <style>
 .contact-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:4rem;margin-top:3rem}.contact-grid h2{font-size:var(--role-h2-size);margin-top:2rem}form{background:var(--color-bg-surface);border:1px solid var(--color-border-light);border-radius:6px;padding:2rem}.field{margin-bottom:1.3rem}label{display:block;font-weight:600;margin-bottom:.5rem}label span{font-size:.8rem;font-weight:400}input,textarea{box-sizing:border-box;width:100%;padding:.8rem;border:1px solid var(--color-border-default);border-radius:4px;font:inherit;background:white;color:var(--color-text-primary)}.hint{font-size:.85rem;margin:0 0 .4rem}.field-error,#form-status{color:#9e2929;font-size:.9rem}.field-error:empty,#form-status:empty{display:none}[aria-invalid=true]{border:2px solid #9e2929}button{cursor:pointer;font:inherit}button:disabled{opacity:.6;cursor:wait}.test-notice{border-left:3px solid var(--color-border-accent);padding-left:1rem;font-size:.85rem}@media(max-width:800px){.contact-grid{grid-template-columns:1fr;gap:1.5rem}form{padding:1.2rem}}

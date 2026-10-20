@@ -1,6 +1,8 @@
+import {deploymentPolicy} from '../../config/deployment-policy.mjs';
+import {submitNetlifyContact} from './netlify-contact-transport.mjs';
 /** Preview transport never calls Netlify or any external receiver.
  * Existing Netlify form name/action/field encoding remain in the HTML.
- * Service acceptance and mailbox delivery must be verified at approved release.
+ * After approved deployment, verify receipt and delivery with a separately authorized test.
  */
 export function mountContactForm(form: HTMLFormElement) {
   const button = form.querySelector<HTMLButtonElement>('button[type=submit]')!;
@@ -26,6 +28,20 @@ export function mountContactForm(form: HTMLFormElement) {
     const controller = new AbortController();
     const timer = window.setTimeout(() => controller.abort(), 10000);
     try {
+      if (deploymentPolicy.mode !== 'local') {
+        const result = await submitNetlifyContact(new URLSearchParams(new FormData(form) as any), {
+          enabled: deploymentPolicy.formEnabled, origin: location.origin, allowedOrigin: deploymentPolicy.origin,
+          signal: controller.signal,
+        });
+        if (result.outcome === 'accepted') {
+          sessionStorage.setItem('ab-service-accepted', '1');
+          location.assign('/contact-success');
+          return;
+        }
+        status.textContent = result.outcome === 'rejected' ? failed : unknown;
+        if (result.outcome !== 'rejected') button.dataset.outcome = 'unknown';
+        return;
+      }
       // Loopback-only mock endpoint; no production notification settings are changed.
       if (!['localhost','127.0.0.1','[::1]'].includes(location.hostname)) throw new Error('Preview requires loopback');
       const response = await fetch('/__preview/contact', {

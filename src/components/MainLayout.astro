@@ -1,4 +1,5 @@
 ---
+import {deploymentPolicy} from '../../config/deployment-policy.mjs';
 import Breadcrumbs from "./Breadcrumbs.astro";
 import Footer from "./Footer.astro";
 import Header from "./Header.astro";
@@ -77,23 +78,14 @@ const resolvedOgUrl = canonicalHref ?? metadata.absoluteCanonicalUrl;
 <!doctype html>
 <html lang="en">
   <head>
-    {false && <>
-    <!-- Google tag (gtag.js): disabled in local review preview -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZX7LHWYBWP"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-ZX7LHWYBWP');
-    </script>
-    </>}
+    <!-- Optional analytics off by approved launch decision. No Google loader/config. -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{metadata.titleTag}</title>
     {metadata.description && <meta name="description" content={metadata.description} />}
     {metadata.keywordsContent && <meta name="keywords" content={metadata.keywordsContent} />}
-    <!-- This entire branch is preview-only, including production-mode local builds. -->
-    <meta name="robots" content="noindex,nofollow" />
+    <!-- Source policy stays local until publication approval; build mode cannot override it. -->
+    <meta name="robots" content={deploymentPolicy.mode === 'production' ? (robots ?? metadata.robots) : 'noindex,nofollow'} />
     <link rel="canonical" href={canonicalHref ?? metadata.absoluteCanonicalUrl} />
     <meta property="og:site_name" content="AutonomyBridge" />
     <meta property="og:type" content={ogType ?? metadata.ogType} />
@@ -111,7 +103,7 @@ const resolvedOgUrl = canonicalHref ?? metadata.absoluteCanonicalUrl;
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
-    <aside class="preview-notice">Local review preview — publication approval pending. Legal fields and selected proof require review.</aside>
+    {deploymentPolicy.mode !== 'production' && <aside class="preview-notice">Local review preview — publication approval pending. Legal fields and selected proof require review.</aside>}
     <Header currentPath={currentPath} />
     <main class="page-main" id="main-content">
       <div class="page-content">
