@@ -1,10 +1,10 @@
 // Source-controlled release boundary. Environment variables cannot change mode.
-// Candidate renders release HTML locally; actual target/date remain unset until deployment.
+// Authorized email-only release target and Vancouver publication date.
 export const deploymentPolicy = Object.freeze({
-  mode: 'candidate', // local | candidate (loopback release rendering) | production
-  origin: '', // exact approved HTTPS production origin
-  siteId: '', // independently verified Netlify site ID
-  publicationDate: '', // actual release day, set only at approved publication
+  mode: 'production', // local | candidate (loopback release rendering) | production
+  origin: 'https://autonomybridge.com', // exact approved HTTPS production origin
+  siteId: '3df07dc5-6950-4241-98eb-cf95df3d271d', // independently verified Netlify site ID
+  publicationDate: '2026-10-19', // actual release day, set only at approved publication
   formEnabled: false, // production only; false provides email-only fallback
 });
 
