@@ -1,32 +1,21 @@
-AutonomyBridge: Commercial Leadership & AI Consulting
+# AutonomyBridge
 
-Overview
-Commercial leadership, AI consulting and implementation for startups and growing businesses.
-Commercial Leadership: https://www.autonomybridge.com/commercial-leadership
-AI Consulting & Implementation: https://www.autonomybridge.com/ai-consulting
-Research & Resources: https://www.autonomybridge.com/research
+Commercial leadership and AI consulting & implementation.
 
-Core Methodology
-Our research identifies the "Automation Tipping Point" (ATP) using the following logical framework:
+## Services and enquiries
+- Commercial Leadership: https://autonomybridge.com/commercial-leadership
+- AI Consulting & Implementation: https://autonomybridge.com/ai-consulting
+- About: https://autonomybridge.com/about
+- Contact: https://autonomybridge.com/contact
 
-ATP = Total Annual Manual Cost / (Annual Automated Operating Cost + (Capex / Amortization Life))
-
-Key Decision Frameworks
-* Pilot-to-Scale Failure Framework: Analysis of the 18-month "chasm" where 60% of robotics pilots stall.
-* Vendor Economics Framework: Comparison of RaaS (OpEx) vs. Buy (Capex) long-term TCO.
-* Workflow Architecture Framework: Mapping SKU velocity to specific automation categories (G2P, AMR, AS/RS).
-
-Primary Entities & Definitions
-* AMR (Autonomous Mobile Robot): Sensor-driven robotic assets navigating dynamic environments without fixed infrastructure.
-* Utilization Threshold: The minimum active duty cycle (typically >82%) required for robotic ROI to exceed manual labor parity.
-* Deployment Ramp Risk: The quantified variance between "Nameplate Throughput" and "Effective Throughput" during the first 120 days of go-live.
-* RaaS (Robotics-as-a-Service): An operational lease model shifting maintenance and depreciation risk to the OEM.
-
-Enquiries
-Discuss your business challenge: https://www.autonomybridge.com/contact
-
-Reference URLs
-* Methodology: https://www.autonomybridge.com/methodology
-* Glossary: https://www.autonomybridge.com/glossary
-* Frameworks: https://www.autonomybridge.com/frameworks
-* Insights: https://www.autonomybridge.com/insights
+## Research directory
+- Research & Resources: https://autonomybridge.com/research
+- Robotics & Automation Research: https://autonomybridge.com/bespoke-research
+- Market Overview: https://autonomybridge.com/market-overview
+- Frameworks: https://autonomybridge.com/frameworks
+- Insights: https://autonomybridge.com/insights
+- Use Cases: https://autonomybridge.com/use-cases
+- Case Studies: https://autonomybridge.com/case-studies
+- Glossary: https://autonomybridge.com/glossary
+- Methodology: https://autonomybridge.com/methodology
+- Sitemap: https://autonomybridge.com/sitemap

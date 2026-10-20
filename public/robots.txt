@@ -38,4 +38,4 @@ Disallow: /search?
 Disallow: /checkout/
 
 # 5. LINK TO YOUR SITEMAP INDEX
-Sitemap: https://www.autonomybridge.com/sitemap-index.xml
+Sitemap: https://autonomybridge.com/sitemap-index.xml

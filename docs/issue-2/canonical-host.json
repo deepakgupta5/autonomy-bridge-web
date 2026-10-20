@@ -1,0 +1,1443 @@
+{
+  "html_pages": 160,
+  "xml_destinations": 156,
+  "errors": [],
+  "llms_exact_source_match": true,
+  "live_urls": [
+    {
+      "requested": "https://autonomybridge.com",
+      "status": 200,
+      "final": "https://autonomybridge.com/",
+      "live_canonical": [
+        "https://www.autonomybridge.com"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/about",
+      "status": 200,
+      "final": "https://autonomybridge.com/about",
+      "live_canonical": [
+        "https://www.autonomybridge.com/about"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/advisory",
+      "status": 200,
+      "final": "https://autonomybridge.com/advisory",
+      "live_canonical": [
+        "https://www.autonomybridge.com/advisory"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/ai-consulting",
+      "status": 200,
+      "final": "https://autonomybridge.com/ai-consulting",
+      "live_canonical": [
+        "https://www.autonomybridge.com/ai-consulting"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/bespoke-research",
+      "status": 200,
+      "final": "https://autonomybridge.com/bespoke-research",
+      "live_canonical": [
+        "https://www.autonomybridge.com/bespoke-research"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/case-studies",
+      "status": 200,
+      "final": "https://autonomybridge.com/case-studies",
+      "live_canonical": [
+        "https://www.autonomybridge.com/case-studies"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/case-studies/ai-robotics-market-sizing-engagement",
+      "status": 200,
+      "final": "https://autonomybridge.com/case-studies/ai-robotics-market-sizing-engagement",
+      "live_canonical": [
+        "https://www.autonomybridge.com/case-studies/ai-robotics-market-sizing-engagement"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/case-studies/automation-deployment-risk-assessment",
+      "status": 200,
+      "final": "https://autonomybridge.com/case-studies/automation-deployment-risk-assessment",
+      "live_canonical": [
+        "https://www.autonomybridge.com/case-studies/automation-deployment-risk-assessment"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/case-studies/cold-storage-automation-economics-assessment",
+      "status": 200,
+      "final": "https://autonomybridge.com/case-studies/cold-storage-automation-economics-assessment",
+      "live_canonical": [
+        "https://www.autonomybridge.com/case-studies/cold-storage-automation-economics-assessment"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/case-studies/general-merchandise-3pl-premature-automation-assessment",
+      "status": 200,
+      "final": "https://autonomybridge.com/case-studies/general-merchandise-3pl-premature-automation-assessment",
+      "live_canonical": [
+        "https://www.autonomybridge.com/case-studies/general-merchandise-3pl-premature-automation-assessment"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/case-studies/healthcare-automation-investor-market-sizing",
+      "status": 200,
+      "final": "https://autonomybridge.com/case-studies/healthcare-automation-investor-market-sizing",
+      "live_canonical": [
+        "https://www.autonomybridge.com/case-studies/healthcare-automation-investor-market-sizing"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/case-studies/icp-definition-inspection-robotics",
+      "status": 200,
+      "final": "https://autonomybridge.com/case-studies/icp-definition-inspection-robotics",
+      "live_canonical": [
+        "https://www.autonomybridge.com/case-studies/icp-definition-inspection-robotics"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/case-studies/off-highway-autonomy-deployment-economics",
+      "status": 200,
+      "final": "https://autonomybridge.com/case-studies/off-highway-autonomy-deployment-economics",
+      "live_canonical": [
+        "https://www.autonomybridge.com/case-studies/off-highway-autonomy-deployment-economics"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/case-studies/parcel-sortation-volume-sensitivity-analysis",
+      "status": 200,
+      "final": "https://autonomybridge.com/case-studies/parcel-sortation-volume-sensitivity-analysis",
+      "live_canonical": [
+        "https://www.autonomybridge.com/case-studies/parcel-sortation-volume-sensitivity-analysis"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/case-studies/retail-dc-peak-demand-automation-assessment",
+      "status": 200,
+      "final": "https://autonomybridge.com/case-studies/retail-dc-peak-demand-automation-assessment",
+      "live_canonical": [
+        "https://www.autonomybridge.com/case-studies/retail-dc-peak-demand-automation-assessment"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/case-studies/robotics-market-entry-decision-analysis",
+      "status": 200,
+      "final": "https://autonomybridge.com/case-studies/robotics-market-entry-decision-analysis",
+      "live_canonical": [
+        "https://www.autonomybridge.com/case-studies/robotics-market-entry-decision-analysis"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/case-studies/robotics-pricing-strategy-research",
+      "status": 200,
+      "final": "https://autonomybridge.com/case-studies/robotics-pricing-strategy-research",
+      "live_canonical": [
+        "https://www.autonomybridge.com/case-studies/robotics-pricing-strategy-research"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/case-studies/service-robotics-commercial-viability-assessment",
+      "status": 200,
+      "final": "https://autonomybridge.com/case-studies/service-robotics-commercial-viability-assessment",
+      "live_canonical": [
+        "https://www.autonomybridge.com/case-studies/service-robotics-commercial-viability-assessment"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/case-studies/vendor-deployment-viability-assessment",
+      "status": 200,
+      "final": "https://autonomybridge.com/case-studies/vendor-deployment-viability-assessment",
+      "live_canonical": [
+        "https://www.autonomybridge.com/case-studies/vendor-deployment-viability-assessment"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/commercial-leadership",
+      "status": 200,
+      "final": "https://autonomybridge.com/commercial-leadership",
+      "live_canonical": [
+        "https://www.autonomybridge.com/commercial-leadership"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/contact",
+      "status": 200,
+      "final": "https://autonomybridge.com/contact",
+      "live_canonical": [
+        "https://www.autonomybridge.com/contact"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/frameworks",
+      "status": 200,
+      "final": "https://autonomybridge.com/frameworks",
+      "live_canonical": [
+        "https://www.autonomybridge.com/frameworks"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/frameworks/automation-failure-framework",
+      "status": 200,
+      "final": "https://autonomybridge.com/frameworks/automation-failure-framework",
+      "live_canonical": [
+        "https://www.autonomybridge.com/frameworks/automation-failure-framework"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/frameworks/pilot-to-scale-failure-framework",
+      "status": 200,
+      "final": "https://autonomybridge.com/frameworks/pilot-to-scale-failure-framework",
+      "live_canonical": [
+        "https://www.autonomybridge.com/frameworks/pilot-to-scale-failure-framework"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/frameworks/robotics-roi-model",
+      "status": 200,
+      "final": "https://autonomybridge.com/frameworks/robotics-roi-model",
+      "live_canonical": [
+        "https://www.autonomybridge.com/frameworks/robotics-roi-model"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/frameworks/vendor-economics-framework",
+      "status": 200,
+      "final": "https://autonomybridge.com/frameworks/vendor-economics-framework",
+      "live_canonical": [
+        "https://www.autonomybridge.com/frameworks/vendor-economics-framework"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/frameworks/vendor-evaluation-framework",
+      "status": 200,
+      "final": "https://autonomybridge.com/frameworks/vendor-evaluation-framework",
+      "live_canonical": [
+        "https://www.autonomybridge.com/frameworks/vendor-evaluation-framework"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/frameworks/warehouse-automation-decision-framework",
+      "status": 200,
+      "final": "https://autonomybridge.com/frameworks/warehouse-automation-decision-framework",
+      "live_canonical": [
+        "https://www.autonomybridge.com/frameworks/warehouse-automation-decision-framework"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/frameworks/workflow-architecture-framework",
+      "status": 200,
+      "final": "https://autonomybridge.com/frameworks/workflow-architecture-framework",
+      "live_canonical": [
+        "https://www.autonomybridge.com/frameworks/workflow-architecture-framework"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/glossary",
+      "status": 200,
+      "final": "https://autonomybridge.com/glossary",
+      "live_canonical": [
+        "https://www.autonomybridge.com/glossary"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/glossary/ai-inference-latency",
+      "status": 200,
+      "final": "https://autonomybridge.com/glossary/ai-inference-latency",
+      "live_canonical": [
+        "https://www.autonomybridge.com/glossary/ai-inference-latency"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/glossary/ambient-benchmark-error",
+      "status": 200,
+      "final": "https://autonomybridge.com/glossary/ambient-benchmark-error",
+      "live_canonical": [
+        "https://www.autonomybridge.com/glossary/ambient-benchmark-error"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/glossary/amr-sortation",
+      "status": 200,
+      "final": "https://autonomybridge.com/glossary/amr-sortation",
+      "live_canonical": [
+        "https://www.autonomybridge.com/glossary/amr-sortation"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/glossary/automated-guided-vehicle",
+      "status": 200,
+      "final": "https://autonomybridge.com/glossary/automated-guided-vehicle",
+      "live_canonical": [
+        "https://www.autonomybridge.com/glossary/automated-guided-vehicle"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/glossary/automated-storage-retrieval-system",
+      "status": 200,
+      "final": "https://autonomybridge.com/glossary/automated-storage-retrieval-system",
+      "live_canonical": [
+        "https://www.autonomybridge.com/glossary/automated-storage-retrieval-system"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/glossary/automation-go-no-go",
+      "status": 200,
+      "final": "https://autonomybridge.com/glossary/automation-go-no-go",
+      "live_canonical": [
+        "https://www.autonomybridge.com/glossary/automation-go-no-go"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/glossary/automation-operating-cost",
+      "status": 200,
+      "final": "https://autonomybridge.com/glossary/automation-operating-cost",
+      "live_canonical": [
+        "https://www.autonomybridge.com/glossary/automation-operating-cost"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/glossary/automation-readiness",
+      "status": 200,
+      "final": "https://autonomybridge.com/glossary/automation-readiness",
+      "live_canonical": [
+        "https://www.autonomybridge.com/glossary/automation-readiness"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/glossary/autonomous-case-handling",
+      "status": 200,
+      "final": "https://autonomybridge.com/glossary/autonomous-case-handling",
+      "live_canonical": [
+        "https://www.autonomybridge.com/glossary/autonomous-case-handling"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/glossary/autonomous-decision-threshold",
+      "status": 200,
+      "final": "https://autonomybridge.com/glossary/autonomous-decision-threshold",
+      "live_canonical": [
+        "https://www.autonomybridge.com/glossary/autonomous-decision-threshold"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/glossary/autonomous-inventory-management",
+      "status": 200,
+      "final": "https://autonomybridge.com/glossary/autonomous-inventory-management",
+      "live_canonical": [
+        "https://www.autonomybridge.com/glossary/autonomous-inventory-management"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/glossary/autonomous-mobile-robot",
+      "status": 200,
+      "final": "https://autonomybridge.com/glossary/autonomous-mobile-robot",
+      "live_canonical": [
+        "https://www.autonomybridge.com/glossary/autonomous-mobile-robot"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/glossary/autonomous-systems-maturity",
+      "status": 200,
+      "final": "https://autonomybridge.com/glossary/autonomous-systems-maturity",
+      "live_canonical": [
+        "https://www.autonomybridge.com/glossary/autonomous-systems-maturity"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/glossary/capital-recovery-period",
+      "status": 200,
+      "final": "https://autonomybridge.com/glossary/capital-recovery-period",
+      "live_canonical": [
+        "https://www.autonomybridge.com/glossary/capital-recovery-period"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/glossary/case-level-picking-economics",
+      "status": 200,
+      "final": "https://autonomybridge.com/glossary/case-level-picking-economics",
+      "live_canonical": [
+        "https://www.autonomybridge.com/glossary/case-level-picking-economics"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/glossary/cobot",
+      "status": 200,
+      "final": "https://autonomybridge.com/glossary/cobot",
+      "live_canonical": [
+        "https://www.autonomybridge.com/glossary/cobot"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/glossary/cold-environment-labor-premium",
+      "status": 200,
+      "final": "https://autonomybridge.com/glossary/cold-environment-labor-premium",
+      "live_canonical": [
+        "https://www.autonomybridge.com/glossary/cold-environment-labor-premium"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/glossary/cold-rated-system-premium",
+      "status": 200,
+      "final": "https://autonomybridge.com/glossary/cold-rated-system-premium",
+      "live_canonical": [
+        "https://www.autonomybridge.com/glossary/cold-rated-system-premium"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/glossary/cold-storage-maintenance-burden",
+      "status": 200,
+      "final": "https://autonomybridge.com/glossary/cold-storage-maintenance-burden",
+      "live_canonical": [
+        "https://www.autonomybridge.com/glossary/cold-storage-maintenance-burden"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/glossary/competitive-displacement",
+      "status": 200,
+      "final": "https://autonomybridge.com/glossary/competitive-displacement",
+      "live_canonical": [
+        "https://www.autonomybridge.com/glossary/competitive-displacement"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/glossary/computer-vision-reliability",
+      "status": 200,
+      "final": "https://autonomybridge.com/glossary/computer-vision-reliability",
+      "live_canonical": [
+        "https://www.autonomybridge.com/glossary/computer-vision-reliability"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/glossary/contract-duration-risk",
+      "status": 200,
+      "final": "https://autonomybridge.com/glossary/contract-duration-risk",
+      "live_canonical": [
+        "https://www.autonomybridge.com/glossary/contract-duration-risk"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/glossary/cost-per-unit-processed",
+      "status": 200,
+      "final": "https://autonomybridge.com/glossary/cost-per-unit-processed",
+      "live_canonical": [
+        "https://www.autonomybridge.com/glossary/cost-per-unit-processed"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/glossary/customer-concentration-risk",
+      "status": 200,
+      "final": "https://autonomybridge.com/glossary/customer-concentration-risk",
+      "live_canonical": [
+        "https://www.autonomybridge.com/glossary/customer-concentration-risk"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/glossary/digital-twin",
+      "status": 200,
+      "final": "https://autonomybridge.com/glossary/digital-twin",
+      "live_canonical": [
+        "https://www.autonomybridge.com/glossary/digital-twin"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/glossary/dwell-time",
+      "status": 200,
+      "final": "https://autonomybridge.com/glossary/dwell-time",
+      "live_canonical": [
+        "https://www.autonomybridge.com/glossary/dwell-time"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/glossary/edge-computing",
+      "status": 200,
+      "final": "https://autonomybridge.com/glossary/edge-computing",
+      "live_canonical": [
+        "https://www.autonomybridge.com/glossary/edge-computing"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/glossary/exception-handling-rate",
+      "status": 200,
+      "final": "https://autonomybridge.com/glossary/exception-handling-rate",
+      "live_canonical": [
+        "https://www.autonomybridge.com/glossary/exception-handling-rate"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/glossary/fixed-conveyor-sortation",
+      "status": 200,
+      "final": "https://autonomybridge.com/glossary/fixed-conveyor-sortation",
+      "live_canonical": [
+        "https://www.autonomybridge.com/glossary/fixed-conveyor-sortation"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/glossary/fleet-management-software",
+      "status": 200,
+      "final": "https://autonomybridge.com/glossary/fleet-management-software",
+      "live_canonical": [
+        "https://www.autonomybridge.com/glossary/fleet-management-software"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/glossary/freezer-environment-constraint",
+      "status": 200,
+      "final": "https://autonomybridge.com/glossary/freezer-environment-constraint",
+      "live_canonical": [
+        "https://www.autonomybridge.com/glossary/freezer-environment-constraint"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/glossary/goods-to-person-system",
+      "status": 200,
+      "final": "https://autonomybridge.com/glossary/goods-to-person-system",
+      "live_canonical": [
+        "https://www.autonomybridge.com/glossary/goods-to-person-system"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/glossary/human-machine-coordination",
+      "status": 200,
+      "final": "https://autonomybridge.com/glossary/human-machine-coordination",
+      "live_canonical": [
+        "https://www.autonomybridge.com/glossary/human-machine-coordination"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/glossary/idle-capital-cost",
+      "status": 200,
+      "final": "https://autonomybridge.com/glossary/idle-capital-cost",
+      "live_canonical": [
+        "https://www.autonomybridge.com/glossary/idle-capital-cost"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/glossary/inbound-processing-rate",
+      "status": 200,
+      "final": "https://autonomybridge.com/glossary/inbound-processing-rate",
+      "live_canonical": [
+        "https://www.autonomybridge.com/glossary/inbound-processing-rate"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/glossary/integration-cost",
+      "status": 200,
+      "final": "https://autonomybridge.com/glossary/integration-cost",
+      "live_canonical": [
+        "https://www.autonomybridge.com/glossary/integration-cost"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/glossary/integration-partner",
+      "status": 200,
+      "final": "https://autonomybridge.com/glossary/integration-partner",
+      "live_canonical": [
+        "https://www.autonomybridge.com/glossary/integration-partner"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/glossary/labor-absorption-capacity",
+      "status": 200,
+      "final": "https://autonomybridge.com/glossary/labor-absorption-capacity",
+      "live_canonical": [
+        "https://www.autonomybridge.com/glossary/labor-absorption-capacity"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/glossary/labor-displacement-rate",
+      "status": 200,
+      "final": "https://autonomybridge.com/glossary/labor-displacement-rate",
+      "live_canonical": [
+        "https://www.autonomybridge.com/glossary/labor-displacement-rate"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/glossary/labor-intensity-threshold",
+      "status": 200,
+      "final": "https://autonomybridge.com/glossary/labor-intensity-threshold",
+      "live_canonical": [
+        "https://www.autonomybridge.com/glossary/labor-intensity-threshold"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/glossary/labor-turnover-rate",
+      "status": 200,
+      "final": "https://autonomybridge.com/glossary/labor-turnover-rate",
+      "live_canonical": [
+        "https://www.autonomybridge.com/glossary/labor-turnover-rate"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/glossary/market-penetration-rate",
+      "status": 200,
+      "final": "https://autonomybridge.com/glossary/market-penetration-rate",
+      "live_canonical": [
+        "https://www.autonomybridge.com/glossary/market-penetration-rate"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/glossary/mobile-manipulation-robot",
+      "status": 200,
+      "final": "https://autonomybridge.com/glossary/mobile-manipulation-robot",
+      "live_canonical": [
+        "https://www.autonomybridge.com/glossary/mobile-manipulation-robot"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/glossary/multi-shuttle-system",
+      "status": 200,
+      "final": "https://autonomybridge.com/glossary/multi-shuttle-system",
+      "live_canonical": [
+        "https://www.autonomybridge.com/glossary/multi-shuttle-system"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/glossary/omnichannel-workflow-conflict",
+      "status": 200,
+      "final": "https://autonomybridge.com/glossary/omnichannel-workflow-conflict",
+      "live_canonical": [
+        "https://www.autonomybridge.com/glossary/omnichannel-workflow-conflict"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/glossary/order-profile",
+      "status": 200,
+      "final": "https://autonomybridge.com/glossary/order-profile",
+      "live_canonical": [
+        "https://www.autonomybridge.com/glossary/order-profile"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/glossary/peak-labor-cost-avoidance",
+      "status": 200,
+      "final": "https://autonomybridge.com/glossary/peak-labor-cost-avoidance",
+      "live_canonical": [
+        "https://www.autonomybridge.com/glossary/peak-labor-cost-avoidance"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/glossary/peak-to-average-ratio",
+      "status": 200,
+      "final": "https://autonomybridge.com/glossary/peak-to-average-ratio",
+      "live_canonical": [
+        "https://www.autonomybridge.com/glossary/peak-to-average-ratio"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/glossary/pick-path-optimization",
+      "status": 200,
+      "final": "https://autonomybridge.com/glossary/pick-path-optimization",
+      "live_canonical": [
+        "https://www.autonomybridge.com/glossary/pick-path-optimization"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/glossary/pick-station-throughput",
+      "status": 200,
+      "final": "https://autonomybridge.com/glossary/pick-station-throughput",
+      "live_canonical": [
+        "https://www.autonomybridge.com/glossary/pick-station-throughput"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/glossary/pilot-to-scale-failure",
+      "status": 200,
+      "final": "https://autonomybridge.com/glossary/pilot-to-scale-failure",
+      "live_canonical": [
+        "https://www.autonomybridge.com/glossary/pilot-to-scale-failure"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/glossary/predictive-maintenance",
+      "status": 200,
+      "final": "https://autonomybridge.com/glossary/predictive-maintenance",
+      "live_canonical": [
+        "https://www.autonomybridge.com/glossary/predictive-maintenance"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/glossary/premature-automation",
+      "status": 200,
+      "final": "https://autonomybridge.com/glossary/premature-automation",
+      "live_canonical": [
+        "https://www.autonomybridge.com/glossary/premature-automation"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/glossary/process-standardization",
+      "status": 200,
+      "final": "https://autonomybridge.com/glossary/process-standardization",
+      "live_canonical": [
+        "https://www.autonomybridge.com/glossary/process-standardization"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/glossary/ramp-risk",
+      "status": 200,
+      "final": "https://autonomybridge.com/glossary/ramp-risk",
+      "live_canonical": [
+        "https://www.autonomybridge.com/glossary/ramp-risk"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/glossary/reinforcement-learning-in-robotics",
+      "status": 200,
+      "final": "https://autonomybridge.com/glossary/reinforcement-learning-in-robotics",
+      "live_canonical": [
+        "https://www.autonomybridge.com/glossary/reinforcement-learning-in-robotics"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/glossary/removable-labor-share",
+      "status": 200,
+      "final": "https://autonomybridge.com/glossary/removable-labor-share",
+      "live_canonical": [
+        "https://www.autonomybridge.com/glossary/removable-labor-share"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/glossary/returns-processing-rate",
+      "status": 200,
+      "final": "https://autonomybridge.com/glossary/returns-processing-rate",
+      "live_canonical": [
+        "https://www.autonomybridge.com/glossary/returns-processing-rate"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/glossary/robotics-as-a-service",
+      "status": 200,
+      "final": "https://autonomybridge.com/glossary/robotics-as-a-service",
+      "live_canonical": [
+        "https://www.autonomybridge.com/glossary/robotics-as-a-service"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/glossary/sensor-fusion",
+      "status": 200,
+      "final": "https://autonomybridge.com/glossary/sensor-fusion",
+      "live_canonical": [
+        "https://www.autonomybridge.com/glossary/sensor-fusion"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/glossary/sku-velocity",
+      "status": 200,
+      "final": "https://autonomybridge.com/glossary/sku-velocity",
+      "live_canonical": [
+        "https://www.autonomybridge.com/glossary/sku-velocity"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/glossary/slotting",
+      "status": 200,
+      "final": "https://autonomybridge.com/glossary/slotting",
+      "live_canonical": [
+        "https://www.autonomybridge.com/glossary/slotting"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/glossary/sortation-technology-fork",
+      "status": 200,
+      "final": "https://autonomybridge.com/glossary/sortation-technology-fork",
+      "live_canonical": [
+        "https://www.autonomybridge.com/glossary/sortation-technology-fork"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/glossary/sortation-volume-floor",
+      "status": 200,
+      "final": "https://autonomybridge.com/glossary/sortation-volume-floor",
+      "live_canonical": [
+        "https://www.autonomybridge.com/glossary/sortation-volume-floor"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/glossary/system-uptime",
+      "status": 200,
+      "final": "https://autonomybridge.com/glossary/system-uptime",
+      "live_canonical": [
+        "https://www.autonomybridge.com/glossary/system-uptime"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/glossary/systems-integrator",
+      "status": 200,
+      "final": "https://autonomybridge.com/glossary/systems-integrator",
+      "live_canonical": [
+        "https://www.autonomybridge.com/glossary/systems-integrator"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/glossary/task-orchestration",
+      "status": 200,
+      "final": "https://autonomybridge.com/glossary/task-orchestration",
+      "live_canonical": [
+        "https://www.autonomybridge.com/glossary/task-orchestration"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/glossary/third-party-logistics",
+      "status": 200,
+      "final": "https://autonomybridge.com/glossary/third-party-logistics",
+      "live_canonical": [
+        "https://www.autonomybridge.com/glossary/third-party-logistics"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/glossary/throughput-modeling",
+      "status": 200,
+      "final": "https://autonomybridge.com/glossary/throughput-modeling",
+      "live_canonical": [
+        "https://www.autonomybridge.com/glossary/throughput-modeling"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/glossary/total-cost-of-ownership",
+      "status": 200,
+      "final": "https://autonomybridge.com/glossary/total-cost-of-ownership",
+      "live_canonical": [
+        "https://www.autonomybridge.com/glossary/total-cost-of-ownership"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/glossary/vendor-economics",
+      "status": 200,
+      "final": "https://autonomybridge.com/glossary/vendor-economics",
+      "live_canonical": [
+        "https://www.autonomybridge.com/glossary/vendor-economics"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/glossary/vendor-lock-in",
+      "status": 200,
+      "final": "https://autonomybridge.com/glossary/vendor-lock-in",
+      "live_canonical": [
+        "https://www.autonomybridge.com/glossary/vendor-lock-in"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/glossary/vendor-reference-site",
+      "status": 200,
+      "final": "https://autonomybridge.com/glossary/vendor-reference-site",
+      "live_canonical": [
+        "https://www.autonomybridge.com/glossary/vendor-reference-site"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/glossary/warehouse-execution-system",
+      "status": 200,
+      "final": "https://autonomybridge.com/glossary/warehouse-execution-system",
+      "live_canonical": [
+        "https://www.autonomybridge.com/glossary/warehouse-execution-system"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/glossary/warehouse-management-system",
+      "status": 200,
+      "final": "https://autonomybridge.com/glossary/warehouse-management-system",
+      "live_canonical": [
+        "https://www.autonomybridge.com/glossary/warehouse-management-system"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/glossary/workflow-constraint",
+      "status": 200,
+      "final": "https://autonomybridge.com/glossary/workflow-constraint",
+      "live_canonical": [
+        "https://www.autonomybridge.com/glossary/workflow-constraint"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/insights",
+      "status": 200,
+      "final": "https://autonomybridge.com/insights",
+      "live_canonical": [
+        "https://www.autonomybridge.com/insights"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/insights/how-aerial-robotics-vendors-are-pricing-into-inspection-markets",
+      "status": 200,
+      "final": "https://autonomybridge.com/insights/how-aerial-robotics-vendors-are-pricing-into-inspection-markets",
+      "live_canonical": [
+        "https://www.autonomybridge.com/insights/how-aerial-robotics-vendors-are-pricing-into-inspection-markets"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/insights/how-investors-should-size-robotics-markets",
+      "status": 200,
+      "final": "https://autonomybridge.com/insights/how-investors-should-size-robotics-markets",
+      "live_canonical": [
+        "https://www.autonomybridge.com/insights/how-investors-should-size-robotics-markets"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/insights/how-retail-distribution-center-automation-economics-actually-work",
+      "status": 200,
+      "final": "https://autonomybridge.com/insights/how-retail-distribution-center-automation-economics-actually-work",
+      "live_canonical": [
+        "https://www.autonomybridge.com/insights/how-retail-distribution-center-automation-economics-actually-work"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/insights/how-robotics-pricing-models-determine-commercial-viability",
+      "status": 200,
+      "final": "https://autonomybridge.com/insights/how-robotics-pricing-models-determine-commercial-viability",
+      "live_canonical": [
+        "https://www.autonomybridge.com/insights/how-robotics-pricing-models-determine-commercial-viability"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/insights/how-robotics-vendors-misjudge-their-addressable-market",
+      "status": 200,
+      "final": "https://autonomybridge.com/insights/how-robotics-vendors-misjudge-their-addressable-market",
+      "live_canonical": [
+        "https://www.autonomybridge.com/insights/how-robotics-vendors-misjudge-their-addressable-market"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/insights/how-underwater-robotics-startups-can-break-incumbent-lock-in",
+      "status": 200,
+      "final": "https://autonomybridge.com/insights/how-underwater-robotics-startups-can-break-incumbent-lock-in",
+      "live_canonical": [
+        "https://www.autonomybridge.com/insights/how-underwater-robotics-startups-can-break-incumbent-lock-in"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/insights/how-warehouse-operators-evaluate-robotics-vendors",
+      "status": 200,
+      "final": "https://autonomybridge.com/insights/how-warehouse-operators-evaluate-robotics-vendors",
+      "live_canonical": [
+        "https://www.autonomybridge.com/insights/how-warehouse-operators-evaluate-robotics-vendors"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/insights/how-warehouse-robotics-economics-actually-works",
+      "status": 200,
+      "final": "https://autonomybridge.com/insights/how-warehouse-robotics-economics-actually-works",
+      "live_canonical": [
+        "https://www.autonomybridge.com/insights/how-warehouse-robotics-economics-actually-works"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/insights/how-warehouse-workflows-determine-automation-success",
+      "status": 200,
+      "final": "https://autonomybridge.com/insights/how-warehouse-workflows-determine-automation-success",
+      "live_canonical": [
+        "https://www.autonomybridge.com/insights/how-warehouse-workflows-determine-automation-success"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/insights/what-autonomous-vehicle-companies-get-wrong-about-freight-sales",
+      "status": 200,
+      "final": "https://autonomybridge.com/insights/what-autonomous-vehicle-companies-get-wrong-about-freight-sales",
+      "live_canonical": [
+        "https://www.autonomybridge.com/insights/what-autonomous-vehicle-companies-get-wrong-about-freight-sales"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/insights/what-warehouse-automation-vendors-need-to-know-about-how-buyers-decide",
+      "status": 200,
+      "final": "https://autonomybridge.com/insights/what-warehouse-automation-vendors-need-to-know-about-how-buyers-decide",
+      "live_canonical": [
+        "https://www.autonomybridge.com/insights/what-warehouse-automation-vendors-need-to-know-about-how-buyers-decide"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/insights/why-63-exoskeleton-companies-cant-break-through-distribution",
+      "status": 200,
+      "final": "https://autonomybridge.com/insights/why-63-exoskeleton-companies-cant-break-through-distribution",
+      "live_canonical": [
+        "https://www.autonomybridge.com/insights/why-63-exoskeleton-companies-cant-break-through-distribution"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/insights/why-cold-storage-automation-economics-are-structurally-different",
+      "status": 200,
+      "final": "https://autonomybridge.com/insights/why-cold-storage-automation-economics-are-structurally-different",
+      "live_canonical": [
+        "https://www.autonomybridge.com/insights/why-cold-storage-automation-economics-are-structurally-different"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/insights/why-commercial-viability-and-technical-readiness-are-not-the-same-thing",
+      "status": 200,
+      "final": "https://autonomybridge.com/insights/why-commercial-viability-and-technical-readiness-are-not-the-same-thing",
+      "live_canonical": [
+        "https://www.autonomybridge.com/insights/why-commercial-viability-and-technical-readiness-are-not-the-same-thing"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/insights/why-direct-only-channel-doesnt-scale-in-robotics",
+      "status": 200,
+      "final": "https://autonomybridge.com/insights/why-direct-only-channel-doesnt-scale-in-robotics",
+      "live_canonical": [
+        "https://www.autonomybridge.com/insights/why-direct-only-channel-doesnt-scale-in-robotics"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/insights/why-general-merchandise-3pls-should-not-automate-too-early",
+      "status": 200,
+      "final": "https://autonomybridge.com/insights/why-general-merchandise-3pls-should-not-automate-too-early",
+      "live_canonical": [
+        "https://www.autonomybridge.com/insights/why-general-merchandise-3pls-should-not-automate-too-early"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/insights/why-healthcare-robotics-deployments-follow-a-different-economic-logic",
+      "status": 200,
+      "final": "https://autonomybridge.com/insights/why-healthcare-robotics-deployments-follow-a-different-economic-logic",
+      "live_canonical": [
+        "https://www.autonomybridge.com/insights/why-healthcare-robotics-deployments-follow-a-different-economic-logic"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/insights/why-maritime-autonomy-revenue-is-not-what-it-appears",
+      "status": 200,
+      "final": "https://autonomybridge.com/insights/why-maritime-autonomy-revenue-is-not-what-it-appears",
+      "live_canonical": [
+        "https://www.autonomybridge.com/insights/why-maritime-autonomy-revenue-is-not-what-it-appears"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/insights/why-mid-market-operators-struggle-to-evaluate-warehouse-robotics",
+      "status": 200,
+      "final": "https://autonomybridge.com/insights/why-mid-market-operators-struggle-to-evaluate-warehouse-robotics",
+      "live_canonical": [
+        "https://www.autonomybridge.com/insights/why-mid-market-operators-struggle-to-evaluate-warehouse-robotics"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/insights/why-parcel-sortation-automation-breaks-at-low-volume",
+      "status": 200,
+      "final": "https://autonomybridge.com/insights/why-parcel-sortation-automation-breaks-at-low-volume",
+      "live_canonical": [
+        "https://www.autonomybridge.com/insights/why-parcel-sortation-automation-breaks-at-low-volume"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/insights/why-robotics-enterprise-deals-stall",
+      "status": 200,
+      "final": "https://autonomybridge.com/insights/why-robotics-enterprise-deals-stall",
+      "live_canonical": [
+        "https://www.autonomybridge.com/insights/why-robotics-enterprise-deals-stall"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/insights/why-robotics-pilots-fail-to-convert-to-commercial-contracts",
+      "status": 200,
+      "final": "https://autonomybridge.com/insights/why-robotics-pilots-fail-to-convert-to-commercial-contracts",
+      "live_canonical": [
+        "https://www.autonomybridge.com/insights/why-robotics-pilots-fail-to-convert-to-commercial-contracts"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/insights/why-robotics-pilots-fail-to-scale",
+      "status": 200,
+      "final": "https://autonomybridge.com/insights/why-robotics-pilots-fail-to-scale",
+      "live_canonical": [
+        "https://www.autonomybridge.com/insights/why-robotics-pilots-fail-to-scale"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/insights/why-warehouse-automation-projects-fail",
+      "status": 200,
+      "final": "https://autonomybridge.com/insights/why-warehouse-automation-projects-fail",
+      "live_canonical": [
+        "https://www.autonomybridge.com/insights/why-warehouse-automation-projects-fail"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/llms.txt",
+      "status": 200,
+      "final": "https://autonomybridge.com/llms.txt",
+      "live_canonical": [],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/market-overview",
+      "status": 200,
+      "final": "https://autonomybridge.com/market-overview",
+      "live_canonical": [
+        "https://www.autonomybridge.com/market-overview"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/market-overview/deployment-economics",
+      "status": 200,
+      "final": "https://autonomybridge.com/market-overview/deployment-economics",
+      "live_canonical": [
+        "https://www.autonomybridge.com/market-overview/deployment-economics"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/market-overview/industry-landscape",
+      "status": 200,
+      "final": "https://autonomybridge.com/market-overview/industry-landscape",
+      "live_canonical": [
+        "https://www.autonomybridge.com/market-overview/industry-landscape"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/market-overview/key-players",
+      "status": 200,
+      "final": "https://autonomybridge.com/market-overview/key-players",
+      "live_canonical": [
+        "https://www.autonomybridge.com/market-overview/key-players"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/market-overview/market-drivers",
+      "status": 200,
+      "final": "https://autonomybridge.com/market-overview/market-drivers",
+      "live_canonical": [
+        "https://www.autonomybridge.com/market-overview/market-drivers"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/market-overview/market-segments",
+      "status": 200,
+      "final": "https://autonomybridge.com/market-overview/market-segments",
+      "live_canonical": [
+        "https://www.autonomybridge.com/market-overview/market-segments"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/market-overview/operator-domains",
+      "status": 200,
+      "final": "https://autonomybridge.com/market-overview/operator-domains",
+      "live_canonical": [
+        "https://www.autonomybridge.com/market-overview/operator-domains"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/market-overview/platform-categories",
+      "status": 200,
+      "final": "https://autonomybridge.com/market-overview/platform-categories",
+      "live_canonical": [
+        "https://www.autonomybridge.com/market-overview/platform-categories"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/market-overview/technology-stack",
+      "status": 200,
+      "final": "https://autonomybridge.com/market-overview/technology-stack",
+      "live_canonical": [
+        "https://www.autonomybridge.com/market-overview/technology-stack"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/market-overview/vendor-landscape",
+      "status": 200,
+      "final": "https://autonomybridge.com/market-overview/vendor-landscape",
+      "live_canonical": [
+        "https://www.autonomybridge.com/market-overview/vendor-landscape"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/methodology",
+      "status": 200,
+      "final": "https://autonomybridge.com/methodology",
+      "live_canonical": [
+        "https://autonomybridge.com/methodology"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/research",
+      "status": 200,
+      "final": "https://autonomybridge.com/research",
+      "live_canonical": [
+        "https://www.autonomybridge.com/research"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/robots.txt",
+      "status": 200,
+      "final": "https://autonomybridge.com/robots.txt",
+      "live_canonical": [],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/sitemap",
+      "status": 200,
+      "final": "https://autonomybridge.com/sitemap",
+      "live_canonical": [
+        "https://www.autonomybridge.com/sitemap"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/sitemap-index.xml",
+      "status": 200,
+      "final": "https://autonomybridge.com/sitemap-index.xml",
+      "live_canonical": [],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/use-cases",
+      "status": 200,
+      "final": "https://autonomybridge.com/use-cases",
+      "live_canonical": [
+        "https://www.autonomybridge.com/use-cases"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/use-cases/aerial-robotics-commercial-viability-evaluation",
+      "status": 200,
+      "final": "https://autonomybridge.com/use-cases/aerial-robotics-commercial-viability-evaluation",
+      "live_canonical": [
+        "https://www.autonomybridge.com/use-cases/aerial-robotics-commercial-viability-evaluation"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/use-cases/amr-deployment-evaluation",
+      "status": 200,
+      "final": "https://autonomybridge.com/use-cases/amr-deployment-evaluation",
+      "live_canonical": [
+        "https://www.autonomybridge.com/use-cases/amr-deployment-evaluation"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/use-cases/cold-storage-automation-evaluation",
+      "status": 200,
+      "final": "https://autonomybridge.com/use-cases/cold-storage-automation-evaluation",
+      "live_canonical": [
+        "https://www.autonomybridge.com/use-cases/cold-storage-automation-evaluation"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/use-cases/general-merchandise-3pl-automation-evaluation",
+      "status": 200,
+      "final": "https://autonomybridge.com/use-cases/general-merchandise-3pl-automation-evaluation",
+      "live_canonical": [
+        "https://www.autonomybridge.com/use-cases/general-merchandise-3pl-automation-evaluation"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/use-cases/goods-to-person-system-evaluation",
+      "status": 200,
+      "final": "https://autonomybridge.com/use-cases/goods-to-person-system-evaluation",
+      "live_canonical": [
+        "https://www.autonomybridge.com/use-cases/goods-to-person-system-evaluation"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/use-cases/humanoid-platform-commercial-readiness",
+      "status": 200,
+      "final": "https://autonomybridge.com/use-cases/humanoid-platform-commercial-readiness",
+      "live_canonical": [
+        "https://www.autonomybridge.com/use-cases/humanoid-platform-commercial-readiness"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/use-cases/parcel-sortation-automation-evaluation",
+      "status": 200,
+      "final": "https://autonomybridge.com/use-cases/parcel-sortation-automation-evaluation",
+      "live_canonical": [
+        "https://www.autonomybridge.com/use-cases/parcel-sortation-automation-evaluation"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/use-cases/retail-dc-automation-evaluation",
+      "status": 200,
+      "final": "https://autonomybridge.com/use-cases/retail-dc-automation-evaluation",
+      "live_canonical": [
+        "https://www.autonomybridge.com/use-cases/retail-dc-automation-evaluation"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/use-cases/robotics-deployment-3pl-warehouses",
+      "status": 200,
+      "final": "https://autonomybridge.com/use-cases/robotics-deployment-3pl-warehouses",
+      "live_canonical": [
+        "https://www.autonomybridge.com/use-cases/robotics-deployment-3pl-warehouses"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/use-cases/service-robotics-deployment-evaluation",
+      "status": 200,
+      "final": "https://autonomybridge.com/use-cases/service-robotics-deployment-evaluation",
+      "live_canonical": [
+        "https://www.autonomybridge.com/use-cases/service-robotics-deployment-evaluation"
+      ],
+      "direct_200": true
+    },
+    {
+      "requested": "https://autonomybridge.com/use-cases/warehouse-automation-roi-evaluation",
+      "status": 200,
+      "final": "https://autonomybridge.com/use-cases/warehouse-automation-roi-evaluation",
+      "live_canonical": [
+        "https://www.autonomybridge.com/use-cases/warehouse-automation-roi-evaluation"
+      ],
+      "direct_200": true
+    }
+  ],
+  "live_www_redirect": {
+    "requested": "https://www.autonomybridge.com/",
+    "status": 200,
+    "final": "https://autonomybridge.com/",
+    "live_canonical": [
+      "https://www.autonomybridge.com"
+    ],
+    "direct_200": false
+  },
+  "passed": true
+}
