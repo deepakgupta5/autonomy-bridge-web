@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "checks": [
+    "Disabled adapter makes no network call",
+    "Deployed entrypoint hard-disabled",
+    "Invalid input/origin rejected before send",
+    "HTML, mismatched receipt, pending and server error never become success; no repost",
+    "Exact reference receipt confirms acceptance and Netlify encoding retained",
+    "Timeout remains unknown",
+    "Server confirms only stored matching fresh record and returns no PII",
+    "Missing, mismatched, stale, invalid and malformed provider records fail closed",
+    "Disabled verifier and invalid reference make no network call"
+  ],
+  "transport": "Injected response fixtures only; no real fetch, service acceptance or mailbox test"
+}

@@ -25,6 +25,8 @@ const fields = [
 <p class="test-notice">Preview form: no enquiries or notifications are sent. Submission outcomes require a controlled local test response.</p></div>
 <form name="contact" method="POST" action="/contact-success" data-netlify="true" netlify-honeypot="bot-field" novalidate>
 <input type="hidden" name="form-name" value="contact" />
+<!-- Prepared receipt correlation field; preview transport remains loopback-only. -->
+<input type="hidden" name="submission-reference" value="" />
 <div hidden><label for="bot-field">Leave blank</label><input id="bot-field" name="bot-field" tabindex="-1" autocomplete="off" /></div>
 <p id="form-status" role="alert" tabindex="-1"></p>
 {fields.map(field => <div class="field">

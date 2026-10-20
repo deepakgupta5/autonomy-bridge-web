@@ -1,0 +1,168 @@
+{
+  "scope": "Only 18 selected V2 paragraph occurrences; exact wording and figures excluded from public repo",
+  "source_zip_sha256": "5353576453a416ac700fe91b9b3432992414ec04a9709002dfdc11efcab98ade",
+  "entries": [
+    {
+      "id": "P01",
+      "route": "/",
+      "copy_text_line_1_based": 15,
+      "source": "V2 website_copy.json",
+      "accuracy": "unverified",
+      "publication_permission": "pending",
+      "private_detail": ".preview-private/release-evidence/proof-confirmation.md"
+    },
+    {
+      "id": "P02",
+      "route": "/",
+      "copy_text_line_1_based": 17,
+      "source": "V2 website_copy.json",
+      "accuracy": "unverified",
+      "publication_permission": "pending",
+      "private_detail": ".preview-private/release-evidence/proof-confirmation.md"
+    },
+    {
+      "id": "P03",
+      "route": "/",
+      "copy_text_line_1_based": 26,
+      "source": "V2 website_copy.json",
+      "accuracy": "unverified",
+      "publication_permission": "pending",
+      "private_detail": ".preview-private/release-evidence/proof-confirmation.md"
+    },
+    {
+      "id": "P04",
+      "route": "/",
+      "copy_text_line_1_based": 36,
+      "source": "V2 website_copy.json",
+      "accuracy": "unverified",
+      "publication_permission": "pending",
+      "private_detail": ".preview-private/release-evidence/proof-confirmation.md"
+    },
+    {
+      "id": "P05",
+      "route": "/",
+      "copy_text_line_1_based": 44,
+      "source": "V2 website_copy.json",
+      "accuracy": "unverified",
+      "publication_permission": "pending",
+      "private_detail": ".preview-private/release-evidence/proof-confirmation.md"
+    },
+    {
+      "id": "P06",
+      "route": "/",
+      "copy_text_line_1_based": 45,
+      "source": "V2 website_copy.json",
+      "accuracy": "unverified",
+      "publication_permission": "pending",
+      "private_detail": ".preview-private/release-evidence/proof-confirmation.md"
+    },
+    {
+      "id": "P07",
+      "route": "/commercial-leadership",
+      "copy_text_line_1_based": 38,
+      "source": "V2 website_copy.json",
+      "accuracy": "unverified",
+      "publication_permission": "pending",
+      "private_detail": ".preview-private/release-evidence/proof-confirmation.md"
+    },
+    {
+      "id": "P08",
+      "route": "/commercial-leadership",
+      "copy_text_line_1_based": 40,
+      "source": "V2 website_copy.json",
+      "accuracy": "unverified",
+      "publication_permission": "pending",
+      "private_detail": ".preview-private/release-evidence/proof-confirmation.md"
+    },
+    {
+      "id": "P09",
+      "route": "/commercial-leadership",
+      "copy_text_line_1_based": 42,
+      "source": "V2 website_copy.json",
+      "accuracy": "unverified",
+      "publication_permission": "pending",
+      "private_detail": ".preview-private/release-evidence/proof-confirmation.md"
+    },
+    {
+      "id": "P10",
+      "route": "/ai-consulting",
+      "copy_text_line_1_based": 42,
+      "source": "V2 website_copy.json",
+      "accuracy": "unverified",
+      "publication_permission": "pending",
+      "private_detail": ".preview-private/release-evidence/proof-confirmation.md"
+    },
+    {
+      "id": "P11",
+      "route": "/ai-consulting",
+      "copy_text_line_1_based": 43,
+      "source": "V2 website_copy.json",
+      "accuracy": "unverified",
+      "publication_permission": "pending",
+      "private_detail": ".preview-private/release-evidence/proof-confirmation.md"
+    },
+    {
+      "id": "P12",
+      "route": "/ai-consulting",
+      "copy_text_line_1_based": 45,
+      "source": "V2 website_copy.json",
+      "accuracy": "unverified",
+      "publication_permission": "pending",
+      "private_detail": ".preview-private/release-evidence/proof-confirmation.md"
+    },
+    {
+      "id": "P13",
+      "route": "/ai-consulting",
+      "copy_text_line_1_based": 46,
+      "source": "V2 website_copy.json",
+      "accuracy": "unverified",
+      "publication_permission": "pending",
+      "private_detail": ".preview-private/release-evidence/proof-confirmation.md"
+    },
+    {
+      "id": "P14",
+      "route": "/about",
+      "copy_text_line_1_based": 9,
+      "source": "V2 website_copy.json",
+      "accuracy": "unverified",
+      "publication_permission": "pending",
+      "private_detail": ".preview-private/release-evidence/proof-confirmation.md"
+    },
+    {
+      "id": "P15",
+      "route": "/about",
+      "copy_text_line_1_based": 10,
+      "source": "V2 website_copy.json",
+      "accuracy": "unverified",
+      "publication_permission": "pending",
+      "private_detail": ".preview-private/release-evidence/proof-confirmation.md"
+    },
+    {
+      "id": "P16",
+      "route": "/about",
+      "copy_text_line_1_based": 11,
+      "source": "V2 website_copy.json",
+      "accuracy": "unverified",
+      "publication_permission": "pending",
+      "private_detail": ".preview-private/release-evidence/proof-confirmation.md"
+    },
+    {
+      "id": "P17",
+      "route": "/about",
+      "copy_text_line_1_based": 15,
+      "source": "V2 website_copy.json",
+      "accuracy": "unverified",
+      "publication_permission": "pending",
+      "private_detail": ".preview-private/release-evidence/proof-confirmation.md"
+    },
+    {
+      "id": "P18",
+      "route": "/about",
+      "copy_text_line_1_based": 16,
+      "source": "V2 website_copy.json",
+      "accuracy": "unverified",
+      "publication_permission": "pending",
+      "private_detail": ".preview-private/release-evidence/proof-confirmation.md"
+    }
+  ]
+}
