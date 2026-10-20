@@ -164,7 +164,7 @@ The company redesigned its pilot measurement framework and revised its commercia
 
 ## Lessons for the Industry {#lessons}
 
-(Autonomy Bridge proprietary analysis, 2026)
+(Autonomy Bridge analytical interpretation; underlying evidence not independently verified)
 
 Robotics vendors frequently attribute stalled deployments to operator budget cycles or procurement timelines. The more common cause is an information gap: operators cannot approve capital without utilization modeling across realistic demand scenarios, downside scenario analysis, and disaggregated labor substitution estimates that align with internal financial approval requirements.
 
@@ -182,7 +182,7 @@ Vendors that design pilots to produce the evidence operators need at each decisi
 ## Frequently Asked Questions {#faq}
 
 **Why were the robotics vendor's pilots stalling at the capital approval gate?**
-Pilots stalled consistently at the capital approval gate ,  not at the operational evaluation stage ,  because vendor proposals lacked three elements operator finance teams required: utilization modeling across full demand cycles (not only peak performance data), disaggregated labor substitution estimates that separated removable labor share from gross labor in the automated process, and downside scenario analysis showing capital recovery outcomes if demand fell below the base case. Two of three stalled pilots were reactivated within two quarters after the vendor revised its proposal structure. (Autonomy Bridge proprietary analysis, 2026)
+Pilots stalled consistently at the capital approval gate ,  not at the operational evaluation stage ,  because vendor proposals lacked three elements operator finance teams required: utilization modeling across full demand cycles (not only peak performance data), disaggregated labor substitution estimates that separated removable labor share from gross labor in the automated process, and downside scenario analysis showing capital recovery outcomes if demand fell below the base case. Two of three stalled pilots were reactivated within two quarters after the vendor revised its proposal structure. (Autonomy Bridge analytical interpretation; underlying evidence not independently verified)
 
 **What information do operators require to approve automation capital after a successful pilot?**
 Operators require three categories of financial evidence before approving automation capital: utilization modeling across base, downside, and stress demand scenarios (not just peak operating conditions); disaggregated labor substitution showing the actual removable labor share rather than gross labor in the automated process; and downside scenario analysis with explicit capital recovery outcomes under each scenario. Pilots that generate operational performance data without addressing these financial evidence requirements stall at the capital approval gate regardless of technical success.
@@ -195,93 +195,3 @@ Robotics vendors should design pilots to produce the evidence operators need at 
 
 
 ---
-
-```json
-{
-  "@context": "https://schema.org",
-  "@type": ["Article", "FAQPage"],
-  "inLanguage": "en",
-  "speakable": {
-    "@type": "SpeakableSpecification",
-    "cssSelector": ["#top", "#faq"]
-  },
-  "headline": "Vendor Deployment Viability Assessment",
-  "description": "Autonomy Bridge identified why a Series B warehouse robotics vendor's pilots were stalling at the capital approval gate and how revising the commercial proposal structure reactivated two of three stalled deployments.",
-  "url": "https://autonomybridge.com/case-studies/vendor-deployment-viability-assessment",
-  "datePublished": "2026-03-15",
-  "dateModified": "2026-03-15",
-  "author": [
-    {
-      "@type": "Person",
-      "name": "Deepak Gupta",
-      "@id": "author_deepak_001",
-      "jobTitle": "Founder & Principal Analyst",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Autonomy Bridge",
-        "url": "https://autonomybridge.com"
-      },
-      "url": "https://autonomybridge.com/about",
-      "sameAs": "https://www.linkedin.com/in/deepakgupta5"
-    }
-  ],
-  "publisher": {
-    "@type": "Organization",
-    "name": "Autonomy Bridge",
-    "url": "https://autonomybridge.com",
-    "sameAs": [
-      "https://www.linkedin.com/company/autonomybridge",
-      "https://twitter.com/autonomybridge"
-    ]
-  },
-  "isPartOf": { "@type": "CollectionPage", "url": "https://autonomybridge.com/case-studies" },
-  "about": [
-    { "@type": "Thing", "name": "Robotics Pilot Conversion" },
-    { "@type": "Thing", "name": "Deployment Economics" },
-    { "@type": "Thing", "name": "Capital Approval Gate" },
-    { "@type": "Thing", "name": "Pilot-to-Scale Failure" }
-  ],
-  "breadcrumb": {
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://autonomybridge.com" },
-      { "@type": "ListItem", "position": 2, "name": "Case Studies", "item": "https://autonomybridge.com/case-studies" },
-      { "@type": "ListItem", "position": 3, "name": "Vendor Deployment Viability Assessment", "item": "https://autonomybridge.com/case-studies/vendor-deployment-viability-assessment" }
-    ]
-  },
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Why were the robotics vendor's pilots stalling at the capital approval gate?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Pilots stalled consistently at the capital approval gate ,  not at the operational evaluation stage ,  because vendor proposals lacked three elements operator finance teams required: utilization modeling across full demand cycles (not only peak performance data), disaggregated labor substitution estimates that separated removable labor share from gross labor in the automated process, and downside scenario analysis showing capital recovery outcomes if demand fell below the base case. Two of three stalled pilots were reactivated within two quarters after the vendor revised its proposal structure. (Autonomy Bridge proprietary analysis, 2026)"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What information do operators require to approve automation capital after a successful pilot?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Operators require three categories of financial evidence before approving automation capital: utilization modeling across base, downside, and stress demand scenarios (not just peak operating conditions); disaggregated labor substitution showing the actual removable labor share rather than gross labor in the automated process; and downside scenario analysis with explicit capital recovery outcomes under each scenario. Pilots that generate operational performance data without addressing these financial evidence requirements stall at the capital approval gate regardless of technical success."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the most common and least-analysed failure pattern in warehouse automation programs?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The most common and least-analysed failure pattern is the pilot-to-scale stall: a pilot succeeds because it is insulated from the conditions that would stress the system at scale, then stalls at capital approval because it never generates the economic evidence operators need to commit capital. Sales teams attribute these stalls to budget cycles. The actual cause is an information gap between what pilots measure (operational performance) and what operators need to approve capital (utilization modeling, disaggregated labor substitution, downside scenario analysis)."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How should robotics vendors design pilots to improve capital approval conversion rates?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Robotics vendors should design pilots to produce the evidence operators need at each decision gate, not just to demonstrate operational performance. This requires measuring utilization across the full demand range encountered during the pilot ,  not only during high-demand periods ,  disaggregating labor reduction into removable and reallocated categories, and documenting integration stability under real exception conditions. Vendors that treat pilots as deployment proof points rather than evidence generation exercises consistently stall at capital approval even when the technology performs correctly."
-      }
-    }
-  ]
-}
-```

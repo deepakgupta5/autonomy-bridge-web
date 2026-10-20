@@ -3,15 +3,15 @@ title: "Customer Concentration Risk"
 term: "Customer Concentration Risk"
 termId: "T71"
 slug: "customer-concentration-risk"
-description: "The utilization exposure created when a small number of customers generate a disproportionate share of throughput volume, such that a single exit pushes volume below the capital recovery threshold."
-summary: "The utilization exposure created when a small number of customers generate a disproportionate share of throughput volume, such that a single exit pushes volume below the capital recovery threshold. Customer concentration risk is the primary…"
-definition: "The utilization exposure created when a small number of customers generate a disproportionate share of throughput volume, such that a single exit pushes volume below the capital recovery threshold."
+description: "Exposure to changes in the volume or revenue contributed by individual customers, assessed against the project cash-flow assumptions and contract terms."
+summary: "Exposure to changes in the volume or revenue contributed by individual customers, assessed against the project cash-flow assumptions and contract terms."
+definition: "Exposure to changes in the volume or revenue contributed by individual customers, assessed against the project cash-flow assumptions and contract terms."
 glossaryCategory: "deployment-economics"
 contentType: "glossary"
 status: "published"
 canonicalPath: "/glossary/customer-concentration-risk"
 seoTitle: "Customer Concentration Risk | Autonomy Bridge Glossary"
-seoDescription: "The utilization exposure created when a small number of customers generate a disproportionate share of throughput volume, such that a single exit pushes volume below the capital recovery threshold."
+seoDescription: "Exposure to changes in the volume or revenue contributed by individual customers, assessed against the project cash-flow assumptions and contract terms."
 keywords:
   - "glossary"
   - "Deployment Economics"
@@ -44,9 +44,7 @@ migration:
   aipmVersion: "1.0"
 ---
 
-The utilization exposure created when a small number of customers generate a disproportionate share of throughput volume, such that a single exit pushes volume below the capital recovery threshold.
-
-Customer concentration risk is the primary structural vulnerability in 3PL and multi-client sortation automation. When a single customer accounts for 30-50% of total throughput, the capital recovery model for the automation system is implicitly underwritten by that customer's continued volume. A contract non-renewal, volume reduction, or customer business failure directly degrades system utilization  -  potentially below the floor required for capital recovery viability. This risk compounds with contract duration risk: a customer on a short-term agreement who generates high throughput concentration creates both a near-term exit probability and a severe utilization consequence if that exit occurs. Automation investment decisions in 3PL environments should stress-test capital recovery scenarios against realistic customer attrition scenarios, not just contracted volume  -  and should evaluate whether the automation architecture can redistribute displaced capacity to alternative customers or segments if concentration risk materializes.
+Evaluate the initial installed investment (C0, currency units) against incremental net cash flows over a stated horizon H (years). Define utilization using throughput and capacity over the same period. A break-even utilization or volume can be solved only if the project-specific cash-flow function supports one; it is not a universal operating threshold. Annual capital cost divided by savings per unit has units of units per year, not a utilization percentage, and does not by itself establish project payback.
 
 **Related terms:** [Sortation Volume Floor](/glossary/sortation-volume-floor) · [Contract Duration Risk](/glossary/contract-duration-risk) · [Capital Recovery Period](/glossary/capital-recovery-period)
 

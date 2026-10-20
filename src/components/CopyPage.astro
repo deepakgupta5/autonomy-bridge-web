@@ -1,5 +1,4 @@
 ---
-import fs from 'node:fs';
 import {deploymentPolicy} from '../../config/deployment-policy.mjs';
 import MainLayout from './MainLayout.astro';
 import pages from '../data/preview-copy.json';
@@ -8,13 +7,14 @@ import '../styles/home.css';
 import '../styles/core.css';
 const { route } = Astro.props;
 const page = pages[route];
-const privatePath = `${process.cwd()}/.preview-private/copy.json`;
-if (deploymentPolicy.mode === 'local' && process.env.AB_PRIVATE_PREVIEW === '1' && !fs.existsSync(privatePath)) throw new Error('Import the V2 ZIP using scripts/import-private-proof.py first.');
-const overlay = deploymentPolicy.mode === 'local' && process.env.AB_PRIVATE_PREVIEW === '1' && fs.existsSync(privatePath) ? JSON.parse(fs.readFileSync(privatePath, 'utf8')) : {};
-let body = overlay[route] ?? page.html;
-if (deploymentPolicy.mode === 'production') body = body.replace(/<p class="revision-date">.*?<\/p>/g, `<p class="revision-date">Last updated: ${deploymentPolicy.publicationDate}</p>`);
+// Approved public proof is already in the active copy. Legacy whole-page private
+// overlays must not restore superseded wording or layouts in local reviews.
+let body = page.html;
+const isLegal = ['/privacy-policy', '/terms-of-use', '/cookie-policy'].includes(route);
+if (isLegal) body = body.replace(/<p class="revision-date">.*?<\/p>/g, deploymentPolicy.researchRevisionDate ? `<p class="revision-date">Last updated: ${deploymentPolicy.researchRevisionDate}</p>` : '<p class="revision-date">Revision prepared for release; publication pending.</p>');
+else if (deploymentPolicy.mode === 'production') body = body.replace(/<p class="revision-date">.*?<\/p>/g, `<p class="revision-date">Last updated: ${deploymentPolicy.publicationDate}</p>`);
 const schema = route === '/methodology' ? [{ '@context': 'https://schema.org', '@type': 'Article', headline: page.name, datePublished: '2026-03-15', ...(deploymentPolicy.mode === 'production' ? {dateModified: deploymentPolicy.publicationDate} : {}) }] : [];
 ---
-<MainLayout title={page.name} canonicalPath={route} canonicalHref={route === "/methodology" ? "https://autonomybridge.com/methodology" : undefined} seoTitle={page.metadata.title} seoDescription={page.metadata.description} schema={schema} showLocalSubnav={route === '/methodology'}>
+<MainLayout title={page.name} canonicalPath={route} seoTitle={page.metadata.title} seoDescription={page.metadata.description} schema={schema} showLocalSubnav={route === '/methodology'}>
   <article class:list={['approved-copy', { 'home-copy': route === '/', 'core-copy': ['/commercial-leadership', '/ai-consulting', '/about', '/research'].includes(route), 'policy-copy': route.includes('policy') || route === '/terms-of-use' || route === '/methodology' }]} set:html={body} />
 </MainLayout>

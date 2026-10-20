@@ -9,8 +9,8 @@ document:
   slug: "cold-storage-automation-economics-assessment"
 
 title: "Cold Storage Automation Economics Assessment"
-description: "Autonomy Bridge assessed a proposed ASRS investment for a frozen food distributor's primary cold storage facility ,  rebuilding the economic model using cold-specific maintenance benchmarks and actual AMR battery performance data from cold-environment deployments, and identifying that the vendor's ROI projection relied on ambient operating cost assumptions that the facility's temperature zones structurally invalidated."
-summary: "A frozen food distributor evaluating a cold-rated ASRS system had received a vendor ROI model projecting a 4.8-year payback built on the facility's high freezer labor cost. Autonomy Bridge rebuilt the economics using cold-environment maintenance reference data and corrected the removable labor share. The engagement identified that ambient maintenance benchmarks in the proposal understated cold-specific operating cost by a material margin, and that the AMR zone-transition component's battery performance at -10°F fell below the uptime assumptions in the ROI model. At corrected economics, the investment was viable but at a 7.2-year payback ,  requiring the operator to restructure scope and sequence before committing capital."
+description: "Cold Storage Automation Economics Assessment. A source account of the evaluation scope and decision context. Unsupported quantitative outcomes have been withdrawn; the account is not independently verified."
+summary: "Cold Storage Automation Economics Assessment. A source account of the evaluation scope and decision context. Unsupported quantitative outcomes have been withdrawn; the account is not independently verified."
 
 authors:
   - id: "author_deepak_001"
@@ -55,9 +55,9 @@ taxonomy:
 
 seo:
   meta_title: "Cold Storage Automation Economics Assessment | Case Study ,  Autonomy Bridge"
-  meta_description: "Independent economic assessment of a cold-rated ASRS investment for a frozen food distributor. Vendor ROI used ambient maintenance benchmarks. Cold-specific modeling extended payback from 4.8 to 7.2 years."
+  meta_description: "Cold Storage Automation Economics Assessment. A source account of the evaluation scope and decision context. Unsupported quantitative outcomes have been withdrawn; the account is not independently verified."
   og_title: "Cold Storage Automation Economics Assessment ,  Autonomy Bridge"
-  og_description: "Vendor ROI model relied on ambient maintenance benchmarks for a -10°F facility. Cold-specific economic modeling revealed a 50% longer payback period. Operator restructured scope before committing capital."
+  og_description: "Cold Storage Automation Economics Assessment. A source account of the evaluation scope and decision context. Unsupported quantitative outcomes have been withdrawn; the account is not independently verified."
   og_type: "article"
   twitter_card: "summary_large_image"
 
@@ -117,7 +117,7 @@ integrity:
 
 ## Situation {#situation}
 
-A regional frozen food distributor operating two cold storage facilities was evaluating a cold-rated automated storage and retrieval system for its primary site ,  a 280,000 square foot facility with frozen (-10°F to 0°F) and chilled (35-40°F) zones handling inbound from four production suppliers and outbound to regional grocery retailers and foodservice distributors.
+The numerical results in this source account have been withdrawn because publishable supporting records were not available for this review. The case identity is retained; this is not a hypothetical result or an independently verified client outcome.
 
 The vendor had presented a compelling ROI case built directly on the facility's labor cost structure. Freezer zone labor was expensive and difficult to source: hazard pay premiums, high turnover, mandatory warm-up rotations, and persistent recruitment difficulty in the local labor market combined to produce a fully burdened labor cost per productive hour well above the operator's ambient warehouse experience. The vendor's model projected a 4.8-year payback, positioning the investment as straightforward given the elevated labor cost the system would eliminate.
 
@@ -151,13 +151,8 @@ The engagement also examined the operator's planned Phase 2 scope: a deep-freeze
 
 ## Key Findings {#key-findings}
 
-- The vendor's maintenance cost model used an ambient-baseline assumption of 8-9% of capital cost per year ,  a standard figure for ambient ASRS deployments. Cold-environment reference data from the vendor's own comparable installations showed actual maintenance cost running at 13-16% of capital cost per year, driven by shorter lubrication intervals, higher unscheduled intervention frequency at zone-transition condensation points, and cold-specification replacement part costs above ambient equivalents. Applied to this facility's proposed capex, the maintenance cost gap represented a seven-figure cumulative overstatement of net returns across the system life.
 
-- The AMR zone-transition component's effective utilization at -10°F was 18-22% lower than the proposal assumed. Cold-environment battery performance data showed more frequent charging cycles required at sustained sub-zero temperatures, reducing productive unit-hours per operating day. At the fleet size specified in the proposal, peak-period zone-transition throughput would fall short of the design specification that the downstream outbound staging workflow depended on.
-
-- The freezer zone labor audit identified that 28% of current freezer headcount performed functions the ASRS did not automate ,  inbound QC, exception handling, and zone-boundary management. The vendor's removable labor share calculation had applied automation savings to gross freezer headcount rather than the automatable subset. Correcting the removable share reduced the annual labor savings figure by approximately 22% from the proposal projection.
-
-- With maintenance modeled at cold-specific rates and labor savings at the correct removable share, the investment remained economically viable ,  but at a 7.2-year payback rather than the vendor's 4.8-year projection. The operator's stated capital recovery threshold was seven years. The investment was marginally viable at corrected economics; it was not the straightforward case the vendor proposal had presented.
+- Evaluate the initial installed investment (C0, currency units) against incremental net cash flows over a stated horizon H (years). Define utilization using throughput and capacity over the same period. A break-even utilization or volume can be solved only if the project-specific cash-flow function supports one; it is not a universal operating threshold. Annual capital cost divided by savings per unit has units of units per year, not a utilization percentage, and does not by itself establish project payback.
 
 - The Phase 2 deep-freeze extension at -20°F would require a further cold-rating upgrade with an incremental capital and maintenance cost profile that the vendor had not modeled. Including the Phase 2 scope in a combined economic model moved the blended payback above the operator's threshold. Phase 1 and Phase 2 required separate economic cases rather than the unified deployment the vendor had proposed.
 
@@ -173,7 +168,7 @@ The assessment produced a revised decision boundary: the maximum capital cost at
 
 ## Decision Outcome {#decision-outcome}
 
-The operator restructured the investment into two independent phases. Phase 1 proceeded as an ASRS-only deployment covering the frozen zone, with the AMR zone-transition component removed from scope and replaced by manual pallet movers that added modest labor cost but eliminated the AMR uptime risk at the zone boundary. At the reduced Phase 1 capex and corrected cold-specific economics, the investment met the operator's seven-year capital recovery threshold. Phase 2 ,  the deep-freeze zone extension ,  was deferred pending two years of Phase 1 operational data, with a specific commitment to re-evaluate Phase 2 economics using actual maintenance cost records from Phase 1 deployment rather than vendor projections.
+Evaluate the initial installed investment (C0, currency units) against incremental net cash flows over a stated horizon H (years). Define utilization using throughput and capacity over the same period. A break-even utilization or volume can be solved only if the project-specific cash-flow function supports one; it is not a universal operating threshold. Annual capital cost divided by savings per unit has units of units per year, not a utilization percentage, and does not by itself establish project payback.
 
 The capital committee approved Phase 1 at the restructured scope. The engagement identified that the original proposal, if approved as submitted, would have committed capital to a Phase 1 and Phase 2 combined deployment whose blended economics did not meet the operator's stated threshold ,  not because the technology was wrong but because the operating cost model was built for a different environment than the one the system would actually operate in.
 
@@ -181,7 +176,7 @@ The capital committee approved Phase 1 at the restructured scope. The engagement
 
 ## Lessons for the Industry {#lessons}
 
-(Autonomy Bridge proprietary analysis, 2026)
+(Autonomy Bridge analytical interpretation; underlying evidence not independently verified)
 
 Cold storage automation assessments fail in a specific and predictable way: the labor savings case is accurate, and the capital cost side is accurate, but the operating cost model is wrong because it is borrowed from ambient deployments where vendor reference data is more abundant. The result is an ROI projection that correctly identifies the opportunity ,  high freezer labor cost ,  while systematically understating the cost of capturing it.
 
@@ -199,107 +194,8 @@ The AMR zone-transition problem in this engagement illustrates a second lesson: 
 
 ## Frequently Asked Questions {#faq}
 
-**What did the cold storage automation economics assessment find?**
-Autonomy Bridge rebuilt the economic model using cold-environment maintenance reference data from the vendor's comparable installations and corrected the removable labor share by disaggregating automatable from residual freezer zone headcount. The vendor's maintenance cost assumption of 8-9% of capital per year ,  standard for ambient ASRS deployments ,  was 13-16% in cold-environment reference data from comparable facilities. The AMR zone-transition component's effective utilization at -10°F was 18-22% below proposal assumptions due to cold-temperature battery performance. With both corrections applied, the investment was viable but at a 7.2-year payback versus the vendor's 4.8-year projection. The operator restructured scope to a Phase 1 ASRS-only deployment that met the seven-year threshold and deferred the deep-freeze Phase 2 extension pending actual maintenance data from Phase 1. (Autonomy Bridge proprietary analysis, 2026)
-
-**Why did the vendor's maintenance cost assumption understate cold storage operating cost?**
-The vendor's maintenance model used 8-9% of capital cost per year ,  a benchmark established from ambient ASRS deployments where the vendor's reference data base is largest. In cold environments, lubrication intervals are shorter by manufacturer specification, condensation at zone-transition points causes unscheduled maintenance interventions not present in ambient schedules, and cold-specification replacement parts carry higher unit costs than ambient equivalents. The gap between ambient-benchmark maintenance projections and cold-specific actuals is directionally consistent across cold-environment deployments ,  it is not facility-specific variation but a structural consequence of applying ambient standards to cold-environment operating conditions. Correcting it required cold-environment operational reference data from the vendor's cold install base, which existed but was not included in the standard proposal documentation.
-
-**What is the AMR cold-environment battery problem and how did it affect this assessment?**
-Autonomous mobile robots that perform reliably at ambient temperatures require more frequent charging cycles in sustained sub-zero conditions because battery chemistry generates less capacity at low temperatures. In this assessment, the AMR zone-transition component ,  specified to move pallets between the frozen zone and ambient outbound staging ,  had effective utilization at -10°F that was 18-22% lower than the ambient-condition uptime specification in the vendor proposal. At the fleet size specified, zone-transition throughput during peak periods would fall below the design rate that downstream outbound staging relied on. This was not a technology failure ,  it was a specification error: ambient uptime expectations applied to a cold-environment deployment. The resolution was to remove the AMR component from Phase 1 scope and replace it with manual pallet movers, accepting a modest labor cost in the zone-transition workflow in exchange for eliminating the throughput risk.
 
 **What is the correct approach for modeling cold storage automation economics before capital commitment?**
 Cold storage automation economics require cold-specific inputs on both the labor and capital sides. On the labor side: facility-specific fully burdened freezer labor cost including hazard pay, turnover, and warm-up break overhead, applied only to the removable share ,  the portion of freezer headcount whose functions the automation actually eliminates. On the capital side: maintenance cost modeled at cold-environment rates from comparable cold deployments, not ambient benchmarks; AMR performance specifications at the operating temperature zone, not ambient-condition specs; and replacement part costs for cold-specification components. The correct request to a vendor is for cold-environment operational reference data ,  maintenance logs and cost records from installations at comparable temperatures ,  not ambient benchmark estimates applied to the proposed cold-environment system. Operators who run the economic model from those inputs produce a capital commitment decision grounded in how the system will actually perform.
 
 ---
-
-```json
-{
-  "@context": "https://schema.org",
-  "@type": ["Article", "FAQPage"],
-  "inLanguage": "en",
-  "speakable": {
-    "@type": "SpeakableSpecification",
-    "cssSelector": ["#top", "#faq"]
-  },
-  "headline": "Cold Storage Automation Economics Assessment",
-  "description": "Independent economic assessment of a cold-rated ASRS investment for a frozen food distributor ,  rebuilding the ROI model using cold-specific maintenance benchmarks and AMR battery performance data from cold-environment deployments.",
-  "url": "https://autonomybridge.com/case-studies/cold-storage-automation-economics-assessment",
-  "datePublished": "2026-04-01",
-  "dateModified": "2026-04-01",
-  "author": [
-    {
-      "@type": "Person",
-      "name": "Deepak Gupta",
-      "@id": "author_deepak_001",
-      "jobTitle": "Founder & Principal Analyst",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Autonomy Bridge",
-        "url": "https://autonomybridge.com"
-      },
-      "url": "https://autonomybridge.com/about",
-      "sameAs": "https://www.linkedin.com/in/deepakgupta5"
-    }
-  ],
-  "publisher": {
-    "@type": "Organization",
-    "name": "Autonomy Bridge",
-    "url": "https://autonomybridge.com",
-    "sameAs": [
-      "https://www.linkedin.com/company/autonomybridge",
-      "https://twitter.com/autonomybridge"
-    ]
-  },
-  "isPartOf": { "@type": "CollectionPage", "url": "https://autonomybridge.com/case-studies" },
-  "about": [
-    { "@type": "Thing", "name": "Cold Storage Automation Economics" },
-    { "@type": "Thing", "name": "Cold-Rated System Premium" },
-    { "@type": "Thing", "name": "Cold Storage Maintenance Burden" },
-    { "@type": "Thing", "name": "AMR Cold Environment Performance" },
-    { "@type": "Thing", "name": "Frozen Distribution Automation" }
-  ],
-  "breadcrumb": {
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://autonomybridge.com" },
-      { "@type": "ListItem", "position": 2, "name": "Case Studies", "item": "https://autonomybridge.com/case-studies" },
-      { "@type": "ListItem", "position": 3, "name": "Cold Storage Automation Economics Assessment", "item": "https://autonomybridge.com/case-studies/cold-storage-automation-economics-assessment" }
-    ]
-  },
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What did the cold storage automation economics assessment find?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Autonomy Bridge rebuilt the economic model using cold-environment maintenance reference data and corrected the removable labor share. The vendor's maintenance cost assumption of 8-9% of capital per year ran at 13-16% in cold-environment reference data. AMR utilization at -10°F was 18-22% below proposal assumptions due to battery performance degradation. With corrections applied, the investment was viable at a 7.2-year payback versus the vendor's 4.8-year projection. The operator restructured to a Phase 1 ASRS-only deployment meeting the seven-year threshold and deferred Phase 2 pending actual maintenance data. (Autonomy Bridge proprietary analysis, 2026)"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Why did the vendor's maintenance cost assumption understate cold storage operating cost?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The vendor's maintenance model used 8-9% of capital per year ,  a benchmark from ambient ASRS deployments. In cold environments, lubrication intervals are shorter by manufacturer specification, condensation at zone-transition points causes unscheduled interventions not present in ambient schedules, and cold-specification replacement parts carry higher unit costs. The gap between ambient-benchmark projections and cold-specific actuals is directionally consistent across cold-environment deployments ,  a structural consequence of applying ambient standards to cold operating conditions, not facility-specific variation."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the AMR cold-environment battery problem and how did it affect this assessment?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "AMRs require more frequent charging cycles in sub-zero conditions because battery chemistry generates less capacity at low temperatures. In this assessment, the AMR zone-transition component had effective utilization at -10°F that was 18-22% below the ambient-condition specification in the vendor proposal. At the specified fleet size, zone-transition throughput during peak periods would fall below the design rate. The resolution was to remove the AMR from Phase 1 scope and replace with manual pallet movers, accepting modest labor cost in exchange for eliminating the throughput risk."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the correct approach for modeling cold storage automation economics before capital commitment?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Cold storage automation economics require cold-specific inputs on both sides. Labor side: facility-specific fully burdened freezer labor cost applied only to the removable share ,  the subset of freezer headcount whose functions automation actually eliminates. Capital side: maintenance cost from cold-environment reference data at comparable temperatures, AMR performance at the operating temperature zone, and cold-specification replacement part costs. The correct vendor request is for cold-environment operational reference data ,  maintenance logs and cost records from comparable cold installations ,  not ambient benchmarks applied to a cold-environment system."
-      }
-    }
-  ]
-}
-```

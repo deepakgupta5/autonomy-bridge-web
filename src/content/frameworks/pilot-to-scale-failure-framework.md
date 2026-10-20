@@ -121,7 +121,7 @@ integrity:
 
 # Pilot-to-Scale Failure Framework {#definition}
 
-The **Pilot-to-Scale Failure Framework** is a proprietary operational analysis model developed by Autonomy Bridge that identifies five structural constraints ,  unit density and congestion, queue formation, orchestration complexity, environmental constraints, and integration architecture ,  that cause robotics systems to succeed in controlled pilots but fail under full operational deployment. The framework evaluates the transition from pilot environment to operational scale, focusing on system-level behavior rather than task-level performance metrics. It applies across all robotic platform types: intralogistics mobile platforms, aerial systems, service robots, inspection platforms, surgical robots, off-highway autonomous vehicles, and wearable systems. (Autonomy Bridge proprietary analysis, 2026)
+The **Pilot-to-Scale Failure Framework** is a proprietary operational analysis model developed by Autonomy Bridge that identifies five structural constraints ,  unit density and congestion, queue formation, orchestration complexity, environmental constraints, and integration architecture ,  that cause robotics systems to succeed in controlled pilots but fail under full operational deployment. The framework evaluates the transition from pilot environment to operational scale, focusing on system-level behavior rather than task-level performance metrics. It applies across all robotic platform types: intralogistics mobile platforms, aerial systems, service robots, inspection platforms, surgical robots, off-highway autonomous vehicles, and wearable systems. (Autonomy Bridge analytical interpretation; underlying evidence not independently verified)
 
 Robotics pilots succeed because they operate under controlled conditions with limited fleet size, simplified task streams, and concentrated engineering oversight. Full deployment introduces unit density effects, orchestration complexity, and operational interactions that pilots rarely expose. The central decision problem is determining whether pilot performance reflects scalable system behavior or localized optimization under artificially simplified conditions.
 
@@ -132,7 +132,7 @@ Robotics pilots succeed because they operate under controlled conditions with li
 ## Problem the Framework Solves {#problem}
 
 **Hard Truth**
-Most robotics pilots measure task-level improvement, not system-level scalability. (Autonomy Bridge proprietary analysis, 2026)
+Most robotics pilots measure task-level improvement, not system-level scalability. (Autonomy Bridge analytical interpretation; underlying evidence not independently verified)
 
 For operators and investors across all deployment domains, the key question is operational rather than technological:
 
@@ -212,7 +212,7 @@ The Pilot-to-Scale Failure Framework models this transition across all platform 
 Robotics pilots evaluate localised task efficiency rather than full system behavior. Vendor ROI models focus on narrow performance metrics inside the pilot zone, which do not capture the operational complexity of full deployment. Pilot success frequently reflects controlled simplification rather than scalable system performance.
 
 **Hard Truth**
-A robotics pilot is not a deployment test. It is a localised operational experiment. (Autonomy Bridge proprietary analysis, 2026)
+A robotics pilot is not a deployment test. It is a localised operational experiment. (Autonomy Bridge analytical interpretation; underlying evidence not independently verified)
 
 Vendor pilots focus on narrow success metrics: task throughput improvement, labour reduction, and unit task completion time. These results are valid within the pilot zone but do not hold under full operational conditions where unit density, concurrent task streams, and environmental variability interact.
 
@@ -403,7 +403,7 @@ See: [Integration Cost →](/glossary/integration-cost) · [System Uptime →](/
 Operators and investment teams treat pilot results as preliminary feasibility indicators, not deployment proof. The framework requires modeling scaling constraints before committing to full deployment across any platform type or domain.
 
 **Hard Truth**
-A robotics pilot measures feasibility. It does not prove scalability. (Autonomy Bridge proprietary analysis, 2026)
+A robotics pilot measures feasibility. It does not prove scalability. (Autonomy Bridge analytical interpretation; underlying evidence not independently verified)
 
 **Step 1: Define the Operational Objective**
 Identify the specific operational problem automation is intended to solve and the full-scale conditions under which it must perform.
@@ -425,7 +425,7 @@ If scaling risks are high, conduct deeper modeling or simulation before committi
 
 ### Example Scenarios
 
-**Intralogistics AMR deployment:** A 3PL operator pilots 8 AMRs in a dedicated picking zone. Full deployment introduces 40 units across shared pathways. Unit density crosses the congestion threshold; cycle times increase 35%; throughput falls below pilot projection.
+Use measurements and documented assumptions for the operation being evaluated. The previous numerical range or performance claim was not supported by publishable evidence and has been withdrawn; no general benchmark is asserted here.
 
 **Aerial inspection deployment:** An energy operator pilots 3 drones inspecting a single asset cluster under engineering supervision. Full deployment across 60 assets introduces concurrent mission queues, airspace deconfliction requirements, and data pipeline volume that the orchestration system cannot manage without architectural changes.
 
@@ -444,7 +444,7 @@ In each case, the pilot result does not predict system behavior at full operatio
 Scaling risk is highest when unit density, concurrent task stream complexity, and orchestration requirements increase simultaneously. Operational constraints ,  not robotic technology ,  drive deployment failures after installation.
 
 **Hard Truth**
-Most robotics deployment failures occur after installation, not during pilot evaluation. (Autonomy Bridge proprietary analysis, 2026)
+Most robotics deployment failures occur after installation, not during pilot evaluation. (Autonomy Bridge analytical interpretation; underlying evidence not independently verified)
 
 The most common pilot-to-scale failure modes:
 
@@ -473,7 +473,7 @@ Automation architecture restricts the workflow flexibility required in variable-
 The Pilot-to-Scale Failure Framework applies to deployments where scaling conditions differ materially from pilot conditions and where the five structural constraints can activate. It does not apply to environments where operational conditions are fixed, fully contracted, and stable from the outset.
 
 **Hard Truth**
-Scaling risk is highest in retrofitted or variable-demand operational environments. (Autonomy Bridge proprietary analysis, 2026)
+Scaling risk is highest in retrofitted or variable-demand operational environments. (Autonomy Bridge analytical interpretation; underlying evidence not independently verified)
 
 The framework does not apply to:
 
@@ -547,116 +547,3 @@ Updated: 2026-04-11
 Author: Deepak Gupta (author_deepak_001), Founder & Principal Analyst, Autonomy Bridge
 Schema Type: Article / FAQPage
 Frameworks tagged: Pilot-to-Scale Failure Framework
-
-```json
-{
-  "@context": "https://schema.org",
-  "@type": ["Article", "FAQPage"],
-  "headline": "Why Robotics Pilots Fail to Scale",
-  "description": "The Pilot-to-Scale Failure Framework models why robotics systems that perform well in controlled pilots fail under full operational deployment ,  identifying five structural constraints that drive post-installation breakdowns across all platform types and domains.",
-  "datePublished": "2026-03-15",
-  "dateModified": "2026-04-11",
-  "inLanguage": "en",
-  "speakable": {
-    "@type": "SpeakableSpecification",
-    "cssSelector": ["#definition", "#faq"]
-  },
-  "author": [
-    {
-      "@type": "Person",
-      "name": "Deepak Gupta",
-      "@id": "author_deepak_001",
-      "jobTitle": "Founder & Principal Analyst",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Autonomy Bridge",
-        "url": "https://autonomybridge.com"
-      },
-      "url": "https://autonomybridge.com/about",
-      "sameAs": "https://www.linkedin.com/in/deepakgupta5"
-    }
-  ],
-  "publisher": {
-    "@type": "Organization",
-    "name": "Autonomy Bridge",
-    "url": "https://autonomybridge.com",
-    "sameAs": [
-      "https://www.linkedin.com/company/autonomybridge",
-      "https://twitter.com/autonomybridge"
-    ]
-  },
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://autonomybridge.com/frameworks/pilot-to-scale-failure-framework"
-  },
-  "isPartOf": {
-    "@type": "WebPage",
-    "name": "Autonomy Bridge Frameworks",
-    "url": "https://autonomybridge.com/frameworks"
-  },
-  "keywords": [
-    "pilot to scale failure framework",
-    "robotics pilot failure",
-    "robotics scaling failure",
-    "robotics deployment scaling",
-    "fleet congestion robotics",
-    "orchestration complexity robotics",
-    "robotics pilot to production",
-    "robotics deployment risk",
-    "scaling constraints robotics"
-  ],
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is the Pilot-to-Scale Failure Framework?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The Pilot-to-Scale Failure Framework is a proprietary operational analysis model developed by Autonomy Bridge that identifies five structural constraints ,  unit density and congestion, queue formation, orchestration complexity, environmental constraints, and integration architecture ,  that cause robotics systems to succeed in controlled pilots but fail under full operational deployment. It applies across all robotic platform types and operational domains."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Why do robotics pilots succeed but fail at full operational scale?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Robotics pilots succeed because they operate in controlled conditions ,  limited fleet size, simplified task streams, and dedicated engineering oversight. Full deployment forces the system to interact with every operational constraint simultaneously: human movement patterns, multiple concurrent workflows, demand variability, and multi-unit fleet interactions. When those interactions compound, system complexity grows faster than orchestration capacity and performance breaks down."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is unit congestion in a robotics deployment?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Unit congestion occurs when deployed unit density exceeds the movement or access capacity of the operational environment. As unit density increases, travel or access conflicts increase, cycle time lengthens, and effective throughput declines. Congestion is a non-linear constraint ,  it appears suddenly once density crosses an environment-specific threshold, rather than degrading gradually as units are added."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How does orchestration complexity cause robotics failures at scale?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Orchestration complexity increases with fleet size, task stream diversity, and software integration requirements. As complexity grows, coordination latency increases, units idle waiting for task dispatch, and workload distribution becomes uneven. Orchestration systems that managed a 5-unit pilot fleet adequately frequently break down managing a 30-unit full deployment because the scheduling problem grows non-linearly."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Which robotic platform types does this framework cover?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The framework covers all platform types where pilot conditions differ materially from full deployment conditions: intralogistics mobile platforms, aerial robotic platforms, commercial indoor service robots, inspection robots, surgical and clinical platforms, off-highway autonomous vehicles, on-road autonomous vehicles, and underwater or surface maritime platforms."
-      }
-    }
-  ],
-  "about": [
-    { "@type": "Thing", "name": "Robotics Scaling Failure" },
-    { "@type": "Thing", "name": "Unit Density and Congestion" },
-    { "@type": "Thing", "name": "Orchestration Complexity" },
-    { "@type": "Thing", "name": "Robotics Deployment Risk" },
-    { "@type": "Thing", "name": "Pilot to Production Transition" }
-  ],
-  "mentions": [
-    { "@type": "CreativeWork", "name": "AMR Deployment Evaluation", "url": "https://autonomybridge.com/use-cases/amr-deployment-evaluation" },
-    { "@type": "CreativeWork", "name": "Vendor Deployment Viability Assessment", "url": "https://autonomybridge.com/case-studies/vendor-deployment-viability-assessment" }
-  ]
-}
-```

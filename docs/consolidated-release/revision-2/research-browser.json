@@ -1,0 +1,215 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "route": "/frameworks/vendor-economics-framework",
+      "width": 1440,
+      "overflow": false,
+      "h1": 1,
+      "mailLinks": 0,
+      "canonical": "https://autonomybridge.com/frameworks/vendor-economics-framework",
+      "focus": "solid",
+      "skip": true
+    },
+    {
+      "route": "/frameworks/warehouse-automation-decision-framework",
+      "width": 1440,
+      "overflow": false,
+      "h1": 1,
+      "mailLinks": 0,
+      "canonical": "https://autonomybridge.com/frameworks/warehouse-automation-decision-framework",
+      "focus": "solid",
+      "skip": true
+    },
+    {
+      "route": "/insights/why-robotics-pilots-fail-to-scale",
+      "width": 1440,
+      "overflow": false,
+      "h1": 1,
+      "mailLinks": 0,
+      "canonical": "https://autonomybridge.com/insights/why-robotics-pilots-fail-to-scale",
+      "focus": "solid",
+      "skip": true
+    },
+    {
+      "route": "/insights/how-retail-distribution-center-automation-economics-actually-work",
+      "width": 1440,
+      "overflow": false,
+      "h1": 1,
+      "mailLinks": 0,
+      "canonical": "https://autonomybridge.com/insights/how-retail-distribution-center-automation-economics-actually-work",
+      "focus": "solid",
+      "skip": true
+    },
+    {
+      "route": "/insights/why-robotics-enterprise-deals-stall",
+      "width": 1440,
+      "overflow": false,
+      "h1": 1,
+      "mailLinks": 0,
+      "canonical": "https://autonomybridge.com/insights/why-robotics-enterprise-deals-stall",
+      "focus": "solid",
+      "skip": true
+    },
+    {
+      "route": "/insights/why-mid-market-operators-struggle-to-evaluate-warehouse-robotics",
+      "width": 1440,
+      "overflow": false,
+      "h1": 1,
+      "mailLinks": 0,
+      "canonical": "https://autonomybridge.com/insights/why-mid-market-operators-struggle-to-evaluate-warehouse-robotics",
+      "focus": "solid",
+      "skip": true
+    },
+    {
+      "route": "/use-cases/warehouse-automation-roi-evaluation",
+      "width": 1440,
+      "overflow": false,
+      "h1": 1,
+      "mailLinks": 0,
+      "canonical": "https://autonomybridge.com/use-cases/warehouse-automation-roi-evaluation",
+      "focus": "solid",
+      "skip": true
+    },
+    {
+      "route": "/case-studies/parcel-sortation-volume-sensitivity-analysis",
+      "width": 1440,
+      "overflow": false,
+      "h1": 1,
+      "mailLinks": 0,
+      "canonical": "https://autonomybridge.com/case-studies/parcel-sortation-volume-sensitivity-analysis",
+      "focus": "solid",
+      "skip": true
+    },
+    {
+      "route": "/glossary/sortation-volume-floor",
+      "width": 1440,
+      "overflow": false,
+      "h1": 1,
+      "mailLinks": 0,
+      "canonical": "https://autonomybridge.com/glossary/sortation-volume-floor",
+      "focus": "solid",
+      "skip": true
+    },
+    {
+      "route": "/frameworks",
+      "width": 1440,
+      "overflow": false,
+      "h1": 1,
+      "mailLinks": 0,
+      "canonical": "https://autonomybridge.com/frameworks",
+      "focus": "solid",
+      "skip": true
+    },
+    {
+      "route": "/frameworks/vendor-economics-framework",
+      "width": 390,
+      "overflow": false,
+      "h1": 1,
+      "mailLinks": 0,
+      "canonical": "https://autonomybridge.com/frameworks/vendor-economics-framework",
+      "focus": "solid",
+      "skip": true,
+      "mobileMenu": true
+    },
+    {
+      "route": "/frameworks/warehouse-automation-decision-framework",
+      "width": 390,
+      "overflow": false,
+      "h1": 1,
+      "mailLinks": 0,
+      "canonical": "https://autonomybridge.com/frameworks/warehouse-automation-decision-framework",
+      "focus": "solid",
+      "skip": true,
+      "mobileMenu": true
+    },
+    {
+      "route": "/insights/why-robotics-pilots-fail-to-scale",
+      "width": 390,
+      "overflow": false,
+      "h1": 1,
+      "mailLinks": 0,
+      "canonical": "https://autonomybridge.com/insights/why-robotics-pilots-fail-to-scale",
+      "focus": "solid",
+      "skip": true,
+      "mobileMenu": true
+    },
+    {
+      "route": "/insights/how-retail-distribution-center-automation-economics-actually-work",
+      "width": 390,
+      "overflow": false,
+      "h1": 1,
+      "mailLinks": 0,
+      "canonical": "https://autonomybridge.com/insights/how-retail-distribution-center-automation-economics-actually-work",
+      "focus": "solid",
+      "skip": true,
+      "mobileMenu": true
+    },
+    {
+      "route": "/insights/why-robotics-enterprise-deals-stall",
+      "width": 390,
+      "overflow": false,
+      "h1": 1,
+      "mailLinks": 0,
+      "canonical": "https://autonomybridge.com/insights/why-robotics-enterprise-deals-stall",
+      "focus": "solid",
+      "skip": true,
+      "mobileMenu": true
+    },
+    {
+      "route": "/insights/why-mid-market-operators-struggle-to-evaluate-warehouse-robotics",
+      "width": 390,
+      "overflow": false,
+      "h1": 1,
+      "mailLinks": 0,
+      "canonical": "https://autonomybridge.com/insights/why-mid-market-operators-struggle-to-evaluate-warehouse-robotics",
+      "focus": "solid",
+      "skip": true,
+      "mobileMenu": true
+    },
+    {
+      "route": "/use-cases/warehouse-automation-roi-evaluation",
+      "width": 390,
+      "overflow": false,
+      "h1": 1,
+      "mailLinks": 0,
+      "canonical": "https://autonomybridge.com/use-cases/warehouse-automation-roi-evaluation",
+      "focus": "solid",
+      "skip": true,
+      "mobileMenu": true
+    },
+    {
+      "route": "/case-studies/parcel-sortation-volume-sensitivity-analysis",
+      "width": 390,
+      "overflow": false,
+      "h1": 1,
+      "mailLinks": 0,
+      "canonical": "https://autonomybridge.com/case-studies/parcel-sortation-volume-sensitivity-analysis",
+      "focus": "solid",
+      "skip": true,
+      "mobileMenu": true
+    },
+    {
+      "route": "/glossary/sortation-volume-floor",
+      "width": 390,
+      "overflow": false,
+      "h1": 1,
+      "mailLinks": 0,
+      "canonical": "https://autonomybridge.com/glossary/sortation-volume-floor",
+      "focus": "solid",
+      "skip": true,
+      "mobileMenu": true
+    },
+    {
+      "route": "/frameworks",
+      "width": 390,
+      "overflow": false,
+      "h1": 1,
+      "mailLinks": 0,
+      "canonical": "https://autonomybridge.com/frameworks",
+      "focus": "solid",
+      "skip": true,
+      "mobileMenu": true
+    }
+  ]
+}

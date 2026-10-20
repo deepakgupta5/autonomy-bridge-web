@@ -1,14 +1,26 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
+import { deploymentPolicy } from './config/deployment-policy.mjs';
+import revisedResearch from './config/material-research-revisions.json' assert { type: 'json' };
 
 /** Strips :::directive blocks from markdown before rendering. */
 function remarkStripDirectives() {
   return function (tree) {
+    const nodeText = node => node.value ?? (node.children ?? []).map(nodeText).join('\n');
+    let inDirective = false;
     tree.children = tree.children.filter((node) => {
-      if (node.type !== 'paragraph') return true;
-      const first = node.children?.[0];
-      return !(first?.type === 'text' && first.value.startsWith(':::'));
+      const value = nodeText(node).trim();
+      if (inDirective) {
+        if (/(?:^|\n):::$/.test(value)) inDirective = false;
+        return false;
+      }
+      if (/^:::[a-z]/.test(value)) {
+        inDirective = !value.endsWith(':::');
+        return false;
+      }
+      return value !== ':::';
     });
+    if (inDirective) throw new Error('Unclosed internal Markdown directive');
   };
 }
 
@@ -105,7 +117,7 @@ function isDateBasedPath(pathname) {
 
 function toPathname(entry) {
   const asString = typeof entry === 'string' ? entry : String(entry);
-  return normalizePathname(new URL(asString, 'https://www.autonomybridge.com').pathname);
+  return normalizePathname(new URL(asString, 'https://autonomybridge.com').pathname);
 }
 
 function isAllowedSitemapPath(pathname) {
@@ -123,7 +135,7 @@ function isAllowedSitemapPath(pathname) {
 }
 
 export default defineConfig({
-  site: 'https://www.autonomybridge.com',
+  site: 'https://autonomybridge.com',
   trailingSlash: 'never',
   build: {
     format: 'file',
@@ -135,6 +147,7 @@ export default defineConfig({
   integrations: [
     sitemap({
       filter: (entry) => isAllowedSitemapPath(toPathname(entry)),
+      serialize: item => ({...item, ...(revisedResearch.includes(toPathname(item.url)) && deploymentPolicy.researchRevisionDate ? {lastmod: deploymentPolicy.researchRevisionDate} : {})}),
     }),
   ],
 });

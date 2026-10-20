@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "fixture_only_date": "2000-01-02",
+  "material_routes": 86,
+  "visible_schema_xml_date_parity": true,
+  "unrelated_pages_not_fresh_stamped": true,
+  "legal_date_parity": true,
+  "real_checkout_date_still_null": true,
+  "remote_pending_date_build_rejected": true,
+  "fixture_directory": "/private/tmp/ab-date-fixture-fqe6pkdg"
+}

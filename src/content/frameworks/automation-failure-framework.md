@@ -116,7 +116,7 @@ integrity:
 
 # Why Robotics Deployments Fail Economically {#definition}
 
-The **Automation Failure Framework** is a proprietary diagnostic model developed by Autonomy Bridge that identifies four structural failure mechanisms ,  utilization failure, integration failure, task mismatch, and scaling failure ,  that cause robotics deployments to underperform financially. The framework evaluates automation deployments through a causal chain connecting operational constraints to economic outcomes. It applies across all robotic platform types ,  mobile, aerial, service, inspection, surgical, field, and wearable ,  in any operational domain where robotics converts variable operational cost into fixed capital infrastructure. (Autonomy Bridge proprietary analysis, 2026)
+The **Automation Failure Framework** is a proprietary diagnostic model developed by Autonomy Bridge that identifies four structural failure mechanisms ,  utilization failure, integration failure, task mismatch, and scaling failure ,  that cause robotics deployments to underperform financially. The framework evaluates automation deployments through a causal chain connecting operational constraints to economic outcomes. It applies across all robotic platform types ,  mobile, aerial, service, inspection, surgical, field, and wearable ,  in any operational domain where robotics converts variable operational cost into fixed capital infrastructure. (Autonomy Bridge analytical interpretation; underlying evidence not independently verified)
 
 Robotics automation converts variable operating cost into fixed capital infrastructure. This structural shift changes the cost model of any operation: if task demand does not keep the system active, capital recovery slows and the deployment underperforms regardless of technical performance.
 
@@ -128,7 +128,7 @@ Robotics automation converts variable operating cost into fixed capital infrastr
 
 Robotics deployment failures originate in operational economics, not system performance. The Automation Failure Framework identifies the structural conditions that cause deployments to underperform financially ,  focusing on utilization stability, task compatibility, integration complexity, and scaling constraints. These conditions apply whether the platform is an autonomous mobile robot in a fulfilment centre, an inspection drone on an energy asset, a service robot in a hospital corridor, or an autonomous vehicle in a freight operation.
 
-> **Key Finding (Autonomy Bridge, 2026):** Most robotics deployments that fail economically do not fail technically. The system performs as designed, but the surrounding operational environment cannot sustain the utilization required to recover fixed capital. (Autonomy Bridge proprietary analysis, 2026)
+> **Key Finding (Autonomy Bridge, 2026):** Most robotics deployments that fail economically do not fail technically. The system performs as designed, but the surrounding operational environment cannot sustain the utilization required to recover fixed capital. (Autonomy Bridge analytical interpretation; underlying evidence not independently verified)
 
 The framework evaluates failure through a causal sequence:
 
@@ -153,7 +153,7 @@ The framework identifies four failure mechanisms that operate across all platfor
 
 ## Why Existing Approaches Fall Short {#existing-approaches}
 
-> **Key Finding (Autonomy Bridge, 2026):** Robotics evaluations commonly begin with vendor proposals rather than operational risk analysis. Most deployment failures involve multiple interacting failure mechanisms rather than a single cause. (Autonomy Bridge proprietary analysis, 2026)
+> **Key Finding (Autonomy Bridge, 2026):** Robotics evaluations commonly begin with vendor proposals rather than operational risk analysis. Most deployment failures involve multiple interacting failure mechanisms rather than a single cause. (Autonomy Bridge analytical interpretation; underlying evidence not independently verified)
 
 Deployment failures emerge from combinations of utilization instability, integration complexity, task mismatch, and scaling limits ,  not isolated technical defects. Vendor-led evaluations systematically exclude these structural risks because they reflect poorly on the vendor's deployment narrative. Operator-led evaluations that begin with task volume, demand variability, and integration architecture identify failure conditions before capital commitment. See: [Automation Readiness →](/glossary/automation-readiness)
 
@@ -164,73 +164,55 @@ Deployment failures emerge from combinations of utilization instability, integra
 The Automation Failure Framework evaluates robotics deployments through a causal chain connecting operational constraints to economic outcomes.
 
 <div style="font-family: 'IBM Plex Mono', 'Courier New', monospace; margin: 2rem 0;">
-
 <div style="background: #f1f5f9; border: 1px solid #cbd5e1; border-radius: 6px; padding: 2rem 1.5rem; max-width: 680px;">
-
-  <div style="font-size: 0.65rem; font-weight: 700; letter-spacing: 0.12em; color: #475569; text-transform: uppercase; margin-bottom: 1.5rem;">
-    Fig 1 ,  Automation Failure Mechanism Model
-  </div>
-
-  <!-- Causal chain -->
-  <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 0; margin-bottom: 2rem;">
-
-    <div style="background: #0f172a; color: #f8fafc; padding: 0.6rem 1.2rem; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.04em; border-radius: 3px;">
-      ROBOTICS DEPLOYMENT
-    </div>
-    <div style="width: 2px; height: 20px; background: #cbd5e1; margin-left: 1.5rem;"></div>
-
-    <div style="background: #f1f5f9; border: 1px solid #cbd5e1; color: #334155; padding: 0.6rem 1.2rem; font-size: 0.8rem; font-weight: 500; border-radius: 3px;">
-      Operational Constraints
-    </div>
-    <div style="width: 2px; height: 20px; background: #cbd5e1; margin-left: 1.5rem;"></div>
-
-    <div style="background: #fef3c7; border: 1px solid #d97706; color: #92400e; padding: 0.6rem 1.2rem; font-size: 0.8rem; font-weight: 600; border-radius: 3px;">
-      Failure Mechanism Activated
-    </div>
-    <div style="width: 2px; height: 20px; background: #cbd5e1; margin-left: 1.5rem;"></div>
-
-    <div style="background: #f1f5f9; border: 1px solid #cbd5e1; color: #334155; padding: 0.6rem 1.2rem; font-size: 0.8rem; font-weight: 500; border-radius: 3px;">
-      Economic Underperformance
-    </div>
-
-  </div>
-
-  <!-- Four failure mechanisms -->
-  <div style="font-size: 0.65rem; font-weight: 700; letter-spacing: 0.12em; color: #475569; text-transform: uppercase; margin-bottom: 1rem;">
-    Four Structural Failure Mechanisms
-  </div>
-
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
-
-    <div style="background: #ffffff; border: 1px solid #e2e8f0; border-left: 3px solid #0f172a; padding: 0.75rem 1rem; border-radius: 3px;">
-      <div style="font-size: 0.7rem; font-weight: 700; color: #0f172a; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.25rem;">Utilization Failure</div>
-      <div style="font-size: 0.75rem; color: #475569; line-height: 1.4;">Workload density cannot sustain installed capacity</div>
-    </div>
-
-    <div style="background: #ffffff; border: 1px solid #e2e8f0; border-left: 3px solid #0f172a; padding: 0.75rem 1rem; border-radius: 3px;">
-      <div style="font-size: 0.7rem; font-weight: 700; color: #0f172a; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.25rem;">Task Mismatch</div>
-      <div style="font-size: 0.75rem; color: #475569; line-height: 1.4;">System architecture does not align with the task structure</div>
-    </div>
-
-    <div style="background: #ffffff; border: 1px solid #e2e8f0; border-left: 3px solid #0f172a; padding: 0.75rem 1rem; border-radius: 3px;">
-      <div style="font-size: 0.7rem; font-weight: 700; color: #0f172a; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.25rem;">Integration Failure</div>
-      <div style="font-size: 0.75rem; color: #475569; line-height: 1.4;">Software and data integration reduces effective throughput</div>
-    </div>
-
-    <div style="background: #ffffff; border: 1px solid #e2e8f0; border-left: 3px solid #0f172a; padding: 0.75rem 1rem; border-radius: 3px;">
-      <div style="font-size: 0.7rem; font-weight: 700; color: #0f172a; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.25rem;">Scaling Failure</div>
-      <div style="font-size: 0.75rem; color: #475569; line-height: 1.4;">Pilot performance cannot replicate at full deployment scale</div>
-    </div>
-
-  </div>
-
-  <div style="margin-top: 1rem; font-size: 0.65rem; color: #94a3b8; letter-spacing: 0.04em;">
-    Source: Automation Failure Framework · Autonomy Bridge, 2026
-  </div>
-
+<div style="font-size: 0.65rem; font-weight: 700; letter-spacing: 0.12em; color: #475569; text-transform: uppercase; margin-bottom: 1.5rem;">
+Fig 1 ,  Automation Failure Mechanism Model
+</div>
+<!-- Causal chain -->
+<div style="display: flex; flex-direction: column; align-items: flex-start; gap: 0; margin-bottom: 2rem;">
+<div style="background: #0f172a; color: #f8fafc; padding: 0.6rem 1.2rem; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.04em; border-radius: 3px;">
+ROBOTICS DEPLOYMENT
+</div>
+<div style="width: 2px; height: 20px; background: #cbd5e1; margin-left: 1.5rem;"></div>
+<div style="background: #f1f5f9; border: 1px solid #cbd5e1; color: #334155; padding: 0.6rem 1.2rem; font-size: 0.8rem; font-weight: 500; border-radius: 3px;">
+Operational Constraints
+</div>
+<div style="width: 2px; height: 20px; background: #cbd5e1; margin-left: 1.5rem;"></div>
+<div style="background: #fef3c7; border: 1px solid #d97706; color: #92400e; padding: 0.6rem 1.2rem; font-size: 0.8rem; font-weight: 600; border-radius: 3px;">
+Failure Mechanism Activated
+</div>
+<div style="width: 2px; height: 20px; background: #cbd5e1; margin-left: 1.5rem;"></div>
+<div style="background: #f1f5f9; border: 1px solid #cbd5e1; color: #334155; padding: 0.6rem 1.2rem; font-size: 0.8rem; font-weight: 500; border-radius: 3px;">
+Economic Underperformance
 </div>
 </div>
-
+<!-- Four failure mechanisms -->
+<div style="font-size: 0.65rem; font-weight: 700; letter-spacing: 0.12em; color: #475569; text-transform: uppercase; margin-bottom: 1rem;">
+Four Structural Failure Mechanisms
+</div>
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
+<div style="background: #ffffff; border: 1px solid #e2e8f0; border-left: 3px solid #0f172a; padding: 0.75rem 1rem; border-radius: 3px;">
+<div style="font-size: 0.7rem; font-weight: 700; color: #0f172a; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.25rem;">Utilization Failure</div>
+<div style="font-size: 0.75rem; color: #475569; line-height: 1.4;">Workload density cannot sustain installed capacity</div>
+</div>
+<div style="background: #ffffff; border: 1px solid #e2e8f0; border-left: 3px solid #0f172a; padding: 0.75rem 1rem; border-radius: 3px;">
+<div style="font-size: 0.7rem; font-weight: 700; color: #0f172a; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.25rem;">Task Mismatch</div>
+<div style="font-size: 0.75rem; color: #475569; line-height: 1.4;">System architecture does not align with the task structure</div>
+</div>
+<div style="background: #ffffff; border: 1px solid #e2e8f0; border-left: 3px solid #0f172a; padding: 0.75rem 1rem; border-radius: 3px;">
+<div style="font-size: 0.7rem; font-weight: 700; color: #0f172a; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.25rem;">Integration Failure</div>
+<div style="font-size: 0.75rem; color: #475569; line-height: 1.4;">Software and data integration reduces effective throughput</div>
+</div>
+<div style="background: #ffffff; border: 1px solid #e2e8f0; border-left: 3px solid #0f172a; padding: 0.75rem 1rem; border-radius: 3px;">
+<div style="font-size: 0.7rem; font-weight: 700; color: #0f172a; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.25rem;">Scaling Failure</div>
+<div style="font-size: 0.75rem; color: #475569; line-height: 1.4;">Pilot performance cannot replicate at full deployment scale</div>
+</div>
+</div>
+<div style="margin-top: 1rem; font-size: 0.65rem; color: #94a3b8; letter-spacing: 0.04em;">
+Source: Automation Failure Framework · Autonomy Bridge, 2026
+</div>
+</div>
+</div>
 Four structural failure mechanisms explain why robotics deployments fail economically: utilization failure, task mismatch, integration failure, and scaling failure. Each mechanism has identifiable preconditions, machine-readable logic, and diagnostic indicators that can be evaluated before capital commitment.
 
 ---
@@ -259,17 +241,19 @@ Four structural failure mechanisms explain why robotics deployments fail economi
 
 Utilization measures how much of installed robotics capacity is actively used by operational demand. Because robotics infrastructure is a fixed capital asset, idle capacity reduces financial performance. Sustained task density is the central condition for deployment viability across all platform types.
 
-> **Key Finding (Autonomy Bridge, 2026):** Robotics systems are sized for peak task demand, but most operational environments run below peak capacity for a significant portion of the operating period. (Autonomy Bridge proprietary analysis, 2026)
+> **Key Finding (Autonomy Bridge, 2026):** Robotics systems are sized for peak task demand, but most operational environments run below peak capacity for a significant portion of the operating period. (Autonomy Bridge analytical interpretation; underlying evidence not independently verified)
 
 Utilization:
 
 ```
-U = Installed Capacity / Actual Task Volume
+U = Actual Task Volume / Sustainable Capacity
 
 Where:
   Actual Task Volume  = tasks processed by the system per period
-  Installed Capacity  = maximum throughput capability of the deployed system
+  Sustainable Capacity = tasks the system can sustainably process over that same period
 ```
+
+U is dimensionless (multiply by 100 for percent). A hypothetical 600 tasks completed against 1,000 tasks of sustainable capacity over the same hour gives U = 60%; capacity divided by actual volume would instead be 1.67, a different ratio. Use the same task mix and operating schedule; zero capacity makes the ratio undefined. See the [Federal Reserve capacity-utilization definition](https://www.federalreserve.gov/releases/g17/CapNotes.htm) for output divided by capacity, not an AMR-specific threshold.
 
 Utilization risk manifests differently by platform type. In warehouse AMR deployments, client churn and seasonal demand swings reduce task volume against fixed fleet capacity. In inspection drone deployments, asset maintenance scheduling and weather windows compress active operating periods. In service robot deployments, occupancy variability and shift patterns determine whether fleet utilization is sustainable. In each case, automation capacity remains fixed when demand changes. See: [Peak-to-Average Ratio →](/glossary/peak-to-average-ratio)
 
@@ -288,7 +272,7 @@ Utilization risk manifests differently by platform type. In warehouse AMR deploy
 
 Robotics systems are engineered for specific task structures. If the operational task profile does not match the automation architecture, the expected labour or cost savings do not materialise. The system performs its designed function, but that function is not the binding constraint on operational output.
 
-> **Key Finding (Autonomy Bridge, 2026):** Many robotics deployments improve one operational subprocess while leaving total output unchanged because the automation did not target the binding constraint. (Autonomy Bridge proprietary analysis, 2026)
+> **Key Finding (Autonomy Bridge, 2026):** Many robotics deployments improve one operational subprocess while leaving total output unchanged because the automation did not target the binding constraint. (Autonomy Bridge analytical interpretation; underlying evidence not independently verified)
 
 Operational throughput in any multi-stage process is governed by the slowest stage:
 
@@ -313,7 +297,7 @@ Automation that accelerates a non-binding stage does not increase system output.
 
 Robotics systems must integrate with the operational software, data infrastructure, and physical environment of the deployment site. Integration failures rarely halt systems entirely, but they reduce effective throughput and inflate deployment cost. Integration complexity is a consistent hidden driver of automation economics across all platform types.
 
-> **Key Finding (Autonomy Bridge, 2026):** Many robotics deployments underperform because integration latency and data reliability reduce operational throughput below modeled levels. (Autonomy Bridge proprietary analysis, 2026)
+> **Key Finding (Autonomy Bridge, 2026):** Many robotics deployments underperform because integration latency and data reliability reduce operational throughput below modeled levels. (Autonomy Bridge analytical interpretation; underlying evidence not independently verified)
 
 Robotics systems typically connect to one or more of: operational management platforms, data acquisition and processing systems, fleet orchestration software, enterprise resource systems, and facility or asset management infrastructure. The integration surface area varies by platform type but the failure mechanism is consistent.
 
@@ -349,7 +333,7 @@ See: [Integration Cost →](/glossary/integration-cost) · [System Uptime →](/
 
 Robotics deployments frequently perform well in controlled pilots but encounter hard limits when expanded. Congestion, coordination overhead, infrastructure capacity, and software orchestration limits reduce marginal productivity as fleet size or task volume increases. The pilot environment does not expose these constraints.
 
-> **Key Finding (Autonomy Bridge, 2026):** Increasing fleet size or task volume does not always increase throughput. Shared infrastructure and orchestration complexity eventually become the limiting factors. (Autonomy Bridge proprietary analysis, 2026)
+> **Key Finding (Autonomy Bridge, 2026):** Increasing fleet size or task volume does not always increase throughput. Shared infrastructure and orchestration complexity eventually become the limiting factors. (Autonomy Bridge analytical interpretation; underlying evidence not independently verified)
 
 System throughput:
 
@@ -376,7 +360,7 @@ At low unit density, throughput increases as units are added. At higher density,
 
 The Automation Failure Framework is applied as an early-stage risk screen before capital commitment. The objective is to identify structural failure conditions in the operational environment before detailed ROI modeling begins. The framework applies regardless of platform type or deployment domain.
 
-> **Key Finding (Autonomy Bridge, 2026):** Robotics evaluations that begin with vendor proposals rather than operational risk analysis systematically miss the failure conditions that determine economic outcomes. (Autonomy Bridge proprietary analysis, 2026)
+> **Key Finding (Autonomy Bridge, 2026):** Robotics evaluations that begin with vendor proposals rather than operational risk analysis systematically miss the failure conditions that determine economic outcomes. (Autonomy Bridge analytical interpretation; underlying evidence not independently verified)
 
 **Application steps:**
 
@@ -400,69 +384,59 @@ The Automation Failure Framework is applied as an early-stage risk screen before
 Deployment failures emerge from combinations of utilization instability, integration complexity, task mismatch, and scaling limits ,  not from isolated technical defects. The failure mechanisms interact: task mismatch reduces utilization, which compounds capital recovery risk; integration failure reduces effective throughput, which can trigger apparent scaling failure before true capacity limits are reached.
 
 <div style="font-family: 'IBM Plex Mono', 'Courier New', monospace; margin: 2rem 0;">
-
 <div style="background: #f1f5f9; border: 1px solid #cbd5e1; border-radius: 6px; padding: 2rem 1.5rem; max-width: 680px;">
-
-  <div style="font-size: 0.65rem; font-weight: 700; letter-spacing: 0.12em; color: #475569; text-transform: uppercase; margin-bottom: 1.5rem;">
-    Fig 2 ,  Robotics Deployment Risk Categories
-  </div>
-
-  <div style="display: flex; flex-direction: column; gap: 0.75rem;">
-
-    <!-- Utilization Failure -->
-    <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 4px; overflow: hidden;">
-      <div style="background: #0f172a; padding: 0.5rem 1rem;">
-        <span style="font-size: 0.7rem; font-weight: 700; color: #f8fafc; text-transform: uppercase; letter-spacing: 0.1em;">Utilization Failure</span>
-      </div>
-      <div style="padding: 0.75rem 1rem; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.5rem;">
-        <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 0.5rem 0.75rem; border-radius: 3px; font-size: 0.72rem; color: #334155;">Insufficient task volume</div>
-        <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 0.5rem 0.75rem; border-radius: 3px; font-size: 0.72rem; color: #334155;">Demand volatility</div>
-        <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 0.5rem 0.75rem; border-radius: 3px; font-size: 0.72rem; color: #334155;">Contract or client churn</div>
-      </div>
-    </div>
-
-    <!-- Integration Failure -->
-    <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 4px; overflow: hidden;">
-      <div style="background: #334155; padding: 0.5rem 1rem;">
-        <span style="font-size: 0.7rem; font-weight: 700; color: #f8fafc; text-transform: uppercase; letter-spacing: 0.1em;">Integration Failure</span>
-      </div>
-      <div style="padding: 0.75rem 1rem; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.5rem;">
-        <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 0.5rem 0.75rem; border-radius: 3px; font-size: 0.72rem; color: #334155;">Platform incompatibility</div>
-        <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 0.5rem 0.75rem; border-radius: 3px; font-size: 0.72rem; color: #334155;">Middleware complexity</div>
-        <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 0.5rem 0.75rem; border-radius: 3px; font-size: 0.72rem; color: #334155;">Data synchronisation issues</div>
-      </div>
-    </div>
-
-    <!-- Task Mismatch -->
-    <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 4px; overflow: hidden;">
-      <div style="background: #475569; padding: 0.5rem 1rem;">
-        <span style="font-size: 0.7rem; font-weight: 700; color: #f8fafc; text-transform: uppercase; letter-spacing: 0.1em;">Task Mismatch</span>
-      </div>
-      <div style="padding: 0.75rem 1rem; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.5rem;">
-        <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 0.5rem 0.75rem; border-radius: 3px; font-size: 0.72rem; color: #334155;">Architecture misaligned with task structure</div>
-        <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 0.5rem 0.75rem; border-radius: 3px; font-size: 0.72rem; color: #334155;">Task density fragmentation</div>
-        <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 0.5rem 0.75rem; border-radius: 3px; font-size: 0.72rem; color: #334155;">Bottleneck stage not targeted</div>
-      </div>
-    </div>
-
-    <!-- Scaling Failure -->
-    <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 4px; overflow: hidden;">
-      <div style="background: #d97706; padding: 0.5rem 1rem;">
-        <span style="font-size: 0.7rem; font-weight: 700; color: #0f172a; text-transform: uppercase; letter-spacing: 0.1em;">Scaling Failure</span>
-      </div>
-      <div style="padding: 0.75rem 1rem; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.5rem;">
-        <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 0.5rem 0.75rem; border-radius: 3px; font-size: 0.72rem; color: #334155;">Unit congestion at scale</div>
-        <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 0.5rem 0.75rem; border-radius: 3px; font-size: 0.72rem; color: #334155;">Orchestration limits</div>
-        <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 0.5rem 0.75rem; border-radius: 3px; font-size: 0.72rem; color: #334155;">Shared infrastructure constraints</div>
-      </div>
-    </div>
-
-  </div>
-
-  <div style="margin-top: 1rem; font-size: 0.65rem; color: #94a3b8; letter-spacing: 0.04em;">
-    Source: Automation Failure Framework · Autonomy Bridge, 2026
-  </div>
-
+<div style="font-size: 0.65rem; font-weight: 700; letter-spacing: 0.12em; color: #475569; text-transform: uppercase; margin-bottom: 1.5rem;">
+Fig 2 ,  Robotics Deployment Risk Categories
+</div>
+<div style="display: flex; flex-direction: column; gap: 0.75rem;">
+<!-- Utilization Failure -->
+<div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 4px; overflow: hidden;">
+<div style="background: #0f172a; padding: 0.5rem 1rem;">
+<span style="font-size: 0.7rem; font-weight: 700; color: #f8fafc; text-transform: uppercase; letter-spacing: 0.1em;">Utilization Failure</span>
+</div>
+<div style="padding: 0.75rem 1rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 0.5rem;">
+<div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 0.5rem 0.75rem; border-radius: 3px; font-size: 0.72rem; color: #334155;">Insufficient task volume</div>
+<div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 0.5rem 0.75rem; border-radius: 3px; font-size: 0.72rem; color: #334155;">Demand volatility</div>
+<div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 0.5rem 0.75rem; border-radius: 3px; font-size: 0.72rem; color: #334155;">Contract or client churn</div>
+</div>
+</div>
+<!-- Integration Failure -->
+<div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 4px; overflow: hidden;">
+<div style="background: #334155; padding: 0.5rem 1rem;">
+<span style="font-size: 0.7rem; font-weight: 700; color: #f8fafc; text-transform: uppercase; letter-spacing: 0.1em;">Integration Failure</span>
+</div>
+<div style="padding: 0.75rem 1rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 0.5rem;">
+<div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 0.5rem 0.75rem; border-radius: 3px; font-size: 0.72rem; color: #334155;">Platform incompatibility</div>
+<div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 0.5rem 0.75rem; border-radius: 3px; font-size: 0.72rem; color: #334155;">Middleware complexity</div>
+<div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 0.5rem 0.75rem; border-radius: 3px; font-size: 0.72rem; color: #334155;">Data synchronisation issues</div>
+</div>
+</div>
+<!-- Task Mismatch -->
+<div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 4px; overflow: hidden;">
+<div style="background: #475569; padding: 0.5rem 1rem;">
+<span style="font-size: 0.7rem; font-weight: 700; color: #f8fafc; text-transform: uppercase; letter-spacing: 0.1em;">Task Mismatch</span>
+</div>
+<div style="padding: 0.75rem 1rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 0.5rem;">
+<div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 0.5rem 0.75rem; border-radius: 3px; font-size: 0.72rem; color: #334155;">Architecture misaligned with task structure</div>
+<div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 0.5rem 0.75rem; border-radius: 3px; font-size: 0.72rem; color: #334155;">Task density fragmentation</div>
+<div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 0.5rem 0.75rem; border-radius: 3px; font-size: 0.72rem; color: #334155;">Bottleneck stage not targeted</div>
+</div>
+</div>
+<!-- Scaling Failure -->
+<div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 4px; overflow: hidden;">
+<div style="background: #d97706; padding: 0.5rem 1rem;">
+<span style="font-size: 0.7rem; font-weight: 700; color: #0f172a; text-transform: uppercase; letter-spacing: 0.1em;">Scaling Failure</span>
+</div>
+<div style="padding: 0.75rem 1rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 0.5rem;">
+<div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 0.5rem 0.75rem; border-radius: 3px; font-size: 0.72rem; color: #334155;">Unit congestion at scale</div>
+<div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 0.5rem 0.75rem; border-radius: 3px; font-size: 0.72rem; color: #334155;">Orchestration limits</div>
+<div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 0.5rem 0.75rem; border-radius: 3px; font-size: 0.72rem; color: #334155;">Shared infrastructure constraints</div>
+</div>
+</div>
+</div>
+<div style="margin-top: 1rem; font-size: 0.65rem; color: #94a3b8; letter-spacing: 0.04em;">
+Source: Automation Failure Framework · Autonomy Bridge, 2026
+</div>
 </div>
 </div>
 
@@ -504,7 +478,7 @@ Occurs when pilot-stage performance cannot replicate at full deployment scale. T
 
 The Automation Failure Framework applies to deployments where robotics converts variable operational cost into fixed capital infrastructure and where demand for that infrastructure is not guaranteed. It does not apply to operational contexts where task demand is fully contracted and stable, or where the facility or operation is purpose-built around automation from inception.
 
-> **Key Finding (Autonomy Bridge, 2026):** Automation economics behave differently in environments where demand stability eliminates utilization risk as a structural variable. (Autonomy Bridge proprietary analysis, 2026)
+> **Key Finding (Autonomy Bridge, 2026):** Automation economics behave differently in environments where demand stability eliminates utilization risk as a structural variable. (Autonomy Bridge analytical interpretation; underlying evidence not independently verified)
 
 The framework does not apply to:
 
@@ -557,117 +531,3 @@ Updated: 2026-04-11
 Author: Deepak Gupta (author_deepak_001), Founder & Principal Analyst, Autonomy Bridge
 Schema Type: Article / FAQPage
 Frameworks tagged: Automation Failure Framework
-
-```json
-{
-  "@context": "https://schema.org",
-  "@type": ["Article", "FAQPage"],
-  "headline": "Why Robotics Deployments Fail Economically",
-  "description": "The Automation Failure Framework identifies four structural failure mechanisms ,  utilization failure, task mismatch, integration failure, and scaling failure ,  that explain why robotics deployments underperform financially across all platform types and operational domains.",
-  "datePublished": "2026-03-15",
-  "dateModified": "2026-04-11",
-  "inLanguage": "en",
-  "speakable": {
-    "@type": "SpeakableSpecification",
-    "cssSelector": ["#definition", "#faq"]
-  },
-  "author": [
-    {
-      "@type": "Person",
-      "name": "Deepak Gupta",
-      "@id": "author_deepak_001",
-      "jobTitle": "Founder & Principal Analyst",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Autonomy Bridge",
-        "url": "https://autonomybridge.com"
-      },
-      "url": "https://autonomybridge.com/about",
-      "sameAs": "https://www.linkedin.com/in/deepakgupta5"
-    }
-  ],
-  "publisher": {
-    "@type": "Organization",
-    "name": "Autonomy Bridge",
-    "url": "https://autonomybridge.com",
-    "sameAs": [
-      "https://www.linkedin.com/company/autonomybridge",
-      "https://twitter.com/autonomybridge"
-    ]
-  },
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://autonomybridge.com/frameworks/automation-failure-framework"
-  },
-  "isPartOf": {
-    "@type": "WebPage",
-    "name": "Autonomy Bridge Frameworks",
-    "url": "https://autonomybridge.com/frameworks"
-  },
-  "keywords": [
-    "robotics deployment failure",
-    "automation failure framework",
-    "robotics economic failure",
-    "robotics ROI",
-    "utilization failure robotics",
-    "automation economic underperformance",
-    "robotics deployment risk",
-    "integration complexity robotics",
-    "task mismatch automation",
-    "robotics pilot failure"
-  ],
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is the Automation Failure Framework?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The Automation Failure Framework is a proprietary diagnostic model developed by Autonomy Bridge that identifies four structural failure mechanisms ,  utilization failure, task mismatch, integration failure, and scaling failure ,  that cause robotics deployments to underperform financially. It applies across all robotic platform types and operational domains where automation converts variable operating cost into fixed capital infrastructure."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Why do robotics deployments fail economically rather than technically?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Robotics deployments fail economically because automation converts variable operating cost into fixed capital infrastructure. If operational task demand does not sustain sufficient utilization of installed capacity, capital recovery slows regardless of how well the robots perform. The system functions as designed, but the surrounding operational environment cannot sustain the utilization required to recover fixed capital."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is utilization failure in a robotics deployment?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Utilization failure occurs when task volume cannot sustain the installed automation capacity. Because robotics systems are sized for peak demand, they operate below capacity during average demand periods. Demand volatility, contract duration, and task seasonality all amplify utilization risk ,  automation capacity remains fixed while demand fluctuates."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How does task mismatch cause automation underperformance?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Task mismatch occurs when the robotics architecture does not align with the operational task structure. System throughput is governed by the slowest stage. Automation that improves a non-binding stage does not increase total output. This applies to AMRs in packing-constrained warehouses, inspection drones in analysis-constrained programmes, and service robots in scheduling-constrained environments."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What types of robotic platforms does this framework cover?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The framework covers all platform types where deployment converts variable operational cost into fixed capital: intralogistics mobile platforms, commercial indoor service robots, aerial robotic platforms, inspection robots, surgical and clinical platforms, off-highway autonomous vehicles, on-road autonomous vehicles, underwater and surface maritime platforms, and wearable robotics."
-      }
-    }
-  ],
-  "about": [
-    { "@type": "Thing", "name": "Robotics Deployment Failure" },
-    { "@type": "Thing", "name": "Robotics Economics" },
-    { "@type": "Thing", "name": "Deployment Risk" },
-    { "@type": "Thing", "name": "Utilization Risk" },
-    { "@type": "Thing", "name": "Integration Complexity" }
-  ],
-  "mentions": [
-    { "@type": "CreativeWork", "name": "Warehouse Automation ROI Evaluation", "url": "https://autonomybridge.com/use-cases/warehouse-automation-roi-evaluation" },
-    { "@type": "CreativeWork", "name": "Automation Deployment Risk Assessment", "url": "https://autonomybridge.com/case-studies/automation-deployment-risk-assessment" }
-  ]
-}
-```

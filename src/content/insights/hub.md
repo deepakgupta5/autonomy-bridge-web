@@ -104,7 +104,7 @@ integrity:
 ---
 
 ## Insights
-The Insights hub is Autonomy Bridge's primary research publishing layer ,  a structured repository of analysis on warehouse automation, robotics deployment, industrial AI, autonomous systems, and 3PL operations. Content is produced at the intersection of operational evidence and strategic frameworks, drawing on primary market research, vendor intelligence, and deployment data across North American and APAC industrial markets. This hub is built for three audiences: operators evaluating or scaling autonomous systems, investors assessing market positioning and deployment risk, and vendors competing in industrial automation and robotics markets who need rigorous third-party analysis to benchmark their category.
+The Insights hub is Autonomy Bridge's primary research publishing layer ,  a structured repository of analysis on warehouse automation, robotics deployment, industrial AI, autonomous systems, and 3PL operations. The collection contains Autonomy Bridge analytical interpretations and source accounts. Public references support only their stated scope; this repository does not substantiate a collection-wide claim of primary research or independently verified deployment data. This hub is built for three audiences: operators evaluating or scaling autonomous systems, investors assessing market positioning and deployment risk, and vendors competing in industrial automation and robotics markets who need rigorous third-party analysis to benchmark their category.
 
 **[Frameworks →](/frameworks) · [Use Cases →](/use-cases) · [Case Studies →](/case-studies)**
 
@@ -113,11 +113,10 @@ The Insights hub is Autonomy Bridge's primary research publishing layer ,  a str
 ## Content Types
 ### Articles
 
-Analytical commentary of 800-1,500 words on active topics in warehouse automation, industrial AI, and autonomous systems deployment. Each article is framework-tagged and cross-linked to relevant glossary terms, use cases, and research to function as a topic cluster connector, not a standalone post.
+Use measurements and documented assumptions for the operation being evaluated. The previous numerical range or performance claim was not supported by publishable evidence and has been withdrawn; no general benchmark is asserted here.
 
 ### Research Notes
 
-Short-form, data-driven analysis anchored to a specific finding, dataset, or market development ,  typically 300-600 words. Research Notes surface a discrete signal with sourcing and context rather than developing a full argument; they are the fastest-moving content type in this hub.
 
 ### Market Signals
 

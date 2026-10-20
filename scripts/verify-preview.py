@@ -26,8 +26,11 @@ class Page(HTMLParser):
   if self.intitle:self.title+=data
   if self.script is not None:self.script+=data
 root=Path(__file__).resolve().parents[1]; dist=Path(os.environ.get('AB_AUDIT_DIST', root/'dist'))
-candidate = len(sys.argv) == 3 and sys.argv[2] == '--release-candidate'
-if len(sys.argv) != 2 and not candidate:
+candidate = '--release-candidate' in sys.argv[2:]
+apex = '--canonical-apex' in sys.argv[2:]
+review = '--research-review' in sys.argv[2:]
+exceptions=json.loads((root/'config/research-review-exceptions.json').read_text())
+if len(sys.argv) < 2 or set(sys.argv[2:]) - {'--release-candidate','--canonical-apex','--research-review'}:
  raise SystemExit('Usage: python3 scripts/verify-preview.py /path/to/0285946-baseline/dist (required)')
 base=Path(sys.argv[1])
 if not (base/'index.html').is_file() or len(list(base.rglob('*.html'))) != 157:
@@ -82,10 +85,27 @@ for hub in ['/insights','/frameworks','/use-cases','/case-studies','/market-over
  if missing:hub_missing[hub]=sorted(missing)
 result={'hub_listing_missing':hub_missing,'built_pages':len(pages),'research_pages':len(research),'unreachable_research':sorted(research-visited),'html_sitemap_expected':len(expected),'html_sitemap_missing':sorted(expected-sitemap_main),'html_sitemap_extra':sorted(sitemap_main-expected-{'/sitemap'}),'xml_sitemap_entries':len(xmlpaths),'xml_missing_research':sorted(research-xmlpaths),'xml_forbidden':sorted(xmlpaths & {'/contact-success','/privacy-policy','/terms-of-use','/cookie-policy'}),'broken_destinations':{k:sorted(v) for k,v in sorted(broken.items())},'fragment_failures':fragments,'breadcrumb_errors':crumb_errors,'missing_metadata':[p for p,x in pages.items() if not x.title.strip() or not x.meta.get('description','').strip() or not x.canonical],'redirects_unchanged':subprocess.check_output(['git','show','0285946:public/_redirects'],cwd=root)==(root/'public/_redirects').read_bytes()}
 base=Path(sys.argv[1]); old={route(p,base):Page(p.read_text()) for p in base.rglob('*.html')}
-result['lost_baseline_routes']=sorted(set(old)-set(pages));result['changed_existing_canonicals']=[p for p in old if p in pages and old[p].canonical!=pages[p].canonical]
+result['lost_baseline_routes']=sorted(set(old)-set(pages));result['changed_existing_canonicals']=[p for p in old if p in pages and (old[p].canonical.replace('https://www.autonomybridge.com','https://autonomybridge.com') if apex else old[p].canonical)!=pages[p].canonical]
 def dates(page):return [(s.get('@type'),s.get('datePublished'),s.get('dateModified')) for s in page.scripts if s.get('datePublished') or s.get('dateModified')]
 result['changed_research_dates_except_methodology']=[p for p in research-{'/methodology'} if p not in old or dates(pages[p])!=dates(old[p])]
 result['changed_research_titles_except_framework']=[p for p in research-{'/methodology','/frameworks/pilot-to-scale-failure-framework'} if p not in old or pages[p].title!=old[p].title]
+if review:
+ result['reviewed_research_date_changes']=result['changed_research_dates_except_methodology']
+ import re
+ policy=(root/'config/deployment-policy.mjs').read_text()
+ match=re.search(r"researchRevisionDate: '(\d{4}-\d{2}-\d{2})'",policy)
+ release_date=match[1] if match else None
+ revised=set(json.loads((root/'config/material-research-revisions.json').read_text()))
+ def invalid_dates(path):
+  values=dates(pages[path]);expected=release_date if path in revised else None
+  return any(pub or mod!=expected for _,pub,mod in values) or bool(expected) != bool(values)
+ result['changed_research_dates_except_methodology']=[p for p in research-{'/methodology'} if invalid_dates(p)]
+ result['reviewed_research_title_changes']=[p for p in result['changed_research_titles_except_framework'] if p in exceptions['title_routes']]
+ result['changed_research_titles_except_framework']=[p for p in result['changed_research_titles_except_framework'] if p not in exceptions['title_routes']]
+ registry=lambda text:[line.strip() for line in text.splitlines() if line.strip() and not line.startswith('#')]
+ original=registry(subprocess.check_output(['git','show','0285946:public/_redirects'],cwd=root,text=True))
+ result['redirects_unchanged']=registry((dist/'_redirects').read_text())==original+[exceptions['redirect_line']]
+ result['approved_diagram_redirect_added']=result['redirects_unchanged']
 allowed=json.loads((root/'docs/preview/historical-broken-links.json').read_text())
 if len(allowed) != 8: raise SystemExit('Historical broken-link exception register must contain exactly eight destinations')
 result['unexpected_broken_destinations']=sorted(set(broken)-set(allowed))
@@ -107,6 +127,6 @@ for key,count in [('built_pages',160),('research_pages',147),('html_sitemap_expe
 if not result['redirects_unchanged']: failures.append('redirects_unchanged')
 result['failures']=failures
 result['passed']=not failures
-(root/('docs/release/candidate-route-audit.json' if candidate else 'docs/preview/verification.json')).write_text(json.dumps(result,indent=2)+'\n')
+Path(os.environ.get('AB_AUDIT_REPORT', root/('docs/release/candidate-route-audit.json' if candidate else 'docs/preview/verification.json'))).write_text(json.dumps(result,indent=2)+'\n')
 print(json.dumps(result,indent=2))
 if failures: raise SystemExit('Preview verification failed: '+', '.join(failures))

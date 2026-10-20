@@ -1,0 +1,346 @@
+[
+  {
+    "route": "/case-studies",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/case-studies/ai-robotics-market-sizing-engagement",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/case-studies/automation-deployment-risk-assessment",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/case-studies/cold-storage-automation-economics-assessment",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/case-studies/general-merchandise-3pl-premature-automation-assessment",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/case-studies/healthcare-automation-investor-market-sizing",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/case-studies/icp-definition-inspection-robotics",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/case-studies/off-highway-autonomy-deployment-economics",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/case-studies/parcel-sortation-volume-sensitivity-analysis",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/case-studies/retail-dc-peak-demand-automation-assessment",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/case-studies/robotics-market-entry-decision-analysis",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/case-studies/robotics-pricing-strategy-research",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/case-studies/service-robotics-commercial-viability-assessment",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/frameworks",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/frameworks/automation-failure-framework",
+    "basis": "Material formula/definition change already present in consolidated release relative to main."
+  },
+  {
+    "route": "/frameworks/pilot-to-scale-failure-framework",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/frameworks/robotics-roi-model",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/frameworks/vendor-economics-framework",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/frameworks/warehouse-automation-decision-framework",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/frameworks/workflow-architecture-framework",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/glossary",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/glossary/automated-storage-retrieval-system",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/glossary/automation-go-no-go",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/glossary/automation-operating-cost",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/glossary/automation-readiness",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/glossary/autonomous-case-handling",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/glossary/autonomous-mobile-robot",
+    "basis": "Material formula/definition change already present in consolidated release relative to main."
+  },
+  {
+    "route": "/glossary/capital-recovery-period",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/glossary/case-level-picking-economics",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/glossary/cold-environment-labor-premium",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/glossary/cold-rated-system-premium",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/glossary/cold-storage-maintenance-burden",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/glossary/customer-concentration-risk",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/glossary/goods-to-person-system",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/glossary/idle-capital-cost",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/glossary/integration-cost",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/glossary/labor-displacement-rate",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/glossary/labor-intensity-threshold",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/glossary/labor-turnover-rate",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/glossary/peak-labor-cost-avoidance",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/glossary/peak-to-average-ratio",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/glossary/premature-automation",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/glossary/robotics-as-a-service",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/glossary/sku-velocity",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/glossary/sortation-technology-fork",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/glossary/sortation-volume-floor",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/glossary/system-uptime",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/glossary/third-party-logistics",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/glossary/throughput-modeling",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/insights",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/insights/how-aerial-robotics-vendors-are-pricing-into-inspection-markets",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/insights/how-investors-should-size-robotics-markets",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/insights/how-retail-distribution-center-automation-economics-actually-work",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/insights/how-robotics-pricing-models-determine-commercial-viability",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/insights/how-robotics-vendors-misjudge-their-addressable-market",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/insights/how-underwater-robotics-startups-can-break-incumbent-lock-in",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/insights/how-warehouse-operators-evaluate-robotics-vendors",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/insights/how-warehouse-robotics-economics-actually-works",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/insights/how-warehouse-workflows-determine-automation-success",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/insights/what-autonomous-vehicle-companies-get-wrong-about-freight-sales",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/insights/what-warehouse-automation-vendors-need-to-know-about-how-buyers-decide",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/insights/why-63-exoskeleton-companies-cant-break-through-distribution",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/insights/why-cold-storage-automation-economics-are-structurally-different",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/insights/why-commercial-viability-and-technical-readiness-are-not-the-same-thing",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/insights/why-direct-only-channel-doesnt-scale-in-robotics",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/insights/why-general-merchandise-3pls-should-not-automate-too-early",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/insights/why-healthcare-robotics-deployments-follow-a-different-economic-logic",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/insights/why-maritime-autonomy-revenue-is-not-what-it-appears",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/insights/why-mid-market-operators-struggle-to-evaluate-warehouse-robotics",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/insights/why-parcel-sortation-automation-breaks-at-low-volume",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/insights/why-robotics-enterprise-deals-stall",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/insights/why-robotics-pilots-fail-to-convert-to-commercial-contracts",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/insights/why-robotics-pilots-fail-to-scale",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/insights/why-warehouse-automation-projects-fail",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/use-cases",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/use-cases/aerial-robotics-commercial-viability-evaluation",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/use-cases/amr-deployment-evaluation",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/use-cases/cold-storage-automation-evaluation",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/use-cases/general-merchandise-3pl-automation-evaluation",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/use-cases/goods-to-person-system-evaluation",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/use-cases/humanoid-platform-commercial-readiness",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/use-cases/parcel-sortation-automation-evaluation",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/use-cases/retail-dc-automation-evaluation",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/use-cases/robotics-deployment-3pl-warehouses",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/use-cases/service-robotics-deployment-evaluation",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  },
+  {
+    "route": "/use-cases/warehouse-automation-roi-evaluation",
+    "basis": "Public source wording/metadata changed after excluding internal JSON snapshots, whitespace and citation-label-only changes."
+  }
+]

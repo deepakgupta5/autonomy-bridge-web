@@ -1,0 +1,30 @@
+[
+  {
+    "before": "If system utilisation increases \u2192 subscription cost per operational unit decreases.",
+    "after": "For a fixed subscription fee over a defined period, higher completed volume reduces the fixed subscription cost per unit. A constant usage-based charge per unit does not decrease merely because volume rises."
+  },
+  {
+    "before": "Recurring subscription fees accumulate to exceed capital ownership cost in long-term deployments without fee renegotiation.",
+    "after": "Recurring subscription fees may exceed capital ownership cost, depending on purchase prices, subscription and service fees, usage charges, and the comparison horizon."
+  },
+  {
+    "before": "Capital purchase imposes high upfront exposure but lower lifetime cost under stable multi-year contracts. RaaS reduces initial risk but accumulates to exceed ownership cost if client contracts remain stable for 4+ years.",
+    "after": "Capital purchase imposes upfront investment. Compare its installed and ongoing costs with the RaaS initial and recurring costs over the same horizon. Without prices, fees and operating assumptions, neither a lower lifetime cost nor a crossover year can be calculated."
+  },
+  {
+    "before": "Capital purchase creates higher upfront exposure but lower lifetime cost if the system remains deployed long-term.",
+    "after": "Capital purchase creates upfront exposure; whether its lifetime cost is lower depends on the two cost paths over a common horizon."
+  },
+  {
+    "before": "Lower if system remains deployed \u00b7 service fees continue",
+    "after": "Compare installed and recurring costs over the same horizon"
+  },
+  {
+    "before": "Can exceed ownership cost in long-term deployments",
+    "after": "May exceed ownership cost, depending on fees and horizon"
+  },
+  {
+    "before": "Determines how efficiently automation capacity is used. If utilisation declines, effective cost per operational unit rises regardless of pricing model.",
+    "after": "For a fixed cost component over a defined period, lower completed volume raises that component\u2019s cost per unit. A constant usage-based per-unit charge is unchanged by volume alone."
+  }
+]

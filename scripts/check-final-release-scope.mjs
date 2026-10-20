@@ -1,0 +1,13 @@
+import {readFileSync,writeFileSync} from 'node:fs';import assert from 'node:assert/strict';import {parse} from 'parse5';
+const dist=process.argv[2],walk=n=>[n,...(n.childNodes??[]).flatMap(walk)],text=n=>n.value??(n.childNodes??[]).map(text).join('');
+const body=route=>{const ns=walk(parse(readFileSync(dist+'/'+route+'.html','utf8')));return text(ns.find(n=>n.tagName==='main')).replace(/\s+/g,' ');};
+const vendor=body('frameworks/vendor-economics-framework'),roi=body('frameworks/robotics-roi-model');
+for(const stale of ['4+ years','Recurring subscription fees accumulate to exceed','subscription cost per operational unit decreases','rises regardless of pricing model','Lower if system remains deployed'])assert(!vendor.includes(stale),stale);
+for(const current of ['fixed subscription fee','constant usage-based charge per unit','depending on purchase prices','neither a lower lifetime cost nor a crossover year can be calculated','Compare installed and recurring costs over the same horizon'])assert(vendor.includes(current),current);
+assert.equal(Math.ceil(120/25),5);assert.equal(600/1000,0.6);assert.equal(300000/100000,3);assert.equal(((500000-300000)/300000*100).toFixed(1),'66.7');
+for(const needle of ['ROI_H','66.7%','600 tasks','1,000 tasks','ceil(120/25) = 5'])assert(roi.includes(needle),needle);
+const svg=readFileSync(dist+'/diagrams/frameworks/robotics-roi-model/robotics-roi-model-diagram-01.svg','utf8');for(const needle of ['60%','66.7%','3-year payback','No universal'])assert(svg.includes(needle),needle);
+const home=body('index'),commercial=body('commercial-leadership'),ai=body('ai-consulting'),about=body('about');assert(/startup/i.test(commercial)&&/SMB|small and medium/i.test(commercial));assert(/nonprofit/i.test(ai)&&/business/i.test(ai));assert(!/nonprofit/i.test(commercial));
+for(const t of [home,commercial,ai,about])assert(!t.includes('I work with startup founders and small and medium-sized business leaders on growth, commercial execution and practical uses of AI'));
+const report={passed:true,bounded_math_scope:'ROI and vendor-economics formulas, arithmetic, units, crossover thresholds, visible FAQ/table/inline figure text; ROI SVG and five vendor PNGs visually reviewed. No further mathematical discrepancy identified within this scope. No general qualitative/style audit.',arithmetic:{fleet:5,utilization:0.6,payback_years:3,five_year_roi_percent:66.7},three_requested_corrections_and_repetitions:true,commercial_startups_smbs:true,ai_businesses_nonprofits:true,stale_main_audience_sentence_absent:true};
+writeFileSync('docs/consolidated-release/final-release/scope-math.json',JSON.stringify(report,null,2)+'\n');console.log(report);

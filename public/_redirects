@@ -9,3 +9,6 @@
 /insights/pricing-ai-robotics/ /insights/how-robotics-pricing-models-determine-commercial-viability 301!
 /insights/missing-middle-gtm /insights/why-direct-only-channel-doesnt-scale-in-robotics 301!
 /insights/missing-middle-gtm/ /insights/why-direct-only-channel-doesnt-scale-in-robotics 301!
+
+# Preserve the historical figure URL after the reviewed factual correction.
+/diagrams/frameworks/robotics-roi-model/robotics-roi-model-diagram-01.png /diagrams/frameworks/robotics-roi-model/robotics-roi-model-diagram-01.svg 301!

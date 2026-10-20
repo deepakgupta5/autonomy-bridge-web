@@ -1,0 +1,34 @@
+{
+  "passed": true,
+  "negative_controls": [
+    {
+      "mutation": "contrary ROI answer",
+      "rejected": true
+    },
+    {
+      "mutation": "unsupported metadata figure",
+      "rejected": true
+    },
+    {
+      "mutation": "public email",
+      "rejected": true
+    },
+    {
+      "mutation": "crawler changed",
+      "rejected": true
+    },
+    {
+      "mutation": "form absent",
+      "rejected": true
+    },
+    {
+      "mutation": "new broken link",
+      "rejected": true
+    },
+    {
+      "mutation": "unsubstantiated research date",
+      "rejected": true
+    }
+  ],
+  "scope": "Isolated artifact mutations; real candidate not modified."
+}

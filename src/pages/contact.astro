@@ -8,18 +8,18 @@ const metadata = pages['/contact'].metadata;
 const fields = [
  {name:'name', label:'Name', type:'text', required:true, autocomplete:'name'},
  {name:'email', label:'Email', type:'email', required:true, autocomplete:'email', hint:'Use the address where you’d like me to reply.'},
- {name:'company', label:'Company or organisation', type:'text', required:true, autocomplete:'organization'},
+ {name:'company', label:'Company or organisation', type:'text', required:true, autocomplete:'organization', hint:'Not required for a privacy request.'},
  {name:'website', label:'Website', type:'text', required:false, autocomplete:'url'},
  {name:'message', label:'Your message', required:true, hint:'Briefly describe your situation and what you’d like to improve.'},
 ];
 ---
 <MainLayout title="Contact" canonicalPath="/contact" seoTitle={metadata.title} seoDescription={metadata.description}>
 <article class="approved-copy core-copy contact-copy">
-<header><h1>Discuss your business challenge</h1>
-<p>Get in touch about commercial leadership, AI consulting and implementation or a question arising from the research.</p>
+<header><h1>Discuss what you want to improve</h1>
+<p>Get in touch about commercial leadership for your business, AI consulting and implementation for your business or nonprofit, or a question arising from the research.</p>
 <p>You may have a defined project or simply know that something needs to improve. You don’t need to choose an engagement model before contacting me.</p></header>
 <div class="contact-grid">
-<div><p>Tell me a little about your business, what you want to change and where you need help. If there’s a relevant deadline or something you’ve already tried, include that too.</p>
+<div><p>Tell me a little about your organization and its work, what you want to change and where you need help. If there’s a relevant deadline or something you’ve already tried, include that too.</p>
 <p>Please leave out confidential and sensitive information.</p>
 {deploymentPolicy.mode === 'local' && <p class="test-notice">Preview form: no enquiries or notifications are sent. Submission outcomes require a controlled local test response.</p>}</div>
 {(deploymentPolicy.mode === 'local' || deploymentPolicy.formEnabled) ? <form name="contact" method="POST" action="/contact-success" data-netlify="true" netlify-honeypot="bot-field" novalidate>
@@ -29,15 +29,16 @@ const fields = [
 <input type="hidden" name="receipt-kind" value="autonomybridge-contact-v1" />
 <div hidden><label for="bot-field">Leave blank</label><input id="bot-field" name="bot-field" tabindex="-1" autocomplete="off" /></div>
 <p id="form-status" role="alert" tabindex="-1"></p>
+<div class="privacy-choice"><label for="privacy-request"><input type="checkbox" id="privacy-request" name="privacy-request" value="yes" /> This is a privacy request</label><p class="hint">You do not need a company or organisation to make a privacy request.</p></div>
 {fields.map(field => <div class="field">
-<label for={field.name}>{field.label} <span>— {field.required ? 'required' : 'optional'}</span></label>
+<label for={field.name}>{field.label} <span id={`${field.name}-requirement`}>— {field.required ? 'required' : 'optional'}</span></label>
 {field.hint && <p id={`${field.name}-hint`} class="hint">{field.hint}</p>}
 {field.name === 'message' ? <textarea id={field.name} name={field.name} required rows="6" aria-describedby={`${field.name}-hint ${field.name}-error`}></textarea> : <input id={field.name} name={field.name} type={field.type} required={field.required} autocomplete={field.autocomplete} aria-describedby={`${field.hint ? field.name+'-hint ' : ''}${field.name}-error`} />}
 <p class="field-error" id={`${field.name}-error`}></p>
 </div>)}
 <button class="copy-button" type="submit" disabled>Send enquiry</button>
-<noscript><p>This form needs JavaScript. Please use the email link above if JavaScript is unavailable.</p></noscript>
-</form> : <p role="status">The enquiry form is temporarily unavailable. Please email <a href="mailto:deepak@autonomybridge.com">deepak@autonomybridge.com</a>.</p>}</div></article>
+<noscript><p>This form needs JavaScript to submit and verify receipt. Enable JavaScript and reload this page to use it. No enquiry has been sent.</p></noscript>
+</form> : <p role="status">The enquiry form is temporarily unavailable. Please return later. No enquiry has been sent.</p>}</div></article>
 </MainLayout>
 <script>
 import { mountContactForm } from '../utils/contact-form';
@@ -57,3 +58,5 @@ if (form) mountContactForm(form);
 @media(max-width:1000px){.contact-copy>header,.contact-grid{column-gap:2rem}}
 @media(max-width:800px){.contact-copy>header{display:block}.contact-copy>header h1{max-width:none}.contact-grid{margin-top:2rem}}
 </style>
+
+<style>.privacy-choice{margin-bottom:1.5rem}.privacy-choice input{width:auto;margin-right:.5rem}.privacy-choice label{font-size:.95rem}</style>

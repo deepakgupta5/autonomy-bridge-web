@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1050" viewBox="0 0 1000 1050" role="img" aria-labelledby="title desc">
+<title id="title">Robotics capacity, utilization and cash-flow model</title>
+<desc id="desc">Define a common period and task mix. Estimate capacity and actual output separately. Output utilization is actual output divided by sustainable capacity. Time utilization is productive robot-hours divided by scheduled robot-hours. Net annual cash benefits determine payback in years and cumulative ROI over a stated horizon. No universal economic or congestion threshold is asserted.</desc>
+<rect width="1000" height="1050" fill="#f8fafc"/>
+<g font-family="sans-serif" fill="#162035">
+<text x="50" y="55" font-size="30" font-weight="bold">Robotics: capacity to cash flow</text>
+<text x="50" y="90" font-size="19">Use one task mix, operating schedule and currency throughout.</text>
+<g fill="white" stroke="#cbd5e1" stroke-width="2"><rect x="50" y="125" width="900" height="150"/><rect x="50" y="315" width="900" height="195"/><rect x="50" y="550" width="900" height="150"/><rect x="50" y="740" width="900" height="190"/></g>
+<g stroke="#d97706" stroke-width="4"><path d="M500 275v40m-8-10 8 10 8-10M500 510v40m-8-10 8 10 8-10M500 700v40m-8-10 8 10 8-10" fill="none"/></g>
+<g font-size="20">
+<text x="75" y="160" font-weight="bold">1. Sustainable capacity and achieved output</text>
+<text x="75" y="195">Capacity = minimum of fleet and workstation capacity (tasks/hour).</text>
+<text x="75" y="228">Fleet lower bound = ceil(peak tasks/hour ÷ tasks/robot-hour).</text>
+<text x="75" y="255">Validate availability, charging, congestion and shared constraints.</text>
+<text x="75" y="350" font-weight="bold">2. Utilization is not a capacity-to-demand ratio</text>
+<text x="75" y="385">Output utilization = completed tasks ÷ sustainable task capacity</text>
+<text x="75" y="415">over the same period. Example: 600 ÷ 1,000 = 60%.</text>
+<text x="75" y="447">Time utilization = productive ÷ scheduled robot-hours.</text>
+<text x="75" y="479">Capacity ÷ demand is a separate ratio, not utilization.</text>
+<text x="75" y="585" font-weight="bold">3. Net cash benefits, not gross labor displacement</text>
+<text x="75" y="620">Sₜ = avoidable labor cash cost + other incremental cash benefits</text>
+<text x="75" y="651">− incremental operating cash costs (currency per year).</text>
+<text x="75" y="681">C₀ = initial installed investment. Count every cost only once.</text>
+<text x="75" y="775" font-weight="bold">4. Separate time to recovery from return</text>
+<text x="75" y="810">Simple payback = C₀ ÷ S (years; constant annual S &gt; 0).</text>
+<text x="75" y="841">Horizon ROI = (Σ Sₜ − C₀) ÷ C₀ (C₀ &gt; 0; t = 1…H).</text>
+<text x="75" y="872">Example: $300k invested, $100k/year net → 3-year payback;</text>
+<text x="75" y="903">5-year undiscounted ROI = 66.7%. Example only, not a benchmark.</text>
+</g>
+<text x="50" y="970" font-size="18">No universal utilization or congestion threshold is established.</text>
+<text x="50" y="1000" font-size="18">Definitions, assumptions, limitations and references appear in the article.</text>
+</g></svg>

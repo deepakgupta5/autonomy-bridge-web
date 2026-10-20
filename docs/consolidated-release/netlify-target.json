@@ -1,0 +1,12 @@
+{
+  "site_id": "3df07dc5-6950-4241-98eb-cf95df3d271d",
+  "name": "autonomybridgenetlify",
+  "primary_url": "https://autonomybridge.com",
+  "production_branch": "main",
+  "allowed_branches": [
+    "main"
+  ],
+  "ignore_html_forms": false,
+  "published_commit": "59b9f7b8b307d3cb558255353cf44008ab8373d4",
+  "no_deploy_or_configuration_mutation": true
+}

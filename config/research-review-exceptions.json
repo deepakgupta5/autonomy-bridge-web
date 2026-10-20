@@ -1,0 +1,14 @@
+{
+  "source_commit": "02b5395",
+  "title_routes": [
+    "/insights/how-robotics-pricing-models-determine-commercial-viability",
+    "/insights/how-underwater-robotics-startups-can-break-incumbent-lock-in",
+    "/insights/what-autonomous-vehicle-companies-get-wrong-about-freight-sales",
+    "/insights/what-warehouse-automation-vendors-need-to-know-about-how-buyers-decide",
+    "/insights/why-63-exoskeleton-companies-cant-break-through-distribution",
+    "/insights/why-direct-only-channel-doesnt-scale-in-robotics",
+    "/insights/why-maritime-autonomy-revenue-is-not-what-it-appears",
+    "/insights/why-robotics-enterprise-deals-stall"
+  ],
+  "redirect_line": "/diagrams/frameworks/robotics-roi-model/robotics-roi-model-diagram-01.png /diagrams/frameworks/robotics-roi-model/robotics-roi-model-diagram-01.svg 301!"
+}

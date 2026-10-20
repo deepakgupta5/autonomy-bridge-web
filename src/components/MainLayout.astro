@@ -1,5 +1,6 @@
 ---
 import {deploymentPolicy} from '../../config/deployment-policy.mjs';
+import { materiallyRevised, researchReleaseDate, researchDateSchema } from "../utils/researchDates";
 import Breadcrumbs from "./Breadcrumbs.astro";
 import Footer from "./Footer.astro";
 import Header from "./Header.astro";
@@ -68,7 +69,7 @@ const breadcrumbSchemaItems = breadcrumbs.map((item, index) => ({
 const defaultSchemas = buildDefaultLayoutSchemas({
   breadcrumbItems: breadcrumbSchemaItems,
 });
-const schemaEntries = [...defaultSchemas, ...schema];
+const schemaEntries = [...defaultSchemas, ...schema.map(entry => researchDateSchema(entry, currentPath))];
 const resolvedOgTitle = ogTitle ?? metadata.ogTitle;
 const resolvedOgDescription = ogDescription ?? metadata.description;
 const resolvedTwitterCard = twitterCard ?? "summary";
@@ -106,6 +107,7 @@ const resolvedOgUrl = canonicalHref ?? metadata.absoluteCanonicalUrl;
     {deploymentPolicy.mode === 'local' && <aside class="preview-notice">Local review preview — publication approval pending. Legal fields and selected proof require review.</aside>}
     <Header currentPath={currentPath} />
     <main class="page-main" id="main-content">
+    {materiallyRevised(currentPath) && <p class="research-revision">{researchReleaseDate ? <>Last updated: <time datetime={researchReleaseDate}>{researchReleaseDate}</time></> : <>Revision prepared for release; publication pending. Historical source dates are not verified public publication dates.</>}</p>}
       <div class="page-content">
         {breadcrumbs.length > 1 && <Breadcrumbs items={breadcrumbs} />}
         {currentPath.startsWith("/market-overview") && <LocalSubnav heading="Research navigation" links={researchLinks} currentPath={currentPath} />}
@@ -134,3 +136,5 @@ const resolvedOgUrl = canonicalHref ?? metadata.absoluteCanonicalUrl;
     padding: 3rem 2rem 5rem;
   }
 </style>
+
+<style>.research-revision{max-width:1152px;margin:1rem auto;padding:0 1.5rem;font-size:.875rem;color:var(--color-text-secondary)}</style>

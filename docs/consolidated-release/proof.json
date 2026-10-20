@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "controlling_source_sha256": "0ceaf65b4b3e06991497defca8ed6dd4c5a785468e1736429ee41d80d3d10ea8",
+  "audited_directory": "/private/tmp/ab-consolidated-final",
+  "proof_total": 18,
+  "proof": [
+    {
+      "route": "/",
+      "approved_paragraphs": 6,
+      "source_and_build_match": true
+    },
+    {
+      "route": "/commercial-leadership",
+      "approved_paragraphs": 3,
+      "source_and_build_match": true
+    },
+    {
+      "route": "/ai-consulting",
+      "approved_paragraphs": 4,
+      "source_and_build_match": true
+    },
+    {
+      "route": "/about",
+      "approved_paragraphs": 5,
+      "source_and_build_match": true
+    }
+  ],
+  "placeholder_and_google_scan": "passed",
+  "contact": "Netlify form enabled",
+  "private_source_paths_and_common_secret_patterns": "passed; not a universal secret detector",
+  "owner_approval": "https://github.com/deepakgupta5/autonomy-bridge-web/pull/1#issuecomment-6281916360",
+  "scope": "Only approved website excerpts; underlying private evidence excluded; owner attestation not independent records audit"
+}
