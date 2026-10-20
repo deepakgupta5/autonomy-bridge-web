@@ -1,0 +1,164 @@
+[
+  {
+    "route": "/frameworks/robotics-roi-model",
+    "article_schema": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "How Should Warehouse Automation ROI Be Modeled?",
+        "description": "Warehouse robotics ROI depends on labor cost removal and sustained utilization. The Robotics ROI Model ,  developed by Autonomy Bridge ,  models the full economic chain from labor baseline through capital payback across six linked components.",
+        "url": "https://autonomybridge.com/frameworks/robotics-roi-model",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://autonomybridge.com/frameworks/robotics-roi-model"
+        },
+        "author": [
+          {
+            "@type": "Person",
+            "name": "Deepak Gupta"
+          }
+        ],
+        "publisher": {
+          "@id": "https://autonomybridge.com#organization"
+        },
+        "datePublished": "2026-03-15",
+        "dateModified": "2026-03-15"
+      }
+    ],
+    "visible_time_elements": [],
+    "visible_author_mentions": false,
+    "public_outbound_links": [],
+    "proprietary_attributions": [
+      "(Autonomy Bridge proprietary analysis, 2026)",
+      "(Autonomy Bridge proprietary analysis, 2026)",
+      "(Autonomy Bridge proprietary analysis, 2026)",
+      "(Autonomy Bridge proprietary analysis, 2026)",
+      "(Autonomy Bridge proprietary analysis, 2026)",
+      "(Autonomy Bridge proprietary analysis, 2026)",
+      "(Autonomy Bridge proprietary analysis, 2026)",
+      "(Autonomy Bridge proprietary analysis, 2026)"
+    ],
+    "limitations": [
+      "Robotics deployments fail economically when assumptions diverge from operational reality.",
+      "Key Finding (Autonomy Bridge, 2026): Automation failures rarely occur because robots do not work. They occur because utilization assumptions prove unrealistic. (Autonomy Bridge proprietary analysis, 2026)"
+    ]
+  },
+  {
+    "route": "/insights/why-robotics-pilots-fail-to-scale",
+    "article_schema": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Why Robotics Pilots Fail to Scale",
+        "description": "Most robotics pilots answer the wrong question. This article distinguishes pilot success from scale viability, diagnoses four common misconceptions, and provides a utilization-based economic model for operators, automation leaders, and capital committees evaluating deployment decisions.",
+        "url": "https://autonomybridge.com/insights/why-robotics-pilots-fail-to-scale",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://autonomybridge.com/insights/why-robotics-pilots-fail-to-scale"
+        },
+        "author": [
+          {
+            "@type": "Person",
+            "name": "Deepak Gupta"
+          }
+        ],
+        "publisher": {
+          "@id": "https://autonomybridge.com#organization"
+        },
+        "datePublished": "2026-03-15",
+        "dateModified": "2026-03-15"
+      }
+    ],
+    "visible_time_elements": [],
+    "visible_author_mentions": false,
+    "public_outbound_links": [],
+    "proprietary_attributions": [
+      "(Autonomy Bridge proprietary analysis, 2026)",
+      "(Autonomy Bridge proprietary analysis, 2026)",
+      "(Autonomy Bridge proprietary analysis, 2026)"
+    ],
+    "limitations": [
+      "The robotics industry treats the pilot as the primary gate for deployment. If the technology works inside a small test environment, the assumption is that the organization should proceed toward broader rollout. That assumption collapses in real warehouse operations."
+    ]
+  },
+  {
+    "route": "/use-cases/retail-dc-automation-evaluation",
+    "article_schema": [
+      {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "headline": "Retail DC Automation Evaluation",
+        "description": "Retail DC automation is sized for peak demand but must recover capital across a full year of mixed utilization. The economic test is not utilization rate but whether peak labor cost avoidance exceeds idle capital cost over the operating cycle. This use case applies the Robotics ROI Model, Automation Failure Framework, and Workflow Architecture Framework to evaluate automation investment viability in retail distribution environments.",
+        "url": "https://autonomybridge.com/use-cases/retail-dc-automation-evaluation",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://autonomybridge.com/use-cases/retail-dc-automation-evaluation"
+        },
+        "author": [
+          {
+            "@type": "Person",
+            "name": "Deepak Gupta"
+          }
+        ],
+        "publisher": {
+          "@id": "https://autonomybridge.com#organization"
+        },
+        "datePublished": "2026-03-30",
+        "dateModified": "2026-03-30"
+      }
+    ],
+    "visible_time_elements": [],
+    "visible_author_mentions": false,
+    "public_outbound_links": [],
+    "proprietary_attributions": [
+      "(Autonomy Bridge proprietary analysis, 2026)",
+      "(Autonomy Bridge proprietary analysis, 2026)",
+      "(Autonomy Bridge proprietary analysis, 2026)"
+    ],
+    "limitations": [
+      "The central decision is not whether automation can handle peak volume ,  most systems can, if sized correctly. The decision is whether the cost of peak labor it eliminates exceeds the full-year cost of carrying the capital required to eliminate it. That test must be passed at realistic demand assumptions, not peak-case projections. See: Peak Labor Cost Avoidance →"
+    ]
+  },
+  {
+    "route": "/case-studies/retail-dc-peak-demand-automation-assessment",
+    "article_schema": [
+      {
+        "@context": "https://schema.org",
+        "@type": [
+          "CreativeWork",
+          "CaseStudy"
+        ],
+        "name": "Retail DC Peak Demand Automation Assessment",
+        "description": "A regional retailer evaluating a goods-to-person system for its highest-volume DC had received a vendor ROI model built on Q4 peak utilization. Autonomy Bridge rebuilt the economics using annualized demand data, decomposed peak labor cost, and modeled idle capital cost across the off-peak period. The engagement also identified an omnichannel workflow conflict ,  store replenishment and DTC ecommerce competing for shared infrastructure ,  that would reduce effective throughput below design capacity if unresolved. The operator deferred the investment and initiated a workflow architecture review before re-specifying the system.",
+        "url": "https://autonomybridge.com/case-studies/retail-dc-peak-demand-automation-assessment",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://autonomybridge.com/case-studies/retail-dc-peak-demand-automation-assessment"
+        },
+        "author": [
+          {
+            "@type": "Person",
+            "name": "Deepak Gupta"
+          }
+        ],
+        "publisher": {
+          "@id": "https://autonomybridge.com#organization"
+        },
+        "datePublished": "2026-03-30",
+        "dateModified": "2026-03-30"
+      }
+    ],
+    "visible_time_elements": [],
+    "visible_author_mentions": false,
+    "public_outbound_links": [],
+    "proprietary_attributions": [
+      "(Autonomy Bridge proprietary analysis, 2026)",
+      "(Autonomy Bridge proprietary analysis, 2026)"
+    ],
+    "limitations": [
+      "The internal concern was the sizing assumption. The system had been specified to handle peak Q4 volume ,  approximately three times the facility’s average daily order rate. Leadership recognized that outside the holiday window, significant installed capacity would go unused. The question was whether the economics still held when that reality was modeled across the full year.",
+      "The operator deferred the goods-to-person investment and initiated a workflow architecture review to physically separate store replenishment and DTC ecommerce operations before re-specifying any automation system. The engagement identified that the economic case was directionally viable at corrected peak labor cost assumptions ,  but not at the vendor’s proposed system scope, and not in a facility where the omnichannel workflow conflict remained unresolved.",
+      "Retail DC automation assessments fail when peak-period labor savings are compared against peak-period throughput without modeling what the same capital costs during the nine months when demand runs at average levels. The Robotics ROI Model applies a different economic test in retail DC environments: peak labor cost avoidance must exceed idle capital cost plus amortized capital expense across the full operating year. Vendor proposals built on peak utilization assumptions cannot produce this calculation ,  and they are not designed to."
+    ]
+  }
+]

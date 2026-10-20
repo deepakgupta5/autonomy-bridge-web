@@ -1,0 +1,28 @@
+[
+  {
+    "check": "canonical audit rejects pre-fix build",
+    "exit_code": 1,
+    "failed_as_expected": true,
+    "reason": [
+      "Traceback (most recent call last):",
+      "  File \"/Users/deepakgupta/Documents/ChatGPT/AutonomyBridge Website/repo/scripts/audit-canonical-host.py\", line 31, in <module>",
+      "    assert 'Sitemap: '+origin+'/sitemap-index.xml' in (dist/'robots.txt').read_text()",
+      "           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+      "AssertionError"
+    ]
+  },
+  {
+    "check": "static audit rejects duplicate H1 in baseline",
+    "exit_code": 1,
+    "failed_as_expected": true,
+    "reason": [
+      "node:internal/modules/run_main:107",
+      "    triggerUncaughtException(",
+      "    ^",
+      "",
+      "AssertionError [ERR_ASSERTION]: /frameworks/automation-failure-framework H1",
+      "",
+      "2 !== 1"
+    ]
+  }
+]
