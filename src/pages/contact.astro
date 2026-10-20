@@ -21,8 +21,6 @@ const fields = [
 <div class="contact-grid">
 <div><p>Tell me a little about your business, what you want to change and where you need help. If there’s a relevant deadline or something you’ve already tried, include that too.</p>
 <p>Please leave out confidential and sensitive information.</p>
-<p>Prefer email? Contact <a href="mailto:deepak@autonomybridge.com">deepak@autonomybridge.com</a></p>
-<h2>What happens next</h2><p>I’ll review your enquiry and reply by email. We can clarify what you need, whether I can help and the appropriate next step. If a conversation would be useful, we can arrange it then.</p>
 {deploymentPolicy.mode === 'local' && <p class="test-notice">Preview form: no enquiries or notifications are sent. Submission outcomes require a controlled local test response.</p>}</div>
 {(deploymentPolicy.mode === 'local' || deploymentPolicy.formEnabled) ? <form name="contact" method="POST" action="/contact-success" data-netlify="true" netlify-honeypot="bot-field" novalidate>
 <input type="hidden" name="form-name" value="contact" />
