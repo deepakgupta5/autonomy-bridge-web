@@ -1,6 +1,6 @@
 # Step 5 implementation report
 
-Branch: `codex/step-5-approved-copy`. Base: `main` at `26712952c4076a45de6731e321405dede13c2279`. The reviewed implementation commit is `dac9f81cb9f29eacc101e3828a22319548ff19ec`. This report has a subsequent narrow revision; its exact final head is recorded in issue #11 because a commit cannot contain its own SHA. This branch is unmerged and has no deployed preview.
+Branch: `codex/step-5-approved-copy`. Base: `main` at `26712952c4076a45de6731e321405dede13c2279`. The reviewed implementation commit is `dac9f81cb9f29eacc101e3828a22319548ff19ec`. The visual review below started from exact commit `0c9eaaba165f4ad4427dbdf356b9c25f23b086e5`; the containing follow-up commit is the branch head shown by GitHub. This branch is unmerged and has no deployed preview.
 
 ## Implemented
 
@@ -29,7 +29,7 @@ Before changing paths, the checked-in `docs/preview/research-inventory.json` lis
 - Approved text parity: all source paragraphs and section headings from Home, Startups, Nonprofits, Sales Leadership and About occur in their corresponding built article, with zero missing blocks. This excludes the source document's nonpublic title and navigation instruction. Contact and privacy copy were compared against the approved source during implementation.
 - Static checks: all 163 HTML pages emit `noindex,nofollow`; the seven changed public routes each contain one H1. The three audience CTA URLs and optional selector values occur in built HTML; Contact links to privacy and contains no `mailto:`.
 - Existing offline `scripts/test-contact-preparation.mjs`, `scripts/test-contact-events.mjs`, and `scripts/test-release-contact.mjs` pass. They use fixtures only. No form POST to Netlify or email was made.
-- Visual width checks and screenshots are **not complete**. The connected Browser extension was unavailable in this session, cloud browser cannot reach this container's loopback address, and a local Chromium download failed. The CSS includes a mobile breakpoint at 800px, but it has not been visually inspected at desktop and mobile widths. This remains an explicit Step 5 review dependency, not a passed test.
+- The original implementation session could not complete a visual pass. The follow-up pass below supplies browser evidence for the seven changed public routes and local Contact states.
 
 ## Private viewing
 
@@ -37,10 +37,30 @@ From this branch with Node 20: `npm ci`, then `npm run dev -- --host 127.0.0.1`;
 
 ## Dependencies and Step 6 boundary
 
-Before publication, verify permission for the named Ottonomy and Novus operating claims and USD revenue figures, plus the unnamed B2B platform figure. Confirm Netlify Forms processing location, notifications and mailbox provider, access controls, 12-month deletion across stores and backup behavior. Resolve the old service routes and referrers. Perform a real desktop/mobile visual pass in a reachable browser, including menu, long sections, cards, form and privacy text.
+Before publication, verify permission for the named Ottonomy and Novus operating claims and USD revenue figures, plus the unnamed B2B platform figure. Confirm Netlify Forms processing location, notifications and mailbox provider, access controls, 12-month deletion across stores and backup behavior. Resolve the old service routes and referrers. The local desktop/mobile pass below does not replace Step 6's release-environment visual and accessibility audit.
 
 Step 6 must independently audit all routes/redirects, canonical host, indexing and sitemap, live form acceptance and notification delivery under separate authorization, accessibility and visual regression, and Research internal-link preservation against the final branch head recorded in issue #11. Do not merge, deploy, submit a sitemap or send a real form notification on the authority of this report.
 
 ## Review revision
 
-Following review of `dac9f81`, the footer's superseded “Commercial leadership. Practical AI.” tagline was removed while the footer component and visual treatment remain. The reviewed implementation SHA is now explicit above. Desktop/mobile browser inspection and screenshots remain incomplete, as do account-level privacy and 12-month deletion verification. Legacy service-path bridge/redirect treatment remains a Step 6 decision. No production mode, deployment or notification setting changed in this revision.
+Following review of `dac9f81`, the footer's superseded “Commercial leadership. Practical AI.” tagline was removed while the footer component and visual treatment remain. The reviewed implementation SHA is now explicit above. Account-level privacy and 12-month deletion verification remain incomplete. Legacy service-path bridge/redirect treatment remains a Step 6 decision. No production mode, deployment or notification setting changed in this revision.
+
+## Desktop and mobile visual review — 23 October 2026
+
+This pass checked the built local preview from `0c9eaaba165f4ad4427dbdf356b9c25f23b086e5` in Chrome at 1423 × 612 CSS px desktop, 400 × 525 mobile, and 320 × 525 narrow mobile. Node 20.20.1 `npm run build` passed with 163 pages before and after the visual correction. The preview ran only on `127.0.0.1`; all seven routes had `document.documentElement.scrollWidth === innerWidth` at each checked width. I inspected each page's opening view, long-section samples, end/footer, headings and links. Cards stack at mobile width; illustrative buyer-question labels, About's prior-role attribution, Contact fields, and the privacy notice remain readable. No content overlap or clipped controls were found at these widths.
+
+| Route | Desktop opening view | Mobile opening view |
+| --- | --- | --- |
+| Home | [screenshot](visual-review/home-desktop-top.jpg) | [screenshot](visual-review/home-mobile-top.jpg) |
+| Startups | [screenshot](visual-review/startups-desktop-top.jpg) | [screenshot](visual-review/startups-mobile-top.jpg) |
+| Nonprofits | [screenshot](visual-review/nonprofits-desktop-top.jpg) | [screenshot](visual-review/nonprofits-mobile-top.jpg) |
+| Sales Leadership | [screenshot](visual-review/sales-leadership-desktop-top.jpg) | [screenshot](visual-review/sales-leadership-mobile-top.jpg) |
+| About | [screenshot](visual-review/about-desktop-top.jpg) | [screenshot](visual-review/about-mobile-top.jpg) |
+| Contact | [screenshot](visual-review/contact-desktop-top.jpg) | [screenshot](visual-review/contact-mobile-top.jpg) |
+| Enquiry Privacy Notice | [screenshot](visual-review/privacy-policy-desktop-top.jpg) | [screenshot](visual-review/privacy-policy-mobile-top.jpg) |
+
+[Narrow mobile long-section samples](visual-review/mobile-mids-320.jpg) show audience cards, scenario sections, attribution text, the Contact form, and privacy text. The 320 px header initially wrapped “Menu” across two lines. A CSS-only adjustment to `Header.astro` reduces the narrow header gap/brand size and keeps the menu label on one line; the [after screenshot](visual-review/home-mobile-320-after.jpg) and a repeat overflow check confirm it fits. The mobile menu was opened in Chrome and its six navigation links and global CTA were visible.
+
+Contact was checked at desktop and 320 px mobile. A direct visit showed “Not sure yet”; query links preselected Startups and Nonprofits. Empty submission displayed field errors and focused the first invalid field ([desktop](visual-review/contact-desktop-validation.jpg), [mobile](visual-review/contact-validation-mobile-320.jpg)). A local-only 404 returned the [confirmed-failure state](visual-review/contact-failed-mobile-320.jpg) with entries retained. A separate loopback mock delayed a response to expose [pending](visual-review/contact-pending-mobile-320.jpg), returned ambiguous HTML to expose [unknown receipt](visual-review/contact-unknown-mobile-320.jpg) with duplicate submission disabled, and returned `{ "accepted": true }` to reach the [confirmed-success page](visual-review/contact-success-mobile-320.jpg). These used synthetic `example.invalid` data sent only to `127.0.0.1`; no Netlify Form, mailbox, notification, or external provider received a test enquiry. The mock shows interface states only; it does not prove production receipt or delivery.
+
+The privacy notice remains a local noindex draft. Netlify account-level email provider, processing locations, access/backup settings and the 12-month deletion procedure across Forms, email and copies remain unverified. Company/financial-claim permission and the legacy service-path disposition also remain open. This visual pass is Step 5 review evidence, not release approval or Step 6 QA.

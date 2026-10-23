@@ -72,6 +72,11 @@ function isActive(href: string): boolean {
     .home-mobile-menu nav>a:not(.header-cta) {padding:.75rem;color:var(--color-text-primary);text-decoration:none;}
     .home-mobile-menu .header-cta {margin-top:.5rem;text-align:center;white-space:normal;line-height:1.5;}
   }
+  @media (max-width:360px) {
+    .home-header .site-header-inner {gap:.5rem;}
+    .home-header .brand-name {font-size:.8125rem;letter-spacing:.04em;}
+    .home-mobile-menu summary {white-space:nowrap;padding:.65rem .35rem;}
+  }
   .site-header {
     border-bottom: 0.0625rem solid var(--color-border-light);
     background: #ffffff;
