@@ -105,7 +105,7 @@ integrity:
   document_hash: "GENERATED_BY_PIPELINE"
 ---
 
-# Deployment Economics {#top}
+## Deployment Economics {#top}
 
 This section maps how deployment economics vary across combinations of platform category and operator domain ,  covering capital requirements, utilisation thresholds, payback conditions, integration cost drivers, and the structural factors that determine whether a robotics or AI deployment reaches its target economics.
 
