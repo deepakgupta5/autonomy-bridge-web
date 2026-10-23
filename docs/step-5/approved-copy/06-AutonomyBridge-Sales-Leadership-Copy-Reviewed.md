@@ -8,7 +8,7 @@ Which deals can you rely on? Who needs coaching? Should you approve the discount
 
 I’m Deepak Gupta. I take on the agreed sales leadership responsibilities so you can delegate the day-to-day direction of sales without appointing a full-time executive.
 
-My background spans sales leadership, business-unit P&L and building new commercial businesses. As Vice President, Mobile Robots at Novus Hi Tech, I owned the global autonomous mobile robotics business P&L, led a 20-person commercial team and grew revenue from USD $3 million to USD $15 million over four years. In another B2B business, I led 25 people across sales, operations and technical integration, building the enterprise business to a USD $5 million revenue run rate in twelve months.
+My background spans sales leadership, business-unit P&L and building new commercial businesses. As Vice President, Mobile Robots at Novus Hi Tech, I owned the global autonomous mobile robotics business P&L, led a 20-person commercial team and grew revenue from USD $3 million to USD $15 million over four years. At industrybuying.com, I led 25 people across sales, operations and technical integration, building the enterprise business to a USD $5 million revenue run rate in twelve months.
 
 These achievements were in prior operating roles, distinct from Autonomy Bridge engagements.
 
