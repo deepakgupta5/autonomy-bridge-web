@@ -16,14 +16,6 @@
     "proposed_release_url": "https://autonomybridge.com/sales-leadership"
   },
   {
-    "label": "Commercial Leadership",
-    "proposed_release_url": "https://autonomybridge.com/commercial-leadership"
-  },
-  {
-    "label": "AI Consulting & Implementation",
-    "proposed_release_url": "https://autonomybridge.com/ai-consulting"
-  },
-  {
     "label": "About",
     "proposed_release_url": "https://autonomybridge.com/about"
   },
@@ -622,10 +614,6 @@
   {
     "label": "Research Methodology",
     "proposed_release_url": "https://autonomybridge.com/methodology"
-  },
-  {
-    "label": "Advisory",
-    "proposed_release_url": "https://autonomybridge.com/advisory"
   },
   {
     "label": "Robotics & Automation Research",
