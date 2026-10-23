@@ -128,7 +128,7 @@ integrity:
   document_hash: "GENERATED_BY_PIPELINE"
 ---
 
-# Case Studies {#top}
+## Case Studies {#top}
 
 Research findings, modelled scenarios and accounts of client work provide different kinds of evidence. An illustrative outcome is not an observed client result. Consider the publication date, operating context and supporting evidence before applying a conclusion to your business.
 
