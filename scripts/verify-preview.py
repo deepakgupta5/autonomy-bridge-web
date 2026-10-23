@@ -110,7 +110,9 @@ allowed=json.loads((root/'docs/preview/historical-broken-links.json').read_text(
 if len(allowed) != 8: raise SystemExit('Historical broken-link exception register must contain exactly eight destinations')
 result['unexpected_broken_destinations']=sorted(set(broken)-set(allowed))
 result['new_broken_link_referrers']={target:sorted(sources-set(allowed.get(target,[]))) for target,sources in broken.items() if sources-set(allowed.get(target,[]))}
-result['preview_robots_errors']=sorted(path for path,page in pages.items() if page.meta.get('robots') != ('noindex,nofollow' if not candidate or path == '/contact-success' else 'index,follow'))
+legacy_bridges={'/commercial-leadership','/ai-consulting','/advisory'}
+result['preview_robots_errors']=sorted(path for path,page in pages.items() if page.meta.get('robots') != ('noindex,nofollow' if not candidate or path == '/contact-success' else ('noindex,follow' if path in legacy_bridges else 'index,follow')))
+result['legacy_bridge_errors']=sorted(path for path in legacy_bridges if path not in pages or pages[path].canonical != 'https://autonomybridge.com'+path or not {'/contact','/startups','/sales-leadership'}.issubset({internal(h,path)[0] for h in pages[path].mainlinks if internal(h,path)}) or (path != '/commercial-leadership' and '/nonprofits' not in {internal(h,path)[0] for h in pages[path].mainlinks if internal(h,path)}))
 result['xml_missing_expected']=sorted((expected-{'/privacy-policy','/terms-of-use','/cookie-policy'}|{'/sitemap'})-xmlpaths)
 result['xml_unexpected']=sorted(xmlpaths-(expected-{'/privacy-policy','/terms-of-use','/cookie-policy'}|{'/sitemap'}))
 empty_checks=[
@@ -119,10 +121,10 @@ empty_checks=[
  'fragment_failures','breadcrumb_errors','missing_metadata','lost_baseline_routes',
  'changed_existing_canonicals','changed_research_dates_except_methodology',
  'changed_research_titles_except_framework','unexpected_broken_destinations',
- 'new_broken_link_referrers','preview_robots_errors',
+ 'new_broken_link_referrers','preview_robots_errors','legacy_bridge_errors',
 ]
 failures=[key for key in empty_checks if result[key]]
-for key,count in [('built_pages',163),('research_pages',147),('html_sitemap_expected',161),('xml_sitemap_entries',159)]:
+for key,count in [('built_pages',163),('research_pages',147),('html_sitemap_expected',158),('xml_sitemap_entries',156)]:
  if result[key] != count: failures.append(key)
 if not result['redirects_unchanged']: failures.append('redirects_unchanged')
 result['failures']=failures
