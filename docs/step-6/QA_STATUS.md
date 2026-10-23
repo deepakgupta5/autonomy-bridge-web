@@ -10,11 +10,12 @@ Candidate source: `codex/step-5-approved-copy` at `e59b54e`, plus the Step 6 HTM
 - HTML sitemap now lists the three new audience pages: 161 destinations. XML sitemap has 159 entries, including all 147 Research routes. The three legal pages and contact confirmation remain outside the XML sitemap under the existing exclusion policy.
 - All local pages emit `noindex,nofollow`. Canonical, metadata, Research breadcrumbs, fragment targets and static internal links pass the baseline verifier. Its eight registered historical broken destinations persist, with no new destinations or referrers.
 - Offline form fixtures pass for validation, honeypot, receipt confirmation, ambiguous responses, disabled transport and network errors. They make no real submission.
+- A separate local production-mode build, with the approved target ID and context supplied only to the build process, also produced 163 pages. The release-candidate verifier passed with no route, canonical, sitemap or indexing errors. This was a simulation in a disposable worktree, not a deployable release artifact: its publication and Research revision dates are still the prefilled October 19 and October 20 values.
 
 ## Open before Step 6 can be called complete
 
 - Final branch visual regression at desktop and mobile widths. The Step 5 screenshots are from an earlier commit. The current runtime has no browser executable; Astro dev failed with `uv_interface_addresses`, and the separate browser surface could not reach the local static server. These are tool limits, not visual passes.
-- Production-mode indexing and canonical checks against the actual final release artifact. The checked build is deliberately local and noindex. Set actual publication and research revision dates for the approved release.
+- Repeat the passing production-mode check against the actual final release artifact after setting its approved publication and Research revision dates. The current local review build is deliberately noindex.
 - Live Netlify form acceptance, notification delivery, storage, mailbox and retention checks. The owner deferred Netlify account verification until after go-live; offline fixtures do not establish delivery. Do not send a real enquiry without explicit authorization.
 - Decide the fate of old service paths `/commercial-leadership`, `/ai-consulting` and `/advisory`. They currently remain indexable in a production-mode build and retain superseded positioning. Preserve Research routes while making this decision.
 - The eight historical broken destinations remain accepted exceptions, not repaired links.
