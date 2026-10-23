@@ -105,7 +105,7 @@ integrity:
   document_hash: "GENERATED_BY_PIPELINE"
 ---
 
-# Vendor Landscape {#top}
+## Vendor Landscape {#top}
 
 This section maps the vendor population across the ten AI, robotics, and industrial automation platform categories ,  covering estimated vendor count, pre-Series B density, commercial adoption maturity, and the competitive dynamics that shape deployment and investment decisions in each category.
 
