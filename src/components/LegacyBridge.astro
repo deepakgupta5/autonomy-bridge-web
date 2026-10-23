@@ -1,0 +1,46 @@
+---
+import MainLayout from './MainLayout.astro';
+
+interface Props {
+  path: '/commercial-leadership' | '/ai-consulting' | '/advisory';
+}
+
+const { path } = Astro.props;
+const commercial = path === '/commercial-leadership';
+const title = commercial ? 'Commercial leadership' : 'Find the right starting point';
+const description = commercial
+  ? 'Choose the current Autonomy Bridge path for B2B startups or established businesses seeking sales leadership.'
+  : 'Explore the current Autonomy Bridge pages for startups, nonprofits and established businesses.';
+const links = commercial
+  ? [
+      { href: '/startups', label: 'Startups', detail: 'Commercialization and revenue leadership for B2B startups.' },
+      { href: '/sales-leadership', label: 'Sales Leadership', detail: 'Fractional sales leadership for established businesses.' },
+    ]
+  : [
+      { href: '/startups', label: 'Startups', detail: 'Commercialization and revenue leadership for B2B startups.' },
+      { href: '/nonprofits', label: 'Nonprofits', detail: 'Fundraising operations and donor stewardship.' },
+      { href: '/sales-leadership', label: 'Sales Leadership', detail: 'Fractional sales leadership for established businesses.' },
+    ];
+---
+
+<MainLayout title={title} seoTitle={`${title} | Autonomy Bridge`} seoDescription={description} canonicalPath={path} robots="noindex,follow" showLocalSubnav={false}>
+  <section class="bridge">
+    <h1 class="type-h1">{title}</h1>
+    <p>Autonomy Bridge's current work is organized around the audiences below. Choose the page that fits your situation, or describe your question directly.</p>
+    <div class="bridge-links">
+      {links.map(link => <article class="bridge-card"><h2 class="type-h3"><a href={link.href}>{link.label}</a></h2><p>{link.detail}</p></article>)}
+    </div>
+    <p><a class="bridge-contact" href="/contact">Discuss your challenge</a></p>
+  </section>
+</MainLayout>
+
+<style>
+  .bridge { max-width: 64rem; margin: 0 auto; }
+  .bridge > p { max-width: 65ch; line-height: 1.7; color: var(--color-text-secondary); }
+  .bridge-links { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr)); gap: 1rem; margin: 2rem 0; }
+  .bridge-card { border: 1px solid var(--color-border-light); border-top: 3px solid var(--color-border-accent); padding: 1.25rem; background: var(--color-bg-page); }
+  .bridge-card h2 { margin: 0 0 .75rem; }
+  .bridge-card a { color: var(--color-text-primary); }
+  .bridge-card p { margin: 0; color: var(--color-text-secondary); line-height: 1.65; }
+  .bridge-contact { color: var(--color-text-accent); font-weight: var(--weight-semibold); }
+</style>
