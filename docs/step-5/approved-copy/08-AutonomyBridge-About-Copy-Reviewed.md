@@ -4,9 +4,7 @@
 
 My background spans building new commercial businesses, leading teams, owning P&L and personally closing enterprise contracts.
 
-Since November 2024, I have run Autonomy Bridge, working with multiple startups on commercial strategy and execution. I also mentor founders and volunteer with the BC SPCA.
-
-We start with your situation, establish what needs to move forward and agree what I will personally lead.
+Since 2024, I have run Autonomy Bridge, working with technology startups on commercial strategy and execution and building repeatable systems that can be handed off. We start with your situation, establish what needs to move forward and agree what I will personally lead.
 
 I take on work where my experience fits the responsibility, and make the limits clear before we start.
 
@@ -30,7 +28,7 @@ As Vice President, Mobile Robots at Novus Hi Tech, I owned the global autonomous
 
 My responsibilities included territory coverage, account planning, weekly deal and forecast reviews, performance scorecards, partnerships and direct enterprise selling. Customer commitments also required close coordination with engineering and delivery.
 
-In another B2B business, I led 25 people across sales, operations and technical integration and built the enterprise business to a USD $5 million revenue run rate in twelve months.
+At industrybuying.com, I led 25 people across sales, operations and technical integration and built the enterprise business to a USD $5 million revenue run rate in twelve months.
 
 That experience informs the sales leadership I offer: directing people, challenging the forecast, resolving commercial decisions and keeping customer commitments aligned with delivery capacity.
 
@@ -38,7 +36,7 @@ That experience informs the sales leadership I offer: directing people, challeng
 
 Sometimes the obstacle is how the customer can buy.
 
-In a B2B platform business, I conceived bank-financing partnerships to address industrial customers’ purchasing-capital constraints. I negotiated partner economics and risk allocation and helped scale the platform from zero to USD $75 million over four years.
+At power2sme, a B2B fintech platform, I conceived bank-financing partnerships to address industrial customers’ purchasing-capital constraints. I negotiated partner economics and risk allocation and helped scale the platform from zero to USD $75 million over four years.
 
 That experience is relevant when growth requires a different offer, financing arrangement or route to market. The approach has to work for the buyer, the business and the people responsible for delivery.
 
@@ -48,7 +46,7 @@ These achievements were in prior operating and interim roles. They are distinct 
 
 Autonomy Bridge serves three audiences, with a different remit for each.
 
-For startups, I help choose commercial priorities, shape offers and pricing, and lead agreed enterprise opportunities through the buying process. My work since November 2024 has included customer and market selection, enterprise deal stages and pilot-to-deployment execution.
+For startups, I help choose commercial priorities, shape offers and pricing, and lead agreed enterprise opportunities through the buying process. My work since 2024 has included customer and market selection, enterprise deal stages and pilot-to-deployment execution.
 
 For established businesses, I offer Fractional Sales Leadership: agreed responsibility for sales priorities, team coaching, forecasting and important opportunities. The mandate defines what you delegate and which decisions you retain.
 
@@ -62,7 +60,7 @@ My contribution to nonprofit work is operational: bringing information together 
 
 Your organization retains fundraising judgment, donor relationships, solicitation decisions and financial authority. I work alongside the person responsible for fundraising to put the agreed priority into practice.
 
-My mentoring and volunteering are separate from paid Autonomy Bridge engagements and do not represent a claim of previous fundraising delivery.
+My mentoring and volunteering are separate from paid Autonomy Bridge engagements.
 
 ## You work directly with me
 
