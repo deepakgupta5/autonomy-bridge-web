@@ -36,7 +36,7 @@ That experience informs the sales leadership I offer: directing people, challeng
 
 Sometimes the obstacle is how the customer can buy.
 
-At power2sme, a B2B fintech platform, I conceived bank-financing partnerships to address industrial customers’ purchasing-capital constraints. I negotiated partner economics and risk allocation and helped scale the platform from zero to USD $75 million over four years.
+At power2sme, a B2B fintech platform, I conceived bank-financing partnerships to address industrial customers’ purchasing-capital constraints. I negotiated partner economics and risk allocation and helped scale the platform from zero to USD $75 million in gross merchandise value (GMV) over four years.
 
 That experience is relevant when growth requires a different offer, financing arrangement or route to market. The approach has to work for the buyer, the business and the people responsible for delivery.
 
