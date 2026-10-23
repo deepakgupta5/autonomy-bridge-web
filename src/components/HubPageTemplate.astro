@@ -66,7 +66,7 @@ const schema = faqSchema ? [...pageSchema, faqSchema] : pageSchema;
 
   <ResearchEnquiry kind={canonicalPath === "/use-cases" ? "use-case" : "general"} />
 
-  <section class="hub-body prose-surface">
+  <section class={`hub-body prose-surface${canonicalPath === "/case-studies" || canonicalPath === "/use-cases" ? " hub-body--duplicate-title" : ""}`}>
     <slot />
   </section>
 
@@ -215,6 +215,11 @@ const schema = faqSchema ? [...pageSchema, faqSchema] : pageSchema;
   .hub-body {
     margin-bottom: 2.5rem;
     background: transparent;
+  }
+
+  /* Hide these two known duplicate titles before the cleanup script runs. */
+  .hub-body--duplicate-title > :global(h2:first-child) {
+    display: none;
   }
 
   /* Visual separator between major H2 blocks inside hub-body prose */
