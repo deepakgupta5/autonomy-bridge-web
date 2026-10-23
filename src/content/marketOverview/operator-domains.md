@@ -116,7 +116,7 @@ integrity:
   document_hash: "GENERATED_BY_PIPELINE"
 ---
 
-# Operator Application Domains {#top}
+## Operator Application Domains {#top}
 
 This section provides structured profiles of the fifteen operator application domains where robotics and AI platforms are commercially deployed ,  covering adoption maturity, vendor density, buyer type, procurement dynamics, and research tolerance for each domain.
 
