@@ -110,7 +110,7 @@ integrity:
   document_hash: "GENERATED_BY_PIPELINE"
 ---
 
-# Platform Categories {#top}
+## Platform Categories {#top}
 
 This section provides detailed profiles of the ten robotics and AI platform categories tracked by Autonomy Bridge ,  covering vendor population size, pre-Series B density, commercial adoption maturity, typical buyer types, and deployment economics for each category.
 
