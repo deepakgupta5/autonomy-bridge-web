@@ -116,7 +116,7 @@ integrity:
   document_hash: "GENERATED_BY_PIPELINE"
 ---
 
-# Use Cases {#top}
+## Use Cases {#top}
 
 Use Cases are structured decision-framework evaluations applying Autonomy Bridge analytical models to specific decision problems in AI, robotics, and industrial automation markets. Each use case defines the decision context, the analytical approach, the key variables, and the economic or operational logic that determines whether a deployment, investment, or market entry is viable.
 
