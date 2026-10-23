@@ -122,7 +122,7 @@ empty_checks=[
  'new_broken_link_referrers','preview_robots_errors',
 ]
 failures=[key for key in empty_checks if result[key]]
-for key,count in [('built_pages',160),('research_pages',147),('html_sitemap_expected',158),('xml_sitemap_entries',156)]:
+for key,count in [('built_pages',163),('research_pages',147),('html_sitemap_expected',161),('xml_sitemap_entries',159)]:
  if result[key] != count: failures.append(key)
 if not result['redirects_unchanged']: failures.append('redirects_unchanged')
 result['failures']=failures
