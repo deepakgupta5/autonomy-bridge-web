@@ -1,0 +1,21 @@
+.approved-page{max-width:72rem;margin:auto;color:var(--color-text-primary)}
+.approved-page section{padding:3.25rem 0;border-bottom:1px solid var(--color-border-light)}
+.approved-page h1,.approved-page h2,.approved-page h3{font-family:var(--font-sans);font-weight:600;line-height:1.17;letter-spacing:-.02em}
+.approved-page h1{font-size:clamp(2.25rem,4.2vw,4rem);max-width:19ch;margin:0 0 1.5rem}
+.approved-page h2{font-size:clamp(1.65rem,2.7vw,2.5rem);max-width:25ch;margin:0 0 1.5rem}
+.approved-page h3{font-size:clamp(1.25rem,1.8vw,1.55rem);margin:2.25rem 0 .8rem}
+.approved-page p{max-width:72ch;line-height:1.7;margin:0 0 1.15rem}
+.approved-page .approved-hero{padding-top:1rem;padding-bottom:4.25rem}
+.approved-page .approved-hero>div>p:first-child{font-size:1.16rem;max-width:64ch}
+.approved-button,.linkedin-button{display:inline-flex;gap:.55rem;align-items:center;background:var(--color-cta-bg);border:1px solid var(--color-cta-border);color:var(--color-cta-text);border-radius:.375rem;padding:.8rem 1.1rem;font-family:var(--font-sans);font-size:.9rem;font-weight:600;text-decoration:none;line-height:1.35}
+.approved-button:hover,.linkedin-button:hover{background:var(--color-border-strong)}
+.approved-page .approved-action{margin:1.3rem 0 2rem}
+.approved-page .approved-grid .approved-flow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 1.5rem}
+.approved-page .approved-grid .approved-group{border:1px solid var(--color-border-light);border-top:2px solid var(--color-border-accent);padding:1.5rem;background:var(--color-bg-surface)}
+.approved-page .approved-grid .approved-flow h3{margin:0 0 .75rem}
+.approved-page .approved-grid .approved-flow p{margin:0 0 1rem}
+.approved-page .illustrative-note,.approved-page .attribution-note{font-size:.88rem;color:var(--color-text-secondary);font-style:italic}
+.approved-inner .approved-section{display:grid;grid-template-columns:minmax(12rem,1fr) minmax(0,1.7fr);gap:4rem}
+.approved-inner .approved-section h2{font-size:clamp(1.6rem,2.2vw,2.1rem)}
+.approved-inner .approved-section h3:first-child{margin-top:0}
+@media(max-width:800px){.approved-page section{padding:2.4rem 0}.approved-inner .approved-section{display:block}.approved-page .approved-grid .approved-flow{display:block}.approved-page .approved-grid h3{margin-top:2rem!important}.approved-page h1{font-size:clamp(2rem,8vw,3rem)}}

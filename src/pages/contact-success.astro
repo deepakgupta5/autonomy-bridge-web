@@ -6,7 +6,7 @@ const metadata = pages['/contact-success'].metadata;
 ---
 <MainLayout title="Enquiry Submitted" canonicalPath="/contact-success" seoTitle={metadata.title} seoDescription={metadata.description} robots="noindex,nofollow" showBreadcrumbs={false} showLocalSubnav={false}>
 <section id="unconfirmed"><h1 class="type-h1">Submission not confirmed</h1><p>This page alone does not confirm an enquiry was accepted.</p></section>
-<section id="confirmed" hidden><h1 class="type-h1">Thank you for getting in touch</h1><p>Your enquiry has been submitted. I’ll review it and reply using the email address you provided.</p>{deploymentPolicy.mode === 'local' && <p>Local interface test only. Service acceptance and mailbox delivery are not verified.</p>}</section>
+<section id="confirmed" hidden><h1 class="type-h1">Your enquiry has been received</h1><p>Your enquiry has been received. I’ll read it personally and respond within 48 hours to the email address you provided.</p><p>Deepak Gupta</p>{deploymentPolicy.mode === 'local' && <p>Local interface test only. Service acceptance and mailbox delivery are not verified.</p>}</section>
 <p><a href="/">Return to Home</a></p>
 </MainLayout>
 <script>

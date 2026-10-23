@@ -1,59 +1,56 @@
 ---
 import {deploymentPolicy} from '../../config/deployment-policy.mjs';
 import MainLayout from '../components/MainLayout.astro';
-import pages from '../data/preview-copy.json';
-import '../styles/copy.css';
-import '../styles/core.css';
-const metadata = pages['/contact'].metadata;
-const fields = [
- {name:'name', label:'Name', type:'text', required:true, autocomplete:'name'},
- {name:'email', label:'Email', type:'email', required:true, autocomplete:'email', hint:'Use the address where you’d like me to reply.'},
- {name:'company', label:'Company or organisation', type:'text', required:false, autocomplete:'organization'},
- {name:'website', label:'Website', type:'text', required:false, autocomplete:'url'},
- {name:'message', label:'Your message', required:true, hint:'Briefly describe your situation and what you’d like to improve.'},
-];
+import '../styles/approved-pages.css';
 ---
-<MainLayout title="Contact" canonicalPath="/contact" seoTitle={metadata.title} seoDescription={metadata.description}>
-<article class="approved-copy core-copy contact-copy">
-<header><h1>Discuss what you want to improve</h1>
-<p>Get in touch about commercial leadership for your organization, AI consulting and implementation for your business or nonprofit, or a question arising from the research.</p>
-<p>You may have a defined project or simply know that something needs to improve. You don’t need to choose an engagement model before contacting me.</p></header>
-<div class="contact-grid">
-<div><p>Tell me a little about your organization and its work, what you want to change and where you need help. If there’s a relevant deadline or something you’ve already tried, include that too.</p>
-<p>Please leave out confidential and sensitive information.</p>
-{deploymentPolicy.mode === 'local' && <p class="test-notice">Preview form: no enquiries or notifications are sent. Submission outcomes require a controlled local test response.</p>}</div>
+<MainLayout title="Contact" canonicalPath="/contact" seoTitle="Contact Autonomy Bridge" seoDescription="Tell Deepak Gupta about a revenue, fundraising or sales leadership question. The first conversation is free." showLocalSubnav={false}>
+<article class="approved-page approved-contact">
+<header class="approved-hero">
+<h1>What needs your attention?</h1>
+<p>A customer is interested, but the contract isn’t moving. Supporter follow-up keeps slipping. Sales decisions still come back to you.</p>
+<p>Tell me what is happening and what you need to move forward. You don’t need to choose a service or arrive with a finished brief.</p>
+<p><a href="/about">You can read about my background and experience before getting in touch.</a></p>
+<p>The first conversation is free. I’ll respond within 48 hours.</p>
+</header>
+<div class="contact-layout">
+<section><h2>Tell me what you’re dealing with</h2>
+{deploymentPolicy.mode === 'local' && <p class="preview-contact-note">Local review form. No real enquiry or notification is sent.</p>}
 {(deploymentPolicy.mode === 'local' || deploymentPolicy.formEnabled) ? <form name="contact" method="POST" action="/contact-success" data-netlify="true" netlify-honeypot="bot-field" novalidate>
 <input type="hidden" name="form-name" value="contact" />
-<!-- Prepared receipt correlation field; preview transport remains loopback-only. -->
 <input type="hidden" name="submission-reference" value="" />
 <input type="hidden" name="receipt-kind" value="autonomybridge-contact-v1" />
 <div hidden><label for="bot-field">Leave blank</label><input id="bot-field" name="bot-field" tabindex="-1" autocomplete="off" /></div>
 <p id="form-status" role="alert" tabindex="-1"></p>
-{fields.map(field => <div class="field">
-<label for={field.name}>{field.label} <span id={`${field.name}-requirement`}>— {field.required ? 'required' : 'optional'}</span></label>
-{field.hint && <p id={`${field.name}-hint`} class="hint">{field.hint}</p>}
-{field.name === 'message' ? <textarea id={field.name} name={field.name} required rows="6" aria-describedby={`${field.name}-hint ${field.name}-error`}></textarea> : <input id={field.name} name={field.name} type={field.type} required={field.required} autocomplete={field.autocomplete} aria-describedby={`${field.hint ? field.name+'-hint ' : ''}${field.name}-error`} />}
-<p class="field-error" id={`${field.name}-error`}></p>
-</div>)}
-<button class="copy-button" type="submit" disabled>Send enquiry</button>
+<div class="field"><label for="name">Your name</label><input id="name" name="name" required autocomplete="name" aria-describedby="name-error"/><p class="field-error" id="name-error"></p></div>
+<div class="field"><label for="email">Email address</label><input id="email" name="email" type="email" required autocomplete="email" aria-describedby="email-error"/><p class="field-error" id="email-error"></p></div>
+<div class="field"><label for="company">Organization</label><input id="company" name="company" autocomplete="organization" /></div>
+<div class="field"><label for="audience">What brings you here?</label><p id="audience-hint">Optional. Choose the closest fit.</p>
+<select id="audience" name="audience" aria-describedby="audience-hint"><option value="">Not sure yet</option><option value="startups">Startups</option><option value="nonprofits">Nonprofits</option><option value="sales-leadership">Sales Leadership — For established businesses</option></select></div>
+<div class="field"><label for="message">What is happening?</label><p id="message-hint">What prompted you to get in touch? Where is progress getting stuck, or what responsibility do you need someone to take on?</p><p>A few sentences are enough. If there’s a live opportunity or a deadline, include it in your message.</p><p>Please leave out confidential customer, donor or employee information.</p><textarea id="message" name="message" required rows="7" aria-describedby="message-hint message-error"></textarea><p class="field-error" id="message-error"></p></div>
+<p>I use your details only to respond to your enquiry and discuss potential work. I personally handle enquiries. See the privacy notice for retention and request details.</p>
+<p><a href="/privacy-policy">Privacy notice</a></p>
+<button class="approved-button" type="submit" disabled>Send enquiry</button>
 <noscript><p>This form needs JavaScript to submit and verify receipt. Enable JavaScript and reload this page to use it. No enquiry has been sent.</p></noscript>
-</form> : <p role="status">The enquiry form is temporarily unavailable. Please return later. No enquiry has been sent.</p>}</div></article>
+</form>:<p role="status">The enquiry form is temporarily unavailable. Please return later. No enquiry has been sent.</p>}
+</section>
+<section><h2>What happens next</h2>
+<p>I’ll read your enquiry personally. In our first conversation, we’ll discuss what is happening, what you need help leading and whether an engagement makes sense.</p>
+<p>If the priority is clear, we can discuss a defined engagement directly. Otherwise, we can decide what a focused review should address.</p>
+<p>Before any paid work begins, we agree the scope, fee, responsibilities and review point. If a smaller piece of work would address the question, I’ll say so.</p>
+<p>Deepak Gupta<br/>Autonomy Bridge</p>
+</section></div>
+</article>
 </MainLayout>
 <script>
-import { mountContactForm } from '../utils/contact-form';
-const form = document.querySelector<HTMLFormElement>('form[name="contact"]');
-if (form) mountContactForm(form);
+import {mountContactForm} from '../utils/contact-form';
+const form=document.querySelector<HTMLFormElement>('form[name="contact"]');
+if(form) mountContactForm(form);
 </script>
 <style>
-.contact-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:4rem;margin-top:3rem}.contact-grid h2{font-size:var(--role-h2-size);margin-top:2rem}form{background:var(--color-bg-surface);border:1px solid var(--color-border-light);border-radius:6px;padding:2rem}.field{margin-bottom:1.3rem}label{display:block;font-weight:600;margin-bottom:.5rem}label span{font-size:.8rem;font-weight:400}input,textarea{box-sizing:border-box;width:100%;padding:.8rem;border:1px solid var(--color-border-default);border-radius:4px;font:inherit;background:white;color:var(--color-text-primary)}.hint{font-size:.85rem;margin:0 0 .4rem}.field-error,#form-status{color:#9e2929;font-size:.9rem}.field-error:empty,#form-status:empty{display:none}[aria-invalid=true]{border:2px solid #9e2929}button{cursor:pointer;font:inherit}button:disabled{opacity:.6;cursor:wait}.test-notice{border-left:3px solid var(--color-border-accent);padding-left:1rem;font-size:.85rem}@media(max-width:800px){.contact-grid{grid-template-columns:1fr;gap:1.5rem}form{padding:1.2rem}}
-</style>
-<style>
-.contact-copy>header{display:grid;grid-template-columns:1fr 1.2fr;column-gap:4rem;padding:.5rem 0 2rem;border-bottom:2px solid var(--color-border-accent)}
-.contact-copy>header h1{grid-row:1/3;font-size:clamp(2.125rem,2rem + 1vw,3rem);line-height:1.15;max-width:20ch}
-.contact-copy>header p{grid-column:2}.contact-copy>header p:last-child{margin-bottom:0}
-.contact-copy .contact-grid{margin-top:2.5rem}.contact-copy .contact-grid h2{font-size:1.25rem}
-.contact-copy form{background:white;border-radius:0;border-top:2px solid var(--color-border-accent)}
-.contact-copy form .copy-button{font-size:.875rem;font-family:var(--font-sans);font-weight:600}
-@media(max-width:1000px){.contact-copy>header,.contact-grid{column-gap:2rem}}
-@media(max-width:800px){.contact-copy>header{display:block}.contact-copy>header h1{max-width:none}.contact-grid{margin-top:2rem}}
+.approved-contact .contact-layout{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,.8fr);gap:4rem}
+.approved-contact .contact-layout section{border:0;padding:1rem 0}
+.approved-contact form{background:var(--color-bg-surface);border-top:2px solid var(--color-border-accent);padding:2rem}
+.approved-contact .field{margin:0 0 1.5rem}.approved-contact label{display:block;font-weight:600;margin:0 0 .4rem}.approved-contact input,.approved-contact select,.approved-contact textarea{box-sizing:border-box;width:100%;padding:.75rem;border:1px solid var(--color-border-default);background:white;color:var(--color-text-primary);border-radius:4px;font:inherit}.approved-contact textarea{resize:vertical}
+.approved-contact .field p{font-size:.88rem;margin:0 0 .55rem}.approved-contact .field-error,#form-status{color:#9e2929;font-size:.88rem}.approved-contact .field-error:empty,#form-status:empty{display:none}.approved-contact [aria-invalid=true]{border:2px solid #9e2929}.approved-contact button:disabled{opacity:.6;cursor:wait}.approved-contact .preview-contact-note{font-size:.88rem;border-left:3px solid var(--color-border-accent);padding-left:1rem}
+@media(max-width:800px){.approved-contact .contact-layout{display:block}.approved-contact form{padding:1.2rem}}
 </style>

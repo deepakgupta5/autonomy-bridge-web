@@ -1,4 +1,26 @@
 ---
-import CopyPage from "../components/CopyPage.astro";
+import MainLayout from '../components/MainLayout.astro';
+import '../styles/approved-pages.css';
 ---
-<CopyPage route="/privacy-policy" />
+<MainLayout title="Enquiry Privacy Notice" canonicalPath="/privacy-policy" seoTitle="Enquiry Privacy Notice | Autonomy Bridge" seoDescription="How Deepak Gupta handles Autonomy Bridge website enquiries." showLocalSubnav={false}>
+<article class="approved-page privacy-notice">
+<h1>Autonomy Bridge Enquiry Privacy Notice</h1>
+<p>This notice explains how I handle information you provide when you contact Autonomy Bridge about potential work. I’m Deepak Gupta, and I am responsible for handling these enquiries.</p>
+<h2>Information you provide</h2>
+<p>The contact form asks for your name, email address, organization and message. You may also select the type of work you want to discuss. Please leave out confidential customer, donor or employee information.</p>
+<h2>How I use your information</h2>
+<p>I use the information you submit only to respond to your enquiry and discuss potential work. I do not use your enquiry details for newsletters or unrelated marketing.</p>
+<h2>Who handles enquiries</h2>
+<p>I personally read and handle enquiries. I do not delegate access to an assistant or contractor.</p>
+<h2>How long I keep unsuccessful enquiries</h2>
+<p>If an enquiry does not lead to an engagement, I normally delete its records 12 months after our last substantive contact, unless a legal requirement requires longer retention. If we begin an engagement, we establish the information-handling arrangements for that work separately.</p>
+<h2>Questions and requests</h2>
+<p>You can use the contact form to ask how your enquiry information is handled, request access or correction, or ask for deletion. Identify your message as a privacy request. I may need to confirm your identity before acting on a request. Any applicable retention requirements still apply.</p>
+<h2>How this website processes enquiries</h2>
+<p>Netlify hosts this website and Netlify Forms processes and stores form submissions, including spam filtering. The form includes a hidden spam field. A random submission reference supports receipt confirmation. A separate record containing only that reference and an acceptance timestamp is configured in Netlify Blobs in us-east-2 (Ohio). It expires from the receipt lookup after 15 minutes; an hourly cleanup job is configured to delete expired records. This record does not contain your name, email address, organization or message.</p>
+<p>Website delivery and form handling may also process technical information such as an IP address and the requested page. No optional analytics tag is loaded by this version of the site. The email notification and reply provider, processing countries for form submissions and logs, and backup deletion schedules require account-level verification before publication. This local review version does not send your enquiry to Netlify or to an email provider.</p>
+<p>The 12-month policy applies to unsuccessful enquiry records in the form store, email and any other copies. It requires a retention procedure across those services; deleting a receipt marker does not delete an enquiry. See the <a href="/cookie-policy">Cookie Policy</a> for browser technologies.</p>
+<p><a href="/contact">Use the contact form for a privacy request</a>.</p>
+</article>
+</MainLayout>
+<style>.privacy-notice{max-width:56rem}.privacy-notice h1{max-width:none}.privacy-notice h2{margin:2.5rem 0 1rem}.privacy-notice p{max-width:72ch}</style>

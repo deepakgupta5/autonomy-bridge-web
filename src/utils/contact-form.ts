@@ -9,6 +9,9 @@ export function mountContactForm(form: HTMLFormElement) {
   const status = form.querySelector<HTMLElement>('#form-status')!;
   const missing = { name: 'Please enter your name.', email: 'Please enter your email address.', message: 'Please enter a message.' };
   let busy = false;
+  const audience = form.querySelector<HTMLSelectElement>('#audience');
+  const selected = new URL(location.href).searchParams.get('audience');
+  if (audience && selected && Array.from(audience.options).some(option => option.value === selected)) audience.value = selected;
   button.disabled = false;
   form.addEventListener('submit', async event => {
     event.preventDefault();
@@ -22,7 +25,8 @@ export function mountContactForm(form: HTMLFormElement) {
       if (error && !first) first = field;
     }
     if (first) { status.textContent = 'Please check the highlighted fields.'; first.focus(); return; }
-    busy = true; button.disabled = true; status.textContent = '';
+    busy = true; button.disabled = true; button.textContent = 'Sending enquiry…';
+    status.textContent = 'Sending enquiry…';
     const unknown = 'We couldn’t confirm receipt. Your enquiry may have arrived. Keep a copy of your message and any reference shown below. Please do not submit it again now; a missing confirmation does not mean delivery failed.';
     const failed = 'Your enquiry wasn’t submitted. Your entries are still here. Please check them and try again. If the problem continues, keep a copy and return later.';
     const controller = new AbortController();
@@ -65,6 +69,7 @@ export function mountContactForm(form: HTMLFormElement) {
     } catch { status.textContent = unknown; button.dataset.outcome = 'unknown'; }
     finally {
       clearTimeout(timer);
+      button.textContent = 'Send enquiry';
       // Unknown outcome is held for follow-up instead of encouraging duplicate sends.
       busy = button.dataset.outcome === 'unknown'; button.disabled = busy;
       if (status.textContent) status.focus();

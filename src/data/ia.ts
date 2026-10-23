@@ -4,10 +4,12 @@ export interface NavItem {
 }
 
 export const primaryNavItems: NavItem[] = [
-  { label: 'Commercial Leadership', href: '/commercial-leadership' },
-  { label: 'AI Consulting', href: '/ai-consulting' },
+  { label: 'Startups', href: '/startups' },
+  { label: 'Nonprofits', href: '/nonprofits' },
+  { label: 'Sales Leadership', href: '/sales-leadership' },
   { label: 'About', href: '/about' },
   { label: 'Research', href: '/research' },
+  { label: 'Contact', href: '/contact' },
 ];
 
 export const frameworkSlugs = [
@@ -164,7 +166,7 @@ export const glossaryTermSlugs = [
 ] as const;
 
 export const topLevelRoutes = [
-  '/commercial-leadership', '/ai-consulting', '/research',
+  '/commercial-leadership', '/ai-consulting', '/startups', '/nonprofits', '/sales-leadership', '/research',
   '/',
   '/insights',
   '/market-overview',
