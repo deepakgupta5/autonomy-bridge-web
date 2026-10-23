@@ -1,6 +1,6 @@
 # Step 5 implementation report
 
-Branch: `codex/step-5-approved-copy`. Base: `main` at `26712952c4076a45de6731e321405dede13c2279`. The exact implementation head is the commit containing this report; retrieve with `git rev-parse HEAD` after checkout. This branch is unmerged and has no deployed preview.
+Branch: `codex/step-5-approved-copy`. Base: `main` at `26712952c4076a45de6731e321405dede13c2279`. The reviewed implementation commit is `dac9f81cb9f29eacc101e3828a22319548ff19ec`. This report has a subsequent narrow revision; its exact final head is recorded in issue #11 because a commit cannot contain its own SHA. This branch is unmerged and has no deployed preview.
 
 ## Implemented
 
@@ -39,4 +39,8 @@ From this branch with Node 20: `npm ci`, then `npm run dev -- --host 127.0.0.1`;
 
 Before publication, verify permission for the named Ottonomy and Novus operating claims and USD revenue figures, plus the unnamed B2B platform figure. Confirm Netlify Forms processing location, notifications and mailbox provider, access controls, 12-month deletion across stores and backup behavior. Resolve the old service routes and referrers. Perform a real desktop/mobile visual pass in a reachable browser, including menu, long sections, cards, form and privacy text.
 
-Step 6 must independently audit all routes/redirects, canonical host, indexing and sitemap, live form acceptance and notification delivery under separate authorization, accessibility and visual regression, and Research internal-link preservation against this exact implementation commit. Do not merge, deploy, submit a sitemap or send a real form notification on the authority of this report.
+Step 6 must independently audit all routes/redirects, canonical host, indexing and sitemap, live form acceptance and notification delivery under separate authorization, accessibility and visual regression, and Research internal-link preservation against the final branch head recorded in issue #11. Do not merge, deploy, submit a sitemap or send a real form notification on the authority of this report.
+
+## Review revision
+
+Following review of `dac9f81`, the footer's superseded “Commercial leadership. Practical AI.” tagline was removed while the footer component and visual treatment remain. The reviewed implementation SHA is now explicit above. Desktop/mobile browser inspection and screenshots remain incomplete, as do account-level privacy and 12-month deletion verification. Legacy service-path bridge/redirect treatment remains a Step 6 decision. No production mode, deployment or notification setting changed in this revision.
