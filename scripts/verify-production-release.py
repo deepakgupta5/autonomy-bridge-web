@@ -36,7 +36,7 @@ build_inputs = ['src', 'config', 'public', 'scripts', 'netlify', 'astro.config.m
 if subprocess.run(['git', 'diff', '--quiet', 'HEAD', '--', *build_inputs], cwd=root).returncode:
     parser.error('commit all build inputs before verification so the reported source commit is exact')
 untracked_inputs = subprocess.check_output(
-    ['git', 'ls-files', '--others', '--exclude-standard', '--', *build_inputs], cwd=root, text=True)
+    ['git', 'ls-files', '--others', '--', *build_inputs], cwd=root, text=True)
 if untracked_inputs.strip():
     parser.error('untracked build inputs prevent exact source attribution')
 node = subprocess.check_output(['node', '--version'], text=True).strip()
@@ -47,6 +47,7 @@ evidence = root / 'docs/independent-review/verification'
 evidence.mkdir(parents=True, exist_ok=True)
 env = {**os.environ, 'AB_AUDIT_DIST': str(dist), 'AB_STEP6A_DIST': str(dist)}
 checks = [
+    ('source_guard_negative_controls', [sys.executable, 'scripts/test-production-source-guard.py']),
     ('build', ['npm', 'run', 'build']),
     ('route_verifier', [sys.executable, 'scripts/verify-preview.py', str(baseline),
                         '--canonical-apex', '--research-review', '--release-candidate']),
