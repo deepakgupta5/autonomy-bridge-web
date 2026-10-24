@@ -1,7 +1,9 @@
 # Privacy notice correction and verification
 
-**Tested source:** `04b81db970ace885ffa701f5918e47de721faef4`  
-**Branch:** `codex/step-6a-seo-geo`  
+**Tested source:** `04b81db970ace885ffa701f5918e47de721faef4`
+
+**Branch:** `codex/step-6a-seo-geo`
+
 **Runtime:** Node `v20.20.1`
 
 ## Copy change
