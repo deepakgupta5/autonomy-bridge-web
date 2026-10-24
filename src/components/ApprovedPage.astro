@@ -6,6 +6,7 @@ import nonprofits from '../../docs/step-5/approved-copy/05-AutonomyBridge-Nonpro
 import sales from '../../docs/step-5/approved-copy/06-AutonomyBridge-Sales-Leadership-Copy-Reviewed.md?raw';
 import about from '../../docs/step-5/approved-copy/08-AutonomyBridge-About-Copy-Reviewed.md?raw';
 import '../styles/approved-pages.css';
+import {buildAboutPageSchema, buildAudiencePageSchemas, buildPersonSchema} from '../utils/schema';
 
 interface Props { route: '/' | '/startups' | '/nonprofits' | '/sales-leadership' | '/about' }
 const {route} = Astro.props;
@@ -24,6 +25,30 @@ const descriptions = {
   '/sales-leadership': 'Fractional sales leadership for established B2B businesses that need to delegate team direction, forecasts and opportunities.',
   '/about': 'Meet Deepak Gupta and learn how he leads agreed commercial, fundraising operations and sales leadership work.',
 };
+const serviceIdentity = {
+  '/startups': {
+    pageName: 'Turn customer and market learning into repeatable revenue',
+    serviceName: 'Commercialization and revenue leadership for B2B startups',
+    description: 'I work directly with B2B startups to choose where to focus, shape an offer customers can buy and lead the agreed commercial work through to a decision.',
+  },
+  '/nonprofits': {
+    pageName: 'Build more sustained support from the relationships you have already developed',
+    serviceName: 'Fundraising operations and donor stewardship',
+    description: 'I work with the person responsible for fundraising to choose one priority, then lead the agreed preparation and follow-through with your team.',
+  },
+  '/sales-leadership': {
+    pageName: 'Fractional Sales Leadership for Established Businesses',
+    serviceName: 'Fractional Sales Leadership for Established Businesses',
+    description: 'I take on the agreed sales leadership responsibilities so you can delegate the day-to-day direction of sales without appointing a full-time executive.',
+  },
+} as const;
+const schema = route === '/about'
+  ? [buildAboutPageSchema({
+      title: 'I’m Deepak Gupta. I lead the work we agree needs an owner.',
+      description: 'My background spans building new commercial businesses, leading teams, owning P&L and personally closing enterprise contracts.',
+      canonicalPath: '/about',
+    }), buildPersonSchema()]
+  : route === '/' ? [] : buildAudiencePageSchemas({canonicalPath: route, ...serviceIdentity[route]});
 const chunks = content.split(/\n\s*\n/).map(s=>s.trim()).filter(Boolean).filter(s=>!s.startsWith('# ') && !s.startsWith('Navigation:'));
 type Block = {kind:'h1'|'h2'|'h3'|'p'|'link', text:string, href?:string, linkedin?:boolean};
 const labels: Record<string,string> = {
@@ -57,7 +82,7 @@ function groupsFor(blocks:Block[]){
 }
 const linkForParagraph=(text:string)=>text==='For specialist analysis and published thinking, explore Research.'?'/research':text==='You can read about my background and experience before getting in touch.'?'/about':null;
 ---
-<MainLayout title={route==='/'?'Home':route==='/sales-leadership'?'Sales Leadership':route.slice(1)} canonicalPath={route} seoTitle={titles[route]} seoDescription={descriptions[route]} showLocalSubnav={false}>
+<MainLayout title={route==='/'?'Home':route==='/sales-leadership'?'Sales Leadership':route.slice(1)} canonicalPath={route} seoTitle={titles[route]} seoDescription={descriptions[route]} ogType="website" schema={schema} showLocalSubnav={false}>
   <article class:list={['approved-page',route==='/'?'approved-home':'approved-inner']}>
     {sections.map(({heading,blocks},index)=><section class={sectionStyle(index)}>
       {heading.kind==='h1'?<h1>{heading.text}</h1>:<h2>{heading.text}</h2>}

@@ -15,6 +15,6 @@ if (isLegal) body = body.replace(/<p class="revision-date">.*?<\/p>/g, deploymen
 else body = body.replace(/<p class="revision-date">.*?<\/p>/g, deploymentPolicy.mode === 'production' ? `<p class="revision-date">Last updated: ${deploymentPolicy.publicationDate}</p>` : '<p class="revision-date">Revision prepared for release; publication pending.</p>');
 const schema = route === '/methodology' ? [{ '@context': 'https://schema.org', '@type': 'Article', headline: page.name, datePublished: '2026-03-15', ...(deploymentPolicy.mode === 'production' ? {dateModified: deploymentPolicy.publicationDate} : {}) }] : [];
 ---
-<MainLayout title={page.name} canonicalPath={route} seoTitle={page.metadata.title} seoDescription={page.metadata.description} schema={schema} showLocalSubnav={route === '/methodology'}>
+<MainLayout title={page.name} canonicalPath={route} seoTitle={page.metadata.title} seoDescription={page.metadata.description} ogType={route === '/research' ? 'website' : undefined} schema={schema} showLocalSubnav={route === '/methodology'}>
   <article class:list={['approved-copy', { 'home-copy': route === '/', 'core-copy': ['/commercial-leadership', '/ai-consulting', '/about', '/research'].includes(route), 'policy-copy': route.includes('policy') || route === '/terms-of-use' || route === '/methodology' }]} set:html={body} />
 </MainLayout>

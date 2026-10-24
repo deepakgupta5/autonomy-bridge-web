@@ -1,14 +1,15 @@
-# AutonomyBridge
+# Autonomy Bridge
 
-Commercial leadership for startups and SMBs. AI consulting & implementation for businesses and nonprofits.
+Autonomy Bridge is led by Deepak Gupta, who personally leads agreed commercial or fundraising work with the team. Current work is organized for B2B startups, nonprofits and established businesses. Published Research is separate from paid engagements.
 
-## Services and enquiries
-- Commercial Leadership: https://autonomybridge.com/commercial-leadership
-- AI Consulting & Implementation: https://autonomybridge.com/ai-consulting
-- About: https://autonomybridge.com/about
+## Current work and enquiries
+- Startups: https://autonomybridge.com/startups — commercialization and revenue leadership for B2B startups, including choosing priorities, shaping offers and leading agreed opportunities through the buying process.
+- Nonprofits: https://autonomybridge.com/nonprofits — defined fundraising operations and stewardship work alongside the organization's fundraising expertise. The nonprofit retains donor relationships and solicitation decisions.
+- Sales Leadership: https://autonomybridge.com/sales-leadership — fractional sales leadership for established businesses, including sales priorities, coaching, forecast accountability and important opportunities within an agreed mandate.
+- About Deepak Gupta: https://autonomybridge.com/about
 - Contact: https://autonomybridge.com/contact
 
-## Research directory
+## Published Research directory
 - Research & Resources: https://autonomybridge.com/research
 - Robotics & Automation Research: https://autonomybridge.com/bespoke-research
 - Market Overview: https://autonomybridge.com/market-overview

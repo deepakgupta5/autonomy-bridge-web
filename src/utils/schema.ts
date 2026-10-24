@@ -1,6 +1,7 @@
 const SITE_URL = "https://autonomybridge.com";
 const ORGANIZATION_ID = `${SITE_URL}#organization`;
 const WEBSITE_ID = `${SITE_URL}#website`;
+const PERSON_ID = `${SITE_URL}/about#deepak-gupta`;
 
 export interface BreadcrumbSchemaItem {
   label: string;
@@ -60,6 +61,50 @@ export function buildWebSiteSchema(): SchemaNode {
     name: "Autonomy Bridge",
     publisher: { "@id": ORGANIZATION_ID },
   };
+}
+
+export function buildPersonSchema(): SchemaNode {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": PERSON_ID,
+    name: "Deepak Gupta",
+    url: `${SITE_URL}/about`,
+    sameAs: ["https://www.linkedin.com/in/deepakgupta5/"],
+    worksFor: { "@id": ORGANIZATION_ID },
+  };
+}
+
+export function buildAudiencePageSchemas(options: {
+  canonicalPath: "/startups" | "/nonprofits" | "/sales-leadership";
+  pageName: string;
+  serviceName: string;
+  description: string;
+}): SchemaNode[] {
+  const url = toAbsoluteCanonicalUrl(options.canonicalPath);
+  const serviceId = `${url}#service`;
+  return [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": url,
+      url,
+      name: options.pageName,
+      description: options.description,
+      isPartOf: { "@id": WEBSITE_ID },
+      mainEntity: { "@id": serviceId },
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": serviceId,
+      name: options.serviceName,
+      description: options.description,
+      url,
+      provider: { "@id": ORGANIZATION_ID },
+      mainEntityOfPage: { "@id": url },
+    },
+  ];
 }
 
 export function buildBreadcrumbListSchema(items: BreadcrumbSchemaItem[]): SchemaNode | null {
@@ -201,10 +246,12 @@ export function buildAboutPageSchema(options: {
   return {
     "@context": "https://schema.org",
     "@type": "AboutPage",
+    "@id": toAbsoluteCanonicalUrl(options.canonicalPath),
     name: options.title,
     description: options.description,
     url: toAbsoluteCanonicalUrl(options.canonicalPath),
     isPartOf: { "@id": WEBSITE_ID },
+    mainEntity: { "@id": PERSON_ID },
   };
 }
 
@@ -216,6 +263,7 @@ export function buildContactPageSchema(options: {
   return {
     "@context": "https://schema.org",
     "@type": "ContactPage",
+    "@id": toAbsoluteCanonicalUrl(options.canonicalPath),
     name: options.title,
     description: options.description,
     url: toAbsoluteCanonicalUrl(options.canonicalPath),

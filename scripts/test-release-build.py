@@ -1,6 +1,6 @@
 """Offline release/fallback builds in a disposable copy; never changes source mode."""
 from pathlib import Path
-import json, os, shutil, subprocess, tempfile
+import json, os, re, shutil, subprocess, tempfile
 root = Path(__file__).resolve().parents[1]
 target = Path(tempfile.mkdtemp(prefix='ab-release-check-'))
 for name in ['src','public','config','scripts','netlify']:
@@ -23,6 +23,11 @@ for mode in ['email-only']:
     result=subprocess.run(['npm','run','build'],cwd=target,env=env,capture_output=True,text=True)
     assert result.returncode==0,result.stdout+result.stderr
     files=list((target/'dist').rglob('*.html'));assert len(files)==163
+    for file in files:
+        route='/' + file.relative_to(target/'dist').as_posix().removesuffix('.html')
+        expected='noindex,nofollow' if route=='/contact-success' else 'noindex,follow' if route in ['/commercial-leadership','/ai-consulting','/advisory'] else 'index,follow'
+        actual=re.search(r'<meta name="robots" content="([^"]+)"',file.read_text())
+        assert actual and actual[1]==expected,(route,actual[1] if actual else None,expected)
     home=(target/'dist/index.html').read_text();contact=(target/'dist/contact.html').read_text();success=(target/'dist/contact-success.html').read_text()
     assert 'content="index,follow"' in home
     assert 'content="noindex,nofollow"' in success

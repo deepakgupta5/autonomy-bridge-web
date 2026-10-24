@@ -1,0 +1,104 @@
+{
+  "passed": true,
+  "pages": 163,
+  "metadata_complete": 163,
+  "local_noindex_pages": 163,
+  "website_og_routes": [
+    "/",
+    "/about",
+    "/advisory",
+    "/ai-consulting",
+    "/commercial-leadership",
+    "/contact",
+    "/nonprofits",
+    "/research",
+    "/sales-leadership",
+    "/startups"
+  ],
+  "service_pages": [
+    "/nonprofits",
+    "/sales-leadership",
+    "/startups"
+  ],
+  "person_id": "https://autonomybridge.com/about#deepak-gupta",
+  "llms_destinations": [
+    "/about",
+    "/bespoke-research",
+    "/case-studies",
+    "/contact",
+    "/frameworks",
+    "/glossary",
+    "/insights",
+    "/market-overview",
+    "/methodology",
+    "/nonprofits",
+    "/research",
+    "/sales-leadership",
+    "/sitemap",
+    "/startups",
+    "/use-cases"
+  ],
+  "robots_agents_tested": [
+    "Googlebot",
+    "Bingbot",
+    "OAI-SearchBot",
+    "ChatGPT-User",
+    "Claude-SearchBot",
+    "PerplexityBot",
+    "GPTBot",
+    "Google-Extended",
+    "ClaudeBot",
+    "UnknownCrawler"
+  ],
+  "robots_public_paths_tested": [
+    "/startups",
+    "/nonprofits",
+    "/sales-leadership",
+    "/research",
+    "/case-studies",
+    "/insights/why-robotics-pilots-fail-to-scale",
+    "/commercial-leadership",
+    "/ai-consulting",
+    "/advisory",
+    "/_astro/index.css"
+  ],
+  "robots_reserved_paths_tested": [
+    "/wp-admin/",
+    "/admin/",
+    "/temp/",
+    "/drafts/",
+    "/search?query",
+    "/checkout/"
+  ],
+  "static_answer_sections": {
+    "/startups": [
+      "The pilot worked. Why haven\u2019t they bought?",
+      "Every prospect wants something different. Which market are we building for?",
+      "Start with the work in front of you"
+    ],
+    "/nonprofits": [
+      "Who should we give attention to before the next appeal?",
+      "The donor update is due. Who is bringing it together?",
+      "You keep the donor relationship. I lead the agreed work around it."
+    ],
+    "/sales-leadership": [
+      "We have salespeople. Why am I still the sales manager?",
+      "The forecast says it will close. What has the customer actually committed to?",
+      "Start with a Fractional Sales Leadership Mandate and 90-Day Commercial Plan"
+    ],
+    "/about": [
+      "I\u2019m Deepak Gupta. I lead the work we agree needs an owner.",
+      "My work through Autonomy Bridge",
+      "You work directly with me"
+    ],
+    "/contact": [
+      "What needs your attention?",
+      "Tell me what you\u2019re dealing with",
+      "What happens next"
+    ],
+    "/research": [
+      "Research & Resources",
+      "Read the evidence alongside the conclusion"
+    ]
+  }
+}

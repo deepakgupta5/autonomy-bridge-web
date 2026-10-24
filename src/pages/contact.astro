@@ -2,8 +2,9 @@
 import {deploymentPolicy} from '../../config/deployment-policy.mjs';
 import MainLayout from '../components/MainLayout.astro';
 import '../styles/approved-pages.css';
+import {buildContactPageSchema} from '../utils/schema';
 ---
-<MainLayout title="Contact" canonicalPath="/contact" seoTitle="Contact Autonomy Bridge" seoDescription="Tell Deepak Gupta about a revenue, fundraising or sales leadership question. The first conversation is free." showLocalSubnav={false}>
+<MainLayout title="Contact" canonicalPath="/contact" seoTitle="Contact Autonomy Bridge" seoDescription="Tell Deepak Gupta about a revenue, fundraising or sales leadership question. The first conversation is free." ogType="website" schema={[buildContactPageSchema({title: 'What needs your attention?', description: 'Tell me what is happening and what you need to move forward. You don’t need to choose a service or arrive with a finished brief.', canonicalPath: '/contact'})]} showLocalSubnav={false}>
 <article class="approved-page approved-contact">
 <header class="approved-hero">
 <h1>What needs your attention?</h1>

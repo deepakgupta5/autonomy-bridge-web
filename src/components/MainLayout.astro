@@ -74,6 +74,7 @@ const resolvedOgTitle = ogTitle ?? metadata.ogTitle;
 const resolvedOgDescription = ogDescription ?? metadata.description;
 const resolvedTwitterCard = twitterCard ?? "summary";
 const resolvedOgUrl = canonicalHref ?? metadata.absoluteCanonicalUrl;
+const safeJsonLd = (entry: SchemaNode) => JSON.stringify(entry).replace(/</g, '\\u003c');
 ---
 
 <!doctype html>
@@ -98,7 +99,7 @@ const resolvedOgUrl = canonicalHref ?? metadata.absoluteCanonicalUrl;
     {resolvedOgDescription && <meta name="twitter:description" content={resolvedOgDescription} />}
     {
       schemaEntries.map((entry) => (
-        <script type="application/ld+json" set:html={JSON.stringify(entry)} />
+        <script type="application/ld+json" set:html={safeJsonLd(entry)} />
       ))
     }
   </head>
