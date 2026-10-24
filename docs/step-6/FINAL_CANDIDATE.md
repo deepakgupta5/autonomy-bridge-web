@@ -34,9 +34,9 @@ The complete generated public-date paths controlled by those two policy fields a
 | Policy field | Generated output |
 | --- | --- |
 | `publicationDate` | `/methodology` visible `Last updated` revision notice in production and its Article JSON-LD `dateModified`. The verified original `datePublished: 2026-03-15` is retained. |
-| `researchRevisionDate` | Visible `Last updated` notice on every route in `config/material-research-revisions.json`; JSON-LD Article `dateModified` on materially revised Research pages (FAQPage is excluded); XML sitemap `<lastmod>` for those revised routes; visible `Last updated` on `/privacy-policy`, `/terms-of-use` and `/cookie-policy`. |
+| `researchRevisionDate` | Visible `Last updated` notice on every route in `config/material-research-revisions.json`; JSON-LD Article `dateModified` on materially revised Research pages (FAQPage is excluded); XML sitemap `<lastmod>` for those revised routes; visible `Last updated` on `/terms-of-use` and `/cookie-policy`. The active `/privacy-policy` page has no revision-date field. |
 
-`src/data/preview-copy.json` also contains draft “Revision prepared: October 19, 2026. Publication pending.” text for Methodology and the three legal pages. `src/components/CopyPage.astro` replaces those notices from the policy fields in production; confirm the final rendered output contains the approved dates and no draft notice. Historical source-date records in Research cards/content and the verified original Methodology publication date are separate records and should not be mass-replaced with a launch date.
+`src/data/preview-copy.json` contains draft revision notices for Methodology, Terms of Use and Cookie Policy; its Privacy Policy entry is superseded by `src/pages/privacy-policy.astro`. `src/components/CopyPage.astro` replaces active revision notices from the policy fields in production; confirm the final rendered output contains the approved dates and no draft notice. Historical source-date records in Research cards/content and the verified original Methodology publication date are separate records and should not be mass-replaced with a launch date.
 
 The footer copyright year comes from `new Date().getFullYear()` at build time in `src/components/Footer.astro`; confirm it is the approved build year's value. It is not controlled by either policy date field.
 

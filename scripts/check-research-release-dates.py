@@ -4,6 +4,7 @@ import os,json,re,shutil,tempfile,subprocess,xml.etree.ElementTree as ET
 root=Path(__file__).resolve().parents[1]
 tmp=Path(tempfile.mkdtemp(prefix='ab-date-fixture-',dir='/private/tmp'))
 for name in ['src','public','scripts','config']:shutil.copytree(root/name,tmp/name,ignore=shutil.ignore_patterns('__pycache__'))
+shutil.copytree(root/'docs/step-5/approved-copy',tmp/'docs/step-5/approved-copy')
 for name in ['package.json','package-lock.json','astro.config.mjs','tsconfig.json','tailwind.config.mjs']:shutil.copy2(root/name,tmp/name)
 (tmp/'node_modules').symlink_to(root/'node_modules',target_is_directory=True)
 # Synthetic historical date, explicitly a test fixture rather than an actual release claim.
@@ -21,13 +22,14 @@ for f in (tmp/'dist').rglob('*.html'):
   assert not any(x.get('datePublished') for x in schemas),route
   stamped.append(route)
  else:assert f'datetime="{date}"' not in s,route+' unrelated date stamp'
-for route in ['privacy-policy','terms-of-use','cookie-policy']:assert f'Last updated: {date}' in (tmp/'dist'/f'{route}.html').read_text()
+for route in ['terms-of-use','cookie-policy']:assert f'Last updated: {date}' in (tmp/'dist'/f'{route}.html').read_text()
+assert f'Last updated: {date}' not in (tmp/'dist/privacy-policy.html').read_text()
 xml=ET.parse(tmp/'dist/sitemap-0.xml');modified={x.find('{*}loc').text.removeprefix('https://autonomybridge.com'):x.find('{*}lastmod').text for x in xml.getroot() if x.find('{*}lastmod') is not None}
 assert set(modified)==revised,(set(modified)^revised)
 assert all(v.startswith(date) for v in modified.values());assert len(stamped)==len(revised)
 assert original_policy == (root/'config/deployment-policy.mjs').read_text()
 p.write_text(p.read_text().replace(f"researchRevisionDate: '{date}'", 'researchRevisionDate: null'))
-# The real pending-release source must fail remote production builds until its actual date is supplied.
-r=subprocess.run(['node','scripts/preview-build-guard.mjs'],cwd=tmp,env={**env,'NETLIFY':'true'},capture_output=True,text=True);assert r.returncode!=0 and 'actual release date' in r.stderr
-report={'passed':True,'fixture_only_date':date,'material_routes':len(stamped),'visible_schema_xml_date_parity':True,'unrelated_pages_not_fresh_stamped':True,'legal_date_parity':True,'real_checkout_policy_unchanged':True,'remote_pending_date_build_rejected':True,'fixture_directory':str(tmp)}
+# Local-mode source must still refuse remote builds.
+r=subprocess.run(['node','scripts/preview-build-guard.mjs'],cwd=tmp,env={**env,'NETLIFY':'true'},capture_output=True,text=True);assert r.returncode!=0 and 'remote builds disabled' in r.stderr
+report={'passed':True,'fixture_only_date':date,'material_routes':len(stamped),'visible_schema_xml_date_parity':True,'unrelated_pages_not_fresh_stamped':True,'terms_cookie_date_parity':True,'privacy_notice_has_no_revision_date':True,'real_checkout_policy_unchanged':True,'local_mode_remote_build_rejected':True,'fixture_directory':str(tmp)}
 Path(os.environ.get('AB_DATE_FIXTURE_REPORT',root/'docs/consolidated-release/revision-2/date-fixture.json')).write_text(json.dumps(report,indent=2)+'\n');print(json.dumps(report,indent=2))
