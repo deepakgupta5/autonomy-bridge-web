@@ -19,9 +19,9 @@ authors:
     url: "https://autonomybridge.com/about"
 
 dates:
-  created: "2026-04-09"
-  updated: "2026-04-09"
-  published: "2026-04-09"
+  created: "2026-03-01"
+  updated: "2026-03-01"
+  published: "2026-03-01"
 
 canonical:
   url: "https://autonomybridge.com/case-studies/service-robotics-commercial-viability-assessment"

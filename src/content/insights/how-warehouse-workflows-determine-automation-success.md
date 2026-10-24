@@ -19,9 +19,9 @@ authors:
     url: "https://autonomybridge.com/about"
 
 dates:
-  created: "2026-03-15"
-  updated: "2026-03-15"
-  published: "2026-03-15"
+  created: "2026-03-01"
+  updated: "2026-03-01"
+  published: "2026-03-01"
 
 canonical:
   url: "https://autonomybridge.com/insights/how-warehouse-workflows-determine-automation-success"
@@ -377,8 +377,8 @@ Type: article
 Status: published
 Canonical: https://autonomybridge.com/insights/how-warehouse-workflows-determine-automation-success
 AIPM Version: 1.0
-Created: 2026-03-15
-Updated: 2026-03-15
+Created: 2026-03-01
+Updated: 2026-03-01
 Author: Deepak Gupta (author_deepak_001), Founder & Principal Analyst, Autonomy Bridge
 Schema Type: Article / FAQPage
 Frameworks tagged: Workflow Architecture Framework, Automation Failure Framework, Robotics ROI Model

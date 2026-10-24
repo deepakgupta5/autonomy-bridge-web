@@ -38,8 +38,8 @@ draft: false
 documentId: "doc_glossary_term_t78"
 authors:
   - "Deepak Gupta"
-datePublished: "2026-04-01"
-dateModified: "2026-04-01"
+datePublished: "2026-03-01"
+dateModified: "2026-03-01"
 structuredDataType: "DefinedTerm"
 migration:
   sourceFilename: "insight-2d-general-merchandise-3pl.md"

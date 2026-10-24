@@ -147,7 +147,7 @@ export default defineConfig({
   integrations: [
     sitemap({
       filter: (entry) => isAllowedSitemapPath(toPathname(entry)),
-      serialize: item => ({...item, ...(revisedResearch.includes(toPathname(item.url)) && deploymentPolicy.researchRevisionDate ? {lastmod: deploymentPolicy.researchRevisionDate} : {})}),
+      serialize: item => ({...item, ...(deploymentPolicy.mode === 'production' && revisedResearch.includes(toPathname(item.url)) && deploymentPolicy.researchRevisionDate ? {lastmod: deploymentPolicy.researchRevisionDate} : {})}),
     }),
   ],
 });

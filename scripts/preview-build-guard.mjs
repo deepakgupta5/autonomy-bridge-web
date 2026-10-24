@@ -5,8 +5,11 @@ if (deploymentPolicy.mode !== 'production') {
     process.exit(1);
   }
 } else if (!validCalendarDate(deploymentPolicy.publicationDate) ||
-           !validCalendarDate(deploymentPolicy.researchRevisionDate)) {
-  console.error('Production builds require explicit valid publicationDate and researchRevisionDate calendar dates.');
+           !validCalendarDate(deploymentPolicy.researchRevisionDate) ||
+           !validCalendarDate(deploymentPolicy.termsRevisionDate) ||
+           !validCalendarDate(deploymentPolicy.cookieRevisionDate) ||
+           !validCalendarDate(deploymentPolicy.methodologyRevisionDate)) {
+  console.error('Production builds require explicit valid site, Research, Terms, Cookie and Methodology calendar dates.');
   process.exit(1);
 } else if (!validTarget(deploymentPolicy) || process.env.SITE_ID !== deploymentPolicy.siteId ||
            process.env.CONTEXT !== 'production' || process.env.AB_PRIVATE_PREVIEW === '1') {

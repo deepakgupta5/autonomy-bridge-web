@@ -10,10 +10,12 @@ const page = pages[route];
 // Approved public proof is already in the active copy. Legacy whole-page private
 // overlays must not restore superseded wording or layouts in local reviews.
 let body = page.html;
-const isLegal = ['/privacy-policy', '/terms-of-use', '/cookie-policy'].includes(route);
-if (isLegal) body = body.replace(/<p class="revision-date">.*?<\/p>/g, deploymentPolicy.researchRevisionDate ? `<p class="revision-date">Last updated: ${deploymentPolicy.researchRevisionDate}</p>` : '<p class="revision-date">Revision prepared for release; publication pending.</p>');
-else body = body.replace(/<p class="revision-date">.*?<\/p>/g, deploymentPolicy.mode === 'production' ? `<p class="revision-date">Last updated: ${deploymentPolicy.publicationDate}</p>` : '<p class="revision-date">Revision prepared for release; publication pending.</p>');
-const schema = route === '/methodology' ? [{ '@context': 'https://schema.org', '@type': 'Article', headline: page.name, datePublished: '2026-03-15', ...(deploymentPolicy.mode === 'production' ? {dateModified: deploymentPolicy.publicationDate} : {}) }] : [];
+const noticeDate = route === '/terms-of-use' ? deploymentPolicy.termsRevisionDate
+  : route === '/cookie-policy' ? deploymentPolicy.cookieRevisionDate
+  : route === '/methodology' ? deploymentPolicy.methodologyRevisionDate : null;
+const visibleNoticeDate = deploymentPolicy.mode === 'production' ? noticeDate : null;
+body = body.replace(/<p class="revision-date">.*?<\/p>/g, visibleNoticeDate ? `<p class="revision-date">Last updated: ${visibleNoticeDate}</p>` : '<p class="revision-date">Revision prepared for release; publication pending.</p>');
+const schema = route === '/methodology' ? [{ '@context': 'https://schema.org', '@type': 'Article', headline: page.name, datePublished: '2026-03-01', ...(visibleNoticeDate ? {dateModified: visibleNoticeDate} : {}) }] : [];
 ---
 <MainLayout title={page.name} canonicalPath={route} seoTitle={page.metadata.title} seoDescription={page.metadata.description} ogType={route === '/research' ? 'website' : undefined} schema={schema} showLocalSubnav={route === '/methodology'}>
   <article class:list={['approved-copy', { 'home-copy': route === '/', 'core-copy': ['/commercial-leadership', '/ai-consulting', '/about', '/research'].includes(route), 'policy-copy': route.includes('policy') || route === '/terms-of-use' || route === '/methodology' }]} set:html={body} />

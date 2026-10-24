@@ -10,6 +10,7 @@ import re
 
 ROOT = Path(__file__).resolve().parents[1]
 DIST = Path(os.environ.get('AB_STEP6A_DIST', ROOT / 'dist'))
+PRODUCTION = "mode: 'production'" in (ROOT / 'config/deployment-policy.mjs').read_text()
 ORIGIN = 'https://autonomybridge.com'
 ORG = ORIGIN + '#organization'
 WEBSITE = ORIGIN + '#website'
@@ -140,7 +141,9 @@ for route, page in pages.items():
     assert page.lang == 'en', route
     assert page.title.strip() and page.meta.get('description', '').strip(), route
     assert page.canonical == [ORIGIN + ('' if route == '/' else route)], route
-    assert page.meta.get('robots') == 'noindex,nofollow', route
+    expected_robots = ('noindex,nofollow' if not PRODUCTION or route == '/contact-success'
+                       else 'noindex,follow' if route in BRIDGES else 'index,follow')
+    assert page.meta.get('robots') == expected_robots, route
     assert page.meta.get('og:url') == page.canonical[0], route
     assert page.meta.get('og:title') and page.meta.get('og:description'), route
     assert page.meta.get('og:type') in {'website', 'article'}, route
@@ -253,7 +256,10 @@ report = {
     'passed': True,
     'pages': len(pages),
     'metadata_complete': len(pages),
-    'local_noindex_pages': len(pages),
+    'source_mode': 'production' if PRODUCTION else 'local',
+    'local_noindex_pages': 0 if PRODUCTION else len(pages),
+    'production_indexable_pages': sum(route not in BRIDGES | {'/contact-success'}
+                                      for route in pages) if PRODUCTION else 0,
     'website_og_routes': sorted(CORE_WEBSITE),
     'service_pages': sorted(SERVICES),
     'person_id': PERSON,

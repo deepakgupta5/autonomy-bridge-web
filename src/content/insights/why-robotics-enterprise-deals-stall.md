@@ -19,9 +19,9 @@ authors:
     url: "https://autonomybridge.com/about"
 
 dates:
-  created: "2026-04-11"
-  updated: "2026-04-11"
-  published: "2026-04-11"
+  created: "2026-03-01"
+  updated: "2026-03-01"
+  published: "2026-03-01"
 
 canonical:
   url: "https://autonomybridge.com/insights/why-robotics-enterprise-deals-stall"

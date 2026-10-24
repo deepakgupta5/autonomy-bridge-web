@@ -19,9 +19,9 @@ authors:
     url: "https://autonomybridge.com/about"
 
 dates:
-  created: "2026-04-09"
-  updated: "2026-04-09"
-  published: "2026-04-09"
+  created: "2026-03-01"
+  updated: "2026-03-01"
+  published: "2026-03-01"
 
 canonical:
   url: "https://autonomybridge.com/insights/how-robotics-vendors-misjudge-their-addressable-market"
@@ -304,8 +304,8 @@ Type: article
 Status: published
 Canonical: https://autonomybridge.com/insights/how-robotics-vendors-misjudge-their-addressable-market
 AIPM Version: 1.0
-Created: 2026-04-09
-Updated: 2026-04-09
+Created: 2026-03-01
+Updated: 2026-03-01
 Author: Deepak Gupta (author_deepak_001), Founder & Principal Analyst, Autonomy Bridge
 Schema Type: Article / FAQPage
 Frameworks tagged: Vendor Economics Framework

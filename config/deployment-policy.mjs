@@ -1,11 +1,16 @@
 // Source-controlled release boundary. Environment variables cannot change mode.
 // Release candidate target; merge and deployment require owner approval.
+// The owner specified the Research revision date; it is separate from site and notice dates.
+export const approvedResearchRevisionDate = '2026-03-01';
 export const deploymentPolicy = Object.freeze({
   mode: 'local', // Step 5: loopback review only; remote builds remain blocked
   origin: 'https://autonomybridge.com', // exact approved HTTPS production origin
   siteId: '3df07dc5-6950-4241-98eb-cf95df3d271d', // independently verified Netlify site ID
   publicationDate: '', // set to the actual approved publication date on release day
-  researchRevisionDate: null, // set to the actual approved Research revision date on release day
+  researchRevisionDate: null, // use approvedResearchRevisionDate in the reviewed production configuration
+  termsRevisionDate: null, // actual approved Terms update/publication date
+  cookieRevisionDate: null, // actual approved Cookie update/publication date
+  methodologyRevisionDate: null, // actual approved Methodology revision date, distinct from its original publication
   formEnabled: true, // production form; real submission testing requires separate authorization
 });
 
@@ -20,7 +25,11 @@ export function validCalendarDate(value) {
 
 export function validTarget(policy) {
   if (policy.mode !== 'production' || !validCalendarDate(policy.publicationDate) ||
-      !validCalendarDate(policy.researchRevisionDate) ||
+      policy.researchRevisionDate !== approvedResearchRevisionDate ||
+      !validCalendarDate(policy.termsRevisionDate) ||
+      !validCalendarDate(policy.cookieRevisionDate) ||
+      !validCalendarDate(policy.methodologyRevisionDate) ||
+      policy.methodologyRevisionDate < '2026-03-01' ||
       !/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(policy.siteId)) return false;
   try {
     const url = new URL(policy.origin);

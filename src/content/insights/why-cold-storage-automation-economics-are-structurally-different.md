@@ -19,9 +19,9 @@ authors:
     url: "https://autonomybridge.com/about"
 
 dates:
-  created: "2026-04-01"
-  updated: "2026-04-01"
-  published: "2026-04-01"
+  created: "2026-03-01"
+  updated: "2026-03-01"
+  published: "2026-03-01"
 
 canonical:
   url: "https://autonomybridge.com/insights/why-cold-storage-automation-economics-are-structurally-different"
@@ -318,8 +318,8 @@ Type: article
 Status: published
 Canonical: https://autonomybridge.com/insights/why-cold-storage-automation-economics-are-structurally-different
 AIPM Version: 1.0
-Created: 2026-04-01
-Updated: 2026-04-01
+Created: 2026-03-01
+Updated: 2026-03-01
 Author: Deepak Gupta (author_deepak_001), Founder & Principal Analyst, Autonomy Bridge
 Schema Type: Article / FAQPage
 Frameworks tagged: Robotics ROI Model, Automation Failure Framework, Workflow Architecture Framework

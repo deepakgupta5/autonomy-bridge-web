@@ -11,7 +11,7 @@ for path in root.iterdir():
         shutil.copy2(path,target/path.name)
 (target/'node_modules').symlink_to(root/'node_modules',target_is_directory=True)
 site='3df07dc5-6950-4241-98eb-cf95df3d271d'
-patch=subprocess.check_output(['python3',str(root/'scripts/prepare-release-patch.py'),'--origin','https://autonomybridge.com','--publication-date','2000-01-02','--research-revision-date','2000-01-03','--site-id',site],cwd=root)
+patch=subprocess.check_output(['python3',str(root/'scripts/prepare-release-patch.py'),'--origin','https://autonomybridge.com','--publication-date','2026-04-01','--research-revision-date','2026-03-01','--terms-revision-date','2026-04-02','--cookie-revision-date','2026-04-03','--methodology-revision-date','2026-04-04','--site-id',site],cwd=root)
 subprocess.run(['git','apply','--unsafe-paths','-'],input=patch,cwd=target,check=True)
 env={**os.environ,'SITE_ID':site,'CONTEXT':'production','NETLIFY':'true'}
 env.pop('AB_PRIVATE_PREVIEW',None)
@@ -31,11 +31,12 @@ for mode in ['email-only']:
     home=(target/'dist/index.html').read_text();contact=(target/'dist/contact.html').read_text();success=(target/'dist/contact-success.html').read_text()
     assert 'content="index,follow"' in home
     assert 'content="noindex,nofollow"' in success
-    assert 'Last updated: 2000-01-03' in (target/'dist/terms-of-use.html').read_text()
-    assert 'Last updated: 2000-01-03' in (target/'dist/cookie-policy.html').read_text()
-    assert 'Last updated: 2000-01-03' not in (target/'dist/privacy-policy.html').read_text()
+    assert 'Last updated: 2026-04-02' in (target/'dist/terms-of-use.html').read_text()
+    assert 'Last updated: 2026-04-03' in (target/'dist/cookie-policy.html').read_text()
+    assert 'Last updated:' not in (target/'dist/privacy-policy.html').read_text()
     assert 'dateModified' in (target/'dist/methodology.html').read_text()
-    assert '2026-03-15' in (target/'dist/methodology.html').read_text()
+    assert 'Published: March 1, 2026' in (target/'dist/methodology.html').read_text()
+    assert 'Last updated: 2026-04-04' in (target/'dist/methodology.html').read_text()
     assert 'Publication pending' not in (target/'dist/terms-of-use.html').read_text()
     assert 'preview-notice' not in home.split('<body',1)[1]
     assert 'mailto:' not in contact

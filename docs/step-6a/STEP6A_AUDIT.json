@@ -2,7 +2,9 @@
   "passed": true,
   "pages": 163,
   "metadata_complete": 163,
+  "source_mode": "local",
   "local_noindex_pages": 163,
+  "production_indexable_pages": 0,
   "website_og_routes": [
     "/",
     "/about",

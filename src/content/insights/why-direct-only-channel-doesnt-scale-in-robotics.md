@@ -20,9 +20,9 @@ authors:
     sameAs: "https://www.linkedin.com/in/deepakgupta5"
 
 dates:
-  created: "2026-04-11"
-  updated: "2026-04-11"
-  published: "2026-04-11"
+  created: "2026-03-01"
+  updated: "2026-03-01"
+  published: "2026-03-01"
 
 canonical:
   url: "https://autonomybridge.com/insights/why-direct-only-channel-doesnt-scale-in-robotics"

@@ -32,8 +32,8 @@ draft: false
 documentId: "doc_glossary_term_t04"
 authors:
   - "Deepak Gupta"
-datePublished: "2026-03-15"
-dateModified: "2026-03-15"
+datePublished: "2026-03-01"
+dateModified: "2026-03-01"
 structuredDataType: "DefinedTerm"
 migration:
   sourceFilename: "Glossary.md"

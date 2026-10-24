@@ -10,6 +10,9 @@ policy = (root / 'config/deployment-policy.mjs').read_text()
 assert "mode: 'local'" in policy
 assert "publicationDate: ''" in policy
 assert 'researchRevisionDate: null' in policy
+assert 'termsRevisionDate: null' in policy
+assert 'cookieRevisionDate: null' in policy
+assert 'methodologyRevisionDate: null' in policy
 revised = json.loads((root / 'config/material-research-revisions.json').read_text())
 pending = 'Revision prepared for release; publication pending.'
 
@@ -26,7 +29,7 @@ for route in ['methodology', 'terms-of-use', 'cookie-policy']:
 methodology = (dist / 'methodology.html').read_text()
 methodology_schemas = [json.loads(item) for item in re.findall(
     r'<script type="application/ld\+json">(.*?)</script>', methodology)]
-assert any(item.get('datePublished') == '2026-03-15' and 'dateModified' not in item
+assert any(item.get('datePublished') == '2026-03-01' and 'dateModified' not in item
            for item in methodology_schemas)
 privacy = (dist / 'privacy-policy.html').read_text()
 assert 'revision-date' not in privacy and 'Last updated:' not in privacy
@@ -43,6 +46,6 @@ for file in dist.rglob('*.html'):
 print(json.dumps({'passed': True, 'pending_research_routes': len(revised),
                   'pending_methodology_terms_cookie': True,
                   'privacy_notice_has_no_revision_date': True,
-                  'methodology_original_publication_date': '2026-03-15',
-                  'historical_source_dates_preserved': True,
+                  'methodology_owner_corrected_publication_date': '2026-03-01',
+                  'source_date_record_labels_present': True,
                   'xml_lastmod_entries': 0}))

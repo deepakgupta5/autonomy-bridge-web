@@ -8,6 +8,7 @@ import sys
 import tempfile
 
 root = Path(__file__).resolve().parents[1]
+production = "mode: 'production'" in (root / 'config/deployment-policy.mjs').read_text()
 fixture = Path(tempfile.mkdtemp(prefix='ab-step6a-negative-'))
 dist = fixture / 'dist'
 shutil.copytree(root / 'dist', dist)
@@ -36,8 +37,9 @@ cases = [
     ('conflicting canonical', 'startups.html',
      lambda s: s.replace('rel="canonical" href="https://autonomybridge.com/startups"',
                          'rel="canonical" href="https://autonomybridge.com/nonprofits"', 1)),
-    ('local noindex removed', 'index.html',
-     lambda s: s.replace('content="noindex,nofollow"', 'content="index,follow"', 1)),
+    ('indexing rule changed', 'index.html',
+     lambda s: s.replace('content="index,follow"' if production else 'content="noindex,nofollow"',
+                         'content="noindex,nofollow"' if production else 'content="index,follow"', 1)),
     ('audience blocked in robots', 'robots.txt',
      lambda s: s.replace('Allow: /\n', 'Allow: /\nDisallow: /startups\n', 1)),
     ('Research blocked in robots', 'robots.txt',

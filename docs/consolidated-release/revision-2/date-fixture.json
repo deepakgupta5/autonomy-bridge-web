@@ -1,11 +1,17 @@
 {
   "passed": true,
-  "fixture_only_date": "2000-01-02",
+  "fixture_only_dates": {
+    "site": "2026-04-01",
+    "research": "2026-03-01",
+    "terms": "2026-04-02",
+    "cookie": "2026-04-03",
+    "methodology": "2026-04-04"
+  },
   "material_routes": 86,
   "visible_schema_xml_date_parity": true,
-  "unrelated_pages_not_fresh_stamped": true,
-  "legal_date_parity": true,
-  "real_checkout_date_still_null": true,
-  "remote_pending_date_build_rejected": true,
-  "fixture_directory": "/private/tmp/ab-date-fixture-fqe6pkdg"
+  "legal_and_methodology_dates_separate": true,
+  "privacy_notice_has_no_revision_date": true,
+  "real_checkout_policy_unchanged": true,
+  "local_mode_remote_build_rejected": true,
+  "fixture_directory": "/private/tmp/ab-date-fixture-vxzs31hv"
 }

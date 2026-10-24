@@ -1,0 +1,2081 @@
+{
+  "approved_date": "2026-03-01",
+  "basis": "owner correction in this task",
+  "source_before": "bbb1a97e52510879ad5bfd83fa9f432adad03f84",
+  "research_routes": 86,
+  "methodology_routes": 1,
+  "source_files": 87,
+  "files": [
+    {
+      "route": "/case-studies",
+      "source": "src/content/caseStudies/hub.md",
+      "changes": [
+        {
+          "field": "created",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "updated",
+          "from": "2026-04-09",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "published",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "c63f922d8406fe0d7c663bbd73b6b4894577b9a31f2b2c6fb9f1d8f2b25c85f3",
+      "after_sha256": "764289dd79ae1126c28d72df3011d09b990bbe080ffe96c253991ea765a8b6d2"
+    },
+    {
+      "route": "/case-studies/ai-robotics-market-sizing-engagement",
+      "source": "src/content/caseStudies/ai-robotics-market-sizing-engagement.md",
+      "changes": [
+        {
+          "field": "created",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "updated",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "published",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "a88cc0da2aa23e2fff2e5f462d5711c9e6774e0c079805b2dfcbb5aba3874778",
+      "after_sha256": "957db69458577ca643b8c9a6306293e5c952ef3a133f12cb2f9c83c979a3dda8"
+    },
+    {
+      "route": "/case-studies/automation-deployment-risk-assessment",
+      "source": "src/content/caseStudies/automation-deployment-risk-assessment.md",
+      "changes": [
+        {
+          "field": "created",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "updated",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "published",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "8b04b6aad6d60e545acc35e02dfb22aa2ac2d2a35e5afe377a79f9af781c0071",
+      "after_sha256": "50521d9a188450b88d6c56b8a49075b178b267781b5aeb885c074574a76dcebb"
+    },
+    {
+      "route": "/case-studies/cold-storage-automation-economics-assessment",
+      "source": "src/content/caseStudies/cold-storage-automation-economics-assessment.md",
+      "changes": [
+        {
+          "field": "created",
+          "from": "2026-04-01",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "updated",
+          "from": "2026-04-01",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "published",
+          "from": "2026-04-01",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "394d3dccf0b24e31ec2fe465795da2517a7e11f5488a42812519598cb3ec6a7d",
+      "after_sha256": "ec9ad0677b829abed9948e45fef929906c138812169ac8875eb7f8c2aab0d578"
+    },
+    {
+      "route": "/case-studies/general-merchandise-3pl-premature-automation-assessment",
+      "source": "src/content/caseStudies/general-merchandise-3pl-premature-automation-assessment.md",
+      "changes": [
+        {
+          "field": "created",
+          "from": "2026-04-01",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "updated",
+          "from": "2026-04-01",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "published",
+          "from": "2026-04-01",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "f08f09f2f7448e7b2e6d2a823e17ef4986f20fcdf81928fcbf9787d99f28eab7",
+      "after_sha256": "d6b1562c181524a258a991311824c1ad1ecddaf6e0dae48b898deb6f0ce4d34e"
+    },
+    {
+      "route": "/case-studies/healthcare-automation-investor-market-sizing",
+      "source": "src/content/caseStudies/healthcare-automation-investor-market-sizing.md",
+      "changes": [
+        {
+          "field": "created",
+          "from": "2026-04-09",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "updated",
+          "from": "2026-04-09",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "published",
+          "from": "2026-04-09",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "0a1db24f8e2acc914dc6f4d68e355fa8aa65ff122829806ba82c6dbe11ff65f9",
+      "after_sha256": "d2c6aa5d82afe27adcdcb688f26674d9a75d89b408a3ec69f1d231d6f4364e4a"
+    },
+    {
+      "route": "/case-studies/icp-definition-inspection-robotics",
+      "source": "src/content/caseStudies/icp-definition-inspection-robotics.md",
+      "changes": [
+        {
+          "field": "created",
+          "from": "2026-04-09",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "updated",
+          "from": "2026-04-09",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "published",
+          "from": "2026-04-09",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "605589078be07722a164b697f0ce2101a17b79ea949fdd3e7c8f90a972b66b7a",
+      "after_sha256": "c1dab68c9423fb3d0a9f8cef4cd845243a226547aa3ba3f043963960ec680054"
+    },
+    {
+      "route": "/case-studies/off-highway-autonomy-deployment-economics",
+      "source": "src/content/caseStudies/off-highway-autonomy-deployment-economics.md",
+      "changes": [
+        {
+          "field": "created",
+          "from": "2026-04-09",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "updated",
+          "from": "2026-04-09",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "published",
+          "from": "2026-04-09",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "38ea2d6454354748aeb82d713b6069dfc4ebb063918b48559010778c523482b9",
+      "after_sha256": "0edaaf4b795bad1ab6ce980a83dfe53e9c0324085b049feb18ed10f3cd103977"
+    },
+    {
+      "route": "/case-studies/parcel-sortation-volume-sensitivity-analysis",
+      "source": "src/content/caseStudies/parcel-sortation-volume-sensitivity-analysis.md",
+      "changes": [
+        {
+          "field": "created",
+          "from": "2026-04-01",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "updated",
+          "from": "2026-04-01",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "published",
+          "from": "2026-04-01",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "791b7144b7d8d2ce04dc9de2b1e7a57c921a97e339e3a962956f50332eb0afec",
+      "after_sha256": "a2b4eb370c937cc8569bf7696e84f9a9d0f1cad6ffe1895ebaba50a0cd31fb8e"
+    },
+    {
+      "route": "/case-studies/retail-dc-peak-demand-automation-assessment",
+      "source": "src/content/caseStudies/retail-dc-peak-demand-automation-assessment.md",
+      "changes": [
+        {
+          "field": "created",
+          "from": "2026-03-30",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "updated",
+          "from": "2026-03-30",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "published",
+          "from": "2026-03-30",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "fc991b6cfcbf6c44c14f557422fa6051e444301597dc68e58421893528976799",
+      "after_sha256": "0a6509233bad75b18fd0e662663ae7a3911a85ef292172c92d55a657098e872a"
+    },
+    {
+      "route": "/case-studies/robotics-market-entry-decision-analysis",
+      "source": "src/content/caseStudies/robotics-market-entry-decision-analysis.md",
+      "changes": [
+        {
+          "field": "created",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "updated",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "published",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "37628ee4caf9a4711f92905d0e58eaae226c2f36e2951cc62ff8c0c3ab266064",
+      "after_sha256": "8f517e2bd7cd920fa33a9723dbaf88f54158be05f0fec1f37d2d665361e4ef1e"
+    },
+    {
+      "route": "/case-studies/robotics-pricing-strategy-research",
+      "source": "src/content/caseStudies/robotics-pricing-strategy-research.md",
+      "changes": [
+        {
+          "field": "created",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "updated",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "published",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "712ab0166487b67b9be5adf75798b8f56159ea6d027122faaa378c3a430682bf",
+      "after_sha256": "a42865e57452c5ceea09330786d714fd125a0aeb76460890d92b197c993b887b"
+    },
+    {
+      "route": "/case-studies/service-robotics-commercial-viability-assessment",
+      "source": "src/content/caseStudies/service-robotics-commercial-viability-assessment.md",
+      "changes": [
+        {
+          "field": "created",
+          "from": "2026-04-09",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "updated",
+          "from": "2026-04-09",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "published",
+          "from": "2026-04-09",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "3fff7e3f48a1d3506ed91ce516c3558c56a4d734df9c2a386b6fe5209b5bf749",
+      "after_sha256": "e40e690ed8b0875d7c5a7f23cd8dca03e7a6695cad751c7a85f11f1ad9629487"
+    },
+    {
+      "route": "/frameworks",
+      "source": "src/content/frameworks/hub.md",
+      "changes": [
+        {
+          "field": "created",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "updated",
+          "from": "2026-04-09",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "published",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "4a14411514231c56bd098706bc8e3f6d0dd5920fe061c8837b9555c9753a9e65",
+      "after_sha256": "09720312a245d229269f4ac918219d309a7309ece58c6111f528f0eeb2f4dcd6"
+    },
+    {
+      "route": "/frameworks/automation-failure-framework",
+      "source": "src/content/frameworks/automation-failure-framework.md",
+      "changes": [
+        {
+          "field": "created",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "updated",
+          "from": "2026-04-11",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "published",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "visible Created",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "visible Updated",
+          "from": "2026-04-11",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "96b53faf6fd48572f96dd0b77809c4be21d1342cca64f526ebec2ee83b3ac372",
+      "after_sha256": "fcb55fd3fbc55c3d9f744abbac124150a1f21a7c463e871cb94793a138b073c2"
+    },
+    {
+      "route": "/frameworks/pilot-to-scale-failure-framework",
+      "source": "src/content/frameworks/pilot-to-scale-failure-framework.md",
+      "changes": [
+        {
+          "field": "created",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "updated",
+          "from": "2026-04-11",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "published",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "visible Created",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "visible Updated",
+          "from": "2026-04-11",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "831432f150f2b2b7ee797c87d41fe3132d3b451370b277eb51fe73075d0992a9",
+      "after_sha256": "201a655d727ef80a44afd8063d315a6fdfd021f35872aca5f7b82172ef01a02d"
+    },
+    {
+      "route": "/frameworks/robotics-roi-model",
+      "source": "src/content/frameworks/robotics-roi-model.md",
+      "changes": [
+        {
+          "field": "created",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "updated",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "published",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "visible Created",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "visible Updated",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "591a0ebfc1a988aab57e21d534194d2cb5f361f5310326cb7ca7d1192b3e9caf",
+      "after_sha256": "33628625cd5e45827fcdf4d99e3d716f684a4b7c0819668f5cff308659f3272f"
+    },
+    {
+      "route": "/frameworks/vendor-economics-framework",
+      "source": "src/content/frameworks/vendor-economics-framework.md",
+      "changes": [
+        {
+          "field": "created",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "updated",
+          "from": "2026-04-11",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "published",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "visible Created",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "visible Updated",
+          "from": "2026-04-11",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "6c6770bee5fbc46969f6ec8ef2bf5464c948365d64ebe35d9352243e128b7818",
+      "after_sha256": "2777318953eccedb1bd1eab22747d8838c172bdee11680be447ea09a8f9ee153"
+    },
+    {
+      "route": "/frameworks/warehouse-automation-decision-framework",
+      "source": "src/content/frameworks/warehouse-automation-decision-framework.md",
+      "changes": [
+        {
+          "field": "created",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "updated",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "published",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "visible Created",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "visible Updated",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "f75833aa592e62b1e97f00e435794956cc84bf50c27cb87babcf104222923d9f",
+      "after_sha256": "f9b4f761a61815ad4336b763e647589ec36715617180b887ce1e318808fbaacb"
+    },
+    {
+      "route": "/frameworks/workflow-architecture-framework",
+      "source": "src/content/frameworks/workflow-architecture-framework.md",
+      "changes": [
+        {
+          "field": "created",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "updated",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "published",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "visible Created",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "visible Updated",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "9336d1a98067d79e0608fe1c7cc05703b655281da57ce37e90fef16f806b00ff",
+      "after_sha256": "4039462ec6fa0c15c71d58d618671c004471760a3dd019cc716b20e192aee9e1"
+    },
+    {
+      "route": "/glossary",
+      "source": "src/content/glossary/hub.md",
+      "changes": [
+        {
+          "field": "created",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "updated",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "published",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "521cfa44ce3d97e316a99e6557c08defe0467d913efb078be1767349c813cac1",
+      "after_sha256": "e587934e6c331be0f96539be4bc879025b0d3912ee170f5bdadc49bac89e8b10"
+    },
+    {
+      "route": "/glossary/automated-storage-retrieval-system",
+      "source": "src/content/glossary/automated-storage-retrieval-system.md",
+      "changes": [
+        {
+          "field": "datePublished",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "dateModified",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "47b721afbb4ddd5628992a135817d2badad6394583dc25b1d6b4c4b28f5f9f78",
+      "after_sha256": "4a32de820ca57d75aeba126629887c864e97f607f203c51e5368c3c4cb2b37e5"
+    },
+    {
+      "route": "/glossary/automation-go-no-go",
+      "source": "src/content/glossary/automation-go-no-go.md",
+      "changes": [
+        {
+          "field": "datePublished",
+          "from": "2026-03-30",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "dateModified",
+          "from": "2026-03-30",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "30f2f0caa5552f20ad3b5f3cb25ed3dbf48cdf84a254fc590d6406a2a28fb46a",
+      "after_sha256": "6f3726820085a4d9d941b5b4957be6a1d8abf6306a9f88b644a621219018d6da"
+    },
+    {
+      "route": "/glossary/automation-operating-cost",
+      "source": "src/content/glossary/automation-operating-cost.md",
+      "changes": [
+        {
+          "field": "datePublished",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "dateModified",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "a1c0a6bc3529a65b1b232a1c9edefa216474ee8c290486bb862cd951f190560f",
+      "after_sha256": "1f31890310da3e4dcf8fe5428ac45599d92e06dc91d388388d72704c71e5be89"
+    },
+    {
+      "route": "/glossary/automation-readiness",
+      "source": "src/content/glossary/automation-readiness.md",
+      "changes": [
+        {
+          "field": "datePublished",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "dateModified",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "9adb7e6a78b90c6d2821bcd97947b8309552efbaa312f7decd422c348966dc92",
+      "after_sha256": "486fb9420cd6083a7659c9c5e53cdd090e72e4bcae60e43679194e481aa08f05"
+    },
+    {
+      "route": "/glossary/autonomous-case-handling",
+      "source": "src/content/glossary/autonomous-case-handling.md",
+      "changes": [
+        {
+          "field": "datePublished",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "dateModified",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "48e142f3cb6a2975d747b4ebe4f7e1c9ed94779302a85cf8488d4117253f7fe7",
+      "after_sha256": "cf5e70c7eb0703b548573f8cc36facdb498b20b1a0ea144bb3609c0339019d5f"
+    },
+    {
+      "route": "/glossary/autonomous-mobile-robot",
+      "source": "src/content/glossary/autonomous-mobile-robot.md",
+      "changes": [
+        {
+          "field": "datePublished",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "dateModified",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "23182028c8c8f4f58489d3e4f7010785bc97fbe9985e87ff3bc92fe215c28879",
+      "after_sha256": "08aa9dad9f9ac5512a1f2ee5a4f269f5e1224a6d5d8aa505d091223f9968d90b"
+    },
+    {
+      "route": "/glossary/capital-recovery-period",
+      "source": "src/content/glossary/capital-recovery-period.md",
+      "changes": [
+        {
+          "field": "datePublished",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "dateModified",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "f50b180dfc2aa5473f103c33a675ccc5db000a5c0a06d7ecf04f2ee7198b6f27",
+      "after_sha256": "98bb338e4fb9d3756b811b5b31b5ede3f1a2c871cdd4ad10686d9bf221e1fb92"
+    },
+    {
+      "route": "/glossary/case-level-picking-economics",
+      "source": "src/content/glossary/case-level-picking-economics.md",
+      "changes": [
+        {
+          "field": "datePublished",
+          "from": "2026-03-30",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "dateModified",
+          "from": "2026-03-30",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "c4d0da18787335dd8f7402382c7d92236d33295c00e360719de213c53c2fc90a",
+      "after_sha256": "3270b7dd14666d773da494e2dc9fff30f71af04106c009e6d67ac5a13cc961e7"
+    },
+    {
+      "route": "/glossary/cold-environment-labor-premium",
+      "source": "src/content/glossary/cold-environment-labor-premium.md",
+      "changes": [
+        {
+          "field": "datePublished",
+          "from": "2026-04-01",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "dateModified",
+          "from": "2026-04-01",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "5bf75d6e22f5751663056010b0056bf36f4dd6aa4daaea94b6ff8eb621beb047",
+      "after_sha256": "40f51a2ca00d7c53d1ef99dac8d617682755a837d23b5daee19c1cd48c8fce8b"
+    },
+    {
+      "route": "/glossary/cold-rated-system-premium",
+      "source": "src/content/glossary/cold-rated-system-premium.md",
+      "changes": [
+        {
+          "field": "datePublished",
+          "from": "2026-03-30",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "dateModified",
+          "from": "2026-03-30",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "8eb8c26a275890c3c01cb93a98d0cb8def17879db620718787f9ba0d31f36243",
+      "after_sha256": "e2161e6a5c7fb4ded2ae5db7fd3b30c36a87f4f689120195315f3f27d9d69440"
+    },
+    {
+      "route": "/glossary/cold-storage-maintenance-burden",
+      "source": "src/content/glossary/cold-storage-maintenance-burden.md",
+      "changes": [
+        {
+          "field": "datePublished",
+          "from": "2026-04-01",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "dateModified",
+          "from": "2026-04-01",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "f41768373cf137344beb88296c494c7096aace4eb828173290c814dcb289573e",
+      "after_sha256": "768554b687b90367e3daa264486d333091893a70de1c2e51fb8519ff797fcfd7"
+    },
+    {
+      "route": "/glossary/customer-concentration-risk",
+      "source": "src/content/glossary/customer-concentration-risk.md",
+      "changes": [
+        {
+          "field": "datePublished",
+          "from": "2026-03-30",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "dateModified",
+          "from": "2026-03-30",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "f183f5d34074fd34b9b6b5fe0d44c55aaeb28397ac0ec92853fd3f4e508e1ffd",
+      "after_sha256": "b2a72199c2a1e10f4023622616666fa43f7e2b5423ca1ba95fff367d151e7f95"
+    },
+    {
+      "route": "/glossary/goods-to-person-system",
+      "source": "src/content/glossary/goods-to-person-system.md",
+      "changes": [
+        {
+          "field": "datePublished",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "dateModified",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "2684e5df8a276b4fc73213b2db4e9f81165587bda6787a645d7bfe30f758c33f",
+      "after_sha256": "187aa6cc1a0fa9b8c756ebc2e55d72d65ad2aa1532992c4d89991cc068882c1d"
+    },
+    {
+      "route": "/glossary/idle-capital-cost",
+      "source": "src/content/glossary/idle-capital-cost.md",
+      "changes": [
+        {
+          "field": "datePublished",
+          "from": "2026-03-30",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "dateModified",
+          "from": "2026-03-30",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "3725e9a8b54931a0afe1de94a78974aba36b16462e77e3366159622c6f725d5b",
+      "after_sha256": "253cfd55cf9991210f8ee5aefe6128eddfed772b5e2bfa6cffb594a6abcd564a"
+    },
+    {
+      "route": "/glossary/integration-cost",
+      "source": "src/content/glossary/integration-cost.md",
+      "changes": [
+        {
+          "field": "datePublished",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "dateModified",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "61b2599779c9db079d5477f1b388ece709993f3d49d75b1c3684efea83c5ad49",
+      "after_sha256": "947cc45fd0d173ef65fbb6a52a3b52c3babf09a5a28e33cd936a5dedc2e034ad"
+    },
+    {
+      "route": "/glossary/labor-displacement-rate",
+      "source": "src/content/glossary/labor-displacement-rate.md",
+      "changes": [
+        {
+          "field": "datePublished",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "dateModified",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "a9f4168cdb61f37c255af52e73b7e0b8fa00941253bfa652d28920c067878820",
+      "after_sha256": "3b1809f91db4195a3a6c562b9102ad60bf014752504ce0ed390fe53d9a8e000c"
+    },
+    {
+      "route": "/glossary/labor-intensity-threshold",
+      "source": "src/content/glossary/labor-intensity-threshold.md",
+      "changes": [
+        {
+          "field": "datePublished",
+          "from": "2026-03-30",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "dateModified",
+          "from": "2026-03-30",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "ceaf0a665b0af891fcd0c50e2589082342ba62193a088f1ee78e2fc2b6fa7b50",
+      "after_sha256": "47f6cb5c2c91e04131c2c16b56893dab3a85b9d4b16cfee86776680c62c02f52"
+    },
+    {
+      "route": "/glossary/labor-turnover-rate",
+      "source": "src/content/glossary/labor-turnover-rate.md",
+      "changes": [
+        {
+          "field": "datePublished",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "dateModified",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "b309fa9b6225723eceb9a5302b846de7bfe504570b77cb905f29549a4edc8c0d",
+      "after_sha256": "b406ea8d7956203a936973ace4f9e91ed065575fbcb344c0eaa198406ce9de72"
+    },
+    {
+      "route": "/glossary/peak-labor-cost-avoidance",
+      "source": "src/content/glossary/peak-labor-cost-avoidance.md",
+      "changes": [
+        {
+          "field": "datePublished",
+          "from": "2026-03-30",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "dateModified",
+          "from": "2026-03-30",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "5a84f66a028a19136f8b482de8486deac950bd61256f4d3e932af7fed1cb79b0",
+      "after_sha256": "1d8d8cf98888c8b68564a528abab5c402d0bf3d05e72f0d6db1817888bc27c60"
+    },
+    {
+      "route": "/glossary/peak-to-average-ratio",
+      "source": "src/content/glossary/peak-to-average-ratio.md",
+      "changes": [
+        {
+          "field": "datePublished",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "dateModified",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "dc6e4ad61a2647b073c20d00f1e0ebc4001f33e9ac7ff8971faa1f00337ff7f3",
+      "after_sha256": "b3d9a7fb58d3e17ec71dc9f09bffb1327ceb2b87af51efca5d6db6eed1f709e5"
+    },
+    {
+      "route": "/glossary/premature-automation",
+      "source": "src/content/glossary/premature-automation.md",
+      "changes": [
+        {
+          "field": "datePublished",
+          "from": "2026-04-01",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "dateModified",
+          "from": "2026-04-01",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "34f2e332adc1957eaa26453d0aaeafc1a64f7421134273e485797cd7ef1844d6",
+      "after_sha256": "12153ca4f5f9dadb2453283a9540e07d15682c9dd8ee58b1a94f0f2a97c9c942"
+    },
+    {
+      "route": "/glossary/robotics-as-a-service",
+      "source": "src/content/glossary/robotics-as-a-service.md",
+      "changes": [
+        {
+          "field": "datePublished",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "dateModified",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "ba11a3aa815315664844a584ab98830e1a09ae4d14ef0ee9ee1df3ed83f024aa",
+      "after_sha256": "236d6e21f9db4d350bb894bdb947a2093cd100a2cc2702a9172d6a7159fbf079"
+    },
+    {
+      "route": "/glossary/sku-velocity",
+      "source": "src/content/glossary/sku-velocity.md",
+      "changes": [
+        {
+          "field": "datePublished",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "dateModified",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "bbc1cca1fd7894f50aa37b6ab792691dc190cab0291af9ba4dc09d65f05d7f1d",
+      "after_sha256": "f292525487818df4d21357be03b7b30b174b4250b50037f1fce2729e96151dcb"
+    },
+    {
+      "route": "/glossary/sortation-technology-fork",
+      "source": "src/content/glossary/sortation-technology-fork.md",
+      "changes": [
+        {
+          "field": "datePublished",
+          "from": "2026-04-01",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "dateModified",
+          "from": "2026-04-01",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "99f14c78b1b8c5153155ba6333f5780fe24033662f372edd9aa801ba0b9fa926",
+      "after_sha256": "f885c6512d6a6f18efa045e71ce2d033aee606cd8b8c0a3d8dd145d65cf53562"
+    },
+    {
+      "route": "/glossary/sortation-volume-floor",
+      "source": "src/content/glossary/sortation-volume-floor.md",
+      "changes": [
+        {
+          "field": "datePublished",
+          "from": "2026-03-30",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "dateModified",
+          "from": "2026-03-30",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "9fbffec88ae61b710132508c0024ef08357964434aca921ab8d308a9c24eeefe",
+      "after_sha256": "a503a97cdc90a2631fc66738fc61d5c1121cb8db852704a5cf985cd2e0deec73"
+    },
+    {
+      "route": "/glossary/system-uptime",
+      "source": "src/content/glossary/system-uptime.md",
+      "changes": [
+        {
+          "field": "datePublished",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "dateModified",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "693e5415b7decd0773ece1a31d16a477a58fcfab91637f6b8ee8b30d9fcf92e9",
+      "after_sha256": "f18d53b2739cf439070e48b6f4f27414d9337c33fbfa0b0df94ce27871d2720c"
+    },
+    {
+      "route": "/glossary/third-party-logistics",
+      "source": "src/content/glossary/third-party-logistics.md",
+      "changes": [
+        {
+          "field": "datePublished",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "dateModified",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "9c6d900110f6a7204b767ed1c4ff5c1c9d5c94a7c9657a6283e8f6841074059f",
+      "after_sha256": "6ecf033403862e196d82eb6415605eda6cdff6c2e0d431b14447e1f37a6bf991"
+    },
+    {
+      "route": "/glossary/throughput-modeling",
+      "source": "src/content/glossary/throughput-modeling.md",
+      "changes": [
+        {
+          "field": "datePublished",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "dateModified",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "c4c9a1e6506e2b0369c8fcc08503e252a59faa25e1066ef6964fc21d2cf4a066",
+      "after_sha256": "bf9a215c67951981fddad293af76c9bc960986aa3d4a3f594cdaaae9879bca6e"
+    },
+    {
+      "route": "/insights",
+      "source": "src/content/insights/hub.md",
+      "changes": [
+        {
+          "field": "created",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "updated",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "published",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "397b5a64f915ea0b0f971925789b674cffde737ad06fa8df8d00ddcbc2cea193",
+      "after_sha256": "fa96ea7d99f118e1d54fba6a3ff10bccabaca80c778c41d8717d51bc0ec64ca1"
+    },
+    {
+      "route": "/insights/how-aerial-robotics-vendors-are-pricing-into-inspection-markets",
+      "source": "src/content/insights/how-aerial-robotics-vendors-are-pricing-into-inspection-markets.md",
+      "changes": [
+        {
+          "field": "created",
+          "from": "2026-04-09",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "updated",
+          "from": "2026-04-09",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "published",
+          "from": "2026-04-09",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "visible Created",
+          "from": "2026-04-09",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "visible Updated",
+          "from": "2026-04-09",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "66073c9116b9d9cb7122e969f72e74f9cae002eaef6292e873c417d28816f029",
+      "after_sha256": "78e6625d44cf7566c8d80468886757cc212127d70165a1921745cce9d3494da7"
+    },
+    {
+      "route": "/insights/how-investors-should-size-robotics-markets",
+      "source": "src/content/insights/how-investors-should-size-robotics-markets.md",
+      "changes": [
+        {
+          "field": "created",
+          "from": "2026-04-09",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "updated",
+          "from": "2026-04-09",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "published",
+          "from": "2026-04-09",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "visible Created",
+          "from": "2026-04-09",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "visible Updated",
+          "from": "2026-04-09",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "cf25cf1d9171c08e3d22c05a69eb7e6031458c45c2ca6f11b1963d96943b4187",
+      "after_sha256": "b2cee78ac701fdf2c259e9bcb01874de2f6f5e877583cfdc9e05fb6226f232b3"
+    },
+    {
+      "route": "/insights/how-retail-distribution-center-automation-economics-actually-work",
+      "source": "src/content/insights/how-retail-distribution-center-automation-economics-actually-work.md",
+      "changes": [
+        {
+          "field": "created",
+          "from": "2026-03-30",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "updated",
+          "from": "2026-03-30",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "published",
+          "from": "2026-03-30",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "486d5a9c510e8b5c0455a2bf1757a3c088fccb0a39f5b655470997357a6baf3a",
+      "after_sha256": "63735f05fc28a2679ad77c953ec8c6f5a6c45e9bb70bca875b7cc37c08f029e6"
+    },
+    {
+      "route": "/insights/how-robotics-pricing-models-determine-commercial-viability",
+      "source": "src/content/insights/how-robotics-pricing-models-determine-commercial-viability.md",
+      "changes": [
+        {
+          "field": "created",
+          "from": "2026-04-11",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "updated",
+          "from": "2026-04-11",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "published",
+          "from": "2026-04-11",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "01740cf037943993b09ba393eac31167224bad3996a27212a83e98880dc65c8d",
+      "after_sha256": "9c19bb2b61bb7b5a296d60192d05cb6db58bc2c8ae2c982199ec1e5269ee8a3c"
+    },
+    {
+      "route": "/insights/how-robotics-vendors-misjudge-their-addressable-market",
+      "source": "src/content/insights/how-robotics-vendors-misjudge-their-addressable-market.md",
+      "changes": [
+        {
+          "field": "created",
+          "from": "2026-04-09",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "updated",
+          "from": "2026-04-09",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "published",
+          "from": "2026-04-09",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "visible Created",
+          "from": "2026-04-09",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "visible Updated",
+          "from": "2026-04-09",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "48d601c220ba4f42e6960021c7928ec0bf052796c771bfd19e94c98824274858",
+      "after_sha256": "48dfe7351168b3cfef2a6429ea57aff90a3149baf357d10a7181c0b254b76bf3"
+    },
+    {
+      "route": "/insights/how-underwater-robotics-startups-can-break-incumbent-lock-in",
+      "source": "src/content/insights/how-underwater-robotics-startups-can-break-incumbent-lock-in.md",
+      "changes": [
+        {
+          "field": "created",
+          "from": "2026-04-11",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "updated",
+          "from": "2026-04-11",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "published",
+          "from": "2026-04-11",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "1d62fbff816a69459831f8c37187f8f85a47c089a27678485e443fca9e958e7f",
+      "after_sha256": "aa964ed027b4328dcf7d6192e11494241cbd552653afc0754870c54145f0ce09"
+    },
+    {
+      "route": "/insights/how-warehouse-operators-evaluate-robotics-vendors",
+      "source": "src/content/insights/how-warehouse-operators-evaluate-robotics-vendors.md",
+      "changes": [
+        {
+          "field": "created",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "updated",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "published",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "visible Created",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "visible Updated",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "13f081e545f0b297f4fe1cbca2a721833d0651422875b08a2206745d3cfa52fa",
+      "after_sha256": "d4715647cddc9223f7c3cea0a1730b8fbec85890deab2ef254a3d5ca2db21559"
+    },
+    {
+      "route": "/insights/how-warehouse-robotics-economics-actually-works",
+      "source": "src/content/insights/how-warehouse-robotics-economics-actually-works.md",
+      "changes": [
+        {
+          "field": "created",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "updated",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "published",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "visible Created",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "visible Updated",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "02d27593a9f86a44173549f0117ded6419bb46872c53d0ae1b867264fc5d1114",
+      "after_sha256": "7f7a99acf053e3205c7a487bc3ddd329f665d0f1540f966e286f7085582bff3e"
+    },
+    {
+      "route": "/insights/how-warehouse-workflows-determine-automation-success",
+      "source": "src/content/insights/how-warehouse-workflows-determine-automation-success.md",
+      "changes": [
+        {
+          "field": "created",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "updated",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "published",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "visible Created",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "visible Updated",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "35354cf96bc1bdfe821eeec27f00ad80f680673a7d32153628cf533ffe52d642",
+      "after_sha256": "3e66656c009502f2e4c115b9ea6dcb9070518242e2c7cb27a7eb8843df12b301"
+    },
+    {
+      "route": "/insights/what-autonomous-vehicle-companies-get-wrong-about-freight-sales",
+      "source": "src/content/insights/what-autonomous-vehicle-companies-get-wrong-about-freight-sales.md",
+      "changes": [
+        {
+          "field": "created",
+          "from": "2026-04-11",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "updated",
+          "from": "2026-04-11",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "published",
+          "from": "2026-04-11",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "91e7f00990634793feea0e7b9695fffa374a212eeff0483656f6eb14446b735c",
+      "after_sha256": "32b9545bdac54e499f719b6135e015befd9f3adc350a5f7480111a9346ee01d4"
+    },
+    {
+      "route": "/insights/what-warehouse-automation-vendors-need-to-know-about-how-buyers-decide",
+      "source": "src/content/insights/what-warehouse-automation-vendors-need-to-know-about-how-buyers-decide.md",
+      "changes": [
+        {
+          "field": "created",
+          "from": "2026-04-11",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "updated",
+          "from": "2026-04-11",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "published",
+          "from": "2026-04-11",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "1e040c54d4f7a490fd9e0da365ee3b837877ddfe7cfc6cc3fdcfb2ef75a1e3b6",
+      "after_sha256": "bed1a78906a1877a1ebdf7cf4de27942c2b0735cf522fbe52f2ddfefb7e0258f"
+    },
+    {
+      "route": "/insights/why-63-exoskeleton-companies-cant-break-through-distribution",
+      "source": "src/content/insights/why-63-exoskeleton-companies-cant-break-through-distribution.md",
+      "changes": [
+        {
+          "field": "created",
+          "from": "2026-04-11",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "updated",
+          "from": "2026-04-11",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "published",
+          "from": "2026-04-11",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "a2aed70f05d4e3409076777220afa08510607398f014c7062098ab29330ba297",
+      "after_sha256": "9c637e326ce1262a7f13f47b331b08727876ddbdcfb6ef12b0dac6c50a5210ba"
+    },
+    {
+      "route": "/insights/why-cold-storage-automation-economics-are-structurally-different",
+      "source": "src/content/insights/why-cold-storage-automation-economics-are-structurally-different.md",
+      "changes": [
+        {
+          "field": "created",
+          "from": "2026-04-01",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "updated",
+          "from": "2026-04-01",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "published",
+          "from": "2026-04-01",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "visible Created",
+          "from": "2026-04-01",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "visible Updated",
+          "from": "2026-04-01",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "5fbe0378f0cff273e2a6448703b72248244cbd8be796cea9527de1bcd9763382",
+      "after_sha256": "634d6d951b9c6bf18aba2ca1bde8651a6e196cdab4ddb4055304a66b94607376"
+    },
+    {
+      "route": "/insights/why-commercial-viability-and-technical-readiness-are-not-the-same-thing",
+      "source": "src/content/insights/why-commercial-viability-and-technical-readiness-are-not-the-same-thing.md",
+      "changes": [
+        {
+          "field": "created",
+          "from": "2026-04-09",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "updated",
+          "from": "2026-04-09",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "published",
+          "from": "2026-04-09",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "visible Created",
+          "from": "2026-04-09",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "visible Updated",
+          "from": "2026-04-09",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "9db55aba6c104500baf59981f075493c5972d0ceca256cc54a443c4332a94f70",
+      "after_sha256": "1e824b885105dbd0293a3c1d67303d6a89b7a82c653f4f53712317263949d66e"
+    },
+    {
+      "route": "/insights/why-direct-only-channel-doesnt-scale-in-robotics",
+      "source": "src/content/insights/why-direct-only-channel-doesnt-scale-in-robotics.md",
+      "changes": [
+        {
+          "field": "created",
+          "from": "2026-04-11",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "updated",
+          "from": "2026-04-11",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "published",
+          "from": "2026-04-11",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "242ffeb20409e1e12d441ebbf99b001a0fe3eb96cb88e96895c663260434925d",
+      "after_sha256": "05f2d254e7efbcd0d54e2edef736b6ac060f5f76210093b2e45e5d692805f5bc"
+    },
+    {
+      "route": "/insights/why-general-merchandise-3pls-should-not-automate-too-early",
+      "source": "src/content/insights/why-general-merchandise-3pls-should-not-automate-too-early.md",
+      "changes": [
+        {
+          "field": "created",
+          "from": "2026-04-01",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "updated",
+          "from": "2026-04-01",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "published",
+          "from": "2026-04-01",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "visible Created",
+          "from": "2026-04-01",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "visible Updated",
+          "from": "2026-04-01",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "d0883b2f61b93b46c059c148ca63bca14a1a1e02ab08bb1bf8fd1943382ae122",
+      "after_sha256": "0c2e95e7723e6b6eaa9cbc841a589c70ad38b730fe41a3876e7a56f2ae2adb51"
+    },
+    {
+      "route": "/insights/why-healthcare-robotics-deployments-follow-a-different-economic-logic",
+      "source": "src/content/insights/why-healthcare-robotics-deployments-follow-a-different-economic-logic.md",
+      "changes": [
+        {
+          "field": "created",
+          "from": "2026-04-09",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "updated",
+          "from": "2026-04-09",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "published",
+          "from": "2026-04-09",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "visible Created",
+          "from": "2026-04-09",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "visible Updated",
+          "from": "2026-04-09",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "dee9c53e77919b563e30445567240501d466f51421d2ff3cb08b4621a1c7b94f",
+      "after_sha256": "40bed45e550d9ae5d134b85a5c8238a22d3f18e7360e72bb2e04b0ade24f69e2"
+    },
+    {
+      "route": "/insights/why-maritime-autonomy-revenue-is-not-what-it-appears",
+      "source": "src/content/insights/why-maritime-autonomy-revenue-is-not-what-it-appears.md",
+      "changes": [
+        {
+          "field": "created",
+          "from": "2026-04-11",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "updated",
+          "from": "2026-04-11",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "published",
+          "from": "2026-04-11",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "5baf208e7dbe6a4eb740a652e641c385f7a01dd3a0b9ceaf13490506598c7b02",
+      "after_sha256": "47747571c9841aa48aeb499806e889110d52636486d9fcf85aece8ecdb1d1b44"
+    },
+    {
+      "route": "/insights/why-mid-market-operators-struggle-to-evaluate-warehouse-robotics",
+      "source": "src/content/insights/why-mid-market-operators-struggle-to-evaluate-warehouse-robotics.md",
+      "changes": [
+        {
+          "field": "created",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "updated",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "published",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "visible Created",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "visible Updated",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "eb459b8b1fd7a33a735f788a066f347af9d99bfc4c5b2a2a9fd05ab6475aa582",
+      "after_sha256": "a21cb7ba7ab00ec0773b512860265826273338926c2e19fd89ba85df0b5a3f66"
+    },
+    {
+      "route": "/insights/why-parcel-sortation-automation-breaks-at-low-volume",
+      "source": "src/content/insights/why-parcel-sortation-automation-breaks-at-low-volume.md",
+      "changes": [
+        {
+          "field": "created",
+          "from": "2026-04-01",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "updated",
+          "from": "2026-04-01",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "published",
+          "from": "2026-04-01",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "visible Created",
+          "from": "2026-04-01",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "visible Updated",
+          "from": "2026-04-01",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "63d85c8f4c223def35a1d7f48cf035ba51f79b4968aff012b7392b9d26911c31",
+      "after_sha256": "d2f6405b49b3dfdb291d5c4a5cd6e08233925f450b9ba27a408cc4b34ca72362"
+    },
+    {
+      "route": "/insights/why-robotics-enterprise-deals-stall",
+      "source": "src/content/insights/why-robotics-enterprise-deals-stall.md",
+      "changes": [
+        {
+          "field": "created",
+          "from": "2026-04-11",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "updated",
+          "from": "2026-04-11",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "published",
+          "from": "2026-04-11",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "f4a9c854ea85383a18bd40c8c3bbef38b69a2482868016d1944125d4f907ed1f",
+      "after_sha256": "58a9de540a227d5ab994dd58259c98f15b02fe9711ef675c783180b4569505ab"
+    },
+    {
+      "route": "/insights/why-robotics-pilots-fail-to-convert-to-commercial-contracts",
+      "source": "src/content/insights/why-robotics-pilots-fail-to-convert-to-commercial-contracts.md",
+      "changes": [
+        {
+          "field": "created",
+          "from": "2026-04-09",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "updated",
+          "from": "2026-04-09",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "published",
+          "from": "2026-04-09",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "visible Created",
+          "from": "2026-04-09",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "visible Updated",
+          "from": "2026-04-09",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "4e3e8b04e11372409c64f25b898bf96f3150a83859b45b5a999f745cad6f36df",
+      "after_sha256": "9ca46378de68d9be3f1e657301ef6f2cba074abe1e0a5bba8c2f99a6a6abedf0"
+    },
+    {
+      "route": "/insights/why-robotics-pilots-fail-to-scale",
+      "source": "src/content/insights/why-robotics-pilots-fail-to-scale.md",
+      "changes": [
+        {
+          "field": "created",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "updated",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "published",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "visible Created",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "visible Updated",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "f9cd96211f327dc663c5f3c65cfc594247a2dc0fc9cb7bf73ebd5f748fd08b08",
+      "after_sha256": "7862160073f3b3307e81ca3df24c3557a02180a9957bd82418821e2ddd01acf2"
+    },
+    {
+      "route": "/insights/why-warehouse-automation-projects-fail",
+      "source": "src/content/insights/why-warehouse-automation-projects-fail.md",
+      "changes": [
+        {
+          "field": "created",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "updated",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "published",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "visible Created",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "visible Updated",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "e765fa61541921d8dd9e8b82021270f9b43dd9c1df1fa2ab47ab06af4b4897e7",
+      "after_sha256": "eed24b07c5a18028730681336d1616b76f1b63e3fc2a693665cff62092254bcd"
+    },
+    {
+      "route": "/use-cases",
+      "source": "src/content/useCases/hub.md",
+      "changes": [
+        {
+          "field": "created",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "updated",
+          "from": "2026-04-09",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "published",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "555d42f45a3867fa5588f9295664c179d7d89ea9310a0eeecd0049f90cbe0364",
+      "after_sha256": "7fe6bac4d714ea366df1989efc4db8cd7661b596ff22c83c23d73299642f17ba"
+    },
+    {
+      "route": "/use-cases/aerial-robotics-commercial-viability-evaluation",
+      "source": "src/content/useCases/aerial-robotics-commercial-viability-evaluation.md",
+      "changes": [
+        {
+          "field": "created",
+          "from": "2026-04-09",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "updated",
+          "from": "2026-04-09",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "published",
+          "from": "2026-04-09",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "5d41b54c0cf5c16b5aaf3f6e7d393cbac1a98060de0c6e81660908b57dced8e6",
+      "after_sha256": "15711e1c9aa5537e576fe2ac90208bebbe8670de8c9b5b796ba3c25500ddf3ee"
+    },
+    {
+      "route": "/use-cases/amr-deployment-evaluation",
+      "source": "src/content/useCases/amr-deployment-evaluation.md",
+      "changes": [
+        {
+          "field": "created",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "updated",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "published",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "3032a22cf3d877d32c6ce78a0d48b873a3b46ec41e201ab8bbf8e2d9b6e4174e",
+      "after_sha256": "255e787eef063132e9903d08923351c18beb09ff8641c633105f543580972c5a"
+    },
+    {
+      "route": "/use-cases/cold-storage-automation-evaluation",
+      "source": "src/content/useCases/cold-storage-automation-evaluation.md",
+      "changes": [
+        {
+          "field": "created",
+          "from": "2026-04-01",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "updated",
+          "from": "2026-04-01",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "published",
+          "from": "2026-04-01",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "cc86591a7d66cadaa808cbff5150be2e12aed1daf9e7c2f066c663cd3d8d10f8",
+      "after_sha256": "917604b5b0aa58e1adae3e070a6db1b8bfb0cbf825ef16a81d8f5c8758d495c3"
+    },
+    {
+      "route": "/use-cases/general-merchandise-3pl-automation-evaluation",
+      "source": "src/content/useCases/general-merchandise-3pl-automation-evaluation.md",
+      "changes": [
+        {
+          "field": "created",
+          "from": "2026-04-01",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "updated",
+          "from": "2026-04-01",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "published",
+          "from": "2026-04-01",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "4abe5ac79f12babd4024bed4b29c272945538f2a56e455dbe4ac3fd6f364f1ff",
+      "after_sha256": "97b36b430e9073bb7c9ae3cf7e0a775469c4f2373a11fbf672db6b5448585923"
+    },
+    {
+      "route": "/use-cases/goods-to-person-system-evaluation",
+      "source": "src/content/useCases/goods-to-person-system-evaluation.md",
+      "changes": [
+        {
+          "field": "created",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "updated",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "published",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "b196347e408ee3c8707d06a76c62a9db2b4ba822bd3b9fe1da9eba30e554846a",
+      "after_sha256": "1b40046b69c74faae15a0a5dd385b49f7e572e527805ddb97534777907c7b212"
+    },
+    {
+      "route": "/use-cases/humanoid-platform-commercial-readiness",
+      "source": "src/content/useCases/humanoid-platform-commercial-readiness.md",
+      "changes": [
+        {
+          "field": "created",
+          "from": "2026-04-09",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "updated",
+          "from": "2026-04-09",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "published",
+          "from": "2026-04-09",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "9d0ba3de5ef5820a6e65d129c42ccc35c7da277b2b251786565710d00625ed46",
+      "after_sha256": "3f54d26ab9f62beabc450b23c4700fa9ae6c7fc3488235fdf3ce8bedd6c74baa"
+    },
+    {
+      "route": "/use-cases/parcel-sortation-automation-evaluation",
+      "source": "src/content/useCases/parcel-sortation-automation-evaluation.md",
+      "changes": [
+        {
+          "field": "created",
+          "from": "2026-04-01",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "updated",
+          "from": "2026-04-01",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "published",
+          "from": "2026-04-01",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "d100c475d0e8078dfaa8ab32d324c9020696e059a7656f3bdfe372ce1f7ac4ea",
+      "after_sha256": "55d2e4433da1c63d70dc5c242e5674fc6f1d05062aacae0c02ae431f66c905a2"
+    },
+    {
+      "route": "/use-cases/retail-dc-automation-evaluation",
+      "source": "src/content/useCases/retail-dc-automation-evaluation.md",
+      "changes": [
+        {
+          "field": "created",
+          "from": "2026-03-30",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "updated",
+          "from": "2026-03-30",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "published",
+          "from": "2026-03-30",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "669a5f533d8705f2c2523bba6387d2f1ad50e8c701d54513c46727ba61e580c7",
+      "after_sha256": "6cf2b73173f020f84c2136840a93ce2d0ce84ad5877c6312276556c65b7256cd"
+    },
+    {
+      "route": "/use-cases/robotics-deployment-3pl-warehouses",
+      "source": "src/content/useCases/robotics-deployment-3pl-warehouses.md",
+      "changes": [
+        {
+          "field": "created",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "updated",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "published",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "707486ab1783b8b510c470e55e87a6d6fd227b16ef122c5563649b91249dd1b5",
+      "after_sha256": "fe9d5e1f2f909582e8f4815eaf1f14a64d44956e372404359b8c9f0866dca81f"
+    },
+    {
+      "route": "/use-cases/service-robotics-deployment-evaluation",
+      "source": "src/content/useCases/service-robotics-deployment-evaluation.md",
+      "changes": [
+        {
+          "field": "created",
+          "from": "2026-04-09",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "updated",
+          "from": "2026-04-09",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "published",
+          "from": "2026-04-09",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "c99fcba931a4829767b29709dde11cc42ef633ced30c6e7fc7c15f906dd205b6",
+      "after_sha256": "8161278f4a69c171871b4647ac07839af5141b74546fb5ab3a7f0220bc0e80f8"
+    },
+    {
+      "route": "/use-cases/warehouse-automation-roi-evaluation",
+      "source": "src/content/useCases/warehouse-automation-roi-evaluation.md",
+      "changes": [
+        {
+          "field": "created",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "updated",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "published",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "a46ee1c998f4c5eeb72c2dc4943598b423dad4024c99d4d841a4ba01f0023fdc",
+      "after_sha256": "bf42dbc788cfc1d9cda9836a78d6260f875edf23225d207c6ed52f8840bdc47d"
+    },
+    {
+      "route": "/methodology",
+      "source": "src/content/pages/methodology.md",
+      "changes": [
+        {
+          "field": "created",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "updated",
+          "from": "2026-04-09",
+          "to": "2026-03-01"
+        },
+        {
+          "field": "published",
+          "from": "2026-03-15",
+          "to": "2026-03-01"
+        }
+      ],
+      "before_sha256": "b86291a87829e3218b59e2f4899791d3899639a0b01038911bc136241d8f5c1c",
+      "after_sha256": "820f0b8f8fb557153f7064ef4ed9da564ee916d2daa21dd19a3f604bbc49f327"
+    }
+  ]
+}
