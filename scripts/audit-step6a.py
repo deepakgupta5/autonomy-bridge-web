@@ -245,7 +245,7 @@ for phrase in (
 ):
     assert phrase in privacy, ('privacy notice missing approved disclosure', phrase)
 assert 'before publication' not in privacy, 'privacy notice must not make account checks a pre-publication gate'
-assert 'No storage country or fixed provider-backup deletion period is claimed.' in privacy
+assert 'No claim about a storage country or fixed provider-backup deletion period is made' in privacy
 
 terms_offer = ('Autonomy Bridge provides commercialization and revenue leadership for B2B startups, '
                'defined fundraising operations work for nonprofits, and fractional sales leadership '
