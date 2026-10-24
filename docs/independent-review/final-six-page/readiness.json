@@ -1,0 +1,11 @@
+{
+  "source_commit": "27a8dd2664c1b9e5704000330bbf97d28f463c50",
+  "source_tree": "c39ced94ef6d61f6cc016eb641feea106f1b585c",
+  "production_verifier": "PASS, 11 checks",
+  "frozen_copy_static_audit": "PASS, six pages; 258 five-page blocks plus Contact",
+  "non_target_rendered_parity": "PASS, 157 HTML byte-identical to c21d976",
+  "research_source_changes": false,
+  "visual_browser_qa": "NOT RUN: pre-launch browser rendering unavailable in review runtime; not claimed as passed",
+  "live_form_submission": "NOT RUN, no real enquiry sent",
+  "remote_push_merge_deploy": "NONE"
+}

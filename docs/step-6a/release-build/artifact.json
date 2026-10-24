@@ -1,11 +1,11 @@
 {
-  "source_commit": "6649b57680582b07d12a3244e34d09d88628137f",
-  "artifact_directory": "/Users/deepakgupta/Documents/06_Tools_&_Code/Codex/AutonomyBridge Website/repo/dist",
+  "source_commit": "27a8dd2664c1b9e5704000330bbf97d28f463c50",
+  "artifact_directory": "/workspace/scratch/e688561b7a6c/site_launch_20261024/dist",
   "file_count": 241,
-  "total_bytes": 18298803,
-  "manifest_sha256": "0cae311390bd1cc8dea6f8c4e6356e01aa65d284b00d58bdb44b955499c83a16",
+  "total_bytes": 18293409,
+  "manifest_sha256": "5b6da3a38d45ceb6b9c25d2c737c30fe28b077392623005229b020cc05be16f6",
   "key_files": {
-    "index.html": "383e215c716dcc7702d0daae3320dca192efda5dbd1a243bbc53dbb6021c505d",
+    "index.html": "4ce9ab76ba283c383a0908dd9616588d3ef516132c758867a239eacc11456c64",
     "research.html": "81f55ab244f1868e86065d6127a13b8bdb4de50dee0b85a90f2e5fb790ade391",
     "methodology.html": "747ce5afbdbdb7f0a0e44ad79b158db47b300f30ff7ca2b1158a738ac3d627ec",
     "terms-of-use.html": "01568bacffa40586678dc3fc640d4903601f0590f4e969243851f5414fe80647",

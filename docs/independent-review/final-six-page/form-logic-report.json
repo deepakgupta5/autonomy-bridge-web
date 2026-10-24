@@ -1,0 +1,152 @@
+{
+  "scope": "Actual bundled Contact mount and transport tested with a minimal DOM fixture and intercepted fetch; not a browser rendering/validity test. No real enquiry or network sent.",
+  "tests": [
+    {
+      "test": "Audience query startups",
+      "passed": true
+    },
+    {
+      "test": "Audience remains editable startups",
+      "passed": true
+    },
+    {
+      "test": "Audience query nonprofits",
+      "passed": true
+    },
+    {
+      "test": "Audience remains editable nonprofits",
+      "passed": true
+    },
+    {
+      "test": "Audience query sales-leadership",
+      "passed": true
+    },
+    {
+      "test": "Audience remains editable sales-leadership",
+      "passed": true
+    },
+    {
+      "test": "Audience query bogus",
+      "passed": true
+    },
+    {
+      "test": "Audience remains editable bogus",
+      "passed": true
+    },
+    {
+      "test": "JS initialization enables submit",
+      "passed": true
+    },
+    {
+      "test": "Name required exact",
+      "passed": true
+    },
+    {
+      "test": "Email required exact",
+      "passed": true
+    },
+    {
+      "test": "Message required exact",
+      "passed": true
+    },
+    {
+      "test": "Summary exact",
+      "passed": true
+    },
+    {
+      "test": "Invalid focus first field",
+      "passed": true
+    },
+    {
+      "test": "Invalid input sends nothing",
+      "passed": true
+    },
+    {
+      "test": "Invalid email exact",
+      "passed": true
+    },
+    {
+      "test": "Invalid email focus",
+      "passed": true
+    },
+    {
+      "test": "Invalid email sends nothing",
+      "passed": true
+    },
+    {
+      "test": "rejected pending exact",
+      "passed": true
+    },
+    {
+      "test": "Rejection exact",
+      "passed": true
+    },
+    {
+      "test": "Rejected retry enabled",
+      "passed": true
+    },
+    {
+      "test": "Rejected loopback no transmission",
+      "passed": true
+    },
+    {
+      "test": "rejected preserves entries",
+      "passed": true
+    },
+    {
+      "test": "rejected status focus",
+      "passed": true
+    },
+    {
+      "test": "accepted pending exact",
+      "passed": true
+    },
+    {
+      "test": "Accepted navigation",
+      "passed": true
+    },
+    {
+      "test": "Accepted receipt state",
+      "passed": true
+    },
+    {
+      "test": "Accepted one post one verified receipt",
+      "passed": true
+    },
+    {
+      "test": "accepted preserves entries",
+      "passed": true
+    },
+    {
+      "test": "unknown pending exact",
+      "passed": true
+    },
+    {
+      "test": "Unknown exact plus reference",
+      "passed": true
+    },
+    {
+      "test": "Unknown prevents duplicate retry",
+      "passed": true
+    },
+    {
+      "test": "Unknown one post only ten receipt checks",
+      "passed": true
+    },
+    {
+      "test": "Unknown repeat submit does not repost",
+      "passed": true
+    },
+    {
+      "test": "unknown preserves entries",
+      "passed": true
+    },
+    {
+      "test": "unknown status focus",
+      "passed": true
+    }
+  ],
+  "failures": [],
+  "passed": true,
+  "source_commit": "27a8dd2664c1b9e5704000330bbf97d28f463c50"
+}

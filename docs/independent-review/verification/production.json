@@ -1,9 +1,9 @@
 {
   "passed": true,
-  "source_commit": "6649b57680582b07d12a3244e34d09d88628137f",
-  "node": "v20.20.1",
+  "source_commit": "27a8dd2664c1b9e5704000330bbf97d28f463c50",
+  "node": "v20.20.2",
   "baseline_commit": "0285946a6a500f9207a9c466c7de11a4cffb22a8",
-  "baseline_dist": "/private/tmp/autonomy-step6-0285946-baseline/dist",
+  "baseline_dist": "/workspace/scratch/e688561b7a6c/site_baseline_20261024/dist",
   "explicit_target": {
     "SITE_ID": "3df07dc5-6950-4241-98eb-cf95df3d271d",
     "CONTEXT": "production"
@@ -24,14 +24,14 @@
   "research_date_parity": true,
   "artifact": {
     "files": 241,
-    "bytes": 18298803,
-    "manifest_sha256": "0cae311390bd1cc8dea6f8c4e6356e01aa65d284b00d58bdb44b955499c83a16"
+    "bytes": 18293409,
+    "manifest_sha256": "5b6da3a38d45ceb6b9c25d2c737c30fe28b077392623005229b020cc05be16f6"
   },
   "checks": [
     {
       "name": "source_guard_negative_controls",
       "command": [
-        "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
         "scripts/test-production-source-guard.py"
       ],
       "exit_code": 0
@@ -48,9 +48,9 @@
     {
       "name": "route_verifier",
       "command": [
-        "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
         "scripts/verify-preview.py",
-        "/private/tmp/autonomy-step6-0285946-baseline/dist",
+        "/workspace/scratch/e688561b7a6c/site_baseline_20261024/dist",
         "--canonical-apex",
         "--research-review",
         "--release-candidate"
@@ -60,7 +60,7 @@
     {
       "name": "step6a_audit",
       "command": [
-        "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
         "scripts/audit-step6a.py"
       ],
       "exit_code": 0
@@ -68,7 +68,7 @@
     {
       "name": "audit_negative_controls",
       "command": [
-        "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
         "scripts/test-step6a-audit.py"
       ],
       "exit_code": 0
@@ -76,7 +76,7 @@
     {
       "name": "actual_release_dates",
       "command": [
-        "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
         "scripts/check-actual-release-dates.py"
       ],
       "exit_code": 0
@@ -84,7 +84,7 @@
     {
       "name": "owner_date_diff",
       "command": [
-        "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
         "scripts/verify-owner-date-diff.py"
       ],
       "exit_code": 0
@@ -116,7 +116,7 @@
     {
       "name": "artifact_hash",
       "command": [
-        "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
         "scripts/hash-release-artifact.py"
       ],
       "exit_code": 0

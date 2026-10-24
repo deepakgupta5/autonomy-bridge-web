@@ -1,0 +1,1865 @@
+{
+  "started": "2026-10-24T05:46:10.082Z",
+  "scope": "Independent frozen proposal vs rendered static HTML audit, not browser layout or production verification.",
+  "failures": [],
+  "pages": [
+    {
+      "route": "/",
+      "blocks": 46,
+      "headings": [
+        {
+          "tag": "h1",
+          "text": "Commercial leadership and fundraising operations."
+        },
+        {
+          "tag": "h2",
+          "text": "Who I work with"
+        },
+        {
+          "tag": "h3",
+          "text": "B2B startups"
+        },
+        {
+          "tag": "h3",
+          "text": "Nonprofits"
+        },
+        {
+          "tag": "h3",
+          "text": "Established businesses"
+        },
+        {
+          "tag": "h2",
+          "text": "What I take responsibility for"
+        },
+        {
+          "tag": "h3",
+          "text": "The pilot worked. The customer has not committed."
+        },
+        {
+          "tag": "h3",
+          "text": "Supporter follow-up keeps slipping."
+        },
+        {
+          "tag": "h3",
+          "text": "You have salespeople, but you are still the sales manager."
+        },
+        {
+          "tag": "h2",
+          "text": "Work directly with an experienced operator"
+        },
+        {
+          "tag": "h2",
+          "text": "How an engagement starts"
+        },
+        {
+          "tag": "h3",
+          "text": "You need to choose a priority"
+        },
+        {
+          "tag": "h3",
+          "text": "You already know what needs doing"
+        },
+        {
+          "tag": "h3",
+          "text": "You need ongoing sales leadership"
+        },
+        {
+          "tag": "h2",
+          "text": "Tell me what needs your attention"
+        }
+      ],
+      "metadata": {
+        "title": "Commercial Leadership and Fundraising Operations | Autonomy Bridge",
+        "description": "Work directly with Deepak Gupta on B2B commercialization, fractional sales leadership or nonprofit fundraising operations. Start with a free conversation.",
+        "ogTitle": "Commercial Leadership and Fundraising Operations | Autonomy Bridge",
+        "ogDescription": "Work directly with Deepak Gupta on B2B commercialization, fractional sales leadership or nonprofit fundraising operations. Start with a free conversation.",
+        "twitterTitle": "Commercial Leadership and Fundraising Operations | Autonomy Bridge",
+        "twitterDescription": "Work directly with Deepak Gupta on B2B commercialization, fractional sales leadership or nonprofit fundraising operations. Start with a free conversation.",
+        "siteName": "Autonomy Bridge",
+        "canonical": "https://autonomybridge.com",
+        "robots": "index,follow"
+      },
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "@id": "https://autonomybridge.com#organization",
+          "name": "Autonomy Bridge",
+          "url": "https://autonomybridge.com",
+          "sameAs": [
+            "https://www.linkedin.com/company/autonomy-bridge/"
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "@id": "https://autonomybridge.com#website",
+          "url": "https://autonomybridge.com",
+          "name": "Autonomy Bridge",
+          "publisher": {
+            "@id": "https://autonomybridge.com#organization"
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://autonomybridge.com"
+            }
+          ]
+        }
+      ],
+      "articleLinks": [
+        {
+          "text": "Discuss your challenge",
+          "href": "/contact"
+        },
+        {
+          "text": "Explore commercialization for startups",
+          "href": "/startups"
+        },
+        {
+          "text": "Explore fundraising operations",
+          "href": "/nonprofits"
+        },
+        {
+          "text": "Explore fractional sales leadership",
+          "href": "/sales-leadership"
+        },
+        {
+          "text": "Discuss a customer opportunity",
+          "href": "/contact?audience=startups"
+        },
+        {
+          "text": "Discuss fundraising operations",
+          "href": "/contact?audience=nonprofits"
+        },
+        {
+          "text": "Discuss sales leadership",
+          "href": "/contact?audience=sales-leadership"
+        },
+        {
+          "text": "Read about my background",
+          "href": "/about"
+        },
+        {
+          "text": "Discuss your challenge",
+          "href": "/contact"
+        },
+        {
+          "text": "Explore Research",
+          "href": "/research"
+        }
+      ],
+      "allLinks": [
+        {
+          "text": "Skip to content",
+          "href": "#main-content"
+        },
+        {
+          "text": "AB AutonomyBridge Revenue and fundraising opportunity leadership",
+          "href": "/"
+        },
+        {
+          "text": "Startups",
+          "href": "/startups"
+        },
+        {
+          "text": "Nonprofits",
+          "href": "/nonprofits"
+        },
+        {
+          "text": "Sales Leadership",
+          "href": "/sales-leadership"
+        },
+        {
+          "text": "About",
+          "href": "/about"
+        },
+        {
+          "text": "Research",
+          "href": "/research"
+        },
+        {
+          "text": "Contact",
+          "href": "/contact"
+        },
+        {
+          "text": "Discuss your challenge",
+          "href": "/contact"
+        },
+        {
+          "text": "Startups",
+          "href": "/startups"
+        },
+        {
+          "text": "Nonprofits",
+          "href": "/nonprofits"
+        },
+        {
+          "text": "Sales Leadership",
+          "href": "/sales-leadership"
+        },
+        {
+          "text": "About",
+          "href": "/about"
+        },
+        {
+          "text": "Research",
+          "href": "/research"
+        },
+        {
+          "text": "Contact",
+          "href": "/contact"
+        },
+        {
+          "text": "Discuss your challenge",
+          "href": "/contact"
+        },
+        {
+          "text": "Discuss your challenge",
+          "href": "/contact"
+        },
+        {
+          "text": "Explore commercialization for startups",
+          "href": "/startups"
+        },
+        {
+          "text": "Explore fundraising operations",
+          "href": "/nonprofits"
+        },
+        {
+          "text": "Explore fractional sales leadership",
+          "href": "/sales-leadership"
+        },
+        {
+          "text": "Discuss a customer opportunity",
+          "href": "/contact?audience=startups"
+        },
+        {
+          "text": "Discuss fundraising operations",
+          "href": "/contact?audience=nonprofits"
+        },
+        {
+          "text": "Discuss sales leadership",
+          "href": "/contact?audience=sales-leadership"
+        },
+        {
+          "text": "Read about my background",
+          "href": "/about"
+        },
+        {
+          "text": "Discuss your challenge",
+          "href": "/contact"
+        },
+        {
+          "text": "Explore Research",
+          "href": "/research"
+        },
+        {
+          "text": "Startups",
+          "href": "/startups"
+        },
+        {
+          "text": "Nonprofits",
+          "href": "/nonprofits"
+        },
+        {
+          "text": "Sales Leadership",
+          "href": "/sales-leadership"
+        },
+        {
+          "text": "Research & Resources",
+          "href": "/research"
+        },
+        {
+          "text": "Insights",
+          "href": "/insights"
+        },
+        {
+          "text": "Market Overview",
+          "href": "/market-overview"
+        },
+        {
+          "text": "Frameworks",
+          "href": "/frameworks"
+        },
+        {
+          "text": "Use Cases",
+          "href": "/use-cases"
+        },
+        {
+          "text": "Case Studies",
+          "href": "/case-studies"
+        },
+        {
+          "text": "Glossary",
+          "href": "/glossary"
+        },
+        {
+          "text": "Research Methodology",
+          "href": "/methodology"
+        },
+        {
+          "text": "About",
+          "href": "/about"
+        },
+        {
+          "text": "Contact",
+          "href": "/contact"
+        },
+        {
+          "text": "LinkedIn",
+          "href": "https://www.linkedin.com/company/autonomy-bridge/"
+        },
+        {
+          "text": "Privacy Policy",
+          "href": "/privacy-policy"
+        },
+        {
+          "text": "Terms of Use",
+          "href": "/terms-of-use"
+        },
+        {
+          "text": "Cookie Policy",
+          "href": "/cookie-policy"
+        },
+        {
+          "text": "Sitemap",
+          "href": "/sitemap"
+        }
+      ]
+    },
+    {
+      "route": "/startups",
+      "blocks": 57,
+      "headings": [
+        {
+          "tag": "h1",
+          "text": "Commercialization and sales leadership for B2B startups."
+        },
+        {
+          "tag": "h2",
+          "text": "The pilot worked. Why haven\u2019t they bought?"
+        },
+        {
+          "tag": "h3",
+          "text": "Turn the pilot into a purchase decision"
+        },
+        {
+          "tag": "h2",
+          "text": "Which customers are worth building for?"
+        },
+        {
+          "tag": "h3",
+          "text": "Choose where to focus"
+        },
+        {
+          "tag": "h2",
+          "text": "Who will lead the sale after the first meeting?"
+        },
+        {
+          "tag": "h3",
+          "text": "Lead the sale through to a decision"
+        },
+        {
+          "tag": "h2",
+          "text": "A pilot with interest, but no buying decision"
+        },
+        {
+          "tag": "h3",
+          "text": "An illustrative opportunity review"
+        },
+        {
+          "tag": "h3",
+          "text": "The situation"
+        },
+        {
+          "tag": "h3",
+          "text": "What is missing"
+        },
+        {
+          "tag": "h3",
+          "text": "Questions to answer"
+        },
+        {
+          "tag": "h3",
+          "text": "What I would do"
+        },
+        {
+          "tag": "h3",
+          "text": "What the founder decides"
+        },
+        {
+          "tag": "h3",
+          "text": "What progress would look like"
+        },
+        {
+          "tag": "h2",
+          "text": "Clear ownership"
+        },
+        {
+          "tag": "h2",
+          "text": "Scope and fees, agreed first"
+        },
+        {
+          "tag": "h2",
+          "text": "Start with the sale or the decision"
+        },
+        {
+          "tag": "h3",
+          "text": "Have an opportunity to lead?"
+        },
+        {
+          "tag": "h3",
+          "text": "Need to choose your next move?"
+        }
+      ],
+      "metadata": {
+        "title": "B2B Startup Commercialization | Autonomy Bridge",
+        "description": "Choose target customers, shape a B2B offer and move enterprise sales toward paid contracts with commercial leadership from Deepak Gupta.",
+        "ogTitle": "B2B Startup Commercialization | Autonomy Bridge",
+        "ogDescription": "Choose target customers, shape a B2B offer and move enterprise sales toward paid contracts with commercial leadership from Deepak Gupta.",
+        "twitterTitle": "B2B Startup Commercialization | Autonomy Bridge",
+        "twitterDescription": "Choose target customers, shape a B2B offer and move enterprise sales toward paid contracts with commercial leadership from Deepak Gupta.",
+        "siteName": "Autonomy Bridge",
+        "canonical": "https://autonomybridge.com/startups",
+        "robots": "index,follow"
+      },
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "@id": "https://autonomybridge.com#organization",
+          "name": "Autonomy Bridge",
+          "url": "https://autonomybridge.com",
+          "sameAs": [
+            "https://www.linkedin.com/company/autonomy-bridge/"
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "@id": "https://autonomybridge.com#website",
+          "url": "https://autonomybridge.com",
+          "name": "Autonomy Bridge",
+          "publisher": {
+            "@id": "https://autonomybridge.com#organization"
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://autonomybridge.com"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Startups",
+              "item": "https://autonomybridge.com/startups"
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": "https://autonomybridge.com/startups",
+          "url": "https://autonomybridge.com/startups",
+          "name": "Commercialization and sales leadership for B2B startups.",
+          "description": "I\u2019m Deepak Gupta of Autonomy Bridge. I provide hands-on commercial leadership for B2B startups: choosing a market, shaping the offer and leading sales through to a customer decision.",
+          "isPartOf": {
+            "@id": "https://autonomybridge.com#website"
+          },
+          "mainEntity": {
+            "@id": "https://autonomybridge.com/startups#service"
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "@id": "https://autonomybridge.com/startups#service",
+          "name": "Commercialization and sales leadership for B2B startups",
+          "description": "I\u2019m Deepak Gupta of Autonomy Bridge. I provide hands-on commercial leadership for B2B startups: choosing a market, shaping the offer and leading sales through to a customer decision.",
+          "url": "https://autonomybridge.com/startups",
+          "provider": {
+            "@id": "https://autonomybridge.com#organization"
+          },
+          "mainEntityOfPage": {
+            "@id": "https://autonomybridge.com/startups"
+          }
+        }
+      ],
+      "articleLinks": [
+        {
+          "text": "Discuss your commercial priority",
+          "href": "/contact?audience=startups"
+        },
+        {
+          "text": "Discuss your commercial priority",
+          "href": "/contact?audience=startups"
+        },
+        {
+          "text": "Discuss your commercial priority",
+          "href": "/contact?audience=startups"
+        }
+      ],
+      "allLinks": [
+        {
+          "text": "Skip to content",
+          "href": "#main-content"
+        },
+        {
+          "text": "AB AutonomyBridge Revenue and fundraising opportunity leadership",
+          "href": "/"
+        },
+        {
+          "text": "Startups",
+          "href": "/startups"
+        },
+        {
+          "text": "Nonprofits",
+          "href": "/nonprofits"
+        },
+        {
+          "text": "Sales Leadership",
+          "href": "/sales-leadership"
+        },
+        {
+          "text": "About",
+          "href": "/about"
+        },
+        {
+          "text": "Research",
+          "href": "/research"
+        },
+        {
+          "text": "Contact",
+          "href": "/contact"
+        },
+        {
+          "text": "Discuss your challenge",
+          "href": "/contact"
+        },
+        {
+          "text": "Startups",
+          "href": "/startups"
+        },
+        {
+          "text": "Nonprofits",
+          "href": "/nonprofits"
+        },
+        {
+          "text": "Sales Leadership",
+          "href": "/sales-leadership"
+        },
+        {
+          "text": "About",
+          "href": "/about"
+        },
+        {
+          "text": "Research",
+          "href": "/research"
+        },
+        {
+          "text": "Contact",
+          "href": "/contact"
+        },
+        {
+          "text": "Discuss your challenge",
+          "href": "/contact"
+        },
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "Discuss your commercial priority",
+          "href": "/contact?audience=startups"
+        },
+        {
+          "text": "Discuss your commercial priority",
+          "href": "/contact?audience=startups"
+        },
+        {
+          "text": "Discuss your commercial priority",
+          "href": "/contact?audience=startups"
+        },
+        {
+          "text": "Startups",
+          "href": "/startups"
+        },
+        {
+          "text": "Nonprofits",
+          "href": "/nonprofits"
+        },
+        {
+          "text": "Sales Leadership",
+          "href": "/sales-leadership"
+        },
+        {
+          "text": "Research & Resources",
+          "href": "/research"
+        },
+        {
+          "text": "Insights",
+          "href": "/insights"
+        },
+        {
+          "text": "Market Overview",
+          "href": "/market-overview"
+        },
+        {
+          "text": "Frameworks",
+          "href": "/frameworks"
+        },
+        {
+          "text": "Use Cases",
+          "href": "/use-cases"
+        },
+        {
+          "text": "Case Studies",
+          "href": "/case-studies"
+        },
+        {
+          "text": "Glossary",
+          "href": "/glossary"
+        },
+        {
+          "text": "Research Methodology",
+          "href": "/methodology"
+        },
+        {
+          "text": "About",
+          "href": "/about"
+        },
+        {
+          "text": "Contact",
+          "href": "/contact"
+        },
+        {
+          "text": "LinkedIn",
+          "href": "https://www.linkedin.com/company/autonomy-bridge/"
+        },
+        {
+          "text": "Privacy Policy",
+          "href": "/privacy-policy"
+        },
+        {
+          "text": "Terms of Use",
+          "href": "/terms-of-use"
+        },
+        {
+          "text": "Cookie Policy",
+          "href": "/cookie-policy"
+        },
+        {
+          "text": "Sitemap",
+          "href": "/sitemap"
+        }
+      ]
+    },
+    {
+      "route": "/sales-leadership",
+      "blocks": 65,
+      "headings": [
+        {
+          "tag": "h1",
+          "text": "You have a sales team. You are still running sales."
+        },
+        {
+          "tag": "h2",
+          "text": "A sales team that still waits for you"
+        },
+        {
+          "tag": "h3",
+          "text": "Give the team a sales leader"
+        },
+        {
+          "tag": "h2",
+          "text": "Which deals can you plan around?"
+        },
+        {
+          "tag": "h3",
+          "text": "Put customer evidence behind the forecast"
+        },
+        {
+          "tag": "h2",
+          "text": "Who is leading the next stage of growth?"
+        },
+        {
+          "tag": "h3",
+          "text": "Put someone in charge of the work"
+        },
+        {
+          "tag": "h2",
+          "text": "A forecast the business cannot yet rely on"
+        },
+        {
+          "tag": "h3",
+          "text": "An illustrative sales leadership review"
+        },
+        {
+          "tag": "h3",
+          "text": "The situation"
+        },
+        {
+          "tag": "h3",
+          "text": "What is missing"
+        },
+        {
+          "tag": "h3",
+          "text": "Questions to answer"
+        },
+        {
+          "tag": "h3",
+          "text": "What I would do"
+        },
+        {
+          "tag": "h3",
+          "text": "What the founder decides"
+        },
+        {
+          "tag": "h3",
+          "text": "What progress would look like"
+        },
+        {
+          "tag": "h3",
+          "text": "What we would review"
+        },
+        {
+          "tag": "h2",
+          "text": "Clear responsibilities. Clear limits."
+        },
+        {
+          "tag": "h2",
+          "text": "Scope and fees, agreed first"
+        },
+        {
+          "tag": "h2",
+          "text": "Agree the role. Set the first 90 days."
+        },
+        {
+          "tag": "h2",
+          "text": "What do you need to hand over?"
+        }
+      ],
+      "metadata": {
+        "title": "Fractional Sales Leadership | Autonomy Bridge",
+        "description": "Deepak Gupta provides fractional sales leadership for established B2B businesses, taking on team coaching, forecasts, important sales and commercial growth work.",
+        "ogTitle": "Fractional Sales Leadership | Autonomy Bridge",
+        "ogDescription": "Deepak Gupta provides fractional sales leadership for established B2B businesses, taking on team coaching, forecasts, important sales and commercial growth work.",
+        "twitterTitle": "Fractional Sales Leadership | Autonomy Bridge",
+        "twitterDescription": "Deepak Gupta provides fractional sales leadership for established B2B businesses, taking on team coaching, forecasts, important sales and commercial growth work.",
+        "siteName": "Autonomy Bridge",
+        "canonical": "https://autonomybridge.com/sales-leadership",
+        "robots": "index,follow"
+      },
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "@id": "https://autonomybridge.com#organization",
+          "name": "Autonomy Bridge",
+          "url": "https://autonomybridge.com",
+          "sameAs": [
+            "https://www.linkedin.com/company/autonomy-bridge/"
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "@id": "https://autonomybridge.com#website",
+          "url": "https://autonomybridge.com",
+          "name": "Autonomy Bridge",
+          "publisher": {
+            "@id": "https://autonomybridge.com#organization"
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://autonomybridge.com"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Sales Leadership",
+              "item": "https://autonomybridge.com/sales-leadership"
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": "https://autonomybridge.com/sales-leadership",
+          "url": "https://autonomybridge.com/sales-leadership",
+          "name": "You have a sales team. You are still running sales.",
+          "description": "I\u2019m Deepak Gupta of Autonomy Bridge. I provide fractional sales leadership for established B2B businesses. I lead the sales team, forecast process and commercial work we agree, without you appointing a full-time executive.",
+          "isPartOf": {
+            "@id": "https://autonomybridge.com#website"
+          },
+          "mainEntity": {
+            "@id": "https://autonomybridge.com/sales-leadership#service"
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "@id": "https://autonomybridge.com/sales-leadership#service",
+          "name": "Fractional sales leadership for established B2B businesses",
+          "description": "I\u2019m Deepak Gupta of Autonomy Bridge. I provide fractional sales leadership for established B2B businesses. I lead the sales team, forecast process and commercial work we agree, without you appointing a full-time executive.",
+          "url": "https://autonomybridge.com/sales-leadership",
+          "provider": {
+            "@id": "https://autonomybridge.com#organization"
+          },
+          "mainEntityOfPage": {
+            "@id": "https://autonomybridge.com/sales-leadership"
+          }
+        }
+      ],
+      "articleLinks": [
+        {
+          "text": "Discuss your sales team",
+          "href": "/contact?audience=sales-leadership"
+        },
+        {
+          "text": "Discuss your sales team",
+          "href": "/contact?audience=sales-leadership"
+        },
+        {
+          "text": "Discuss your sales team",
+          "href": "/contact?audience=sales-leadership"
+        }
+      ],
+      "allLinks": [
+        {
+          "text": "Skip to content",
+          "href": "#main-content"
+        },
+        {
+          "text": "AB AutonomyBridge Revenue and fundraising opportunity leadership",
+          "href": "/"
+        },
+        {
+          "text": "Startups",
+          "href": "/startups"
+        },
+        {
+          "text": "Nonprofits",
+          "href": "/nonprofits"
+        },
+        {
+          "text": "Sales Leadership",
+          "href": "/sales-leadership"
+        },
+        {
+          "text": "About",
+          "href": "/about"
+        },
+        {
+          "text": "Research",
+          "href": "/research"
+        },
+        {
+          "text": "Contact",
+          "href": "/contact"
+        },
+        {
+          "text": "Discuss your challenge",
+          "href": "/contact"
+        },
+        {
+          "text": "Startups",
+          "href": "/startups"
+        },
+        {
+          "text": "Nonprofits",
+          "href": "/nonprofits"
+        },
+        {
+          "text": "Sales Leadership",
+          "href": "/sales-leadership"
+        },
+        {
+          "text": "About",
+          "href": "/about"
+        },
+        {
+          "text": "Research",
+          "href": "/research"
+        },
+        {
+          "text": "Contact",
+          "href": "/contact"
+        },
+        {
+          "text": "Discuss your challenge",
+          "href": "/contact"
+        },
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "Discuss your sales team",
+          "href": "/contact?audience=sales-leadership"
+        },
+        {
+          "text": "Discuss your sales team",
+          "href": "/contact?audience=sales-leadership"
+        },
+        {
+          "text": "Discuss your sales team",
+          "href": "/contact?audience=sales-leadership"
+        },
+        {
+          "text": "Startups",
+          "href": "/startups"
+        },
+        {
+          "text": "Nonprofits",
+          "href": "/nonprofits"
+        },
+        {
+          "text": "Sales Leadership",
+          "href": "/sales-leadership"
+        },
+        {
+          "text": "Research & Resources",
+          "href": "/research"
+        },
+        {
+          "text": "Insights",
+          "href": "/insights"
+        },
+        {
+          "text": "Market Overview",
+          "href": "/market-overview"
+        },
+        {
+          "text": "Frameworks",
+          "href": "/frameworks"
+        },
+        {
+          "text": "Use Cases",
+          "href": "/use-cases"
+        },
+        {
+          "text": "Case Studies",
+          "href": "/case-studies"
+        },
+        {
+          "text": "Glossary",
+          "href": "/glossary"
+        },
+        {
+          "text": "Research Methodology",
+          "href": "/methodology"
+        },
+        {
+          "text": "About",
+          "href": "/about"
+        },
+        {
+          "text": "Contact",
+          "href": "/contact"
+        },
+        {
+          "text": "LinkedIn",
+          "href": "https://www.linkedin.com/company/autonomy-bridge/"
+        },
+        {
+          "text": "Privacy Policy",
+          "href": "/privacy-policy"
+        },
+        {
+          "text": "Terms of Use",
+          "href": "/terms-of-use"
+        },
+        {
+          "text": "Cookie Policy",
+          "href": "/cookie-policy"
+        },
+        {
+          "text": "Sitemap",
+          "href": "/sitemap"
+        }
+      ]
+    },
+    {
+      "route": "/nonprofits",
+      "blocks": 49,
+      "headings": [
+        {
+          "tag": "h1",
+          "text": "Fundraising operations support for nonprofit teams"
+        },
+        {
+          "tag": "h2",
+          "text": "Before the next appeal, who needs a conversation?"
+        },
+        {
+          "tag": "h2",
+          "text": "After the thank-you, what happens next?"
+        },
+        {
+          "tag": "h2",
+          "text": "Who is bringing the donor update together?"
+        },
+        {
+          "tag": "h2",
+          "text": "An example: following up with first-time donors"
+        },
+        {
+          "tag": "h3",
+          "text": "The situation"
+        },
+        {
+          "tag": "h3",
+          "text": "The first question"
+        },
+        {
+          "tag": "h3",
+          "text": "What I would review"
+        },
+        {
+          "tag": "h3",
+          "text": "What the team would use"
+        },
+        {
+          "tag": "h3",
+          "text": "What we would check"
+        },
+        {
+          "tag": "h2",
+          "text": "What I bring, and what stays with you"
+        },
+        {
+          "tag": "h2",
+          "text": "Start with a defined task or one question to resolve"
+        },
+        {
+          "tag": "h3",
+          "text": "If the priority is clear"
+        },
+        {
+          "tag": "h3",
+          "text": "If you need to choose a priority"
+        },
+        {
+          "tag": "h2",
+          "text": "What keeps getting delayed?"
+        }
+      ],
+      "metadata": {
+        "title": "Nonprofit Fundraising Operations | Autonomy Bridge",
+        "description": "Deepak Gupta helps nonprofit leaders coordinate donor follow-up, stewardship and reporting, alongside their team\u2019s fundraising expertise.",
+        "ogTitle": "Nonprofit Fundraising Operations | Autonomy Bridge",
+        "ogDescription": "Deepak Gupta helps nonprofit leaders coordinate donor follow-up, stewardship and reporting, alongside their team\u2019s fundraising expertise.",
+        "twitterTitle": "Nonprofit Fundraising Operations | Autonomy Bridge",
+        "twitterDescription": "Deepak Gupta helps nonprofit leaders coordinate donor follow-up, stewardship and reporting, alongside their team\u2019s fundraising expertise.",
+        "siteName": "Autonomy Bridge",
+        "canonical": "https://autonomybridge.com/nonprofits",
+        "robots": "index,follow"
+      },
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "@id": "https://autonomybridge.com#organization",
+          "name": "Autonomy Bridge",
+          "url": "https://autonomybridge.com",
+          "sameAs": [
+            "https://www.linkedin.com/company/autonomy-bridge/"
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "@id": "https://autonomybridge.com#website",
+          "url": "https://autonomybridge.com",
+          "name": "Autonomy Bridge",
+          "publisher": {
+            "@id": "https://autonomybridge.com#organization"
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://autonomybridge.com"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Nonprofits",
+              "item": "https://autonomybridge.com/nonprofits"
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": "https://autonomybridge.com/nonprofits",
+          "url": "https://autonomybridge.com/nonprofits",
+          "name": "Fundraising operations support for nonprofit teams",
+          "description": "I\u2019m Deepak Gupta of Autonomy Bridge. I lead defined fundraising operations work alongside executive directors and fundraising leads: preparing donor follow-up, coordinating supporter updates and establishing who is responsible for the next action.",
+          "isPartOf": {
+            "@id": "https://autonomybridge.com#website"
+          },
+          "mainEntity": {
+            "@id": "https://autonomybridge.com/nonprofits#service"
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "@id": "https://autonomybridge.com/nonprofits#service",
+          "name": "Fundraising operations support for nonprofit teams",
+          "description": "I\u2019m Deepak Gupta of Autonomy Bridge. I lead defined fundraising operations work alongside executive directors and fundraising leads: preparing donor follow-up, coordinating supporter updates and establishing who is responsible for the next action.",
+          "url": "https://autonomybridge.com/nonprofits",
+          "provider": {
+            "@id": "https://autonomybridge.com#organization"
+          },
+          "mainEntityOfPage": {
+            "@id": "https://autonomybridge.com/nonprofits"
+          }
+        }
+      ],
+      "articleLinks": [
+        {
+          "text": "Discuss what keeps getting delayed",
+          "href": "/contact?audience=nonprofits"
+        },
+        {
+          "text": "Discuss what keeps getting delayed",
+          "href": "/contact?audience=nonprofits"
+        }
+      ],
+      "allLinks": [
+        {
+          "text": "Skip to content",
+          "href": "#main-content"
+        },
+        {
+          "text": "AB AutonomyBridge Revenue and fundraising opportunity leadership",
+          "href": "/"
+        },
+        {
+          "text": "Startups",
+          "href": "/startups"
+        },
+        {
+          "text": "Nonprofits",
+          "href": "/nonprofits"
+        },
+        {
+          "text": "Sales Leadership",
+          "href": "/sales-leadership"
+        },
+        {
+          "text": "About",
+          "href": "/about"
+        },
+        {
+          "text": "Research",
+          "href": "/research"
+        },
+        {
+          "text": "Contact",
+          "href": "/contact"
+        },
+        {
+          "text": "Discuss your challenge",
+          "href": "/contact"
+        },
+        {
+          "text": "Startups",
+          "href": "/startups"
+        },
+        {
+          "text": "Nonprofits",
+          "href": "/nonprofits"
+        },
+        {
+          "text": "Sales Leadership",
+          "href": "/sales-leadership"
+        },
+        {
+          "text": "About",
+          "href": "/about"
+        },
+        {
+          "text": "Research",
+          "href": "/research"
+        },
+        {
+          "text": "Contact",
+          "href": "/contact"
+        },
+        {
+          "text": "Discuss your challenge",
+          "href": "/contact"
+        },
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "Discuss what keeps getting delayed",
+          "href": "/contact?audience=nonprofits"
+        },
+        {
+          "text": "Discuss what keeps getting delayed",
+          "href": "/contact?audience=nonprofits"
+        },
+        {
+          "text": "Startups",
+          "href": "/startups"
+        },
+        {
+          "text": "Nonprofits",
+          "href": "/nonprofits"
+        },
+        {
+          "text": "Sales Leadership",
+          "href": "/sales-leadership"
+        },
+        {
+          "text": "Research & Resources",
+          "href": "/research"
+        },
+        {
+          "text": "Insights",
+          "href": "/insights"
+        },
+        {
+          "text": "Market Overview",
+          "href": "/market-overview"
+        },
+        {
+          "text": "Frameworks",
+          "href": "/frameworks"
+        },
+        {
+          "text": "Use Cases",
+          "href": "/use-cases"
+        },
+        {
+          "text": "Case Studies",
+          "href": "/case-studies"
+        },
+        {
+          "text": "Glossary",
+          "href": "/glossary"
+        },
+        {
+          "text": "Research Methodology",
+          "href": "/methodology"
+        },
+        {
+          "text": "About",
+          "href": "/about"
+        },
+        {
+          "text": "Contact",
+          "href": "/contact"
+        },
+        {
+          "text": "LinkedIn",
+          "href": "https://www.linkedin.com/company/autonomy-bridge/"
+        },
+        {
+          "text": "Privacy Policy",
+          "href": "/privacy-policy"
+        },
+        {
+          "text": "Terms of Use",
+          "href": "/terms-of-use"
+        },
+        {
+          "text": "Cookie Policy",
+          "href": "/cookie-policy"
+        },
+        {
+          "text": "Sitemap",
+          "href": "/sitemap"
+        }
+      ]
+    },
+    {
+      "route": "/about",
+      "blocks": 41,
+      "headings": [
+        {
+          "tag": "h1",
+          "text": "Meet Deepak Gupta"
+        },
+        {
+          "tag": "h2",
+          "text": "Experience from prior operating and interim roles"
+        },
+        {
+          "tag": "h3",
+          "text": "Ottonomy: the first ten enterprise contracts"
+        },
+        {
+          "tag": "h3",
+          "text": "AI-driven routing: discovery and pilot commitments"
+        },
+        {
+          "tag": "h3",
+          "text": "Novus Hi-Tech: leading a global robotics business"
+        },
+        {
+          "tag": "h3",
+          "text": "industrybuying.com: building an enterprise business"
+        },
+        {
+          "tag": "h3",
+          "text": "power2sme: addressing customers\u2019 purchasing constraints"
+        },
+        {
+          "tag": "h2",
+          "text": "What I do through Autonomy Bridge"
+        },
+        {
+          "tag": "h3",
+          "text": "For startups"
+        },
+        {
+          "tag": "h3",
+          "text": "For established businesses"
+        },
+        {
+          "tag": "h3",
+          "text": "For nonprofits"
+        },
+        {
+          "tag": "h2",
+          "text": "Mentoring and volunteering"
+        },
+        {
+          "tag": "h2",
+          "text": "How we work together"
+        },
+        {
+          "tag": "h2",
+          "text": "Does my experience fit the work you need done?"
+        }
+      ],
+      "metadata": {
+        "title": "About Deepak Gupta | Autonomy Bridge",
+        "description": "Meet Deepak Gupta, the commercial leader behind Autonomy Bridge. Explore his operating experience and work with startups, sales teams and nonprofits.",
+        "ogTitle": "About Deepak Gupta | Autonomy Bridge",
+        "ogDescription": "Meet Deepak Gupta, the commercial leader behind Autonomy Bridge. Explore his operating experience and work with startups, sales teams and nonprofits.",
+        "twitterTitle": "About Deepak Gupta | Autonomy Bridge",
+        "twitterDescription": "Meet Deepak Gupta, the commercial leader behind Autonomy Bridge. Explore his operating experience and work with startups, sales teams and nonprofits.",
+        "siteName": "Autonomy Bridge",
+        "canonical": "https://autonomybridge.com/about",
+        "robots": "index,follow"
+      },
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "@id": "https://autonomybridge.com#organization",
+          "name": "Autonomy Bridge",
+          "url": "https://autonomybridge.com",
+          "sameAs": [
+            "https://www.linkedin.com/company/autonomy-bridge/"
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "@id": "https://autonomybridge.com#website",
+          "url": "https://autonomybridge.com",
+          "name": "Autonomy Bridge",
+          "publisher": {
+            "@id": "https://autonomybridge.com#organization"
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://autonomybridge.com"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "About",
+              "item": "https://autonomybridge.com/about"
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "AboutPage",
+          "@id": "https://autonomybridge.com/about",
+          "name": "Meet Deepak Gupta",
+          "description": "I run Autonomy Bridge. My experience includes first enterprise contracts, global business leadership and responsibility for profit and loss. I have worked across sales, operations, engineering and delivery to turn customer interest into commitments a business can fulfil.",
+          "url": "https://autonomybridge.com/about",
+          "isPartOf": {
+            "@id": "https://autonomybridge.com#website"
+          },
+          "mainEntity": {
+            "@id": "https://autonomybridge.com/about#deepak-gupta"
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "@id": "https://autonomybridge.com/about#deepak-gupta",
+          "name": "Deepak Gupta",
+          "url": "https://autonomybridge.com/about",
+          "sameAs": [
+            "https://www.linkedin.com/in/deepakgupta5/"
+          ],
+          "worksFor": {
+            "@id": "https://autonomybridge.com#organization"
+          }
+        }
+      ],
+      "articleLinks": [
+        {
+          "text": "View my career on LinkedIn",
+          "href": "https://www.linkedin.com/in/deepakgupta5/"
+        },
+        {
+          "text": "Explore my research",
+          "href": "/research"
+        },
+        {
+          "text": "Discuss your challenge",
+          "href": "/contact"
+        }
+      ],
+      "allLinks": [
+        {
+          "text": "Skip to content",
+          "href": "#main-content"
+        },
+        {
+          "text": "AB AutonomyBridge Revenue and fundraising opportunity leadership",
+          "href": "/"
+        },
+        {
+          "text": "Startups",
+          "href": "/startups"
+        },
+        {
+          "text": "Nonprofits",
+          "href": "/nonprofits"
+        },
+        {
+          "text": "Sales Leadership",
+          "href": "/sales-leadership"
+        },
+        {
+          "text": "About",
+          "href": "/about"
+        },
+        {
+          "text": "Research",
+          "href": "/research"
+        },
+        {
+          "text": "Contact",
+          "href": "/contact"
+        },
+        {
+          "text": "Discuss your challenge",
+          "href": "/contact"
+        },
+        {
+          "text": "Startups",
+          "href": "/startups"
+        },
+        {
+          "text": "Nonprofits",
+          "href": "/nonprofits"
+        },
+        {
+          "text": "Sales Leadership",
+          "href": "/sales-leadership"
+        },
+        {
+          "text": "About",
+          "href": "/about"
+        },
+        {
+          "text": "Research",
+          "href": "/research"
+        },
+        {
+          "text": "Contact",
+          "href": "/contact"
+        },
+        {
+          "text": "Discuss your challenge",
+          "href": "/contact"
+        },
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "View my career on LinkedIn",
+          "href": "https://www.linkedin.com/in/deepakgupta5/"
+        },
+        {
+          "text": "Explore my research",
+          "href": "/research"
+        },
+        {
+          "text": "Discuss your challenge",
+          "href": "/contact"
+        },
+        {
+          "text": "Startups",
+          "href": "/startups"
+        },
+        {
+          "text": "Nonprofits",
+          "href": "/nonprofits"
+        },
+        {
+          "text": "Sales Leadership",
+          "href": "/sales-leadership"
+        },
+        {
+          "text": "Research & Resources",
+          "href": "/research"
+        },
+        {
+          "text": "Insights",
+          "href": "/insights"
+        },
+        {
+          "text": "Market Overview",
+          "href": "/market-overview"
+        },
+        {
+          "text": "Frameworks",
+          "href": "/frameworks"
+        },
+        {
+          "text": "Use Cases",
+          "href": "/use-cases"
+        },
+        {
+          "text": "Case Studies",
+          "href": "/case-studies"
+        },
+        {
+          "text": "Glossary",
+          "href": "/glossary"
+        },
+        {
+          "text": "Research Methodology",
+          "href": "/methodology"
+        },
+        {
+          "text": "About",
+          "href": "/about"
+        },
+        {
+          "text": "Contact",
+          "href": "/contact"
+        },
+        {
+          "text": "LinkedIn",
+          "href": "https://www.linkedin.com/company/autonomy-bridge/"
+        },
+        {
+          "text": "Privacy Policy",
+          "href": "/privacy-policy"
+        },
+        {
+          "text": "Terms of Use",
+          "href": "/terms-of-use"
+        },
+        {
+          "text": "Cookie Policy",
+          "href": "/cookie-policy"
+        },
+        {
+          "text": "Sitemap",
+          "href": "/sitemap"
+        }
+      ]
+    },
+    {
+      "route": "/contact",
+      "blocks": 15,
+      "headings": [
+        {
+          "tag": "h1",
+          "text": "Contact Deepak Gupta"
+        },
+        {
+          "tag": "h2",
+          "text": "Send an enquiry"
+        },
+        {
+          "tag": "h2",
+          "text": "What happens next"
+        }
+      ],
+      "metadata": {
+        "title": "Contact Deepak Gupta | Autonomy Bridge",
+        "description": "Discuss commercialization, fractional sales leadership or fundraising operations with Deepak Gupta. The first conversation is free. Response within 48 hours.",
+        "ogTitle": "Contact Deepak Gupta | Autonomy Bridge",
+        "ogDescription": "Discuss commercialization, fractional sales leadership or fundraising operations with Deepak Gupta. The first conversation is free. Response within 48 hours.",
+        "twitterTitle": "Contact Deepak Gupta | Autonomy Bridge",
+        "twitterDescription": "Discuss commercialization, fractional sales leadership or fundraising operations with Deepak Gupta. The first conversation is free. Response within 48 hours.",
+        "siteName": "Autonomy Bridge",
+        "canonical": "https://autonomybridge.com/contact",
+        "robots": "index,follow"
+      },
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "@id": "https://autonomybridge.com#organization",
+          "name": "Autonomy Bridge",
+          "url": "https://autonomybridge.com",
+          "sameAs": [
+            "https://www.linkedin.com/company/autonomy-bridge/"
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "@id": "https://autonomybridge.com#website",
+          "url": "https://autonomybridge.com",
+          "name": "Autonomy Bridge",
+          "publisher": {
+            "@id": "https://autonomybridge.com#organization"
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://autonomybridge.com"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Contact",
+              "item": "https://autonomybridge.com/contact"
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "ContactPage",
+          "@id": "https://autonomybridge.com/contact",
+          "name": "Contact Deepak Gupta",
+          "description": "Tell me what is happening. You do not need to choose a service or prepare a formal brief.",
+          "url": "https://autonomybridge.com/contact",
+          "isPartOf": {
+            "@id": "https://autonomybridge.com#website"
+          }
+        }
+      ],
+      "articleLinks": [
+        {
+          "text": "Read about my background",
+          "href": "/about"
+        },
+        {
+          "text": "Privacy notice",
+          "href": "/privacy-policy"
+        }
+      ],
+      "allLinks": [
+        {
+          "text": "Skip to content",
+          "href": "#main-content"
+        },
+        {
+          "text": "AB AutonomyBridge Revenue and fundraising opportunity leadership",
+          "href": "/"
+        },
+        {
+          "text": "Startups",
+          "href": "/startups"
+        },
+        {
+          "text": "Nonprofits",
+          "href": "/nonprofits"
+        },
+        {
+          "text": "Sales Leadership",
+          "href": "/sales-leadership"
+        },
+        {
+          "text": "About",
+          "href": "/about"
+        },
+        {
+          "text": "Research",
+          "href": "/research"
+        },
+        {
+          "text": "Contact",
+          "href": "/contact"
+        },
+        {
+          "text": "Discuss your challenge",
+          "href": "/contact"
+        },
+        {
+          "text": "Startups",
+          "href": "/startups"
+        },
+        {
+          "text": "Nonprofits",
+          "href": "/nonprofits"
+        },
+        {
+          "text": "Sales Leadership",
+          "href": "/sales-leadership"
+        },
+        {
+          "text": "About",
+          "href": "/about"
+        },
+        {
+          "text": "Research",
+          "href": "/research"
+        },
+        {
+          "text": "Contact",
+          "href": "/contact"
+        },
+        {
+          "text": "Discuss your challenge",
+          "href": "/contact"
+        },
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "Read about my background",
+          "href": "/about"
+        },
+        {
+          "text": "Privacy notice",
+          "href": "/privacy-policy"
+        },
+        {
+          "text": "Startups",
+          "href": "/startups"
+        },
+        {
+          "text": "Nonprofits",
+          "href": "/nonprofits"
+        },
+        {
+          "text": "Sales Leadership",
+          "href": "/sales-leadership"
+        },
+        {
+          "text": "Research & Resources",
+          "href": "/research"
+        },
+        {
+          "text": "Insights",
+          "href": "/insights"
+        },
+        {
+          "text": "Market Overview",
+          "href": "/market-overview"
+        },
+        {
+          "text": "Frameworks",
+          "href": "/frameworks"
+        },
+        {
+          "text": "Use Cases",
+          "href": "/use-cases"
+        },
+        {
+          "text": "Case Studies",
+          "href": "/case-studies"
+        },
+        {
+          "text": "Glossary",
+          "href": "/glossary"
+        },
+        {
+          "text": "Research Methodology",
+          "href": "/methodology"
+        },
+        {
+          "text": "About",
+          "href": "/about"
+        },
+        {
+          "text": "Contact",
+          "href": "/contact"
+        },
+        {
+          "text": "LinkedIn",
+          "href": "https://www.linkedin.com/company/autonomy-bridge/"
+        },
+        {
+          "text": "Privacy Policy",
+          "href": "/privacy-policy"
+        },
+        {
+          "text": "Terms of Use",
+          "href": "/terms-of-use"
+        },
+        {
+          "text": "Cookie Policy",
+          "href": "/cookie-policy"
+        },
+        {
+          "text": "Sitemap",
+          "href": "/sitemap"
+        }
+      ]
+    }
+  ],
+  "sources": {
+    "home_contact_proposed.md": "edc695b5089704b69d0adfef15aeb6531bb3e3b61a31e790bee59952542b7eae",
+    "commercial_pages_proposed.md": "8fb181b3ec738bfa5b5b150b2a72f71c8ef0a4e78ab37597ba469fe382958b20",
+    "nonprofit_about_proposed.md": "6eb140d069fa190990a1491af8721708c3ce1ab19a2ff43461c6a5f22579d782"
+  },
+  "passed": true,
+  "finished": "2026-10-24T05:46:10.140Z",
+  "source_commit": "27a8dd2664c1b9e5704000330bbf97d28f463c50"
+}
