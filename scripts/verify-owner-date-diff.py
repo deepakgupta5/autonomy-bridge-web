@@ -32,6 +32,18 @@ old_terms = ('AutonomyBridge provides commercial leadership for organizations wi
 new_terms = ('Autonomy Bridge provides commercialization and revenue leadership for B2B startups, defined fundraising operations work for nonprofits, and fractional sales leadership for established businesses. It also publishes research.')
 assert old_preview['/terms-of-use']['html'].count(old_terms) == 1
 old_preview['/terms-of-use']['html'] = old_preview['/terms-of-use']['html'].replace(old_terms, new_terms, 1)
+old_privacy = old_preview['/privacy-policy']['html']
+old_provider_text = ('The email provider, any forwarding arrangements, provider access locations and account-specific retention or backup schedules are not specified in this notice. '
+                     'No fixed deletion period or guarantee of storage in a particular country is claimed. Use the contact form to ask about these details before providing further information.')
+new_provider_text = ('Unsuccessful enquiries are retained for 12 months after the last substantive contact, subject to applicable legal requirements. '
+                     'This policy covers the enquiry record in Netlify Forms, email and other copies under my control. '
+                     'The email notification and reply provider, any forwarding arrangements, provider access locations, processing countries for submissions and logs, '
+                     'and provider backup deletion schedules have not been verified at account level and are not specified here. '
+                     'I make no claim about a storage country or a fixed provider-backup deletion period. '
+                     'I will check these account-level details after launch and update this notice if the verified arrangements change or require material disclosure. '
+                     'You can ask about provider details before providing further information, or submit an ordinary enquiry through the contact form without asking first.')
+assert old_privacy.count(old_provider_text) == 1
+old_preview['/privacy-policy']['html'] = old_privacy.replace(old_provider_text, new_provider_text, 1)
 assert old_preview == new_preview
 print(json.dumps({'passed': True, 'source_files': len(changed),
                   'changed_date_lines': lines, 'methodology_visible_date_only': True,
