@@ -3,14 +3,14 @@
 // The owner specified the Research revision date; it is separate from site and notice dates.
 export const approvedResearchRevisionDate = '2026-03-01';
 export const deploymentPolicy = Object.freeze({
-  mode: 'local', // Step 5: loopback review only; remote builds remain blocked
+  mode: 'production', // local release-artifact build; merge and deployment await owner approval
   origin: 'https://autonomybridge.com', // exact approved HTTPS production origin
   siteId: '3df07dc5-6950-4241-98eb-cf95df3d271d', // independently verified Netlify site ID
-  publicationDate: '', // set to the actual approved publication date on release day
-  researchRevisionDate: null, // use approvedResearchRevisionDate in the reviewed production configuration
-  termsRevisionDate: null, // actual approved Terms update/publication date
-  cookieRevisionDate: null, // actual approved Cookie update/publication date
-  methodologyRevisionDate: null, // actual approved Methodology revision date, distinct from its original publication
+  publicationDate: '2026-03-01', // owner-approved site publication date
+  researchRevisionDate: '2026-03-01', // owner-approved Research revision date
+  termsRevisionDate: '2026-03-01', // independently approved Terms notice date
+  cookieRevisionDate: '2026-03-01', // independently approved Cookie notice date
+  methodologyRevisionDate: '2026-03-01', // original publication and revision corrected by owner
   formEnabled: true, // production form; real submission testing requires separate authorization
 });
 
