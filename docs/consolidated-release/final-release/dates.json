@@ -1,10 +1,16 @@
 {
   "passed": true,
-  "release_date": "2026-10-20",
-  "timezone": "America/Vancouver",
-  "material_routes": 86,
+  "production_mode": true,
+  "dates": {
+    "publicationDate": "2026-03-01",
+    "researchRevisionDate": "2026-03-01",
+    "termsRevisionDate": "2026-03-01",
+    "cookieRevisionDate": "2026-03-01",
+    "methodologyRevisionDate": "2026-03-01"
+  },
+  "material_research_routes": 86,
   "visible_schema_xml_parity": true,
-  "unrelated_routes_not_stamped": true,
-  "legal_dates_match": true,
-  "historical_publication_dates_not_invented": true
+  "legal_and_methodology_dates_checked_separately": true,
+  "owner_corrected_source_files": 87,
+  "privacy_notice_has_no_revision_date": true
 }
