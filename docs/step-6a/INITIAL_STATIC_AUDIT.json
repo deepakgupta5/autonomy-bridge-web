@@ -1,0 +1,173 @@
+{
+  "source": "ce2171e7335b0667df45f675d5fde0323fad1c87",
+  "runtime": "Node 24.19.0, independent static audit only; Node 20 qualification remains local Codex responsibility",
+  "pages": 163,
+  "missing_metadata": [],
+  "all_local_noindex": true,
+  "duplicate_titles": [
+    [
+      "/advisory",
+      "/ai-consulting"
+    ]
+  ],
+  "duplicate_descriptions": [
+    [
+      "/advisory",
+      "/ai-consulting"
+    ]
+  ],
+  "h1_counts_not_one": {
+    "/contact-success": 2
+  },
+  "schema_types": {
+    "Organization": 163,
+    "WebSite": 163,
+    "BreadcrumbList": 162,
+    "CollectionPage": 6,
+    "FAQPage": 2,
+    "Article": 32,
+    "DefinedTerm": 76,
+    "TechArticle": 11,
+    "['CreativeWork', 'CaseStudy']": 13
+  },
+  "og_images_present": 0,
+  "core_pages": [
+    {
+      "route": "/",
+      "title": "Revenue and Fundraising Opportunity Leadership | Autonomy Bridge",
+      "description": "Choose a credible revenue or fundraising opportunity and put experienced leadership behind the agreed work. Explore startup, nonprofit and sales leadership paths.",
+      "canonical": "https://autonomybridge.com",
+      "robots": "noindex,nofollow",
+      "h1": [
+        "Decide where your next revenue or sustained support should come from. Put experienced leadership behind it."
+      ],
+      "ogtype": "website",
+      "schema_types": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList"
+      ],
+      "ogimage": null
+    },
+    {
+      "route": "/about",
+      "title": "About Deepak Gupta | Autonomy Bridge",
+      "description": "Meet Deepak Gupta and learn how he leads agreed commercial, fundraising operations and sales leadership work.",
+      "canonical": "https://autonomybridge.com/about",
+      "robots": "noindex,nofollow",
+      "h1": [
+        "I\u2019m Deepak Gupta. I lead the work we agree needs an owner."
+      ],
+      "ogtype": "article",
+      "schema_types": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList"
+      ],
+      "ogimage": null
+    },
+    {
+      "route": "/startups",
+      "title": "Commercialization and Revenue Leadership for B2B Startups | Autonomy Bridge",
+      "description": "Commercialization and revenue leadership for B2B startups turning customer interest and pilots into repeatable contracts.",
+      "canonical": "https://autonomybridge.com/startups",
+      "robots": "noindex,nofollow",
+      "h1": [
+        "Turn customer and market learning into repeatable revenue"
+      ],
+      "ogtype": "article",
+      "schema_types": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList"
+      ],
+      "ogimage": null
+    },
+    {
+      "route": "/nonprofits",
+      "title": "Fundraising Operations and Donor Stewardship | Autonomy Bridge",
+      "description": "Fundraising operations leadership for nonprofits seeking sustained supporter relationships and manageable stewardship.",
+      "canonical": "https://autonomybridge.com/nonprofits",
+      "robots": "noindex,nofollow",
+      "h1": [
+        "Build more sustained support from the relationships you have already developed"
+      ],
+      "ogtype": "article",
+      "schema_types": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList"
+      ],
+      "ogimage": null
+    },
+    {
+      "route": "/sales-leadership",
+      "title": "Fractional Sales Leadership for Established Businesses | Autonomy Bridge",
+      "description": "Fractional sales leadership for established B2B businesses that need to delegate team direction, forecasts and opportunities.",
+      "canonical": "https://autonomybridge.com/sales-leadership",
+      "robots": "noindex,nofollow",
+      "h1": [
+        "Fractional Sales Leadership for Established Businesses"
+      ],
+      "ogtype": "article",
+      "schema_types": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList"
+      ],
+      "ogimage": null
+    },
+    {
+      "route": "/contact",
+      "title": "Contact Autonomy Bridge",
+      "description": "Tell Deepak Gupta about a revenue, fundraising or sales leadership question. The first conversation is free.",
+      "canonical": "https://autonomybridge.com/contact",
+      "robots": "noindex,nofollow",
+      "h1": [
+        "What needs your attention?"
+      ],
+      "ogtype": "article",
+      "schema_types": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList"
+      ],
+      "ogimage": null
+    },
+    {
+      "route": "/research",
+      "title": "Research & Resources | AutonomyBridge",
+      "description": "Explore research, frameworks, applied analyses and reference material on robotics, industrial automation and deployment economics.",
+      "canonical": "https://autonomybridge.com/research",
+      "robots": "noindex,nofollow",
+      "h1": [
+        "Research & Resources"
+      ],
+      "ogtype": "article",
+      "schema_types": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList"
+      ],
+      "ogimage": null
+    },
+    {
+      "route": "/methodology",
+      "title": "Research Methodology | AutonomyBridge",
+      "description": "Explore the sources, frameworks, validation approach and limitations behind AutonomyBridge\u2019s robotics and automation research.",
+      "canonical": "https://autonomybridge.com/methodology",
+      "robots": "noindex,nofollow",
+      "h1": [
+        "Research Methodology"
+      ],
+      "ogtype": "article",
+      "schema_types": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "ogimage": null
+    }
+  ]
+}
