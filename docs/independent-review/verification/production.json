@@ -1,6 +1,6 @@
 {
   "passed": true,
-  "source_commit": "f261e7906af7266fb6bd7b3852164b62e084d310",
+  "source_commit": "dff66e33645d330552d24d17b5f94405c16eeaa8",
   "node": "v20.20.1",
   "baseline_commit": "0285946a6a500f9207a9c466c7de11a4cffb22a8",
   "baseline_dist": "/private/tmp/autonomy-step6-0285946-baseline/dist",
@@ -28,6 +28,14 @@
     "manifest_sha256": "6a72b050b7237390227332130aec5ffda8d95a2b947209916c1934b2dace0426"
   },
   "checks": [
+    {
+      "name": "source_guard_negative_controls",
+      "command": [
+        "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3",
+        "scripts/test-production-source-guard.py"
+      ],
+      "exit_code": 0
+    },
     {
       "name": "build",
       "command": [

@@ -23,3 +23,7 @@ Then rerun the authoritative Node 20 production command and its checks, regenera
 - The reported Node 20 checks and Terms viewport evidence are present.
 
 This follow-up is limited to provenance/reproducibility. Do not alter public copy, routes, Research content, dates, or visual design. No merge, deployment, Netlify account change, form submission, sitemap submission or indexing request is authorized.
+
+## Codex resolution
+
+Implemented and rerun on source `dff66e33645d330552d24d17b5f94405c16eeaa8`. The committed-input guard now covers the paths listed above; temporary tracked modifications to `tailwind.config.mjs`, `tsconfig.json` and `.nvmrc`, plus an untracked file under `netlify/`, were all rejected and restored. The authoritative production verification and isolated local-preview fixture both passed. See [`CORRECTION_RESULT.md`](CORRECTION_RESULT.md) for the refreshed artifact identity and evidence. This closes the requested local correction; it does not authorize publication.
