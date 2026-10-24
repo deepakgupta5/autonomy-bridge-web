@@ -30,22 +30,27 @@ if "mode: 'production'" not in policy:
     parser.error('source must be the production-artifact candidate; use the isolated local-preview fixture for pending checks')
 if os.environ.get('SITE_ID') != '3df07dc5-6950-4241-98eb-cf95df3d271d' or os.environ.get('CONTEXT') != 'production':
     parser.error('set the exact approved SITE_ID and CONTEXT=production explicitly; this command does not inject them')
-build_inputs = ['src', 'config', 'public', 'scripts', 'netlify', 'astro.config.mjs',
+build_inputs = ['src', 'config', 'public', 'scripts', 'netlify', 'docs/step-5/approved-copy', 'astro.config.mjs',
                 'tailwind.config.mjs', 'tsconfig.json', '.nvmrc', 'package.json',
                 'package-lock.json', 'netlify.toml']
-if subprocess.run(['git', 'diff', '--quiet', 'HEAD', '--', *build_inputs], cwd=root).returncode:
-    parser.error('commit all build inputs before verification so the reported source commit is exact')
+modified_inputs = subprocess.check_output(
+    ['git', 'diff', '--name-only', 'HEAD', '--', *build_inputs], cwd=root, text=True)
+if modified_inputs.strip():
+    parser.error('commit all build inputs before verification so the reported source commit is exact: '
+                 + ', '.join(modified_inputs.splitlines()))
 untracked_inputs = subprocess.check_output(
     ['git', 'ls-files', '--others', '--', *build_inputs], cwd=root, text=True)
 if untracked_inputs.strip():
-    parser.error('untracked build inputs prevent exact source attribution')
+    parser.error('untracked build inputs prevent exact source attribution: '
+                 + ', '.join(untracked_inputs.splitlines()))
 node = subprocess.check_output(['node', '--version'], text=True).strip()
 if not node.startswith('v20.'):
     parser.error(f'Node 20 required; found {node}')
 source = subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=root, text=True).strip()
 evidence = root / 'docs/independent-review/verification'
 evidence.mkdir(parents=True, exist_ok=True)
-env = {**os.environ, 'AB_AUDIT_DIST': str(dist), 'AB_STEP6A_DIST': str(dist)}
+env = {**os.environ, 'AB_AUDIT_DIST': str(dist), 'AB_STEP6A_DIST': str(dist),
+       'AB_BASELINE_DIST': str(baseline)}
 checks = [
     ('source_guard_negative_controls', [sys.executable, 'scripts/test-production-source-guard.py']),
     ('build', ['npm', 'run', 'build']),

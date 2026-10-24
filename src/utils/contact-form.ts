@@ -7,7 +7,7 @@ import {submitNetlifyContact} from './netlify-contact-transport.mjs';
 export function mountContactForm(form: HTMLFormElement) {
   const button = form.querySelector<HTMLButtonElement>('button[type=submit]')!;
   const status = form.querySelector<HTMLElement>('#form-status')!;
-  const missing = { name: 'Please enter your name.', email: 'Please enter your email address.', message: 'Please enter a message.' };
+  const missing = { name: 'Please enter your name.', email: 'Please enter your email address.', message: 'Please tell me what you would like help with.' };
   let busy = false;
   const audience = form.querySelector<HTMLSelectElement>('#audience');
   const selected = new URL(location.href).searchParams.get('audience');
@@ -27,8 +27,8 @@ export function mountContactForm(form: HTMLFormElement) {
     if (first) { status.textContent = 'Please check the highlighted fields.'; first.focus(); return; }
     busy = true; button.disabled = true; button.textContent = 'Sending enquiry…';
     status.textContent = 'Sending enquiry…';
-    const unknown = 'We couldn’t confirm receipt. Your enquiry may have arrived. Keep a copy of your message and any reference shown below. Please do not submit it again now; a missing confirmation does not mean delivery failed.';
-    const failed = 'Your enquiry wasn’t submitted. Your entries are still here. Please check them and try again. If the problem continues, keep a copy and return later.';
+    const unknown = 'We could not confirm receipt. Your enquiry may have arrived. Keep a copy of your message and any reference shown below. Please do not submit it again now.';
+    const failed = 'Your enquiry was not submitted. Your entries are still here. Please check them and try again. If the problem continues, keep a copy and return later.';
     const controller = new AbortController();
     const timer = window.setTimeout(() => controller.abort(), 30000);
     try {

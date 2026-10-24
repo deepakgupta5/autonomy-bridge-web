@@ -31,7 +31,7 @@ for(const outcome of ['accepted','unknown','rejected','throw']) {
  await listener({preventDefault(){}});
  assert.equal(sends,1);assert.equal(controls.message.value,'Fixture');
  if(outcome==='accepted'){assert.equal(assigned,'/contact-success');assert.equal(stored.get('ab-service-accepted'),'1');assert.equal(stored.has('ab-preview-accepted'),false);}
- else {assert.equal(assigned,undefined);assert.equal(stored.size,0);assert.match(status.textContent,outcome==='rejected'?/wasn’t submitted/:/couldn’t confirm/);}
+ else {assert.equal(assigned,undefined);assert.equal(stored.size,0);assert.match(status.textContent,outcome==='rejected'?/was not submitted/:/could not confirm/);}
  if(outcome==='unknown'||outcome==='throw'){assert.equal(button.disabled,true);await listener({preventDefault(){}});assert.equal(sends,1);}
 }
 checks.push('Wired UI: confirmed acceptance alone redirects; failure/unknown preserve inputs; unknown blocks duplicate sends; service and fixture markers distinct');

@@ -89,7 +89,7 @@ const safeJsonLd = (entry: SchemaNode) => JSON.stringify(entry).replace(/</g, '\
     <!-- Source policy stays local until publication approval; build mode cannot override it. -->
     <meta name="robots" content={deploymentPolicy.mode === 'local' ? 'noindex,nofollow' : (robots ?? metadata.robots)} />
     <link rel="canonical" href={canonicalHref ?? metadata.absoluteCanonicalUrl} />
-    <meta property="og:site_name" content="AutonomyBridge" />
+    <meta property="og:site_name" content={['/', '/startups', '/nonprofits', '/sales-leadership', '/about', '/contact'].includes(canonicalPath ?? Astro.url.pathname) ? 'Autonomy Bridge' : 'AutonomyBridge'} />
     <meta property="og:type" content={ogType ?? metadata.ogType} />
     <meta property="og:title" content={resolvedOgTitle} />
     {resolvedOgDescription && <meta property="og:description" content={resolvedOgDescription} />}

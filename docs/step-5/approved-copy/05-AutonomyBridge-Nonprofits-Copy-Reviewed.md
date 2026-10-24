@@ -1,125 +1,97 @@
-# Autonomy Bridge Nonprofits Page Copy
+## Fundraising operations support for nonprofit teams
 
-## Build more sustained support from the relationships you have already developed
+A donor is waiting for an answer. A promised update needs input from programs and finance. Your next appeal is approaching, but important conversations are still in staff members’ heads.
 
-Your team knows things about supporters that a giving record cannot tell you. Why someone first gave. What they care about. Which conversation needs following up.
+I’m Deepak Gupta of Autonomy Bridge. I lead defined fundraising operations work alongside executive directors and fundraising leads: preparing donor follow-up, coordinating supporter updates and establishing who is responsible for the next action.
 
-Bringing that knowledge together and acting on it competes with the campaign, event and reporting deadline already in front of you.
+You keep responsibility for fundraising strategy, donor relationships and decisions about asking for support. I provide operational support alongside your team’s fundraising expertise.
 
-I’m Deepak Gupta. I work with the person responsible for fundraising to choose one priority, then lead the agreed preparation and follow-through with your team.
+This work fits nonprofits with existing supporter relationships and a defined commitment that needs attention. We can start with one donor update or follow-up priority. Before starting, we agree the information, staff contributions and approvals needed; I manage the preparation and coordination rather than leaving your fundraising lead to chase every contribution.
 
-This work fits nonprofits with existing supporter relationships, where stewardship depends too heavily on individual memory. Your fundraising lead may be a development director, an executive director or someone carrying fundraising alongside other responsibilities.
+Discuss what keeps getting delayed
 
-Discuss a fundraising opportunity
+The first conversation is free. Bring the situation as it is; you do not need a finished brief.
 
-Bring the situation as it is. You don’t need to have worked out the solution.
+## Before the next appeal, who needs a conversation?
 
-## Who should we give attention to before the next appeal?
+A supporter asked about a program. A long-standing donor stopped giving. A colleague had a useful conversation, but the details never reached the person preparing the appeal.
 
-“Can we look at who needs a personal conversation before this goes out?”
+I bring together relevant giving history, contact records and staff knowledge. With your fundraising lead, I identify which relationships need attention, what we still need to know and what the team can realistically do next.
 
-Illustrative buyer questions throughout this page.
+The next step might be a personal conversation, an approved program update or a decision to wait. I lead the agreed preparation and follow-through. Your fundraising lead decides whether, when and how to ask for support.
 
-One supporter asked about a particular program. Another stopped giving after years of support. Someone had a useful conversation at an event, but the details never reached the person preparing the appeal.
+## After the thank-you, what happens next?
 
-A giving record tells you what happened. Deciding who needs a conversation, an update or time requires relationship knowledge and someone responsible for the next step.
+The gift was acknowledged. Then the next campaign took over. A question remains unanswered, or a promised update has slipped.
 
-### What I take responsibility for
+We choose one priority, such as follow-up after a first gift or reviewing relationships with supporters who have stopped giving. I coordinate the relevant history, interests and contact preferences, agree who will do what, and get responses to the person responsible for acting on them.
 
-I bring relevant giving history, contact records and staff knowledge together around one agreed question. With your fundraising lead, I examine which relationships warrant attention, what is missing and what your team can follow through on.
+We review whether contact happened, what supporters said and what needs to happen next. The routine must fit your team’s capacity and allow staff to use their judgment.
 
-We may identify a personal conversation, a program update, further stewardship or a reason to defer contact. I lead the agreed preparation and follow-through. Your fundraising lead decides whether, when and how to ask for support.
+## Who is bringing the donor update together?
 
-## We thanked them. Have we spoken to them since?
+Development is chasing contributions. Programs has sent an update. Finance is checking figures. The deadline is approaching, and nobody is sure which version is approved.
 
-“Did anyone get back to the donor who asked what happened after the campaign?”
+I take responsibility for coordinating the agreed update through to your review: identifying the contributions needed, setting due dates with the team, tracking progress and following up on missing information. I bring unresolved decisions to the responsible leader and make clear what is ready for approval and what is still outstanding.
 
-Gifts were acknowledged. Then the next campaign started. Some supporters hear from you again only when another appeal goes out. A recurring donor’s question is waiting for an answer. A supporter who stopped giving receives the same message as everyone else, although a colleague may know why they left.
+Program and finance teams approve their information. Your fundraising lead approves donor communication. Your nonprofit’s responsible leaders interpret gift restrictions and reporting requirements and approve the report.
 
-### What I take responsibility for
+We use the first round to establish how the team will meet the commitment next time.
 
-I work with your fundraising lead to choose one stewardship priority, such as following up after a first gift or reviewing relationships with supporters who have stopped giving.
+## An example: following up with first-time donors
 
-We bring together relevant history, interests and contact preferences. I coordinate preparation, agree responsibilities with the team and make sure responses reach the person who needs to act.
-
-We review whether contact happened, what supporters told you and what should happen next. The routine has to fit your team’s capacity and leave room for personal judgment.
-
-Discuss a fundraising opportunity
-
-## The donor update is due. Who is bringing it together?
-
-“Programs sent their update. Finance is checking the figures. Which version can we send?”
-
-Development keeps chasing information, reconciling versions and checking what has been approved. Each team is busy with its own responsibilities, but the commitment to the donor still needs to be met.
-
-### What I take responsibility for
-
-I lead the work needed to bring one agreed update or recurring commitment together. I establish what is required, who supplies and approves each contribution and when it is needed. We check any gift restrictions and reporting commitments with the responsible nonprofit leaders. They retain responsibility for interpreting those requirements and approving the report.
-
-I follow the work through with the people involved and bring unresolved decisions to the responsible leader. Program and finance teams approve their information. Your fundraising lead approves donor communication.
-
-We use that first round of work to establish a practical way of meeting the commitment again.
-
-## What the work can look like
-
-### Illustrative fundraising opportunity review extract
-
-Fictional scenario demonstrating an approach. This is not a client engagement or an achieved fundraising result.
+Fictional example of the approach, not a client engagement or a fundraising result.
 
 ### The situation
 
-A campaign brought in first-time donors. Acknowledgments were sent. Some supporters asked about a particular program, but the next scheduled contact is another general appeal.
+A campaign brought in first-time donors. Thank-you messages were sent. Some donors asked about a program, but the next scheduled contact is another general appeal.
 
-### My assessment
+### The first question
 
-The immediate priority is to identify unanswered questions and promised updates before deciding whether another request is appropriate.
+Which questions and promised updates still need a response before another appeal?
 
-### How the group would be selected
+### What I would review
 
-Start with first-time campaign donors whose records show a program interest, a question or a promised response. Check contact preferences and ask the relevant staff member what happened afterward. A missing note is treated as uncertainty, rather than proof that nobody followed up. A program interest does not establish a restriction on how a gift may be used.
+Start with records showing a program interest, a question or a promised response. Check contact preferences and ask the relevant staff member what happened afterward. A missing note does not prove that nobody followed up. A donor’s program interest does not, on its own, establish a restriction on the gift.
 
-### What needs resolving
+### What the team would use
 
-Was the question answered elsewhere? Is the program update ready and approved? Has the supporter requested limited contact? Does someone already own the relationship?
+A short working list showing why each relationship needs attention, what information is missing, the proposed action and the person responsible. We agree the format with your team; this does not require a separate donor database. The responsibility I take on is coordinating the information, approvals and follow-through, not replacing your CRM.
 
-### What I would lead
+Before contact, your fundraising lead reviews each proposed action. Program staff approve program information. Any fundraising request requires your nonprofit’s approval.
 
-Prepare a short working list showing the reason for attention, missing information, proposed action and responsible person. Your fundraising lead reviews each proposed action before contact. Program staff approve program information, and any fundraising request requires your nonprofit’s approval.
+### What we would check
 
-### Evidence of progress
+Was the question answered elsewhere? Is the update ready and approved? Has the donor limited contact? Does someone already own the relationship?
 
-Approved responses are sent, preferences are respected and staff record what supporters communicate. Unresolved questions return to a named owner.
+We would review whether approved responses were sent, contact preferences were respected, and staff recorded what supporters said. Unresolved questions would return to a named owner.
 
-### Review point
+We would check whether the work is appropriate and manageable before extending it to more supporters. Any effect on giving would need separate assessment over time.
 
-Assess whether this attention is appropriate and manageable before extending it to more supporters. Any effect on giving requires separate assessment over a suitable period.
+## What I bring, and what stays with you
 
-## You keep the donor relationship. I lead the agreed work around it.
+My background is in commercial leadership and operations, including coordinating work across sales, operations, engineering and delivery. The relevant experience here is managing contributions, resolving ownership and following commitments through. I apply that experience alongside your organization’s fundraising expertise.
 
-You work directly with me. We define what I will lead, my availability and what your team contributes. Your nonprofit retains fundraising judgment, solicitation decisions and financial authority. Supporter contact and materials follow your approval arrangements.
+You work directly with me. Before starting, we define what I will lead, my availability and what your team contributes. Your nonprofit retains fundraising judgment, solicitation decisions and financial authority. Donor contact and materials follow your approval arrangements.
 
-My background is in commercial leadership and operational work: bringing information together for decisions, coordinating people across teams and taking responsibility for follow-through. That is the experience I bring to the work around fundraising, alongside your organization’s fundraising expertise.
+We agree what information is needed, who may access it, where it may be processed and how it will be returned or deleted when the work ends. Donor preferences, consent and your data policies guide the work. Any additional tool requires agreement on the information involved and who checks the result.
 
-We agree what information I need, who may access it, where it may be processed, and how it will be returned or deleted when the work ends. Donor preferences, consent and your data policies guide the work. Any additional tool requires agreement on the information involved and who checks the result.
+## Start with a defined task or one question to resolve
 
-## What you’ll know before work begins
+### If the priority is clear
 
-We agree the scope, fee, responsibilities and review point before any paid work begins. You’ll know what is included and what your team needs to contribute.
+We can begin with a defined fundraising operations engagement: follow-up after a first gift, a stewardship commitment or a donor update involving several teams.
 
-The first conversation is free. We use it to decide whether an engagement is needed. If a smaller piece of work would address the question, I’ll say so.
+### If you need to choose a priority
 
-## What keeps getting pushed to next week?
+A Fundraising Opportunity Review examines one question, such as which supporter relationships need attention or why a stewardship commitment keeps slipping.
 
-### If you know what needs attention
+You receive an assessment of the evidence and gaps, a recommended priority and practical first actions. The recommendation may be to gather more information or defer work the team cannot sustain.
 
-Begin directly with a defined fundraising operations engagement: follow-up after a first gift, a stewardship commitment or bringing a donor update together across teams. We agree responsibilities, staff time and a review point before starting.
+Before paid work begins, we agree the scope, fee, responsibilities, staff time and review point. If a smaller piece of work would address the question, I’ll say so.
 
-### If you need to decide where to focus
+## What keeps getting delayed?
 
-A Fundraising Opportunity Review examines one question. Which relationships need attention? Why did long-standing supporters stop hearing from us between appeals? What prevents the team from meeting a stewardship commitment?
+Tell me about the follow-up, donor update or stewardship commitment your team cannot get to. We can use the first conversation to decide whether there is useful work for me to lead.
 
-You receive an assessment of the evidence and gaps, a recommended priority and practical first actions. The recommendation may be to gather more information or defer an activity the team cannot sustain.
-
-Tell me what keeps getting delayed. We can use the first conversation to decide whether there is useful work for me to lead.
-
-Discuss a fundraising opportunity
+Discuss what keeps getting delayed

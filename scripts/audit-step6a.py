@@ -193,29 +193,30 @@ for route in BRIDGES:
 # Extractability checks use only static main HTML; no client script is run.
 answer_sections = {
     '/startups': ['The pilot worked. Why haven’t they bought?',
-                  'Every prospect wants something different. Which market are we building for?',
-                  'Start with the work in front of you'],
-    '/nonprofits': ['Who should we give attention to before the next appeal?',
-                    'The donor update is due. Who is bringing it together?',
-                    'You keep the donor relationship. I lead the agreed work around it.'],
-    '/sales-leadership': ['We have salespeople. Why am I still the sales manager?',
-                          'The forecast says it will close. What has the customer actually committed to?',
-                          'Start with a Fractional Sales Leadership Mandate and 90-Day Commercial Plan'],
-    '/about': ['I’m Deepak Gupta. I lead the work we agree needs an owner.',
-               'My work through Autonomy Bridge', 'You work directly with me'],
-    '/contact': ['What needs your attention?', 'Tell me what you’re dealing with',
+                  'Which customers are worth building for?',
+                  'Start with the sale or the decision'],
+    '/nonprofits': ['Before the next appeal, who needs a conversation?',
+                    'Who is bringing the donor update together?',
+                    'What I bring, and what stays with you'],
+    '/sales-leadership': ['You have a sales team. You are still running sales.',
+                          'Which deals can you plan around?',
+                          'Agree the role. Set the first 90 days.'],
+    '/about': ['Meet Deepak Gupta',
+               'What I do through Autonomy Bridge', 'How we work together'],
+    '/contact': ['Contact Deepak Gupta', 'Send an enquiry',
                  'What happens next'],
     '/research': ['Research & Resources', 'Read the evidence alongside the conclusion'],
 }
 for route, names in answer_sections.items():
     headings = {text for _, text in pages[route].headings}
     assert all(name in headings for name in names), route
-for route in SERVICES:
-    assert 'Illustrative buyer questions throughout this page.' in pages[route].visible, route
-assert 'Fictional scenario demonstrating an approach. This is not a client engagement or an achieved fundraising result.' in pages['/nonprofits'].visible
-for route in ('/startups', '/sales-leadership', '/about'):
-    assert 'distinct from Autonomy Bridge engagements' in pages[route].visible, route
-assert 'USD $75 million in annual gross merchandise value (GMV) by year four' in about.visible
+for route in ('/startups', '/sales-leadership'):
+    assert 'Fictional example, not a client result.' in pages[route].visible, route
+assert 'Fictional example of the approach, not a client engagement or a fundraising result.' in pages['/nonprofits'].visible
+assert 'not an Autonomy Bridge client result' in pages['/startups'].visible
+for route in ('/sales-leadership', '/about'):
+    assert 'not Autonomy Bridge client engagements' in pages[route].visible, route
+assert 'USD $75 million in annual gross merchandise value by year four' in about.visible
 assert '/about' in contact.main_links and '/privacy-policy' in contact.main_links
 assert 'The first conversation is free. I’ll respond within 48 hours.' in contact.visible
 assert {'/insights', '/market-overview', '/frameworks', '/use-cases',

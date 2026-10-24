@@ -30,7 +30,7 @@ cases = [
      lambda s: s.replace('https://www.linkedin.com/in/deepakgupta5/',
                          'https://www.linkedin.com/in/wrong-person/', 1)),
     ('contradictory service claim', 'startups.html',
-     lambda s: s.replace('I work directly with B2B startups to choose where to focus, shape an offer customers can buy and lead the agreed commercial work through to a decision.',
+     lambda s: s.replace('I’m Deepak Gupta of Autonomy Bridge. I provide hands-on commercial leadership for B2B startups: choosing a market, shaping the offer and leading sales through to a customer decision.',
                          'Guaranteed revenue growth from every pilot.', 1)),
     ('missing canonical', 'startups.html',
      lambda s: s.replace('<link rel="canonical"', '<link rel="not-canonical"', 1)),

@@ -12,61 +12,67 @@ interface Props { route: '/' | '/startups' | '/nonprofits' | '/sales-leadership'
 const {route} = Astro.props;
 const content = {'/':home, '/startups':startups, '/nonprofits':nonprofits, '/sales-leadership':sales, '/about':about}[route];
 const titles = {
-  '/': 'Revenue and Fundraising Opportunity Leadership | Autonomy Bridge',
-  '/startups': 'Commercialization and Revenue Leadership for B2B Startups | Autonomy Bridge',
-  '/nonprofits': 'Fundraising Operations and Donor Stewardship | Autonomy Bridge',
-  '/sales-leadership': 'Fractional Sales Leadership for Established Businesses | Autonomy Bridge',
-  '/about': 'About Deepak Gupta | Autonomy Bridge',
+  "/": "Commercial Leadership and Fundraising Operations | Autonomy Bridge",
+  "/startups": "B2B Startup Commercialization | Autonomy Bridge",
+  "/sales-leadership": "Fractional Sales Leadership | Autonomy Bridge",
+  "/nonprofits": "Nonprofit Fundraising Operations | Autonomy Bridge",
+  "/about": "About Deepak Gupta | Autonomy Bridge"
 };
 const descriptions = {
-  '/': 'Choose a credible revenue or fundraising opportunity and put experienced leadership behind the agreed work. Explore startup, nonprofit and sales leadership paths.',
-  '/startups': 'Commercialization and revenue leadership for B2B startups turning customer interest and pilots into repeatable contracts.',
-  '/nonprofits': 'Fundraising operations leadership for nonprofits seeking sustained supporter relationships and manageable stewardship.',
-  '/sales-leadership': 'Fractional sales leadership for established B2B businesses that need to delegate team direction, forecasts and opportunities.',
-  '/about': 'Meet Deepak Gupta and learn how he leads agreed commercial, fundraising operations and sales leadership work.',
+  "/": "Work directly with Deepak Gupta on B2B commercialization, fractional sales leadership or nonprofit fundraising operations. Start with a free conversation.",
+  "/startups": "Choose target customers, shape a B2B offer and move enterprise sales toward paid contracts with commercial leadership from Deepak Gupta.",
+  "/sales-leadership": "Deepak Gupta provides fractional sales leadership for established B2B businesses, taking on team coaching, forecasts, important sales and commercial growth work.",
+  "/nonprofits": "Deepak Gupta helps nonprofit leaders coordinate donor follow-up, stewardship and reporting, alongside their team’s fundraising expertise.",
+  "/about": "Meet Deepak Gupta, the commercial leader behind Autonomy Bridge. Explore his operating experience and work with startups, sales teams and nonprofits."
 };
 const serviceIdentity = {
-  '/startups': {
-    pageName: 'Turn customer and market learning into repeatable revenue',
-    serviceName: 'Commercialization and revenue leadership for B2B startups',
-    description: 'I work directly with B2B startups to choose where to focus, shape an offer customers can buy and lead the agreed commercial work through to a decision.',
+  "/startups": {
+    "pageName": "Commercialization and sales leadership for B2B startups.",
+    "serviceName": "Commercialization and sales leadership for B2B startups",
+    "description": "I’m Deepak Gupta of Autonomy Bridge. I provide hands-on commercial leadership for B2B startups: choosing a market, shaping the offer and leading sales through to a customer decision."
   },
-  '/nonprofits': {
-    pageName: 'Build more sustained support from the relationships you have already developed',
-    serviceName: 'Fundraising operations and donor stewardship',
-    description: 'I work with the person responsible for fundraising to choose one priority, then lead the agreed preparation and follow-through with your team.',
+  "/nonprofits": {
+    "pageName": "Fundraising operations support for nonprofit teams",
+    "serviceName": "Fundraising operations support for nonprofit teams",
+    "description": "I’m Deepak Gupta of Autonomy Bridge. I lead defined fundraising operations work alongside executive directors and fundraising leads: preparing donor follow-up, coordinating supporter updates and establishing who is responsible for the next action."
   },
-  '/sales-leadership': {
-    pageName: 'Fractional Sales Leadership for Established Businesses',
-    serviceName: 'Fractional Sales Leadership for Established Businesses',
-    description: 'I take on the agreed sales leadership responsibilities so you can delegate the day-to-day direction of sales without appointing a full-time executive.',
-  },
+  "/sales-leadership": {
+    "pageName": "You have a sales team. You are still running sales.",
+    "serviceName": "Fractional sales leadership for established B2B businesses",
+    "description": "I’m Deepak Gupta of Autonomy Bridge. I provide fractional sales leadership for established B2B businesses. I lead the sales team, forecast process and commercial work we agree, without you appointing a full-time executive."
+  }
 } as const;
 const schema = route === '/about'
   ? [buildAboutPageSchema({
-      title: 'I’m Deepak Gupta. I lead the work we agree needs an owner.',
-      description: 'My background spans building new commercial businesses, leading teams, owning P&L and personally closing enterprise contracts.',
+      title: 'Meet Deepak Gupta',
+      description: 'I run Autonomy Bridge. My experience includes first enterprise contracts, global business leadership and responsibility for profit and loss. I have worked across sales, operations, engineering and delivery to turn customer interest into commitments a business can fulfil.',
       canonicalPath: '/about',
     }), buildPersonSchema()]
   : route === '/' ? [] : buildAudiencePageSchemas({canonicalPath: route, ...serviceIdentity[route]});
 const chunks = content.split(/\n\s*\n/).map(s=>s.trim()).filter(Boolean).filter(s=>!s.startsWith('# ') && !s.startsWith('Navigation:'));
-type Block = {kind:'h1'|'h2'|'h3'|'p'|'link', text:string, href?:string, linkedin?:boolean};
+type Block = {kind:'h1'|'h2'|'h3'|'p'|'link'|'list', text:string, href?:string, linkedin?:boolean};
 const labels: Record<string,string> = {
-  'Discuss your challenge':'/contact',
-  'Discuss your revenue opportunity':'/contact?audience=startups',
-  'Discuss a fundraising opportunity':'/contact?audience=nonprofits',
-  'Discuss fractional sales leadership':'/contact?audience=sales-leadership',
-  'Explore Startups':'/startups',
-  'Explore Nonprofits':'/nonprofits',
-  'Explore Sales Leadership':'/sales-leadership',
-  'My commercial leadership background and experience':'/about',
-  'LinkedIn':'https://www.linkedin.com/in/deepakgupta5/',
+  "Explore commercialization for startups": "/startups",
+  "Explore fundraising operations": "/nonprofits",
+  "Explore fractional sales leadership": "/sales-leadership",
+  "Discuss a customer opportunity": "/contact?audience=startups",
+  "Discuss fundraising operations": "/contact?audience=nonprofits",
+  "Discuss sales leadership": "/contact?audience=sales-leadership",
+  "Read about my background": "/about",
+  "Discuss your challenge": "/contact",
+  "Explore Research": "/research",
+  "Discuss your commercial priority": "/contact?audience=startups",
+  "Discuss your sales team": "/contact?audience=sales-leadership",
+  "Discuss what keeps getting delayed": "/contact?audience=nonprofits",
+  "View my career on LinkedIn": "https://www.linkedin.com/in/deepakgupta5/",
+  "Explore my research": "/research"
 };
 let seenH1 = false;
 const blocks: Block[] = chunks.map(s=> {
   if(s.startsWith('## ')) { const kind = seenH1 ? 'h2' : 'h1'; seenH1 = true; return {kind,text:s.slice(3)}; }
   if(s.startsWith('### ')) return {kind:'h3',text:s.slice(4)};
-  if(labels[s]) return {kind:'link',text:s,href:labels[s],linkedin:s==='LinkedIn'};
+  if(s.startsWith('- ')) return {kind:'list',text:s};
+  if(labels[s]) return {kind:'link',text:s,href:labels[s],linkedin:s==='View my career on LinkedIn'};
   return {kind:'p',text:s};
 });
 const sections: {heading:Block, blocks:Block[]}[] = [];
@@ -88,6 +94,7 @@ const linkForParagraph=(text:string)=>text==='For specialist analysis and publis
       {heading.kind==='h1'?<h1>{heading.text}</h1>:<h2>{heading.text}</h2>}
       <div class="approved-flow">
         {groupsFor(blocks).map(group=><div class="approved-group">{group.map(block=>block.kind==='h3'?<h3>{block.text}</h3>:
+          block.kind==='list'?<ul>{block.text.split('\n').map(item=><li>{item.replace(/^- /,'')}</li>)}</ul>:
           block.kind==='link'?<p class="approved-action"><a class={block.linkedin?'linkedin-button':'approved-button'} href={block.href}>{block.linkedin&&<svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M20.45 2H3.55C2.69 2 2 2.68 2 3.52v16.96c0 .84.69 1.52 1.55 1.52h16.9c.86 0 1.55-.68 1.55-1.52V3.52c0-.84-.69-1.52-1.55-1.52ZM7.93 18.74H4.98V9.2h2.95v9.54ZM6.45 7.9a1.71 1.71 0 1 1 0-3.42 1.71 1.71 0 0 1 0 3.42Zm12.29 10.84H15.8V14.1c0-1.11-.02-2.54-1.55-2.54-1.55 0-1.79 1.21-1.79 2.46v4.72H9.52V9.2h2.82v1.3h.04c.39-.74 1.35-1.53 2.78-1.53 2.98 0 3.58 1.96 3.58 4.51v5.26Z"/></svg>}{block.text}</a></p>:
           <p class:list={[{'illustrative-note':block.text.startsWith('Illustrative buyer questions'),'attribution-note':block.text.includes('prior operating role')||block.text.includes('prior operating roles')||block.text.includes('distinct from Autonomy Bridge engagements')}]}>{linkForParagraph(block.text)?<a href={linkForParagraph(block.text)!}>{block.text}</a>:block.text}</p>)}</div>)}
       </div>

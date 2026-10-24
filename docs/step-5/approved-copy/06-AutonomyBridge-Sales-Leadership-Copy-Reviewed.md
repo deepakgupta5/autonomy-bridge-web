@@ -1,145 +1,126 @@
-# Autonomy Bridge Sales Leadership Page Copy
+## You have a sales team. You are still running sales.
 
-## Fractional Sales Leadership for Established Businesses
+Proposals, pricing decisions, coaching and difficult negotiations keep coming back to you. The business has customers and salespeople, but you are still its day-to-day sales leader.
 
-You have customers, salespeople and a business to run. But important sales decisions still come back to you.
+I’m Deepak Gupta of Autonomy Bridge. I provide fractional sales leadership for established B2B businesses. I lead the sales team, forecast process and commercial work we agree, without you appointing a full-time executive.
 
-Which deals can you rely on? Who needs coaching? Should you approve the discount? Who is taking responsibility for the new market everyone agreed to pursue?
+The results below come from my prior operating roles, not Autonomy Bridge client engagements:
 
-I’m Deepak Gupta. I take on the agreed sales leadership responsibilities so you can delegate the day-to-day direction of sales without appointing a full-time executive.
+At Novus Hi-Tech, as Vice President, Mobile Robots, I owned the global autonomous mobile robotics business P&L, led a 20-person commercial team and grew revenue from USD $3 million to USD $15 million over four years. I was responsible for territory coverage, account planning, weekly deal and forecast reviews, performance scorecards, partnerships and direct enterprise selling.
 
-My background spans sales leadership, business-unit P&L and building new commercial businesses. As Vice President, Mobile Robots at Novus Hi Tech, I owned the global autonomous mobile robotics business P&L, led a 20-person commercial team and grew revenue from USD $3 million to USD $15 million over four years. At industrybuying.com, I led 25 people across sales, operations and technical integration, building the enterprise business to a USD $5 million revenue run rate in twelve months.
+At industrybuying.com, I led 25 people across sales, operations and technical integration, building the enterprise business to a USD $5 million revenue run rate in twelve months.
 
-These achievements were in prior operating roles, distinct from Autonomy Bridge engagements.
+This work fits a business with a proven offering and a sales team that needs day-to-day leadership.
 
-This work fits established B2B businesses with a proven offering, where sales has outgrown informal or founder-led management.
-
-Discuss fractional sales leadership
+Discuss your sales team
 
 Bring the responsibility you need to hand over. You don’t need a finished job description.
 
-## We have salespeople. Why am I still the sales manager?
+## A sales team that still waits for you
 
-“Every important proposal ends up with me. If I stop chasing, things stop moving.”
+Your salespeople manage accounts and speak to prospects. You still handle the pricing exceptions, difficult proposals, negotiations and coaching.
 
-Illustrative buyer questions throughout this page.
+You know the customers and the history, so stepping in is often the quickest answer. It also leaves you responsible for keeping sales moving.
 
-Your team manages accounts and speaks to prospects. But pricing exceptions, negotiations, difficult customer questions and coaching keep returning to you.
+### Give the team a sales leader
 
-You know the customers and the history, so stepping in is often the quickest answer. Over time, the team learns to wait for your decision. Running sales becomes another job you cannot put down.
+I run sales meetings, set priorities, review important opportunities and coach the people responsible for them.
 
-The team keeps coming back to you because important decisions still need your authority and judgment. Handing over sales leadership means giving someone responsibility for those decisions, with clear limits on what they can approve.
+I work on proposals with the salesperson and delivery team, step into negotiations that need senior involvement and give the team direction between reviews.
 
-### What I take responsibility for
+We agree the time needed to cover meetings, coaching and important opportunities, access between sessions and how urgent decisions will be handled.
 
-I run the agreed sales meetings, set priorities, review important opportunities and coach the people responsible for them.
+## Which deals can you plan around?
 
-When a proposal needs work, I lead that work with the salesperson and the relevant delivery team. When a negotiation needs senior involvement, I step in within the authority we have agreed. When someone needs direction, they have a sales leader to turn to.
+Closing dates keep moving. The forecast has values and opportunities, but can it support your hiring, spending and delivery decisions?
 
-We define which decisions I make and which come back to you. You retain control of major commitments and the accounts or exceptions you choose to keep.
+A proposal may be with the customer while the budget holder is still uninvolved. A salesperson may expect a signature before procurement has even started.
 
-## The forecast says it will close. What has the customer actually committed to?
+### Put customer evidence behind the forecast
 
-“It was supposed to close last month. Now it’s in this month’s forecast, and I still don’t know what changed.”
+I take responsibility for the forecast process and team follow-through. For important opportunities, we check the reason to buy, decision-makers, budget, approval requirements and the next action the customer needs to take.
 
-The CRM has opportunities, values and closing dates. Yet you cannot confidently use the forecast to make hiring, spending or delivery decisions.
+I coach salespeople on the gaps, agree specific actions and check what happened. You get a view of expected revenue, the evidence behind it, the risks and where I am intervening.
 
-A proposal has been sent, but the budget holder has not been involved. A salesperson expects a signature, but procurement has not started. An opportunity stays in the forecast because nobody has challenged the assumptions behind it.
+Discuss your sales team
 
-A closing date needs a basis in the customer’s buying process. Someone has to test that basis, challenge the assumptions and take responsibility for the forecast.
+## Who is leading the next stage of growth?
 
-### What I take responsibility for
+You have agreed to pursue a new market. The existing business keeps taking priority.
 
-I own the agreed forecast process and the sales team’s follow-through. We examine each important opportunity: the customer’s reason to act, access to decision-makers, available budget, approval requirements and next buyer action.
+A new territory, offer, partner channel or larger customer group needs decisions about pricing, sales capacity and delivery. Your team owns parts of the work, but you are still expected to bring it together.
 
-I coach salespeople on the gaps, agree specific actions and check whether they happened. Your forecast identifies the evidence, risks and decisions behind the expected revenue. You can see what we reasonably expect, where intervention is needed and what I am doing about it.
+### Put someone in charge of the work
 
-Discuss fractional sales leadership
+I lead the commercial initiative we define, set priorities and direct the work with your sales and delivery teams.
 
-## We agreed where to grow. Who is leading the work?
+We test the customer opportunity, shape the offer and choose which accounts or partners to pursue.
 
-“We’ve talked about the new market for months. Everyone supports it, but the existing business keeps taking priority.”
+Before committing more capacity, we review customer response, commercial viability and delivery demands. I recommend whether to continue, change direction, stop or hand the work to an internal leader.
 
-A new territory, offer, partner channel or larger-account segment requires decisions about customers, pricing, sales capacity and what delivery can support. Each person owns part of the work, but the founder is still expected to bring it together.
+## A forecast the business cannot yet rely on
 
-### What I take responsibility for
+### An illustrative sales leadership review
 
-I lead the agreed commercial initiative, establish the initial priorities and direct the work with your sales and delivery teams.
-
-Together, we test the customer opportunity, shape the offer and agree account or partner priorities. I resolve commercial decisions within my authority and bring major commitments back to leadership for approval.
-
-We assess customer response, commercial viability and delivery demands before committing further capacity. At the review point, I recommend whether to continue, change direction, stop or transfer responsibility to an internal leader.
-
-## What the work can look like
-
-### Illustrative sales leadership review extract
-
-Fictional scenario demonstrating an approach. This is not a client engagement or an achieved result.
+Fictional example, not a client result.
 
 ### The situation
 
-The founder reviews every major proposal. Several contracts appear in the quarter’s forecast, but closing dates have moved repeatedly. Delivery needs to know which projects to prepare for.
+The founder reviews every major proposal. Several contracts remain in the quarter’s forecast despite repeated delays. Delivery needs to know which projects to prepare for.
 
-### My assessment
+### What is missing
 
-The founder is carrying both sales management and final commercial approval. The forecast does not consistently distinguish customer commitment from salesperson expectation.
+The founder is doing both sales management and final commercial approval. The forecast mixes what salespeople expect with what customers have committed to.
 
-### What I would examine
+### Questions to answer
 
-For each important opportunity: who can approve the purchase, what budget is available, which conditions remain unresolved and what buyer action supports the proposed date. Review where the team waits for the founder and whether those decisions could be delegated.
+Who can approve each purchase? Is there a budget? What conditions remain open? What customer action supports the closing date? Which decisions are waiting for the founder, and which could be delegated?
 
-### What I would lead
+### What I would do
 
-Take over the weekly sales review and individual coaching. For an opportunity forecast to close after a proposal presentation, establish whether the budget holder has agreed the scope and whether procurement has confirmed its process. Update the forecast if that evidence is missing.
+Take over weekly sales reviews and individual coaching. Check whether the budget holder has agreed the scope and procurement has confirmed its process. Revise forecast assumptions where that evidence is missing.
 
-Agree next actions with each salesperson, coordinate proposal work with delivery and review whether the buyer has taken the expected step. Give the founder a concise view of expected revenue, uncertainty and decisions requiring approval.
+Agree actions with each salesperson, coordinate proposal work with delivery and check the customer’s next step. Give the founder a concise view of expected revenue, uncertainty and decisions needing approval.
 
-### Decision requested from the founder
+### What the founder decides
 
-Set my authority for pricing and negotiation. Identify strategic accounts, delivery commitments and exceptions requiring founder approval.
+Set my pricing and negotiation authority. Identify strategic accounts, delivery commitments and exceptions that still need founder approval.
 
-### Evidence of progress
+### What progress would look like
 
-Forecast opportunities have an explicit basis, unresolved risks and next buyer actions. Routine decisions come to me. Delivery understands which work is committed and which remains uncertain.
+Each forecast opportunity has a stated basis, known risks and a next buyer action. Routine sales decisions come to me. Delivery can distinguish committed work from uncertain opportunities.
 
-### Review point
+### What we would review
 
-Assess whether the founder can step out of routine sales management, whether the team follows through and whether forecast assumptions hold. Use the evidence to adjust the remit.
+Can the founder step out of routine sales management? Is the team following through? Do the forecast assumptions hold? Use those answers to adjust my responsibilities.
 
-## You delegate sales leadership. You keep the authority we agree.
+## Clear responsibilities. Clear limits.
 
-You work directly with me. The mandate specifies the team and opportunities I lead, the decisions I can make and the commitments requiring your approval.
+You work directly with me. We define the team and opportunities I lead, my responsibility for sales priorities, forecasts, coaching and follow-through, and the decisions I can make.
 
-Before agreeing the mandate, we work through the team’s coaching needs, important opportunities, meetings and decisions that need coverage. We then agree the time required, access between scheduled sessions and what happens when an urgent decision cannot wait.
+Your business retains executive and financial approvals, contract authority and formal employment decisions, including compensation, hiring, termination and disciplinary action. We also identify any strategic accounts or exceptions you want to keep.
 
-I take responsibility for agreed sales priorities, the forecast process, coaching and team follow-through. Your organization retains executive and financial approvals, contract authority and formal employment decisions, including compensation, hiring, termination and disciplinary action.
+## Scope and fees, agreed first
 
-## What you’ll know before work begins
+Before paid work begins, we agree the scope, fee, responsibilities, contribution needed from your team and when to review progress.
 
-We agree the scope, fee, responsibilities and review point before any paid work begins. You’ll know what is included and what your team needs to contribute.
+The first conversation is free. We decide whether there is useful work for me to lead. If a smaller piece of work would address the issue, I’ll say so.
 
-The first conversation is free. We use it to decide whether an engagement is needed. If a smaller piece of work would address the question, I’ll say so.
+## Agree the role. Set the first 90 days.
 
-## Start with a Fractional Sales Leadership Mandate and 90-Day Commercial Plan
+We agree the sales leadership responsibilities I will take over and the priorities for the first 90 days, recorded in a Fractional Sales Leadership Mandate and 90-Day Commercial Plan:
 
-We establish what you need to delegate and what sales leadership needs to achieve first. The plan defines:
+- The customers, opportunities or growth initiative to focus on.
+- The responsibilities I take over and the decisions you retain.
+- The sales reviews, coaching and customer actions, with the support needed from sales, marketing and delivery.
+- The measures and review points for assessing progress.
 
-The customers, opportunities or growth initiative that deserve attention.
+If the priority is clear, we can begin with that role defined. Otherwise, we work it out with you and the team as part of the initial work.
 
-The responsibilities I take over and the decisions you retain.
+At the review point, we decide whether continued fractional leadership, an internal handover, a full-time appointment or a narrower engagement fits the business.
 
-The reviews, coaching and customer actions that begin, with the contribution needed from sales, marketing and delivery.
+## What do you need to hand over?
 
-The measures and review points used to assess progress.
+Bring the sales responsibility, forecast concern or growth initiative that keeps coming back to you. We can use the first conversation to decide what I could take on.
 
-If the priority is already clear, we can begin directly with that mandate. Otherwise, we establish it with you and the team as part of the initial work.
-
-At the review point, we decide whether continued fractional leadership, an internal handover, a full-time appointment or a narrower engagement best fits the business.
-
-## What are you still carrying that a sales leader should own?
-
-Bring the sales responsibility, forecast concern or growth initiative that keeps returning to your desk.
-
-We can use the first conversation to establish what you need to delegate and whether there is useful work for me to lead.
-
-Discuss fractional sales leadership
+Discuss your sales team

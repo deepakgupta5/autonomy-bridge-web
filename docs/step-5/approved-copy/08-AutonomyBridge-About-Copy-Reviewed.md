@@ -1,81 +1,81 @@
-# Autonomy Bridge About Page Copy
+## Meet Deepak Gupta
 
-## I’m Deepak Gupta. I lead the work we agree needs an owner.
+I run Autonomy Bridge. My experience includes first enterprise contracts, global business leadership and responsibility for profit and loss. I have worked across sales, operations, engineering and delivery to turn customer interest into commitments a business can fulfil.
 
-My background spans building new commercial businesses, leading teams, owning P&L and personally closing enterprise contracts.
+Since 2024, I have run Autonomy Bridge, working with technology startups on commercial strategy, sales execution and repeatable ways of working that teams can take over.
 
-Since 2024, I have run Autonomy Bridge, working with technology startups on commercial strategy and execution and building repeatable systems that can be handed off. We start with your situation, establish what needs to move forward and agree what I will personally lead.
+Today, I offer commercial support for startups, fractional sales leadership for established businesses and defined fundraising operations support for nonprofits. You work directly with me, within responsibilities we agree before starting.
 
-I take on work where my experience fits the responsibility, and make the limits clear before we start.
+View my career on LinkedIn
 
-LinkedIn
+## Experience from prior operating and interim roles
 
-## Turning an emerging offering into something customers can buy
+These results are from my prior operating and interim roles, not Autonomy Bridge client engagements.
 
-Early customers often see possibilities before a company has settled its offer, pricing or route to market. Their interest creates choices as well as opportunities.
+### Ottonomy: the first ten enterprise contracts
 
-As Vice President, Revenue and the first commercial hire at Ottonomy, an autonomous delivery robotics company, I personally originated and closed its first ten enterprise contracts and built a USD $3 million annualized revenue run rate.
+As Vice President, Revenue and the first commercial hire at autonomous delivery robotics company Ottonomy, I personally originated and closed its first ten enterprise contracts and built an annualized revenue run rate of USD $3 million.
 
-The work included defining pilots, agreeing success criteria, developing purchase and Robot-as-a-Service terms, and working through procurement, safety and deployment requirements.
+That meant defining pilots and success criteria, developing purchase and Robot-as-a-Service terms, and working through procurement, safety and deployment requirements.
 
-In a subsequent interim go-to-market role for an AI-driven routing offering, I conducted discovery with 30 target enterprise accounts and secured three pilot commitments. That work also covered positioning, pricing hypotheses, qualification criteria and responsibilities across product, engineering and delivery.
+### AI-driven routing: discovery and pilot commitments
 
-Customer interest has to become something the customer can approve and the company can deliver. What we learn should make the next opportunity easier to assess and pursue.
+In a subsequent interim go-to-market role for an AI-driven routing offering, I conducted discovery with 30 target enterprise accounts and secured three pilot commitments.
 
-## Leading people and taking responsibility for performance
+The work covered positioning, pricing hypotheses, qualification criteria and responsibilities across product, engineering and delivery.
 
-As Vice President, Mobile Robots at Novus Hi Tech, I owned the global autonomous mobile robotics business P&L, built and coached a 20-person commercial team, and grew revenue from USD $3 million to USD $15 million over four years across North America, Europe and Asia.
+### Novus Hi-Tech: leading a global robotics business
 
-My responsibilities included territory coverage, account planning, weekly deal and forecast reviews, performance scorecards, partnerships and direct enterprise selling. Customer commitments also required close coordination with engineering and delivery.
+As Vice President, Mobile Robots at Novus Hi-Tech, I owned the global autonomous mobile robotics business profit and loss, built and coached a 20-person commercial team, and grew revenue from USD $3 million to USD $15 million over four years across North America, Europe and Asia.
 
-At industrybuying.com, I led 25 people across sales, operations and technical integration and built the enterprise business to a USD $5 million revenue run rate in twelve months.
+I was responsible for territory coverage, account planning, weekly deal and forecast reviews, performance scorecards, partnerships and direct enterprise selling. I also worked with engineering and delivery to align customer commitments with what the business could deliver.
 
-That experience informs the sales leadership I offer: directing people, challenging the forecast, resolving commercial decisions and keeping customer commitments aligned with delivery capacity.
+### industrybuying.com: building an enterprise business
 
-## Finding a commercial route around a buying constraint
+At industrybuying.com, I led 25 people across sales, operations and technical integration and built the enterprise business to a revenue run rate of USD $5 million in twelve months.
 
-Sometimes the obstacle is how the customer can buy.
+### power2sme: addressing customers’ purchasing constraints
 
-At power2sme, a B2B fintech platform, I conceived bank-financing partnerships to address industrial customers’ purchasing-capital constraints. I negotiated partner economics and risk allocation and helped scale the platform from zero to USD $75 million in annual gross merchandise value (GMV) by year four.
+At B2B fintech platform power2sme, I conceived bank-financing partnerships to address industrial customers’ purchasing-capital constraints. I negotiated partner economics and risk allocation and helped scale the platform from zero to USD $75 million in annual gross merchandise value by year four.
 
-That experience is relevant when growth requires a different offer, financing arrangement or route to market. The approach has to work for the buyer, the business and the people responsible for delivery.
+Gross merchandise value measures the value of transactions through the platform. It is not revenue.
 
-These achievements were in prior operating and interim roles. They are distinct from Autonomy Bridge engagements. My full career history is available on LinkedIn.
+## What I do through Autonomy Bridge
 
-## My work through Autonomy Bridge
+### For startups
 
-Autonomy Bridge serves three audiences, with a different remit for each.
+I help choose commercial priorities, shape offers and pricing, and lead agreed enterprise opportunities through the buying process. Since 2024, my work has included customer and market selection, enterprise deal stages and moving pilots toward deployment.
 
-For startups, I help choose commercial priorities, shape offers and pricing, and lead agreed enterprise opportunities through the buying process. My work since 2024 has included customer and market selection, enterprise deal stages and pilot-to-deployment execution.
+### For established businesses
 
-For established businesses, I offer Fractional Sales Leadership: agreed responsibility for sales priorities, team coaching, forecasting and important opportunities. The mandate defines what you delegate and which decisions you retain.
+I offer fractional sales leadership: responsibility for agreed sales priorities, team coaching, forecasting and important opportunities. We define which responsibilities you delegate and which decisions you retain.
 
-For nonprofits, I offer leadership of defined fundraising operations work, alongside the organization’s fundraising expertise. That can mean choosing a stewardship priority or coordinating commitments across development, finance and programs.
+### For nonprofits
 
-## Community involvement and nonprofit work
+I lead defined fundraising operations work alongside your organization’s fundraising expertise. That can include a stewardship priority or coordinating commitments made to donors across development, finance and programs.
 
-I mentor university spinouts through Innovation UBC and early-stage founders through New Ventures BC. The conversations concern customer validation, commercial priorities and how to turn an emerging capability into something a customer can buy. I also volunteer with the BC SPCA.
+My contribution is operational. Your organization retains fundraising judgment, donor relationships, solicitation decisions and financial authority.
 
-My contribution to nonprofit work is operational: bringing information together for decisions, coordinating people across teams and taking responsibility for follow-through.
+## Mentoring and volunteering
 
-Your organization retains fundraising judgment, donor relationships, solicitation decisions and financial authority. I work alongside the person responsible for fundraising to put the agreed priority into practice.
+I mentor university spinouts through Innovation UBC and early-stage founders through New Ventures BC, focusing on customer validation and commercial priorities. I also volunteer with the BC SPCA.
 
 My mentoring and volunteering are separate from paid Autonomy Bridge engagements.
 
-## You work directly with me
+## How we work together
 
-I personally lead the agreed engagement. Before starting, we define responsibilities, availability, decision authority and what your team contributes.
+I personally lead the agreed engagement. Before starting, we define responsibilities, availability, decision authority and what your team contributes. I take on work that fits my experience and make the limits clear.
 
-Where specialist expertise is needed, we agree the appropriate contributors and their responsibilities. Decisions and next actions are documented so the work can be followed and handed over. At an agreed review point, we assess whether to continue, revise, stop or transfer responsibility.
+If specialist expertise is needed, we agree the appropriate contributors and their responsibilities. We document decisions and next actions so the work can be followed and handed over. At an agreed review point, we decide whether to continue, revise, stop or transfer responsibility.
 
-## Systems and AI support the work
+Analysis, automation and AI may support the work where useful. Before using a new approach, we establish its purpose, information access, human checks and ongoing owner.
 
-Analysis, automation and AI may help where they serve the chosen commercial or fundraising priority. We establish the purpose, information access, human checks and ongoing owner before putting a new approach into use.
+My published research covers analytical work, including robotics commercialization and deployment.
 
-My published Research provides a separate view of my analytical work, including robotics commercialization and deployment.
+Explore my research
 
-## What do you need someone to take responsibility for?
+## Does my experience fit the work you need done?
 
-You may have a question that needs examining or a clear priority that needs an owner. The first conversation is free. We can use it to decide whether my experience fits the work you need done.
+Bring a commercial question, a sales leadership need or a fundraising operations priority. The first conversation is free. We can use it to decide whether I’m the right person to help and what I would take responsibility for.
 
 Discuss your challenge

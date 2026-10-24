@@ -40,13 +40,13 @@ async (page) => {
   const endpoint = '**/__preview/contact';
   await page.route(endpoint, route=>route.fulfill({status:422,body:'Rejected fixture'}));
   await page.getByRole('button',{name:'Send enquiry'}).click();
-  await page.waitForFunction(()=>document.querySelector('#form-status').textContent.includes('wasn’t submitted'));
+  await page.waitForFunction(()=>document.querySelector('#form-status').textContent.includes('was not submitted'));
   check(await page.locator('#message').inputValue()==='Controlled interface test. No real delivery.', 'Confirmed failure retains entered information');
   check(await page.getByRole('button',{name:'Send enquiry'}).isEnabled(), 'Confirmed failure permits retry');
   await page.unroute(endpoint);
   await page.route(endpoint, route=>route.fulfill({status:200,contentType:'text/html',body:'Ordinary page, not acceptance'}));
   await page.getByRole('button',{name:'Send enquiry'}).click();
-  await page.waitForFunction(()=>document.querySelector('#form-status').textContent.includes('couldn’t confirm'));
+  await page.waitForFunction(()=>document.querySelector('#form-status').textContent.includes('could not confirm'));
   check(page.url().includes('/contact'), 'HTTP 200 HTML never becomes acceptance');
   check(await page.getByRole('button',{name:'Send enquiry'}).isDisabled(), 'Unknown outcome prevents immediate duplicate submission');
   check(await page.locator('#name').inputValue()==='Local Preview Test', 'Unknown outcome retains entered information');
@@ -55,7 +55,7 @@ async (page) => {
   for (const [name,value] of Object.entries({name:'Local Preview Test',email:'preview@example.invalid',company:'Local test only',message:'Fixture only'})) await page.locator('#'+name).fill(value);
   await page.route(endpoint, route=>route.abort('failed'));
   await page.getByRole('button',{name:'Send enquiry'}).click();
-  await page.waitForFunction(()=>document.querySelector('#form-status').textContent.includes('couldn’t confirm'));
+  await page.waitForFunction(()=>document.querySelector('#form-status').textContent.includes('could not confirm'));
   check(await page.locator('#message').inputValue()==='Fixture only','Network failure is unknown and preserves input');
   await page.unroute(endpoint);
   await page.goto(base+'/contact');

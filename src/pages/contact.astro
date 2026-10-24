@@ -4,40 +4,40 @@ import MainLayout from '../components/MainLayout.astro';
 import '../styles/approved-pages.css';
 import {buildContactPageSchema} from '../utils/schema';
 ---
-<MainLayout title="Contact" canonicalPath="/contact" seoTitle="Contact Autonomy Bridge" seoDescription="Tell Deepak Gupta about a revenue, fundraising or sales leadership question. The first conversation is free." ogType="website" schema={[buildContactPageSchema({title: 'What needs your attention?', description: 'Tell me what is happening and what you need to move forward. You don’t need to choose a service or arrive with a finished brief.', canonicalPath: '/contact'})]} showLocalSubnav={false}>
+<MainLayout title="Contact" canonicalPath="/contact" seoTitle="Contact Deepak Gupta | Autonomy Bridge" seoDescription="Discuss commercialization, fractional sales leadership or fundraising operations with Deepak Gupta. The first conversation is free. Response within 48 hours." ogType="website" schema={[buildContactPageSchema({title: 'Contact Deepak Gupta', description: 'Tell me what is happening. You do not need to choose a service or prepare a formal brief.', canonicalPath: '/contact'})]} showLocalSubnav={false}>
 <article class="approved-page approved-contact">
 <header class="approved-hero">
-<h1>What needs your attention?</h1>
-<p>A customer is interested, but the contract isn’t moving. Supporter follow-up keeps slipping. Sales decisions still come back to you.</p>
-<p>Tell me what is happening and what you need to move forward. You don’t need to choose a service or arrive with a finished brief.</p>
-<p><a href="/about">You can read about my background and experience before getting in touch.</a></p>
+<h1>Contact Deepak Gupta</h1>
+<p>Talk to me about B2B commercialization, fractional sales leadership or nonprofit fundraising operations.</p>
+<p>Tell me what is happening. You do not need to choose a service or prepare a formal brief.</p>
 <p>The first conversation is free. I’ll respond within 48 hours.</p>
+<p><a href="/about">Read about my background</a></p>
 </header>
 <div class="contact-layout">
-<section><h2>Tell me what you’re dealing with</h2>
+<section><h2>Send an enquiry</h2>
 {deploymentPolicy.mode === 'local' && <p class="preview-contact-note">Local review form. No real enquiry or notification is sent.</p>}
 {(deploymentPolicy.mode === 'local' || deploymentPolicy.formEnabled) ? <form name="contact" method="POST" action="/contact-success" data-netlify="true" netlify-honeypot="bot-field" novalidate>
 <input type="hidden" name="form-name" value="contact" />
 <input type="hidden" name="submission-reference" value="" />
 <input type="hidden" name="receipt-kind" value="autonomybridge-contact-v1" />
-<div hidden><label for="bot-field">Leave blank</label><input id="bot-field" name="bot-field" tabindex="-1" autocomplete="off" /></div>
+<div hidden><label for="bot-field">Leave blank.</label><input id="bot-field" name="bot-field" tabindex="-1" autocomplete="off" /></div>
 <p id="form-status" role="alert" tabindex="-1"></p>
 <div class="field"><label for="name">Your name</label><input id="name" name="name" required autocomplete="name" aria-describedby="name-error"/><p class="field-error" id="name-error"></p></div>
 <div class="field"><label for="email">Email address</label><input id="email" name="email" type="email" required autocomplete="email" aria-describedby="email-error"/><p class="field-error" id="email-error"></p></div>
-<div class="field"><label for="company">Organization</label><input id="company" name="company" autocomplete="organization" /></div>
-<div class="field"><label for="audience">What brings you here?</label><p id="audience-hint">Optional. Choose the closest fit.</p>
-<select id="audience" name="audience" aria-describedby="audience-hint"><option value="">Not sure yet</option><option value="startups">Startups</option><option value="nonprofits">Nonprofits</option><option value="sales-leadership">Sales Leadership — For established businesses</option></select></div>
-<div class="field"><label for="message">What is happening?</label><p id="message-hint">What prompted you to get in touch? Where is progress getting stuck, or what responsibility do you need someone to take on?</p><p>A few sentences are enough. If there’s a live opportunity or a deadline, include it in your message.</p><p>Please leave out confidential customer, donor or employee information.</p><textarea id="message" name="message" required rows="7" aria-describedby="message-hint message-error"></textarea><p class="field-error" id="message-error"></p></div>
-<p>I use your details only to respond to your enquiry and discuss potential work. I personally handle enquiries. See the privacy notice for retention and request details.</p>
+<div class="field"><label for="company">Organization (optional)</label><input id="company" name="company" autocomplete="organization" /></div>
+<div class="field"><label for="audience">What brings you here? (optional)</label>
+<select id="audience" name="audience"><option value="">Not sure yet</option><option value="startups">Startup commercialization</option><option value="nonprofits">Nonprofit fundraising operations</option><option value="sales-leadership">Fractional sales leadership</option></select></div>
+<div class="field"><label for="message">What would you like help with?</label><p id="message-hint">A few sentences are enough. Tell me what needs to happen, what is getting in the way and whether there is a deadline.</p><p>Please leave out confidential customer, donor or employee information.</p><textarea id="message" name="message" required rows="7" aria-describedby="message-hint message-error"></textarea><p class="field-error" id="message-error"></p></div>
+<p>I personally handle enquiries and use your details only to respond and discuss potential work. The privacy notice explains retention and how to make a request.</p>
 <p><a href="/privacy-policy">Privacy notice</a></p>
 <button class="approved-button" type="submit" disabled>Send enquiry</button>
-<noscript><p>This form needs JavaScript to submit and verify receipt. Enable JavaScript and reload this page to use it. No enquiry has been sent.</p></noscript>
+<noscript><p>This form needs JavaScript to submit and confirm receipt. Enable JavaScript and reload the page. No enquiry has been sent.</p></noscript>
 </form>:<p role="status">The enquiry form is temporarily unavailable. Please return later. No enquiry has been sent.</p>}
 </section>
 <section><h2>What happens next</h2>
-<p>I’ll read your enquiry personally. In our first conversation, we’ll discuss what is happening, what you need help leading and whether an engagement makes sense.</p>
-<p>If the priority is clear, we can discuss a defined engagement directly. Otherwise, we can decide what a focused review should address.</p>
-<p>Before any paid work begins, we agree the scope, fee, responsibilities and review point. If a smaller piece of work would address the question, I’ll say so.</p>
+<p>I’ll read your enquiry personally. In our first conversation, we’ll discuss the work, the responsibility you want to delegate and whether I can help.</p>
+<p>If the work is already clear, we can discuss an engagement directly. If it is not, we can decide whether a focused review would be useful.</p>
+<p>Before paid work starts, we agree the scope, fee, responsibilities and review point. If a smaller piece of work would address the question, I’ll say so.</p>
 <p>Deepak Gupta<br/>Autonomy Bridge</p>
 </section></div>
 </article>

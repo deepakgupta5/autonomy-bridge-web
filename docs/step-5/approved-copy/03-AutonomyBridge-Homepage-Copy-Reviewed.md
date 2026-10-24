@@ -1,93 +1,91 @@
-# Autonomy Bridge Homepage Copy
+## Commercial leadership and fundraising operations.
 
-Navigation: Startups · Nonprofits · Sales Leadership · About · Research · Contact
-
-## Decide where your next revenue or sustained support should come from. Put experienced leadership behind it.
-
-Autonomy Bridge helps you choose where to focus, drawing on what you already know about customers, supporters and markets. I’m Deepak Gupta. I lead the agreed commercial or fundraising work with your team.
+I’m Deepak Gupta of Autonomy Bridge. I help B2B startups choose markets and win customers, provide fractional sales leadership for established businesses, and coordinate fundraising operations alongside nonprofit teams. You work directly with me, from deciding what needs attention to leading the work.
 
 Discuss your challenge
 
-## Where do you need leadership?
+The first conversation is free.
 
-### Startups
+## Who I work with
 
-Turn customer and market learning into repeatable revenue.
+### B2B startups
 
-For B2B startups selling complex products, technology or services. Choose which customers and opportunities to pursue, shape an initial project the customer can approve, and lead the commercial work through to a decision.
+Commercialization and enterprise sales for founders bringing complex products, technology or services to market.
 
-Explore Startups
+Choose the customers to pursue, shape an offer they can buy, and move the opportunity through their approval process.
+
+Explore commercialization for startups
 
 ### Nonprofits
 
-Build more sustained support from the relationships you have already developed.
+Fundraising operations and donor stewardship for teams that need help putting their priorities into practice.
 
-Choose where to focus fundraising effort and establish stewardship your team can maintain, with donor preferences, trust and staff capacity guiding the work.
+Bring donor records and staff knowledge together, prepare supporter updates, and coordinate the people responsible for follow-through.
 
-Explore Nonprofits
+Explore fundraising operations
 
-### Established Businesses
+### Established businesses
 
-Fractional Sales Leadership when too much still depends on the founder.
+Fractional sales leadership for established B2B businesses that need someone to lead the sales team.
 
-Get senior leadership for sales priorities, team coaching, forecast accountability and important opportunities, without a full-time executive appointment.
+Delegate sales reviews, coaching and forecast management to an experienced leader, without appointing a full-time sales executive.
 
-Explore Sales Leadership
+Explore fractional sales leadership
 
-## Recognize the decision on your desk
+## What I take responsibility for
 
 ### The pilot worked. The customer has not committed.
 
-Your operational sponsor sees value, but the budget holder, procurement team and people responsible for deployment still need an approvable purchase.
+The operational sponsor sees value, but budget, procurement and deployment questions remain unresolved.
 
-I lead the agreed commercial case, shape the initial project and coordinate commercial terms and the steps needed for customer approval. I drive follow-through to a customer decision, with technical commitments owned by the people responsible for delivery.
+I work through those questions with the buyer, shape the commercial proposal and coordinate the steps to a decision. Your technical and delivery teams confirm what can be delivered.
 
-Discuss your revenue opportunity
+Discuss a customer opportunity
 
-### Supporters give once, but the relationship receives little attention afterward.
+### Supporter follow-up keeps slipping.
 
-Campaigns and events bring people in. Immediate demands then crowd out the personal contact and consistent stewardship that sustained support requires.
+The donor update needs information from programs and finance. Staff know what was promised, but nobody has brought it together.
 
-I work with the person responsible for fundraising to choose one stewardship priority and combine giving history with staff knowledge. I lead the work to establish appropriate contact, assign responsibilities and put a manageable stewardship routine into practice. Your nonprofit retains donor relationships and solicitation decisions.
+I manage preparation of the update with your fundraising lead: agreeing contributions, following up on missing information and getting the material ready for review. Your team approves donor communication, retains donor relationships and decides what to ask for.
 
-Discuss a fundraising opportunity
+Discuss fundraising operations
 
 ### You have salespeople, but you are still the sales manager.
 
-Important proposals, pricing decisions, negotiations and coaching keep returning to you. The team is active, yet you still have to determine which opportunities are progressing and where to intervene.
+Proposals, negotiations and coaching keep coming back to you. You are still checking which deals will close and where the team needs help.
 
-I run sales reviews, challenge deal assumptions, coach the team and take accountability for the forecast process and follow-through within the agreed mandate. Delegated decisions and commitments requiring your approval are defined at the outset.
+I run sales reviews, challenge deal assumptions, coach the team and manage the forecast process. We agree which decisions I can make and which come back to you.
 
-Discuss fractional sales leadership
+Discuss sales leadership
 
-## Work directly with the person leading the engagement
+## Work directly with an experienced operator
 
-I personally lead the agreed work with your team.
+At Novus Hi-Tech, I grew revenue in the autonomous mobile robotics business from USD $3 million to USD $15 million over four years across North America, Europe and Asia. At Ottonomy, I personally originated and closed the first ten enterprise contracts. These results come from my prior operating roles, not Autonomy Bridge engagements.
 
-Each engagement defines my responsibilities, decision authority, availability and review cadence, along with the people and expertise required. Your organization retains executive, financial and contractual approvals. Formal employment and HR decisions remain with your organization.
+At Autonomy Bridge, I personally lead the engagement. Before work begins, we agree my responsibilities, availability and decision authority, including any specialist support needed. We define which decisions I can make and which approvals remain with your organization.
 
-My commercial leadership background and experience
+Read about my background
 
-## Begin with the question you have
+## How an engagement starts
 
-### When the priority is unclear
+### You need to choose a priority
 
-A Commercial Opportunity Review or Fundraising Opportunity Review examines one question, assesses the options and recommends a direction and first actions.
+A focused Commercial Opportunity Review or Fundraising Opportunity Review examines the question, compares the options and recommends what to do next.
 
-### When the work is already clear
+### You already know what needs doing
 
-Begin directly with a defined commercialization mandate or fundraising operations engagement. Scope, responsibilities and review points are agreed before delivery.
+We can begin directly with a commercialization or fundraising operations engagement. A review is not a compulsory first step.
 
-### When you need fractional sales leadership
+### You need ongoing sales leadership
 
-Begin with a Fractional Sales Leadership Mandate and 90-Day Commercial Plan. This establishes the initial priorities, what I take responsibility for, and how I will lead the team and review progress.
+A Fractional Sales Leadership Mandate and 90-Day Commercial Plan establish the priorities, responsibilities and progress reviews for the initial period.
 
-## What needs to move forward?
+## Tell me what needs your attention
 
-Bring an unresolved revenue question, a fundraising priority or a sales leadership responsibility you need to delegate.
+Bring the customer opportunity that has stalled, the fundraising work that keeps slipping or the sales responsibility you need to delegate. You do not need a finished brief.
 
-The first conversation establishes what is happening, the decision or responsibility involved, and whether an engagement makes sense.
+We’ll discuss what is happening and whether my help is a fit. The first conversation is free.
 
 Discuss your challenge
 
-For specialist analysis and published thinking, explore Research.
+Explore Research
