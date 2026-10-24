@@ -30,6 +30,14 @@ if "mode: 'production'" not in policy:
     parser.error('source must be the production-artifact candidate; use the isolated local-preview fixture for pending checks')
 if os.environ.get('SITE_ID') != '3df07dc5-6950-4241-98eb-cf95df3d271d' or os.environ.get('CONTEXT') != 'production':
     parser.error('set the exact approved SITE_ID and CONTEXT=production explicitly; this command does not inject them')
+build_inputs = ['src', 'config', 'public', 'scripts', 'astro.config.mjs',
+                'package.json', 'package-lock.json', 'netlify.toml']
+if subprocess.run(['git', 'diff', '--quiet', 'HEAD', '--', *build_inputs], cwd=root).returncode:
+    parser.error('commit all build inputs before verification so the reported source commit is exact')
+untracked_inputs = subprocess.check_output(
+    ['git', 'ls-files', '--others', '--exclude-standard', '--', *build_inputs], cwd=root, text=True)
+if untracked_inputs.strip():
+    parser.error('untracked build inputs prevent exact source attribution')
 node = subprocess.check_output(['node', '--version'], text=True).strip()
 if not node.startswith('v20.'):
     parser.error(f'Node 20 required; found {node}')
