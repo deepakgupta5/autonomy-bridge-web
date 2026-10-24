@@ -6,232 +6,233 @@ PASS: modified tailwind.config.mjs, tsconfig.json, .nvmrc and untracked netlify/
 > autonomy-bridge@0.0.1 build
 > node scripts/preview-build-guard.mjs && node ./node_modules/astro/astro.js build
 
-19:50:09 [types] Generated 784ms
-19:50:09 [build] output: "static"
-19:50:09 [build] directory: /Users/deepakgupta/Documents/06_Tools_&_Code/Codex/AutonomyBridge Website/repo/dist/
-19:50:09 [build] Collecting build info...
-19:50:09 [build] ✓ Completed in 796ms.
-19:50:09 [build] Building static entrypoints...
-19:50:16 [vite] ✓ built in 7.02s
-19:50:16 [build] ✓ Completed in 7.08s.
+22:06:25 [vite] Re-optimizing dependencies because vite config has changed
+22:06:26 [types] Generated 406ms
+22:06:26 [build] output: "static"
+22:06:26 [build] directory: /Users/deepakgupta/Documents/06_Tools_&_Code/Codex/AutonomyBridge Website/repo/dist/
+22:06:26 [build] Collecting build info...
+22:06:26 [build] ✓ Completed in 418ms.
+22:06:26 [build] Building static entrypoints...
+22:06:29 [vite] ✓ built in 3.72s
+22:06:29 [build] ✓ Completed in 3.74s.
 
  building client (vite)
-19:50:16 [vite] transforming...
-19:50:16 [vite] ✓ 9 modules transformed.
-19:50:16 [vite] rendering chunks...
-19:50:16 [vite] computing gzip size...
-19:50:16 [vite] dist/_astro/hoisted.CdNgSj95.js            0.28 kB │ gzip: 0.21 kB
-19:50:16 [vite] dist/_astro/deployment-policy.CjS1XJDC.js  0.32 kB │ gzip: 0.22 kB
-19:50:16 [vite] dist/_astro/hoisted.BEqAgRsj.js            4.20 kB │ gzip: 1.87 kB
-19:50:16 [vite] ✓ built in 45ms
+22:06:29 [vite] transforming...
+22:06:29 [vite] ✓ 9 modules transformed.
+22:06:29 [vite] rendering chunks...
+22:06:29 [vite] computing gzip size...
+22:06:29 [vite] dist/_astro/hoisted.CdNgSj95.js            0.28 kB │ gzip: 0.21 kB
+22:06:29 [vite] dist/_astro/deployment-policy.CjS1XJDC.js  0.32 kB │ gzip: 0.22 kB
+22:06:29 [vite] dist/_astro/hoisted.BEqAgRsj.js            4.20 kB │ gzip: 1.87 kB
+22:06:29 [vite] ✓ built in 37ms
 
  generating static routes
-19:50:16 ▶ src/pages/about.astro
-19:50:16   └─ /about.html (+18ms)
-19:50:16 ▶ src/pages/advisory.astro
-19:50:16   └─ /advisory.html (+5ms)
-19:50:16 ▶ src/pages/ai-consulting.astro
-19:50:16   └─ /ai-consulting.html (+10ms)
-19:50:16 ▶ src/pages/bespoke-research.astro
-19:50:16   └─ /bespoke-research.html (+3ms)
-19:50:16 ▶ src/pages/case-studies/[slug].astro
-19:50:16   ├─ /case-studies/automation-deployment-risk-assessment.html (+44ms)
-19:50:16   ├─ /case-studies/robotics-market-entry-decision-analysis.html (+28ms)
-19:50:16   ├─ /case-studies/ai-robotics-market-sizing-engagement.html (+12ms)
-19:50:16   ├─ /case-studies/vendor-deployment-viability-assessment.html (+14ms)
-19:50:17   ├─ /case-studies/robotics-pricing-strategy-research.html (+18ms)
-19:50:17   ├─ /case-studies/retail-dc-peak-demand-automation-assessment.html (+13ms)
-19:50:17   ├─ /case-studies/cold-storage-automation-economics-assessment.html (+12ms)
-19:50:17   ├─ /case-studies/parcel-sortation-volume-sensitivity-analysis.html (+9ms)
-19:50:17   ├─ /case-studies/general-merchandise-3pl-premature-automation-assessment.html (+8ms)
-19:50:17   ├─ /case-studies/service-robotics-commercial-viability-assessment.html (+11ms)
-19:50:17   ├─ /case-studies/healthcare-automation-investor-market-sizing.html (+9ms)
-19:50:17   ├─ /case-studies/icp-definition-inspection-robotics.html (+8ms)
-19:50:17   └─ /case-studies/off-highway-autonomy-deployment-economics.html (+7ms)
-19:50:17 ▶ src/pages/case-studies/index.astro
-19:50:17   └─ /case-studies.html (+8ms)
-19:50:17 ▶ src/pages/commercial-leadership.astro
-19:50:17   └─ /commercial-leadership.html (+4ms)
-19:50:17 ▶ src/pages/contact.astro
-19:50:17   └─ /contact.html (+3ms)
-19:50:17 ▶ src/pages/contact-success.astro
-19:50:17   └─ /contact-success.html (+3ms)
-19:50:17 ▶ src/pages/cookie-policy.astro
-19:50:17   └─ /cookie-policy.html (+3ms)
-19:50:17 ▶ src/pages/frameworks/[slug].astro
-19:50:17   ├─ /frameworks/robotics-roi-model.html (+20ms)
-19:50:17   ├─ /frameworks/automation-failure-framework.html (+20ms)
-19:50:17   ├─ /frameworks/warehouse-automation-decision-framework.html (+12ms)
-19:50:17   ├─ /frameworks/pilot-to-scale-failure-framework.html (+14ms)
-19:50:17   ├─ /frameworks/vendor-economics-framework.html (+19ms)
-19:50:17   ├─ /frameworks/vendor-evaluation-framework.html (+10ms)
-19:50:17   └─ /frameworks/workflow-architecture-framework.html (+10ms)
-19:50:17 ▶ src/pages/frameworks/index.astro
-19:50:17   └─ /frameworks.html (+6ms)
-19:50:17 ▶ src/pages/glossary/[slug].astro
-19:50:17   ├─ /glossary/removable-labor-share.html (+31ms)
-19:50:17   ├─ /glossary/ramp-risk.html (+5ms)
-19:50:17   ├─ /glossary/capital-recovery-period.html (+4ms)
-19:50:17   ├─ /glossary/labor-displacement-rate.html (+5ms)
-19:50:17   ├─ /glossary/automation-operating-cost.html (+6ms)
-19:50:17   ├─ /glossary/cost-per-unit-processed.html (+4ms)
-19:50:17   ├─ /glossary/integration-cost.html (+4ms)
-19:50:17   ├─ /glossary/total-cost-of-ownership.html (+4ms)
-19:50:17   ├─ /glossary/peak-to-average-ratio.html (+5ms)
-19:50:17   ├─ /glossary/contract-duration-risk.html (+3ms)
-19:50:17   ├─ /glossary/automated-guided-vehicle.html (+5ms)
-19:50:17   ├─ /glossary/pick-station-throughput.html (+3ms)
-19:50:17   ├─ /glossary/autonomous-case-handling.html (+3ms)
-19:50:17   ├─ /glossary/multi-shuttle-system.html (+6ms)
-19:50:17   ├─ /glossary/cobot.html (+3ms)
-19:50:17   ├─ /glossary/mobile-manipulation-robot.html (+3ms)
-19:50:17   ├─ /glossary/system-uptime.html (+3ms)
-19:50:17   ├─ /glossary/throughput-modeling.html (+4ms)
-19:50:17   ├─ /glossary/sku-velocity.html (+5ms)
-19:50:17   ├─ /glossary/dwell-time.html (+5ms)
-19:50:17   ├─ /glossary/order-profile.html (+5ms)
-19:50:17   ├─ /glossary/slotting.html (+4ms)
-19:50:17   ├─ /glossary/inbound-processing-rate.html (+3ms)
-19:50:17   ├─ /glossary/pick-path-optimization.html (+4ms)
-19:50:17   ├─ /glossary/returns-processing-rate.html (+5ms)
-19:50:17   ├─ /glossary/labor-absorption-capacity.html (+3ms)
-19:50:17   ├─ /glossary/vendor-economics.html (+3ms)
-19:50:17   ├─ /glossary/vendor-lock-in.html (+3ms)
-19:50:17   ├─ /glossary/pilot-to-scale-failure.html (+3ms)
-19:50:17   ├─ /glossary/integration-partner.html (+3ms)
-19:50:17   ├─ /glossary/vendor-reference-site.html (+3ms)
-19:50:17   ├─ /glossary/market-penetration-rate.html (+4ms)
-19:50:17   ├─ /glossary/competitive-displacement.html (+3ms)
-19:50:17   ├─ /glossary/workflow-constraint.html (+3ms)
-19:50:17   ├─ /glossary/human-machine-coordination.html (+3ms)
-19:50:17   ├─ /glossary/exception-handling-rate.html (+2ms)
-19:50:17   ├─ /glossary/task-orchestration.html (+3ms)
-19:50:17   ├─ /glossary/digital-twin.html (+2ms)
-19:50:17   ├─ /glossary/edge-computing.html (+2ms)
-19:50:17   ├─ /glossary/computer-vision-reliability.html (+3ms)
-19:50:17   ├─ /glossary/automation-readiness.html (+2ms)
-19:50:17   ├─ /glossary/sensor-fusion.html (+2ms)
-19:50:17   ├─ /glossary/autonomous-decision-threshold.html (+2ms)
-19:50:17   ├─ /glossary/reinforcement-learning-in-robotics.html (+2ms)
-19:50:17   ├─ /glossary/fleet-management-software.html (+2ms)
-19:50:17   ├─ /glossary/ai-inference-latency.html (+2ms)
-19:50:17   ├─ /glossary/autonomous-systems-maturity.html (+2ms)
-19:50:17   ├─ /glossary/process-standardization.html (+2ms)
-19:50:17   ├─ /glossary/autonomous-inventory-management.html (+2ms)
-19:50:17   ├─ /glossary/predictive-maintenance.html (+3ms)
-19:50:17   ├─ /glossary/autonomous-mobile-robot.html (+2ms)
-19:50:17   ├─ /glossary/automated-storage-retrieval-system.html (+2ms)
-19:50:17   ├─ /glossary/goods-to-person-system.html (+2ms)
-19:50:17   ├─ /glossary/warehouse-management-system.html (+2ms)
-19:50:17   ├─ /glossary/warehouse-execution-system.html (+2ms)
-19:50:17   ├─ /glossary/labor-turnover-rate.html (+2ms)
-19:50:17   ├─ /glossary/third-party-logistics.html (+2ms)
-19:50:17   ├─ /glossary/robotics-as-a-service.html (+2ms)
-19:50:17   ├─ /glossary/systems-integrator.html (+2ms)
-19:50:17   ├─ /glossary/peak-labor-cost-avoidance.html (+2ms)
-19:50:17   ├─ /glossary/idle-capital-cost.html (+2ms)
-19:50:17   ├─ /glossary/sortation-volume-floor.html (+1ms)
-19:50:17   ├─ /glossary/labor-intensity-threshold.html (+1ms)
-19:50:17   ├─ /glossary/cold-rated-system-premium.html (+1ms)
-19:50:17   ├─ /glossary/fixed-conveyor-sortation.html (+2ms)
-19:50:17   ├─ /glossary/amr-sortation.html (+2ms)
-19:50:17   ├─ /glossary/omnichannel-workflow-conflict.html (+3ms)
-19:50:17   ├─ /glossary/case-level-picking-economics.html (+2ms)
-19:50:17   ├─ /glossary/freezer-environment-constraint.html (+2ms)
-19:50:17   ├─ /glossary/ambient-benchmark-error.html (+2ms)
-19:50:17   ├─ /glossary/customer-concentration-risk.html (+2ms)
-19:50:17   ├─ /glossary/automation-go-no-go.html (+2ms)
-19:50:17   ├─ /glossary/cold-environment-labor-premium.html (+2ms)
-19:50:17   ├─ /glossary/cold-storage-maintenance-burden.html (+2ms)
-19:50:17   ├─ /glossary/sortation-technology-fork.html (+2ms)
-19:50:17   └─ /glossary/premature-automation.html (+1ms)
-19:50:17 ▶ src/pages/glossary/index.astro
-19:50:17   └─ /glossary.html (+7ms)
-19:50:17 ▶ src/pages/insights/[slug].astro
-19:50:17   ├─ /insights/how-warehouse-robotics-economics-actually-works.html (+12ms)
-19:50:17   ├─ /insights/why-mid-market-operators-struggle-to-evaluate-warehouse-robotics.html (+5ms)
-19:50:17   ├─ /insights/how-warehouse-workflows-determine-automation-success.html (+6ms)
-19:50:17   ├─ /insights/how-warehouse-operators-evaluate-robotics-vendors.html (+7ms)
-19:50:17   ├─ /insights/why-warehouse-automation-projects-fail.html (+6ms)
-19:50:17   ├─ /insights/why-robotics-pilots-fail-to-scale.html (+7ms)
-19:50:17   ├─ /insights/how-retail-distribution-center-automation-economics-actually-work.html (+7ms)
-19:50:17   ├─ /insights/why-cold-storage-automation-economics-are-structurally-different.html (+8ms)
-19:50:17   ├─ /insights/why-parcel-sortation-automation-breaks-at-low-volume.html (+9ms)
-19:50:17   ├─ /insights/why-general-merchandise-3pls-should-not-automate-too-early.html (+9ms)
-19:50:17   ├─ /insights/how-robotics-vendors-misjudge-their-addressable-market.html (+8ms)
-19:50:17   ├─ /insights/how-investors-should-size-robotics-markets.html (+7ms)
-19:50:17   ├─ /insights/why-robotics-pilots-fail-to-convert-to-commercial-contracts.html (+8ms)
-19:50:17   ├─ /insights/why-healthcare-robotics-deployments-follow-a-different-economic-logic.html (+7ms)
-19:50:17   ├─ /insights/why-commercial-viability-and-technical-readiness-are-not-the-same-thing.html (+9ms)
-19:50:17   ├─ /insights/how-aerial-robotics-vendors-are-pricing-into-inspection-markets.html (+7ms)
-19:50:17   ├─ /insights/why-robotics-enterprise-deals-stall.html (+4ms)
-19:50:17   ├─ /insights/how-robotics-pricing-models-determine-commercial-viability.html (+4ms)
-19:50:17   ├─ /insights/why-63-exoskeleton-companies-cant-break-through-distribution.html (+3ms)
-19:50:17   ├─ /insights/why-maritime-autonomy-revenue-is-not-what-it-appears.html (+3ms)
-19:50:17   ├─ /insights/why-direct-only-channel-doesnt-scale-in-robotics.html (+4ms)
-19:50:17   ├─ /insights/what-autonomous-vehicle-companies-get-wrong-about-freight-sales.html (+3ms)
-19:50:17   ├─ /insights/how-underwater-robotics-startups-can-break-incumbent-lock-in.html (+4ms)
-19:50:17   └─ /insights/what-warehouse-automation-vendors-need-to-know-about-how-buyers-decide.html (+3ms)
-19:50:17 ▶ src/pages/insights/index.astro
-19:50:17   └─ /insights.html (+3ms)
-19:50:17 ▶ src/pages/market-overview/deployment-economics.astro
-19:50:17   └─ /market-overview/deployment-economics.html (+8ms)
-19:50:17 ▶ src/pages/market-overview/industry-landscape.astro
-19:50:17   └─ /market-overview/industry-landscape.html (+3ms)
-19:50:17 ▶ src/pages/market-overview/key-players.astro
-19:50:17   └─ /market-overview/key-players.html (+2ms)
-19:50:17 ▶ src/pages/market-overview/market-drivers.astro
-19:50:17   └─ /market-overview/market-drivers.html (+2ms)
-19:50:17 ▶ src/pages/market-overview/market-segments.astro
-19:50:17   └─ /market-overview/market-segments.html (+2ms)
-19:50:17 ▶ src/pages/market-overview/operator-domains.astro
-19:50:17   └─ /market-overview/operator-domains.html (+2ms)
-19:50:17 ▶ src/pages/market-overview/platform-categories.astro
-19:50:17   └─ /market-overview/platform-categories.html (+2ms)
-19:50:17 ▶ src/pages/market-overview/technology-stack.astro
-19:50:17   └─ /market-overview/technology-stack.html (+2ms)
-19:50:17 ▶ src/pages/market-overview/vendor-landscape.astro
-19:50:17   └─ /market-overview/vendor-landscape.html (+2ms)
-19:50:17 ▶ src/pages/market-overview/index.astro
-19:50:17   └─ /market-overview.html (+2ms)
-19:50:17 ▶ src/pages/methodology.astro
-19:50:17   └─ /methodology.html (+1ms)
-19:50:17 ▶ src/pages/nonprofits.astro
-19:50:17   └─ /nonprofits.html (+2ms)
-19:50:17 ▶ src/pages/privacy-policy.astro
-19:50:17   └─ /privacy-policy.html (+1ms)
-19:50:17 ▶ src/pages/research.astro
-19:50:17   └─ /research.html (+1ms)
-19:50:17 ▶ src/pages/sales-leadership.astro
-19:50:17   └─ /sales-leadership.html (+3ms)
-19:50:17 ▶ src/pages/sitemap.astro
-19:50:17   └─ /sitemap.html (+2ms)
-19:50:17 ▶ src/pages/startups.astro
-19:50:17   └─ /startups.html (+1ms)
-19:50:17 ▶ src/pages/terms-of-use.astro
-19:50:17   └─ /terms-of-use.html (+1ms)
-19:50:17 ▶ src/pages/use-cases/[slug].astro
-19:50:17   ├─ /use-cases/warehouse-automation-roi-evaluation.html (+7ms)
-19:50:17   ├─ /use-cases/robotics-deployment-3pl-warehouses.html (+3ms)
-19:50:17   ├─ /use-cases/amr-deployment-evaluation.html (+3ms)
-19:50:17   ├─ /use-cases/goods-to-person-system-evaluation.html (+3ms)
-19:50:17   ├─ /use-cases/retail-dc-automation-evaluation.html (+5ms)
-19:50:17   ├─ /use-cases/cold-storage-automation-evaluation.html (+3ms)
-19:50:17   ├─ /use-cases/parcel-sortation-automation-evaluation.html (+3ms)
-19:50:17   ├─ /use-cases/general-merchandise-3pl-automation-evaluation.html (+4ms)
-19:50:17   ├─ /use-cases/service-robotics-deployment-evaluation.html (+3ms)
-19:50:17   ├─ /use-cases/aerial-robotics-commercial-viability-evaluation.html (+5ms)
-19:50:17   └─ /use-cases/humanoid-platform-commercial-readiness.html (+5ms)
-19:50:17 ▶ src/pages/use-cases/index.astro
-19:50:17   └─ /use-cases.html (+3ms)
-19:50:17 ▶ src/pages/index.astro
-19:50:17   └─ /index.html (+1ms)
-19:50:17 ✓ Completed in 929ms.
+22:06:30 ▶ src/pages/about.astro
+22:06:30   └─ /about.html (+13ms)
+22:06:30 ▶ src/pages/advisory.astro
+22:06:30   └─ /advisory.html (+3ms)
+22:06:30 ▶ src/pages/ai-consulting.astro
+22:06:30   └─ /ai-consulting.html (+3ms)
+22:06:30 ▶ src/pages/bespoke-research.astro
+22:06:30   └─ /bespoke-research.html (+3ms)
+22:06:30 ▶ src/pages/case-studies/[slug].astro
+22:06:30   ├─ /case-studies/automation-deployment-risk-assessment.html (+34ms)
+22:06:30   ├─ /case-studies/robotics-market-entry-decision-analysis.html (+16ms)
+22:06:30   ├─ /case-studies/ai-robotics-market-sizing-engagement.html (+9ms)
+22:06:30   ├─ /case-studies/vendor-deployment-viability-assessment.html (+9ms)
+22:06:30   ├─ /case-studies/robotics-pricing-strategy-research.html (+9ms)
+22:06:30   ├─ /case-studies/retail-dc-peak-demand-automation-assessment.html (+10ms)
+22:06:30   ├─ /case-studies/cold-storage-automation-economics-assessment.html (+12ms)
+22:06:30   ├─ /case-studies/parcel-sortation-volume-sensitivity-analysis.html (+8ms)
+22:06:30   ├─ /case-studies/general-merchandise-3pl-premature-automation-assessment.html (+8ms)
+22:06:30   ├─ /case-studies/service-robotics-commercial-viability-assessment.html (+11ms)
+22:06:30   ├─ /case-studies/healthcare-automation-investor-market-sizing.html (+7ms)
+22:06:30   ├─ /case-studies/icp-definition-inspection-robotics.html (+10ms)
+22:06:30   └─ /case-studies/off-highway-autonomy-deployment-economics.html (+6ms)
+22:06:30 ▶ src/pages/case-studies/index.astro
+22:06:30   └─ /case-studies.html (+6ms)
+22:06:30 ▶ src/pages/commercial-leadership.astro
+22:06:30   └─ /commercial-leadership.html (+2ms)
+22:06:30 ▶ src/pages/contact.astro
+22:06:30   └─ /contact.html (+2ms)
+22:06:30 ▶ src/pages/contact-success.astro
+22:06:30   └─ /contact-success.html (+2ms)
+22:06:30 ▶ src/pages/cookie-policy.astro
+22:06:30   └─ /cookie-policy.html (+1ms)
+22:06:30 ▶ src/pages/frameworks/[slug].astro
+22:06:30   ├─ /frameworks/robotics-roi-model.html (+15ms)
+22:06:30   ├─ /frameworks/automation-failure-framework.html (+13ms)
+22:06:30   ├─ /frameworks/warehouse-automation-decision-framework.html (+6ms)
+22:06:30   ├─ /frameworks/pilot-to-scale-failure-framework.html (+8ms)
+22:06:30   ├─ /frameworks/vendor-economics-framework.html (+10ms)
+22:06:30   ├─ /frameworks/vendor-evaluation-framework.html (+7ms)
+22:06:30   └─ /frameworks/workflow-architecture-framework.html (+6ms)
+22:06:30 ▶ src/pages/frameworks/index.astro
+22:06:30   └─ /frameworks.html (+4ms)
+22:06:30 ▶ src/pages/glossary/[slug].astro
+22:06:30   ├─ /glossary/removable-labor-share.html (+18ms)
+22:06:30   ├─ /glossary/ramp-risk.html (+2ms)
+22:06:30   ├─ /glossary/capital-recovery-period.html (+2ms)
+22:06:30   ├─ /glossary/labor-displacement-rate.html (+2ms)
+22:06:30   ├─ /glossary/automation-operating-cost.html (+2ms)
+22:06:30   ├─ /glossary/cost-per-unit-processed.html (+2ms)
+22:06:30   ├─ /glossary/integration-cost.html (+2ms)
+22:06:30   ├─ /glossary/total-cost-of-ownership.html (+2ms)
+22:06:30   ├─ /glossary/peak-to-average-ratio.html (+2ms)
+22:06:30   ├─ /glossary/contract-duration-risk.html (+2ms)
+22:06:30   ├─ /glossary/automated-guided-vehicle.html (+2ms)
+22:06:30   ├─ /glossary/pick-station-throughput.html (+2ms)
+22:06:30   ├─ /glossary/autonomous-case-handling.html (+2ms)
+22:06:30   ├─ /glossary/multi-shuttle-system.html (+1ms)
+22:06:30   ├─ /glossary/cobot.html (+3ms)
+22:06:30   ├─ /glossary/mobile-manipulation-robot.html (+2ms)
+22:06:30   ├─ /glossary/system-uptime.html (+2ms)
+22:06:30   ├─ /glossary/throughput-modeling.html (+2ms)
+22:06:30   ├─ /glossary/sku-velocity.html (+2ms)
+22:06:30   ├─ /glossary/dwell-time.html (+2ms)
+22:06:30   ├─ /glossary/order-profile.html (+2ms)
+22:06:30   ├─ /glossary/slotting.html (+2ms)
+22:06:30   ├─ /glossary/inbound-processing-rate.html (+2ms)
+22:06:30   ├─ /glossary/pick-path-optimization.html (+2ms)
+22:06:30   ├─ /glossary/returns-processing-rate.html (+2ms)
+22:06:30   ├─ /glossary/labor-absorption-capacity.html (+2ms)
+22:06:30   ├─ /glossary/vendor-economics.html (+2ms)
+22:06:30   ├─ /glossary/vendor-lock-in.html (+2ms)
+22:06:30   ├─ /glossary/pilot-to-scale-failure.html (+2ms)
+22:06:30   ├─ /glossary/integration-partner.html (+2ms)
+22:06:30   ├─ /glossary/vendor-reference-site.html (+2ms)
+22:06:30   ├─ /glossary/market-penetration-rate.html (+2ms)
+22:06:30   ├─ /glossary/competitive-displacement.html (+3ms)
+22:06:30   ├─ /glossary/workflow-constraint.html (+2ms)
+22:06:30   ├─ /glossary/human-machine-coordination.html (+2ms)
+22:06:30   ├─ /glossary/exception-handling-rate.html (+3ms)
+22:06:30   ├─ /glossary/task-orchestration.html (+2ms)
+22:06:30   ├─ /glossary/digital-twin.html (+2ms)
+22:06:30   ├─ /glossary/edge-computing.html (+2ms)
+22:06:30   ├─ /glossary/computer-vision-reliability.html (+2ms)
+22:06:30   ├─ /glossary/automation-readiness.html (+2ms)
+22:06:30   ├─ /glossary/sensor-fusion.html (+2ms)
+22:06:30   ├─ /glossary/autonomous-decision-threshold.html (+3ms)
+22:06:30   ├─ /glossary/reinforcement-learning-in-robotics.html (+2ms)
+22:06:30   ├─ /glossary/fleet-management-software.html (+2ms)
+22:06:30   ├─ /glossary/ai-inference-latency.html (+2ms)
+22:06:30   ├─ /glossary/autonomous-systems-maturity.html (+3ms)
+22:06:30   ├─ /glossary/process-standardization.html (+3ms)
+22:06:30   ├─ /glossary/autonomous-inventory-management.html (+3ms)
+22:06:30   ├─ /glossary/predictive-maintenance.html (+3ms)
+22:06:30   ├─ /glossary/autonomous-mobile-robot.html (+4ms)
+22:06:30   ├─ /glossary/automated-storage-retrieval-system.html (+3ms)
+22:06:30   ├─ /glossary/goods-to-person-system.html (+2ms)
+22:06:30   ├─ /glossary/warehouse-management-system.html (+2ms)
+22:06:30   ├─ /glossary/warehouse-execution-system.html (+3ms)
+22:06:30   ├─ /glossary/labor-turnover-rate.html (+3ms)
+22:06:30   ├─ /glossary/third-party-logistics.html (+2ms)
+22:06:30   ├─ /glossary/robotics-as-a-service.html (+2ms)
+22:06:30   ├─ /glossary/systems-integrator.html (+2ms)
+22:06:30   ├─ /glossary/peak-labor-cost-avoidance.html (+2ms)
+22:06:30   ├─ /glossary/idle-capital-cost.html (+3ms)
+22:06:30   ├─ /glossary/sortation-volume-floor.html (+4ms)
+22:06:30   ├─ /glossary/labor-intensity-threshold.html (+2ms)
+22:06:30   ├─ /glossary/cold-rated-system-premium.html (+3ms)
+22:06:30   ├─ /glossary/fixed-conveyor-sortation.html (+3ms)
+22:06:30   ├─ /glossary/amr-sortation.html (+2ms)
+22:06:30   ├─ /glossary/omnichannel-workflow-conflict.html (+2ms)
+22:06:30   ├─ /glossary/case-level-picking-economics.html (+4ms)
+22:06:30   ├─ /glossary/freezer-environment-constraint.html (+4ms)
+22:06:30   ├─ /glossary/ambient-benchmark-error.html (+3ms)
+22:06:30   ├─ /glossary/customer-concentration-risk.html (+6ms)
+22:06:30   ├─ /glossary/automation-go-no-go.html (+4ms)
+22:06:30   ├─ /glossary/cold-environment-labor-premium.html (+3ms)
+22:06:30   ├─ /glossary/cold-storage-maintenance-burden.html (+3ms)
+22:06:30   ├─ /glossary/sortation-technology-fork.html (+3ms)
+22:06:30   └─ /glossary/premature-automation.html (+3ms)
+22:06:30 ▶ src/pages/glossary/index.astro
+22:06:30   └─ /glossary.html (+13ms)
+22:06:30 ▶ src/pages/insights/[slug].astro
+22:06:30   ├─ /insights/how-warehouse-robotics-economics-actually-works.html (+25ms)
+22:06:30   ├─ /insights/why-mid-market-operators-struggle-to-evaluate-warehouse-robotics.html (+8ms)
+22:06:30   ├─ /insights/how-warehouse-workflows-determine-automation-success.html (+8ms)
+22:06:30   ├─ /insights/how-warehouse-operators-evaluate-robotics-vendors.html (+8ms)
+22:06:30   ├─ /insights/why-warehouse-automation-projects-fail.html (+10ms)
+22:06:30   ├─ /insights/why-robotics-pilots-fail-to-scale.html (+6ms)
+22:06:30   ├─ /insights/how-retail-distribution-center-automation-economics-actually-work.html (+7ms)
+22:06:30   ├─ /insights/why-cold-storage-automation-economics-are-structurally-different.html (+8ms)
+22:06:30   ├─ /insights/why-parcel-sortation-automation-breaks-at-low-volume.html (+8ms)
+22:06:30   ├─ /insights/why-general-merchandise-3pls-should-not-automate-too-early.html (+5ms)
+22:06:30   ├─ /insights/how-robotics-vendors-misjudge-their-addressable-market.html (+4ms)
+22:06:30   ├─ /insights/how-investors-should-size-robotics-markets.html (+4ms)
+22:06:30   ├─ /insights/why-robotics-pilots-fail-to-convert-to-commercial-contracts.html (+4ms)
+22:06:30   ├─ /insights/why-healthcare-robotics-deployments-follow-a-different-economic-logic.html (+3ms)
+22:06:30   ├─ /insights/why-commercial-viability-and-technical-readiness-are-not-the-same-thing.html (+5ms)
+22:06:30   ├─ /insights/how-aerial-robotics-vendors-are-pricing-into-inspection-markets.html (+3ms)
+22:06:30   ├─ /insights/why-robotics-enterprise-deals-stall.html (+2ms)
+22:06:30   ├─ /insights/how-robotics-pricing-models-determine-commercial-viability.html (+2ms)
+22:06:30   ├─ /insights/why-63-exoskeleton-companies-cant-break-through-distribution.html (+2ms)
+22:06:30   ├─ /insights/why-maritime-autonomy-revenue-is-not-what-it-appears.html (+2ms)
+22:06:30   ├─ /insights/why-direct-only-channel-doesnt-scale-in-robotics.html (+2ms)
+22:06:30   ├─ /insights/what-autonomous-vehicle-companies-get-wrong-about-freight-sales.html (+2ms)
+22:06:30   ├─ /insights/how-underwater-robotics-startups-can-break-incumbent-lock-in.html (+2ms)
+22:06:30   └─ /insights/what-warehouse-automation-vendors-need-to-know-about-how-buyers-decide.html (+2ms)
+22:06:30 ▶ src/pages/insights/index.astro
+22:06:30   └─ /insights.html (+1ms)
+22:06:30 ▶ src/pages/market-overview/deployment-economics.astro
+22:06:30   └─ /market-overview/deployment-economics.html (+5ms)
+22:06:30 ▶ src/pages/market-overview/industry-landscape.astro
+22:06:30   └─ /market-overview/industry-landscape.html (+2ms)
+22:06:30 ▶ src/pages/market-overview/key-players.astro
+22:06:30   └─ /market-overview/key-players.html (+1ms)
+22:06:30 ▶ src/pages/market-overview/market-drivers.astro
+22:06:30   └─ /market-overview/market-drivers.html (+1ms)
+22:06:30 ▶ src/pages/market-overview/market-segments.astro
+22:06:30   └─ /market-overview/market-segments.html (+2ms)
+22:06:30 ▶ src/pages/market-overview/operator-domains.astro
+22:06:30   └─ /market-overview/operator-domains.html (+2ms)
+22:06:30 ▶ src/pages/market-overview/platform-categories.astro
+22:06:30   └─ /market-overview/platform-categories.html (+2ms)
+22:06:30 ▶ src/pages/market-overview/technology-stack.astro
+22:06:30   └─ /market-overview/technology-stack.html (+1ms)
+22:06:30 ▶ src/pages/market-overview/vendor-landscape.astro
+22:06:30   └─ /market-overview/vendor-landscape.html (+1ms)
+22:06:30 ▶ src/pages/market-overview/index.astro
+22:06:30   └─ /market-overview.html (+1ms)
+22:06:30 ▶ src/pages/methodology.astro
+22:06:30   └─ /methodology.html (+1ms)
+22:06:30 ▶ src/pages/nonprofits.astro
+22:06:30   └─ /nonprofits.html (+1ms)
+22:06:30 ▶ src/pages/privacy-policy.astro
+22:06:30   └─ /privacy-policy.html (+1ms)
+22:06:30 ▶ src/pages/research.astro
+22:06:30   └─ /research.html (+1ms)
+22:06:30 ▶ src/pages/sales-leadership.astro
+22:06:30   └─ /sales-leadership.html (+1ms)
+22:06:30 ▶ src/pages/sitemap.astro
+22:06:30   └─ /sitemap.html (+3ms)
+22:06:30 ▶ src/pages/startups.astro
+22:06:30   └─ /startups.html (+1ms)
+22:06:30 ▶ src/pages/terms-of-use.astro
+22:06:30   └─ /terms-of-use.html (+1ms)
+22:06:30 ▶ src/pages/use-cases/[slug].astro
+22:06:30   ├─ /use-cases/warehouse-automation-roi-evaluation.html (+7ms)
+22:06:30   ├─ /use-cases/robotics-deployment-3pl-warehouses.html (+3ms)
+22:06:30   ├─ /use-cases/amr-deployment-evaluation.html (+3ms)
+22:06:30   ├─ /use-cases/goods-to-person-system-evaluation.html (+3ms)
+22:06:30   ├─ /use-cases/retail-dc-automation-evaluation.html (+3ms)
+22:06:30   ├─ /use-cases/cold-storage-automation-evaluation.html (+5ms)
+22:06:30   ├─ /use-cases/parcel-sortation-automation-evaluation.html (+4ms)
+22:06:30   ├─ /use-cases/general-merchandise-3pl-automation-evaluation.html (+5ms)
+22:06:30   ├─ /use-cases/service-robotics-deployment-evaluation.html (+4ms)
+22:06:30   ├─ /use-cases/aerial-robotics-commercial-viability-evaluation.html (+5ms)
+22:06:30   └─ /use-cases/humanoid-platform-commercial-readiness.html (+5ms)
+22:06:30 ▶ src/pages/use-cases/index.astro
+22:06:30   └─ /use-cases.html (+4ms)
+22:06:30 ▶ src/pages/index.astro
+22:06:30   └─ /index.html (+3ms)
+22:06:30 ✓ Completed in 742ms.
 
-19:50:17 [@astrojs/sitemap] `sitemap-index.xml` created at `dist`
-19:50:17 [build] 163 page(s) built in 9.14s
-19:50:17 [build] Complete!
-(node:88709) V8: file:///Users/deepakgupta/Documents/06_Tools_&_Code/Codex/AutonomyBridge%20Website/repo/astro.config.mjs?t=1792810208532:4 'assert' is deprecated in import statements and support will be removed in a future version; use 'with' instead
+22:06:30 [@astrojs/sitemap] `sitemap-index.xml` created at `dist`
+22:06:30 [build] 163 page(s) built in 5.22s
+22:06:30 [build] Complete!
+(node:94598) V8: file:///Users/deepakgupta/Documents/06_Tools_&_Code/Codex/AutonomyBridge%20Website/repo/astro.config.mjs?t=1792818385561:4 'assert' is deprecated in import statements and support will be removed in a future version; use 'with' instead
 (Use `node --trace-warnings ...` to show where the warning was created)
 
 ## route_verifier: /Library/Frameworks/Python.framework/Versions/3.12/bin/python3 scripts/verify-preview.py /private/tmp/autonomy-step6-0285946-baseline/dist --canonical-apex --research-review --release-candidate
@@ -297,104 +298,104 @@ PASS: modified tailwind.config.mjs, tsconfig.json, .nvmrc and untracked netlify/
   "changed_research_dates_except_methodology": [],
   "changed_research_titles_except_framework": [],
   "reviewed_research_date_changes": [
-    "/insights/why-direct-only-channel-doesnt-scale-in-robotics",
-    "/insights/how-robotics-pricing-models-determine-commercial-viability",
-    "/frameworks/robotics-roi-model",
-    "/case-studies/retail-dc-peak-demand-automation-assessment",
-    "/frameworks/automation-failure-framework",
-    "/glossary/autonomous-mobile-robot",
-    "/insights/how-retail-distribution-center-automation-economics-actually-work",
-    "/insights/why-robotics-enterprise-deals-stall",
-    "/glossary/automated-storage-retrieval-system",
-    "/use-cases/humanoid-platform-commercial-readiness",
-    "/insights/why-robotics-pilots-fail-to-scale",
-    "/case-studies/healthcare-automation-investor-market-sizing",
-    "/glossary/robotics-as-a-service",
-    "/case-studies/ai-robotics-market-sizing-engagement",
-    "/insights/why-general-merchandise-3pls-should-not-automate-too-early",
-    "/glossary/integration-cost",
-    "/glossary/sortation-volume-floor",
-    "/insights/what-autonomous-vehicle-companies-get-wrong-about-freight-sales",
-    "/use-cases/robotics-deployment-3pl-warehouses",
-    "/glossary/automation-operating-cost",
-    "/glossary/third-party-logistics",
-    "/glossary/cold-environment-labor-premium",
-    "/glossary/sortation-technology-fork",
-    "/use-cases/amr-deployment-evaluation",
-    "/frameworks/vendor-evaluation-framework",
-    "/use-cases",
-    "/use-cases/service-robotics-deployment-evaluation",
-    "/insights/how-aerial-robotics-vendors-are-pricing-into-inspection-markets",
-    "/glossary/case-level-picking-economics",
-    "/frameworks/pilot-to-scale-failure-framework",
-    "/use-cases/retail-dc-automation-evaluation",
-    "/frameworks",
-    "/insights/why-warehouse-automation-projects-fail",
-    "/insights/why-mid-market-operators-struggle-to-evaluate-warehouse-robotics",
-    "/glossary/goods-to-person-system",
-    "/glossary",
-    "/glossary/premature-automation",
-    "/glossary/labor-displacement-rate",
-    "/case-studies/off-highway-autonomy-deployment-economics",
-    "/glossary/throughput-modeling",
-    "/glossary/capital-recovery-period",
-    "/insights/why-robotics-pilots-fail-to-convert-to-commercial-contracts",
-    "/case-studies/general-merchandise-3pl-premature-automation-assessment",
-    "/insights/how-warehouse-operators-evaluate-robotics-vendors",
-    "/glossary/cold-storage-maintenance-burden",
-    "/insights",
-    "/case-studies/service-robotics-commercial-viability-assessment",
-    "/case-studies/icp-definition-inspection-robotics",
-    "/case-studies/cold-storage-automation-economics-assessment",
-    "/case-studies/robotics-pricing-strategy-research",
-    "/insights/how-warehouse-robotics-economics-actually-works",
-    "/insights/how-robotics-vendors-misjudge-their-addressable-market",
-    "/glossary/cold-rated-system-premium",
-    "/insights/why-commercial-viability-and-technical-readiness-are-not-the-same-thing",
-    "/frameworks/vendor-economics-framework",
-    "/glossary/automation-readiness",
-    "/glossary/autonomous-case-handling",
-    "/use-cases/warehouse-automation-roi-evaluation",
-    "/insights/why-cold-storage-automation-economics-are-structurally-different",
-    "/case-studies/automation-deployment-risk-assessment",
-    "/case-studies/vendor-deployment-viability-assessment",
-    "/glossary/customer-concentration-risk",
-    "/use-cases/cold-storage-automation-evaluation",
-    "/insights/how-underwater-robotics-startups-can-break-incumbent-lock-in",
-    "/insights/why-parcel-sortation-automation-breaks-at-low-volume",
-    "/glossary/idle-capital-cost",
     "/glossary/labor-turnover-rate",
-    "/frameworks/workflow-architecture-framework",
-    "/insights/why-healthcare-robotics-deployments-follow-a-different-economic-logic",
-    "/glossary/labor-intensity-threshold",
-    "/use-cases/general-merchandise-3pl-automation-evaluation",
-    "/glossary/sku-velocity",
     "/frameworks/warehouse-automation-decision-framework",
-    "/insights/why-maritime-autonomy-revenue-is-not-what-it-appears",
-    "/insights/how-warehouse-workflows-determine-automation-success",
-    "/case-studies/parcel-sortation-volume-sensitivity-analysis",
-    "/insights/how-investors-should-size-robotics-markets",
+    "/insights/why-robotics-pilots-fail-to-convert-to-commercial-contracts",
+    "/glossary/cold-storage-maintenance-burden",
+    "/case-studies/automation-deployment-risk-assessment",
+    "/use-cases/robotics-deployment-3pl-warehouses",
+    "/frameworks/vendor-evaluation-framework",
+    "/case-studies/healthcare-automation-investor-market-sizing",
+    "/use-cases/retail-dc-automation-evaluation",
+    "/use-cases/amr-deployment-evaluation",
+    "/glossary/throughput-modeling",
+    "/frameworks/vendor-economics-framework",
+    "/frameworks/workflow-architecture-framework",
+    "/glossary/goods-to-person-system",
+    "/insights/how-retail-distribution-center-automation-economics-actually-work",
+    "/frameworks/robotics-roi-model",
     "/use-cases/aerial-robotics-commercial-viability-evaluation",
+    "/case-studies/retail-dc-peak-demand-automation-assessment",
+    "/insights/how-underwater-robotics-startups-can-break-incumbent-lock-in",
+    "/insights/how-warehouse-workflows-determine-automation-success",
+    "/use-cases/cold-storage-automation-evaluation",
+    "/use-cases",
+    "/insights/how-investors-should-size-robotics-markets",
+    "/case-studies/ai-robotics-market-sizing-engagement",
+    "/glossary/case-level-picking-economics",
+    "/insights/why-maritime-autonomy-revenue-is-not-what-it-appears",
+    "/case-studies/icp-definition-inspection-robotics",
+    "/glossary/autonomous-mobile-robot",
+    "/use-cases/general-merchandise-3pl-automation-evaluation",
+    "/glossary/premature-automation",
+    "/glossary/automation-operating-cost",
+    "/case-studies/service-robotics-commercial-viability-assessment",
+    "/glossary/integration-cost",
+    "/insights/why-cold-storage-automation-economics-are-structurally-different",
+    "/use-cases/warehouse-automation-roi-evaluation",
+    "/insights/why-63-exoskeleton-companies-cant-break-through-distribution",
+    "/glossary/capital-recovery-period",
+    "/frameworks/automation-failure-framework",
     "/glossary/automation-go-no-go",
-    "/glossary/peak-to-average-ratio",
-    "/case-studies",
-    "/case-studies/robotics-market-entry-decision-analysis",
+    "/case-studies/parcel-sortation-volume-sensitivity-analysis",
+    "/glossary/automation-readiness",
+    "/glossary/labor-intensity-threshold",
+    "/insights/why-robotics-pilots-fail-to-scale",
+    "/glossary",
+    "/glossary/third-party-logistics",
+    "/insights/what-autonomous-vehicle-companies-get-wrong-about-freight-sales",
+    "/glossary/cold-rated-system-premium",
     "/insights/what-warehouse-automation-vendors-need-to-know-about-how-buyers-decide",
-    "/glossary/system-uptime",
-    "/use-cases/goods-to-person-system-evaluation",
+    "/case-studies",
+    "/insights/how-aerial-robotics-vendors-are-pricing-into-inspection-markets",
+    "/insights",
     "/use-cases/parcel-sortation-automation-evaluation",
+    "/frameworks/pilot-to-scale-failure-framework",
+    "/use-cases/goods-to-person-system-evaluation",
+    "/glossary/customer-concentration-risk",
+    "/case-studies/general-merchandise-3pl-premature-automation-assessment",
+    "/case-studies/vendor-deployment-viability-assessment",
+    "/use-cases/service-robotics-deployment-evaluation",
+    "/glossary/system-uptime",
+    "/glossary/peak-to-average-ratio",
     "/glossary/peak-labor-cost-avoidance",
-    "/insights/why-63-exoskeleton-companies-cant-break-through-distribution"
+    "/insights/how-robotics-vendors-misjudge-their-addressable-market",
+    "/insights/why-warehouse-automation-projects-fail",
+    "/case-studies/robotics-market-entry-decision-analysis",
+    "/glossary/robotics-as-a-service",
+    "/insights/why-healthcare-robotics-deployments-follow-a-different-economic-logic",
+    "/insights/how-warehouse-operators-evaluate-robotics-vendors",
+    "/insights/why-general-merchandise-3pls-should-not-automate-too-early",
+    "/glossary/autonomous-case-handling",
+    "/insights/why-direct-only-channel-doesnt-scale-in-robotics",
+    "/case-studies/robotics-pricing-strategy-research",
+    "/case-studies/off-highway-autonomy-deployment-economics",
+    "/insights/why-parcel-sortation-automation-breaks-at-low-volume",
+    "/glossary/sku-velocity",
+    "/frameworks",
+    "/glossary/idle-capital-cost",
+    "/insights/why-robotics-enterprise-deals-stall",
+    "/insights/how-warehouse-robotics-economics-actually-works",
+    "/use-cases/humanoid-platform-commercial-readiness",
+    "/insights/why-mid-market-operators-struggle-to-evaluate-warehouse-robotics",
+    "/glossary/cold-environment-labor-premium",
+    "/glossary/sortation-volume-floor",
+    "/insights/how-robotics-pricing-models-determine-commercial-viability",
+    "/glossary/labor-displacement-rate",
+    "/insights/why-commercial-viability-and-technical-readiness-are-not-the-same-thing",
+    "/glossary/sortation-technology-fork",
+    "/case-studies/cold-storage-automation-economics-assessment",
+    "/glossary/automated-storage-retrieval-system"
   ],
   "reviewed_research_title_changes": [
-    "/insights/why-direct-only-channel-doesnt-scale-in-robotics",
-    "/insights/how-robotics-pricing-models-determine-commercial-viability",
-    "/insights/why-robotics-enterprise-deals-stall",
-    "/insights/what-autonomous-vehicle-companies-get-wrong-about-freight-sales",
     "/insights/how-underwater-robotics-startups-can-break-incumbent-lock-in",
     "/insights/why-maritime-autonomy-revenue-is-not-what-it-appears",
+    "/insights/why-63-exoskeleton-companies-cant-break-through-distribution",
+    "/insights/what-autonomous-vehicle-companies-get-wrong-about-freight-sales",
     "/insights/what-warehouse-automation-vendors-need-to-know-about-how-buyers-decide",
-    "/insights/why-63-exoskeleton-companies-cant-break-through-distribution"
+    "/insights/why-direct-only-channel-doesnt-scale-in-robotics",
+    "/insights/why-robotics-enterprise-deals-stall",
+    "/insights/how-robotics-pricing-models-determine-commercial-viability"
   ],
   "approved_diagram_redirect_added": true,
   "unexpected_broken_destinations": [],
@@ -411,7 +412,7 @@ PASS: modified tailwind.config.mjs, tsconfig.json, .nvmrc and untracked netlify/
 {"passed": true, "pages": 163, "metadata_complete": 163, "local_noindex_pages": 0, "service_pages": ["/nonprofits", "/sales-leadership", "/startups"], "person_id": "https://autonomybridge.com/about#deepak-gupta"}
 
 ## audit_negative_controls: /Library/Frameworks/Python.framework/Versions/3.12/bin/python3 scripts/test-step6a-audit.py
-{"passed": true, "rejected_negative_controls": ["stale legacy offer in llms", "wrong personal LinkedIn", "contradictory service claim", "missing canonical", "conflicting canonical", "indexing rule changed", "audience blocked in robots", "Research blocked in robots", "legacy offers restored in Research service block", "stale two-offer Terms description", "missing unsuccessful-enquiry retention period", "privacy checks incorrectly made a pre-publication gate"], "fixture": "/var/folders/72/qqqrlnnx1sx6zfgcrymkn_040000gn/T/ab-step6a-negative-jby3lbho"}
+{"passed": true, "rejected_negative_controls": ["stale legacy offer in llms", "wrong personal LinkedIn", "contradictory service claim", "missing canonical", "conflicting canonical", "indexing rule changed", "audience blocked in robots", "Research blocked in robots", "legacy offers restored in Research service block", "stale two-offer Terms description", "missing unsuccessful-enquiry retention period", "privacy checks incorrectly made a pre-publication gate"], "fixture": "/var/folders/72/qqqrlnnx1sx6zfgcrymkn_040000gn/T/ab-step6a-negative-563dtppj"}
 
 ## actual_release_dates: /Library/Frameworks/Python.framework/Versions/3.12/bin/python3 scripts/check-actual-release-dates.py
 {"passed": true, "production_mode": true, "dates": {"publicationDate": "2026-03-01", "researchRevisionDate": "2026-03-01", "termsRevisionDate": "2026-03-01", "cookieRevisionDate": "2026-03-01", "methodologyRevisionDate": "2026-03-01"}, "material_research_routes": 86, "visible_schema_xml_parity": true, "legal_and_methodology_dates_checked_separately": true, "owner_corrected_source_files": 87, "privacy_notice_has_no_revision_date": true}
@@ -420,7 +421,7 @@ PASS: modified tailwind.config.mjs, tsconfig.json, .nvmrc and untracked netlify/
 {"passed": true, "source_files": 87, "changed_date_lines": 550, "methodology_visible_date_only": true, "terms_offer_only": true}
 
 ## date_gate: node scripts/test-date-gate.mjs
-{"passed":true,"fixture":"/var/folders/72/qqqrlnnx1sx6zfgcrymkn_040000gn/T/ab-date-gate-ER6nPb","rejected_date_configurations":7,"distinct_date_fixture":{"publicationDate":"2026-04-01","researchRevisionDate":"2026-03-01","termsRevisionDate":"2026-04-02","cookieRevisionDate":"2026-04-03","methodologyRevisionDate":"2026-04-04"},"local_and_netlify_production_guard":"passed","invalid_target_rejected":true}
+{"passed":true,"fixture":"/var/folders/72/qqqrlnnx1sx6zfgcrymkn_040000gn/T/ab-date-gate-yr1P90","rejected_date_configurations":7,"distinct_date_fixture":{"publicationDate":"2026-04-01","researchRevisionDate":"2026-03-01","termsRevisionDate":"2026-04-02","cookieRevisionDate":"2026-04-03","methodologyRevisionDate":"2026-04-04"},"local_and_netlify_production_guard":"passed","invalid_target_rejected":true}
 
 ## release_gates: node scripts/test-release-gates.mjs
 {
@@ -439,4 +440,4 @@ Passed: verified-event marker only, no enquiry data stored, expiry, one POST wit
 Passed offline: required fields, optional company, email syntax, honeypot, disabled/wrong-origin rejection, HTML/422/wrong-reference/network outcomes unknown. No real requests made.
 
 ## artifact_hash: /Library/Frameworks/Python.framework/Versions/3.12/bin/python3 scripts/hash-release-artifact.py
-{"source_commit": "04b81db970ace885ffa701f5918e47de721faef4", "artifact_directory": "/Users/deepakgupta/Documents/06_Tools_&_Code/Codex/AutonomyBridge Website/repo/dist", "file_count": 241, "total_bytes": 18295772, "manifest_sha256": "7689f0981ff0475013b2854a3e1b00168cd2930c7d3c921c9689a6186e55c94f", "key_files": {"index.html": "83b174adaf8bddc22cdb4b01d4adfed069c1469b4b3155f03ee3a5c41565b35c", "research.html": "81f55ab244f1868e86065d6127a13b8bdb4de50dee0b85a90f2e5fb790ade391", "methodology.html": "747ce5afbdbdb7f0a0e44ad79b158db47b300f30ff7ca2b1158a738ac3d627ec", "terms-of-use.html": "01568bacffa40586678dc3fc640d4903601f0590f4e969243851f5414fe80647", "cookie-policy.html": "ad5028c411f3f037950656cc8789f2ece03070cfdbeaad4e29c2e8d03f8342be", "robots.txt": "c65548bffa7bf9a581ce3f4a34a281743cef3b664048cfac9e3092ac33377711", "llms.txt": "59f258f8b5a65425140c50f66f540552e555347e0f1971d1fbf04930741fc8dd", "sitemap-0.xml": "1b8582aa49284f21575bb5a4bac2d8feded616f4c99ebd8519c5b314681d3c4d"}}
+{"source_commit": "6649b57680582b07d12a3244e34d09d88628137f", "artifact_directory": "/Users/deepakgupta/Documents/06_Tools_&_Code/Codex/AutonomyBridge Website/repo/dist", "file_count": 241, "total_bytes": 18298803, "manifest_sha256": "0cae311390bd1cc8dea6f8c4e6356e01aa65d284b00d58bdb44b955499c83a16", "key_files": {"index.html": "383e215c716dcc7702d0daae3320dca192efda5dbd1a243bbc53dbb6021c505d", "research.html": "81f55ab244f1868e86065d6127a13b8bdb4de50dee0b85a90f2e5fb790ade391", "methodology.html": "747ce5afbdbdb7f0a0e44ad79b158db47b300f30ff7ca2b1158a738ac3d627ec", "terms-of-use.html": "01568bacffa40586678dc3fc640d4903601f0590f4e969243851f5414fe80647", "cookie-policy.html": "ad5028c411f3f037950656cc8789f2ece03070cfdbeaad4e29c2e8d03f8342be", "robots.txt": "c65548bffa7bf9a581ce3f4a34a281743cef3b664048cfac9e3092ac33377711", "llms.txt": "59f258f8b5a65425140c50f66f540552e555347e0f1971d1fbf04930741fc8dd", "sitemap-0.xml": "1b8582aa49284f21575bb5a4bac2d8feded616f4c99ebd8519c5b314681d3c4d"}}
