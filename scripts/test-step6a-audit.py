@@ -56,6 +56,10 @@ cases = [
      lambda s: s.replace(
          'Autonomy Bridge provides commercialization and revenue leadership for B2B startups, defined fundraising operations work for nonprofits, and fractional sales leadership for established businesses. It also publishes research.',
          'AutonomyBridge provides commercial leadership for organizations with sales, earned revenue, partnership or business development needs, including fractional sales leadership for startups and small and medium-sized businesses. It also provides AI consulting and implementation for businesses and nonprofits, and publishes research.', 1)),
+    ('missing unsuccessful-enquiry retention period', 'privacy-policy.html',
+     lambda s: s.replace('12 months after our last substantive contact', '18 months after our last substantive contact', 1)),
+    ('privacy checks incorrectly made a pre-publication gate', 'privacy-policy.html',
+     lambda s: s.replace('checked after launch', 'verified before publication', 1)),
 ]
 for label, name, mutate in cases:
     path = dist / name

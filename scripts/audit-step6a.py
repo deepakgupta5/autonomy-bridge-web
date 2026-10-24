@@ -230,6 +230,23 @@ assert research_html.count(research_service_block) == 1
 assert research_html.count('class="service-links"') == 1
 assert {'/startups', '/nonprofits', '/sales-leadership', '/contact'} <= set(pages['/research'].main_links)
 
+privacy = pages['/privacy-policy'].visible
+for phrase in (
+    '12 months after our last substantive contact',
+    'subject to applicable legal requirements',
+    'Netlify Forms, email and other copies under my control',
+    'have not been verified at account level and are not specified here',
+    'processing countries for submissions and logs',
+    'provider backup deletion schedules',
+    'checked after launch',
+    'update this notice if the verified arrangements change',
+    'ask about provider details before providing further information',
+    'submit an ordinary enquiry through the contact form without asking first',
+):
+    assert phrase in privacy, ('privacy notice missing approved disclosure', phrase)
+assert 'before publication' not in privacy, 'privacy notice must not make account checks a pre-publication gate'
+assert 'No storage country or fixed provider-backup deletion period is claimed.' in privacy
+
 terms_offer = ('Autonomy Bridge provides commercialization and revenue leadership for B2B startups, '
                'defined fundraising operations work for nonprofits, and fractional sales leadership '
                'for established businesses. It also publishes research.')

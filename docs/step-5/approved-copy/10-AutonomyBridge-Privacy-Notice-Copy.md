@@ -21,3 +21,11 @@ If an enquiry does not lead to an engagement, I normally delete its records 12 m
 ### Questions and requests
 
 You can use the contact form to ask how your enquiry information is handled, request access or correction, or ask for deletion. Identify your message as a privacy request. I may need to confirm your identity before acting on a request. Any applicable retention requirements still apply.
+
+### Providers and retention
+
+Unsuccessful enquiries are retained for 12 months after the last substantive contact, subject to applicable legal requirements. This policy covers the enquiry record in Netlify Forms, email and other copies under my control.
+
+The email notification and reply provider, any forwarding arrangements, provider access locations, processing countries for submissions and logs, and provider backup deletion schedules have not been verified at account level and are not specified here. No storage country or fixed provider-backup deletion period is claimed. These account-level details will be checked after launch, and this notice will be updated if verified arrangements change or require material disclosure.
+
+Users can ask about provider details before providing further information, or submit an ordinary enquiry through the contact form without asking first. Deleting the random receipt reference does not delete the underlying enquiry.
