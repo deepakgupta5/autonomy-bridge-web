@@ -28,6 +28,11 @@ old_method = old_preview['/methodology']['html']
 assert old_method.count('Published: March 15, 2026') == 1
 old_preview['/methodology']['html'] = old_method.replace(
     'Published: March 15, 2026', 'Published: March 1, 2026')
+old_terms = ('AutonomyBridge provides commercial leadership for organizations with sales, earned revenue, partnership or business development needs, including fractional sales leadership for startups and small and medium-sized businesses. It also provides AI consulting and implementation for businesses and nonprofits, and publishes research.')
+new_terms = ('Autonomy Bridge provides commercialization and revenue leadership for B2B startups, defined fundraising operations work for nonprofits, and fractional sales leadership for established businesses. It also publishes research.')
+assert old_preview['/terms-of-use']['html'].count(old_terms) == 1
+old_preview['/terms-of-use']['html'] = old_preview['/terms-of-use']['html'].replace(old_terms, new_terms, 1)
 assert old_preview == new_preview
 print(json.dumps({'passed': True, 'source_files': len(changed),
-                  'changed_date_lines': lines, 'methodology_visible_date_only': True}))
+                  'changed_date_lines': lines, 'methodology_visible_date_only': True,
+                  'terms_offer_only': True}))
