@@ -238,7 +238,7 @@ for phrase in (
     'have not been verified at account level and are not specified here',
     'processing countries for submissions and logs',
     'provider backup deletion schedules',
-    'checked after launch',
+    'check these account-level details after launch',
     'update this notice if the verified arrangements change',
     'ask about provider details before providing further information',
     'submit an ordinary enquiry through the contact form without asking first',
