@@ -17,4 +17,4 @@ The integrated local candidate is `codex/step-6-final-candidate`. The accepted v
 - Live Netlify form acceptance, notification delivery, storage, mailbox and retention checks remain deferred under the owner's prior instruction. Offline fixtures do not establish delivery. A real enquiry requires separate authorization.
 - The eight historical broken destinations remain accepted exceptions.
 
-SEO and AI discovery/GEO review belongs to Step 6A after Step 6. The stale `public/llms.txt` remains unchanged.
+Step 6A local SEO and AI discovery implementation is complete on `codex/step-6a-seo-geo`, tested at `38d759c22984860ac2701f77c20a77fd1fa410c0`. Its [result and evidence](../step-6a/RESULT.md) cover the updated discovery directory, structured data, OG types, crawler groups and static answer map. The Step 6 visual evidence above remains attributed to its own tested source. Publication-day and live indexing, form/runtime and field-metric actions remain open; this branch has not been merged or deployed.
