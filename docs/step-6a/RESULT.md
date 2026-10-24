@@ -1,5 +1,7 @@
 # Step 6A local implementation result
 
+> Historical result for the earlier local-mode implementation. The current branch is a guarded production-artifact candidate. Use the authoritative production command and separate local fixture documented in [`CORRECTION_RESULT.md`](../independent-review/CORRECTION_RESULT.md); the older local build/viewing commands below do not apply to the current checkout.
+
 **Status:** completed for repository review; no release action taken.  
 **Branch:** `codex/step-6a-seo-geo`  
 **Handoff source:** `30da9056137ef03e05f61e78e41ba212e0cbcfc7`  
@@ -47,7 +49,7 @@ Fresh screenshots from `1df59d3` are saved as [full page at 1423](research-final
 
 ## Local viewing and performance observations
 
-From this checkout, use Node 20, run `npm ci` if dependencies are absent, then `npm run build` and `npm run preview`. Review the generated files in `dist/`, including `dist/robots.txt`, `dist/llms.txt`, `dist/about.html`, `dist/contact.html` and the audience pages. Rerun `python3 scripts/audit-step6a.py` after any subsequent source change.
+For the source tested in this historical section, use Node 20 and the then-local build instructions. The current production candidate requires the explicit target/context and baseline command in [`CORRECTION_RESULT.md`](../independent-review/CORRECTION_RESULT.md). Serve any rebuilt artifact only on loopback for review.
 
 The local output contains six CSS assets totalling 52,429 bytes, three JavaScript assets totalling 4,684 bytes and 17 WOFF2 assets totalling 344,348 bytes. The home HTML requests one render-blocking stylesheet (`/_astro/about.Dl7pouXo.css`, 20,997 bytes) and no module script. These are static asset observations, not a Lighthouse run or Core Web Vitals result. No analytics tag or runtime dependency was added.
 

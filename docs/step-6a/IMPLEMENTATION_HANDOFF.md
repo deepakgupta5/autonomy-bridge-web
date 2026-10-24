@@ -1,5 +1,7 @@
 # Step 6A: SEO and AI discovery implementation handoff
 
+> Historical implementation handoff for the earlier local-mode source. For the current production-artifact candidate, use [`CORRECTION_RESULT.md`](../independent-review/CORRECTION_RESULT.md) and its explicit guarded command.
+
 ## Authority and execution
 The owner authorized Step 6A after acceptance of Step 6 local QA. Start from `ce2171e7335b0667df45f675d5fde0323fad1c87`, on dedicated branch `codex/step-6a-seo-geo`. Read this file and `docs/step-6/QA_STATUS.md`, `DATE_GATE_RESULT.md`, `FINAL_CANDIDATE.md`, and `docs/consolidated-release/revision-2/review.md`. The latter records the settled crawler permissions. No tracked AGENTS.md was found at the audited commit; check again in the executor checkout and its ancestors.
 

@@ -1,5 +1,7 @@
 # Step 6A local production artifact review
 
+> Historical artifact report for source `93f56e9`. The Terms correction changed the artifact. The current tested source, verification command and refreshed manifest are recorded in [`CORRECTION_RESULT.md`](../../independent-review/CORRECTION_RESULT.md).
+
 ## Identity and scope
 
 - Branch: `codex/step-6a-seo-geo`.

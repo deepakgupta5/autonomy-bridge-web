@@ -1,5 +1,7 @@
 # Step 6 QA status
 
+> Current Step 6A correction status: the branch is now a guarded **production-artifact candidate**, with the independent-review corrections tested at `f261e7906af7266fb6bd7b3852164b62e084d310`. See [`CORRECTION_RESULT.md`](../independent-review/CORRECTION_RESULT.md) for the explicit production command, isolated local noindex fixture, artifact hash and remaining release boundaries. The older local/date-pending status below is historical and does not describe the current branch.
+
 The integrated local candidate is `codex/step-6-final-candidate`. The accepted visual integration source was `9a8fada5fefc820ed51f9e8a2af0069a83c26b49`; the date-gate source tested in [DATE_GATE_RESULT.md](DATE_GATE_RESULT.md) is `388a518891f37eb8bf1143eb0312c4be712bc5cf`. No merge, deployment, sitemap submission or real enquiry has occurred.
 
 ## Verified locally

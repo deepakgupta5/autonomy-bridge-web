@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "source_commit": "f261e7906af7266fb6bd7b3852164b62e084d310",
+  "node": "v20.20.1",
+  "isolated_fixture": true,
+  "production_checkout_unchanged": true,
+  "pending_research_routes": 86,
+  "local_noindex_pages": 163,
+  "xml_lastmod_entries": 0,
+  "checks": [
+    {
+      "name": "local_build",
+      "exit_code": 0,
+      "output_tail": "s.html (+2ms)\n18:36:41 \u25b6 src/pages/privacy-policy.astro\n18:36:41   \u2514\u2500 /privacy-policy.html (+2ms)\n18:36:41 \u25b6 src/pages/research.astro\n18:36:41   \u2514\u2500 /research.html (+9ms)\n18:36:41 \u25b6 src/pages/sales-leadership.astro\n18:36:41   \u2514\u2500 /sales-leadership.html (+9ms)\n18:36:41 \u25b6 src/pages/sitemap.astro\n18:36:41   \u2514\u2500 /sitemap.html (+19ms)\n18:36:41 \u25b6 src/pages/startups.astro\n18:36:41   \u2514\u2500 /startups.html (+2ms)\n18:36:41 \u25b6 src/pages/terms-of-use.astro\n18:36:41   \u2514\u2500 /terms-of-use.html (+2ms)\n18:36:41 \u25b6 src/pages/use-cases/[slug].astro\n18:36:41   \u251c\u2500 /use-cases/warehouse-automation-roi-evaluation.html (+11ms)\n18:36:41   \u251c\u2500 /use-cases/robotics-deployment-3pl-warehouses.html (+6ms)\n18:36:41   \u251c\u2500 /use-cases/amr-deployment-evaluation.html (+5ms)\n18:36:41   \u251c\u2500 /use-cases/goods-to-person-system-evaluation.html (+6ms)\n18:36:41   \u251c\u2500 /use-cases/retail-dc-automation-evaluation.html (+7ms)\n18:36:41   \u251c\u2500 /use-cases/cold-storage-automation-evaluation.html (+7ms)\n18:36:41   \u251c\u2500 /use-cases/parcel-sortation-automation-evaluation.html (+6ms)\n18:36:41   \u251c\u2500 /use-cases/general-merchandise-3pl-automation-evaluation.html (+6ms)\n18:36:41   \u251c\u2500 /use-cases/service-robotics-deployment-evaluation.html (+7ms)\n18:36:41   \u251c\u2500 /use-cases/aerial-robotics-commercial-viability-evaluation.html (+7ms)\n18:36:41   \u2514\u2500 /use-cases/humanoid-platform-commercial-readiness.html (+6ms)\n18:36:41 \u25b6 src/pages/use-cases/index.astro\n18:36:41   \u2514\u2500 /use-cases.html (+5ms)\n18:36:41 \u25b6 src/pages/index.astro\n18:36:41   \u2514\u2500 /index.html (+4ms)\n18:36:41 \u2713 Completed in 906ms.\n\n18:36:41 [@astrojs/sitemap] `sitemap-index.xml` created at `dist`\n18:36:41 [build] 163 page(s) built in 7.51s\n18:36:41 [build] Complete!\n(node:81488) V8: file:///private/var/folders/72/qqqrlnnx1sx6zfgcrymkn_040000gn/T/ab-local-preview-fixture-i_090ugs/checkout/astro.config.mjs?t=1792805794176:4 'assert' is deprecated in import statements and support will be removed in a future version; use 'with' instead\n(Use `node --trace-warnings ...` to show where the warning was created)\n"
+    },
+    {
+      "name": "strict_pending_dates",
+      "exit_code": 0,
+      "output_tail": "{\"passed\": true, \"pending_research_routes\": 86, \"pending_methodology_terms_cookie\": true, \"privacy_notice_has_no_revision_date\": true, \"methodology_owner_corrected_publication_date\": \"2026-03-01\", \"source_date_record_labels_present\": true, \"xml_lastmod_entries\": 0}\n"
+    },
+    {
+      "name": "local_noindex_audit",
+      "exit_code": 0,
+      "output_tail": "{\"passed\": true, \"pages\": 163, \"metadata_complete\": 163, \"local_noindex_pages\": 163, \"service_pages\": [\"/nonprofits\", \"/sales-leadership\", \"/startups\"], \"person_id\": \"https://autonomybridge.com/about#deepak-gupta\"}\n"
+    }
+  ]
+}

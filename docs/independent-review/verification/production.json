@@ -1,0 +1,117 @@
+{
+  "passed": true,
+  "source_commit": "f261e7906af7266fb6bd7b3852164b62e084d310",
+  "node": "v20.20.1",
+  "baseline_commit": "0285946a6a500f9207a9c466c7de11a4cffb22a8",
+  "baseline_dist": "/private/tmp/autonomy-step6-0285946-baseline/dist",
+  "explicit_target": {
+    "SITE_ID": "3df07dc5-6950-4241-98eb-cf95df3d271d",
+    "CONTEXT": "production"
+  },
+  "counts": {
+    "html_pages": 163,
+    "research_routes": 147,
+    "html_sitemap_destinations": 158,
+    "xml_entries": 156
+  },
+  "indexing": {
+    "index_follow": 159,
+    "bridge_noindex_follow": 3,
+    "contact_success_noindex_nofollow": 1,
+    "local_noindex_pages": 0
+  },
+  "canonical_parity": true,
+  "research_date_parity": true,
+  "artifact": {
+    "files": 241,
+    "bytes": 18295389,
+    "manifest_sha256": "6a72b050b7237390227332130aec5ffda8d95a2b947209916c1934b2dace0426"
+  },
+  "checks": [
+    {
+      "name": "build",
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "route_verifier",
+      "command": [
+        "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3",
+        "scripts/verify-preview.py",
+        "/private/tmp/autonomy-step6-0285946-baseline/dist",
+        "--canonical-apex",
+        "--research-review",
+        "--release-candidate"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "step6a_audit",
+      "command": [
+        "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3",
+        "scripts/audit-step6a.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "audit_negative_controls",
+      "command": [
+        "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3",
+        "scripts/test-step6a-audit.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "actual_release_dates",
+      "command": [
+        "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3",
+        "scripts/check-actual-release-dates.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "owner_date_diff",
+      "command": [
+        "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3",
+        "scripts/verify-owner-date-diff.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "date_gate",
+      "command": [
+        "node",
+        "scripts/test-date-gate.mjs"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "release_gates",
+      "command": [
+        "node",
+        "scripts/test-release-gates.mjs"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "offline_contact",
+      "command": [
+        "node",
+        "scripts/test-release-contact.mjs"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "artifact_hash",
+      "command": [
+        "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3",
+        "scripts/hash-release-artifact.py"
+      ],
+      "exit_code": 0
+    }
+  ]
+}

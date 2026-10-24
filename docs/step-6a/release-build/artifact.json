@@ -1,14 +1,14 @@
 {
-  "source_commit": "93f56e9edf8fa1ecd3ec910af3e93378d1ddf703",
+  "source_commit": "f261e7906af7266fb6bd7b3852164b62e084d310",
   "artifact_directory": "/private/tmp/autonomy-step6-legacy-bridge-qa/dist",
   "file_count": 241,
-  "total_bytes": 18295495,
-  "manifest_sha256": "66cad2ebedc5949b18e43f2ffd6fb0a8f4438551bbe310a65f44589159138967",
+  "total_bytes": 18295389,
+  "manifest_sha256": "6a72b050b7237390227332130aec5ffda8d95a2b947209916c1934b2dace0426",
   "key_files": {
     "index.html": "83b174adaf8bddc22cdb4b01d4adfed069c1469b4b3155f03ee3a5c41565b35c",
     "research.html": "81f55ab244f1868e86065d6127a13b8bdb4de50dee0b85a90f2e5fb790ade391",
     "methodology.html": "747ce5afbdbdb7f0a0e44ad79b158db47b300f30ff7ca2b1158a738ac3d627ec",
-    "terms-of-use.html": "f4efde95b37d566d3f758780eb4d9b849110d54a13d14e24ef958058777290b2",
+    "terms-of-use.html": "01568bacffa40586678dc3fc640d4903601f0590f4e969243851f5414fe80647",
     "cookie-policy.html": "ad5028c411f3f037950656cc8789f2ece03070cfdbeaad4e29c2e8d03f8342be",
     "robots.txt": "c65548bffa7bf9a581ce3f4a34a281743cef3b664048cfac9e3092ac33377711",
     "llms.txt": "59f258f8b5a65425140c50f66f540552e555347e0f1971d1fbf04930741fc8dd",

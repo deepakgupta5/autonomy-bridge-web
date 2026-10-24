@@ -1,5 +1,7 @@
 # Owner Research date and final-build verification
 
+> Historical date handoff. Subsequent owner approvals and the current guarded production candidate are recorded in [`DATE_PROVENANCE.md`](DATE_PROVENANCE.md) and [`CORRECTION_RESULT.md`](../independent-review/CORRECTION_RESULT.md). Its earlier unset-date/local-mode instructions no longer describe this checkout.
+
 The owner specified **1 March 2026**, ISO **2026-03-01**, for the Research revision date. This supersedes the earlier instruction to automatically use the site launch day for Research. Record its provenance as owner-specified, not independently verified from historical publication records.
 
 Do not infer the site publication date from this date or from the current clock. Source remains local and unpublished until release preparation/approval. No merge or deployment is authorized by this instruction.

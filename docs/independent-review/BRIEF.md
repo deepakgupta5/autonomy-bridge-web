@@ -1,5 +1,7 @@
 # Independent pre-release review brief
 
+> Historical reviewer brief. Its local/noindex viewing instructions describe the earlier candidate. The current guarded production-artifact candidate and separate preview fixture are documented in [`CORRECTION_RESULT.md`](CORRECTION_RESULT.md).
+
 ## Assignment
 The owner requests an independent review before final production-build verification and release. Claude is the owner's preferred independent QC reviewer; Codex remains the implementation executor. Review critically and report findings. Do not implement fixes, merge, deploy, log in, change account settings, submit sitemaps or send real form enquiries/notifications.
 
