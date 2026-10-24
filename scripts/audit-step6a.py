@@ -230,6 +230,12 @@ assert research_html.count(research_service_block) == 1
 assert research_html.count('class="service-links"') == 1
 assert {'/startups', '/nonprofits', '/sales-leadership', '/contact'} <= set(pages['/research'].main_links)
 
+terms_offer = ('Autonomy Bridge provides commercialization and revenue leadership for B2B startups, '
+               'defined fundraising operations work for nonprofits, and fractional sales leadership '
+               'for established businesses. It also publishes research.')
+assert terms_offer in pages['/terms-of-use'].visible, 'Terms section 1 must show approved offer description'
+assert 'It also provides AI consulting and implementation for businesses and nonprofits' not in pages['/terms-of-use'].visible, 'Terms section 1 retains stale offer description'
+
 llms = (DIST / 'llms.txt').read_text()
 assert re.search(r'(?m)^# Autonomy Bridge$', llms)
 assert not re.search(r'/commercial-leadership|/ai-consulting|/advisory|AI Consulting', llms, re.I)

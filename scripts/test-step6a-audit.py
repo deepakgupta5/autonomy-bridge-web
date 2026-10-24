@@ -52,6 +52,10 @@ cases = [
          '<p>For help applying analysis to a decision or carrying out a project, explore Commercial Leadership or AI Consulting &amp; Implementation.</p>\n'
          '<p class="service-links"><a href="/commercial-leadership">Commercial Leadership</a> <a href="/ai-consulting">AI Consulting &amp; Implementation</a></p>\n'
          '<p><a class="copy-button" href="/contact">Discuss your business challenge</a></p>', 1)),
+    ('stale two-offer Terms description', 'terms-of-use.html',
+     lambda s: s.replace(
+         'Autonomy Bridge provides commercialization and revenue leadership for B2B startups, defined fundraising operations work for nonprofits, and fractional sales leadership for established businesses. It also publishes research.',
+         'AutonomyBridge provides commercial leadership for organizations with sales, earned revenue, partnership or business development needs, including fractional sales leadership for startups and small and medium-sized businesses. It also provides AI consulting and implementation for businesses and nonprofits, and publishes research.', 1)),
 ]
 for label, name, mutate in cases:
     path = dist / name

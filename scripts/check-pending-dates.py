@@ -1,4 +1,4 @@
-"""Check the local candidate's rendered publication-pending state."""
+"""Check only an isolated local-preview build's publication-pending state."""
 from pathlib import Path
 import json
 import re
@@ -7,7 +7,8 @@ import xml.etree.ElementTree as ET
 root = Path(__file__).resolve().parents[1]
 dist = root / 'dist'
 policy = (root / 'config/deployment-policy.mjs').read_text()
-assert "mode: 'local'" in policy
+if "mode: 'local'" not in policy:
+    raise SystemExit('Preview-state checker requires mode: local. For this production candidate, run scripts/verify-production-release.py with an independent baseline.')
 assert "publicationDate: ''" in policy
 assert 'researchRevisionDate: null' in policy
 assert 'termsRevisionDate: null' in policy
