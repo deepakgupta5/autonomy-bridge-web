@@ -100,5 +100,13 @@
       "Research & Resources",
       "Read the evidence alongside the conclusion"
     ]
+  },
+  "research_service_handoff": {
+    "links": [
+      "/startups",
+      "/nonprofits",
+      "/sales-leadership"
+    ],
+    "contact_cta": "Discuss your challenge"
   }
 }

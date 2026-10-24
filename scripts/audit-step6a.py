@@ -217,6 +217,15 @@ assert '/about' in contact.main_links and '/privacy-policy' in contact.main_link
 assert 'The first conversation is free. I’ll respond within 48 hours.' in contact.visible
 assert {'/insights', '/market-overview', '/frameworks', '/use-cases',
         '/case-studies', '/glossary', '/methodology'} <= set(pages['/research'].main_links)
+research_html = (DIST / 'research.html').read_text()
+research_service_block = (
+    '<p>For help with a commercial priority, fundraising operations or sales leadership, explore the page that fits your situation.</p>\n'
+    '<p class="service-links"><a href="/startups">Startups</a> <a href="/nonprofits">Nonprofits</a> <a href="/sales-leadership">Sales Leadership</a></p>\n'
+    '<p><a class="copy-button" href="/contact">Discuss your challenge</a></p>'
+)
+assert research_html.count(research_service_block) == 1
+assert research_html.count('class="service-links"') == 1
+assert {'/startups', '/nonprofits', '/sales-leadership', '/contact'} <= set(pages['/research'].main_links)
 
 llms = (DIST / 'llms.txt').read_text()
 assert re.search(r'(?m)^# Autonomy Bridge$', llms)
@@ -253,6 +262,10 @@ report = {
     'robots_public_paths_tested': public_routes,
     'robots_reserved_paths_tested': RESERVED,
     'static_answer_sections': answer_sections,
+    'research_service_handoff': {
+        'links': ['/startups', '/nonprofits', '/sales-leadership'],
+        'contact_cta': 'Discuss your challenge',
+    },
 }
 output = Path(os.environ.get('AB_STEP6A_AUDIT_REPORT', ROOT / 'docs/step-6a/STEP6A_AUDIT.json'))
 output.write_text(json.dumps(report, indent=2) + '\n')
