@@ -59,7 +59,8 @@ cases = [
     ('missing unsuccessful-enquiry retention period', 'privacy-policy.html',
      lambda s: s.replace('12 months after our last substantive contact', '18 months after our last substantive contact', 1)),
     ('privacy checks incorrectly made a pre-publication gate', 'privacy-policy.html',
-     lambda s: s.replace('checked after launch', 'verified before publication', 1)),
+     lambda s: s.replace('I will check these account-level details after launch',
+                         'I will verify these account-level details before publication', 1)),
 ]
 for label, name, mutate in cases:
     path = dist / name
