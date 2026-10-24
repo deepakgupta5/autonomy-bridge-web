@@ -1,25 +1,19 @@
 # Step 6 QA status
 
-Candidate source: `codex/step-5-approved-copy` at `e59b54e`, plus the Step 6 HTML sitemap and verifier corrections on `codex/step-6-qa`. This is a local review branch. No merge, deployment, sitemap submission or real enquiry has occurred.
+The integrated local candidate is `codex/step-6-final-candidate`, with combined source commit `9a8fada5fefc820ed51f9e8a2af0069a83c26b49`. See [FINAL_CANDIDATE.md](FINAL_CANDIDATE.md) for its checks and release-date inventory. No merge, deployment, sitemap submission or real enquiry has occurred.
 
 ## Verified locally
 
-- Node 20 static build: 163 pages.
-- Compared with an independently built 157-page baseline from `0285946`: no baseline route lost and no existing canonical changed under the approved apex normalization.
-- All 147 Research inventory routes are present and reachable from Research. Research titles, content and source templates were left unchanged by this Step 6 correction.
-- HTML sitemap now lists the three new audience pages: 161 destinations. XML sitemap has 159 entries, including all 147 Research routes. The three legal pages and contact confirmation remain outside the XML sitemap under the existing exclusion policy.
-- All local pages emit `noindex,nofollow`. Canonical, metadata, Research breadcrumbs, fragment targets and static internal links pass the baseline verifier. Its eight registered historical broken destinations persist, with no new destinations or referrers.
-- Offline form fixtures pass for validation, honeypot, receipt confirmation, ambiguous responses, disabled transport and network errors. They make no real submission.
-- A separate local production-mode build, with the approved target ID and context supplied only to the build process, also produced 163 pages. The release-candidate verifier passed with no route, canonical, sitemap or indexing errors. This was a simulation in a disposable worktree, not a deployable release artifact: its publication and Research revision dates are still the prefilled October 19 and October 20 values.
-- Final branch visual regression completed locally from `f87806c` at 1423, 400 and 320 CSS px for Home, Startups, Nonprofits, Sales Leadership, Contact, About and Privacy Policy. No layout defect or page-level horizontal overflow was found. The mobile menu, three audience CTAs and editable Contact preselection passed. Loopback-only Contact fixtures covered validation, pending, rejected, ambiguous and confirmed-success UI without a real enquiry. The HTML sitemap and Research family samples passed visual review at 1423 and 320 px. See [`visual-review/REPORT.md`](visual-review/REPORT.md) and its fresh screenshots. The build remained `noindex,nofollow` on all 163 HTML pages.
+- Node 20 build: 163 pages. Independent-baseline verifier against `0285946a6a500f9207a9c466c7de11a4cffb22a8` passed with `--canonical-apex --research-review`: 147 Research routes, 158 HTML sitemap destinations, 156 XML entries, no lost baseline routes or changed existing canonicals, and no new broken links. The eight registered historical broken destinations remain accepted exceptions.
+- All six affected Research pages have one H1. The two hub opening H2s are hidden by scoped CSS before hydration. The [accepted heading report at `d966cbf`](https://github.com/deepakgupta5/autonomy-bridge-web/blob/d966cbf77b0d6c1bc524ca7697600af8419141bb/docs/step-6/research-heading-qa/REPORT.md) tested heading source `b66124a`, not this combined commit.
+- The three legacy paths are neutral audience bridges, absent from both sitemaps and `noindex,nofollow` in this local build. The [accepted bridge report at `41ddedd`](https://github.com/deepakgupta5/autonomy-bridge-web/blob/41ddedd37f5aff51bacba4b2e13f925fd93e73bc/docs/step-6/legacy-bridge-qa/REPORT.md) tested source `91357ca`, not this combined commit.
+- A focused integration browser pass from the combined source checked `/case-studies`, `/use-cases` and `/commercial-leadership` at 1423 and 320 CSS px. Both hubs showed one H1, hid only the redundant first body H2, and had no horizontal overflow. The bridge remained readable with the intended audience and Contact links. Screenshots are linked in [FINAL_CANDIDATE.md](FINAL_CANDIDATE.md).
+- Earlier [seven-page visual and offline Contact fixture review](visual-review/REPORT.md) passed at 1423, 400 and 320 CSS px without a real enquiry. Those results belong to their recorded earlier source, not this combined commit.
 
-## Open before Step 6 can be called complete
+## Open before publication
 
-- Repeat the passing production-mode check against the actual final release artifact after setting its approved publication and Research revision dates. The current local review build is deliberately noindex.
-- Live Netlify form acceptance, notification delivery, storage, mailbox and retention checks. The owner deferred Netlify account verification until after go-live; offline fixtures do not establish delivery. Do not send a real enquiry without explicit authorization.
-- Decide the fate of old service paths `/commercial-leadership`, `/ai-consulting` and `/advisory`. They currently remain indexable in a production-mode build and retain superseded positioning. Preserve Research routes while making this decision.
-- The eight historical broken destinations remain accepted exceptions, not repaired links.
+- Set the actual approved publication and Research revision dates in `config/deployment-policy.mjs` on the publication day, rebuild the final release artifact, and rerun the release checks. The October 19 and October 20 values are prefilled, not an approved future release date. The current candidate is local and `noindex,nofollow`.
+- Live Netlify form acceptance, notification delivery, storage, mailbox and retention checks remain deferred under the owner's prior instruction. Offline fixtures do not establish delivery. A real enquiry requires separate authorization.
+- The eight historical broken destinations remain accepted exceptions.
 
-The existing Research pages `/case-studies`, `/use-cases`, `/market-overview/platform-categories`, `/market-overview/deployment-economics`, `/market-overview/vendor-landscape` and `/market-overview/operator-domains` each emit a hero H1 and an embedded content H1. This was present before Step 5 and needs a scoped semantic correction or explicit acceptance during final visual and accessibility QA.
-
-SEO and AI discovery/GEO review belongs to Step 6A after Step 6. The stale `public/llms.txt` was observed but not changed in this branch.
+SEO and AI discovery/GEO review belongs to Step 6A after Step 6. The stale `public/llms.txt` remains unchanged.
