@@ -1,6 +1,6 @@
 {
   "passed": true,
-  "source_commit": "dff66e33645d330552d24d17b5f94405c16eeaa8",
+  "source_commit": "04b81db970ace885ffa701f5918e47de721faef4",
   "node": "v20.20.1",
   "baseline_commit": "0285946a6a500f9207a9c466c7de11a4cffb22a8",
   "baseline_dist": "/private/tmp/autonomy-step6-0285946-baseline/dist",
@@ -24,8 +24,8 @@
   "research_date_parity": true,
   "artifact": {
     "files": 241,
-    "bytes": 18295389,
-    "manifest_sha256": "6a72b050b7237390227332130aec5ffda8d95a2b947209916c1934b2dace0426"
+    "bytes": 18295772,
+    "manifest_sha256": "7689f0981ff0475013b2854a3e1b00168cd2930c7d3c921c9689a6186e55c94f"
   },
   "checks": [
     {

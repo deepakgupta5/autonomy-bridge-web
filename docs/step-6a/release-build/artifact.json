@@ -1,9 +1,9 @@
 {
-  "source_commit": "dff66e33645d330552d24d17b5f94405c16eeaa8",
-  "artifact_directory": "/private/tmp/autonomy-step6-legacy-bridge-qa/dist",
+  "source_commit": "04b81db970ace885ffa701f5918e47de721faef4",
+  "artifact_directory": "/Users/deepakgupta/Documents/06_Tools_&_Code/Codex/AutonomyBridge Website/repo/dist",
   "file_count": 241,
-  "total_bytes": 18295389,
-  "manifest_sha256": "6a72b050b7237390227332130aec5ffda8d95a2b947209916c1934b2dace0426",
+  "total_bytes": 18295772,
+  "manifest_sha256": "7689f0981ff0475013b2854a3e1b00168cd2930c7d3c921c9689a6186e55c94f",
   "key_files": {
     "index.html": "83b174adaf8bddc22cdb4b01d4adfed069c1469b4b3155f03ee3a5c41565b35c",
     "research.html": "81f55ab244f1868e86065d6127a13b8bdb4de50dee0b85a90f2e5fb790ade391",
